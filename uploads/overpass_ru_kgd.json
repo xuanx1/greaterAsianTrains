@@ -1,0 +1,1492 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-13T16:54:04Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 273461318,
+  "lat": 54.4430026,
+  "lon": 23.2529103,
+  "tags": {
+    "name": "Kalvarija",
+    "name:lt": "Kalvarija",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 286545064,
+  "lat": 54.6358052,
+  "lon": 21.0688539,
+  "tags": {
+    "esr:user": "101803",
+    "name": "Гвардейск",
+    "name:de": "Gwardeisk",
+    "name:en": "Gvardeysk",
+    "name:eo": "Gvardejsk",
+    "name:fi": "Gvardeisk",
+    "name:fr": "Gvardeïsk",
+    "name:it": "Gvardejsk",
+    "name:lt": "Gvardeiskas",
+    "name:pl": "Gwardiejsk",
+    "name:ru": "Гвардейск",
+    "name:sl": "Gvardejsk",
+    "name:sv": "Gvardejsk",
+    "old_name:de": "Tapiau",
+    "old_name:lt": "Tepliuva",
+    "old_name:pl": "Tapiawa",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "platforms": "3",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Gvardeisk",
+    "uic_ref": "2058442",
+    "wikidata": "Q108479042"
+  }
+},
+{
+  "type": "node",
+  "id": 360353202,
+  "lat": 54.5574686,
+  "lon": 23.3648622,
+  "tags": {
+    "esr:user": "124006",
+    "name": "Marijampolė",
+    "name:de": "Mariampol",
+    "name:lt": "Marijampolė",
+    "name:pl": "Mariampol",
+    "name:ru": "Мариямполе",
+    "name:uk": "Маріямполе",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2400745",
+    "wikidata": "Q4354897"
+  }
+},
+{
+  "type": "node",
+  "id": 365143349,
+  "lat": 54.5707826,
+  "lon": 20.1769439,
+  "tags": {
+    "esr:user": "102609",
+    "name": "Ладушкин",
+    "name:de": "Laduschkin",
+    "name:lt": "Laduškinas",
+    "name:pl": "Ładuszkin",
+    "name:ru": "Ладушкин",
+    "name:sl": "Laduskin",
+    "old_name": "Людвигсорт",
+    "old_name:de": "Ludwigsort",
+    "old_name:lt": "Liudvigsortas",
+    "old_name:lv": "Ludvigsorta",
+    "old_name:pl": "Ludwikowo",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058910"
+  }
+},
+{
+  "type": "node",
+  "id": 413346673,
+  "lat": 54.1509826,
+  "lon": 19.4155509,
+  "tags": {
+    "name": "Elbląg",
+    "name:de": "Elbing",
+    "name:lt": "Elbingas",
+    "name:pl": "Elbląg",
+    "name:ru": "Эльблонг",
+    "name:uk": "Ельблонг",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Eb",
+    "railway:ref:DB": "XPE",
+    "wheelchair": "yes",
+    "wikidata": "Q11696520",
+    "wikipedia": "pl:Elbląg (stacja kolejowa)"
+  }
+},
+{
+  "type": "node",
+  "id": 413830806,
+  "lat": 54.1001286,
+  "lon": 19.5729376,
+  "tags": {
+    "name": "Bogaczewo",
+    "name:de": "Güldenboden",
+    "name:pl": "Bogaczewo",
+    "name:ru": "Богачево",
+    "name:uk": "Богачево",
+    "network": "Polregio",
+    "network:short": "PR",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Bc",
+    "railway:ref:DB": "XPBOC",
+    "wikidata": "Q615839",
+    "wikipedia": "pl:Bogaczewo (stacja kolejowa)"
+  }
+},
+{
+  "type": "node",
+  "id": 429851820,
+  "lat": 54.9584139,
+  "lon": 20.4726811,
+  "tags": {
+    "alt_name": "Зеленоградск",
+    "esr:user": "104002",
+    "name": "Зеленоградск-Новый",
+    "name:de": "Selenogradsk-Nowyj",
+    "name:sl": "Zelenogradsk-Novyj",
+    "old_name": "Кранц",
+    "old_name:de": "Cranz",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058060"
+  }
+},
+{
+  "type": "node",
+  "id": 465618871,
+  "lat": 54.0206951,
+  "lon": 22.9830599,
+  "tags": {
+    "name": "Płociczno Tartak",
+    "name:ru": "Плочично Тартак",
+    "name:uk": "Плочічно Тартак",
+    "public_transport": "station",
+    "railway": "station",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 471854590,
+  "lat": 54.8273315,
+  "lon": 20.5073352,
+  "tags": {
+    "esr:user": "104202",
+    "name": "Рябиновка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058924"
+  }
+},
+{
+  "type": "node",
+  "id": 475195003,
+  "lat": 54.7486442,
+  "lon": 23.4995587,
+  "tags": {
+    "esr:user": "123408",
+    "name": "Kazlų Rūda",
+    "name:de": "Koselrode",
+    "name:ja": "カズルー・ルーダ",
+    "name:ka": "კაზლუ-რუდა",
+    "name:lt": "Kazlų Rūda",
+    "name:lv": "Kazlu Rūda",
+    "name:pl": "Kozłowa Ruda",
+    "name:ru": "Казлу-Руда",
+    "name:uk": "Казлу-Руда",
+    "name:zh": "卡茲盧魯達",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2400429",
+    "wheelchair": "yes",
+    "wikidata": "Q5495124"
+  }
+},
+{
+  "type": "node",
+  "id": 534436535,
+  "lat": 54.8406933,
+  "lon": 20.2520946,
+  "tags": {
+    "esr:user": "103705",
+    "name": "Переславское-Западное",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058099"
+  }
+},
+{
+  "type": "node",
+  "id": 534441247,
+  "lat": 54.8020104,
+  "lon": 20.3035784,
+  "tags": {
+    "esr:user": "103635",
+    "name": "Колосовка-Западная",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058855"
+  }
+},
+{
+  "type": "node",
+  "id": 534448374,
+  "lat": 54.9332930,
+  "lon": 20.1602773,
+  "tags": {
+    "esr:user": "103813",
+    "name": "Светлогорск-1",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058120",
+    "wikidata": "Q4410375"
+  }
+},
+{
+  "type": "node",
+  "id": 534448375,
+  "lat": 54.9488347,
+  "lon": 20.2255241,
+  "tags": {
+    "esr:user": "103809",
+    "name": "Пионерский Курорт",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058070"
+  }
+},
+{
+  "type": "node",
+  "id": 534448378,
+  "lat": 54.7810699,
+  "lon": 20.3502597,
+  "tags": {
+    "esr:user": "103654",
+    "name": "Дружное-Западное",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058073"
+  }
+},
+{
+  "type": "node",
+  "id": 534448380,
+  "lat": 54.7648252,
+  "lon": 20.4451092,
+  "tags": {
+    "esr:user": "103620",
+    "name": "Чкаловск-Западный",
+    "name:ru": "Чкаловск-Западный",
+    "old_name:de": "Tannenwalde Bf.",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058780"
+  }
+},
+{
+  "type": "node",
+  "id": 623356606,
+  "lat": 54.3576262,
+  "lon": 19.6761300,
+  "tags": {
+    "name": "Frombork",
+    "operator": "Nadzalewowa Kolej Drezynowa",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Fb",
+    "train": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q739625",
+    "wikipedia": "pl:Frombork (przystanek kolejowy)"
+  }
+},
+{
+  "type": "node",
+  "id": 718938803,
+  "lat": 54.7282648,
+  "lon": 20.3646063,
+  "tags": {
+    "esr:user": "103007",
+    "name": "Лесное-Новое",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058895"
+  }
+},
+{
+  "type": "node",
+  "id": 724318331,
+  "lat": 54.7106062,
+  "lon": 20.4569354,
+  "tags": {
+    "alt_name": "Калининград-Западный",
+    "esr:user": "102901",
+    "name": "Западный-Новый",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058750"
+  }
+},
+{
+  "type": "node",
+  "id": 922433788,
+  "lat": 54.6881078,
+  "lon": 20.4920002,
+  "tags": {
+    "esr:user": "100001",
+    "name": "Калининград-Сортировочный",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 973639026,
+  "lat": 54.8554105,
+  "lon": 21.1006733,
+  "tags": {
+    "esr:user": "104708",
+    "name": "Полесск",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058451"
+  }
+},
+{
+  "type": "node",
+  "id": 1016050663,
+  "lat": 54.6286348,
+  "lon": 22.5789056,
+  "tags": {
+    "esr:user": "100500",
+    "name": "Нестеров",
+    "name:de": "Ebenrode",
+    "name:en": "Nesterov",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Nesterov",
+    "uic_ref": "2058434"
+  }
+},
+{
+  "type": "node",
+  "id": 1016053269,
+  "lat": 54.3912358,
+  "lon": 22.3798513,
+  "tags": {
+    "esr:user": "100603",
+    "fixme": "Расположение платформ после реконструкции",
+    "name": "Краснолесье",
+    "name:de": "Hardteck",
+    "name:lt": "Krasnolesjė",
+    "old_name:de": "Groß-Rominten",
+    "old_name:lt": "Didžioji Rominta",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058479"
+  }
+},
+{
+  "type": "node",
+  "id": 1071177772,
+  "lat": 54.6736526,
+  "lon": 23.4416565,
+  "tags": {
+    "esr:user": "124025",
+    "name": "Vinčai",
+    "name:lt": "Vinčai",
+    "name:ru": "Винчяй",
+    "name:uk": "Вінчай",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2400063",
+    "wikidata": "Q12677737"
+  }
+},
+{
+  "type": "node",
+  "id": 1304624490,
+  "lat": 54.0533400,
+  "lon": 19.2056865,
+  "tags": {
+    "name": "Stare Pole",
+    "name:ru": "Старе Поле",
+    "name:uk": "Старе Поле",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "SP",
+    "wikidata": "Q2021741",
+    "wikipedia": "pl:Stare Pole (stacja kolejowa)"
+  }
+},
+{
+  "type": "node",
+  "id": 1409641082,
+  "lat": 54.5847939,
+  "lon": 22.1988778,
+  "tags": {
+    "esr:user": "100707",
+    "int_name": "Gusev",
+    "name": "Гусев",
+    "name:de": "Gussew",
+    "name:en": "Gusev",
+    "name:lt": "Gumbinė",
+    "name:pl": "Gusiew",
+    "name:ru": "Гусев",
+    "name:sl": "Gusev",
+    "old_name:de": "Gumbinnen",
+    "old_name:pl": "Głąbin",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Gusev",
+    "uic_ref": "2058395",
+    "wikidata": "Q9282779"
+  }
+},
+{
+  "type": "node",
+  "id": 1632407829,
+  "lat": 54.6381024,
+  "lon": 19.9286516,
+  "tags": {
+    "esr:user": "103601",
+    "name": "Балтийск(паром)",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1666471073,
+  "lat": 54.6285214,
+  "lon": 21.8187740,
+  "tags": {
+    "esr:user": "100800",
+    "name": "Черняховск",
+    "name:be": "Чарняхоўск",
+    "name:de": "Tschernjachowsk",
+    "name:en": "Chernyakhovsk",
+    "name:fr": "Tcherniakhovsk",
+    "name:lt": "Černiachovskas",
+    "name:lv": "Čerņahovska",
+    "name:pl": "Czerniachowsk",
+    "name:ru": "Черняховск",
+    "name:sl": "Crenjahovsk",
+    "name:uk": "Черняховськ",
+    "old_name": "Инстербург",
+    "old_name:be": "Інстэрбург",
+    "old_name:de": "Insterburg",
+    "old_name:lt": "Įsrutis",
+    "old_name:lv": "Insterburga",
+    "old_name:pl": "Wystruć",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Cherniahovsk",
+    "uic_ref": "2058450",
+    "wikidata": "Q108474443"
+  }
+},
+{
+  "type": "node",
+  "id": 1738196538,
+  "lat": 54.6860334,
+  "lon": 23.0217764,
+  "tags": {
+    "esr:user": "124203",
+    "name": "Vilkaviškis",
+    "name:de": "Wilkowischken",
+    "name:el": "Βιλκαβίσκις",
+    "name:he": "וילקובישק",
+    "name:ka": "ვილკავიშკისი",
+    "name:lt": "Vilkaviškis",
+    "name:lv": "Vilkavišķi",
+    "name:pl": "Wyłkowyszki",
+    "name:ru": "Вилкавишкис",
+    "name:sr": "Вилкавишкис",
+    "name:uk": "Вилкавишкіс",
+    "name:zh": "維爾卡維什基斯",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2400432",
+    "wikidata": "Q111234691"
+  }
+},
+{
+  "type": "node",
+  "id": 1826748640,
+  "lat": 54.0314031,
+  "lon": 21.7777295,
+  "tags": {
+    "addr:city": "Giżycko",
+    "name": "Giżycko",
+    "name:de": "Lötzen",
+    "name:lt": "Lėčius",
+    "name:pl": "Giżycko",
+    "name:ru": "Гижицко",
+    "name:uk": "Гіжицько",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Go",
+    "source": "http://ump.waw.pl/ retrieved 16:02:22 01/18/10 (UMP-Suwalki/src/POI-Suwalki.inne.pnt-converted.txt)",
+    "wheelchair": "yes",
+    "wikidata": "Q967053",
+    "wikipedia": "pl:Giżycko (stacja kolejowa)"
+  }
+},
+{
+  "type": "node",
+  "id": 1843828448,
+  "lat": 54.7409766,
+  "lon": 20.1878071,
+  "tags": {
+    "esr:user": "103103",
+    "name": "Шиповка",
+    "old_name": "Адлиг-Повайен",
+    "old_name:de": "Adlig Powayen",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058012"
+  }
+},
+{
+  "type": "node",
+  "id": 1846475936,
+  "lat": 54.7420001,
+  "lon": 20.0960910,
+  "tags": {
+    "esr:user": "101606",
+    "name": "Прохладный",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1870528684,
+  "lat": 54.1168951,
+  "lon": 21.2359043,
+  "tags": {
+    "name": "Tołkiny",
+    "name:pl": "Tołkiny",
+    "name:ru": "Толкины",
+    "name:uk": "Толкіни",
+    "network": "Polregio",
+    "network:short": "PR",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Tł",
+    "source": "ScanEx IRS;public gps track (indicating where the train stopped)"
+  }
+},
+{
+  "type": "node",
+  "id": 2001287734,
+  "lat": 54.6443134,
+  "lon": 19.8967461,
+  "tags": {
+    "esr:user": "103404",
+    "name": "Балтийск",
+    "name:de": "Baltijsk",
+    "old_name": "Пиллау",
+    "old_name:de": "Pillau",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058725",
+    "wikidata": "Q9167882"
+  }
+},
+{
+  "type": "node",
+  "id": 2001306958,
+  "lat": 54.7926733,
+  "lon": 20.6310539,
+  "tags": {
+    "esr:user": "104407",
+    "name": "Гурьевск-Новый",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2001306962,
+  "lat": 55.0306829,
+  "lon": 22.0268350,
+  "tags": {
+    "esr:user": "104905",
+    "name": "Неман-Новый",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058057"
+  }
+},
+{
+  "type": "node",
+  "id": 2001306992,
+  "lat": 55.0829327,
+  "lon": 21.8796642,
+  "tags": {
+    "esr:user": "104801",
+    "name": "Советск",
+    "name:lt": "Sovetskas",
+    "old_name:de": "Bahnhof Tilsit",
+    "old_name:lt": "Tilžė",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058455",
+    "wikidata": "Q104704261"
+  }
+},
+{
+  "type": "node",
+  "id": 2001333377,
+  "lat": 54.3926627,
+  "lon": 20.6477541,
+  "tags": {
+    "esr:user": "102204",
+    "name": "Багратионовск",
+    "name:de": "Bagrationowsk",
+    "name:lt": "Bagrationovskas",
+    "name:pl": "Bagrationowsk",
+    "name:ru": "Багратионовск",
+    "name:sl": "Bagratjonovsk",
+    "name:uk": "Багратіонівськ",
+    "old_name": "Прейсиш-Эйлау",
+    "old_name:de": "Preußisch Eylau",
+    "old_name:lt": "Prūsų Eiluva, Ylava",
+    "old_name:pl": "Iławka",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058905",
+    "wikidata": "Q9164225"
+  }
+},
+{
+  "type": "node",
+  "id": 2001333384,
+  "lat": 54.5847377,
+  "lon": 20.5623101,
+  "tags": {
+    "esr:user": "102401",
+    "name": "Владимиров",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058044"
+  }
+},
+{
+  "type": "node",
+  "id": 2001340056,
+  "lat": 54.6304823,
+  "lon": 20.8956223,
+  "tags": {
+    "esr:user": "101907",
+    "name": "Озерки-Новые",
+    "name:en": "Ozerki-Novye",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058443",
+    "wikidata": "Q108484992"
+  }
+},
+{
+  "type": "node",
+  "id": 2001381540,
+  "lat": 54.6739038,
+  "lon": 20.1189954,
+  "tags": {
+    "esr:user": "103207",
+    "name": "Балтийский Лес",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058049"
+  }
+},
+{
+  "type": "node",
+  "id": 2010693425,
+  "lat": 54.7217242,
+  "lon": 20.5005751,
+  "tags": {
+    "esr:user": "103616",
+    "name": "Калининград-Северный",
+    "name:de": "Kaliningrad Nord",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058002",
+    "wheelchair": "yes",
+    "wikidata": "Q380044"
+  }
+},
+{
+  "type": "node",
+  "id": 2012751811,
+  "lat": 54.6933655,
+  "lon": 20.4985720,
+  "tags": {
+    "esr:user": "100016",
+    "name": "Калининград-Пассажирский",
+    "name:en": "Kaliningrad Central Train Station",
+    "old_name:1929-1946": "Königsberg Hauptbahnhof",
+    "old_name:de:1929-1946": "Königsberg Hauptbahnhof",
+    "old_name:ru:1255-1946": "Кёнигсберг-Гауптманхоф",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Kaliningrad",
+    "uic_ref": "2058001"
+  }
+},
+{
+  "type": "node",
+  "id": 2012751820,
+  "lat": 54.7461709,
+  "lon": 20.5322519,
+  "tags": {
+    "esr:user": "104303",
+    "name": "Кутузово-Новое",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058337"
+  }
+},
+{
+  "type": "node",
+  "id": 2132202328,
+  "lat": 54.0723561,
+  "lon": 21.3875170,
+  "tags": {
+    "name": "Kętrzyn",
+    "name:de": "Rastenburg",
+    "name:lt": "Raistpilis (Kenčinas)",
+    "name:pl": "Kętrzyn",
+    "name:ru": "Кентшин",
+    "name:uk": "Кентшин",
+    "network": "PKP Intercity;Polregio",
+    "network:short": "IC;PR",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Kn",
+    "uic_ref": "5100120",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2154421802,
+  "lat": 54.1149846,
+  "lon": 20.1507532,
+  "tags": {
+    "name": "Orneta",
+    "name:pl": "Orneta",
+    "name:ru": "Орнета",
+    "name:uk": "Орнета",
+    "network": "Polregio",
+    "network:short": "PR",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Or",
+    "wikidata": "Q2445737",
+    "wikipedia": "pl:Orneta (stacja kolejowa)"
+  }
+},
+{
+  "type": "node",
+  "id": 2157572638,
+  "lat": 54.0729258,
+  "lon": 21.0240856,
+  "tags": {
+    "name": "Sątopy-Samulewo",
+    "name:ru": "Сонтопы Самулево",
+    "name:uk": "Сонтопи Самулево",
+    "network": "Polregio",
+    "network:short": "PR",
+    "network:wikidata": "Q1139703",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "SS",
+    "train": "yes",
+    "wikidata": "Q3075688",
+    "wikipedia": "pl:Sątopy-Samulewo (stacja kolejowa)"
+  }
+},
+{
+  "type": "node",
+  "id": 2157575551,
+  "lat": 54.0157843,
+  "lon": 21.5821207,
+  "tags": {
+    "name": "Sterławki Wielkie",
+    "name:de": "Groß Stürlack",
+    "name:lt": "Didieji Stirlaukiai",
+    "name:pl": "Sterławki Wielkie",
+    "name:ru": "Стерлавки Велке",
+    "name:uk": "Стерлавкі-Великі",
+    "network": "Polregio",
+    "network:short": "PR",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "SW",
+    "wikidata": "Q9345780",
+    "wikipedia": "pl:Sterławki Wielkie (stacja kolejowa)"
+  }
+},
+{
+  "type": "node",
+  "id": 2157576668,
+  "lat": 54.0002743,
+  "lon": 21.9145350,
+  "tags": {
+    "name": "Siedliska",
+    "name:pl": "Siedliska",
+    "network": "Polregio",
+    "network:short": "PR",
+    "network:wikidata": "Q1139703",
+    "note": "Przystanek osobowy i posterunek odstępowy",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Si",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2332118273,
+  "lat": 54.7264819,
+  "lon": 23.1995662,
+  "tags": {
+    "name": "Pilviškiai",
+    "name:de": "Pilwischken",
+    "name:he": "פילווישוק",
+    "name:ka": "პილვიშკიაი",
+    "name:lt": "Pilviškiai",
+    "name:pl": "Pilwiszki",
+    "name:ru": "Пилвишкяй",
+    "name:uk": "Пілвішкай",
+    "railway": "station",
+    "uic_ref": "2400431"
+  }
+},
+{
+  "type": "node",
+  "id": 2639896815,
+  "lat": 55.1320933,
+  "lon": 21.9082815,
+  "tags": {
+    "name": "Pagėgiai",
+    "railway": "station",
+    "uic_ref": "2400409"
+  }
+},
+{
+  "type": "node",
+  "id": 3067068079,
+  "lat": 54.1058152,
+  "lon": 22.9453382,
+  "tags": {
+    "name": "Suwałki",
+    "name:de": "Suwalken",
+    "name:lt": "Suvalkai",
+    "name:pl": "Suwałki",
+    "name:ru": "Сувалки",
+    "name:uk": "Сувалкі",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Su",
+    "wheelchair": "yes",
+    "wikidata": "Q5757130",
+    "wikipedia": "pl:Suwałki (stacja kolejowa)"
+  }
+},
+{
+  "type": "node",
+  "id": 3161707936,
+  "lat": 54.6411488,
+  "lon": 22.7593479,
+  "tags": {
+    "esr:user": "124307",
+    "name": "Kybartai",
+    "name:de": "Kybartai",
+    "name:lt": "Kybartai",
+    "name:ru": "Кибартай",
+    "name:uk": "Кібартай",
+    "old_name:de": "Wirballen",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2400433",
+    "wikidata": "Q801041"
+  }
+},
+{
+  "type": "node",
+  "id": 3761885333,
+  "lat": 54.0553482,
+  "lon": 19.6565330,
+  "tags": {
+    "historic:name": "Preussisch Holland",
+    "name": "Pasłęk",
+    "name:lt": "Paslenkas",
+    "name:pl": "Pasłęk",
+    "name:ru": "Пасленк",
+    "name:uk": "Пасленк",
+    "network": "Polregio;PKP Intercity",
+    "network:short": "PR;IC",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Ps",
+    "railway:ref:DB": "XPPS",
+    "wikidata": "Q2557350",
+    "wikipedia": "pl:Pasłęk (stacja kolejowa)"
+  }
+},
+{
+  "type": "node",
+  "id": 3820647726,
+  "lat": 54.0359714,
+  "lon": 19.0431501,
+  "tags": {
+    "name": "Malbork",
+    "name:de": "Marienburg",
+    "name:pl": "Malbork",
+    "name:ru": "Мальборк",
+    "name:uk": "Мальборк",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Mb",
+    "railway:ref:DB": "XPMA",
+    "wheelchair": "yes",
+    "wikidata": "Q2137214",
+    "wikipedia": "pl:Malbork (stacja kolejowa)"
+  }
+},
+{
+  "type": "node",
+  "id": 3820920395,
+  "lat": 54.0900141,
+  "lon": 19.3059519,
+  "tags": {
+    "name": "Gronowo Elbląskie",
+    "name:ru": "Гроново Эльблонске",
+    "name:uk": "Гроново Ельблонське",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "GE",
+    "wikidata": "Q2549770",
+    "wikipedia": "pl:Gronowo Elbląskie (stacja kolejowa)"
+  }
+},
+{
+  "type": "node",
+  "id": 3826888282,
+  "lat": 54.3809392,
+  "lon": 19.8421521,
+  "tags": {
+    "name": "Braniewo",
+    "name:de": "Braunsberg",
+    "name:lt": "Prūsa",
+    "name:pl": "Braniewo",
+    "name:ru": "Бранево",
+    "name:uk": "Бранево",
+    "network": "Polregio",
+    "network:short": "PR",
+    "network:wikidata": "Q1139703",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Br",
+    "train": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q2131055",
+    "wikipedia": "pl:Braniewo (stacja kolejowa)"
+  }
+},
+{
+  "type": "node",
+  "id": 5779632435,
+  "lat": 54.3609278,
+  "lon": 23.4440652,
+  "tags": {
+    "esr:user": "123802",
+    "name": "Šeštokai",
+    "name:de": "Schestoken",
+    "name:lt": "Šeštokai",
+    "name:pl": "Szostaków",
+    "name:ru": "Шяштокай",
+    "name:uk": "Шяштокай",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "24123802",
+    "wikidata": "Q11903353"
+  }
+},
+{
+  "type": "node",
+  "id": 5779632440,
+  "lat": 54.3282432,
+  "lon": 23.3556810,
+  "tags": {
+    "esr:user": "123304",
+    "internet_access": "wlan",
+    "internet_access:captive_portal": "yes",
+    "internet_access:fee": "no",
+    "internet_access:password": "no",
+    "internet_access:ssid": "LTG Mockava Wi-Fi",
+    "name": "Mockava",
+    "name:lt": "Mockava",
+    "name:pl": "Maćkowo",
+    "name:ru": "Моцкава",
+    "name:uk": "Моцкава",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2400104",
+    "wheelchair": "yes",
+    "wikidata": "Q746754"
+  }
+},
+{
+  "type": "node",
+  "id": 5779653553,
+  "lat": 54.2394528,
+  "lon": 23.2080095,
+  "tags": {
+    "name": "Trakiszki",
+    "name:lt": "Trakiškės",
+    "name:pl": "Trakiszki",
+    "name:ru": "Трашки",
+    "name:uk": "Тракішкі",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Tr",
+    "train": "yes",
+    "uic_ref": "51012872",
+    "wikidata": "Q2196314",
+    "wikipedia": "pl:Trakiszki (stacja kolejowa)"
+  }
+},
+{
+  "type": "node",
+  "id": 5962142445,
+  "lat": 54.6369313,
+  "lon": 22.7344794,
+  "tags": {
+    "esr:user": "101019",
+    "name": "Чернышевское",
+    "name:de": "Tschernyschewskoje",
+    "name:en": "Chernyshevskoye",
+    "name:lt": "Černyševskojė",
+    "name:ru": "Чернышевское",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058450",
+    "wikidata": "Q108474171"
+  }
+},
+{
+  "type": "node",
+  "id": 6030765411,
+  "lat": 54.4641528,
+  "lon": 19.9348166,
+  "tags": {
+    "esr:user": "102702",
+    "name": "Мамоново",
+    "name:de": "Mamonowo",
+    "name:en": "Mamonovo",
+    "name:pl": "Mamonowo",
+    "name:ru": "Мамоново",
+    "name:sl": "Mamonovo",
+    "name:uk": "Мамоново",
+    "old_name": "Хайлигенбайль",
+    "old_name:de": "Heiligenbeil",
+    "old_name:pl": "Świętomiejsce Święta Siekierka",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058860",
+    "wikidata": "Q11766948"
+  }
+},
+{
+  "type": "node",
+  "id": 7526817630,
+  "lat": 55.2377675,
+  "lon": 22.2851061,
+  "tags": {
+    "addr:city": "Tauragė",
+    "addr:contact": "yes",
+    "addr:housenumber": "4",
+    "addr:postcode": "72301",
+    "addr:street": "Tremtinių kel.",
+    "name": "Tauragės Geležinkelio stotis",
+    "operator": "Lietuvos Geležinkeliai",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8091740714,
+  "lat": 54.3571493,
+  "lon": 21.3243658,
+  "tags": {
+    "esr:user": "101310",
+    "int_name": "Železnodorožnyj",
+    "name": "Железнодорожный",
+    "name:de": "Schelesnodoroschny",
+    "name:en": "Zheleznodorozhny",
+    "name:pl": "Żeleznodorożnyj",
+    "name:ru": "Железнодорожный",
+    "old_name": "Гердауэн",
+    "old_name:de": "Gerdauen",
+    "old_name:lt": "Girdava",
+    "old_name:pl": "Gierdawy",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058081",
+    "wikidata": "Q116452169"
+  }
+},
+{
+  "type": "node",
+  "id": 8570339670,
+  "lat": 55.4145709,
+  "lon": 22.8465840,
+  "tags": {
+    "name": "Viduklė",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9094092056,
+  "lat": 55.3471584,
+  "lon": 21.4842937,
+  "tags": {
+    "description": "Passenger traffic restored as of 2018",
+    "esr:user": "108709",
+    "name": "Šilutė",
+    "name:lt": "Šilutė",
+    "name:ru": "Шилуте",
+    "name:uk": "Шилуте",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2400404",
+    "wikidata": "Q16478274"
+  }
+},
+{
+  "type": "node",
+  "id": 9543061123,
+  "lat": 54.6634539,
+  "lon": 20.5336753,
+  "tags": {
+    "esr:user": "102505",
+    "name": "Дзержинская-Новая",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10607796078,
+  "lat": 54.6010029,
+  "lon": 21.7444916,
+  "tags": {
+    "esr:user": "101536",
+    "name": "Красновка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q116451533"
+  }
+},
+{
+  "type": "node",
+  "id": 11099899534,
+  "lat": 54.3217986,
+  "lon": 19.5230429,
+  "tags": {
+    "name": "Tolkmicko",
+    "operator": "Nadzalewowa Kolej Drezynowa",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Tk",
+    "train": "yes",
+    "wikidata": "Q2015607",
+    "wikipedia": "pl:Tolkmicko (przystanek kolejowy)"
+  }
+},
+{
+  "type": "node",
+  "id": 11161071261,
+  "lat": 54.6523159,
+  "lon": 20.6223278,
+  "tags": {
+    "esr:user": "102100",
+    "name": "Луговое-Новое",
+    "name:en": "Lugovoye",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058348",
+    "wikidata": "Q108486553"
+  }
+},
+{
+  "type": "node",
+  "id": 11635799388,
+  "lat": 54.6149360,
+  "lon": 21.2148737,
+  "tags": {
+    "esr:user": "101706",
+    "name": "Знаменск",
+    "name:de": "Snamensk",
+    "name:en": "Znamensk",
+    "name:et": "Znamensk",
+    "name:lt": "Znamenskas",
+    "name:pl": "Znamiensk",
+    "name:ru": "Знаменск",
+    "old_name:de": "Wehlau",
+    "old_name:lt": "Vėluva",
+    "old_name:pl": "Welawa",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058441",
+    "wikidata": "Q108478965"
+  }
+},
+{
+  "type": "node",
+  "id": 11640991390,
+  "lat": 54.6155653,
+  "lon": 20.4086902,
+  "tags": {
+    "esr:user": "100054",
+    "name": "Голубево",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058028"
+  }
+},
+{
+  "type": "node",
+  "id": 11640991395,
+  "lat": 54.6790550,
+  "lon": 20.4662848,
+  "tags": {
+    "esr:user": "100035",
+    "name": "Калининград-Мамоновский",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Калининградская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2058473"
+  }
+},
+{
+  "type": "node",
+  "id": 12103352190,
+  "lat": 54.1724271,
+  "lon": 21.1363400,
+  "tags": {
+    "addr:city": "Korsze",
+    "addr:housenumber": "1",
+    "addr:postcode": "11-430",
+    "addr:street": "Dworcowa",
+    "name": "Korsze",
+    "name:pl": "Korsze",
+    "name:ru": "Корше",
+    "name:uk": "Корше",
+    "network": "PKP Intercity;Polregio",
+    "network:short": "IC;PR",
+    "operator": "PKP Polskie Linie Kolejowe",
+    "operator:short": "PKP PLK",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Ko",
+    "train": "yes",
+    "wikidata": "Q2154223",
+    "wikipedia": "pl:Korsze (stacja kolejowa)"
+  }
+},
+{
+  "type": "node",
+  "id": 12386260097,
+  "lat": 54.0003045,
+  "lon": 21.9146184,
+  "tags": {
+    "name": "Siedliska",
+    "network": "PKP Polskie Linie Kolejowe",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13823934932,
+  "lat": 54.0003230,
+  "lon": 21.9146196,
+  "tags": {
+    "name": "Siedliska",
+    "network": "PKP Polskie Linie Kolejowe",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+}
+
+  ]
+}

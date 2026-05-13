@@ -1,0 +1,250 @@
+[
+ {
+  "id": "alashankou",
+  "claimed": "CN",
+  "actual": "KZ",
+  "name": "Alashankou",
+  "lat": 45.18,
+  "lng": 82.55
+ },
+ {
+  "id": "shenzhen",
+  "claimed": "CN",
+  "actual": "HK",
+  "name": "Shenzhen",
+  "lat": 22.54,
+  "lng": 114.06
+ },
+ {
+  "id": "boten",
+  "claimed": "LA",
+  "actual": "CN",
+  "name": "Boten",
+  "lat": 21.21,
+  "lng": 101.79
+ },
+ {
+  "id": "johorbahru",
+  "claimed": "MY",
+  "actual": "SG",
+  "name": "Johor Bahru",
+  "lat": 1.49,
+  "lng": 103.76
+ },
+ {
+  "id": "darshana",
+  "claimed": "IN",
+  "actual": "BD",
+  "name": "Gede",
+  "lat": 23.55,
+  "lng": 88.81
+ },
+ {
+  "id": "razi",
+  "claimed": "IR",
+  "actual": "TR",
+  "name": "Razi",
+  "lat": 39.04,
+  "lng": 44.06
+ },
+ {
+  "id": "jerusalem",
+  "claimed": "IL",
+  "actual": "PS",
+  "name": "Jerusalem",
+  "lat": 31.79,
+  "lng": 35.2
+ },
+ {
+  "id": "suifenhe",
+  "claimed": "CN",
+  "actual": "RU",
+  "name": "Suifenhe",
+  "lat": 44.41,
+  "lng": 131.16
+ },
+ {
+  "id": "osm_il_2931455067",
+  "claimed": "IL",
+  "actual": "PS",
+  "name": "Modi'in Center",
+  "lat": 31.9011,
+  "lng": 35.0058
+ },
+ {
+  "id": "osm_il_13626956323",
+  "claimed": "IL",
+  "actual": "PS",
+  "name": "Tayibe-Shomron",
+  "lat": 32.2763,
+  "lng": 34.9966
+ },
+ {
+  "id": "osm_ge_1835029065",
+  "claimed": "GE",
+  "actual": "RU",
+  "name": "Chervlyonnaya",
+  "lat": 43.4936,
+  "lng": 45.8793
+ },
+ {
+  "id": "osm_ge_1839655549",
+  "claimed": "GE",
+  "actual": "RU",
+  "name": "Konservnyy",
+  "lat": 43.1899,
+  "lng": 44.7207
+ },
+ {
+  "id": "osm_ge_3713979649",
+  "claimed": "GE",
+  "actual": "RU",
+  "name": "Sulak",
+  "lat": 43.209,
+  "lng": 46.8233
+ },
+ {
+  "id": "osm_ge_10614992874",
+  "claimed": "GE",
+  "actual": "RU",
+  "name": "Murtazovo",
+  "lat": 43.4814,
+  "lng": 44.1315
+ },
+ {
+  "id": "osm_ge_11513872420",
+  "claimed": "GE",
+  "actual": "RU",
+  "name": "Nalchik",
+  "lat": 43.4912,
+  "lng": 43.616
+ },
+ {
+  "id": "osm_am_183431911",
+  "claimed": "AM",
+  "actual": "AZ",
+  "name": "Zəyəm Stansiyası",
+  "lat": 40.9034,
+  "lng": 45.8882
+ },
+ {
+  "id": "osm_am_431966946",
+  "claimed": "AM",
+  "actual": "AZ",
+  "name": "Şahtaxtı",
+  "lat": 39.3568,
+  "lng": 45.089
+ },
+ {
+  "id": "osm_am_1894710723",
+  "claimed": "AM",
+  "actual": "AZ",
+  "name": "Qızılvəng",
+  "lat": 39.1087,
+  "lng": 45.4157
+ },
+ {
+  "id": "osm_am_3078929442",
+  "claimed": "AM",
+  "actual": "AZ",
+  "name": "Goran Stansiyası",
+  "lat": 40.653,
+  "lng": 46.8519
+ },
+ {
+  "id": "osm_am_3078981829",
+  "claimed": "AM",
+  "actual": "AZ",
+  "name": "Şəmkir Təzəkənd Stansiyası",
+  "lat": 40.8357,
+  "lng": 46.1468
+ },
+ {
+  "id": "osm_am_3082864534",
+  "claimed": "AM",
+  "actual": "AZ",
+  "name": "Sharur",
+  "lat": 39.5502,
+  "lng": 44.9816
+ },
+ {
+  "id": "osm_am_3894839835",
+  "claimed": "AM",
+  "actual": "AZ",
+  "name": "Bayan Stansiyası",
+  "lat": 40.5631,
+  "lng": 46.172
+ },
+ {
+  "id": "osm_az_11368513459",
+  "claimed": "AZ",
+  "actual": "AM",
+  "name": "Vardenis",
+  "lat": 40.203,
+  "lng": 45.7436
+ },
+ {
+  "id": "osm_ru_280077862",
+  "claimed": "RU",
+  "actual": "GE",
+  "name": "Kareli",
+  "lat": 42.0209,
+  "lng": 43.9035
+ },
+ {
+  "id": "osm_ru_288626049",
+  "claimed": "RU",
+  "actual": "GE",
+  "name": "Zestafoni",
+  "lat": 42.108,
+  "lng": 43.0391
+ },
+ {
+  "id": "osm_ru_288626829",
+  "claimed": "RU",
+  "actual": "GE",
+  "name": "Supsa",
+  "lat": 42.0411,
+  "lng": 41.8136
+ },
+ {
+  "id": "osm_ru_504895671",
+  "claimed": "RU",
+  "actual": "GE",
+  "name": "Sukhum",
+  "lat": 43.0066,
+  "lng": 40.996
+ },
+ {
+  "id": "osm_ru_506487924",
+  "claimed": "RU",
+  "actual": "GE",
+  "name": "Bzypta",
+  "lat": 43.2256,
+  "lng": 40.3525
+ },
+ {
+  "id": "osm_ru_902313860",
+  "claimed": "RU",
+  "actual": "GE",
+  "name": "Sajavakho",
+  "lat": 42.1039,
+  "lng": 42.2919
+ },
+ {
+  "id": "osm_ru_1489441133",
+  "claimed": "RU",
+  "actual": "GE",
+  "name": "Zugdidi",
+  "lat": 42.5105,
+  "lng": 41.8602
+ },
+ {
+  "id": "osm_ru_1643929779",
+  "claimed": "RU",
+  "actual": "GE",
+  "name": "Sachkhere",
+  "lat": 42.3349,
+  "lng": 43.3997
+ }
+]

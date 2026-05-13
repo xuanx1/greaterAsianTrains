@@ -72,12 +72,41 @@ function dijkstra(adj, origin) {
   const dist = { [origin]: 0 };
   const prev = {};
   const prevRoute = {};
-  // Min-heap surrogate via sorted array (dataset is small).
-  const pq = [{ id: origin, d: 0 }];
+  // Binary min-heap. Replaces the old `pq.sort()` surrogate, which was
+  // O(N log N) per pop and made Dijkstra O(V²·log V) — ~230 M ops on a
+  // 4 k-station graph and very noticeable when toggling HSR-only.
+  const heap = [];
+  const swap = (i, j) => { const t = heap[i]; heap[i] = heap[j]; heap[j] = t; };
+  const push = (id, d) => {
+    heap.push({ id, d });
+    let i = heap.length - 1;
+    while (i > 0) {
+      const p = (i - 1) >> 1;
+      if (heap[p].d <= heap[i].d) break;
+      swap(p, i); i = p;
+    }
+  };
+  const pop = () => {
+    const top = heap[0];
+    const last = heap.pop();
+    if (heap.length) {
+      heap[0] = last;
+      let i = 0; const n = heap.length;
+      while (true) {
+        const l = 2*i + 1, r = 2*i + 2;
+        let s = i;
+        if (l < n && heap[l].d < heap[s].d) s = l;
+        if (r < n && heap[r].d < heap[s].d) s = r;
+        if (s === i) break;
+        swap(s, i); i = s;
+      }
+    }
+    return top;
+  };
+  push(origin, 0);
   const visited = new Set();
-  while (pq.length) {
-    pq.sort((a, b) => a.d - b.d);
-    const cur = pq.shift();
+  while (heap.length) {
+    const cur = pop();
     if (visited.has(cur.id)) continue;
     visited.add(cur.id);
     for (const n of (adj[cur.id] || [])) {
@@ -86,7 +115,7 @@ function dijkstra(adj, origin) {
         dist[n.to] = nd;
         prev[n.to] = cur.id;
         prevRoute[n.to] = n.r;
-        pq.push({ id: n.to, d: nd });
+        push(n.to, nd);
       }
     }
   }
@@ -547,8 +576,14 @@ const ASIAN_COUNTRY_IDS = new Set([
 // =============================================================
 // Reachability isochrone grid + marching-squares contour extraction
 // =============================================================
-const GRID_LNG_MIN = 25, GRID_LNG_MAX = 145;
-const GRID_LAT_MIN = -12, GRID_LAT_MAX = 62;
+// Contour grid bounds — MUST enclose every station, else contours stop
+// rendering above the cap (the previous 62 °N ceiling left Murmansk,
+// Vorkuta, the whole Kola Peninsula, Komi and Yakutia uncontoured, which
+// looked like a permanent "plateau above Petrozavodsk" no matter how
+// many intermediaries got added). Actual station envelope is
+// (-8.4..69.5 lat, 19.0..145.6 lng) at time of writing; pad by ~2°.
+const GRID_LNG_MIN = 17, GRID_LNG_MAX = 148;
+const GRID_LAT_MIN = -10, GRID_LAT_MAX = 72;
 const GRID_STEP = 0.18;
 const OFF_RAIL_FREE_KM = 0;
 const OFF_RAIL_SPEED = 10;
@@ -729,6 +764,10 @@ function useProjection(stations) {
       type: "FeatureCollection",
       features: [{ type: "Feature", geometry: { type: "MultiPoint", coordinates: coords } }],
     };
+    // Mercator. The high-latitude visual stretch is fine — what was
+    // actually breaking the "plateau above Petrozavodsk" was the contour
+    // GRID having a 62 °N ceiling, not the projection (now lifted to
+    // 72 °N upstream).
     return d3.geoMercator().fitExtent([[24, 40], [W - 24, H - 40]], fc);
   }, [stations]);
 }
@@ -849,7 +888,8 @@ function Compass({ x, y, r = 38 }) {
 // =============================================================
 function MapView({
   theme, hsrOnly, origin, setOrigin, hoverDest, setHoverDest,
-  selectedDest, setSelectedDest, maxHours, contoursOn
+  selectedDest, setSelectedDest, maxHours, contoursOn,
+  showSeaLabels, showCountryLabels
 }) {
   const projection = useProjection(STATIONS);
   const world = useWorldGeo();
@@ -1168,6 +1208,7 @@ function MapView({
               strokeOpacity="0.18"
               strokeWidth="9"
               strokeLinecap="round"
+              vectorEffect="non-scaling-stroke"
             />
             <line
               x1={a.x} y1={a.y} x2={b.x} y2={b.y}
@@ -1175,10 +1216,17 @@ function MapView({
               strokeWidth="1.6"
               strokeDasharray="2 5"
               strokeLinecap="round"
+              vectorEffect="non-scaling-stroke"
             />
-            <circle cx={a.x} cy={a.y} r="6" fill="none" stroke="var(--accent)" strokeWidth="1.2" />
-            <circle cx={b.x} cy={b.y} r="6" fill="none" stroke="var(--accent)" strokeWidth="1.2" strokeDasharray="2 2" />
-            <g transform={`translate(${lx},${ly})`}>
+            {/* endpoint circles + badge counter-scaled so they stay constant
+                size at any zoom — same trick the station dots use */}
+            <g transform={`translate(${a.x},${a.y}) scale(${1/zoomT.k})`}>
+              <circle r="6" fill="none" stroke="var(--accent)" strokeWidth="1.2" />
+            </g>
+            <g transform={`translate(${b.x},${b.y}) scale(${1/zoomT.k})`}>
+              <circle r="6" fill="none" stroke="var(--accent)" strokeWidth="1.2" strokeDasharray="2 2" />
+            </g>
+            <g transform={`translate(${lx},${ly}) scale(${1/zoomT.k})`}>
               <rect x="-38" y="-9" width="76" height="18" rx="2"
                     fill="var(--paper)" stroke="var(--accent)" strokeWidth="0.6"
                     opacity="0.96" />
@@ -1376,7 +1424,7 @@ function MapView({
       </g>
       </g>
       <g className="labels-on-top" style={{ pointerEvents: "none" }}>
-        {SEA_LABELS.map((l, i) => {
+        {showSeaLabels && SEA_LABELS.map((l, i) => {
           const [zx, zy] = projection([l.lng, l.lat]);
           return (
             <text
@@ -1393,7 +1441,7 @@ function MapView({
             >{l.text}</text>
           );
         })}
-        {COUNTRY_LABELS.map((l, i) => {
+        {showCountryLabels && COUNTRY_LABELS.map((l, i) => {
           const [zx, zy] = projection([l.lng, l.lat]);
           return (
             <text
@@ -1559,23 +1607,32 @@ function ReachableList({
     [adj, origin]
   );
 
+  const origStation = origin ? STATIONS_BY_ID[origin] : null;
+
+  // Memoise the three lists. Without this every hover/zoom/theme tick
+  // re-walks all 4,000+ stations and reruns gcDist for the disconnected
+  // set — and HSR-only mode disconnects ~99 % of the network.
+  const { items, overBudget, disconnected } = useMemo(() => {
+    if (!origStation) return { items: [], overBudget: [], disconnected: [] };
+    const items = [], over = [], disc = [];
+    for (const s of STATIONS) {
+      if (s.id === origin) continue;
+      const t = dist[s.id];
+      if (t === undefined) {
+        disc.push({ s, km: gcDist(origStation, s) });
+      } else if (t <= hours) {
+        items.push({ s, t });
+      } else {
+        over.push({ s, t });
+      }
+    }
+    items.sort((a, b) => a.t - b.t);
+    over.sort((a, b) => a.t - b.t);
+    disc.sort((a, b) => a.km - b.km);
+    return { items, overBudget: over, disconnected: disc };
+  }, [origStation, origin, dist, hours]);
+
   if (!origin) return null;
-  const origStation = STATIONS_BY_ID[origin];
-
-  const items = STATIONS
-    .filter(s => s.id !== origin && dist[s.id] !== undefined && dist[s.id] <= hours)
-    .map(s => ({ s, t: dist[s.id] }))
-    .sort((a, b) => a.t - b.t);
-
-  const overBudget = STATIONS
-    .filter(s => s.id !== origin && dist[s.id] !== undefined && dist[s.id] > hours)
-    .map(s => ({ s, t: dist[s.id] }))
-    .sort((a, b) => a.t - b.t);
-
-  const disconnected = STATIONS
-    .filter(s => s.id !== origin && dist[s.id] === undefined)
-    .map(s => ({ s, km: gcDist(origStation, s) }))
-    .sort((a, b) => a.km - b.km);
 
   return (
     <div className="panel list-panel">
@@ -1651,7 +1708,7 @@ function ReachableList({
               <span>Disconnected · {disconnected.length}</span>
               <span className="ls-hint">no rail path — gap from origin</span>
             </div>
-            {disconnected.map(({s, km}) => {
+            {disconnected.slice(0, 40).map(({s, km}) => {
               const isSel = s.id === selectedDest;
               const isHov = s.id === hoverDest;
               return (
@@ -1671,6 +1728,9 @@ function ReachableList({
                 </div>
               );
             })}
+            {disconnected.length > 40 && (
+              <div className="ls-more">+ {disconnected.length - 40} more disconnected stations</div>
+            )}
           </div>
         )}
       </div>
@@ -2015,7 +2075,7 @@ const TWEAKS = /*EDITMODE-BEGIN*/{
   "maxHoursBound": 48,
   "showCountryLabels": true,
   "stationLabels": "smart",
-  "showSeaLabels": true,
+  "showSeaLabels": false,
   "showDisconnected": true,
   "darkenNonAsia": true
 }/*EDITMODE-END*/;
@@ -2076,6 +2136,8 @@ function App() {
           setSelectedDest={setSelectedDest}
           maxHours={hours}
           contoursOn={contoursOn}
+          showSeaLabels={tweaks.showSeaLabels}
+          showCountryLabels={tweaks.showCountryLabels}
         />
         {/* Decorative corner ornament */}
         <svg className="corner-ornament tl" viewBox="0 0 60 60" aria-hidden="true">

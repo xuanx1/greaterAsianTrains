@@ -1,7 +1,7 @@
 # Great Asia
 
 An interactive travel-poster atlas of rail reach across the continent —
-**3,122 stations, 5,813 services, 31 countries with passenger rail**.
+**4,429 stations, 5,109 services, 31 countries with passenger rail**.
 
 Pick a starting station, drag the time slider, and watch the green web grow
 to show every station you can reach by passenger train within the chosen
@@ -32,7 +32,7 @@ Station count by country (descending):
 
 | | | | | | |
 |---|---:|---|---:|---|---:|
-| Russia | 1,011 | Iran | 116 | Indonesia | 76 |
+| Russia | 2,318 | Iran | 116 | Indonesia | 76 |
 | China | 474 | South Korea | 113 | Thailand | 74 |
 | Japan | 232 | Bangladesh | 68 | Turkey | 74 |
 | India | 205 | Vietnam | 64 | Pakistan | 73 |
