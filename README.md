@@ -1,6 +1,6 @@
-# Great Asia
+# Greater Asia [Reachability](https://xuanx1.github.io/greaterAsianTrains/)
 
-An interactive travel-poster atlas of rail reach across the continent —
+An interactive [visualisation](https://xuanx1.github.io/greaterAsianTrains/) of rail reach across the continent —
 **4,429 stations, 5,109 services, 31 countries with passenger rail**.
 
 Pick a starting station, drag the time slider, and watch the green web grow
@@ -10,8 +10,6 @@ station to draw the multi-leg route with operator, line name, and per-leg
 times. Click an isolated station to surface a full **journey plan** that
 alternates rail sections with the bridge gaps you'd need to fill to get
 there.
-
-![masthead](screenshots/01-initial.png)
 
 ## What you can do
 
