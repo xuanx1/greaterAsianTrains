@@ -1,0 +1,6252 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-13T16:32:45Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 245560090,
+  "lat": 39.4582505,
+  "lon": 66.3061093,
+  "tags": {
+    "esr:user": "728036",
+    "name": "Джам",
+    "name:ru": "Джам",
+    "operator": "O'zbekiston temir yo'llary",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2900203"
+  }
+},
+{
+  "type": "node",
+  "id": 245571471,
+  "lat": 39.5022943,
+  "lon": 64.7916117,
+  "tags": {
+    "esr": "730303",
+    "esr:user": "730303",
+    "name": "Қоровулбозор",
+    "name:en": "Karaulbazar",
+    "name:ru": "Караулбазар",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 245595661,
+  "lat": 38.6347089,
+  "lon": 66.2571243,
+  "tags": {
+    "esr": "733706",
+    "esr:user": "733706",
+    "name": "Gʻuzor",
+    "name:en": "Gʻuzor",
+    "name:ru": "Гузар",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2900793"
+  }
+},
+{
+  "type": "node",
+  "id": 245607832,
+  "lat": 38.9805444,
+  "lon": 66.6732994,
+  "tags": {
+    "alt_name:en": "Yakkabogh;Stantsiya Yakkabag;Yakkabag",
+    "alt_name:ru": "Яккабогг;Станция Яккабаг;Яккабаг",
+    "esr": "733903",
+    "esr:user": "733903",
+    "name": "Yakkabogʻ",
+    "name:en": "Yakkabog'",
+    "name:ru": "Яккобаг",
+    "name:uz": "Yakkabog'",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900795"
+  }
+},
+{
+  "type": "node",
+  "id": 245607879,
+  "lat": 39.0902778,
+  "lon": 66.8374538,
+  "tags": {
+    "esr": "734107",
+    "esr:user": "734107",
+    "name": "Kitob",
+    "name:en": "Kitab",
+    "name:ru": "Китаб",
+    "name:uz": "Kitob",
+    "name:zh": "沙赫里萨布兹",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900880"
+  }
+},
+{
+  "type": "node",
+  "id": 245898168,
+  "lat": 40.0212497,
+  "lon": 53.5059829,
+  "tags": {
+    "name": "Garateňir",
+    "name:ru": "Гаратенгир",
+    "name:tk": "Garateňir",
+    "old_name:ru": "Кара-Тенгир",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 246454045,
+  "lat": 41.5679916,
+  "lon": 64.1719993,
+  "tags": {
+    "alt_name": "Зарафшон;Сугралы;Суграли;Зарафшан",
+    "alt_name:en": "Zarafshon;Sugraly;Sugrali;Zarafshan",
+    "alt_name:uz": "Янги Зарафшон",
+    "esr": "731908",
+    "esr:user": "731908",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "-2579931",
+    "name": "Yangi Zarafshon",
+    "name:en": "Yangi Zarafshan",
+    "name:ru": "Янги Зарафшан",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2900779"
+  }
+},
+{
+  "type": "node",
+  "id": 246497514,
+  "lat": 40.2799597,
+  "lon": 65.0420803,
+  "tags": {
+    "alt_name:ru": "Конимеx",
+    "esr": "731503",
+    "esr:user": "731503",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "11174134",
+    "name": "Konimex",
+    "name:en": "Kanimeh",
+    "name:ru": "Канимех",
+    "name:zh": "卡尼梅赫",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2900817"
+  }
+},
+{
+  "type": "node",
+  "id": 246498193,
+  "lat": 40.0887124,
+  "lon": 65.3198498,
+  "tags": {
+    "esr": "731407",
+    "esr:user": "731407",
+    "name": "Tinchlik",
+    "name:ru": "Тинчлик",
+    "name:zh": "京奇利克",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900816"
+  }
+},
+{
+  "type": "node",
+  "id": 247261141,
+  "lat": 41.2079417,
+  "lon": 61.3371130,
+  "tags": {
+    "esr": "738705",
+    "esr:user": "738705",
+    "name": "Питняк",
+    "name:ru": "Питняк",
+    "railway": "station",
+    "uic_ref": "2900969"
+  }
+},
+{
+  "type": "node",
+  "id": 247312699,
+  "lat": 42.6797774,
+  "lon": 59.7577839,
+  "tags": {
+    "esr:user": "739204",
+    "name": "Qumshumgúl",
+    "name:ru": "Кумшунгуль",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2902201"
+  }
+},
+{
+  "type": "node",
+  "id": 247314590,
+  "lat": 39.4963503,
+  "lon": 63.8467222,
+  "tags": {
+    "esr": "730604",
+    "esr:user": "730604",
+    "name": "Qo'rako'l",
+    "name:ru": "Каракуль",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900860"
+  }
+},
+{
+  "type": "node",
+  "id": 263264374,
+  "lat": 36.3045564,
+  "lon": 59.6241894,
+  "tags": {
+    "int_name": "Mashhad Railway Station",
+    "name": "ایستگاه راه آهن شهید رئیسی مشهد",
+    "name:ar": "محطة السكة الحديد شهيد رئيسي مشهد",
+    "name:de": "Maschhad Hauptbahnhof",
+    "name:en": "Shahid Raeisi Railway Station",
+    "phone": "+98 51 3222 4682",
+    "public_transport": "station",
+    "rail": "yes",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q5941905"
+  }
+},
+{
+  "type": "node",
+  "id": 274970840,
+  "lat": 38.9235740,
+  "lon": 63.4754829,
+  "tags": {
+    "alt_name": "Barkhany",
+    "esr:user": "750434",
+    "name": "Balhana",
+    "name:ru": "Балхана",
+    "railway": "station",
+    "uic_ref": "6700835"
+  }
+},
+{
+  "type": "node",
+  "id": 275156824,
+  "lat": 39.6295203,
+  "lon": 54.2295179,
+  "tags": {
+    "name": "Jebel",
+    "name:ru": "Джебел",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 275164301,
+  "lat": 39.3490064,
+  "lon": 55.1691661,
+  "tags": {
+    "addr:village": "Akjaguýma",
+    "name": "Akjaguýma",
+    "name:ru": "Акджагуйма",
+    "name:tk": "Akjaguýma",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 275214357,
+  "lat": 38.7286642,
+  "lon": 56.8047808,
+  "tags": {
+    "addr:city": "Bamy",
+    "name": "Bamy",
+    "name:ru": "Бамы",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 275232562,
+  "lat": 38.4340984,
+  "lon": 57.4315899,
+  "tags": {
+    "addr:city": "Baherden",
+    "name": "Bäherden",
+    "name:en": "Baherden",
+    "name:ru": "Бахeрден",
+    "name:tk": "Bäherden",
+    "note": "Turkmen parliament changed the name back to Baherden by legislative act of 25 November 2017.",
+    "old_name": "Baharly",
+    "old_name:ru": "Бахарли",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 303841913,
+  "lat": 36.1505901,
+  "lon": 54.3703683,
+  "tags": {
+    "name": "دامغان",
+    "name:ar": "دامغان",
+    "name:de": "Damghan",
+    "name:en": "Damghan",
+    "public_transport": "station",
+    "rail": "yes",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168425"
+  }
+},
+{
+  "type": "node",
+  "id": 679964489,
+  "lat": 35.1655049,
+  "lon": 59.1000164,
+  "tags": {
+    "name": "ایستگاه قطار شادمهر",
+    "name:en": "Shadmehr Train Station",
+    "network": "RAI",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 684205488,
+  "lat": 36.6561952,
+  "lon": 53.2894984,
+  "tags": {
+    "name": "ایستگاه راه آهن نکا",
+    "name:en": "Railway Station Of Neka",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85168702"
+  }
+},
+{
+  "type": "node",
+  "id": 684206415,
+  "lat": 36.8451904,
+  "lon": 53.3207898,
+  "tags": {
+    "name": "بندر امیرآباد",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 684206722,
+  "lat": 35.9542665,
+  "lon": 53.0059795,
+  "tags": {
+    "name": "سرخ آباد",
+    "name:en": "Sorkhabad",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 684207404,
+  "lat": 35.6549557,
+  "lon": 52.6976361,
+  "tags": {
+    "name": "مهاباد",
+    "name:en": "Mahabad",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 684207459,
+  "lat": 36.7747660,
+  "lon": 53.9506778,
+  "tags": {
+    "name": "ایستگاه راه آهن بندر گز",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 684207872,
+  "lat": 36.1769924,
+  "lon": 52.9711112,
+  "tags": {
+    "name": "ایستگاه راه آهن زیراب",
+    "name:en": "Zirab",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 684208116,
+  "lat": 36.5527428,
+  "lon": 53.0587221,
+  "tags": {
+    "addr:city": "ساری",
+    "addr:street": "میدان راه آهن",
+    "light_rail": "yes",
+    "name": "ایستگاه راه آهن ساری",
+    "operator": "اداره کل راه اهن شمال",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "train": "yes",
+    "wikidata": "Q65195225",
+    "wikipedia": "fa:ایستگاه راه‌آهن ساری"
+  }
+},
+{
+  "type": "node",
+  "id": 684208967,
+  "lat": 36.7269468,
+  "lon": 53.7245719,
+  "tags": {
+    "name": "ایستگاه راه آهن تیرتاش",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 684209169,
+  "lat": 36.8933188,
+  "lon": 54.0657770,
+  "tags": {
+    "name": "بندر ترکمن",
+    "name:en": "Bandar-e Torkaman",
+    "name:ru": "Бендер-Торкеман",
+    "name:tk": "Bender Türkmen",
+    "name:tr": "Bender Türkmen",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 684209279,
+  "lat": 36.7470459,
+  "lon": 53.8129566,
+  "tags": {
+    "name": "ایستگاه راه آهن گلوگاه",
+    "name:en": "Galugah",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85168740"
+  }
+},
+{
+  "type": "node",
+  "id": 684209769,
+  "lat": 36.1151120,
+  "lon": 53.0562359,
+  "tags": {
+    "name": "پل سفید",
+    "name:en": "Pol-e Sefid",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 688670899,
+  "lat": 36.0301170,
+  "lon": 59.8195541,
+  "tags": {
+    "name": "شهید مطهری",
+    "name:en": "Shahid Motahary",
+    "railway": "station",
+    "wikidata": "Q85168496"
+  }
+},
+{
+  "type": "node",
+  "id": 696516108,
+  "lat": 36.0857506,
+  "lon": 58.9917326,
+  "tags": {
+    "name": "ایستگاه خیام",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168358"
+  }
+},
+{
+  "type": "node",
+  "id": 915309675,
+  "lat": 37.3845969,
+  "lon": 60.5005729,
+  "tags": {
+    "name": "Tejen",
+    "name:ja": "テジェン",
+    "name:ru": "Теджен",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1187827845,
+  "lat": 38.4995877,
+  "lon": 57.3297772,
+  "tags": {
+    "name": "Rzd. No 100",
+    "name:ru": "Разъезд № 100",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1187987196,
+  "lat": 38.2469437,
+  "lon": 57.7947133,
+  "tags": {
+    "name": "Rzd. No 96",
+    "name:ru": "Разъезд № 96",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1187987268,
+  "lat": 38.1599471,
+  "lon": 57.9654706,
+  "tags": {
+    "addr:city": "Gökdepe",
+    "addr:street": "Magtymguly şaýoly",
+    "alt_name": "Гекдепе",
+    "name": "Gökdepe",
+    "name:en": "Gokdepe",
+    "name:ru": "Гёкдепе",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1229578059,
+  "lat": 36.3128258,
+  "lon": 59.6553982,
+  "tags": {
+    "name": "مترو فجر",
+    "name:ar": "الفجر",
+    "name:en": "Fajr Metro Station",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "stop_position": "yes",
+    "subway": "yes",
+    "wikidata": "Q30599976"
+  }
+},
+{
+  "type": "node",
+  "id": 1229578061,
+  "lat": 36.2845386,
+  "lon": 59.5500407,
+  "tags": {
+    "name": "مترو شهید کاوه",
+    "name:ar": "شهيد كافه",
+    "name:en": "Shahid Kaveh Metro Station",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q51846729"
+  }
+},
+{
+  "type": "node",
+  "id": 1229578063,
+  "lat": 36.3060154,
+  "lon": 59.6446516,
+  "tags": {
+    "name": "مترو نبوت",
+    "name:ar": "نبوت",
+    "name:en": "Nabovvat Metro Station",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "stop_position": "yes",
+    "subway": "yes",
+    "wikidata": "Q30599975"
+  }
+},
+{
+  "type": "node",
+  "id": 1229578065,
+  "lat": 36.3034236,
+  "lon": 59.6229181,
+  "tags": {
+    "name": "مترو راه آهن",
+    "name:ar": "السكك الحديدية",
+    "name:en": "Raah Ahan Metro Station",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "stop_position": "yes",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1229578067,
+  "lat": 36.2877086,
+  "lon": 59.5761299,
+  "tags": {
+    "name": "مترو الندشت",
+    "name:ar": "الندشت",
+    "name:en": "Alandasht Metro Station",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1229578075,
+  "lat": 36.2953477,
+  "lon": 59.5982227,
+  "tags": {
+    "name": "مترو سعدی",
+    "name:ar": "سعدي",
+    "name:en": "Sa'di Metro Station",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "stop_position": "yes",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1238436292,
+  "lat": 40.0729708,
+  "lon": 65.3963013,
+  "tags": {
+    "alt_name": "Станция Кермине;Станция Навои",
+    "alt_name:en": "Stantsiya Kermine;Stantsiya Navoi",
+    "esr": "731306",
+    "esr:user": "731306",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "-2578277",
+    "name": "Navoiy",
+    "name:en": "Navoi",
+    "name:ru": "Навои",
+    "name:uz": "Navoiy",
+    "name:zh": "纳沃伊",
+    "old_name:pl": "Kermine",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "train": "yes",
+    "uic_ref": "2900930"
+  }
+},
+{
+  "type": "node",
+  "id": 1245398735,
+  "lat": 36.3017247,
+  "lon": 59.6377121,
+  "tags": {
+    "name": "مترو مفتح",
+    "name:ar": "مفتح",
+    "name:en": "Mofatteh Metro Station",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "stop_position": "yes",
+    "subway": "yes",
+    "wikidata": "Q48816796",
+    "wikipedia": "fa:ایستگاه قطار شهری شهید مفتح"
+  }
+},
+{
+  "type": "node",
+  "id": 1257213611,
+  "lat": 42.3465940,
+  "lon": 59.5640376,
+  "tags": {
+    "addr:street": "Gárezsizlik kóshesi",
+    "esr:user": "738907",
+    "name": "Taqıyatas-Pristan",
+    "name:en": "Takhiatash-Pristan",
+    "name:ru": "Тахиаташ-Пристань",
+    "name:zh": "塔希阿塔什",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2900958"
+  }
+},
+{
+  "type": "node",
+  "id": 1285981032,
+  "lat": 42.0220690,
+  "lon": 60.4465524,
+  "tags": {
+    "alt_name:ru": "Караузяк",
+    "esr": "744700",
+    "name": "Badai",
+    "name:en": "Baday",
+    "name:ru": "Бадай",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1346791484,
+  "lat": 36.2944296,
+  "lon": 52.8882617,
+  "tags": {
+    "name": "ایستگاه راه آهن شیرگاه",
+    "railway": "station",
+    "wikidata": "Q85168686"
+  }
+},
+{
+  "type": "node",
+  "id": 1553880976,
+  "lat": 39.6982976,
+  "lon": 66.8374749,
+  "tags": {
+    "esr:user": "727902",
+    "name": "Улугбек",
+    "name:ru": "Улугбек",
+    "operator": "O'zbekiston temir yo'llary",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2900783"
+  }
+},
+{
+  "type": "node",
+  "id": 1553880986,
+  "lat": 39.6935091,
+  "lon": 66.7424871,
+  "tags": {
+    "esr:user": "728002",
+    "name": "Maroqand",
+    "name:ru": "Мароканд",
+    "name:zh": "马罗坎德",
+    "old_name": "Суперфосфатная",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2900784"
+  }
+},
+{
+  "type": "node",
+  "id": 1553880999,
+  "lat": 39.7159234,
+  "lon": 66.6640279,
+  "tags": {
+    "esr:user": "728106",
+    "name": "Juma",
+    "name:ru": "Джума",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900806"
+  }
+},
+{
+  "type": "node",
+  "id": 1553890540,
+  "lat": 39.7757518,
+  "lon": 66.4930883,
+  "tags": {
+    "esr:user": "728110",
+    "name": "No 23",
+    "name:ru": "Разъезд №23",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1553902915,
+  "lat": 39.7447510,
+  "lon": 66.3963328,
+  "tags": {
+    "esr:user": "728204",
+    "name": "Nurbuloq",
+    "name:en": "Nurbulak",
+    "name:ru": "Нурбулак",
+    "old_name": "Нагорная-Узбекская",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900808"
+  }
+},
+{
+  "type": "node",
+  "id": 1553902932,
+  "lat": 39.9160685,
+  "lon": 66.1332125,
+  "tags": {
+    "esr:user": "728500",
+    "name": "No 28",
+    "name:ru": "No 28",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1553902942,
+  "lat": 39.9126935,
+  "lon": 66.0330137,
+  "tags": {
+    "esr:user": "728619",
+    "name": "No 29",
+    "name:ru": "Разъезд №29",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1555201245,
+  "lat": 39.5413152,
+  "lon": 66.4071182,
+  "tags": {
+    "esr:user": "728021",
+    "name": "Улус",
+    "name:ru": "Улус",
+    "operator": "O'zbekiston temir yo'llary",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2900786"
+  }
+},
+{
+  "type": "node",
+  "id": 1555201267,
+  "lat": 39.6249363,
+  "lon": 66.5442712,
+  "tags": {
+    "esr:user": "728017",
+    "name": "Гумбаз",
+    "name:ru": "Гумбаз",
+    "operator": "O'zbekiston temir yo'llary",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2900205"
+  }
+},
+{
+  "type": "node",
+  "id": 1555201288,
+  "lat": 39.3575244,
+  "lon": 66.1963319,
+  "tags": {
+    "esr:user": "733405",
+    "name": "Ayritom",
+    "name:ru": "Айрытам",
+    "name:zh": "艾蕾塔姆",
+    "operator": "O'zbekiston temir yo'llary",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2900788"
+  }
+},
+{
+  "type": "node",
+  "id": 1555221306,
+  "lat": 39.9024857,
+  "lon": 66.2458873,
+  "tags": {
+    "esr:user": "728407",
+    "name": "Kattaqo'rg'on",
+    "name:ru": "Каттакурган",
+    "name:uz": "Kattaqo'rg'on",
+    "name:zh": "卡塔库尔干",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900757"
+  }
+},
+{
+  "type": "node",
+  "id": 1555260951,
+  "lat": 39.6053260,
+  "lon": 66.2863665,
+  "tags": {
+    "esr:user": "728303",
+    "name": "Нурабад",
+    "name:ru": "Нурабад",
+    "old_name": "Советабад",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1555266196,
+  "lat": 39.1993183,
+  "lon": 66.0483906,
+  "tags": {
+    "addr:city": "Alato'n",
+    "esr:user": "733301",
+    "name": "Alato'n",
+    "name:ru": "Алатун",
+    "operator": "O‘zbekiston temir yo‘llari",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2900789"
+  }
+},
+{
+  "type": "node",
+  "id": 1555385066,
+  "lat": 39.9160264,
+  "lon": 65.9277545,
+  "tags": {
+    "alt_name": "Зирабулаc",
+    "alt_name:en": "Zirabulac",
+    "esr:user": "728604",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "-2579980",
+    "name": "Зирабулак",
+    "name:en": "Zirabulak",
+    "name:ru": "Зирабулак",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2900812"
+  }
+},
+{
+  "type": "node",
+  "id": 1555385080,
+  "lat": 39.9373908,
+  "lon": 65.8303339,
+  "tags": {
+    "esr:user": "728727",
+    "name": "No 30",
+    "name:ru": "No 30",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1555385089,
+  "lat": 39.9760213,
+  "lon": 65.7198695,
+  "tags": {
+    "esr": "728712",
+    "esr:user": "728712",
+    "name": "No 31",
+    "name:ru": "Разъезд №31",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2901233"
+  }
+},
+{
+  "type": "node",
+  "id": 1555410119,
+  "lat": 39.0590576,
+  "lon": 65.8814352,
+  "tags": {
+    "esr:user": "733316",
+    "name": "Nekuz",
+    "name:ru": "Некуз",
+    "operator": "O‘zbekiston temir yo‘llari",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2900791"
+  }
+},
+{
+  "type": "node",
+  "id": 1555410134,
+  "lat": 38.9254754,
+  "lon": 65.7450503,
+  "tags": {
+    "esr:user": "733208",
+    "name": "Qashqadaryo",
+    "name:ru": "Кашкадарья",
+    "name:uz": "Qashqadaryo",
+    "name:zh": "卡什卡达里亚",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900792"
+  }
+},
+{
+  "type": "node",
+  "id": 1555410151,
+  "lat": 38.8213997,
+  "lon": 65.7770168,
+  "tags": {
+    "esr:user": "733104",
+    "name": "Qarshi",
+    "name:ru": "Карши",
+    "name:uz": "Qarshi",
+    "name:zh": "卡尔希",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2900750"
+  }
+},
+{
+  "type": "node",
+  "id": 1555420594,
+  "lat": 38.7290852,
+  "lon": 65.7562754,
+  "tags": {
+    "esr:user": "733138",
+    "name": "4148 км",
+    "name:ru": "4148 км",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1555439182,
+  "lat": 39.0638841,
+  "lon": 65.5783304,
+  "tags": {
+    "esr:user": "733000",
+    "name": "Касан",
+    "name:ru": "Касан",
+    "name:uz": "Koson",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900797"
+  }
+},
+{
+  "type": "node",
+  "id": 1555439184,
+  "lat": 39.1134490,
+  "lon": 65.4288693,
+  "tags": {
+    "esr:user": "732900",
+    "fixme": "предположительно не работает даже как остановочный пункт",
+    "name": "No 148",
+    "name:ru": "Разъезд №148",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1555439201,
+  "lat": 39.1914420,
+  "lon": 65.2645927,
+  "tags": {
+    "esr:user": "732807",
+    "name": "Серный Завод",
+    "name:en": "Serniy Zavod",
+    "name:ru": "Серный Завод",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900774"
+  }
+},
+{
+  "type": "node",
+  "id": 1555439207,
+  "lat": 39.2551562,
+  "lon": 65.1526354,
+  "tags": {
+    "esr:user": "732703",
+    "name": "Muborak",
+    "name:en": "Mubarek",
+    "name:ru": "Мубарек",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900741"
+  }
+},
+{
+  "type": "node",
+  "id": 1555456344,
+  "lat": 39.3506319,
+  "lon": 65.0674516,
+  "tags": {
+    "esr:user": "730322",
+    "name": "No 146",
+    "name:ru": "Разъезд №146",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900813"
+  }
+},
+{
+  "type": "node",
+  "id": 1555523175,
+  "lat": 38.6259645,
+  "lon": 65.6973111,
+  "tags": {
+    "esr:user": "734200",
+    "name": "Nishon",
+    "name:en": "Nishan",
+    "name:ru": "Нишан",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900856"
+  }
+},
+{
+  "type": "node",
+  "id": 1555523181,
+  "lat": 38.4375024,
+  "lon": 65.6312925,
+  "tags": {
+    "esr:user": "734304",
+    "name": "Жайрон",
+    "name:ru": "Жайрон",
+    "old_name": "РАЗЪЕЗД NO 153",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900857"
+  }
+},
+{
+  "type": "node",
+  "id": 1555523192,
+  "lat": 38.2789642,
+  "lon": 65.5588639,
+  "tags": {
+    "addr:city": "Tallymerjen",
+    "alt_name": "Tallimarjon",
+    "esr:user": "734408",
+    "name": "Tallymerjen",
+    "name:ru": "Талимарджан",
+    "name:tk": "Tallymerjen",
+    "railway": "station",
+    "source": "https://wiki.openstreetmap.org/wiki/Districts_in_Turkmenistan"
+  }
+},
+{
+  "type": "node",
+  "id": 1555523201,
+  "lat": 38.1465887,
+  "lon": 65.5026597,
+  "tags": {
+    "name": "Rzd. No 155",
+    "name:ru": "Разъезд № 155",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1583790673,
+  "lat": 42.8311218,
+  "lon": 58.9980316,
+  "tags": {
+    "esr": "737302",
+    "esr:user": "737302",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "11190188",
+    "name": "Altınkól",
+    "name:en": "Altinkul",
+    "name:ru": "Алтынкуль",
+    "name:uz": "Oltinko'l",
+    "phone": "+99 (861) 332-12-56;+99 (861) 332-12-66",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2900725"
+  }
+},
+{
+  "type": "node",
+  "id": 1584542553,
+  "lat": 37.4159131,
+  "lon": 66.9937429,
+  "tags": {
+    "esr": "734802",
+    "esr:user": "734802",
+    "name": "Sherobod",
+    "name:ru": "Шерабад",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900252"
+  }
+},
+{
+  "type": "node",
+  "id": 1584542556,
+  "lat": 37.4015699,
+  "lon": 66.7306579,
+  "tags": {
+    "esr": "739401",
+    "esr:user": "739401",
+    "name": "Boldir",
+    "name:ru": "Болдыр",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900251"
+  }
+},
+{
+  "type": "node",
+  "id": 1584542557,
+  "lat": 37.3641258,
+  "lon": 66.4221207,
+  "tags": {
+    "name": "Razyezd No. 161",
+    "name:ru": "No 161",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1584542558,
+  "lat": 37.4443774,
+  "lon": 66.1722961,
+  "tags": {
+    "name": "Rzd. No 160",
+    "name:ru": "Разъезд № 160",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1584542559,
+  "lat": 37.5256634,
+  "lon": 66.0250174,
+  "tags": {
+    "alt_name": "Чаршангу",
+    "esr:user": "749704",
+    "name": "Köýtendag",
+    "name:ru": "Койтендаг",
+    "railway": "station",
+    "uic_ref": "6700247"
+  }
+},
+{
+  "type": "node",
+  "id": 1584762220,
+  "lat": 42.6072274,
+  "lon": 59.1999394,
+  "tags": {
+    "alt_name": "Шаманай;Станция Шуманай",
+    "alt_name:en": "Shamanay;Stantsiya Shumanay",
+    "esr": "737406",
+    "esr:user": "737406",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "-2578934",
+    "name": "Shomanay",
+    "name:en": "Shumanay",
+    "name:ru": "Шуманай",
+    "name:uz": "Shumanay",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2900887"
+  }
+},
+{
+  "type": "node",
+  "id": 1584762273,
+  "lat": 42.4994643,
+  "lon": 59.3208791,
+  "tags": {
+    "esr": "737500",
+    "esr:user": "737500",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "-2577244",
+    "name": "Xatep",
+    "name:en": "Khatep",
+    "name:ru": "Хатеп",
+    "name:uk": "Khatep",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2900680"
+  }
+},
+{
+  "type": "node",
+  "id": 1584762347,
+  "lat": 42.4048229,
+  "lon": 59.4368549,
+  "tags": {
+    "esr": "737603",
+    "esr:user": "737603",
+    "name": "Xojeli",
+    "name:ru": "Ходжейли",
+    "name:zh": "霍杰伊利",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900830"
+  }
+},
+{
+  "type": "node",
+  "id": 1584776333,
+  "lat": 42.2961244,
+  "lon": 59.5523503,
+  "tags": {
+    "esr": "737707",
+    "esr:user": "737707",
+    "name": "Naymankul",
+    "name:ru": "Найманкуль",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900193"
+  }
+},
+{
+  "type": "node",
+  "id": 1584776336,
+  "lat": 42.2652344,
+  "lon": 59.5793308,
+  "tags": {
+    "addr:city": "Aşgabat geňeşligi",
+    "addr:village": "Tahýadaş",
+    "alt_name": "Takhyatash",
+    "esr:user": "758506",
+    "name": "Tahýadaş",
+    "name:ru": "Тахиаташ",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700889"
+  }
+},
+{
+  "type": "node",
+  "id": 1584776360,
+  "lat": 42.0626117,
+  "lon": 59.7834603,
+  "tags": {
+    "esr:user": "758309",
+    "name": "Zarpçy",
+    "name:ru": "Зарпчы",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1584776372,
+  "lat": 41.7071568,
+  "lon": 60.2757229,
+  "tags": {
+    "esr": "738108",
+    "esr:user": "738108",
+    "name": "Шават",
+    "name:ru": "Шават",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900844"
+  }
+},
+{
+  "type": "node",
+  "id": 1584776373,
+  "lat": 42.4377830,
+  "lon": 59.6427078,
+  "tags": {
+    "branch": "Qo'ng'irot mintaqaviy temir yo'l uzeli",
+    "esr": "739007",
+    "esr:user": "739007",
+    "name": "Nókis",
+    "name:ja": "ヌクス",
+    "name:ru": "Нукус",
+    "name:zh": "努库斯",
+    "operator": "O‘zbekiston temir yo‘llari",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900970",
+    "wikidata": "Q25394710",
+    "wikipedia": "ru:Нукус (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1584776374,
+  "lat": 42.5761947,
+  "lon": 59.7296782,
+  "tags": {
+    "esr": "739100",
+    "name": "Taqırkól",
+    "name:ru": "Такыркуль",
+    "old_name": "Kommunizm",
+    "old_name:ru": "Коммунизм",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1585865853,
+  "lat": 41.5365030,
+  "lon": 60.6321451,
+  "tags": {
+    "esr": "738305",
+    "esr:user": "738305",
+    "name": "Urganch",
+    "name:en": "Urgench",
+    "name:fa": "گرگانج",
+    "name:ru": "Ургенч",
+    "name:zh": "乌尔根奇",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900790"
+  }
+},
+{
+  "type": "node",
+  "id": 1585869746,
+  "lat": 41.1554895,
+  "lon": 61.4991270,
+  "tags": {
+    "name": "Rzd. No 176",
+    "name:ru": "Разъезд № 176",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1585882935,
+  "lat": 41.1101498,
+  "lon": 61.7453065,
+  "tags": {
+    "addr:city": "Lebap säherçesi",
+    "alt_name": "Sazakyn",
+    "alt_name:ru": "Сазакин",
+    "esr:user": "757819",
+    "name": "Sazakly",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700266"
+  }
+},
+{
+  "type": "node",
+  "id": 1586558886,
+  "lat": 39.0420610,
+  "lon": 66.7316810,
+  "tags": {
+    "esr": "734003",
+    "esr:user": "734003",
+    "name": "Танхоз",
+    "name:en": "Tanxoz",
+    "name:ru": "Танхоз",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900706"
+  }
+},
+{
+  "type": "node",
+  "id": 1586572214,
+  "lat": 38.8217310,
+  "lon": 66.4577742,
+  "tags": {
+    "esr": "733808",
+    "esr:user": "733808",
+    "name": "Qamashi",
+    "name:ru": "Камаши",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900794"
+  }
+},
+{
+  "type": "node",
+  "id": 1586583046,
+  "lat": 38.7075740,
+  "lon": 65.9625806,
+  "tags": {
+    "esr": "733602",
+    "esr:user": "733602",
+    "name": "Shoʻrtan",
+    "name:ru": "Шуртан",
+    "old_name": "34 km",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900705"
+  }
+},
+{
+  "type": "node",
+  "id": 1586583051,
+  "lat": 38.7718256,
+  "lon": 65.8470065,
+  "tags": {
+    "esr": "733509",
+    "esr:user": "733509",
+    "name": "Dasht",
+    "name:ru": "Дашт",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900704"
+  }
+},
+{
+  "type": "node",
+  "id": 1586605162,
+  "lat": 38.6730221,
+  "lon": 66.0676574,
+  "tags": {
+    "alt_name": "Ташгузар",
+    "alt_name:ru": "Ташгузар",
+    "esr": "728801",
+    "esr:user": "728801",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "11132250",
+    "name": "Toshgʻuzor",
+    "name:en": "Tashguzar",
+    "name:ru": "Ташгузар",
+    "name:uz": "Toshgʻuzor",
+    "name:zh": "塔什古扎尔",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2900850"
+  }
+},
+{
+  "type": "node",
+  "id": 1586931900,
+  "lat": 39.4320314,
+  "lon": 64.9346230,
+  "tags": {
+    "esr": "730318",
+    "name": "No 145",
+    "name:ru": "Разъезд №145",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1586949432,
+  "lat": 39.9155147,
+  "lon": 64.6945590,
+  "tags": {
+    "alt_name": "Станция Кую-Мазар;Станция Кара-Мазар",
+    "alt_name:en": "Stantsiya Kuyu-Mazar;Stantsiya Kara-Mazar",
+    "esr": "730430",
+    "esr:user": "730430",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "-2577853",
+    "name": "To'dako'l",
+    "name:en": "Tudakul",
+    "name:ru": "Тудакуль",
+    "old_name": "Quymazor",
+    "old_name:en": "Quyimozor",
+    "old_name:ru": "Куюмазар",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900825"
+  }
+},
+{
+  "type": "node",
+  "id": 1586949445,
+  "lat": 39.9789280,
+  "lon": 64.7693735,
+  "tags": {
+    "alt_name": "No 39",
+    "alt_name:ru": "No 39",
+    "esr": "731011",
+    "name": "No 39",
+    "name:ru": "Разъезд №39",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1588224382,
+  "lat": 39.0947758,
+  "lon": 63.5374958,
+  "tags": {
+    "esr:user": "757109",
+    "name": "Türkmenabat 2",
+    "name:ru": "Туркменабад II",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1588243848,
+  "lat": 39.1693998,
+  "lon": 63.6010018,
+  "tags": {
+    "addr:city": "Farap",
+    "alt_name": "Фарап",
+    "alt_name:ru": "Фараб",
+    "esr": "750203",
+    "name": "Farap",
+    "name:ru": "Фарап",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1588243852,
+  "lat": 39.2579310,
+  "lon": 63.6770450,
+  "tags": {
+    "name": "Rzd. No 48",
+    "name:ru": "Разъезд № 48",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1588243859,
+  "lat": 39.4121559,
+  "lon": 63.7968419,
+  "tags": {
+    "esr": "730708",
+    "esr:user": "730708",
+    "name": "Olot",
+    "name:ru": "Алат",
+    "name:uz": "Olot",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900831"
+  }
+},
+{
+  "type": "node",
+  "id": 1588243863,
+  "lat": 39.3272816,
+  "lon": 63.7459338,
+  "tags": {
+    "esr": "730712",
+    "esr:user": "730712",
+    "name": "Ходжадавлет",
+    "name:ru": "Ходжадавлет",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900294"
+  }
+},
+{
+  "type": "node",
+  "id": 1588243893,
+  "lat": 39.6467249,
+  "lon": 64.0713185,
+  "tags": {
+    "esr": "730500",
+    "esr:user": "730500",
+    "name": "Yakkatut",
+    "name:ru": "Якатут",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900296"
+  }
+},
+{
+  "type": "node",
+  "id": 1588259331,
+  "lat": 39.7073723,
+  "lon": 64.2801958,
+  "tags": {
+    "esr": "730407",
+    "esr:user": "730407",
+    "name": "Murgak",
+    "name:ru": "Мургак",
+    "name:uz": "Murgak",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900826"
+  }
+},
+{
+  "type": "node",
+  "id": 1588259351,
+  "lat": 39.7511441,
+  "lon": 64.4635355,
+  "tags": {
+    "esr": "730106",
+    "esr:user": "730106",
+    "name": "Buxoro 2",
+    "name:en": "Bukhara 2",
+    "name:ru": "Бухара 2",
+    "name:zh": "布哈拉 2",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1588286752,
+  "lat": 40.0780163,
+  "lon": 65.0938791,
+  "tags": {
+    "esr": "731221",
+    "esr:user": "731221",
+    "name": "Малик",
+    "name:ru": "Малик",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900823"
+  }
+},
+{
+  "type": "node",
+  "id": 1588286758,
+  "lat": 40.0805570,
+  "lon": 65.1971316,
+  "tags": {
+    "alt_name": "No 36",
+    "alt_name:ru": "No 36",
+    "esr": "731217",
+    "name": "No 36",
+    "name:ru": "Разъезд №36",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1588286766,
+  "lat": 40.0314891,
+  "lon": 64.8512633,
+  "tags": {
+    "alt_name": "Кызылтепа;Кызыл Тепе;Кизил-Тепа",
+    "alt_name:en": "Kyzyltepa;Kyzyl Tepe;Kizil-Tepe",
+    "esr:user": "731005",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "-2577938;-2577939",
+    "name": "Qiziltepa",
+    "name:en": "Kyzyltepa",
+    "name:ru": "Кызылтепа",
+    "name:uz": "Qiziltepa",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2900824"
+  }
+},
+{
+  "type": "node",
+  "id": 1588286774,
+  "lat": 40.0629139,
+  "lon": 64.9512147,
+  "tags": {
+    "esr": "731109",
+    "name": "No 38",
+    "name:ru": "Разъезд №38",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1590421642,
+  "lat": 39.2653732,
+  "lon": 63.1552567,
+  "tags": {
+    "alt_name": "Denev",
+    "alt_name:ru": "Дянев",
+    "esr:user": "757306",
+    "name": "Dänew",
+    "name:en": "Danev",
+    "name:ru": "Денев",
+    "name:tk": "Dänew",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700854"
+  }
+},
+{
+  "type": "node",
+  "id": 1591113488,
+  "lat": 41.6042365,
+  "lon": 63.9363013,
+  "tags": {
+    "alt_name": "Кызылкудук;Станция Кизил-Кудук",
+    "alt_name:en": "Kyzylkuduk;Stantsiya Kizil-Kuduk",
+    "esr": "731804",
+    "esr:user": "731804",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "-2577473",
+    "name": "Qizilquduq",
+    "name:en": "Kizilkuduk",
+    "name:ru": "Кызылкудук",
+    "name:zh": "克孜勒库杜克",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2900819"
+  }
+},
+{
+  "type": "node",
+  "id": 1591120107,
+  "lat": 41.8641770,
+  "lon": 63.8169988,
+  "tags": {
+    "alt_name": "Kizilkum",
+    "esr": "731819",
+    "name": "No 142",
+    "name:ru": "No 142",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1591158486,
+  "lat": 41.3461717,
+  "lon": 64.0119245,
+  "tags": {
+    "esr": "732402",
+    "name": "Adjibugut",
+    "name:ru": "Аджибугут",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1591202601,
+  "lat": 41.5258978,
+  "lon": 64.2629194,
+  "tags": {
+    "name": "51 km",
+    "name:ru": "51 км",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1591202781,
+  "lat": 41.5297053,
+  "lon": 64.4954728,
+  "tags": {
+    "alt_name": "Besapan",
+    "alt_name:ru": "Бесапан",
+    "name": "Muruntov",
+    "name:ru": "Мурунтау",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1591202866,
+  "lat": 41.1758847,
+  "lon": 64.2403490,
+  "tags": {
+    "esr": "730201",
+    "esr:user": "730201",
+    "name": "Мустакиллик",
+    "name:ru": "Мустакиллик",
+    "old_name:en": "No 140",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1591203005,
+  "lat": 40.9779364,
+  "lon": 64.3853643,
+  "tags": {
+    "esr": "731700",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "11173193",
+    "name": "Каракатта",
+    "name:en": "Qorakatta",
+    "name:ru": "Каракатта",
+    "name:zh": "卡拉卡塔",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 1591203103,
+  "lat": 40.7800949,
+  "lon": 64.5102641,
+  "tags": {
+    "esr": "731611",
+    "name": "No139",
+    "name:ru": "No139",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1591224130,
+  "lat": 40.5335554,
+  "lon": 64.7417028,
+  "tags": {
+    "esr": "731607",
+    "esr:user": "731607",
+    "name": "Zafarobod",
+    "name:en": "Zafarabad",
+    "name:ru": "Зафарабад",
+    "old_name": "No138",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900357"
+  }
+},
+{
+  "type": "node",
+  "id": 1591258026,
+  "lat": 40.0691572,
+  "lon": 65.5320476,
+  "tags": {
+    "esr": "731310",
+    "name": "No 33",
+    "name:ru": "Разъезд №33",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1591258033,
+  "lat": 40.0589439,
+  "lon": 65.5974294,
+  "tags": {
+    "alt_name": "Разъезд 32 блок пост",
+    "name": "No 32",
+    "name:ru": "Разъезд №32",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1591258075,
+  "lat": 40.0278760,
+  "lon": 65.6586591,
+  "tags": {
+    "alt_name": "Зядин;Зиатдин;Зиадин",
+    "alt_name:en": "Zyadin;Stantsiya Ziatdin",
+    "esr": "728708",
+    "esr:user": "728708",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "-2579969",
+    "name": "Зиевуддин",
+    "name:en": "Ziadin",
+    "name:ru": "Зиевуддин",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2900814"
+  }
+},
+{
+  "type": "node",
+  "id": 1592211596,
+  "lat": 42.1175013,
+  "lon": 63.6570839,
+  "tags": {
+    "esr": "732101",
+    "esr:user": "732101",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "-2579511",
+    "name": "Учкудук",
+    "name:ru": "Учкудук",
+    "name:uz": "Uchquduq",
+    "network": "ГАЖК \"Узбекистан тема йуллари\" (УТИ)",
+    "operator": "ГАЖК \"Узбекистан тема йуллари\" (УТИ)",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2900821"
+  }
+},
+{
+  "type": "node",
+  "id": 1592345175,
+  "lat": 42.0195787,
+  "lon": 63.7331721,
+  "tags": {
+    "esr": "739863",
+    "esr:user": "739863",
+    "name": "Uchquduq-2",
+    "name:en": "Uchkuduk-2",
+    "name:ru": "Учкудук-2",
+    "name:zh": "于奇库杜克 2",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1592345198,
+  "lat": 41.9687177,
+  "lon": 63.4361687,
+  "tags": {
+    "alt_name": "Майлисой",
+    "esr": "739859",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "11160675",
+    "name": "Майлисай",
+    "name:en": "Maylisoy",
+    "name:ru": "Майлисой",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 1592345241,
+  "lat": 41.8288838,
+  "lon": 62.9971811,
+  "tags": {
+    "esr": "739844",
+    "esr:user": "739844",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "11160166",
+    "name": "Куралы",
+    "name:en": "Qurali",
+    "name:ru": "Куралы",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2900108"
+  }
+},
+{
+  "type": "node",
+  "id": 1592361777,
+  "lat": 41.7525276,
+  "lon": 62.4708991,
+  "tags": {
+    "esr": "739834",
+    "esr:user": "739834",
+    "name": "Бузаубай",
+    "name:ru": "Бузаубай",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900109"
+  }
+},
+{
+  "type": "node",
+  "id": 1592361848,
+  "lat": 41.6331858,
+  "lon": 62.0525047,
+  "tags": {
+    "alt_name:uz": "До`нглик",
+    "esr": "739825",
+    "esr:user": "739825",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "11160164",
+    "name": "Дунгулюк",
+    "name:en": "Do`nglik",
+    "name:ru": "Дунгулюк",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2900110"
+  }
+},
+{
+  "type": "node",
+  "id": 1592361923,
+  "lat": 41.4417992,
+  "lon": 61.5076039,
+  "tags": {
+    "alt_name": "Колодец Бугетлы;Колодец Бугутты;Бугутлы",
+    "alt_name:en": "Kolodets Bugetly;Kolodets Bugutty;Bugutly",
+    "esr": "739810",
+    "esr:user": "739810",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "-2575712",
+    "name": "Burgutli",
+    "name:en": "Burgutli",
+    "name:ru": "Бургутли",
+    "name:zh": "布尔古特利",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2900111"
+  }
+},
+{
+  "type": "node",
+  "id": 1592362133,
+  "lat": 41.5705669,
+  "lon": 61.0323790,
+  "tags": {
+    "esr": "739609",
+    "esr:user": "739609",
+    "name": "Tórtkúl",
+    "name:de": "Turtgul",
+    "name:ru": "Турткуль",
+    "name:zh": "图尔特古尔",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900103"
+  }
+},
+{
+  "type": "node",
+  "id": 1592460082,
+  "lat": 42.1068356,
+  "lon": 60.3790493,
+  "tags": {
+    "alt_name:ru": "Караузяк",
+    "esr": "739632",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "11193257",
+    "name": "Караозек",
+    "name:en": "Qorao'zak",
+    "name:ru": "Караозек",
+    "name:uz": "Qorao'zak",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 1592460694,
+  "lat": 42.9222545,
+  "lon": 59.8145655,
+  "tags": {
+    "addr:city": "Shımbay",
+    "alt_name": "Чимбаи;Чимбай",
+    "alt_name:en": "Chimbai;Chimbay",
+    "alt_name:uz": "Чимбой",
+    "esr:user": "739308",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "-2575932",
+    "name": "Shımbay",
+    "name:en": "Chimbay",
+    "name:ru": "Чимбай",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "start_date": "07.1994",
+    "train": "yes",
+    "uic_ref": "2901213"
+  }
+},
+{
+  "type": "node",
+  "id": 1592487779,
+  "lat": 42.3629732,
+  "lon": 59.9650851,
+  "tags": {
+    "alt_name:uz": "Назарxон",
+    "esr": "739505",
+    "esr:user": "739505",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "11194711",
+    "name": "Назархан",
+    "name:en": "Nazarxan",
+    "name:ru": "Назархан",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2901215"
+  }
+},
+{
+  "type": "node",
+  "id": 1597396473,
+  "lat": 39.8513521,
+  "lon": 64.6585929,
+  "tags": {
+    "esr": "730445",
+    "esr:user": "730445",
+    "name": "No 41",
+    "name:ru": "Разъезд №41",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1646601687,
+  "lat": 38.5378659,
+  "lon": 66.1227053,
+  "tags": {
+    "name": "Kajirma",
+    "name:ru": "Каирма",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1646608148,
+  "lat": 38.3473497,
+  "lon": 66.4356536,
+  "tags": {
+    "alt_name": "Дехкнобод",
+    "esr": "728905",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "11130943",
+    "name": "Dehqonobod",
+    "name:en": "Dehkanabad",
+    "name:ru": "Дехканабад",
+    "name:zh": "捷赫科诺巴德",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 1646616368,
+  "lat": 38.2984036,
+  "lon": 66.6930211,
+  "tags": {
+    "name": "Chashmaihafizon",
+    "name:ru": "Чашмаихафизан",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1765563050,
+  "lat": 38.2034792,
+  "lon": 66.9647418,
+  "tags": {
+    "name": "Shurob",
+    "name:ru": "Шураб",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1815320196,
+  "lat": 35.9066498,
+  "lon": 52.9857677,
+  "tags": {
+    "name": "ورسک",
+    "name:de": "Veresk",
+    "name:en": "Veresk",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1954455058,
+  "lat": 42.0590665,
+  "lon": 60.2394029,
+  "tags": {
+    "esr": "737904",
+    "esr:user": "737904",
+    "name": "Jumırtaw",
+    "name:ru": "Джумуртау",
+    "name:uz": "Jumurtov",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2001269626,
+  "lat": 38.3157591,
+  "lon": 62.9955654,
+  "tags": {
+    "esr:user": "750523",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "-2560077",
+    "name": "Peşhi",
+    "name:en": "Peshhi",
+    "name:ru": "Пешхи",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "NGA GNS;survey",
+    "uic_ref": "6700839"
+  }
+},
+{
+  "type": "node",
+  "id": 2047811478,
+  "lat": 42.1678878,
+  "lon": 59.6776278,
+  "tags": {
+    "alt_name": "Lavak",
+    "esr:user": "759000",
+    "name": "Lawak",
+    "name:ru": "Лавак",
+    "railway": "station",
+    "uic_ref": "6700842",
+    "wikidata": "Q98716703"
+  }
+},
+{
+  "type": "node",
+  "id": 2156280927,
+  "lat": 40.6476695,
+  "lon": 58.4024228,
+  "tags": {
+    "name": "Düýeli",
+    "name:en": "Dueli",
+    "name:ru": "Дуели",
+    "railway": "station",
+    "wikidata": "Q98716756"
+  }
+},
+{
+  "type": "node",
+  "id": 2157556488,
+  "lat": 42.3650474,
+  "lon": 58.8004024,
+  "tags": {
+    "esr:user": "758807",
+    "name": "Saparmyrat Türkmenbaşy",
+    "name:en": "Saparmurat Turkmenbashy",
+    "name:ru": "Имени Сапармыратa Ниязова",
+    "railway": "station",
+    "source": "bing",
+    "uic_ref": "6700901"
+  }
+},
+{
+  "type": "node",
+  "id": 2279305298,
+  "lat": 39.6859605,
+  "lon": 66.9290035,
+  "tags": {
+    "esr:user": "727809",
+    "name": "Samarqand",
+    "name:en": "Samarkand",
+    "name:fa": "ایستگاه زاه آهن سمرقند",
+    "name:ru": "Самарканд",
+    "name:uz": "Samarqand",
+    "name:zh": "撒马尔罕",
+    "name:zh-Hant": "薩馬爾罕",
+    "operator": "O'zbekiston temir yo'llary",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2900700",
+    "wikidata": "Q9333092"
+  }
+},
+{
+  "type": "node",
+  "id": 2396470761,
+  "lat": 41.3801374,
+  "lon": 61.2641993,
+  "tags": {
+    "alt_name": "Мескин;Мискен",
+    "alt_name:en": "Meskin;Misken",
+    "esr": "739806",
+    "esr:user": "739806",
+    "name": "Miskin",
+    "name:en": "Miskin",
+    "name:ru": "Мискин",
+    "name:zh": "米斯金",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900104"
+  }
+},
+{
+  "type": "node",
+  "id": 2398686404,
+  "lat": 42.8301644,
+  "lon": 53.2086647,
+  "tags": {
+    "int_name": "Bopay",
+    "name": "Бопай",
+    "name:be": "Бапай",
+    "name:kk": "Бопай",
+    "name:ru": "Бопай",
+    "name:tt": "Бопай",
+    "name:uk": "Бопай",
+    "railway": "station",
+    "source": "bing",
+    "uic_name": "Bopai",
+    "uic_ref": "2705884"
+  }
+},
+{
+  "type": "node",
+  "id": 2398686424,
+  "lat": 42.2763553,
+  "lon": 53.6553177,
+  "tags": {
+    "esr:user": "756303",
+    "name": "Serhetýaka",
+    "name:ru": "Серхетяка",
+    "name:tk": "Serhetýaka",
+    "old_name": "Serhetýaka stansiýasy",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q125658466"
+  }
+},
+{
+  "type": "node",
+  "id": 2398686444,
+  "lat": 42.6607838,
+  "lon": 53.3131823,
+  "tags": {
+    "name": "Тайгыр",
+    "railway": "station",
+    "uic_name": "Taigyr",
+    "uic_ref": "2705885"
+  }
+},
+{
+  "type": "node",
+  "id": 2398686449,
+  "lat": 42.3509892,
+  "lon": 53.5052053,
+  "tags": {
+    "name": "Бестортколь",
+    "railway": "station",
+    "uic_name": "Bestortkol",
+    "uic_ref": "2705887"
+  }
+},
+{
+  "type": "node",
+  "id": 2398687865,
+  "lat": 40.3298162,
+  "lon": 55.4957360,
+  "tags": {
+    "esr:user": "752923",
+    "name": "Gökdere",
+    "name:ru": "Геокдере",
+    "name:tk": "Gökdere",
+    "old_name": "Gökdere stansiýasy",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2442349398,
+  "lat": 39.5050843,
+  "lon": 54.3484682,
+  "tags": {
+    "addr:city": "Balkanabat",
+    "name": "Balkanabat",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2444933330,
+  "lat": 38.2607859,
+  "lon": 66.8298398,
+  "tags": {
+    "name": "Okrabot",
+    "name:ru": "Акравад",
+    "name:zh": "奥克拉波特",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2448739533,
+  "lat": 41.2723096,
+  "lon": 61.1770170,
+  "tags": {
+    "alt_name": "№343",
+    "esr": "738714",
+    "int_name": "No 343",
+    "name": "Истиклол",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "№343",
+    "source": "bing"
+  }
+},
+{
+  "type": "node",
+  "id": 2465558926,
+  "lat": 40.0070212,
+  "lon": 53.0199624,
+  "tags": {
+    "name": "Rzd. No 132",
+    "name:ru": "Разъезд №132",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2470727000,
+  "lat": 40.2687070,
+  "lon": 62.2804096,
+  "tags": {
+    "alt_name": "Kyukyurtly",
+    "esr:user": "757607",
+    "name": "Kükürty",
+    "name:ru": "Кюкюртли",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700849"
+  }
+},
+{
+  "type": "node",
+  "id": 2632812048,
+  "lat": 37.3417946,
+  "lon": 61.0931308,
+  "tags": {
+    "addr:city": "Oguzhan",
+    "addr:street": "P-9",
+    "name": "Oguzhan",
+    "old_name": "Gulanly",
+    "railway": "station",
+    "source": "bing"
+  }
+},
+{
+  "type": "node",
+  "id": 2632812120,
+  "lat": 37.5138741,
+  "lon": 61.0308378,
+  "tags": {
+    "addr:city": "Parahat şäherçesi",
+    "alt_name": "Dzhu-Dzhu-Klu",
+    "name": "Parahat",
+    "name:ru": "Parahat",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2632812364,
+  "lat": 37.5582985,
+  "lon": 61.0842071,
+  "tags": {
+    "name": "Rzd. No 69",
+    "name:ru": "Разъезд № 69",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2666729170,
+  "lat": 38.4659826,
+  "lon": 65.7974329,
+  "tags": {
+    "esr": "73260",
+    "name": "Kengsoy",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "bing"
+  }
+},
+{
+  "type": "node",
+  "id": 2699667319,
+  "lat": 39.2454022,
+  "lon": 55.5214142,
+  "tags": {
+    "esr:user": "753907",
+    "name": "Bereket",
+    "name:ru": "Берекет",
+    "railway": "station",
+    "source": "bing",
+    "uic_ref": "6700909"
+  }
+},
+{
+  "type": "node",
+  "id": 2700790542,
+  "lat": 37.9987787,
+  "lon": 58.3048440,
+  "tags": {
+    "alt_name": "Kipchak",
+    "name": "Gypjak",
+    "name:ru": "Гыпджак",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2700992323,
+  "lat": 38.1241301,
+  "lon": 58.3627125,
+  "tags": {
+    "alt_name": "Ovadan Depe",
+    "name": "Owadan Depe",
+    "name:ru": "Овадан депе",
+    "name:tk": "Owadan Depe",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2718407411,
+  "lat": 40.0169959,
+  "lon": 53.6644137,
+  "tags": {
+    "name": "129-njy duralga",
+    "name:ru": "Разъезд №129",
+    "name:tk": "129-njy duralga",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2718634602,
+  "lat": 39.8838131,
+  "lon": 54.0213856,
+  "tags": {
+    "name": "126-njy duralga",
+    "name:ru": "Разъезд № 126",
+    "name:tk": "126-njy duralga",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2718798393,
+  "lat": 39.7196823,
+  "lon": 54.1957939,
+  "tags": {
+    "name": "Rzd. No 124",
+    "name:ru": "Разъезд № 124",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2719024516,
+  "lat": 39.5564737,
+  "lon": 54.2809113,
+  "tags": {
+    "name": "Razdelnaya 123",
+    "name:ru": "Разъезд 123",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2794217340,
+  "lat": 36.8181187,
+  "lon": 61.0844358,
+  "tags": {
+    "esr:user": "756708",
+    "name": "Ata",
+    "name:ru": "Ата",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2810462167,
+  "lat": 36.2601343,
+  "lon": 59.5933452,
+  "tags": {
+    "name": "پایانه امام رضا",
+    "name:ar": "محطة الإمام الرضا",
+    "name:en": "Imam Reza Terminal",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2945761272,
+  "lat": 40.0037415,
+  "lon": 52.9951702,
+  "tags": {
+    "name": "Türkmenbaşy",
+    "name:ja": "トルクメンバシ",
+    "name:ru": "Туркменбаши",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2945770452,
+  "lat": 35.2829164,
+  "lon": 62.3443047,
+  "tags": {
+    "esr:user": "756106",
+    "name": "Serhetabat",
+    "name:ar": "سرحد آباد",
+    "name:fa": "سرحدآباد",
+    "name:pnb": "سرحدآباد",
+    "name:ru": "Серхетабат",
+    "name:ur": "سرحدآباد",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700285"
+  }
+},
+{
+  "type": "node",
+  "id": 2945785088,
+  "lat": 36.5284568,
+  "lon": 61.1978160,
+  "tags": {
+    "addr:city": "Sarahs",
+    "name": "Sarahs",
+    "name:ar": "سرخس",
+    "name:fa": "سرخس",
+    "name:ks": "سرخس",
+    "name:ru": "Серахс",
+    "name:tk": "Sarahs",
+    "name:ur": "سرخس",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2980026242,
+  "lat": 38.5911780,
+  "lon": 57.1302403,
+  "tags": {
+    "name": "Arçman",
+    "name:en": "Archman",
+    "name:ru": "Арчман",
+    "name:tk": "Arçman",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3109376919,
+  "lat": 42.2923780,
+  "lon": 59.1428816,
+  "tags": {
+    "addr:city": "Koneurgench",
+    "addr:street": "P-1",
+    "esr:user": "758900",
+    "name": "Köneürgenç",
+    "name:en": "Koneurgench",
+    "name:ja": "クフナ・ウルゲンチ",
+    "name:ru": "Куняургенч",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3144515937,
+  "lat": 36.7038273,
+  "lon": 56.5278232,
+  "tags": {
+    "name": "جاجرم",
+    "name:en": "Jajarm",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85168582"
+  }
+},
+{
+  "type": "node",
+  "id": 3144516664,
+  "lat": 36.7418632,
+  "lon": 56.7483115,
+  "tags": {
+    "name": "آزادور",
+    "name:en": "Azadvar",
+    "railway": "station",
+    "wikidata": "Q85168560"
+  }
+},
+{
+  "type": "node",
+  "id": 3144516900,
+  "lat": 36.7586723,
+  "lon": 56.9631834,
+  "tags": {
+    "name": "ایستگاه سنخواست",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3145081581,
+  "lat": 37.8853070,
+  "lon": 65.2496549,
+  "tags": {
+    "alt_name": "Amu Dar'ya",
+    "alt_name:ru": "Амыдеря",
+    "esr:user": "749102",
+    "name": "Amyderýa",
+    "name:ru": "Амударья",
+    "old_name": "Kerki",
+    "railway": "station",
+    "uic_ref": "6700240"
+  }
+},
+{
+  "type": "node",
+  "id": 3145091074,
+  "lat": 41.1973417,
+  "lon": 61.4006330,
+  "tags": {
+    "addr:city": "Gazojak",
+    "esr:user": "757908",
+    "name": "Gazojak",
+    "name:de": "Gassodschak",
+    "name:ru": "Газоджак",
+    "name:tk": "Gazojak",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700139"
+  }
+},
+{
+  "type": "node",
+  "id": 3187042055,
+  "lat": 40.0175202,
+  "lon": 53.1138709,
+  "tags": {
+    "addr:city": "Türkmenbaşy şäherçesi",
+    "alt_name": "Gyusha",
+    "name": "Gyuşa",
+    "name:ru": "Гюша",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3187132672,
+  "lat": 38.5227158,
+  "lon": 58.5069896,
+  "tags": {
+    "addr:street": "Aşgabat-Daşoguz awtomobil ýoly",
+    "name": "Altyn Menzil",
+    "name:ru": "Алтын мензил",
+    "network": "Türkmen Demir Ýollary",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3188022666,
+  "lat": 38.8622931,
+  "lon": 56.5593803,
+  "tags": {
+    "alt_name": "Kodch",
+    "name": "Goç",
+    "name:ru": "Гоч",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3188028875,
+  "lat": 39.2015609,
+  "lon": 63.3006279,
+  "tags": {
+    "alt_name": "Boynyuzyn",
+    "esr:user": "757202",
+    "name": "Boýnuzyn",
+    "name:ru": "Бойныузын, Буюн-Узун",
+    "railway": "station",
+    "uic_ref": "6700855"
+  }
+},
+{
+  "type": "node",
+  "id": 3188031346,
+  "lat": 39.3149539,
+  "lon": 62.9962646,
+  "tags": {
+    "alt_name": "Ene-Kulyevo",
+    "esr:user": "757310",
+    "fixme": "need updated name for this train station",
+    "name": "Galkynyş",
+    "name:ru": "Галкыныш",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700853"
+  }
+},
+{
+  "type": "node",
+  "id": 3188035616,
+  "lat": 40.0765078,
+  "lon": 62.3735809,
+  "tags": {
+    "alt_name": "Khalkabad;Khalkabat",
+    "esr:user": "757518",
+    "name": "Halkabat",
+    "name:ru": "Халкабат",
+    "name:tk": "Halkabat",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700851"
+  }
+},
+{
+  "type": "node",
+  "id": 3188036698,
+  "lat": 39.7682437,
+  "lon": 62.5291827,
+  "tags": {
+    "esr:user": "757503",
+    "name": "Gabakly",
+    "name:ru": "Kабаклы",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700000"
+  }
+},
+{
+  "type": "node",
+  "id": 3188040450,
+  "lat": 41.0278848,
+  "lon": 61.8507038,
+  "tags": {
+    "alt_name": "Лебаб",
+    "esr:user": "757804",
+    "name": "Lebap",
+    "name:ru": "Лебап",
+    "railway": "station",
+    "uic_ref": "6700267"
+  }
+},
+{
+  "type": "node",
+  "id": 3188119510,
+  "lat": 35.6536365,
+  "lon": 62.5604306,
+  "tags": {
+    "alt_name": "Kala-i-Mor",
+    "esr:user": "755902",
+    "name": "Galaýmor",
+    "name:ru": "Галаймор",
+    "railway": "station",
+    "uic_ref": "6700283"
+  }
+},
+{
+  "type": "node",
+  "id": 3188119986,
+  "lat": 37.2930995,
+  "lon": 62.3545133,
+  "tags": {
+    "addr:city": "Ýolöten",
+    "name": "Ýolöten",
+    "name:en": "Yoloten",
+    "name:ru": "Ёлотен, Йолотен",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3188126161,
+  "lat": 36.4629891,
+  "lon": 62.5935900,
+  "tags": {
+    "alt_name": "Sary-yas",
+    "esr:user": "755601",
+    "name": "Saryýazy",
+    "name:ru": "Сарыязы",
+    "railway": "station",
+    "uic_ref": "6700939"
+  }
+},
+{
+  "type": "node",
+  "id": 3188128695,
+  "lat": 36.5382921,
+  "lon": 62.5540195,
+  "tags": {
+    "addr:city": "Sandykgaçy",
+    "alt_name": "Sandiy-Kazhy",
+    "esr:user": "755508",
+    "name": "Sandykgaçy",
+    "name:ru": "Сандыкгачы",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700938"
+  }
+},
+{
+  "type": "node",
+  "id": 3188137295,
+  "lat": 38.1026274,
+  "lon": 58.0803585,
+  "tags": {
+    "name": "Büzmeýin",
+    "name:ru": "Безмеин",
+    "name:tk": "Büzmeýin",
+    "old_name": "Abadan",
+    "old_name:ru": "Абадан",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3188139229,
+  "lat": 39.0274625,
+  "lon": 56.1342410,
+  "tags": {
+    "alt_name": "Dzhanakhir",
+    "name": "Janahyr",
+    "name:ru": "Джанахыр",
+    "name:tk": "Janahyr",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3188143151,
+  "lat": 39.0762298,
+  "lon": 55.9320355,
+  "tags": {
+    "alt_name": "Yzkander",
+    "name": "Isgender",
+    "name:ru": "Исгендер",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3188145671,
+  "lat": 39.2101752,
+  "lon": 55.7124687,
+  "tags": {
+    "alt_name": "Uzun-Su",
+    "name": "Uzunsuw",
+    "name:ru": "Узун сув",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3188146234,
+  "lat": 39.2994204,
+  "lon": 55.3411155,
+  "tags": {
+    "name": "Çitli",
+    "name:ru": "Шаумян",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3188147897,
+  "lat": 39.4050879,
+  "lon": 55.0100834,
+  "tags": {
+    "name": "Arkaç",
+    "name:ru": "Аркач",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3188147916,
+  "lat": 39.3815624,
+  "lon": 54.8258314,
+  "tags": {
+    "name": "Aýdyň",
+    "name:ru": "Айдынг",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3219289453,
+  "lat": 39.6697551,
+  "lon": 55.9282120,
+  "tags": {
+    "name": "Ýasga",
+    "name:tk": "Ýasga",
+    "old_name": "Ýasga stansiýasy",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3220636997,
+  "lat": 35.8241774,
+  "lon": 52.9172316,
+  "tags": {
+    "name": "ایسگاه راه آهن گدوک",
+    "name:en": "Gadok",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3221356253,
+  "lat": 37.2716819,
+  "lon": 60.2455724,
+  "tags": {
+    "alt_name": "Takir",
+    "name": "Takyr",
+    "name:ru": "Такир",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3221362751,
+  "lat": 37.6168744,
+  "lon": 61.7539125,
+  "tags": {
+    "name": "Rzd. No 66",
+    "name:ru": "Разъезд № 66",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3221364208,
+  "lat": 37.4541700,
+  "lon": 60.7425225,
+  "tags": {
+    "alt_name": "Geok-Syur",
+    "name": "Göksüýri",
+    "name:ru": "Гёксюйри",
+    "name:tk": "Göksüýri",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3221364651,
+  "lat": 37.6198846,
+  "lon": 61.2922692,
+  "tags": {
+    "alt_name": "Dort-Kuyu",
+    "name": "Dörtguýy",
+    "name:ru": "Дертгуйы",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3221365881,
+  "lat": 37.6210088,
+  "lon": 61.5635599,
+  "tags": {
+    "alt_name": "Karabata",
+    "name": "Garybata",
+    "name:ru": "Гарыбата",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3221370129,
+  "lat": 37.6035107,
+  "lon": 61.9358556,
+  "tags": {
+    "addr:city": "Mollanepes adyndaky şäherçe",
+    "name": "Mollanepes",
+    "name:ru": "Молланепес",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3221374451,
+  "lat": 37.6878791,
+  "lon": 62.3523395,
+  "tags": {
+    "addr:city": "Guşlyoba geňeşligi",
+    "addr:place": "Gurbangala",
+    "alt_name": "Kurban-Kala",
+    "esr:user": "750805",
+    "name": "Gurbangala",
+    "name:ru": "Гурбангала",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700927"
+  }
+},
+{
+  "type": "node",
+  "id": 3221378144,
+  "lat": 37.6172502,
+  "lon": 62.0307617,
+  "tags": {
+    "esr:user": "750913",
+    "name": "Rzd. No 64",
+    "name:ru": "Разъезд № 64",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3221379914,
+  "lat": 37.7749964,
+  "lon": 62.5296195,
+  "tags": {
+    "alt_name": "Zakhmet",
+    "esr:user": "750701",
+    "name": "Zähmet",
+    "name:ru": "Захмет",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700928"
+  }
+},
+{
+  "type": "node",
+  "id": 3221868779,
+  "lat": 38.5622883,
+  "lon": 63.1773712,
+  "tags": {
+    "esr:user": "750504",
+    "name": "Repetek",
+    "name:ru": "Репетек",
+    "railway": "station",
+    "uic_ref": "6700837"
+  }
+},
+{
+  "type": "node",
+  "id": 3221918126,
+  "lat": 40.4899758,
+  "lon": 62.1274157,
+  "tags": {
+    "alt_name": "Dargan-Ata",
+    "name": "Darganata",
+    "name:az": "Darğanata",
+    "name:azb": "دارغان‌آتا",
+    "name:en": "Darganata",
+    "name:fa": "دارغان‌آتا",
+    "name:kk": "Дарғаната",
+    "name:kk-Arab": "دارعان‌اتا",
+    "name:kk-Cyrl": "Дарғаната",
+    "name:kk-Latn": "Darğanata",
+    "name:ru": "Дарганата",
+    "name:tg": "Дорғоното",
+    "name:tk": "Darganata",
+    "name:tk-Arab": "دارغان‌آتا",
+    "name:tr": "Darğanata",
+    "name:uz": "Dorg’onota",
+    "name:uz-Arab": "دارغان‌‌آته",
+    "name:uz-Cyrl": "Дорғонота",
+    "name:uz-Latn": "Dorg’onota",
+    "old_name": "Birata",
+    "old_name:az": "Birata",
+    "old_name:azb": "بیرآتا",
+    "old_name:en": "Birata",
+    "old_name:fa": "بیرآتا",
+    "old_name:kk": "Бірата",
+    "old_name:kk-Arab": "ءبىراتا",
+    "old_name:kk-Cyrl": "Бірата",
+    "old_name:kk-Latn": "Bırata",
+    "old_name:ru": "Бирата",
+    "old_name:tg": "Ноҳияи Бирото",
+    "old_name:tk": "Birata",
+    "old_name:tk-Arab": "بیرآتا",
+    "old_name:tr": "Birata",
+    "old_name:uz": "Birota",
+    "old_name:uz-Arab": "بیرآته",
+    "old_name:uz-Cyrl": "Бирота",
+    "old_name:uz-Latn": "Birota",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3221933028,
+  "lat": 38.4438719,
+  "lon": 64.0805523,
+  "tags": {
+    "addr:city": "Garabekewül",
+    "alt_name": "Karabekaul",
+    "name": "Garabekewül",
+    "name:ru": "Карабекаул",
+    "name:tk": "Garabekewül",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3221940422,
+  "lat": 37.4019460,
+  "lon": 62.1557382,
+  "tags": {
+    "alt_name": "Talkhatan-Baba",
+    "esr:user": "755118",
+    "name": "Talhatanbaba",
+    "name:ru": "Талхатанбаба",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700934",
+    "wikidata": "Q98716672"
+  }
+},
+{
+  "type": "node",
+  "id": 3221948474,
+  "lat": 37.4921622,
+  "lon": 61.9704608,
+  "tags": {
+    "esr:user": "755103",
+    "name": "Semenik",
+    "name:ru": "Семеник",
+    "railway": "station",
+    "uic_ref": "6700933",
+    "wikidata": "Q98716674"
+  }
+},
+{
+  "type": "node",
+  "id": 3221948990,
+  "lat": 37.5360505,
+  "lon": 61.8794623,
+  "tags": {
+    "name": "Altyn Asyr",
+    "name:ru": "Алтын Асыр",
+    "name:tk": "Altyn Asyr",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q98716720"
+  }
+},
+{
+  "type": "node",
+  "id": 3221954730,
+  "lat": 35.4536123,
+  "lon": 62.3996911,
+  "tags": {
+    "addr:city": "Çemenabat",
+    "alt_name": "Chemenibit",
+    "esr:user": "755936",
+    "name": "Çemenabat",
+    "name:ru": "Чеменабат",
+    "operator": "Türkmen Demir Ýollary",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700284"
+  }
+},
+{
+  "type": "node",
+  "id": 3221971699,
+  "lat": 36.2748832,
+  "lon": 62.6422342,
+  "tags": {
+    "alt_name": "Tash-Kepry",
+    "esr:user": "755705",
+    "name": "Daşköpri",
+    "name:en": "Dashkopri",
+    "name:ru": "Дашкепри",
+    "railway": "station",
+    "uic_ref": "6700281"
+  }
+},
+{
+  "type": "node",
+  "id": 3221978681,
+  "lat": 36.7155116,
+  "lon": 62.4572832,
+  "tags": {
+    "alt_name": "Imam-Baba",
+    "esr:user": "755404",
+    "name": "Ymambaba",
+    "name:ru": "Ымамбаба",
+    "railway": "station",
+    "uic_ref": "6700937"
+  }
+},
+{
+  "type": "node",
+  "id": 3221981489,
+  "lat": 35.9640040,
+  "lon": 62.7271748,
+  "tags": {
+    "name": "Km 220",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3221986846,
+  "lat": 36.0135975,
+  "lon": 62.7114754,
+  "tags": {
+    "alt_name": "Takhta-Bazar",
+    "esr:user": "755809",
+    "name": "Tagtabazar",
+    "name:ru": "Тагтабазар",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700282"
+  }
+},
+{
+  "type": "node",
+  "id": 3222000778,
+  "lat": 37.1237634,
+  "lon": 62.4500090,
+  "tags": {
+    "alt_name": "Sulman-Bent",
+    "esr:user": "755300",
+    "name": "Soltanbent",
+    "name:ru": "Солтанбент",
+    "railway": "station",
+    "uic_ref": "6700799"
+  }
+},
+{
+  "type": "node",
+  "id": 3415481009,
+  "lat": 37.7052039,
+  "lon": 54.7408868,
+  "tags": {
+    "addr:city": "Etrek",
+    "name": "Etrek",
+    "name:en": "Etrek",
+    "name:ru": "Этрек",
+    "name:tk": "Etrek",
+    "old_name": "Etrek stansiýasy",
+    "operator": "Türkmen Demir Ýollary",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3426301007,
+  "lat": 36.8867935,
+  "lon": 54.2136321,
+  "tags": {
+    "name": "سبزدشت",
+    "name:en": "Sabz Dasht",
+    "railway": "station",
+    "wikidata": "Q85168722"
+  }
+},
+{
+  "type": "node",
+  "id": 3740955456,
+  "lat": 42.2624918,
+  "lon": 60.1861243,
+  "tags": {
+    "esr:user": "739647",
+    "name": "Койбак",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2901206"
+  }
+},
+{
+  "type": "node",
+  "id": 3740987088,
+  "lat": 41.0742163,
+  "lon": 64.3340322,
+  "tags": {
+    "name": "рзд. 306 км",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3792693385,
+  "lat": 38.3577255,
+  "lon": 65.6124536,
+  "tags": {
+    "esr:user": "734319",
+    "name": "No 154",
+    "name:ru": "Разъезд №154",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900317"
+  }
+},
+{
+  "type": "node",
+  "id": 3808279927,
+  "lat": 36.2828001,
+  "lon": 59.5423852,
+  "tags": {
+    "alt_name": "سلامت",
+    "alt_name:en": "Salamat",
+    "name": "شهید فکوری",
+    "name:ar": "شهيد فكوري",
+    "name:en": "Shahid Fakouri",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q51847348"
+  }
+},
+{
+  "type": "node",
+  "id": 3808279928,
+  "lat": 36.2837736,
+  "lon": 59.5639834,
+  "tags": {
+    "name": "مترو کوهسنگی",
+    "name:ar": "كوهسنكي",
+    "name:en": "Kouh Sangi Metro Station",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3808291107,
+  "lat": 36.3250926,
+  "lon": 59.6752419,
+  "tags": {
+    "name": "مترو طبرسی",
+    "name:ar": "الطبرسي",
+    "name:en": "Tabarsi Metro Station",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "stop_position": "yes",
+    "subway": "yes",
+    "wikidata": "Q30599970"
+  }
+},
+{
+  "type": "node",
+  "id": 3849836297,
+  "lat": 36.4705055,
+  "lon": 61.1047085,
+  "tags": {
+    "name": "سرخس",
+    "name:en": "Sarakhs",
+    "railway": "station",
+    "wikidata": "Q85168684"
+  }
+},
+{
+  "type": "node",
+  "id": 3883121346,
+  "lat": 37.9045214,
+  "lon": 54.7136509,
+  "tags": {
+    "name": "Akjadepe",
+    "name:ru": "Акджадепе",
+    "name:tk": "Akjadepe",
+    "old_name": "Akjadepe stansiýasy",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3883125510,
+  "lat": 38.4612695,
+  "lon": 54.7036082,
+  "tags": {
+    "name": "Balguýy",
+    "name:ru": "Балгуйы",
+    "name:tk": "Balguýy",
+    "old_name": "Babaguly stansiýasy",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q98716733"
+  }
+},
+{
+  "type": "node",
+  "id": 3883136754,
+  "lat": 39.1659294,
+  "lon": 55.1440857,
+  "tags": {
+    "name": "Däneata",
+    "name:ru": "Дянеата",
+    "name:tk": "Däneata",
+    "old_name": "Däneata stansiýasy",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3883144727,
+  "lat": 39.1188025,
+  "lon": 55.8692983,
+  "tags": {
+    "name": "Rzd. No 112",
+    "name:ru": "Разъезд № 112",
+    "name:tk": "112-nji duralga",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3883318357,
+  "lat": 38.9333094,
+  "lon": 56.4210886,
+  "tags": {
+    "name": "Rzd. No 108",
+    "name:ru": "Разъезд № 108",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3883321423,
+  "lat": 38.7801488,
+  "lon": 56.7112419,
+  "tags": {
+    "name": "Rzd. No 105",
+    "name:ru": "Разъезд № 105",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3883322921,
+  "lat": 38.3346167,
+  "lon": 57.6111846,
+  "tags": {
+    "addr:city": "Akdepe geňeşligi",
+    "name": "Rzd. No 97",
+    "name:ru": "Разъезд № 97",
+    "name:tk": "97-nji duralga",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3883327243,
+  "lat": 38.1379901,
+  "lon": 58.2159360,
+  "tags": {
+    "name": "Rzd. No 1",
+    "name:ru": "Рзд № 1",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3883328971,
+  "lat": 38.0861367,
+  "lon": 58.1437592,
+  "tags": {
+    "name": "Babarap",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3883339843,
+  "lat": 41.6514436,
+  "lon": 59.3840837,
+  "tags": {
+    "name": "Şasenem",
+    "name:ru": "Шасенем",
+    "railway": "station",
+    "wikidata": "Q98716762"
+  }
+},
+{
+  "type": "node",
+  "id": 3883363583,
+  "lat": 41.7231918,
+  "lon": 59.9297939,
+  "tags": {
+    "name": "Görogly",
+    "name:en": "Gerogly",
+    "name:ru": "Героглы",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3884317652,
+  "lat": 41.6437717,
+  "lon": 59.2058634,
+  "tags": {
+    "name": "Mian",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3884321155,
+  "lat": 41.3257808,
+  "lon": 58.7311405,
+  "tags": {
+    "name": "Rzd. No 5",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3884323307,
+  "lat": 41.1431671,
+  "lon": 58.6058675,
+  "tags": {
+    "name": "Oguzabat",
+    "name:ru": "Огузабат",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3884475565,
+  "lat": 37.4636014,
+  "lon": 54.6297973,
+  "tags": {
+    "name": "Akýaýla",
+    "name:fa": "آق یایلا",
+    "name:ru": "Акяйла",
+    "name:tk": "Akýaýla",
+    "name:tk-Arab": "آق یایلا",
+    "name:tr": "Akyayla",
+    "old_name": "Akýaýla stansiýasy",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3884567919,
+  "lat": 37.8704492,
+  "lon": 58.6709628,
+  "tags": {
+    "name": "87-nji duralga",
+    "name:ru": "Разъезд № 87",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3884580223,
+  "lat": 37.2085975,
+  "lon": 59.8929518,
+  "tags": {
+    "name": "Rzd. No 79",
+    "name:ru": "Разъезд № 79",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3884581999,
+  "lat": 37.2242050,
+  "lon": 60.1362010,
+  "tags": {
+    "name": "Rzd. No 76",
+    "name:ru": "Разъезд № 76",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3885156287,
+  "lat": 35.3389255,
+  "lon": 62.4031382,
+  "tags": {
+    "name": "Rzd. No 199",
+    "name:ru": "Разъезд № 199",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3885349297,
+  "lat": 38.4280861,
+  "lon": 63.1082715,
+  "tags": {
+    "name": "Rzd. No 54",
+    "name:ru": "Разъезд № 54",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3885729051,
+  "lat": 39.5352630,
+  "lon": 62.7724788,
+  "tags": {
+    "name": "170-nji duralga",
+    "name:ru": "Разъезд № 170",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3885821435,
+  "lat": 40.6787420,
+  "lon": 62.0126943,
+  "tags": {
+    "name": "Rzd. No 174",
+    "name:ru": "Разъезд № 174",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3885978840,
+  "lat": 38.7287782,
+  "lon": 63.8559864,
+  "tags": {
+    "name": "Saýat",
+    "name:ru": "Саят",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3885992911,
+  "lat": 37.7741137,
+  "lon": 65.3352438,
+  "tags": {
+    "esr:user": "749301",
+    "name": "Azatlyk",
+    "name:ru": "Азатлык",
+    "railway": "station",
+    "uic_ref": "6700242"
+  }
+},
+{
+  "type": "node",
+  "id": 3885994647,
+  "lat": 37.8511842,
+  "lon": 65.2421631,
+  "tags": {
+    "esr:user": "749206",
+    "name": "Kerkiçi",
+    "name:ru": "Керкиче",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700241"
+  }
+},
+{
+  "type": "node",
+  "id": 3886004619,
+  "lat": 37.7337879,
+  "lon": 65.4092831,
+  "tags": {
+    "alt_name": "Borugchi",
+    "esr:user": "749403",
+    "name": "Burguçy",
+    "name:en": "Burguchy",
+    "name:ru": "Бургучи",
+    "name:tk": "Burguçy",
+    "railway": "station",
+    "uic_ref": "6700243"
+  }
+},
+{
+  "type": "node",
+  "id": 3886020849,
+  "lat": 37.6718997,
+  "lon": 65.6038910,
+  "tags": {
+    "esr:user": "749507",
+    "name": "Daşrabat",
+    "name:ru": "Дашрабат",
+    "name:tk": "Daşrabat",
+    "railway": "station",
+    "uic_ref": "6700244"
+  }
+},
+{
+  "type": "node",
+  "id": 3886246584,
+  "lat": 42.0660619,
+  "lon": 59.9682958,
+  "tags": {
+    "esr:user": "758402",
+    "name": "Gubadag",
+    "name:ru": "Кубадаг",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3886257529,
+  "lat": 42.0138398,
+  "lon": 59.8312950,
+  "tags": {
+    "name": "Rzd. No 178",
+    "name:ru": "Разъезд № 178",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3886602157,
+  "lat": 42.2748459,
+  "lon": 59.2675319,
+  "tags": {
+    "esr:user": "759208",
+    "name": "Dostluk",
+    "name:ru": "Достлук",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3886606914,
+  "lat": 42.2547040,
+  "lon": 59.3604838,
+  "tags": {
+    "addr:street": "Daşoguz-Köneürgenç Garaýoly",
+    "esr:user": "758703",
+    "name": "Maslahat",
+    "name:ru": "Маслахат",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3886643434,
+  "lat": 37.1560060,
+  "lon": 61.0559643,
+  "tags": {
+    "alt_name": "Khauz-Khan",
+    "name": "Howuzhan",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3889181263,
+  "lat": 39.4283872,
+  "lon": 55.5356218,
+  "tags": {
+    "name": "Ak ýol",
+    "name:tk": "Ak ýol",
+    "old_name": "Çilmämmet stansiýasy",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3889184092,
+  "lat": 39.5754127,
+  "lon": 55.6840520,
+  "tags": {
+    "name": "Arzuw",
+    "name:tk": "Arzuw",
+    "old_name": "Razýezd-17",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3889185758,
+  "lat": 39.9488177,
+  "lon": 55.7930597,
+  "tags": {
+    "name": "Burgun",
+    "name:tk": "Burgun",
+    "old_name": "Burgun stansiýasy",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3889194703,
+  "lat": 40.5364982,
+  "lon": 55.3992759,
+  "tags": {
+    "esr:user": "754308",
+    "name": "Gyzylgaýa",
+    "name:ru": "Гызылгая",
+    "name:tk": "Gyzylgaýa",
+    "old_name": "Gyzylgaýa stansiýasy",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3889198322,
+  "lat": 40.1315661,
+  "lon": 55.5751687,
+  "tags": {
+    "name": "Uzboý",
+    "name:tk": "Uzboý",
+    "old_name": "Göbekajy stansiýasy",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3889207121,
+  "lat": 40.8377088,
+  "lon": 55.1192650,
+  "tags": {
+    "name": "Ärsarybaba",
+    "name:tk": "Ärsarybaba",
+    "old_name": "Tüwer stansiýasy",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3889207887,
+  "lat": 41.3973833,
+  "lon": 54.5042875,
+  "tags": {
+    "name": "Hazar",
+    "name:tk": "Hazar",
+    "old_name": "Buzgun stansiýasy",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3889208111,
+  "lat": 41.5774352,
+  "lon": 54.3367796,
+  "tags": {
+    "name": "Kuwwat",
+    "name:tk": "Kuwwat",
+    "old_name": "Razýezd-19",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3889208620,
+  "lat": 41.0762223,
+  "lon": 54.9149744,
+  "tags": {
+    "name": "Berkarar",
+    "name:tk": "Berkarar",
+    "old_name": "Maýsu stansiýasy",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3889210530,
+  "lat": 41.9174695,
+  "lon": 54.0719475,
+  "tags": {
+    "name": "Polatly",
+    "name:tk": "Polatly",
+    "old_name": "Razýezd-20",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3889211088,
+  "lat": 41.2592715,
+  "lon": 54.7185824,
+  "tags": {
+    "name": "Bitaraplyk",
+    "name:tk": "Bitaraplyk",
+    "old_name": "Razýezd-18",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3889214045,
+  "lat": 42.1987476,
+  "lon": 53.8435727,
+  "tags": {
+    "name": "Şanly",
+    "name:tk": "Şanly",
+    "old_name": "Garnyýaryk stansiýasy",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3889214463,
+  "lat": 41.7424503,
+  "lon": 54.2189207,
+  "tags": {
+    "name": "Parahat",
+    "name:tk": "Parahat",
+    "old_name": "Garagyn stansiýasy",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 4025966922,
+  "lat": 37.4298060,
+  "lon": 54.6143829,
+  "tags": {
+    "name": "اینچه برون",
+    "name:en": "Incheh Borun",
+    "name:tk": "Inçeburun",
+    "name:tr": "İnceburun",
+    "official_name": "ایستگاه راه آهن اینچه برون",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168021"
+  }
+},
+{
+  "type": "node",
+  "id": 4049889222,
+  "lat": 42.3301096,
+  "lon": 53.6767259,
+  "tags": {
+    "esr:user": "664600",
+    "int_name": "Bolaşaq",
+    "name": "Болашақ",
+    "name:kk": "Болашақ",
+    "name:ru": "Болашак",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "www.youtube.com/watch?v=fUqwVelVyhg",
+    "uic_name": "Bolashak",
+    "uic_ref": "2705888"
+  }
+},
+{
+  "type": "node",
+  "id": 4447878494,
+  "lat": 39.2674807,
+  "lon": 55.4897596,
+  "tags": {
+    "addr:city": "Bereket",
+    "name": "Bereket 2",
+    "operator": "Türkmen Demir Ýollary",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 4526029172,
+  "lat": 38.2149829,
+  "lon": 66.8897974,
+  "tags": {
+    "name": "Oknazar",
+    "name:ru": "Акназар",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 4526176086,
+  "lat": 38.2649509,
+  "lon": 66.6111507,
+  "tags": {
+    "name": "Koradahna",
+    "name:ru": "Карадахна",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 4526226152,
+  "lat": 38.3901907,
+  "lon": 66.3215927,
+  "tags": {
+    "name": "Jarquduq",
+    "name:en": "jarkuduk",
+    "name:ru": "Джаркудук",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 4528661445,
+  "lat": 37.4738350,
+  "lon": 64.9776349,
+  "tags": {
+    "name": "Gulistan",
+    "name:ru": "Гулистан",
+    "name:tk": "Gülistan",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 4600146159,
+  "lat": 42.9906357,
+  "lon": 53.1356566,
+  "tags": {
+    "esr:user": "663927",
+    "name": "Акбобек",
+    "name:ru": "Акбобек",
+    "railway": "station",
+    "uic_name": "Akbobek",
+    "uic_ref": "2705883"
+  }
+},
+{
+  "type": "node",
+  "id": 4910917969,
+  "lat": 41.9829604,
+  "lon": 60.6272986,
+  "tags": {
+    "name": "Beruniy-1",
+    "name:ru": "Беруни-1",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 4912581788,
+  "lat": 36.2842747,
+  "lon": 58.5649770,
+  "tags": {
+    "name": "عطار",
+    "name:en": "Attar",
+    "railway": "station",
+    "wikidata": "Q85168413"
+  }
+},
+{
+  "type": "node",
+  "id": 5160831955,
+  "lat": 36.2568247,
+  "lon": 59.6202014,
+  "tags": {
+    "name": "مترو غدیر",
+    "name:ar": "غدیر",
+    "name:en": "Ghadir",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "station_number": "1",
+    "train": "yes",
+    "wikidata": "Q20717404"
+  }
+},
+{
+  "type": "node",
+  "id": 5162609055,
+  "lat": 36.3173101,
+  "lon": 59.5338862,
+  "tags": {
+    "name": "پارک ملت",
+    "name:ar": "حديقة ملت",
+    "name:en": "Mellat Park",
+    "railway": "station",
+    "station": "light_rail",
+    "station_number": "12",
+    "wikidata": "Q20718095"
+  }
+},
+{
+  "type": "node",
+  "id": 5162609056,
+  "lat": 36.3198700,
+  "lon": 59.5256410,
+  "tags": {
+    "name": "کوثر",
+    "name:ar": "کوثر",
+    "name:en": "Kowsar",
+    "railway": "station",
+    "station": "light_rail",
+    "station_number": "13",
+    "wikidata": "Q20718009"
+  }
+},
+{
+  "type": "node",
+  "id": 5162609065,
+  "lat": 36.3225508,
+  "lon": 59.5170258,
+  "tags": {
+    "name": "سید رضی",
+    "name:ar": "سيد رضي",
+    "name:en": "Seyyed Razi",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "station_number": "14",
+    "train": "yes",
+    "wikidata": "Q20718128"
+  }
+},
+{
+  "type": "node",
+  "id": 5162609068,
+  "lat": 36.3251818,
+  "lon": 59.5086023,
+  "tags": {
+    "name": "دانش آموز",
+    "name:ar": "دانش أموز",
+    "name:en": "Danesh Amooz",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "station_number": "15",
+    "train": "yes",
+    "wikidata": "Q20717445"
+  }
+},
+{
+  "type": "node",
+  "id": 5162609074,
+  "lat": 36.3277382,
+  "lon": 59.5004042,
+  "tags": {
+    "name": "هفت تیر",
+    "name:ar": "سبعة تير",
+    "name:en": "Haft-e Tir",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "station_number": "16",
+    "train": "yes",
+    "wikidata": "Q20717431"
+  }
+},
+{
+  "type": "node",
+  "id": 5162609081,
+  "lat": 36.3300842,
+  "lon": 59.4928980,
+  "tags": {
+    "name": "صدف",
+    "name:ar": "صدف",
+    "name:en": "Sadaf",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "station_number": "17",
+    "train": "yes",
+    "wikidata": "Q20718117"
+  }
+},
+{
+  "type": "node",
+  "id": 5162609083,
+  "lat": 36.3325958,
+  "lon": 59.4848239,
+  "tags": {
+    "name": "صیاد شیرازی",
+    "name:ar": "صیاد شيرازي",
+    "name:en": "Sayyad Shirazi",
+    "railway": "station",
+    "station": "light_rail",
+    "station_number": "18",
+    "wikidata": "Q20718126"
+  }
+},
+{
+  "type": "node",
+  "id": 5162609085,
+  "lat": 36.3359039,
+  "lon": 59.4742419,
+  "tags": {
+    "name": "اقبال لاهوری",
+    "name:ar": "إقبال لاهوري",
+    "name:en": "Eghbal Lahuri",
+    "railway": "station",
+    "station": "light_rail",
+    "station_number": "19",
+    "wikidata": "Q20717333"
+  }
+},
+{
+  "type": "node",
+  "id": 5162609086,
+  "lat": 36.3393906,
+  "lon": 59.4631368,
+  "tags": {
+    "name": "ایستگاه مترو نمایشگاه",
+    "name:ar": "معرض",
+    "name:en": "Exposition",
+    "railway": "station",
+    "station": "light_rail",
+    "station_number": "20",
+    "wikidata": "Q20717496"
+  }
+},
+{
+  "type": "node",
+  "id": 5162609087,
+  "lat": 36.3426719,
+  "lon": 59.4526541,
+  "tags": {
+    "name": "کوهستان پارک",
+    "name:ar": "حديقة كوهستان",
+    "name:en": "Kuhestan Park",
+    "railway": "station",
+    "station": "light_rail",
+    "station_number": "21",
+    "wikidata": "Q20718011"
+  }
+},
+{
+  "type": "node",
+  "id": 5162609088,
+  "lat": 36.3450952,
+  "lon": 59.4421504,
+  "tags": {
+    "name": "وکیل آباد",
+    "name:ar": "وكيل آباد",
+    "name:en": "Vakilabad",
+    "railway": "station",
+    "station": "light_rail",
+    "station_number": "22",
+    "wikidata": "Q20718175"
+  }
+},
+{
+  "type": "node",
+  "id": 5162947301,
+  "lat": 36.2982807,
+  "lon": 59.6065526,
+  "tags": {
+    "name": "شهدا",
+    "name:ar": "الشهداء",
+    "name:en": "Shohada",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5162991963,
+  "lat": 36.3125521,
+  "lon": 59.5445171,
+  "tags": {
+    "name": "آزادی",
+    "name:ar": "آزادي",
+    "name:en": "Azadi",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q20717237"
+  }
+},
+{
+  "type": "node",
+  "id": 5162991964,
+  "lat": 36.3071270,
+  "lon": 59.5526750,
+  "tags": {
+    "name": "خیام",
+    "name:ar": "خیام",
+    "name:en": "Khayyam",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q20717551"
+  }
+},
+{
+  "type": "node",
+  "id": 5162991965,
+  "lat": 36.3002003,
+  "lon": 59.5632872,
+  "tags": {
+    "name": "فلسطین",
+    "name:ar": "فلسطین",
+    "name:en": "Felestin",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q20718093"
+  }
+},
+{
+  "type": "node",
+  "id": 5162991967,
+  "lat": 36.2942821,
+  "lon": 59.5787958,
+  "tags": {
+    "name": "قائم",
+    "name:ar": "قائم",
+    "name:en": "Ghaem",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q20717406"
+  }
+},
+{
+  "type": "node",
+  "id": 5162991968,
+  "lat": 36.2910754,
+  "lon": 59.5861034,
+  "tags": {
+    "name": "شریعتی",
+    "name:ar": "شريعتي",
+    "name:en": "Shariati",
+    "railway": "station",
+    "station": "light_rail"
+  }
+},
+{
+  "type": "node",
+  "id": 5162991969,
+  "lat": 36.2911000,
+  "lon": 59.5860036,
+  "tags": {
+    "name": "شریعتی",
+    "name:en": "Shariati",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "train": "yes",
+    "wikidata": "Q20718132"
+  }
+},
+{
+  "type": "node",
+  "id": 5162991970,
+  "lat": 36.2812025,
+  "lon": 59.5958752,
+  "tags": {
+    "name": "امام خمینی",
+    "name:ar": "الإمام الخميني",
+    "name:en": "Imam Khomeini",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q20717476"
+  }
+},
+{
+  "type": "node",
+  "id": 5162991971,
+  "lat": 36.2735632,
+  "lon": 59.6035542,
+  "tags": {
+    "name": "بسیج",
+    "name:ar": "بسیج",
+    "name:en": "Basij",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "train": "yes",
+    "wikidata": "Q20717245"
+  }
+},
+{
+  "type": "node",
+  "id": 5162991973,
+  "lat": 36.2677285,
+  "lon": 59.6092172,
+  "tags": {
+    "name": "ایستگاه قطارشهری هفده شهریور",
+    "name:ar": "السابع عشر من سبتمبر",
+    "name:en": "Hefdah-e Shahrivar",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "train": "yes",
+    "wikidata": "Q20717452"
+  }
+},
+{
+  "type": "node",
+  "id": 5162991974,
+  "lat": 36.2627827,
+  "lon": 59.6141847,
+  "tags": {
+    "name": "پروین اعتصامی",
+    "name:ar": "بارفين إتصامي",
+    "name:en": "Parvin-e Etessami",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "train": "yes",
+    "wikidata": "Q20718097"
+  }
+},
+{
+  "type": "node",
+  "id": 5162991976,
+  "lat": 36.2283352,
+  "lon": 59.6405992,
+  "tags": {
+    "name": "فرودگاه",
+    "name:ar": "مطار",
+    "name:en": "Airport",
+    "railway": "station",
+    "station": "light_rail",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5164517834,
+  "lat": 36.4628245,
+  "lon": 52.8631123,
+  "tags": {
+    "name": "قائمشهر",
+    "name:en": "Qaem Shahr",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q65195227",
+    "wikipedia": "fa:ایستگاه راه‌آهن قائم‌شهر"
+  }
+},
+{
+  "type": "node",
+  "id": 5170923725,
+  "lat": 36.3170124,
+  "lon": 59.6622368,
+  "tags": {
+    "addr:city": "شهر مشهد",
+    "name": "مترو ولایت",
+    "name:ar": "ولایت",
+    "name:en": "Velayat Metro Station",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q30599965"
+  }
+},
+{
+  "type": "node",
+  "id": 5455046834,
+  "lat": 41.2096634,
+  "lon": 61.9225765,
+  "tags": {
+    "name": "Dáwtóbe",
+    "name:ru": "Даутобе",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5611073056,
+  "lat": 38.9079076,
+  "lon": 64.0825653,
+  "tags": {
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5611073084,
+  "lat": 39.0089843,
+  "lon": 63.8582736,
+  "tags": {
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5658728026,
+  "lat": 41.8498420,
+  "lon": 59.9767505,
+  "tags": {
+    "addr:city": "Dashoguz",
+    "addr:street": "Atamyrat Nyýazow (Wokzal) köçesi",
+    "name": "Daşoguz",
+    "name:en": "Dashoguz",
+    "name:ru": "Дашогуз",
+    "name:tk": "Daşoguz",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q98716764"
+  }
+},
+{
+  "type": "node",
+  "id": 5684574273,
+  "lat": 40.3087954,
+  "lon": 63.8910276,
+  "tags": {
+    "name": "Tuztepa",
+    "name:ru": "Тузтепа",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5793725055,
+  "lat": 41.3771547,
+  "lon": 60.3765965,
+  "tags": {
+    "name": "Xiva",
+    "name:de": "Chiwa",
+    "name:en": "Khiva",
+    "name:ja": "ヒヴァ",
+    "name:ru": "Хива",
+    "name:zh": "希瓦",
+    "operator": "UzRailways",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "Maxar",
+    "train": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5849418653,
+  "lat": 36.2433798,
+  "lon": 59.6235739,
+  "tags": {
+    "name": "بوستان ریحانه",
+    "name:ar": "حديقة ريحانة",
+    "name:en": "Bustan-e Reyhaneh",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q30599990"
+  }
+},
+{
+  "type": "node",
+  "id": 5849418886,
+  "lat": 36.2971706,
+  "lon": 59.5730131,
+  "tags": {
+    "name": "طالقانی",
+    "name:ar": "طالقاني",
+    "name:en": "Taleghani",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q20718150"
+  }
+},
+{
+  "type": "node",
+  "id": 6257635515,
+  "lat": 36.6101054,
+  "lon": 53.2100192,
+  "tags": {
+    "name": "شهید نوبخت",
+    "name:en": "Noobakht",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 6354687689,
+  "lat": 35.9465756,
+  "lon": 59.3842340,
+  "tags": {
+    "name": "ایستگاه قطار ابومسلم",
+    "name:en": "Abumoslem railroad station",
+    "railway": "station",
+    "wikidata": "Q85168288"
+  }
+},
+{
+  "type": "node",
+  "id": 6477400925,
+  "lat": 40.6615184,
+  "lon": 63.2207537,
+  "tags": {
+    "name": "Uchachik",
+    "name:ru": "Учачик",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 6477405847,
+  "lat": 39.8562295,
+  "lon": 64.1710205,
+  "tags": {
+    "name": "Янгиабад",
+    "name:ru": "Янгиабад",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 6479850747,
+  "lat": 35.9576568,
+  "lon": 59.5748100,
+  "tags": {
+    "name": "ایستگاه راه آهن تربت",
+    "name:en": "Torbat Railway Station",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168343"
+  }
+},
+{
+  "type": "node",
+  "id": 6535085632,
+  "lat": 35.9174700,
+  "lon": 54.2062774,
+  "tags": {
+    "name": "امروان",
+    "name:en": "Amravan",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168406"
+  }
+},
+{
+  "type": "node",
+  "id": 6593855682,
+  "lat": 35.2354050,
+  "lon": 52.3084910,
+  "tags": {
+    "addr:city": "گرمسار",
+    "name": "ایستگاه راه آهن گرمسار",
+    "name:en": "Garmsar",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q43401126",
+    "wikipedia": "fa:ایستگاه راه‌آهن گرمسار"
+  }
+},
+{
+  "type": "node",
+  "id": 6735414917,
+  "lat": 36.0187685,
+  "lon": 53.0445403,
+  "tags": {
+    "name": "ایستگاه راه آهن سوادکوه",
+    "name:en": "Savadkuh",
+    "railway": "station",
+    "wikidata": "Q85168587"
+  }
+},
+{
+  "type": "node",
+  "id": 6805219938,
+  "lat": 36.7254930,
+  "lon": 57.1743085,
+  "tags": {
+    "name": "جوین",
+    "railway": "station",
+    "wikidata": "Q85168453"
+  }
+},
+{
+  "type": "node",
+  "id": 6831473486,
+  "lat": 36.4819017,
+  "lon": 52.8981936,
+  "tags": {
+    "name": "گونی بافی",
+    "name:en": "Gooni Bafi",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168706"
+  }
+},
+{
+  "type": "node",
+  "id": 6870181924,
+  "lat": 36.0010216,
+  "lon": 59.7639084,
+  "tags": {
+    "name": "ایستگاه فریمان",
+    "name:en": "Fariman",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168435"
+  }
+},
+{
+  "type": "node",
+  "id": 6872099324,
+  "lat": 35.4265182,
+  "lon": 52.4285180,
+  "tags": {
+    "name": "کبوتر دره",
+    "name:en": "Kabutar Dareh",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6968062893,
+  "lat": 41.3380547,
+  "lon": 61.5300854,
+  "tags": {
+    "name": "Акчука",
+    "name:ru": "Акчука",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 6968062895,
+  "lat": 40.5066694,
+  "lon": 63.6311896,
+  "tags": {
+    "name": "Azanir",
+    "name:ru": "рзд. Азаныр",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 6968062910,
+  "lat": 40.0853539,
+  "lon": 64.0952298,
+  "tags": {
+    "esr:user": "731109",
+    "name": "Машак",
+    "name:ru": "рзд. Машак",
+    "old_name": "Навбахор",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 7466446005,
+  "lat": 39.7071986,
+  "lon": 64.4917634,
+  "tags": {
+    "esr:user": "730454",
+    "name": "Разъезд № 43",
+    "name:ru": "Разъезд № 43",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900809"
+  }
+},
+{
+  "type": "node",
+  "id": 7659925527,
+  "lat": 38.6522137,
+  "lon": 56.9868876,
+  "tags": {
+    "addr:city": "Börme geňeşligi",
+    "name": "Rzd. No. 103",
+    "name:ru": "Разъезд №103",
+    "name:tk": "103-nji duralga",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7661147183,
+  "lat": 40.7907700,
+  "lon": 62.8890882,
+  "tags": {
+    "name": "Alabuga",
+    "name:ru": "рзд. Алабуга",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 7786409748,
+  "lat": 35.2738948,
+  "lon": 59.3066365,
+  "tags": {
+    "name": "ایستگاه راه آهن تربت حیدریه",
+    "name:en": "Torbat-e Heydarieh Railway Station",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168284"
+  }
+},
+{
+  "type": "node",
+  "id": 7819484419,
+  "lat": 35.7497938,
+  "lon": 52.7750412,
+  "tags": {
+    "name": "فیروزکوه",
+    "name:en": "Firuzkuh",
+    "official_name": "ایستگاه راه آهن فیروزکوه",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8165100168,
+  "lat": 35.3943349,
+  "lon": 59.2745581,
+  "tags": {
+    "name": "رخ",
+    "name:en": "Rukh",
+    "network": "RAI",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85168229"
+  }
+},
+{
+  "type": "node",
+  "id": 8228056715,
+  "lat": 40.0206315,
+  "lon": 53.3420025,
+  "tags": {
+    "alt_name": "Янгаджа",
+    "name": "Ýaňyajy",
+    "name:ru": "Янгыджа",
+    "name:tk": "Ýaňyajy",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8228911027,
+  "lat": 39.9328342,
+  "lon": 53.8403837,
+  "tags": {
+    "name": "Belek",
+    "name:ru": "Белек",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8241606910,
+  "lat": 38.9794374,
+  "lon": 56.2732732,
+  "tags": {
+    "name": "Gyzylarbat",
+    "name:ru": "Гызыларбат",
+    "name:tk": "Gyzylarbat",
+    "old_name:1999-2022": "Serdar",
+    "old_name:ja:1999-2022": "セルダル",
+    "old_name:ru:1999-2022": "Сердар",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8328285677,
+  "lat": 39.7222465,
+  "lon": 64.5486084,
+  "tags": {
+    "esr": "730002",
+    "esr:user": "730002",
+    "name": "Buxoro 1",
+    "name:en": "Bukhara 1",
+    "name:ru": "Бухара 1",
+    "name:uz": "Buxoro 1",
+    "name:zh": "布哈拉 1",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900800"
+  }
+},
+{
+  "type": "node",
+  "id": 8328307366,
+  "lat": 40.0806265,
+  "lon": 65.2847582,
+  "tags": {
+    "esr": "731202",
+    "esr:user": "731202",
+    "gns:dsg": "RSTN: railroad station",
+    "gns:ufi": "11175181",
+    "name": "Бинокор",
+    "name:en": "Binokor",
+    "name:ru": "Бинокор",
+    "old_name": "No 35",
+    "railway": "station",
+    "source": "NGA GNS",
+    "uic_ref": "2900735"
+  }
+},
+{
+  "type": "node",
+  "id": 8328328365,
+  "lat": 39.7563254,
+  "lon": 64.5876852,
+  "tags": {
+    "esr": "730411",
+    "esr:user": "730411",
+    "name": "42 temir yo'l raz`ezdi",
+    "name:ru": "42",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900811"
+  }
+},
+{
+  "type": "node",
+  "id": 8328613409,
+  "lat": 39.7249795,
+  "lon": 64.5766796,
+  "tags": {
+    "esr": "731715",
+    "esr:user": "731715",
+    "name": "Kagan",
+    "name:ru": "Каган",
+    "old_name": "Пролетарабад",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2900347"
+  }
+},
+{
+  "type": "node",
+  "id": 8360946103,
+  "lat": 35.5525549,
+  "lon": 53.4049675,
+  "tags": {
+    "name": "راه آهن سمنان",
+    "name:en": "Semnan",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85168446"
+  }
+},
+{
+  "type": "node",
+  "id": 8360946104,
+  "lat": 36.1947804,
+  "lon": 58.7850791,
+  "tags": {
+    "name": "ایستگاه راه‌ آهن نیشابور",
+    "name:de": "Nischapur Hauptbahnhof",
+    "name:en": "Neyshabur Railway Station",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q5942290"
+  }
+},
+{
+  "type": "node",
+  "id": 8360946105,
+  "lat": 35.9691835,
+  "lon": 59.2118494,
+  "tags": {
+    "name": "کاشمر",
+    "name:en": "Kashmar",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8364095070,
+  "lat": 36.4001066,
+  "lon": 55.0012131,
+  "tags": {
+    "alt_name": "Shahroud",
+    "name": "ایستگاه شاهرود",
+    "name:en": "Shahrud",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168313"
+  }
+},
+{
+  "type": "node",
+  "id": 8364118439,
+  "lat": 36.2830964,
+  "lon": 54.8463853,
+  "tags": {
+    "name": "کلاتخوان",
+    "name:en": "Kalateh-ye Khan",
+    "railway": "station",
+    "wikidata": "Q85168415"
+  }
+},
+{
+  "type": "node",
+  "id": 8371063323,
+  "lat": 36.4503228,
+  "lon": 58.0815075,
+  "tags": {
+    "name": "ایستگاه راه آهن سبزوار",
+    "name:en": "Sabzevar Railway Station",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168400"
+  }
+},
+{
+  "type": "node",
+  "id": 8371478170,
+  "lat": 36.5247806,
+  "lon": 57.8427614,
+  "tags": {
+    "name": "بیهق",
+    "name:en": "Beyhaq",
+    "railway": "station",
+    "wikidata": "Q85168433"
+  }
+},
+{
+  "type": "node",
+  "id": 8410168398,
+  "lat": 35.1640425,
+  "lon": 52.0390720,
+  "tags": {
+    "internet_access:fee": "no",
+    "name": "کویر",
+    "name:en": "Kavir",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85167688"
+  }
+},
+{
+  "type": "node",
+  "id": 8410244690,
+  "lat": 36.9591598,
+  "lon": 54.3961242,
+  "tags": {
+    "name": "یامپی",
+    "name:en": "Yampi",
+    "railway": "station",
+    "wikidata": "Q85168017"
+  }
+},
+{
+  "type": "node",
+  "id": 8411373719,
+  "lat": 37.1853077,
+  "lon": 54.4712542,
+  "tags": {
+    "name": "پتروشیمی",
+    "name:en": "Petroshimi",
+    "railway": "station",
+    "wikidata": "Q85168019"
+  }
+},
+{
+  "type": "node",
+  "id": 8411423083,
+  "lat": 36.0332807,
+  "lon": 60.0673588,
+  "tags": {
+    "name": "آزادگان",
+    "name:en": "Azadegan",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168597"
+  }
+},
+{
+  "type": "node",
+  "id": 8411445147,
+  "lat": 36.0869948,
+  "lon": 60.4630449,
+  "tags": {
+    "building": "train_station",
+    "name": "مختوم قلی",
+    "name:en": "Makhtom Gholy",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168639"
+  }
+},
+{
+  "type": "node",
+  "id": 8411454881,
+  "lat": 36.0784986,
+  "lon": 60.2329932,
+  "tags": {
+    "name": "رباط ماهی",
+    "name:en": "Robat Mahi",
+    "name:fa": "رباط ماهی",
+    "railway": "station",
+    "wikidata": "Q85167726"
+  }
+},
+{
+  "type": "node",
+  "id": 8411484086,
+  "lat": 36.1302755,
+  "lon": 60.6114221,
+  "tags": {
+    "name": "مرزداران",
+    "name:en": "Marzdaran",
+    "railway": "station",
+    "wikidata": "Q85168613"
+  }
+},
+{
+  "type": "node",
+  "id": 8411528192,
+  "lat": 36.1833702,
+  "lon": 60.8193657,
+  "tags": {
+    "name": "رباط شرف",
+    "name:en": "Robat Sharaf",
+    "railway": "station",
+    "wikidata": "Q85168654"
+  }
+},
+{
+  "type": "node",
+  "id": 8895975402,
+  "lat": 37.7692176,
+  "lon": 58.9007619,
+  "tags": {
+    "addr:country": "TM",
+    "addr:district": "Ak bugdaý",
+    "addr:state": "Ahal",
+    "name": "Ýaşlyk",
+    "name:en": "Yashlyk",
+    "name:ru": "Яшлык",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8895975404,
+  "lat": 37.9432210,
+  "lon": 58.3961038,
+  "tags": {
+    "addr:city": "Ashgabat",
+    "addr:housenumber": "1",
+    "addr:street": "Gurban Soltan Eje (2043)",
+    "name": "Aşgabat",
+    "name:en": "Ashgabat",
+    "name:ru": "Ашхабад",
+    "name:tk": "Aşgabat",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q4073594",
+    "wikimedia_commons": "Category:Ashgabat railway station",
+    "wikipedia": "tk:Aşgabat demirýol menzili"
+  }
+},
+{
+  "type": "node",
+  "id": 8895992845,
+  "lat": 37.2005945,
+  "lon": 60.0314401,
+  "tags": {
+    "addr:city": "Duşak",
+    "addr:country": "TM",
+    "addr:district": "Kaka",
+    "addr:place": "Duşak",
+    "addr:state": "Ahal",
+    "name": "Duşak",
+    "name:en": "Dushak",
+    "name:ru": "Душак",
+    "name:tk": "Duşak",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8895996369,
+  "lat": 37.6403860,
+  "lon": 59.1408486,
+  "tags": {
+    "addr:country": "TM",
+    "addr:district": "Ak bugdaý",
+    "addr:state": "Ahal",
+    "name": "Berkarar",
+    "name:en": "Berkarar",
+    "name:ru": "Беркарар",
+    "old_name": "Babadurmaz",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q98716678"
+  }
+},
+{
+  "type": "node",
+  "id": 8896008349,
+  "lat": 37.9118535,
+  "lon": 58.4997874,
+  "tags": {
+    "addr:city": "Änew",
+    "addr:street": "Gurban Soltan Eje (2043)",
+    "alt_name": "Annau",
+    "alt_name_1": "Anev",
+    "name": "Änew",
+    "name:ru": "Анев",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8896009275,
+  "lat": 37.3439517,
+  "lon": 59.6179508,
+  "tags": {
+    "addr:country": "TM",
+    "addr:district": "Kaka",
+    "addr:state": "Ahal",
+    "name": "Kaka",
+    "name:en": "Kaka",
+    "name:ru": "Кака",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8896035430,
+  "lat": 39.1026350,
+  "lon": 63.5701837,
+  "tags": {
+    "addr:city": "Turkmenabat",
+    "addr:street": "S.A.Niyazow kocesi",
+    "name": "Türkmenabat",
+    "name:en": "Türkmenabat",
+    "name:ru": "Туркменабат",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8896037632,
+  "lat": 38.0897555,
+  "lon": 62.8031560,
+  "tags": {
+    "addr:city": "Bagtyýarlyk",
+    "name": "Bagtyýarlyk (Üçaji)",
+    "name:en": "Bagtyyarlyk",
+    "name:ru": "Учаджи",
+    "old_name": "Üçaji",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8896042393,
+  "lat": 37.8167641,
+  "lon": 65.1755275,
+  "tags": {
+    "addr:city": "Kerki",
+    "name": "Kerki (Atamyrat)",
+    "name:ja": "アタムラート",
+    "name:ru": "Керки (Атамурат)",
+    "name:tk": "Kerki (Atamyrat)",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8896042774,
+  "lat": 38.0586494,
+  "lon": 64.8658461,
+  "tags": {
+    "name": "Halaç",
+    "name:en": "Halach",
+    "name:ru": "Халач",
+    "name:tk": "Halaç",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8896057139,
+  "lat": 37.5989449,
+  "lon": 65.7325818,
+  "tags": {
+    "name": "Mukry",
+    "name:ru": "Мукры",
+    "name:tr": "Mukry",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8897270355,
+  "lat": 37.3635580,
+  "lon": 66.3174190,
+  "tags": {
+    "name": "Kelif (Keleft)",
+    "name:ru": "Келиф",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8910635472,
+  "lat": 41.7480118,
+  "lon": 59.6251605,
+  "tags": {
+    "name": "Gurbansoltan eje",
+    "name:ru": "Гурбансолтан",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q98716763"
+  }
+},
+{
+  "type": "node",
+  "id": 8914869673,
+  "lat": 36.6557120,
+  "lon": 57.4195000,
+  "tags": {
+    "name": "ایستگاه قطار نقاب",
+    "name:en": "Neqab",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9104363613,
+  "lat": 41.3179949,
+  "lon": 61.0662375,
+  "tags": {
+    "esr": "738606",
+    "name": "Hazorasp",
+    "name:en": "Khazorasp",
+    "name:ru": "Хазарасп",
+    "name:uz": "Hazorasp",
+    "name:zh": "哈扎拉斯普",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 9104373406,
+  "lat": 41.4663065,
+  "lon": 60.7707647,
+  "tags": {
+    "esr": "738409",
+    "name": "Ханки",
+    "name:en": "Khanki",
+    "name:ru": "Ханки",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 9112487713,
+  "lat": 41.2341726,
+  "lon": 64.5907436,
+  "tags": {
+    "name": "Ташкура",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "yard",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9191743021,
+  "lat": 39.4095062,
+  "lon": 62.8898098,
+  "tags": {
+    "esr:user": "757401",
+    "name": "Seýdi",
+    "name:ru": "Сейди",
+    "old_name": "Neftezavodsk",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "6700718",
+    "wikidata": "Q98716746"
+  }
+},
+{
+  "type": "node",
+  "id": 9287650032,
+  "lat": 42.2090347,
+  "lon": 60.0972104,
+  "tags": {
+    "name": "Qipchoq",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 9644182230,
+  "lat": 36.3733112,
+  "lon": 58.3263570,
+  "tags": {
+    "name": "ایستگاه راه آهن فردوس",
+    "name:en": "Ferdows Railway Station",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168351"
+  }
+},
+{
+  "type": "node",
+  "id": 9787560276,
+  "lat": 37.0144370,
+  "lon": 65.1349833,
+  "tags": {
+    "name": "اندخوی",
+    "name:de": "Andchoi",
+    "name:en": "Andkhoy",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9787590343,
+  "lat": 37.2208281,
+  "lon": 65.2428939,
+  "tags": {
+    "name:de": "Aqina",
+    "name:en": "Akinah",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9787590349,
+  "lat": 37.2631138,
+  "lon": 65.2289392,
+  "tags": {
+    "name": "Ymamnazar",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9808631427,
+  "lat": 37.7893974,
+  "lon": 65.9319344,
+  "tags": {
+    "name": "Kazarma",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9808631441,
+  "lat": 37.8162432,
+  "lon": 66.0307634,
+  "tags": {
+    "name": "станция",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9808853340,
+  "lat": 37.6707170,
+  "lon": 66.6444452,
+  "tags": {
+    "name": "Sherobod Sement",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11021092777,
+  "lat": 36.8554929,
+  "lon": 54.4203536,
+  "tags": {
+    "name": "گرگان",
+    "name:en": "Gorgan",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q62107771"
+  }
+},
+{
+  "type": "node",
+  "id": 11752239419,
+  "lat": 36.6871843,
+  "lon": 53.4123725,
+  "tags": {
+    "name": "ابستگاه راه آهن رستمکلا",
+    "name:en": "Rostamkola",
+    "railway": "station",
+    "wikidata": "Q85168738"
+  }
+},
+{
+  "type": "node",
+  "id": 12052957765,
+  "lat": 35.0361921,
+  "lon": 58.9055904,
+  "tags": {
+    "name": "نصر آباد",
+    "name:en": "Nasrabad",
+    "network": "RAI",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12053000078,
+  "lat": 35.4802784,
+  "lon": 59.2056091,
+  "tags": {
+    "name": "کامه",
+    "name:en": "Kameh",
+    "network": "RAI",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12053000082,
+  "lat": 35.7857516,
+  "lon": 59.1365924,
+  "tags": {
+    "name": "نمکی",
+    "name:en": "Namaki",
+    "network": "RAI",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12053000095,
+  "lat": 35.6531729,
+  "lon": 59.2279686,
+  "tags": {
+    "name": "حصار جلال",
+    "name:en": "Hesar Jalal",
+    "network": "RAI",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12168389403,
+  "lat": 41.7597347,
+  "lon": 60.8572013,
+  "tags": {
+    "addr:country": "UZ",
+    "addr:region": "Qaraqalpaqstan Respublikası",
+    "name": "Ellikqala",
+    "name:ru": "Элликала",
+    "name:zh": "埃利卡拉",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 12170269583,
+  "lat": 41.3216839,
+  "lon": 61.3176347,
+  "tags": {
+    "name": "№ 2 nazorat punkti",
+    "name:ru": "Блокпост №2",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12179911358,
+  "lat": 41.3851724,
+  "lon": 60.9025254,
+  "tags": {
+    "esr": "738502",
+    "name": "Bog'ot",
+    "name:en": "Bagat",
+    "name:ru": "Багат",
+    "name:uz": "Bog'ot",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 12201416058,
+  "lat": 41.7802368,
+  "lon": 60.1253222,
+  "tags": {
+    "name": "449 km",
+    "name:ru": "449 км",
+    "name:uz": "449 km",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 12205233198,
+  "lat": 41.0765274,
+  "lon": 62.2331774,
+  "tags": {
+    "name": "Jakasay",
+    "name:ru": "Джакасай",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 12211522986,
+  "lat": 40.9325431,
+  "lon": 62.5653479,
+  "tags": {
+    "name": "Sozakdar",
+    "name:ru": "Сузакдар",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 12301372750,
+  "lat": 41.7415394,
+  "lon": 63.8831035,
+  "tags": {
+    "fixme": "уточнить название",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12320449195,
+  "lat": 41.5077709,
+  "lon": 63.9294303,
+  "tags": {
+    "name": "No 141",
+    "name:ru": "Разъезд №141",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12320449309,
+  "lat": 41.4112126,
+  "lon": 63.9594932,
+  "tags": {
+    "name": "No 140",
+    "name:ru": "Разъезд №140",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12320654682,
+  "lat": 41.2587894,
+  "lon": 64.1281322,
+  "tags": {
+    "fixme": "уточнить название",
+    "name": "Yetimtov",
+    "name:ru": "Етимтау",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12331105709,
+  "lat": 41.2974315,
+  "lon": 64.2348185,
+  "tags": {
+    "fixme": "уточнить название",
+    "name": "Amantaytov",
+    "name:ru": "Амантайтау",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12334354107,
+  "lat": 40.8773776,
+  "lon": 64.4003018,
+  "tags": {
+    "name": "Таракиёт. рзд. 304 км",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12335025845,
+  "lat": 40.1364888,
+  "lon": 65.2191078,
+  "tags": {
+    "name": "Кармана",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12350948039,
+  "lat": 39.5335012,
+  "lon": 64.6701021,
+  "tags": {
+    "esr": "730214",
+    "name": "No 143",
+    "name:ru": "Разъезд №143",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 12350948058,
+  "lat": 39.5106337,
+  "lon": 64.7145705,
+  "tags": {
+    "fixme": "уточнить название остановочного пункта",
+    "name": "Qorovulbazar neftni qayta ishlash zavodi",
+    "name:ru": "Нефтеперерабатывающий завод Караулбазара",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12350948065,
+  "lat": 39.5042047,
+  "lon": 64.7272585,
+  "tags": {
+    "fixme": "уточнить название о.п.",
+    "name": "Qorovulbazar neft ombori",
+    "name:ru": "Нефтебаза Караулбазар",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12350948075,
+  "lat": 39.5021311,
+  "lon": 64.7746193,
+  "tags": {
+    "fixme": "уточнить название о. п.",
+    "name": "Qorovulbozor-tovar",
+    "name:ru": "Караулбазар-товарная",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12373732549,
+  "lat": 39.8684936,
+  "lon": 66.2118577,
+  "tags": {
+    "name": "Kattaqo'rg'on Yangi",
+    "name:ru": "Каттакурган-пасс",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12451325385,
+  "lat": 37.3774508,
+  "lon": 66.5375043,
+  "tags": {
+    "name": "No 162",
+    "name:ru": "Разъезд №162",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12456420818,
+  "lat": 38.9950331,
+  "lon": 65.6736420,
+  "tags": {
+    "esr:user": "733212",
+    "name": "No 149",
+    "name:ru": "Разъезд №149",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12855217491,
+  "lat": 36.2856931,
+  "lon": 59.6110962,
+  "tags": {
+    "name": "باب‌الجواد",
+    "name:ar": "باب الجواد",
+    "name:en": "Bab Ol-Javad",
+    "name:hi": "बाब अल जवाद",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway"
+  }
+},
+{
+  "type": "node",
+  "id": 12912155013,
+  "lat": 36.2808986,
+  "lon": 59.5958540,
+  "tags": {
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13190564919,
+  "lat": 41.9002801,
+  "lon": 60.3061456,
+  "tags": {
+    "name": "Gurlan",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 13389104099,
+  "lat": 35.3049585,
+  "lon": 52.4278961,
+  "tags": {
+    "name": "بنکوه",
+    "name:en": "Bon-e Kuh",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13389112423,
+  "lat": 35.5206796,
+  "lon": 52.5013273,
+  "tags": {
+    "name": "سیمین دشت",
+    "name:en": "Simindasht",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13389112454,
+  "lat": 35.5709750,
+  "lon": 52.6032313,
+  "tags": {
+    "name": "ایستگاه راه آهن زرین دشت",
+    "name:en": "Zarindasht",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13438352527,
+  "lat": 40.6618687,
+  "lon": 55.1903400,
+  "tags": {
+    "name": "Awlamyş",
+    "name:tk": "Awlamyş",
+    "old_name": "Awlamyş stansiýasy",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13438567727,
+  "lat": 38.9559116,
+  "lon": 54.7793257,
+  "tags": {
+    "name": "Döwletýar",
+    "name:ru": "Довлетяр",
+    "name:tk": "Döwletýar",
+    "old_name": "Tersakan stansiýasy",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13438568170,
+  "lat": 38.7334365,
+  "lon": 54.6890373,
+  "tags": {
+    "name": "Bugdaýly",
+    "name:ru": "Бугдайлы",
+    "name:tk": "Bugdaýly",
+    "old_name": "Zirik stansiýasy",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13438568179,
+  "lat": 38.1446076,
+  "lon": 54.7141983,
+  "tags": {
+    "name": "Madaw",
+    "name:ru": "Мадав",
+    "name:tk": "Madaw",
+    "old_name": "Madaw stansiýasy",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13803145533,
+  "lat": 42.0438241,
+  "lon": 60.1583184,
+  "tags": {
+    "name": "Mangit",
+    "railway": "station"
+  }
+}
+
+  ]
+}

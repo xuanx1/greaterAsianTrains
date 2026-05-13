@@ -1,0 +1,5085 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-13T16:30:45Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 181315142,
+  "lat": 38.6261057,
+  "lon": 45.6933886,
+  "tags": {
+    "name": "هرزند",
+    "name:en": "Harzand",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 183431911,
+  "lat": 40.9033842,
+  "lon": 45.8882377,
+  "tags": {
+    "name": "Zəyəm Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 184610043,
+  "lat": 41.4754301,
+  "lon": 45.0980046,
+  "tags": {
+    "esr:user": "562603",
+    "int_name": "Gardabani",
+    "name": "გარდაბანი",
+    "name:en": "Gardabani",
+    "name:ka": "გარდაბანი",
+    "name:ru": "Гардабани",
+    "network": "სს \"საქართველოს რკინიგზა\"",
+    "operator": "სს \"საქართველოს რკინიგზა\"",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2800514",
+    "wikidata": "Q132473543"
+  }
+},
+{
+  "type": "node",
+  "id": 235460157,
+  "lat": 38.9574303,
+  "lon": 45.6230096,
+  "tags": {
+    "addr:city": "شجاع",
+    "esr:user": "550004",
+    "name": "Culfa",
+    "name:ru": "Джульфа",
+    "railway": "station",
+    "uic_ref": "5700205"
+  }
+},
+{
+  "type": "node",
+  "id": 288584312,
+  "lat": 41.6879948,
+  "lon": 44.8262332,
+  "tags": {
+    "alt_name:be": "300 арагвінцаў",
+    "alt_name:ru": "300 Арагвинцев",
+    "architect": "გ. ბათიაშვილი;თ. თევზაძე",
+    "name": "300 არაგველი",
+    "name:be": "300 арагвэлі",
+    "name:en": "300 Aragveli",
+    "name:fa": "۳۰۰ آراگولی",
+    "name:fr": "300 Aragveli",
+    "name:hy": "300 արագվելի",
+    "name:ka": "300 არაგველი",
+    "name:ml": "300 അറാഗ്വെലി",
+    "name:pl": "300 Aragweli",
+    "name:ru": "300 Арагвели",
+    "name:uk": "300 Арагвелі",
+    "name:zh": "300阿拉格維站",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:ka": "თბილისის მეტროპოლიტენი",
+    "network:wikidata": "Q37006",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:ka": "თბილისის სატრანსპორტო კომპანია",
+    "operator:short:en": "TTC",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1967-11-06",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q2066652",
+    "wikimedia_commons": "Category:300 Aragveli metro station",
+    "wikipedia": "ka:300 არაგველი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 288584317,
+  "lat": 41.6866252,
+  "lon": 44.8399633,
+  "tags": {
+    "architect": "გ. მოძმანიშვილი;ნ. ლომიძე",
+    "name": "ისანი",
+    "name:be": "Ісані",
+    "name:en": "Isani",
+    "name:fa": "ایسانی",
+    "name:fr": "Isani",
+    "name:hy": "Իսանի",
+    "name:ka": "ისანი",
+    "name:ko": "이사니역",
+    "name:ml": "ഇസാനി",
+    "name:pl": "Isani",
+    "name:ru": "Исани",
+    "name:uk": "Ісані",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:ka": "თბილისის მეტროპოლიტენი",
+    "network:wikidata": "Q37006",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:ka": "თბილისის სატრანსპორტო კომპანია",
+    "operator:short:en": "TTC",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1971-05-05",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3545116",
+    "wikimedia_commons": "Category:Isani metro station",
+    "wikipedia": "ka:ისანი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 289358478,
+  "lat": 41.7034970,
+  "lon": 44.7896467,
+  "tags": {
+    "architect": "ლ. ჯანელიმე;ო. კალანდარიშვილი;ი. ცხომელიძე",
+    "name": "რუსთაველი",
+    "name:be": "Руставэлі",
+    "name:de": "Rustaweli",
+    "name:en": "Rustaveli",
+    "name:fa": "روستاولی",
+    "name:fr": "Roustavéli",
+    "name:hy": "Ռուսթավելի",
+    "name:ja": "ルスタヴェリ",
+    "name:ka": "რუსთაველი",
+    "name:ml": "റുസ്താവെലി",
+    "name:pl": "Rustaweli",
+    "name:ru": "Руставели",
+    "name:sv": "Rustaveli",
+    "name:uk": "Руставелі",
+    "name:zh": "魯斯塔韋利站",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:wikidata": "Q37006",
+    "old_name": "რუსთაველის მოედანი",
+    "old_name:en": "Rustavelis Moedani",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1966-01-11",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q1631672",
+    "wikimedia_commons": "Category:Rustaveli metro station",
+    "wikipedia": "ka:რუსთაველი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 289358479,
+  "lat": 41.6945248,
+  "lon": 44.8005630,
+  "tags": {
+    "alt_name:be": "Плошча Свабоды",
+    "alt_name:en": "Tavisuplebis Moedani",
+    "alt_name:ru": "Площадь Свободы",
+    "alt_name:uk": "Площа Свободи",
+    "architect": "ვ. ალექსი-მესხიშვილი;ქ. კობახიძე",
+    "int_name": "Tavisuplebis Moedani",
+    "name": "თავისუფლების მოედანი",
+    "name:be": "Тавісуплэбіс моэдані",
+    "name:en": "Liberty Square",
+    "name:fa": "میدان آزادی",
+    "name:fr": "Place de la Liberté",
+    "name:hu": "Szabadság tér",
+    "name:hy": "Թավիսուփլեբիս մոեդանի",
+    "name:ja": "自由広場",
+    "name:ka": "თავისუფლების მოედანი",
+    "name:ml": "സ്വാതന്ത്ര്യ ചത്വരം",
+    "name:mn": "Тависуплебис моедани",
+    "name:pl": "Tawisuplebis Moedani",
+    "name:ru": "Тависуплебис моедани",
+    "name:uk": "Тавісуплебіс моедані",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:ka": "თბილისის მეტროპოლიტენი",
+    "network:wikidata": "Q37006",
+    "old_name:1967-1991": "ლენინის მოედანი",
+    "old_name:en:1967-1991": "Lenin Square",
+    "old_name:ka:1967-1991": "ლენინის მოედანი",
+    "old_name:ru:1967-1991": "Площадь Ленина",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:ka": "თბილისის სატრანსპორტო კომპანია",
+    "operator:short:en": "TTC",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1967-11-06",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q2028202",
+    "wikimedia_commons": "Category:Tavisuplebis Moedani metro station",
+    "wikipedia": "ka:თავისუფლების მოედანი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 289383777,
+  "lat": 41.7334036,
+  "lon": 44.7964257,
+  "tags": {
+    "architect": "თ. თევზაძე;რ. კიკნაძე",
+    "name": "ნაძალადევი",
+    "name:be": "Надзаладэві",
+    "name:de": "Nadsaladewi",
+    "name:en": "Nadzaledevi",
+    "name:fa": "نادزالادوی",
+    "name:fr": "Nadzaladevi",
+    "name:hy": "Նաձալադևի",
+    "name:ja": "ナザラデヴィ",
+    "name:ka": "ნაძალადევი",
+    "name:ml": "നാഡ്സാലാഡെവി",
+    "name:pl": "Nadzaladewi",
+    "name:ru": "Надзаладеви",
+    "name:uk": "Надзаладеві",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:wikidata": "Q37006",
+    "old_name:1966-1992": "ოქტომბერი",
+    "old_name:de:1966-1992": "Oktomberi;Okjabraskaja",
+    "old_name:en:1966-1992": "Oktomberi;Oktyabrskaya",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1966-01-11",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q1750859",
+    "wikimedia_commons": "Category:Nadzaladevi metro station",
+    "wikipedia": "ka:ნაძალადევი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 289384125,
+  "lat": 41.7095941,
+  "lon": 44.7968749,
+  "tags": {
+    "architect": "გ. მელქაძე;თ. მიქაშავიძე;ნ. ქვარცხავა;ი. ყავლაშვილი;მ. მელია",
+    "name": "მარჯანიშვილი",
+    "name:be": "Марджанішвілі",
+    "name:de": "Mardschanischwili",
+    "name:en": "Marjanishvili",
+    "name:fa": "مرجانیشویلی",
+    "name:fr": "Marjanishvili",
+    "name:hy": "Մարջանիշվիլի",
+    "name:ja": "マルジャニシヴィリ",
+    "name:ka": "მარჯანიშვილი",
+    "name:ml": "മാർജാനീഷ്വിലി",
+    "name:pl": "Mardżaniszwili",
+    "name:ru": "Марджанишвили",
+    "name:sv": "Mardzjanisjvili",
+    "name:uk": "Марджанішвілі",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:ka": "თბილისის მეტროპოლიტენი",
+    "network:wikidata": "Q37006",
+    "old_name": "მარჯანიშვილის მოედანი",
+    "old_name:en": "Marjanishvilis Moedani",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:ka": "თბილისის სატრანსპორტო კომპანია",
+    "operator:short:en": "TTC",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1966-01-11",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q1891659",
+    "wikimedia_commons": "Category:Marjanishvili metro station",
+    "wikipedia": "ka:მარჯანიშვილი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 358503996,
+  "lat": 41.7228253,
+  "lon": 44.7185112,
+  "tags": {
+    "alt_name:ru": "Государственный университет",
+    "architect": "გ. მოძმანიშვილი",
+    "internet_access": "wlan",
+    "name": "სახელმწიფო უნივერსიტეტი",
+    "name:be": "Дзяржаўны ўнівэрсытэт",
+    "name:en": "State University",
+    "name:fa": "دانشگاه ایالتی",
+    "name:fr": "Université d'État",
+    "name:ja": "国立大学",
+    "name:ka": "სახელმწიფო უნივერსიტეტი",
+    "name:ml": "സ്റ്റേറ്റ് യൂണിവേഴ്സിറ്റി",
+    "name:pl": "Sachelmcipo Uniwersiteti",
+    "name:ru": "Сахельмципо Университети",
+    "name:uk": "Сахелмціпо-Університеті",
+    "name:zh": "國家大學站",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:ka": "თბილისის მეტროპოლიტენი",
+    "network:wikidata": "Q37006",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:ka": "თბილისის სატრანსპორტო კომპანია",
+    "operator:short:en": "TTC",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2017-10-16",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q4146738",
+    "wikimedia_commons": "Category:State University metro station",
+    "wikipedia": "ka:სახელმწიფო უნივერსიტეტი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 431966946,
+  "lat": 39.3567980,
+  "lon": 45.0889905,
+  "tags": {
+    "name": "Şahtaxtı",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 437955651,
+  "lat": 41.7910558,
+  "lon": 44.8149983,
+  "tags": {
+    "alt_name:en": "Akhmetelis Teatri",
+    "alt_name:ru": "Театр Ахметели",
+    "architect": "გ. რაზმაძე;ს. ჩოლოყაშვილი;გ. მოძმანიშვილი",
+    "name": "ახმეტელის თეატრი",
+    "name:be": "тэатар Ахмэтэлі",
+    "name:en": "Akhmeteli Theatre",
+    "name:fa": "تئاتر آخمتلی",
+    "name:fr": "Théâtre Akhmeteli",
+    "name:hy": "Ախմետիլիս թեատրի",
+    "name:ja": "アフメテリ劇場",
+    "name:ka": "ახმეტელის თეატრი",
+    "name:pl": "Achmetelis Teatri",
+    "name:pt": "Akhmetelis Teatri",
+    "name:ru": "Ахметелис театри",
+    "name:tt": "Ахметелис театри",
+    "name:uk": "Ахметеліс театрі",
+    "name:zh": "阿克梅特里劇院站",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:wikidata": "Q37006",
+    "old_name": "გლდანი",
+    "old_name:en": "Gldani",
+    "old_name:ru": "Глдани",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1989-01-07",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q2469715",
+    "wikimedia_commons": "Category:Akhmeteli Theatre metro station",
+    "wikipedia": "ka:ახმეტელის თეატრი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 437955710,
+  "lat": 41.7840581,
+  "lon": 44.7999179,
+  "tags": {
+    "architect": "გ. მოძმანიშვილი",
+    "name": "სარაჯიშვილი",
+    "name:be": "Сараджышвілі",
+    "name:en": "Sarajishvili",
+    "name:fa": "ساراجیشویلی",
+    "name:fr": "Sarajishvili",
+    "name:hy": "Սարաջիշվիլի",
+    "name:ka": "სარაჯიშვილი",
+    "name:ml": "സാറാജീഷ്‌വിലി",
+    "name:pl": "Saradżiszwili",
+    "name:ru": "Сараджишвили",
+    "name:uk": "Сараджішвілі",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:wikidata": "Q37006",
+    "old_name:1989-1992": "გურამიშვილი",
+    "old_name:be:1989-1992": "Гурамішвілі",
+    "old_name:en:1989-1992": "Guramishvili",
+    "old_name:hy:1989-1992": "Գուրամիշվիլի",
+    "old_name:pl:1989-1992": "Guramiszwili",
+    "old_name:ru:1989-1992": "Гурамишвили",
+    "old_name:uk:1989-1992": "Гурамішвлі",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1989-01-07",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q2029301",
+    "wikimedia_commons": "Category:Sarajishvili (Metrostation)",
+    "wikipedia": "ka:სარაჯიშვილი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 437955726,
+  "lat": 41.7757645,
+  "lon": 44.7955795,
+  "tags": {
+    "name": "გურამიშვილი",
+    "name:be": "Гурамішвілі",
+    "name:en": "Guramishvili",
+    "name:fa": "گورامیشویلی",
+    "name:hy": "Գուրամիշվիլի",
+    "name:ka": "გურამიშვილი",
+    "name:ml": "ഗൂറാമീഷ്വിലി",
+    "name:pl": "Guramiszwili",
+    "name:ru": "Гурамишвили",
+    "name:uk": "Гурамішвлі",
+    "name:zh": "古拉米什維利站",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:wikidata": "Q37006",
+    "old_name:1985-1992": "თემქა",
+    "old_name:en:1985-1992": "TEMKA",
+    "old_name:ru:1985-1992": "ТЭВЗ;ТЭМКА",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1985-11-16",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q2029309",
+    "wikimedia_commons": "Category:Guramishvili (Metrostation)",
+    "wikipedia": "ka:გურამიშვილი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 618738557,
+  "lat": 41.0772878,
+  "lon": 44.6185203,
+  "tags": {
+    "name": "Սանահին",
+    "name:en": "Sanahin",
+    "name:hy": "Սանահին",
+    "name:ru": "Санаин",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 618739254,
+  "lat": 41.2452946,
+  "lon": 44.8077654,
+  "tags": {
+    "esr:user": "564204",
+    "int_name": "Sadakhlo",
+    "name": "სადახლო",
+    "name:az": "Sadaxlı",
+    "name:en": "Sadakhlo",
+    "name:ka": "სადახლო",
+    "name:ru": "Садахло",
+    "network": "GR",
+    "operator": "GR",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "Soviet Military Map 1:50K",
+    "train": "yes",
+    "uic_ref": "2800508",
+    "wikidata": "Q4404518",
+    "wikipedia": "ru:Садахло (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 670199298,
+  "lat": 40.3832514,
+  "lon": 49.8721454,
+  "tags": {
+    "name": "Şah İsmayıl Xətai",
+    "name:en": "Shah Ismail Khatai",
+    "name:fa": "شاه اسماعیل ختایی",
+    "name:ru": "Шах Исмаил Хатаи",
+    "operator": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "short_name": "Xətai",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3025592",
+    "wikimedia_commons": "Category:Şah İsmail Xətai (Baku Metro)",
+    "wikipedia": "az:Şah İsmayıl Xətai metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 670216816,
+  "lat": 40.3793192,
+  "lon": 49.8300187,
+  "tags": {
+    "colour": "green",
+    "name": "Nizami metrostansiyası",
+    "name:az": "Nizami metrosu",
+    "name:fa": "نظامی",
+    "name:ru": "Низами",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3025411",
+    "wikimedia_commons": "Category:Nizami (Baku Metro)",
+    "wikipedia": "az:Nizami metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 670217100,
+  "lat": 40.3751519,
+  "lon": 49.8154836,
+  "tags": {
+    "name": "Elmlər Akademiyası",
+    "name:az": "Metro elmlər",
+    "name:fa": "فرهنگستان علوم",
+    "name:ru": "Элмляр Академиясы",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q3025421",
+    "wikimedia_commons": "Category:Elmlər Akademiyası (Baku Metro)",
+    "wikipedia": "az:Elmlər Akademiyası metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 670217274,
+  "lat": 40.3890935,
+  "lon": 49.8023575,
+  "tags": {
+    "name": "İnşaatçılar",
+    "name:fa": "انشاتچیلار",
+    "name:ru": "Иншаатчылар",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3025436",
+    "wikimedia_commons": "Category:İnşaatçılar (Baku Metro)",
+    "wikipedia": "az:İnşaatçılar metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 670217698,
+  "lat": 40.4246452,
+  "lon": 49.8262798,
+  "tags": {
+    "name": "Nəsimi",
+    "name:en": "Nasimi",
+    "name:fa": "نسیمی",
+    "name:ru": "Насими",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "limited",
+    "wikidata": "Q3025513",
+    "wikimedia_commons": "Category:Nəsimi (Baku Metro)",
+    "wikipedia": "az:Nəsimi metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 670220144,
+  "lat": 40.4141403,
+  "lon": 49.8787959,
+  "tags": {
+    "name": "Bakmil",
+    "name:az": "Bakmil",
+    "name:fa": "باکمیل",
+    "name:ru": "Бакмил",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3025343",
+    "wikimedia_commons": "Category:Bakmil (Baku Metro)",
+    "wikipedia": "az:Bakmil metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 670220312,
+  "lat": 40.4208641,
+  "lon": 49.9180944,
+  "tags": {
+    "name": "Koroğlu metro stansiyası",
+    "name:az": "Koroğlu metro stansiyası",
+    "name:en": "Koroglu",
+    "name:fa": "کوراوغلو",
+    "name:ru": "Короглу",
+    "network": "Bakı Metropoliteni",
+    "old_name": "Məşədi Əzizbəyov",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3024716",
+    "wikimedia_commons": "Category:Koroğlu (Baku Metro)",
+    "wikipedia": "az:Koroğlu metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 670220397,
+  "lat": 40.4176118,
+  "lon": 49.9339594,
+  "tags": {
+    "alt_name:ru": "Кара Караев",
+    "name": "Qara Qarayev",
+    "name:fa": "قرا قرایف",
+    "name:ru": "Гара Гараев",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3024692",
+    "wikipedia": "az:Qara Qarayev metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 670220410,
+  "lat": 40.4111550,
+  "lon": 49.9425681,
+  "tags": {
+    "name": "Neftçilər",
+    "name:az-cyr": "Нефтчиләр",
+    "name:fa": "نفتچیلر",
+    "name:ru": "Нефтчиляр",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q2008806",
+    "wikimedia_commons": "Category:Neftchilar (Baku Metro)",
+    "wikipedia": "az:Neftçilər metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 670220733,
+  "lat": 40.3968851,
+  "lon": 49.9529864,
+  "tags": {
+    "alt_name:ru": "Дружбы народов",
+    "name": "Xalqlar Dostluğu",
+    "name:fa": "خالقلار دوستلوغو",
+    "name:ru": "Халглар Достлугу",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3024561",
+    "wikimedia_commons": "Category:Xalqlar Dostluğu (Baku Metro)",
+    "wikipedia": "az:Xalqlar Dostluğu metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 670220979,
+  "lat": 40.3855583,
+  "lon": 49.9539452,
+  "tags": {
+    "name": "Əhmədli",
+    "name:fa": "احمدلی",
+    "name:ru": "Ахмедлы",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3024552",
+    "wikimedia_commons": "Category:Əhmədli (Baku Metro)",
+    "wikipedia": "az:Əhmədli metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 670220993,
+  "lat": 40.3730376,
+  "lon": 49.9535736,
+  "tags": {
+    "name": "Həzi Aslanov Stansiyası",
+    "name:fa": "هزی اصلانوف",
+    "name:ru": "Ази Асланов",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q2020145",
+    "wikimedia_commons": "Category:Həzi Aslanov (Baku Metro)",
+    "wikipedia": "az:Həzi Aslanov metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 693323865,
+  "lat": 38.7305570,
+  "lon": 45.6230095,
+  "tags": {
+    "name": "زال",
+    "name:en": "Zal",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 725175525,
+  "lat": 41.7429401,
+  "lon": 44.7840452,
+  "tags": {
+    "architect": "გ. მოძმანიშვილი;ნ. ლომიძე",
+    "name": "გოცირიძე",
+    "name:be": "Гацырыдзэ",
+    "name:de": "Goziridse",
+    "name:en": "Gotsiridze",
+    "name:fa": "گوتسیریدزه",
+    "name:fr": "Gotsiridze",
+    "name:hy": "Գոցիրիձե",
+    "name:ja": "ゴツィリゼ",
+    "name:ka": "გოცირიძე",
+    "name:ml": "ഗോട്സിരിഡ്സെ",
+    "name:pl": "Gociridze",
+    "name:ru": "Гоциридзе",
+    "name:uk": "Гоцирідзе",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:wikidata": "Q37006",
+    "old_name:1966-1992": "ელექტროდეპო",
+    "old_name:en:1966-1992": "Elektrodepo",
+    "old_name:ru:1966-1992": "Электродепо",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:wikidata": "Q61354702",
+    "platforms": "2",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1966-01-11",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q653494",
+    "wikimedia_commons": "Category:Gotsiridze metro station",
+    "wikipedia": "ka:გოცირიძე (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 729529330,
+  "lat": 41.6855176,
+  "lon": 44.8544828,
+  "tags": {
+    "alt_name:ru": "Самгора",
+    "architect": "ნ. ლომიძე",
+    "name": "სამგორი",
+    "name:be": "Самгоры",
+    "name:en": "Samgori",
+    "name:fa": "سامگورا",
+    "name:fr": "Samgori",
+    "name:hy": "Սամգորի",
+    "name:ka": "სამგორი",
+    "name:ko": "삼고리역",
+    "name:ml": "സാംഗോറി",
+    "name:pl": "Samgori",
+    "name:ru": "Самгори",
+    "name:uk": "Самгорі",
+    "name:zh": "薩姆戈里站",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:ka": "თბილისის მეტროპოლიტენი",
+    "network:wikidata": "Q37006",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:ka": "თბილისის სატრანსპორტო კომპანია",
+    "operator:short:en": "TTC",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1971-05-05",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3545105",
+    "wikimedia_commons": "Category:Samgori (Metrostation)",
+    "wikipedia": "ka:სამგორი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 729551832,
+  "lat": 41.7203488,
+  "lon": 44.7766431,
+  "tags": {
+    "alt_name:de": "Technische Universität",
+    "alt_name:en": "Teknikuri Universiteti",
+    "alt_name:ru": "Технический университет",
+    "name": "ტექნიკური უნივერსიტეტი",
+    "name:be": "Тэхнічны ўнівэрсытэт",
+    "name:de": "Teknikuri Uniwersiteti",
+    "name:en": "Technical University",
+    "name:fa": "دانشگاه فنی",
+    "name:fr": "Université technique",
+    "name:ka": "ტექნიკური უნივერსიტეტი",
+    "name:ko": "기술대학 지하철",
+    "name:ml": "സാങ്കേതിക സർവകലാശാല",
+    "name:pl": "Teknikuri Uniwersiteti",
+    "name:ru": "Техникури университети",
+    "name:sv": "Teknikuri Universiteti",
+    "name:zh": "技術大學站",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:ka": "თბილისის მეტროპოლიტენი",
+    "network:wikidata": "Q37006",
+    "old_name:1979-2011": "პოლიტექნიკური ინსტიტუტი",
+    "old_name:en:1979-2011": "Politekhnikuri Instituti;Polytechnical Institute",
+    "old_name:ru:1979-2011": "Политекникури Институти;Политехнический Институт",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:ka": "თბილისის სატრანსპორტო კომპანია",
+    "operator:short:en": "TTC",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1979-09-15",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q1638726",
+    "wikimedia_commons": "Category:Technical University metro station",
+    "wikipedia": "ka:ტექნიკური უნივერსიტეტი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 729561142,
+  "lat": 41.7272794,
+  "lon": 44.7638395,
+  "tags": {
+    "alt_name:de": "Medizinische Universität",
+    "alt_name:ru": "Медицинский университет",
+    "architect": "გ. მოძმანიშვილი;ნ. ლომიძე;დ. იოსავა",
+    "name": "სამედიცინო უნივერსიტეტი",
+    "name:be": "Мэдычны ўнівэрсытэт",
+    "name:de": "Samedizino Uniwersiteti",
+    "name:en": "Medical University",
+    "name:fa": "دانشگاه پزشکی",
+    "name:fr": "Université de médecine",
+    "name:ja": "医科大学",
+    "name:ka": "სამედიცინო უნივერსიტეტი",
+    "name:ko": "대학병원 역",
+    "name:ml": "വൈദ്യ സർവകലാശാല",
+    "name:pl": "Samedicino Instituti",
+    "name:ru": "Самедицино университети",
+    "name:uk": "Самедіціно-Університеті",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:ka": "თბილისის მეტროპოლიტენი",
+    "network:wikidata": "Q37006",
+    "old_name:1979-1992": "კომკავშირული",
+    "old_name:de:1979-1992": "Komkawschiruli;Komsomolskaya",
+    "old_name:en:1979-1992": "Komkavshiruli;Komsomolskaya",
+    "old_name:ru:1979-1992": "Комкавширули;Комсомольская",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:ka": "თბილისის სატრანსპორტო კომპანია",
+    "operator:short:en": "TTC",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1979-09-15",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q1375904",
+    "wikimedia_commons": "Category:Medical University metro station",
+    "wikipedia": "ka:სამედიცინო უნივერსიტეტი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 729562894,
+  "lat": 41.7254865,
+  "lon": 44.7453411,
+  "tags": {
+    "architect": "ნ. ლომიძე",
+    "internet_access": "wlan",
+    "name": "დელისი",
+    "name:be": "Дэлісі",
+    "name:de": "Delissi",
+    "name:en": "Delisi",
+    "name:fa": "دلیسی",
+    "name:fr": "Delisi",
+    "name:ja": "デリシ",
+    "name:ka": "დელისი",
+    "name:ml": "ഡെലിസി",
+    "name:pl": "Delisi",
+    "name:ru": "Делиси",
+    "name:uk": "Делісі",
+    "name:zh": "德里西站",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:ka": "თბილისის მეტროპოლიტენი",
+    "network:wikidata": "Q37006",
+    "old_name:en:1979-1995": "Delisi",
+    "old_name:en:1995-2007": "Viktor Gotsiridze",
+    "old_name:ka:1979-1995": "დელისი",
+    "old_name:ka:1995-2007": "ვიქტორ გოცირიძე",
+    "old_name:ru:1979-1995": "Делиси",
+    "old_name:ru:1995-2007": "Виктор Гоциридзе",
+    "opening_hours": "Mo-Su 06:00-24:30",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:ka": "თბილისის სატრანსპორტო კომპანია",
+    "operator:short:en": "TTC",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1979-09-15",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q1184311",
+    "wikimedia_commons": "Category:Delisi metro station",
+    "wikipedia": "ka:დელისი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 729562896,
+  "lat": 41.7240341,
+  "lon": 44.7308530,
+  "tags": {
+    "name": "ვაჟა-ფშაველა",
+    "name:be": "Важа-Пшавэла",
+    "name:de": "Wascha-Pschawela",
+    "name:en": "Vazha-Pshavela",
+    "name:fa": "واژا-پشاولا",
+    "name:fr": "Vazha-Pshavela",
+    "name:ja": "ヴァジャ・プシャヴェラ",
+    "name:ka": "ვაჟა-ფშაველა",
+    "name:ml": "വാജ-പ്ഷാവെല",
+    "name:pl": "Waża Pszawela",
+    "name:pt": "Vazha-Pshavela",
+    "name:ru": "Важа-Пшавела",
+    "name:uk": "Важа-Пшавела",
+    "name:zh": "會查·詩貝拉站",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:ka": "თბილისის მეტროპოლიტენი",
+    "network:wikidata": "Q37006",
+    "old_name": "ბახტრიონი",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:ka": "თბილისის სატრანსპორტო კომპანია",
+    "operator:short:en": "TTC",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2000-04-02",
+    "station": "subway",
+    "subway": "yes",
+    "transport": "subway",
+    "wikidata": "Q1346764",
+    "wikimedia_commons": "Category:Vazha-Pshavela metro station",
+    "wikipedia": "ka:ვაჟა-ფშაველა (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 729578803,
+  "lat": 41.7264122,
+  "lon": 44.7876612,
+  "tags": {
+    "architect": "მ. კაციტაძე",
+    "name": "წერეთელი",
+    "name:be": "Цэрэтэлі",
+    "name:de": "Zereteli",
+    "name:en": "Tsereteli",
+    "name:fa": "تسرتلی",
+    "name:fr": "Tsereteli",
+    "name:ja": "ツェレテリ",
+    "name:ka": "წერეთელი",
+    "name:ml": "സെറെറ്റെലി",
+    "name:pl": "Cereteli",
+    "name:ru": "Церетели",
+    "name:uk": "Церетелі",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:ka": "თბილისის მეტროპოლიტენი",
+    "network:wikidata": "Q37006",
+    "old_name:1979-2011": "წერეთლის გამზირი",
+    "old_name:en:1979-2011": "Tseretlis Gamziri;Tsereteli Avenue",
+    "old_name:ru:1979-2011": "Церетлис Гамзири;Проспект Церетели",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:ka": "თბილისის სატრანსპორტო კომპანია",
+    "operator:short:en": "TTC",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1979-09-15",
+    "station": "subway",
+    "subway": "yes",
+    "transport": "subway",
+    "wikidata": "Q191599",
+    "wikimedia_commons": "Category:Tsereteli metro station",
+    "wikipedia": "ka:წერეთელი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 773511609,
+  "lat": 41.6050652,
+  "lon": 44.9896587,
+  "tags": {
+    "esr:user": "562800",
+    "int_name": "Gachiani",
+    "name": "გაჩიანი",
+    "name:de": "Gatschiani",
+    "name:en": "Gachiani",
+    "name:fr": "Gatchiani",
+    "name:ka": "გაჩიანი",
+    "name:ru": "Гачиани",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "railway": "station",
+    "uic_ref": "2800478"
+  }
+},
+{
+  "type": "node",
+  "id": 775315333,
+  "lat": 41.8073356,
+  "lon": 44.7940694,
+  "tags": {
+    "esr:user": "560307",
+    "int_name": "Avchala",
+    "name": "ავჭალა",
+    "name:en": "Avchala",
+    "name:ka": "ავჭალა",
+    "name:ru": "Авчала",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "railway": "station",
+    "uic_ref": "2800005",
+    "wikidata": "Q132527590"
+  }
+},
+{
+  "type": "node",
+  "id": 859885516,
+  "lat": 38.5811268,
+  "lon": 44.0908153,
+  "tags": {
+    "abandoned:railway": "station",
+    "name": "Çimenova",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 882253614,
+  "lat": 41.9473532,
+  "lon": 44.2767256,
+  "tags": {
+    "esr:user": "579591",
+    "int_name": "Grakali",
+    "name": "გრაკალი",
+    "name:en": "Grakali",
+    "name:ka": "გრაკალი",
+    "name:ru": "Гракали",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800448"
+  }
+},
+{
+  "type": "node",
+  "id": 945217529,
+  "lat": 41.6859802,
+  "lon": 44.8546239,
+  "tags": {
+    "alt_name:en": "Tbilisi-Junction",
+    "alt_name:ka": "თბილისი-საკვანძო",
+    "alt_name:ru": "Тбилиси-Узловая",
+    "esr:user": "560101",
+    "name": "ნავთლუღი",
+    "name:en": "Navtlughi",
+    "name:ka": "ნავთლუღი",
+    "name:ru": "Навтлуги",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "railway": "station",
+    "uic_ref": "2800002",
+    "wikidata": "Q4314638"
+  }
+},
+{
+  "type": "node",
+  "id": 1148914625,
+  "lat": 40.4259622,
+  "lon": 49.8429264,
+  "tags": {
+    "name": "Azadlıq prospekti",
+    "name:fa": "خیابان آزادلیق",
+    "name:ru": "Азадлыг проспекти",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3025522",
+    "wikimedia_commons": "Category:Azadlıq prospekti (Baku Metro)",
+    "wikipedia": "az:Azadlıq Prospekti metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 1370907358,
+  "lat": 39.0510931,
+  "lon": 45.4576586,
+  "tags": {
+    "name": "Nehrəm",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1381384137,
+  "lat": 41.8779094,
+  "lon": 48.3921118,
+  "tags": {
+    "esr:user": "544709",
+    "name": "Белиджи",
+    "name:az": "Belici",
+    "name:az-cyr": "Билиҹи",
+    "name:de": "Belidschi",
+    "name:en": "Belidzhi",
+    "name:lez": "Билиж",
+    "name:ru": "Белиджи",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064224",
+    "wikidata": "Q4081891",
+    "wikipedia": "ru:Белиджи (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1397171778,
+  "lat": 41.8252917,
+  "lon": 48.4828762,
+  "tags": {
+    "esr:user": "544802",
+    "name": "Самур",
+    "name:az": "Samur",
+    "name:az-cyr": "Самур",
+    "name:de": "Samur",
+    "name:en": "Samur",
+    "name:lez": "Самур",
+    "name:ru": "Самур",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064226",
+    "wikidata": "Q4407108",
+    "wikipedia": "ru:Самур (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1397173730,
+  "lat": 41.9690311,
+  "lon": 48.3352727,
+  "tags": {
+    "esr:user": "544616",
+    "name": "Араблинский",
+    "name:az": "Ərəblər",
+    "name:az-cyr": "Әрәбләр",
+    "name:de": "Arablinski",
+    "name:en": "Arablinskiy",
+    "name:ru": "Араблинский",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064223",
+    "wikidata": "Q4068375",
+    "wikipedia": "ru:Араблинский (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1644125674,
+  "lat": 39.9405132,
+  "lon": 48.3717905,
+  "tags": {
+    "name": "Saatlı",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1666900866,
+  "lat": 41.4676285,
+  "lon": 48.8065259,
+  "tags": {
+    "name": "Xaçmaz stansiyası",
+    "name:ar": "خاشماز",
+    "name:azb": "خاچماز",
+    "name:fa": "خاچماز",
+    "name:ru": "Станция Хачмас",
+    "name:ur": "خاشماز",
+    "operator": "Azerbaijan Republic State Railway Company",
+    "platforms": "3",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1741166643,
+  "lat": 41.8639258,
+  "lon": 44.5756387,
+  "tags": {
+    "esr:user": "560608",
+    "name": "ქსანი",
+    "name:en": "Ksani",
+    "name:ka": "ქსანი",
+    "name:ru": "Ксани",
+    "railway": "station",
+    "uic_ref": "2800515"
+  }
+},
+{
+  "type": "node",
+  "id": 1758839570,
+  "lat": 41.5341727,
+  "lon": 45.0419229,
+  "tags": {
+    "esr:user": "562745",
+    "name": "რუსთავი-სატვირთო",
+    "name:en": "Rustavi-Cargo",
+    "name:ru": "Рустави-Грузовая",
+    "network": "GR",
+    "operator": "GR",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q132528305"
+  }
+},
+{
+  "type": "node",
+  "id": 1839640778,
+  "lat": 41.6951075,
+  "lon": 44.7892216,
+  "tags": {
+    "charge": "3 GEL",
+    "fee": "yes",
+    "name": "პანთეონი",
+    "name:en": "Pantheon",
+    "name:ka": "პანთეონი",
+    "name:ml": "പാന്തിയോൺ",
+    "name:ru": "Пантеон",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "funicular"
+  }
+},
+{
+  "type": "node",
+  "id": 1863562938,
+  "lat": 40.5511230,
+  "lon": 44.9568153,
+  "tags": {
+    "esr:user": "568900",
+    "image": "https://i.imgur.com/3i2T2VD.jpg",
+    "name": "Սևան",
+    "name:en": "Sevan",
+    "name:hy": "Սևան",
+    "name:ru": "Севан",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800486",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4411874"
+  }
+},
+{
+  "type": "node",
+  "id": 1888169420,
+  "lat": 40.1868402,
+  "lon": 44.5006914,
+  "tags": {
+    "public_transport": "station",
+    "railway": "station",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1894710723,
+  "lat": 39.1087473,
+  "lon": 45.4157150,
+  "tags": {
+    "name": "Qızılvəng",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1924834867,
+  "lat": 40.4254022,
+  "lon": 49.8617881,
+  "tags": {
+    "name": "Dərnəgül",
+    "name:fa": "دارناگول",
+    "name:ru": "Дарнагюль",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3025554",
+    "wikimedia_commons": "Category:Dərnəgül (Baku Metro)",
+    "wikipedia": "az:Dərnəgül metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 1930089762,
+  "lat": 40.4041390,
+  "lon": 49.8077020,
+  "tags": {
+    "name": "20 Yanvar st.",
+    "name:az": "20 Yanvar st.",
+    "name:fa": "۲۰ ژانویه",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3025472",
+    "wikimedia_commons": "Category:20 Yanvar (Baku Metro)",
+    "wikipedia": "az:20 Yanvar metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 2058340615,
+  "lat": 39.8739443,
+  "lon": 48.0564361,
+  "tags": {
+    "name": "İmişli",
+    "name:ar": "إيميشلي",
+    "name:azb": "ایمیش‌لی",
+    "name:fa": "ایمیشلی",
+    "name:ur": "ایمیشلی",
+    "platforms": "2",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2078651042,
+  "lat": 40.4297785,
+  "lon": 49.9849437,
+  "tags": {
+    "name": "Əmircan Stansiyası",
+    "platforms": "2",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2078651777,
+  "lat": 40.4361166,
+  "lon": 49.9726053,
+  "tags": {
+    "name": "Bülbülə Stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2295524457,
+  "lat": 40.3796520,
+  "lon": 49.8489498,
+  "tags": {
+    "name": "Cəfər Cabbarlı",
+    "name:fa": "جعفر جبارلی",
+    "network": "Bakı Metropoliteni",
+    "operator": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3025580",
+    "wikipedia": "az:Cəfər Cabbarlı metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 2516128738,
+  "lat": 41.6707420,
+  "lon": 44.9001977,
+  "tags": {
+    "esr:user": "560006",
+    "name": "თბილისი მახარისხება",
+    "name:en": "Tbilisi Marshalling",
+    "name:ka": "თბილისი დახარისხება",
+    "name:ru": "Тбилиси-Сортировочная",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800003"
+  }
+},
+{
+  "type": "node",
+  "id": 2813131204,
+  "lat": 41.6949023,
+  "lon": 44.7866511,
+  "tags": {
+    "name": "მთაწმინდის პარკი",
+    "name:en": "Mtatsminda Park",
+    "name:ka": "მთაწმინდის პარკი",
+    "name:ml": "മട്ടാറ്റ്സ്മിൻഡ പാർക്ക്",
+    "name:ru": "Парк Мтацминда",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "funicular"
+  }
+},
+{
+  "type": "node",
+  "id": 2857851598,
+  "lat": 41.3862332,
+  "lon": 45.1837032,
+  "tags": {
+    "name": "Böyük Kəsik Stansiyası",
+    "network": "ADY",
+    "operator": "ADY",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2862987409,
+  "lat": 41.6780686,
+  "lon": 46.4113784,
+  "tags": {
+    "name": "Balakən stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2880376642,
+  "lat": 41.1636593,
+  "lon": 49.0885571,
+  "tags": {
+    "name": "Gilgilçay",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3043451548,
+  "lat": 38.5173358,
+  "lon": 44.1683034,
+  "tags": {
+    "abandoned:railway": "station",
+    "name": "Çaybağı",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3065361683,
+  "lat": 39.8405503,
+  "lon": 44.7052108,
+  "tags": {
+    "esr:user": "569509",
+    "name": "Արարատ",
+    "name:en": "Ararat",
+    "name:hy": "Արարատ",
+    "name:ru": "Арарат",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800706",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4068574"
+  }
+},
+{
+  "type": "node",
+  "id": 3072368499,
+  "lat": 41.7385095,
+  "lon": 44.7857539,
+  "tags": {
+    "esr:user": "560203",
+    "name": "თბილისი სატვირთო",
+    "name:en": "Tbilisi-Cargo",
+    "name:ru": "Тбилиси-Грузовая",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "railway": "station",
+    "railway:traffic_mode": "freight",
+    "wikimedia_commons": "File:2024-11-20 View SE of Tbilisi-Satvirto station.jpg"
+  }
+},
+{
+  "type": "node",
+  "id": 3072412158,
+  "lat": 41.1153874,
+  "lon": 45.4510102,
+  "tags": {
+    "name": "Ağstafa Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3072414461,
+  "lat": 40.8681945,
+  "lon": 46.0360223,
+  "tags": {
+    "name": "Dəllər Stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3072414560,
+  "lat": 40.9940661,
+  "lon": 45.6169732,
+  "tags": {
+    "addr:city": "Tovuz",
+    "addr:housenumber": "2",
+    "addr:street": "Füzuli küç.",
+    "name": "Tovuz Stansiyasi",
+    "name:ar": "محطة تووز",
+    "name:az": "Tovuz Stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3072417074,
+  "lat": 40.0452174,
+  "lon": 48.9365140,
+  "tags": {
+    "addr:city": "Hacıqabul",
+    "name": "Hacıqabul Dəmiryol Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3072419334,
+  "lat": 40.7142801,
+  "lon": 46.3670789,
+  "tags": {
+    "int_name": "Ganja",
+    "name": "Gəncə",
+    "name:az": "Gəncə",
+    "name:de": "Gandscha",
+    "name:en": "Ganja",
+    "name:ru": "Гянджа",
+    "old_name:de": "Kirowabad",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3073615343,
+  "lat": 41.8443024,
+  "lon": 44.6245171,
+  "tags": {
+    "esr:user": "560504",
+    "name": "ძეგვი",
+    "name:en": "Dzegvi",
+    "name:ka": "ძეგვი",
+    "name:ru": "Дзегви",
+    "railway": "station",
+    "uic_ref": "2800454"
+  }
+},
+{
+  "type": "node",
+  "id": 3073615344,
+  "lat": 41.9016920,
+  "lon": 44.4779554,
+  "tags": {
+    "esr:user": "560701",
+    "name": "კავთისხევი",
+    "name:en": "Kavtiskhevi",
+    "name:ka": "კავთისხევი",
+    "name:ru": "Кавтисхеви",
+    "railway": "station",
+    "uic_ref": "2800452"
+  }
+},
+{
+  "type": "node",
+  "id": 3078736354,
+  "lat": 39.4461291,
+  "lon": 47.3416483,
+  "tags": {
+    "addr:city": "Horadiz",
+    "name": "Horadiz",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q853426",
+    "wikipedia": "az:Horadiz Dəmiryol Stansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 3078738493,
+  "lat": 40.2608102,
+  "lon": 47.0908521,
+  "tags": {
+    "name": "Köçərli",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078750820,
+  "lat": 40.7840996,
+  "lon": 46.2542908,
+  "tags": {
+    "name": "Stansiya Alabaşlı",
+    "network": "ADY",
+    "operator": "ADY",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3078917806,
+  "lat": 39.2311603,
+  "lon": 48.6435574,
+  "tags": {
+    "name": "Cəlilabad",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078920095,
+  "lat": 39.6304469,
+  "lon": 47.7140945,
+  "tags": {
+    "name": "Daşburun",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078929442,
+  "lat": 40.6529665,
+  "lon": 46.8518650,
+  "tags": {
+    "name": "Goran Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078941860,
+  "lat": 39.5006746,
+  "lon": 47.4644910,
+  "tags": {
+    "name": "Hacılı",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078945695,
+  "lat": 38.7599179,
+  "lon": 48.8571215,
+  "tags": {
+    "name": "Lənkəran",
+    "name:ar": "لنكران",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078951371,
+  "lat": 39.1191568,
+  "lon": 48.6588721,
+  "tags": {
+    "name": "Masallı",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078963426,
+  "lat": 39.5639544,
+  "lon": 48.9602580,
+  "tags": {
+    "name": "Salyan Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078964353,
+  "lat": 39.0080348,
+  "lon": 48.7828456,
+  "tags": {
+    "name": "Qasımlı",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078969897,
+  "lat": 41.3929029,
+  "lon": 46.7551310,
+  "tags": {
+    "name": "Qorağan Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078981460,
+  "lat": 41.0686830,
+  "lon": 47.1332628,
+  "tags": {
+    "name": "Şəki stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078981829,
+  "lat": 40.8357109,
+  "lon": 46.1467703,
+  "tags": {
+    "name": "Şəmkir Təzəkənd Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078987442,
+  "lat": 39.9336908,
+  "lon": 48.9214833,
+  "tags": {
+    "name": "Şirvan Sərnişin Dəmiryol Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078990992,
+  "lat": 39.7885891,
+  "lon": 47.9318338,
+  "tags": {
+    "name": "Vǝtǝgǝ",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078993776,
+  "lat": 39.7158975,
+  "lon": 47.8289114,
+  "tags": {
+    "name": "Xələc",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078997905,
+  "lat": 39.9433197,
+  "lon": 49.3882604,
+  "tags": {
+    "name": "Yeni Ələt",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079006681,
+  "lat": 40.6309833,
+  "lon": 49.5425623,
+  "tags": {
+    "name": "Zeynalabdin Tağıyev Stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079009777,
+  "lat": 40.6974974,
+  "lon": 46.4830544,
+  "tags": {
+    "name": "Zazalı Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079024523,
+  "lat": 41.6335291,
+  "lon": 48.6828320,
+  "tags": {
+    "name": "Xudat",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079031575,
+  "lat": 40.7922260,
+  "lon": 47.2096005,
+  "tags": {
+    "name": "Xanabad Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079042221,
+  "lat": 41.0559041,
+  "lon": 45.5324570,
+  "tags": {
+    "name": "Köçəsgər Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079048007,
+  "lat": 41.3200572,
+  "lon": 45.2713647,
+  "tags": {
+    "name": "Soyuqbulaq Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079050537,
+  "lat": 41.0024695,
+  "lon": 49.1938169,
+  "tags": {
+    "name": "Siyəzən",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079057350,
+  "lat": 40.1658799,
+  "lon": 49.4624134,
+  "tags": {
+    "name": "Sǝngǝçal Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079058854,
+  "lat": 39.9448900,
+  "lon": 48.9577180,
+  "tags": {
+    "name": "Şirvan-Çeşidləmə",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079070338,
+  "lat": 41.2171237,
+  "lon": 49.0081696,
+  "tags": {
+    "name": "Şabran Stansiyası",
+    "name:ru": "Станция Шабран",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079070807,
+  "lat": 41.2745958,
+  "lon": 45.3576940,
+  "tags": {
+    "name": "Salahlı Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079076165,
+  "lat": 40.0909094,
+  "lon": 49.4144282,
+  "tags": {
+    "name": "Qobustan Stansiyası",
+    "name:en": "Qobustan",
+    "name:ja": "コブスタン",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079079997,
+  "lat": 41.0776368,
+  "lon": 49.1178891,
+  "tags": {
+    "name": "Qızıl Burun Stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079081485,
+  "lat": 39.3478480,
+  "lon": 48.7537251,
+  "tags": {
+    "name": "Qırmızıkənd",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079082949,
+  "lat": 39.9159618,
+  "lon": 49.0499727,
+  "tags": {
+    "name": "Qara Günə",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079087038,
+  "lat": 40.2410100,
+  "lon": 49.5953935,
+  "tags": {
+    "name": "Qaradağ Stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079641307,
+  "lat": 41.2313355,
+  "lon": 45.4431713,
+  "tags": {
+    "name": "Poylu Stansiyası Ağstafa",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079818808,
+  "lat": 40.3175467,
+  "lon": 49.7275737,
+  "tags": {
+    "disused:railway": "halt",
+    "name": "Lökbatan Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079873372,
+  "lat": 39.5624600,
+  "lon": 47.6099634,
+  "tags": {
+    "name": "Bəhmənli",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079878190,
+  "lat": 39.9765524,
+  "lon": 49.4084761,
+  "tags": {
+    "name": "Baş Ələt Stansiyası",
+    "name:en": "Bash - Alat",
+    "name:ja": "バシ・アラト",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079897187,
+  "lat": 40.4462299,
+  "lon": 49.9464087,
+  "tags": {
+    "building:levels": "3",
+    "name": "Sabunçu Stansiyası",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q20583916",
+    "wikimedia_commons": "Category:Sabunçu railway station",
+    "wikipedia": "az:Sabunçu Dəmir Yolu Vağzalı"
+  }
+},
+{
+  "type": "node",
+  "id": 3080700077,
+  "lat": 40.4127139,
+  "lon": 49.8737794,
+  "tags": {
+    "name": "Keşlə stansiyası",
+    "name:az": "Keşlə stansiyası",
+    "name:ru": "Баку-Товарная",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3080705942,
+  "lat": 40.3132859,
+  "lon": 49.6995131,
+  "tags": {
+    "name": "Puta Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3080714560,
+  "lat": 40.3369065,
+  "lon": 49.7747597,
+  "tags": {
+    "alt_name": "Heybət",
+    "name": "Abşeron",
+    "name:fr": "Abchéron",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q55698857"
+  }
+},
+{
+  "type": "node",
+  "id": 3082065179,
+  "lat": 40.7906507,
+  "lon": 49.4121604,
+  "tags": {
+    "name": "Sitalçay Dəmiryol Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082113636,
+  "lat": 40.6966274,
+  "lon": 46.5720815,
+  "tags": {
+    "name": "Dəliməmmədli Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082167111,
+  "lat": 40.6663542,
+  "lon": 46.7234907,
+  "tags": {
+    "name": "Kürəkçay Stansiyası \\ Borsunlu",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082181741,
+  "lat": 40.4902395,
+  "lon": 47.7907319,
+  "tags": {
+    "name": "Bərgüşad stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082747313,
+  "lat": 40.7138918,
+  "lon": 49.4741496,
+  "tags": {
+    "name": "Yaşma Stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082752077,
+  "lat": 40.8729282,
+  "lon": 49.3442275,
+  "tags": {
+    "name": "Giləzi",
+    "name:ru": "Гилази",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082759497,
+  "lat": 41.2951217,
+  "lon": 48.9218365,
+  "tags": {
+    "name": "Sarvan stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082760628,
+  "lat": 41.5667678,
+  "lon": 48.7266477,
+  "tags": {
+    "name": "Qusarçay Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082761786,
+  "lat": 41.6930463,
+  "lon": 48.6236773,
+  "tags": {
+    "name": "Ləcət",
+    "name:lez": "Лечет",
+    "name:ru": "Лечет",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082762146,
+  "lat": 41.3925595,
+  "lon": 48.8663798,
+  "tags": {
+    "name": "Çarxı Stansiyası \\ Xaçmaz",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082835805,
+  "lat": 38.8771730,
+  "lon": 46.0028840,
+  "tags": {
+    "name": "Ordubad",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082841257,
+  "lat": 38.9121850,
+  "lon": 45.8472341,
+  "tags": {
+    "name": "Aşağı Aza",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082845837,
+  "lat": 38.9766416,
+  "lon": 45.5154997,
+  "tags": {
+    "name": "Dərəşam",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082852302,
+  "lat": 39.2155650,
+  "lon": 45.2722532,
+  "tags": {
+    "name": "Başbaşı",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082854957,
+  "lat": 39.4040469,
+  "lon": 45.0361338,
+  "tags": {
+    "name": "Qıvraq",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082856348,
+  "lat": 39.2675492,
+  "lon": 45.1609149,
+  "tags": {
+    "name": "Qarğalıq",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082864534,
+  "lat": 39.5501616,
+  "lon": 44.9815516,
+  "tags": {
+    "name": "Sharur",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3440412442,
+  "lat": 40.4276357,
+  "lon": 50.0400658,
+  "tags": {
+    "name": "Yeni Suraxanı Stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3440608684,
+  "lat": 40.4178153,
+  "lon": 50.0077257,
+  "tags": {
+    "name": "Suraxanı Dəmiryol Stansiyası",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3517225430,
+  "lat": 40.4241762,
+  "lon": 49.9980709,
+  "tags": {
+    "name": "Suraxanı Stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3532696464,
+  "lat": 40.4315521,
+  "lon": 49.9540048,
+  "tags": {
+    "name": "Bakıxanov Stansiyası \\ Bakıxanov",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3709944425,
+  "lat": 41.5564082,
+  "lon": 45.0196458,
+  "tags": {
+    "esr:user": "562707",
+    "int_name": "Rustavi Central",
+    "name": "რუსთავი ცენტრალი",
+    "name:en": "Rustavi Central",
+    "name:ka": "რუსთავი ცენტრალი",
+    "name:ru": "Рустави Центральная",
+    "network": "სს \"საქართველოს რკინიგზა\"",
+    "operator": "სს \"საქართველოს რკინიგზა\"",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2800351"
+  }
+},
+{
+  "type": "node",
+  "id": 3709948483,
+  "lat": 41.3190762,
+  "lon": 46.8702971,
+  "tags": {
+    "internet_access": "no",
+    "name": "Qax Stansiyası",
+    "network": "ady.az",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3843054474,
+  "lat": 40.8159186,
+  "lon": 44.4865829,
+  "tags": {
+    "esr:user": "565300",
+    "name": "Վանաձոր",
+    "name:en": "Vanadzor",
+    "name:hy": "Վանաձոր",
+    "name:ru": "Ванадзор",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800620",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4103274",
+    "wikipedia": "hy:Վանաձոր (կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 3893014099,
+  "lat": 39.4954927,
+  "lon": 45.0202470,
+  "tags": {
+    "name": "Taşarkh",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3893015328,
+  "lat": 38.8765053,
+  "lon": 45.9183704,
+  "tags": {
+    "name": "Dəstə",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3893018487,
+  "lat": 38.9335979,
+  "lon": 45.7432565,
+  "tags": {
+    "name": "Yaycı",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3894831090,
+  "lat": 40.4185394,
+  "lon": 48.6047837,
+  "tags": {
+    "name": "Çöl Göylər Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3894836010,
+  "lat": 40.6383846,
+  "lon": 46.2355105,
+  "tags": {
+    "addr:city": "Göygöl rayonu",
+    "name": "Qızılca Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3894839835,
+  "lat": 40.5631119,
+  "lon": 46.1719939,
+  "tags": {
+    "addr:city": "Daşkəsən rayonu",
+    "name": "Bayan Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3894841587,
+  "lat": 40.5458029,
+  "lon": 46.1192634,
+  "tags": {
+    "addr:city": "Daşkəsən rayonu",
+    "name": "Quşçu Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3895056536,
+  "lat": 40.4449572,
+  "lon": 50.0841966,
+  "tags": {
+    "name": "Binǝ Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3895076735,
+  "lat": 40.3916014,
+  "lon": 50.2841404,
+  "tags": {
+    "name": "Zirə Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3896778915,
+  "lat": 40.4149630,
+  "lon": 49.8914348,
+  "tags": {
+    "name": "Ulduz",
+    "name:en": "Ulduz",
+    "name:fa": "اولدوز",
+    "name:ru": "Улдуз",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q1109176",
+    "wikimedia_commons": "Category:Ulduz (Baku Metro)",
+    "wikipedia": "az:Ulduz metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 3950438053,
+  "lat": 40.3805137,
+  "lon": 49.8498448,
+  "tags": {
+    "name": "Bakı Dəmiryol Stansiyası",
+    "name:az": "Bakı Dəmiryol Stansiyası",
+    "name:en": "Baku Central Railway Station",
+    "name:fa": "ایستگاه راه آهن مرکزی باکو",
+    "name:ja": "バクー",
+    "name:ru": "Бакe-Пассажирская",
+    "network": "ADY",
+    "operator": "«Azərbaycan Dəmir Yolları» QSC",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q4076080",
+    "wikimedia_commons": "Category:Baku railway station",
+    "wikipedia": "az:Bakı Dəmir Yolu Vağzalı"
+  }
+},
+{
+  "type": "node",
+  "id": 3963704035,
+  "lat": 38.8770691,
+  "lon": 46.0751337,
+  "tags": {
+    "name": "Salamalik",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3963722257,
+  "lat": 39.6268598,
+  "lon": 44.8872381,
+  "tags": {
+    "name": "Sədərək",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3966409998,
+  "lat": 39.0874033,
+  "lon": 48.7035993,
+  "tags": {
+    "name": "111 km",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 4161594118,
+  "lat": 40.4106807,
+  "lon": 49.8139435,
+  "tags": {
+    "name": "Memar Əcəmi",
+    "name:en": "Memar Ajami",
+    "name:ru": "Мемар Аджеми",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3025490",
+    "wikimedia_commons": "Category:Memar Əcəmi (Baku Metro)",
+    "wikipedia": "az:Memar Əcəmi metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 4168101319,
+  "lat": 40.4215080,
+  "lon": 49.7952155,
+  "tags": {
+    "name": "Avtovağzal Metro Stansiyası",
+    "name:fa": "ایستگاه اتوبوس",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q12836192",
+    "wikimedia_commons": "Category:Avtovağzal (Baku Metro)",
+    "wikipedia": "az:Avtovağzal metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 4376977883,
+  "lat": 40.6807009,
+  "lon": 49.5003838,
+  "tags": {
+    "name": "Çeşidləmə Stansiyası \\ Yaşma",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 4376977884,
+  "lat": 40.6719333,
+  "lon": 49.5074132,
+  "tags": {
+    "name": "Depo \\ Yaşma Bağları",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 4595155621,
+  "lat": 41.7628705,
+  "lon": 48.5807908,
+  "tags": {
+    "name": "Yalama",
+    "name:az": "Yalama",
+    "name:de": "Jalama",
+    "name:en": "Yalama",
+    "name:ru": "Ялама",
+    "network": "ADY",
+    "operator": "ADY",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q122681913"
+  }
+},
+{
+  "type": "node",
+  "id": 4632061332,
+  "lat": 41.7494522,
+  "lon": 44.7799940,
+  "tags": {
+    "architect": "გ. მოძმანიშვილი;ნ. ლომიძე",
+    "name": "დიდუბე",
+    "name:be": "Дыдубэ",
+    "name:de": "Didube",
+    "name:en": "Didube",
+    "name:fa": "دیدوبه",
+    "name:hy": "Դիդուբե",
+    "name:ka": "დიდუბე",
+    "name:ml": "ഡിഡൂബെ",
+    "name:pl": "Didube",
+    "name:ru": "Дидубе",
+    "name:uk": "Дідубе",
+    "name:zh": "迪杜貝站",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:ka": "თბილისის მეტროპოლიტენი",
+    "network:wikidata": "Q37006",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:ka": "თბილისის სატრანსპორტო კომპანია",
+    "operator:short:en": "TTC",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1966-01-16",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q1210655",
+    "wikimedia_commons": "Category:Didube metro station",
+    "wikipedia": "ka:დიდუბე (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 4784639403,
+  "lat": 41.6953084,
+  "lon": 44.7918720,
+  "tags": {
+    "name": "ვილნიუსის მოედანი",
+    "name:en": "Vilnius Square",
+    "name:ka": "ვილნიუსის მოედანი",
+    "name:ml": "വിൽനിയസ് ചത്വരം",
+    "name:ru": "Вильнюсская площадь",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "funicular"
+  }
+},
+{
+  "type": "node",
+  "id": 4802437812,
+  "lat": 40.3772671,
+  "lon": 49.9104706,
+  "tags": {
+    "construction": "station",
+    "internet_access": "no",
+    "name": "Y15",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "type": "public_transport"
+  }
+},
+{
+  "type": "node",
+  "id": 4802441983,
+  "lat": 40.3724161,
+  "lon": 49.9520678,
+  "tags": {
+    "construction": "station",
+    "name": "Məhəmməd Hadi",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "type": "public_transport",
+    "wikidata": "Q25394155",
+    "wikipedia": "az:Həzi Aslanov-2 metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 4923927139,
+  "lat": 40.3682166,
+  "lon": 47.1119392,
+  "tags": {
+    "name": "Bərdə",
+    "name:ar": "بردعة",
+    "name:azb": "برده",
+    "name:fa": "بردع",
+    "name:ur": "بردع",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 4930233752,
+  "lat": 39.8894802,
+  "lon": 49.2239510,
+  "tags": {
+    "name": "Xıdırlı Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5162796046,
+  "lat": 40.4324448,
+  "lon": 49.8047480,
+  "tags": {
+    "name": "Biləcəri Qəsəbə Stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5188836356,
+  "lat": 40.3798619,
+  "lon": 49.8486359,
+  "tags": {
+    "addr:city": "Bakı",
+    "addr:street": "28 May Meydanı",
+    "name": "28 May",
+    "name:az": "28 May",
+    "name:fa": "۲۸ مه",
+    "network": "Bakı Metropoliteni",
+    "operator": "Bakı Metropoliteni",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3025367",
+    "wikimedia_commons": "Category:28 May (Baku Metro)",
+    "wikipedia": "az:28 May metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 5267558014,
+  "lat": 41.7649740,
+  "lon": 44.7899602,
+  "tags": {
+    "architect": "თ. კალანდაძე;მ. თურქაძე",
+    "name": "ღრმაღელე",
+    "name:be": "Грмагэле",
+    "name:en": "Ghrmaghele",
+    "name:fa": "قرماغله",
+    "name:fr": "Ghrmaghele",
+    "name:hy": "Ղրմաղելե",
+    "name:ka": "ღრმაღელე",
+    "name:ml": "ഗർമാഗെലെ",
+    "name:pl": "Grmagele",
+    "name:ru": "Грмагеле",
+    "name:uk": "Грмагеле",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:wikidata": "Q37006",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1985-11-28",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q2029321",
+    "wikipedia": "en:Ghrmaghele (Tbilisi Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 5332867819,
+  "lat": 40.1546043,
+  "lon": 44.5071543,
+  "tags": {
+    "name": "Սասունցի Դավիթ",
+    "name:de": "David von Sasun",
+    "name:en": "Sasuntsi David",
+    "name:fa": "داوود ساسونی",
+    "name:hy": "Սասունցի Դավիթ",
+    "name:ru": "Сасунци Давид",
+    "network:wikidata": "Q320337",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "limited",
+    "wikidata": "Q3473832",
+    "wikipedia": "en:David of Sasun (Yerevan Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 5332871621,
+  "lat": 40.1410698,
+  "lon": 44.4986555,
+  "tags": {
+    "name": "Գործարանային",
+    "name:de": "Gorzaranajin",
+    "name:en": "Gortsaranayin",
+    "name:fa": "گورتسارانایین",
+    "name:hy": "Գործարանային",
+    "name:ru": "Горцаранаин",
+    "network:wikidata": "Q320337",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q4145969",
+    "wikipedia": "hy:Գործարանային (մետրոյի կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 5332871623,
+  "lat": 40.1507695,
+  "lon": 44.4832767,
+  "tags": {
+    "layer": "-2",
+    "name": "Գարեգին Նժդեհի հրապարակ",
+    "name:de": "Garegin-Nschdeh-Platz",
+    "name:en": "Garegin Nzhdeh Square",
+    "name:fa": "میدان گارگین نژده",
+    "name:hy": "Գարեգին Նժդեհի հրապարակ",
+    "name:ru": "Площадь Гарегина Нжде",
+    "network:wikidata": "Q320337",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q2498675",
+    "wikipedia": "hy:Գարեգին Նժդեհի հրապարակ (մետրոյի կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 5332871624,
+  "lat": 40.1449161,
+  "lon": 44.4858505,
+  "tags": {
+    "name": "Շենգավիթ",
+    "name:de": "Schengawit",
+    "name:en": "Shengavit",
+    "name:fa": "شنگاویت",
+    "name:fr": "Chengavit",
+    "name:hy": "Շենգավիթ",
+    "name:ru": "Шенгавит",
+    "network:wikidata": "Q320337",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q3918537",
+    "wikipedia": "hy:Շենգավիթ (մետրոյի կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 5377634301,
+  "lat": 40.1712527,
+  "lon": 44.5121889,
+  "tags": {
+    "layer": "-2",
+    "name": "Զորավար Անդրանիկ",
+    "name:de": "General Andranik",
+    "name:en": "General Andranik",
+    "name:fa": "ژنرال آندرانیک",
+    "name:fr": "Zoravar Andranik",
+    "name:hy": "Զորավար Անդրանիկ",
+    "name:ru": "Зоравар Андраник",
+    "network:wikidata": "Q320337",
+    "old_name": "Հոկտեմբերյան",
+    "old_name:ru": "Октемберян",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q3576098",
+    "wikipedia": "hy:Զորավար Անդրանիկ (մետրոյի կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 5377634303,
+  "lat": 40.1775813,
+  "lon": 44.5155349,
+  "tags": {
+    "layer": "-2",
+    "name": "Հանրապետության Հրապարակ",
+    "name:de": "Platz der Republik",
+    "name:en": "Republic Square",
+    "name:fa": "میدان جمهوری",
+    "name:hy": "Հանրապետության Հրապարակ",
+    "name:ru": "Площадь Республики",
+    "network:wikidata": "Q320337",
+    "old_name:ru": "Площадь Ленина",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q3390443",
+    "wikipedia": "en:Republic Square (Yerevan Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 5377634304,
+  "lat": 40.1862126,
+  "lon": 44.5198850,
+  "tags": {
+    "layer": "-2",
+    "name": "Երիտասարդական",
+    "name:de": "Jeritasardakan",
+    "name:en": "Yeritasardakan",
+    "name:fa": "یریتاسارداکان",
+    "name:hy": "Երիտասարդական",
+    "name:ru": "Еритасардакан (Молодёжная)",
+    "network:wikidata": "Q320337",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q3572188",
+    "wikipedia": "hy:Երիտասարդական (մետրոյի կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 5377634306,
+  "lat": 40.1914943,
+  "lon": 44.5078951,
+  "tags": {
+    "layer": "-2",
+    "name": "Մարշալ Բաղրամյան",
+    "name:de": "Marschall Baghramjan",
+    "name:en": "Marshal Baghramyan",
+    "name:fa": "مارشال باغرامیان",
+    "name:fr": "Marchal Baghramian",
+    "name:hy": "Մարշալ Բաղրամյան",
+    "name:ru": "Маршал Баграмян",
+    "network:wikidata": "Q320337",
+    "old_name:ru": "Сараланджи",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3289683",
+    "wikipedia": "en:Marshal Baghramyan (Yerevan Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 5377634307,
+  "lat": 40.1969400,
+  "lon": 44.4950315,
+  "tags": {
+    "layer": "-2",
+    "name": "Բարեկամություն",
+    "name:de": "Barekamutjun",
+    "name:en": "Barekamutyun",
+    "name:fa": "بارکاموتیون",
+    "name:hy": "Բարեկամություն",
+    "name:ru": "Дружба",
+    "network:wikidata": "Q320337",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q2061891",
+    "wikipedia": "en:Barekamutyun (Yerevan Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 5768595732,
+  "lat": 41.6922591,
+  "lon": 44.8158409,
+  "tags": {
+    "architect": "ს. რევიშვილი;შ. ჩაჩანიძე",
+    "departures_board": "no",
+    "name": "ავლაბარი",
+    "name:be": "Аўлабары",
+    "name:en": "Avlabari",
+    "name:fa": "آولاباری",
+    "name:fr": "Avlabari",
+    "name:hy": "Ավլաբարի",
+    "name:ja": "アヴラバリ",
+    "name:ka": "ავლაბარი",
+    "name:ko": "아브라바리역",
+    "name:ml": "അവ്ലബാറി",
+    "name:nl": "Avlabari",
+    "name:pl": "Awlabari",
+    "name:ru": "Авлабари",
+    "name:sv": "Avlabari",
+    "name:uk": "Авлабарі",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:ka": "თბილისის მეტროპოლიტენი",
+    "network:wikidata": "Q37006",
+    "old_name": "26 ბაქოს კომისრის მოედანი",
+    "old_name:en": "26 Baku Commissars Square",
+    "old_name:ka": "26 ბაქოს კომისრის მოედანი",
+    "old_name:ru": "Площадь 26-ти бакинских комиссаров",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:ka": "თბილისის სატრანსპორტო კომპანია",
+    "operator:short:en": "TTC",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1967-11-06",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q2470476",
+    "wikimedia_commons": "Category:Avlabari metro station",
+    "wikipedia": "ka:ავლაბარი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 5853817181,
+  "lat": 41.0994928,
+  "lon": 45.3362632,
+  "tags": {
+    "name": "Qazax Stansiyası",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5872875591,
+  "lat": 40.9482650,
+  "lon": 45.7382471,
+  "tags": {
+    "name": "Qovlar Stansiyası",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5913686986,
+  "lat": 40.3585101,
+  "lon": 49.8285034,
+  "tags": {
+    "name": "Şəhidlər Xiyabanı",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "funicular",
+    "train": "yes",
+    "wikidata": "Q16415369",
+    "wikipedia": "az:Şəhidlər Xiyabanı stansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 5995369231,
+  "lat": 40.3788687,
+  "lon": 49.8899873,
+  "tags": {
+    "construction": "station",
+    "name": "Y14",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5996343785,
+  "lat": 40.3937251,
+  "lon": 49.8282314,
+  "tags": {
+    "construction": "yes",
+    "internet_access": "no",
+    "internet_access:fee": "no",
+    "name": "B-4",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6005205325,
+  "lat": 40.5533259,
+  "lon": 49.8871491,
+  "tags": {
+    "name": "Pirşağı Stansiyası",
+    "network": "ADY",
+    "operator": "ADY",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6010348738,
+  "lat": 40.4018671,
+  "lon": 49.8205094,
+  "tags": {
+    "name": "8 Noyabr",
+    "name:fa": "۸ نوامبر",
+    "network": "Bakı metropoliteni",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2021-05-29",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q16413570",
+    "wikimedia_commons": "Category:8 Noyabr (Baku Metro)",
+    "wikipedia": "az:8 Noyabr metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 6527869839,
+  "lat": 40.4319642,
+  "lon": 49.9536942,
+  "tags": {
+    "name": "Bakıxanov Stansiyası \\ Sabunçu",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6763552177,
+  "lat": 40.3602847,
+  "lon": 49.8331649,
+  "tags": {
+    "name": "Bəhram Gur",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "funicular",
+    "train": "yes",
+    "wikidata": "Q16415138",
+    "wikipedia": "az:Bəhram Gur stansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 7279336593,
+  "lat": 40.4104823,
+  "lon": 49.8124456,
+  "tags": {
+    "name": "Memar Əcəmi",
+    "name:en": "Memar Ajami",
+    "name:fa": "معمار عجمی",
+    "name:ru": "Мемар Аджеми",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3025490",
+    "wikimedia_commons": "Category:Memar Əcəmi (Baku Metro)",
+    "wikipedia": "az:Memar Əcəmi metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 7285245525,
+  "lat": 41.7225435,
+  "lon": 44.7977688,
+  "tags": {
+    "alt_name:en": "Sadguris Moedani-1",
+    "alt_name:ru": "Вокзальная площадь-1",
+    "alt_name:uk": "Вокзальна площа-1",
+    "architect": "ვ. აბრამიშვილი",
+    "int_name": "Sadguris Moedani-1",
+    "name": "სადგურის მოედანი-1",
+    "name:be": "Вакзальная плошча-1",
+    "name:de": "Sadguris Moedani-1",
+    "name:en": "Station Square-1",
+    "name:hy": "Սադուգուրիս մոեդանի-1",
+    "name:ja": "駅前広場第一駅",
+    "name:ka": "სადგურის მოედანი-1",
+    "name:ml": "സ്റ്റേഷൻ സ്ക്വയർ - 1",
+    "name:pl": "Sadguris Moedani-1",
+    "name:ru": "Садгурис Моедани-1",
+    "name:uk": "Садгуріс моедані-1",
+    "name:zh": "1號車站廣場站",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:ka": "თბილისის მეტროპოლიტენი",
+    "network:wikidata": "Q37006",
+    "old_name:1979-2011": "ვაგზლის მოედანი-1",
+    "old_name:en:1979-2011": "Vagzali Square-1;Vagzali Moedani-1",
+    "old_name:ru:1979-2011": "Вагзлис Моедани-1",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:ka": "თბილისის სატრანსპორტო კომპანია",
+    "operator:short:en": "TTC",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1966-01-11",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q1632208",
+    "wikimedia_commons": "Category:Station Square I",
+    "wikipedia": "ka:სადგურის მოედანი 1 (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 7285245526,
+  "lat": 41.7225779,
+  "lon": 44.7964416,
+  "tags": {
+    "alt_name:en": "Sadguris Moedani-2",
+    "alt_name:ru": "Вокзальная площадь-2",
+    "alt_name:uk": "Вокзальна площа-2",
+    "architect": "თ. კალანდაძე",
+    "name": "სადგურის მოედანი-2",
+    "name:be": "Вакзальная плошча-2",
+    "name:de": "Sadguris Moedani-2",
+    "name:en": "Station Square-2",
+    "name:fa": "میدان ایستگاه-۲",
+    "name:fr": "Sadguris Moedani-2",
+    "name:hy": "Սադուգուրիս մոեդանի-2",
+    "name:ja": "駅前広場第二",
+    "name:ka": "სადგურის მოედანი-2",
+    "name:ml": "സ്റ്റേഷൻ സ്ക്വയർ - 2",
+    "name:pl": "Sadguris Moedani-2",
+    "name:ru": "Садгурис Моедани-2",
+    "name:uk": "Садгуріс моедані-2",
+    "name:zh": "2號車站廣場站",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:ka": "თბილისის მეტროპოლიტენი",
+    "network:wikidata": "Q37006",
+    "old_name:1979-2011": "ვაგზლის მოედანი-2",
+    "old_name:en:1979-2011": "Vagzali Square-2;Vagzali Moedani-2",
+    "old_name:ru:1979-2011": "Вагзлис Моедани-2",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:ka": "თბილისის სატრანსპორტო კომპანია",
+    "operator:short:en": "TTC",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1979-09-15",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q2211128",
+    "wikimedia_commons": "Category:Station Square II",
+    "wikipedia": "ka:სადგურის მოედანი 2 (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 7285245527,
+  "lat": 41.6918966,
+  "lon": 44.8708845,
+  "tags": {
+    "architect": "ვ. ბახტაძე;ა. სურვილაძე",
+    "name": "ვარკეთილი",
+    "name:be": "Варкетылі",
+    "name:en": "Varketili",
+    "name:fa": "وارکتیلی",
+    "name:fr": "Varketili",
+    "name:hy": "Վարկելթիլի",
+    "name:ka": "ვარკეთილი",
+    "name:ml": "വാർക്കെറ്റിലി",
+    "name:pl": "Warketili",
+    "name:pt": "Varketili",
+    "name:ru": "Варкетили",
+    "name:uk": "Варкетілі",
+    "name:zh": "瓦提特里站",
+    "network": "თბილისის მეტროპოლიტენი",
+    "network:en": "Tbilisi Metro",
+    "network:wikidata": "Q37006",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "operator": "თბილისის სატრანსპორტო კომპანია",
+    "operator:en": "Tbilisi Transport Company",
+    "operator:wikidata": "Q61354702",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1985-11-09",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3648856",
+    "wikimedia_commons": "Category:Varketili (Metrostation)",
+    "wikipedia": "ka:ვარკეთილი (თბილისის მეტრო)"
+  }
+},
+{
+  "type": "node",
+  "id": 7449806729,
+  "lat": 41.6435665,
+  "lon": 44.9484418,
+  "tags": {
+    "esr:user": "562904",
+    "int_name": "Veli",
+    "name": "ველი",
+    "name:en": "Veli",
+    "name:ka": "ველი",
+    "name:ru": "Вели",
+    "opening_hours": "Mo-Su 06:00-24:00",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800511"
+  }
+},
+{
+  "type": "node",
+  "id": 7452203384,
+  "lat": 40.5685449,
+  "lon": 45.1527370,
+  "tags": {
+    "esr:user": "568972",
+    "name": "Զեփյուռ",
+    "name:en": "Zepyur",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7542580360,
+  "lat": 40.5611457,
+  "lon": 49.6813023,
+  "tags": {
+    "name": "Sumqayıt",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 7564242877,
+  "lat": 40.1553818,
+  "lon": 44.5078362,
+  "tags": {
+    "esr:user": "567804",
+    "name": "Երևան",
+    "name:de": "Jerewan",
+    "name:en": "Yerevan",
+    "name:fa": "ایروان",
+    "name:hy": "Երևան",
+    "name:ru": "Ереван",
+    "network": "ЮКЖД",
+    "operator": "Южно-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800001",
+    "wheelchair": "no",
+    "wikidata": "Q4176210",
+    "wikipedia": "en:Yerevan railway station"
+  }
+},
+{
+  "type": "node",
+  "id": 8141178517,
+  "lat": 40.5564410,
+  "lon": 49.6103302,
+  "tags": {
+    "name": "Sumqayıtçay",
+    "name:ru": "Сумгаит-Главный",
+    "network": "ADY",
+    "operator": "ADY",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8157346606,
+  "lat": 40.4458169,
+  "lon": 49.7480334,
+  "tags": {
+    "addr:city": "Xırdalan",
+    "addr:postcode": "AZ 0100",
+    "addr:street": "Heydər Əliev pr.",
+    "image": "http://img.milli.az/2016/10/31/485000_04.jpg",
+    "name": "Xırdalan Stansiyası",
+    "name:az": "Xırdalan Stansiyası",
+    "name:en": "Khyrdalan railway station",
+    "operator": "ADY",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019",
+    "train": "yes",
+    "website": "https://ady.az/en",
+    "wikimedia_commons": "File:ADY ESh2 at Xırdalan.jpg"
+  }
+},
+{
+  "type": "node",
+  "id": 8157398629,
+  "lat": 38.6259200,
+  "lon": 48.8728976,
+  "tags": {
+    "name": "Qamışlıq",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8158642285,
+  "lat": 40.9453143,
+  "lon": 49.2727358,
+  "tags": {
+    "name": "Zarat",
+    "name:ru": "Зарат",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8182444124,
+  "lat": 41.8382289,
+  "lon": 44.7006174,
+  "tags": {
+    "esr:user": "560400",
+    "int_name": "Mtskheta",
+    "name": "მცხეთა",
+    "name:de": "Mzcheta",
+    "name:en": "Mtskheta",
+    "name:hu": "Mcheta",
+    "name:ka": "მცხეთა",
+    "name:ru": "Мцхета",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800455"
+  }
+},
+{
+  "type": "node",
+  "id": 8184042614,
+  "lat": 41.9726550,
+  "lon": 44.1088855,
+  "tags": {
+    "esr:user": "579002",
+    "name": "გორი",
+    "name:de": "Gori",
+    "name:en": "Gori",
+    "name:ka": "გორი",
+    "name:ru": "Гори",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800570"
+  }
+},
+{
+  "type": "node",
+  "id": 8413096234,
+  "lat": 40.9209997,
+  "lon": 47.2052211,
+  "tags": {
+    "name": "Şəkikənd stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8421323596,
+  "lat": 38.6261224,
+  "lon": 45.6934395,
+  "tags": {
+    "name": "هرزند",
+    "name:en": "Harzand",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q43401143",
+    "wikipedia": "fa:ایستگاه راه‌آهن هرزند"
+  }
+},
+{
+  "type": "node",
+  "id": 8421380750,
+  "lat": 38.8318205,
+  "lon": 45.6332521,
+  "tags": {
+    "name": "ایستگاه قطار گرگر",
+    "name:en": "Gargar",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q43401144",
+    "wikipedia": "fa:ایستگاه راه‌آهن گرگر"
+  }
+},
+{
+  "type": "node",
+  "id": 8421409893,
+  "lat": 38.7305656,
+  "lon": 45.6231120,
+  "tags": {
+    "name": "زال",
+    "name:en": "Zal",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85167724"
+  }
+},
+{
+  "type": "node",
+  "id": 8631114444,
+  "lat": 38.8577189,
+  "lon": 48.8108684,
+  "tags": {
+    "name": "Liman",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8631252675,
+  "lat": 39.1887428,
+  "lon": 45.4032972,
+  "tags": {
+    "name": "Naxçıvan",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8747335900,
+  "lat": 40.4359228,
+  "lon": 47.9377216,
+  "tags": {
+    "name": "Müsuslü Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8755506302,
+  "lat": 40.8224360,
+  "lon": 47.6944906,
+  "tags": {
+    "name": "Qəbələ Stansiyası",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8809282576,
+  "lat": 40.4230824,
+  "lon": 49.7796111,
+  "tags": {
+    "name": "Xocəsən Depo Metro",
+    "network": "Bakı metropoliteni",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q114472656",
+    "wikimedia_commons": "Category:Xocəsən (Baku Metro)",
+    "wikipedia": "az:Xocəsən metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 8893256424,
+  "lat": 40.3453871,
+  "lon": 48.1458154,
+  "tags": {
+    "name": "Kürdǝmir Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8922805336,
+  "lat": 40.2613545,
+  "lon": 48.4129742,
+  "tags": {
+    "name": "Sığırlı Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 9063060043,
+  "lat": 40.0495728,
+  "lon": 49.0470993,
+  "tags": {
+    "name": "Pirsaat Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 9064652981,
+  "lat": 40.0178168,
+  "lon": 49.1428193,
+  "tags": {
+    "name": "Nəvahi stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 9080248222,
+  "lat": 40.0996320,
+  "lon": 48.8183820,
+  "tags": {
+    "name": "Muğan stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 9124749027,
+  "lat": 40.5146026,
+  "lon": 47.5408646,
+  "tags": {
+    "name": "Əlikənd Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 9162634974,
+  "lat": 40.5090580,
+  "lon": 47.6497865,
+  "tags": {
+    "name": "Ucar Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 9183848442,
+  "lat": 40.5541255,
+  "lon": 47.4261546,
+  "tags": {
+    "name": "Ləki Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 9335634741,
+  "lat": 40.6202111,
+  "lon": 47.1493506,
+  "tags": {
+    "name": "Yevlax Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 9370965968,
+  "lat": 40.6371192,
+  "lon": 47.0027545,
+  "tags": {
+    "name": "Mingəçevir Stansiyası",
+    "network": "ADY",
+    "operator": "ADY",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9469407706,
+  "lat": 40.7660150,
+  "lon": 47.0097336,
+  "tags": {
+    "name": "Mingəçevir Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 9570630662,
+  "lat": 40.0621718,
+  "lon": 44.4106430,
+  "tags": {
+    "esr:user": "567400",
+    "name": "Մասիս",
+    "name:en": "Masis",
+    "name:hy": "Մասիս",
+    "name:ru": "Масис",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800485",
+    "website": "https://www.railway.am",
+    "wheelchair": "no",
+    "wikidata": "Q4283803",
+    "wikipedia": "ru:Масис (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 9693334398,
+  "lat": 40.7867815,
+  "lon": 46.2489975,
+  "tags": {
+    "name": "Alabaşli Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 9864184294,
+  "lat": 40.3897452,
+  "lon": 49.8769695,
+  "tags": {
+    "name": "Montin \\ Nərimanov Stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 9966485556,
+  "lat": 40.4333249,
+  "lon": 50.2384320,
+  "tags": {
+    "name": "Dübəndi Stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 10762249202,
+  "lat": 40.1461009,
+  "lon": 44.0320455,
+  "tags": {
+    "esr:user": "567005",
+    "name": "Արմավիր",
+    "name:en": "Armavir",
+    "name:hy": "Արմավիր",
+    "name:ru": "Армавир",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800491",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4069525",
+    "wikipedia": "ru:Армавир (Южно-Кавказская железная дорога)"
+  }
+},
+{
+  "type": "node",
+  "id": 10767372552,
+  "lat": 40.1407315,
+  "lon": 44.4707780,
+  "tags": {
+    "name": "Չարբախ",
+    "name:de": "Tscharbach",
+    "name:en": "Charbakh",
+    "name:fa": "چارباخ",
+    "name:fr": "Tcharbakh",
+    "name:hy": "Չարբախ",
+    "name:ru": "Чарбах",
+    "network:wikidata": "Q320337",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q3918517",
+    "wikipedia": "en:Charbakh (Yerevan Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 10771629895,
+  "lat": 40.4495031,
+  "lon": 50.1063473,
+  "tags": {
+    "name": "BakElektroAvtomat Stansiyası \\ Binə",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 10778512289,
+  "lat": 40.4514763,
+  "lon": 50.1178593,
+  "tags": {
+    "name": "Əzizbəyov Stansiyası \\ Binə",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 10778863052,
+  "lat": 41.1898606,
+  "lon": 44.8935574,
+  "tags": {
+    "esr:user": "564702",
+    "name": "Այրում",
+    "name:en": "Ayrum",
+    "name:hy": "Այրում",
+    "name:ru": "Айрум",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800507",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4058980",
+    "wikipedia": "hy:Այրում (կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 10780676055,
+  "lat": 39.9614313,
+  "lon": 44.5541729,
+  "tags": {
+    "name": "Արտաշատ",
+    "name:en": "Artashat",
+    "name:hy": "Արտաշատ",
+    "name:ru": "Арташат",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10780685466,
+  "lat": 41.1101406,
+  "lon": 44.7108616,
+  "tags": {
+    "esr:user": "564825",
+    "name": "Հաղպատ",
+    "name:en": "Haghpat",
+    "name:hy": "Հաղպատ",
+    "name:ru": "Ахпат",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800505",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10780687805,
+  "lat": 40.8861017,
+  "lon": 44.5939319,
+  "tags": {
+    "esr:user": "565230",
+    "int_name": "Վահագնաձոր",
+    "int_name:en": "Vahagnadzor",
+    "name": "Շահալի",
+    "name:en": "Shahali",
+    "name:hy": "Շահալի",
+    "name:ru": "Шагали",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800502",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10780687806,
+  "lat": 40.8293187,
+  "lon": 44.5587085,
+  "tags": {
+    "esr:user": "565245",
+    "name": "Փամբակ",
+    "name:en": "Pambak",
+    "name:hy": "Փամբակ",
+    "name:ru": "Памбак",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800501",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10780687810,
+  "lat": 40.8514955,
+  "lon": 44.1621451,
+  "tags": {
+    "esr:user": "563108",
+    "name": "Նալբանդ",
+    "name:en": "Nalband",
+    "name:hy": "Նալբանդ",
+    "name:ru": "Налбанд",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800497",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10780692693,
+  "lat": 40.4026247,
+  "lon": 44.6474196,
+  "tags": {
+    "esr:user": "568309",
+    "name": "Չարենցավան",
+    "name:en": "Charentsavan",
+    "name:hy": "Չարենցավան",
+    "name:ru": "Чаренцаван",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10781636947,
+  "lat": 40.3429439,
+  "lon": 44.6062229,
+  "tags": {
+    "esr:user": "568116",
+    "name": "Նուռնուս",
+    "name:en": "Nurnus",
+    "name:hy": "Նուռնուս",
+    "name:ru": "Нурнус",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10781636954,
+  "lat": 40.4521061,
+  "lon": 44.6935795,
+  "tags": {
+    "name": "Սոլակ",
+    "name:en": "Solak",
+    "name:hy": "Սոլակ",
+    "name:ru": "Солак",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10781636963,
+  "lat": 40.5418659,
+  "lon": 44.8710632,
+  "tags": {
+    "esr:user": "568807",
+    "name": "Ծաղկունք",
+    "name:en": "Tsakhkunq",
+    "name:hy": "Ծաղկունք",
+    "name:ru": "Цахкунк",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10781691522,
+  "lat": 40.2297777,
+  "lon": 44.5527940,
+  "tags": {
+    "esr:user": "568008",
+    "name": "Քանաքեռ",
+    "name:en": "Kanaker",
+    "name:hy": "Քանաքեռ",
+    "name:ru": "Канакер",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10781691523,
+  "lat": 40.2697515,
+  "lon": 44.6171474,
+  "tags": {
+    "esr:user": "568101",
+    "name": "Աբովյան",
+    "name:en": "Abovyan",
+    "name:hy": "Աբովյան",
+    "name:ru": "Абовян",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800488",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10781691528,
+  "lat": 40.4994207,
+  "lon": 45.2678975,
+  "tags": {
+    "esr:user": "569000",
+    "name": "Շորժա",
+    "name:de": "Schorscha",
+    "name:en": "Shorzha",
+    "name:hy": "Շորժա",
+    "name:ru": "Шоржа",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4526164"
+  }
+},
+{
+  "type": "node",
+  "id": 10781691531,
+  "lat": 40.5160287,
+  "lon": 44.7571021,
+  "tags": {
+    "esr:user": "568402",
+    "name": "Հրազդան",
+    "name:en": "Hrazdan",
+    "name:hy": "Հրազդան",
+    "name:ru": "Раздан",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800487",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4388364",
+    "wikipedia": "hy:Հրազդան (երկաթուղային կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 10781691532,
+  "lat": 40.6266247,
+  "lon": 44.9713145,
+  "tags": {
+    "esr:user": "568934",
+    "name": "Ծովագյուղ",
+    "name:en": "Tsovagyugh",
+    "name:hy": "Ծովագյուղ",
+    "name:ru": "Цовагюх",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am",
+    "wheelchair": "no",
+    "wikidata": "Q4506035"
+  }
+},
+{
+  "type": "node",
+  "id": 10781720178,
+  "lat": 40.9464104,
+  "lon": 44.6303414,
+  "tags": {
+    "esr:user": "565207",
+    "name": "Թումանյան",
+    "name:en": "Tumanyan",
+    "name:hy": "Թումանյան",
+    "name:ru": "Туманян",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800503",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10781720179,
+  "lat": 41.0093568,
+  "lon": 44.6363824,
+  "tags": {
+    "esr:user": "565103",
+    "name": "Քոբայր",
+    "name:en": "Kobayr",
+    "name:hy": "Քոբայր",
+    "name:ru": "Кобайр",
+    "old_name": "Կոբեր",
+    "old_name:en": "Kober",
+    "old_name:hy": "Կոբեր",
+    "old_name:ru": "Кобер",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800504"
+  }
+},
+{
+  "type": "node",
+  "id": 10781805793,
+  "lat": 41.5464014,
+  "lon": 44.8031903,
+  "tags": {
+    "esr:user": "563038",
+    "int_name": "Marabda",
+    "name": "მარაბდა",
+    "name:en": "Marabda",
+    "name:ka": "მარაბდა",
+    "name:ru": "Марабда",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "Soviet Military Map 1:50K"
+  }
+},
+{
+  "type": "node",
+  "id": 10782858977,
+  "lat": 40.1131438,
+  "lon": 44.4640762,
+  "tags": {
+    "esr:user": "567433",
+    "name": "Նորագավիթ",
+    "name:en": "Noragavit",
+    "name:hy": "Նորագավիթ",
+    "name:ru": "Норагавит",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800533",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10782858978,
+  "lat": 40.1154733,
+  "lon": 44.1527310,
+  "tags": {
+    "esr:user": "567202",
+    "name": "Սովետական",
+    "name:en": "Sovetakan",
+    "name:hy": "Սովետական",
+    "name:ru": "Советакан",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800718",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10782858979,
+  "lat": 40.8626001,
+  "lon": 44.0544280,
+  "tags": {
+    "esr:user": "565508",
+    "name": "Ղալթախչի",
+    "name:en": "Kaltakhchi",
+    "name:hy": "Ղալթախչի",
+    "name:ru": "Калтахчи",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800496",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10782858980,
+  "lat": 41.0981703,
+  "lon": 44.6699811,
+  "tags": {
+    "esr:user": "564903",
+    "name": "Ալավերդի",
+    "name:en": "Alaverdi",
+    "name:hy": "Ալավերդի",
+    "name:ru": "Алаверди",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800513",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4060408",
+    "wikipedia": "hy:Ալավերդի (երկաթուղային կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 10782858985,
+  "lat": 41.1489605,
+  "lon": 44.7843397,
+  "tags": {
+    "esr:user": "564806",
+    "name": "Ախթալա",
+    "name:en": "Akhtala",
+    "name:hy": "Ախթալա",
+    "name:ru": "Ахтала",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800506",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 11142157428,
+  "lat": 40.5564466,
+  "lon": 49.6097249,
+  "tags": {
+    "name": "Sumqayıtçay Stansiyası",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11148782100,
+  "lat": 41.9204590,
+  "lon": 44.4181658,
+  "tags": {
+    "esr:user": "560805",
+    "int_name": "Kaspi",
+    "name": "კასპი",
+    "name:en": "Kaspi",
+    "name:ka": "კასპი",
+    "name:ru": "Каспи",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2800451"
+  }
+},
+{
+  "type": "node",
+  "id": 11339217853,
+  "lat": 39.9491489,
+  "lon": 49.4045627,
+  "tags": {
+    "name": "Yeni Ələt Deposu",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 11343263921,
+  "lat": 39.9758231,
+  "lon": 49.2619818,
+  "tags": {
+    "name": "Atbulaq Stansiyas;",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513435,
+  "lat": 39.7404143,
+  "lon": 44.8259574,
+  "tags": {
+    "name": "Երասխ",
+    "name:en": "Yeraskh",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q7275343"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513436,
+  "lat": 39.8722627,
+  "lon": 44.6655038,
+  "tags": {
+    "name": "Այգավան",
+    "name:en": "Aygavan",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513437,
+  "lat": 39.9497013,
+  "lon": 44.5783436,
+  "tags": {
+    "name": "Յուվա",
+    "name:en": "Yuva",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513438,
+  "lat": 40.0193775,
+  "lon": 44.4777931,
+  "tags": {
+    "name": "Մխչյան",
+    "name:en": "Mkhchyan",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513439,
+  "lat": 40.0633208,
+  "lon": 44.3888714,
+  "tags": {
+    "name": "Սիս",
+    "name:en": "Sis",
+    "name:hy": "Սիս",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513440,
+  "lat": 40.0681871,
+  "lon": 44.3089053,
+  "tags": {
+    "name": "Հայկաշեն",
+    "name:en": "Haykashen",
+    "name:hy": "Հայկաշեն",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513441,
+  "lat": 40.1071009,
+  "lon": 44.1789303,
+  "tags": {
+    "name": "Արտաշար",
+    "name:en": "Artashar",
+    "name:hy": "Արտաշար",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513442,
+  "lat": 40.1318982,
+  "lon": 44.0827021,
+  "tags": {
+    "name": "Մրգաշատ",
+    "name:en": "Mrgashat",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513446,
+  "lat": 40.2131103,
+  "lon": 44.4204328,
+  "tags": {
+    "name": "Սպանդարյան",
+    "name:en": "Spandaryan",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513447,
+  "lat": 40.2603666,
+  "lon": 44.4228282,
+  "tags": {
+    "name": "Պռոշյան",
+    "name:en": "Proshyan",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513448,
+  "lat": 40.2925417,
+  "lon": 44.4966578,
+  "tags": {
+    "name": "Եղվարդ",
+    "name:en": "Yeghvard",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513449,
+  "lat": 40.2834288,
+  "lon": 44.5724633,
+  "tags": {
+    "name": "Նոր Հաճն",
+    "name:en": "Nor Hachn",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513450,
+  "lat": 40.5656291,
+  "lon": 44.8251700,
+  "tags": {
+    "name": "Դդմաշեն",
+    "name:en": "Ddmashen",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513451,
+  "lat": 40.5512983,
+  "lon": 44.9139769,
+  "tags": {
+    "name": "Վարսեր",
+    "name:en": "Varser",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513452,
+  "lat": 40.5679447,
+  "lon": 44.9985129,
+  "tags": {
+    "name": "Սևանի թերակղզի",
+    "name:en": "Sevan Peninsula",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513453,
+  "lat": 40.6225292,
+  "lon": 45.0166723,
+  "tags": {
+    "name": "Շողեր",
+    "name:en": "Shogher",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513454,
+  "lat": 40.6134299,
+  "lon": 45.0434963,
+  "tags": {
+    "name": "Արևիկ",
+    "name:en": "Arevik",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513455,
+  "lat": 40.5991190,
+  "lon": 45.0877015,
+  "tags": {
+    "name": "Ծիծեռնակ",
+    "name:en": "Tsitsernak",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513456,
+  "lat": 40.5474930,
+  "lon": 45.2096165,
+  "tags": {
+    "name": "Դրախտիկ",
+    "name:en": "Drakhtik",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513457,
+  "lat": 40.4942450,
+  "lon": 45.3564343,
+  "tags": {
+    "name": "Արտանիշ",
+    "name:en": "Artanish",
+    "name:hy": "Արտանիշ",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513458,
+  "lat": 40.3714287,
+  "lon": 45.5333821,
+  "tags": {
+    "name": "Արեգ",
+    "name:en": "Areg",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513459,
+  "lat": 40.2029651,
+  "lon": 45.7436100,
+  "tags": {
+    "name": "Վարդենիս",
+    "name:en": "Vardenis",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513460,
+  "lat": 40.2161689,
+  "lon": 45.9439887,
+  "tags": {
+    "name": "Սոթք",
+    "name:en": "Sotk",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513461,
+  "lat": 40.5734997,
+  "lon": 44.7516023,
+  "tags": {
+    "name": "Կաքավաձոր",
+    "name:en": "Kaqavadzor",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513462,
+  "lat": 40.2051498,
+  "lon": 44.5505145,
+  "tags": {
+    "name": "Ալմաստ",
+    "name:en": "Almast",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11523019414,
+  "lat": 40.6676228,
+  "lon": 46.7345363,
+  "tags": {
+    "name": "DEPO Kürəkçay \\ Borsunlu",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 11622641263,
+  "lat": 40.4028217,
+  "lon": 49.8706376,
+  "tags": {
+    "name": "Nəriman Nərimanov",
+    "name:fa": "نریمان نریمانوف",
+    "name:ru": "Нариман Нариманов",
+    "network": "Bakı Metropoliteni",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q1125310",
+    "wikimedia_commons": "Category:Nəriman Nərimanov (Baku Metro)",
+    "wikipedia": "az:Nəriman Nərimanov metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 11622641264,
+  "lat": 40.3998962,
+  "lon": 49.8505738,
+  "tags": {
+    "addr:street": "Əhmədbəy Ağaoğlu küçəsi",
+    "name": "Gənclik",
+    "name:fa": "گنجلیک",
+    "network": "Bakı Metropoliteni",
+    "opening_hours": "Mo-Su 10:00-00:00",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q616786",
+    "wikimedia_commons": "Category:Gənclik (Baku Metro)",
+    "wikipedia": "az:Gənclik metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 11622641266,
+  "lat": 40.3717258,
+  "lon": 49.8445724,
+  "tags": {
+    "name": "Sahil",
+    "name:az": "Sahil",
+    "name:fa": "سهیل",
+    "network": "Bakı Metropoliteni",
+    "old_name": "26 Бакинских Комиссаров",
+    "old_name:az": "26 Bakı komissarı",
+    "old_name:az-cyr": "26 Бакы комиссары",
+    "old_name:ru": "26 Бакинских Комиссаров",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11622641267,
+  "lat": 40.3659588,
+  "lon": 49.8316472,
+  "tags": {
+    "name": "İçərişəhər",
+    "name:az": "İçərişəhər",
+    "name:en": "Icherisheher",
+    "name:fa": "شهر داخلی",
+    "name:ru": "Ичеришехер",
+    "network": "Bakı Metropoliteni",
+    "network:wikidata": "Q213271",
+    "old_name": "Baki Soveti",
+    "operator": "Bakı Metropoliteni",
+    "operator:wikidata": "Q213271",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q2427287",
+    "wikimedia_commons": "Category:Icheri Sheher (Baku Metro)",
+    "wikipedia": "az:İçərişəhər metrostansiyası"
+  }
+},
+{
+  "type": "node",
+  "id": 12066960842,
+  "lat": 41.1302527,
+  "lon": 45.4278982,
+  "tags": {
+    "name": "Yeni Poylu Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 12165174337,
+  "lat": 40.1120491,
+  "lon": 44.4488867,
+  "tags": {
+    "name": "9-րդ կիլոմետր",
+    "name:en": "9th kilometer",
+    "name:hy": "9-րդ կիլոմետր",
+    "name:ru": "9-я километр",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12165174338,
+  "lat": 40.1359279,
+  "lon": 44.4637855,
+  "tags": {
+    "name": "Կարմիր բլուր",
+    "name:en": "Red Hill",
+    "name:hy": "Կարմիր բլուր",
+    "name:ru": "Красный холм",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12165174339,
+  "lat": 40.5984511,
+  "lon": 44.9616801,
+  "tags": {
+    "name": "Ախթամար",
+    "name:en": "Akhtamar",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12403001576,
+  "lat": 40.5428844,
+  "lon": 46.1147837,
+  "tags": {
+    "name": "Quşçu Yük stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 12965013934,
+  "lat": 39.9450702,
+  "lon": 48.9579186,
+  "tags": {
+    "name": "Stansiya",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 12974485816,
+  "lat": 39.8208080,
+  "lon": 46.7749945,
+  "tags": {
+    "construction": "yes",
+    "name": "Xankəndi stansiyası",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13019532655,
+  "lat": 40.2074904,
+  "lon": 47.0572067,
+  "tags": {
+    "name": "Təzəkənd",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13019532659,
+  "lat": 39.9941023,
+  "lon": 46.9617222,
+  "tags": {
+    "name": "Ağdam",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13184388993,
+  "lat": 38.5101269,
+  "lon": 44.2951887,
+  "tags": {
+    "ele": "2058",
+    "name": "Kapıköy",
+    "network": "Türkiye Cumhuriyeti Devlet Demiryolları",
+    "network:short": "TCDD",
+    "network:wikidata": "Q499967",
+    "operator": "TCDD Taşımacılık",
+    "operator:wikidata": "Q28220824",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168850",
+    "wikipedia": "tr:Kapıköy Tren İstasyonu"
+  }
+},
+{
+  "type": "node",
+  "id": 13236388203,
+  "lat": 41.7225170,
+  "lon": 44.7871040,
+  "tags": {
+    "name": "მუშტაიდი",
+    "name:be": "Муштадзі",
+    "name:en": "Mushtaidi",
+    "name:ru": "Муштаиди",
+    "old_name": "პიონეsრი",
+    "old_name:ka": "პიონერი",
+    "old_name:ru": "Пионерская",
+    "operator": "Tbilisi Children's Railway",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 13395861938,
+  "lat": 38.9377080,
+  "lon": 45.6305528,
+  "tags": {
+    "name": "ایستگاه راه آهن شهر جلفا",
+    "name:en": "Jolfa",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q43401146",
+    "wikipedia": "fa:ایستگاه راه‌آهن جلفا"
+  }
+},
+{
+  "type": "node",
+  "id": 13401743373,
+  "lat": 40.4261425,
+  "lon": 49.8637123,
+  "tags": {
+    "name": "Dərnəgül stansiyası",
+    "name:ru": "Станция Дарнагюль",
+    "operator": "Azərbaycan Dəmir Yolları",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+}
+
+  ]
+}

@@ -1,0 +1,2401 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-13T16:30:45Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 153208097,
+  "lat": 38.6579125,
+  "lon": 43.8166037,
+  "tags": {
+    "abandoned:railway": "station",
+    "name": "Dibekli",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 181315142,
+  "lat": 38.6261057,
+  "lon": 45.6933886,
+  "tags": {
+    "name": "هرزند",
+    "name:en": "Harzand",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 183431911,
+  "lat": 40.9033842,
+  "lon": 45.8882377,
+  "tags": {
+    "name": "Zəyəm Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 184610043,
+  "lat": 41.4754301,
+  "lon": 45.0980046,
+  "tags": {
+    "esr:user": "562603",
+    "int_name": "Gardabani",
+    "name": "გარდაბანი",
+    "name:en": "Gardabani",
+    "name:ka": "გარდაბანი",
+    "name:ru": "Гардабани",
+    "network": "სს \"საქართველოს რკინიგზა\"",
+    "operator": "სს \"საქართველოს რკინიგზა\"",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2800514",
+    "wikidata": "Q132473543"
+  }
+},
+{
+  "type": "node",
+  "id": 235460157,
+  "lat": 38.9574303,
+  "lon": 45.6230096,
+  "tags": {
+    "addr:city": "شجاع",
+    "esr:user": "550004",
+    "name": "Culfa",
+    "name:ru": "Джульфа",
+    "railway": "station",
+    "uic_ref": "5700205"
+  }
+},
+{
+  "type": "node",
+  "id": 431966946,
+  "lat": 39.3567980,
+  "lon": 45.0889905,
+  "tags": {
+    "name": "Şahtaxtı",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 602123192,
+  "lat": 38.5168926,
+  "lon": 43.3084227,
+  "tags": {
+    "name": "Van İskele",
+    "name:en": "Van Wharf",
+    "network": "TR-railway",
+    "operator": "TCDD",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q48802985",
+    "wikimedia_commons": "Category:Van Pier railway station",
+    "wikipedia": "tr:Van İskele Tren İstasyonu"
+  }
+},
+{
+  "type": "node",
+  "id": 618738557,
+  "lat": 41.0772878,
+  "lon": 44.6185203,
+  "tags": {
+    "name": "Սանահին",
+    "name:en": "Sanahin",
+    "name:hy": "Սանահին",
+    "name:ru": "Санаин",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 618739254,
+  "lat": 41.2452946,
+  "lon": 44.8077654,
+  "tags": {
+    "esr:user": "564204",
+    "int_name": "Sadakhlo",
+    "name": "სადახლო",
+    "name:az": "Sadaxlı",
+    "name:en": "Sadakhlo",
+    "name:ka": "სადახლო",
+    "name:ru": "Садахло",
+    "network": "GR",
+    "operator": "GR",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "Soviet Military Map 1:50K",
+    "train": "yes",
+    "uic_ref": "2800508",
+    "wikidata": "Q4404518",
+    "wikipedia": "ru:Садахло (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 618763898,
+  "lat": 40.6939760,
+  "lon": 43.7720739,
+  "tags": {
+    "esr:user": "567503",
+    "name": "Բայանդուր",
+    "name:en": "Bayandur",
+    "name:hy": "Բայանդուր",
+    "name:ru": "Баяндур",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800708",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4080352",
+    "wikipedia": "ru:Баяндур (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 693323865,
+  "lat": 38.7305570,
+  "lon": 45.6230095,
+  "tags": {
+    "name": "زال",
+    "name:en": "Zal",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 859885516,
+  "lat": 38.5811268,
+  "lon": 44.0908153,
+  "tags": {
+    "abandoned:railway": "station",
+    "name": "Çimenova",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1370907358,
+  "lat": 39.0510931,
+  "lon": 45.4576586,
+  "tags": {
+    "name": "Nehrəm",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1863562938,
+  "lat": 40.5511230,
+  "lon": 44.9568153,
+  "tags": {
+    "esr:user": "568900",
+    "image": "https://i.imgur.com/3i2T2VD.jpg",
+    "name": "Սևան",
+    "name:en": "Sevan",
+    "name:hy": "Սևան",
+    "name:ru": "Севан",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800486",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4411874"
+  }
+},
+{
+  "type": "node",
+  "id": 1888169420,
+  "lat": 40.1868402,
+  "lon": 44.5006914,
+  "tags": {
+    "public_transport": "station",
+    "railway": "station",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1894710723,
+  "lat": 39.1087473,
+  "lon": 45.4157150,
+  "tags": {
+    "name": "Qızılvəng",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2005962642,
+  "lat": 40.6049361,
+  "lon": 43.1068498,
+  "tags": {
+    "ele": "1756",
+    "internet_access": "wlan",
+    "name": "Kars",
+    "name:en": "Kars",
+    "network": "TR-railway",
+    "network:short": "TCDD",
+    "network:wikidata": "Q499967",
+    "operator": "TCDD Taşımacılık",
+    "operator:wikidata": "Q28220824",
+    "public_transport": "station",
+    "railway": "station",
+    "toilets": "yes",
+    "toilets:wheelchair": "yes",
+    "train": "yes",
+    "wheelchair": "limited",
+    "wikidata": "Q6373391",
+    "wikimedia_commons": "Category:Kars railway station",
+    "wikipedia": "en:Kars railway station"
+  }
+},
+{
+  "type": "node",
+  "id": 2460341500,
+  "lat": 40.6480591,
+  "lon": 43.9760070,
+  "tags": {
+    "name": "Անուշավան կայարան",
+    "name:en": "Anushavan station",
+    "name:hy": "Անուշավան կայարան",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2460341551,
+  "lat": 40.6628164,
+  "lon": 43.9557140,
+  "tags": {
+    "name": "Փանիկ կայարան",
+    "name:en": "Panik Railway Station",
+    "name:hy": "Փանիկի կայարան",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2691661812,
+  "lat": 40.6776303,
+  "lon": 43.2336190,
+  "tags": {
+    "abandoned:railway": "station",
+    "name": "Mezra",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "bing",
+    "train": "yes",
+    "wikidata": "Q6826702",
+    "wikipedia": "tr:Mezra Tren İstasyonu"
+  }
+},
+{
+  "type": "node",
+  "id": 2857851598,
+  "lat": 41.3862332,
+  "lon": 45.1837032,
+  "tags": {
+    "name": "Böyük Kəsik Stansiyası",
+    "network": "ADY",
+    "operator": "ADY",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3043451473,
+  "lat": 38.6051096,
+  "lon": 43.5680135,
+  "tags": {
+    "abandoned:railway": "station",
+    "name": "Söylemez",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85455882"
+  }
+},
+{
+  "type": "node",
+  "id": 3043451548,
+  "lat": 38.5173358,
+  "lon": 44.1683034,
+  "tags": {
+    "abandoned:railway": "station",
+    "name": "Çaybağı",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3065361683,
+  "lat": 39.8405503,
+  "lon": 44.7052108,
+  "tags": {
+    "esr:user": "569509",
+    "name": "Արարատ",
+    "name:en": "Ararat",
+    "name:hy": "Արարատ",
+    "name:ru": "Арарат",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800706",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4068574"
+  }
+},
+{
+  "type": "node",
+  "id": 3072412158,
+  "lat": 41.1153874,
+  "lon": 45.4510102,
+  "tags": {
+    "name": "Ağstafa Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3072414461,
+  "lat": 40.8681945,
+  "lon": 46.0360223,
+  "tags": {
+    "name": "Dəllər Stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3072414560,
+  "lat": 40.9940661,
+  "lon": 45.6169732,
+  "tags": {
+    "addr:city": "Tovuz",
+    "addr:housenumber": "2",
+    "addr:street": "Füzuli küç.",
+    "name": "Tovuz Stansiyasi",
+    "name:ar": "محطة تووز",
+    "name:az": "Tovuz Stansiyası",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3072419334,
+  "lat": 40.7142801,
+  "lon": 46.3670789,
+  "tags": {
+    "int_name": "Ganja",
+    "name": "Gəncə",
+    "name:az": "Gəncə",
+    "name:de": "Gandscha",
+    "name:en": "Ganja",
+    "name:ru": "Гянджа",
+    "old_name:de": "Kirowabad",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078750820,
+  "lat": 40.7840996,
+  "lon": 46.2542908,
+  "tags": {
+    "name": "Stansiya Alabaşlı",
+    "network": "ADY",
+    "operator": "ADY",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3078929442,
+  "lat": 40.6529665,
+  "lon": 46.8518650,
+  "tags": {
+    "name": "Goran Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078969897,
+  "lat": 41.3929029,
+  "lon": 46.7551310,
+  "tags": {
+    "name": "Qorağan Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3078981829,
+  "lat": 40.8357109,
+  "lon": 46.1467703,
+  "tags": {
+    "name": "Şəmkir Təzəkənd Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079009777,
+  "lat": 40.6974974,
+  "lon": 46.4830544,
+  "tags": {
+    "name": "Zazalı Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079042221,
+  "lat": 41.0559041,
+  "lon": 45.5324570,
+  "tags": {
+    "name": "Köçəsgər Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079048007,
+  "lat": 41.3200572,
+  "lon": 45.2713647,
+  "tags": {
+    "name": "Soyuqbulaq Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079070807,
+  "lat": 41.2745958,
+  "lon": 45.3576940,
+  "tags": {
+    "name": "Salahlı Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3079641307,
+  "lat": 41.2313355,
+  "lon": 45.4431713,
+  "tags": {
+    "name": "Poylu Stansiyası Ağstafa",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082113636,
+  "lat": 40.6966274,
+  "lon": 46.5720815,
+  "tags": {
+    "name": "Dəliməmmədli Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082167111,
+  "lat": 40.6663542,
+  "lon": 46.7234907,
+  "tags": {
+    "name": "Kürəkçay Stansiyası \\ Borsunlu",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082835805,
+  "lat": 38.8771730,
+  "lon": 46.0028840,
+  "tags": {
+    "name": "Ordubad",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082841257,
+  "lat": 38.9121850,
+  "lon": 45.8472341,
+  "tags": {
+    "name": "Aşağı Aza",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082845837,
+  "lat": 38.9766416,
+  "lon": 45.5154997,
+  "tags": {
+    "name": "Dərəşam",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082852302,
+  "lat": 39.2155650,
+  "lon": 45.2722532,
+  "tags": {
+    "name": "Başbaşı",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082854957,
+  "lat": 39.4040469,
+  "lon": 45.0361338,
+  "tags": {
+    "name": "Qıvraq",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082856348,
+  "lat": 39.2675492,
+  "lon": 45.1609149,
+  "tags": {
+    "name": "Qarğalıq",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3082864534,
+  "lat": 39.5501616,
+  "lon": 44.9815516,
+  "tags": {
+    "name": "Sharur",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3522384531,
+  "lat": 40.6707224,
+  "lon": 43.9471497,
+  "tags": {
+    "name": "Մեղրաշեն կայարան",
+    "name:en": "Meghrashen Railway Station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3709948483,
+  "lat": 41.3190762,
+  "lon": 46.8702971,
+  "tags": {
+    "internet_access": "no",
+    "name": "Qax Stansiyası",
+    "network": "ady.az",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3843054474,
+  "lat": 40.8159186,
+  "lon": 44.4865829,
+  "tags": {
+    "esr:user": "565300",
+    "name": "Վանաձոր",
+    "name:en": "Vanadzor",
+    "name:hy": "Վանաձոր",
+    "name:ru": "Ванадзор",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800620",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4103274",
+    "wikipedia": "hy:Վանաձոր (կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 3893014099,
+  "lat": 39.4954927,
+  "lon": 45.0202470,
+  "tags": {
+    "name": "Taşarkh",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3893015328,
+  "lat": 38.8765053,
+  "lon": 45.9183704,
+  "tags": {
+    "name": "Dəstə",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3893018487,
+  "lat": 38.9335979,
+  "lon": 45.7432565,
+  "tags": {
+    "name": "Yaycı",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3894836010,
+  "lat": 40.6383846,
+  "lon": 46.2355105,
+  "tags": {
+    "addr:city": "Göygöl rayonu",
+    "name": "Qızılca Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3894839835,
+  "lat": 40.5631119,
+  "lon": 46.1719939,
+  "tags": {
+    "addr:city": "Daşkəsən rayonu",
+    "name": "Bayan Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3894841587,
+  "lat": 40.5458029,
+  "lon": 46.1192634,
+  "tags": {
+    "addr:city": "Daşkəsən rayonu",
+    "name": "Quşçu Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3895120717,
+  "lat": 40.5793161,
+  "lon": 43.8765543,
+  "tags": {
+    "name": "Մարալիկ",
+    "name:en": "Maralik",
+    "name:hy": "Մարալիկ",
+    "name:ru": "Маралик",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3963704035,
+  "lat": 38.8770691,
+  "lon": 46.0751337,
+  "tags": {
+    "name": "Salamalik",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3963722257,
+  "lat": 39.6268598,
+  "lon": 44.8872381,
+  "tags": {
+    "name": "Sədərək",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 5332867819,
+  "lat": 40.1546043,
+  "lon": 44.5071543,
+  "tags": {
+    "name": "Սասունցի Դավիթ",
+    "name:de": "David von Sasun",
+    "name:en": "Sasuntsi David",
+    "name:fa": "داوود ساسونی",
+    "name:hy": "Սասունցի Դավիթ",
+    "name:ru": "Сасунци Давид",
+    "network:wikidata": "Q320337",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "limited",
+    "wikidata": "Q3473832",
+    "wikipedia": "en:David of Sasun (Yerevan Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 5332871621,
+  "lat": 40.1410698,
+  "lon": 44.4986555,
+  "tags": {
+    "name": "Գործարանային",
+    "name:de": "Gorzaranajin",
+    "name:en": "Gortsaranayin",
+    "name:fa": "گورتسارانایین",
+    "name:hy": "Գործարանային",
+    "name:ru": "Горцаранаин",
+    "network:wikidata": "Q320337",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q4145969",
+    "wikipedia": "hy:Գործարանային (մետրոյի կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 5332871623,
+  "lat": 40.1507695,
+  "lon": 44.4832767,
+  "tags": {
+    "layer": "-2",
+    "name": "Գարեգին Նժդեհի հրապարակ",
+    "name:de": "Garegin-Nschdeh-Platz",
+    "name:en": "Garegin Nzhdeh Square",
+    "name:fa": "میدان گارگین نژده",
+    "name:hy": "Գարեգին Նժդեհի հրապարակ",
+    "name:ru": "Площадь Гарегина Нжде",
+    "network:wikidata": "Q320337",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q2498675",
+    "wikipedia": "hy:Գարեգին Նժդեհի հրապարակ (մետրոյի կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 5332871624,
+  "lat": 40.1449161,
+  "lon": 44.4858505,
+  "tags": {
+    "name": "Շենգավիթ",
+    "name:de": "Schengawit",
+    "name:en": "Shengavit",
+    "name:fa": "شنگاویت",
+    "name:fr": "Chengavit",
+    "name:hy": "Շենգավիթ",
+    "name:ru": "Шенгавит",
+    "network:wikidata": "Q320337",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q3918537",
+    "wikipedia": "hy:Շենգավիթ (մետրոյի կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 5377634301,
+  "lat": 40.1712527,
+  "lon": 44.5121889,
+  "tags": {
+    "layer": "-2",
+    "name": "Զորավար Անդրանիկ",
+    "name:de": "General Andranik",
+    "name:en": "General Andranik",
+    "name:fa": "ژنرال آندرانیک",
+    "name:fr": "Zoravar Andranik",
+    "name:hy": "Զորավար Անդրանիկ",
+    "name:ru": "Зоравар Андраник",
+    "network:wikidata": "Q320337",
+    "old_name": "Հոկտեմբերյան",
+    "old_name:ru": "Октемберян",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q3576098",
+    "wikipedia": "hy:Զորավար Անդրանիկ (մետրոյի կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 5377634303,
+  "lat": 40.1775813,
+  "lon": 44.5155349,
+  "tags": {
+    "layer": "-2",
+    "name": "Հանրապետության Հրապարակ",
+    "name:de": "Platz der Republik",
+    "name:en": "Republic Square",
+    "name:fa": "میدان جمهوری",
+    "name:hy": "Հանրապետության Հրապարակ",
+    "name:ru": "Площадь Республики",
+    "network:wikidata": "Q320337",
+    "old_name:ru": "Площадь Ленина",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q3390443",
+    "wikipedia": "en:Republic Square (Yerevan Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 5377634304,
+  "lat": 40.1862126,
+  "lon": 44.5198850,
+  "tags": {
+    "layer": "-2",
+    "name": "Երիտասարդական",
+    "name:de": "Jeritasardakan",
+    "name:en": "Yeritasardakan",
+    "name:fa": "یریتاسارداکان",
+    "name:hy": "Երիտասարդական",
+    "name:ru": "Еритасардакан (Молодёжная)",
+    "network:wikidata": "Q320337",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q3572188",
+    "wikipedia": "hy:Երիտասարդական (մետրոյի կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 5377634306,
+  "lat": 40.1914943,
+  "lon": 44.5078951,
+  "tags": {
+    "layer": "-2",
+    "name": "Մարշալ Բաղրամյան",
+    "name:de": "Marschall Baghramjan",
+    "name:en": "Marshal Baghramyan",
+    "name:fa": "مارشال باغرامیان",
+    "name:fr": "Marchal Baghramian",
+    "name:hy": "Մարշալ Բաղրամյան",
+    "name:ru": "Маршал Баграмян",
+    "network:wikidata": "Q320337",
+    "old_name:ru": "Сараланджи",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q3289683",
+    "wikipedia": "en:Marshal Baghramyan (Yerevan Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 5377634307,
+  "lat": 40.1969400,
+  "lon": 44.4950315,
+  "tags": {
+    "layer": "-2",
+    "name": "Բարեկամություն",
+    "name:de": "Barekamutjun",
+    "name:en": "Barekamutyun",
+    "name:fa": "بارکاموتیون",
+    "name:hy": "Բարեկամություն",
+    "name:ru": "Дружба",
+    "network:wikidata": "Q320337",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q2061891",
+    "wikipedia": "en:Barekamutyun (Yerevan Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 5853817181,
+  "lat": 41.0994928,
+  "lon": 45.3362632,
+  "tags": {
+    "name": "Qazax Stansiyası",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5872875591,
+  "lat": 40.9482650,
+  "lon": 45.7382471,
+  "tags": {
+    "name": "Qovlar Stansiyası",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7452203384,
+  "lat": 40.5685449,
+  "lon": 45.1527370,
+  "tags": {
+    "esr:user": "568972",
+    "name": "Զեփյուռ",
+    "name:en": "Zepyur",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7564242877,
+  "lat": 40.1553818,
+  "lon": 44.5078362,
+  "tags": {
+    "esr:user": "567804",
+    "name": "Երևան",
+    "name:de": "Jerewan",
+    "name:en": "Yerevan",
+    "name:fa": "ایروان",
+    "name:hy": "Երևան",
+    "name:ru": "Ереван",
+    "network": "ЮКЖД",
+    "operator": "Южно-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800001",
+    "wheelchair": "no",
+    "wikidata": "Q4176210",
+    "wikipedia": "en:Yerevan railway station"
+  }
+},
+{
+  "type": "node",
+  "id": 8421323596,
+  "lat": 38.6261224,
+  "lon": 45.6934395,
+  "tags": {
+    "name": "هرزند",
+    "name:en": "Harzand",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q43401143",
+    "wikipedia": "fa:ایستگاه راه‌آهن هرزند"
+  }
+},
+{
+  "type": "node",
+  "id": 8421380750,
+  "lat": 38.8318205,
+  "lon": 45.6332521,
+  "tags": {
+    "name": "ایستگاه قطار گرگر",
+    "name:en": "Gargar",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q43401144",
+    "wikipedia": "fa:ایستگاه راه‌آهن گرگر"
+  }
+},
+{
+  "type": "node",
+  "id": 8421409893,
+  "lat": 38.7305656,
+  "lon": 45.6231120,
+  "tags": {
+    "name": "زال",
+    "name:en": "Zal",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85167724"
+  }
+},
+{
+  "type": "node",
+  "id": 8631252675,
+  "lat": 39.1887428,
+  "lon": 45.4032972,
+  "tags": {
+    "name": "Naxçıvan",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 9570630662,
+  "lat": 40.0621718,
+  "lon": 44.4106430,
+  "tags": {
+    "esr:user": "567400",
+    "name": "Մասիս",
+    "name:en": "Masis",
+    "name:hy": "Մասիս",
+    "name:ru": "Масис",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800485",
+    "website": "https://www.railway.am",
+    "wheelchair": "no",
+    "wikidata": "Q4283803",
+    "wikipedia": "ru:Масис (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 9693334398,
+  "lat": 40.7867815,
+  "lon": 46.2489975,
+  "tags": {
+    "name": "Alabaşli Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 10762249201,
+  "lat": 40.1837565,
+  "lon": 43.9185011,
+  "tags": {
+    "esr:user": "566905",
+    "name": "Արաքս",
+    "name:en": "Araks",
+    "name:hy": "Արաքս",
+    "name:ru": "Аракс",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800705",
+    "website": "https://www.railway.am",
+    "wikidata": "Q19689155",
+    "wikipedia": "hy:Արաքս (կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 10762249202,
+  "lat": 40.1461009,
+  "lon": 44.0320455,
+  "tags": {
+    "esr:user": "567005",
+    "name": "Արմավիր",
+    "name:en": "Armavir",
+    "name:hy": "Արմավիր",
+    "name:ru": "Армавир",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800491",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4069525",
+    "wikipedia": "ru:Армавир (Южно-Кавказская железная дорога)"
+  }
+},
+{
+  "type": "node",
+  "id": 10767372552,
+  "lat": 40.1407315,
+  "lon": 44.4707780,
+  "tags": {
+    "name": "Չարբախ",
+    "name:de": "Tscharbach",
+    "name:en": "Charbakh",
+    "name:fa": "چارباخ",
+    "name:fr": "Tcharbakh",
+    "name:hy": "Չարբախ",
+    "name:ru": "Чарбах",
+    "network:wikidata": "Q320337",
+    "operator": "Կարեն Դեմիրճյանի անվան Երևանի մետրոպոլիտեն",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "no",
+    "wikidata": "Q3918517",
+    "wikipedia": "en:Charbakh (Yerevan Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 10778863046,
+  "lat": 40.6074302,
+  "lon": 43.7145073,
+  "tags": {
+    "name": "Աղին",
+    "name:en": "Aghin",
+    "name:hy": "Աղին",
+    "name:ru": "Ахин",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10778863047,
+  "lat": 40.4652670,
+  "lon": 43.6434945,
+  "tags": {
+    "esr:user": "566500",
+    "name": "Անի",
+    "name:en": "Ani",
+    "name:hy": "Անի",
+    "name:ru": "Ани",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800703",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10778863050,
+  "lat": 40.3256282,
+  "lon": 43.6648211,
+  "tags": {
+    "esr:user": "566604",
+    "name": "Արագած",
+    "name:en": "Aragats",
+    "name:hy": "Արագած",
+    "name:ru": "Арагац",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800704",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10778863051,
+  "lat": 40.7876474,
+  "lon": 43.8599635,
+  "tags": {
+    "esr:user": "565809",
+    "int_name": "Gyumri",
+    "name": "Գյումրի",
+    "name:de": "Gjumri",
+    "name:en": "Gyumri",
+    "name:fr": "Gyumri",
+    "name:hy": "Գյումրու երկաթուղային հանգույց",
+    "name:ka": "გიუმრი",
+    "name:ku": "Gumrî",
+    "name:lt": "Giumris",
+    "name:ru": "Гюмри",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800390",
+    "website": "https://www.railway.am",
+    "wheelchair": "limited",
+    "wikidata": "Q4153265"
+  }
+},
+{
+  "type": "node",
+  "id": 10778863052,
+  "lat": 41.1898606,
+  "lon": 44.8935574,
+  "tags": {
+    "esr:user": "564702",
+    "name": "Այրում",
+    "name:en": "Ayrum",
+    "name:hy": "Այրում",
+    "name:ru": "Айрум",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800507",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4058980",
+    "wikipedia": "hy:Այրում (կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 10780676055,
+  "lat": 39.9614313,
+  "lon": 44.5541729,
+  "tags": {
+    "name": "Արտաշատ",
+    "name:en": "Artashat",
+    "name:hy": "Արտաշատ",
+    "name:ru": "Арташат",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10780685466,
+  "lat": 41.1101406,
+  "lon": 44.7108616,
+  "tags": {
+    "esr:user": "564825",
+    "name": "Հաղպատ",
+    "name:en": "Haghpat",
+    "name:hy": "Հաղպատ",
+    "name:ru": "Ахпат",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800505",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10780687805,
+  "lat": 40.8861017,
+  "lon": 44.5939319,
+  "tags": {
+    "esr:user": "565230",
+    "int_name": "Վահագնաձոր",
+    "int_name:en": "Vahagnadzor",
+    "name": "Շահալի",
+    "name:en": "Shahali",
+    "name:hy": "Շահալի",
+    "name:ru": "Шагали",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800502",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10780687806,
+  "lat": 40.8293187,
+  "lon": 44.5587085,
+  "tags": {
+    "esr:user": "565245",
+    "name": "Փամբակ",
+    "name:en": "Pambak",
+    "name:hy": "Փամբակ",
+    "name:ru": "Памбак",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800501",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10780687810,
+  "lat": 40.8514955,
+  "lon": 44.1621451,
+  "tags": {
+    "esr:user": "563108",
+    "name": "Նալբանդ",
+    "name:en": "Nalband",
+    "name:hy": "Նալբանդ",
+    "name:ru": "Налбанд",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800497",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10780692693,
+  "lat": 40.4026247,
+  "lon": 44.6474196,
+  "tags": {
+    "esr:user": "568309",
+    "name": "Չարենցավան",
+    "name:en": "Charentsavan",
+    "name:hy": "Չարենցավան",
+    "name:ru": "Чаренцаван",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10781636947,
+  "lat": 40.3429439,
+  "lon": 44.6062229,
+  "tags": {
+    "esr:user": "568116",
+    "name": "Նուռնուս",
+    "name:en": "Nurnus",
+    "name:hy": "Նուռնուս",
+    "name:ru": "Нурнус",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10781636954,
+  "lat": 40.4521061,
+  "lon": 44.6935795,
+  "tags": {
+    "name": "Սոլակ",
+    "name:en": "Solak",
+    "name:hy": "Սոլակ",
+    "name:ru": "Солак",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10781636963,
+  "lat": 40.5418659,
+  "lon": 44.8710632,
+  "tags": {
+    "esr:user": "568807",
+    "name": "Ծաղկունք",
+    "name:en": "Tsakhkunq",
+    "name:hy": "Ծաղկունք",
+    "name:ru": "Цахкунк",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10781691522,
+  "lat": 40.2297777,
+  "lon": 44.5527940,
+  "tags": {
+    "esr:user": "568008",
+    "name": "Քանաքեռ",
+    "name:en": "Kanaker",
+    "name:hy": "Քանաքեռ",
+    "name:ru": "Канакер",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10781691523,
+  "lat": 40.2697515,
+  "lon": 44.6171474,
+  "tags": {
+    "esr:user": "568101",
+    "name": "Աբովյան",
+    "name:en": "Abovyan",
+    "name:hy": "Աբովյան",
+    "name:ru": "Абовян",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800488",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10781691528,
+  "lat": 40.4994207,
+  "lon": 45.2678975,
+  "tags": {
+    "esr:user": "569000",
+    "name": "Շորժա",
+    "name:de": "Schorscha",
+    "name:en": "Shorzha",
+    "name:hy": "Շորժա",
+    "name:ru": "Шоржа",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4526164"
+  }
+},
+{
+  "type": "node",
+  "id": 10781691531,
+  "lat": 40.5160287,
+  "lon": 44.7571021,
+  "tags": {
+    "esr:user": "568402",
+    "name": "Հրազդան",
+    "name:en": "Hrazdan",
+    "name:hy": "Հրազդան",
+    "name:ru": "Раздан",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800487",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4388364",
+    "wikipedia": "hy:Հրազդան (երկաթուղային կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 10781691532,
+  "lat": 40.6266247,
+  "lon": 44.9713145,
+  "tags": {
+    "esr:user": "568934",
+    "name": "Ծովագյուղ",
+    "name:en": "Tsovagyugh",
+    "name:hy": "Ծովագյուղ",
+    "name:ru": "Цовагюх",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.railway.am",
+    "wheelchair": "no",
+    "wikidata": "Q4506035"
+  }
+},
+{
+  "type": "node",
+  "id": 10781720178,
+  "lat": 40.9464104,
+  "lon": 44.6303414,
+  "tags": {
+    "esr:user": "565207",
+    "name": "Թումանյան",
+    "name:en": "Tumanyan",
+    "name:hy": "Թումանյան",
+    "name:ru": "Туманян",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800503",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10781720179,
+  "lat": 41.0093568,
+  "lon": 44.6363824,
+  "tags": {
+    "esr:user": "565103",
+    "name": "Քոբայր",
+    "name:en": "Kobayr",
+    "name:hy": "Քոբայր",
+    "name:ru": "Кобайр",
+    "old_name": "Կոբեր",
+    "old_name:en": "Kober",
+    "old_name:hy": "Կոբեր",
+    "old_name:ru": "Кобер",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800504"
+  }
+},
+{
+  "type": "node",
+  "id": 10782858977,
+  "lat": 40.1131438,
+  "lon": 44.4640762,
+  "tags": {
+    "esr:user": "567433",
+    "name": "Նորագավիթ",
+    "name:en": "Noragavit",
+    "name:hy": "Նորագավիթ",
+    "name:ru": "Норагавит",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800533",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10782858978,
+  "lat": 40.1154733,
+  "lon": 44.1527310,
+  "tags": {
+    "esr:user": "567202",
+    "name": "Սովետական",
+    "name:en": "Sovetakan",
+    "name:hy": "Սովետական",
+    "name:ru": "Советакан",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800718",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10782858979,
+  "lat": 40.8626001,
+  "lon": 44.0544280,
+  "tags": {
+    "esr:user": "565508",
+    "name": "Ղալթախչի",
+    "name:en": "Kaltakhchi",
+    "name:hy": "Ղալթախչի",
+    "name:ru": "Калтахчи",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800496",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 10782858980,
+  "lat": 41.0981703,
+  "lon": 44.6699811,
+  "tags": {
+    "esr:user": "564903",
+    "name": "Ալավերդի",
+    "name:en": "Alaverdi",
+    "name:hy": "Ալավերդի",
+    "name:ru": "Алаверди",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800513",
+    "website": "https://www.railway.am",
+    "wikidata": "Q4060408",
+    "wikipedia": "hy:Ալավերդի (երկաթուղային կայարան)"
+  }
+},
+{
+  "type": "node",
+  "id": 10782858985,
+  "lat": 41.1489605,
+  "lon": 44.7843397,
+  "tags": {
+    "esr:user": "564806",
+    "name": "Ախթալա",
+    "name:en": "Akhtala",
+    "name:hy": "Ախթալա",
+    "name:ru": "Ахтала",
+    "network": "Հարավկովկասյան երկաթուղի",
+    "operator": "Հարավկովկասյան երկաթուղի",
+    "operator:wikidata": "Q20795233",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "5800506",
+    "website": "https://www.railway.am"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513435,
+  "lat": 39.7404143,
+  "lon": 44.8259574,
+  "tags": {
+    "name": "Երասխ",
+    "name:en": "Yeraskh",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q7275343"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513436,
+  "lat": 39.8722627,
+  "lon": 44.6655038,
+  "tags": {
+    "name": "Այգավան",
+    "name:en": "Aygavan",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513437,
+  "lat": 39.9497013,
+  "lon": 44.5783436,
+  "tags": {
+    "name": "Յուվա",
+    "name:en": "Yuva",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513438,
+  "lat": 40.0193775,
+  "lon": 44.4777931,
+  "tags": {
+    "name": "Մխչյան",
+    "name:en": "Mkhchyan",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513439,
+  "lat": 40.0633208,
+  "lon": 44.3888714,
+  "tags": {
+    "name": "Սիս",
+    "name:en": "Sis",
+    "name:hy": "Սիս",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513440,
+  "lat": 40.0681871,
+  "lon": 44.3089053,
+  "tags": {
+    "name": "Հայկաշեն",
+    "name:en": "Haykashen",
+    "name:hy": "Հայկաշեն",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513441,
+  "lat": 40.1071009,
+  "lon": 44.1789303,
+  "tags": {
+    "name": "Արտաշար",
+    "name:en": "Artashar",
+    "name:hy": "Արտաշար",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513442,
+  "lat": 40.1318982,
+  "lon": 44.0827021,
+  "tags": {
+    "name": "Մրգաշատ",
+    "name:en": "Mrgashat",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513443,
+  "lat": 40.2303042,
+  "lon": 43.8768184,
+  "tags": {
+    "name": "Դալարիկ",
+    "name:en": "Dalarik",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513444,
+  "lat": 40.3003348,
+  "lon": 43.7682559,
+  "tags": {
+    "name": "Արտենի",
+    "name:en": "Arteni",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513446,
+  "lat": 40.2131103,
+  "lon": 44.4204328,
+  "tags": {
+    "name": "Սպանդարյան",
+    "name:en": "Spandaryan",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513447,
+  "lat": 40.2603666,
+  "lon": 44.4228282,
+  "tags": {
+    "name": "Պռոշյան",
+    "name:en": "Proshyan",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513448,
+  "lat": 40.2925417,
+  "lon": 44.4966578,
+  "tags": {
+    "name": "Եղվարդ",
+    "name:en": "Yeghvard",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513449,
+  "lat": 40.2834288,
+  "lon": 44.5724633,
+  "tags": {
+    "name": "Նոր Հաճն",
+    "name:en": "Nor Hachn",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513450,
+  "lat": 40.5656291,
+  "lon": 44.8251700,
+  "tags": {
+    "name": "Դդմաշեն",
+    "name:en": "Ddmashen",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513451,
+  "lat": 40.5512983,
+  "lon": 44.9139769,
+  "tags": {
+    "name": "Վարսեր",
+    "name:en": "Varser",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513452,
+  "lat": 40.5679447,
+  "lon": 44.9985129,
+  "tags": {
+    "name": "Սևանի թերակղզի",
+    "name:en": "Sevan Peninsula",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513453,
+  "lat": 40.6225292,
+  "lon": 45.0166723,
+  "tags": {
+    "name": "Շողեր",
+    "name:en": "Shogher",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513454,
+  "lat": 40.6134299,
+  "lon": 45.0434963,
+  "tags": {
+    "name": "Արևիկ",
+    "name:en": "Arevik",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513455,
+  "lat": 40.5991190,
+  "lon": 45.0877015,
+  "tags": {
+    "name": "Ծիծեռնակ",
+    "name:en": "Tsitsernak",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513456,
+  "lat": 40.5474930,
+  "lon": 45.2096165,
+  "tags": {
+    "name": "Դրախտիկ",
+    "name:en": "Drakhtik",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513457,
+  "lat": 40.4942450,
+  "lon": 45.3564343,
+  "tags": {
+    "name": "Արտանիշ",
+    "name:en": "Artanish",
+    "name:hy": "Արտանիշ",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513458,
+  "lat": 40.3714287,
+  "lon": 45.5333821,
+  "tags": {
+    "name": "Արեգ",
+    "name:en": "Areg",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513459,
+  "lat": 40.2029651,
+  "lon": 45.7436100,
+  "tags": {
+    "name": "Վարդենիս",
+    "name:en": "Vardenis",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513460,
+  "lat": 40.2161689,
+  "lon": 45.9439887,
+  "tags": {
+    "name": "Սոթք",
+    "name:en": "Sotk",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513461,
+  "lat": 40.5734997,
+  "lon": 44.7516023,
+  "tags": {
+    "name": "Կաքավաձոր",
+    "name:en": "Kaqavadzor",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11368513462,
+  "lat": 40.2051498,
+  "lon": 44.5505145,
+  "tags": {
+    "name": "Ալմաստ",
+    "name:en": "Almast",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11523019414,
+  "lat": 40.6676228,
+  "lon": 46.7345363,
+  "tags": {
+    "name": "DEPO Kürəkçay \\ Borsunlu",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 12066960842,
+  "lat": 41.1302527,
+  "lon": 45.4278982,
+  "tags": {
+    "name": "Yeni Poylu Stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 12165174337,
+  "lat": 40.1120491,
+  "lon": 44.4488867,
+  "tags": {
+    "name": "9-րդ կիլոմետր",
+    "name:en": "9th kilometer",
+    "name:hy": "9-րդ կիլոմետր",
+    "name:ru": "9-я километр",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12165174338,
+  "lat": 40.1359279,
+  "lon": 44.4637855,
+  "tags": {
+    "name": "Կարմիր բլուր",
+    "name:en": "Red Hill",
+    "name:hy": "Կարմիր բլուր",
+    "name:ru": "Красный холм",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12165174339,
+  "lat": 40.5984511,
+  "lon": 44.9616801,
+  "tags": {
+    "name": "Ախթամար",
+    "name:en": "Akhtamar",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12403001576,
+  "lat": 40.5428844,
+  "lon": 46.1147837,
+  "tags": {
+    "name": "Quşçu Yük stansiyası",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 12974485816,
+  "lat": 39.8208080,
+  "lon": 46.7749945,
+  "tags": {
+    "construction": "yes",
+    "name": "Xankəndi stansiyası",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13019532659,
+  "lat": 39.9941023,
+  "lon": 46.9617222,
+  "tags": {
+    "name": "Ağdam",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13183864609,
+  "lat": 38.6593275,
+  "lon": 43.6572587,
+  "tags": {
+    "name": "Erçek",
+    "network": "Türkiye Cumhuriyeti Devlet Demiryolları",
+    "network:short": "TCDD",
+    "network:wikidata": "Q499967",
+    "operator": "TCDD Taşımacılık",
+    "operator:wikidata": "Q28220824",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13183865200,
+  "lat": 38.5627788,
+  "lon": 43.4562946,
+  "tags": {
+    "name": "Çeken",
+    "network": "Türkiye Cumhuriyeti Devlet Demiryolları",
+    "network:short": "TCDD",
+    "network:wikidata": "Q499967",
+    "operator": "TCDD Taşımacılık",
+    "operator:wikidata": "Q28220824",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13184388993,
+  "lat": 38.5101269,
+  "lon": 44.2951887,
+  "tags": {
+    "ele": "2058",
+    "name": "Kapıköy",
+    "network": "Türkiye Cumhuriyeti Devlet Demiryolları",
+    "network:short": "TCDD",
+    "network:wikidata": "Q499967",
+    "operator": "TCDD Taşımacılık",
+    "operator:wikidata": "Q28220824",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168850",
+    "wikipedia": "tr:Kapıköy Tren İstasyonu"
+  }
+},
+{
+  "type": "node",
+  "id": 13185553849,
+  "lat": 38.6533516,
+  "lon": 43.9897272,
+  "tags": {
+    "ele": "2001",
+    "name": "Özalp",
+    "network": "Türkiye Cumhuriyeti Devlet Demiryolları",
+    "network:short": "TCDD",
+    "network:wikidata": "Q499967",
+    "operator": "TCDD Taşımacılık",
+    "operator:wikidata": "Q28220824",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85455875",
+    "wikipedia": "tr:Özalp Tren İstasyonu"
+  }
+},
+{
+  "type": "node",
+  "id": 13192229548,
+  "lat": 38.5216832,
+  "lon": 43.3831711,
+  "tags": {
+    "ele": "1707",
+    "name": "Van",
+    "network": "Türkiye Cumhuriyeti Devlet Demiryolları",
+    "network:short": "TCDD",
+    "network:wikidata": "Q499967",
+    "operator": "TCDD Taşımacılık",
+    "operator:wikidata": "Q28220824",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "Bing",
+    "train": "yes",
+    "wikidata": "Q31188653",
+    "wikimedia_commons": "Category:Van railway station",
+    "wikipedia": "tr:Van Garı"
+  }
+},
+{
+  "type": "node",
+  "id": 13247813127,
+  "lat": 40.7398464,
+  "lon": 43.6234121,
+  "tags": {
+    "ele": "1477",
+    "name": "Akyaka",
+    "network": "Türkiye Cumhuriyeti Devlet Demiryolları",
+    "network:short": "TCDD",
+    "network:wikidata": "Q499967",
+    "operator": "TCDD Taşımacılık",
+    "operator:wikidata": "Q28220824",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q4702026",
+    "wikimedia_commons": "Category:Akyaka railway station",
+    "wikipedia": "tr:Akyaka Tren İstasyonu"
+  }
+},
+{
+  "type": "node",
+  "id": 13249471308,
+  "lat": 40.8289107,
+  "lon": 43.2546212,
+  "tags": {
+    "name": "Güvercin",
+    "network": "Türkiye Cumhuriyeti Devlet Demiryolları",
+    "network:short": "TCDD",
+    "network:wikidata": "Q499967",
+    "operator": "TCDD Taşımacılık",
+    "operator:wikidata": "Q28220824",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13249471379,
+  "lat": 40.9671793,
+  "lon": 43.3047284,
+  "tags": {
+    "name": "Canbaz",
+    "network": "Türkiye Cumhuriyeti Devlet Demiryolları",
+    "network:short": "TCDD",
+    "network:wikidata": "Q499967",
+    "operator": "TCDD Taşımacılık",
+    "operator:wikidata": "Q28220824",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13249471514,
+  "lat": 41.1301613,
+  "lon": 43.3011659,
+  "tags": {
+    "name": "Canbazlar",
+    "network": "Türkiye Cumhuriyeti Devlet Demiryolları",
+    "network:short": "TCDD",
+    "network:wikidata": "Q499967",
+    "operator": "TCDD Taşımacılık",
+    "operator:wikidata": "Q28220824",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13395861938,
+  "lat": 38.9377080,
+  "lon": 45.6305528,
+  "tags": {
+    "name": "ایستگاه راه آهن شهر جلفا",
+    "name:en": "Jolfa",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q43401146",
+    "wikipedia": "fa:ایستگاه راه‌آهن جلفا"
+  }
+}
+
+  ]
+}

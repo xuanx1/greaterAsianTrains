@@ -1,0 +1,6633 @@
+{
+ "kept": [
+  {
+   "fid": 1,
+   "lat": 43.447585,
+   "lng": 39.904171,
+   "name_ru": "Адлер",
+   "name_en": "Adler",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 2,
+   "lat": 43.683725,
+   "lng": 40.232175,
+   "name_ru": "Эсто-Садок",
+   "name_en": "Esto-Sadok",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 3,
+   "lat": 43.676263,
+   "lng": 40.280658,
+   "name_ru": "Роза Хутор",
+   "name_en": "Roza Khutor",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 4,
+   "lat": 53.714408,
+   "lng": 91.440478,
+   "name_ru": "Абакан",
+   "name_en": "Abakan",
+   "note": null,
+   "status": 8,
+   "name_long": null
+  },
+  {
+   "fid": 5,
+   "lat": 53.628082,
+   "lng": 91.635361,
+   "name_ru": "Минусинск",
+   "name_en": "Minusinsk",
+   "note": null,
+   "status": 7,
+   "name_long": null
+  },
+  {
+   "fid": 6,
+   "lat": 53.13406469646428,
+   "lng": 90.41259100634927,
+   "name_ru": "Аскиз",
+   "name_en": "Askiz",
+   "note": null,
+   "status": 7,
+   "name_long": null
+  },
+  {
+   "fid": 7,
+   "lat": 56.303263001264106,
+   "lng": 90.51791816848169,
+   "name_ru": "Ачинск",
+   "name_en": "Achinsk",
+   "note": null,
+   "status": 7,
+   "name_long": null
+  },
+  {
+   "fid": 8,
+   "lat": 53.170231,
+   "lng": 48.482043,
+   "name_ru": "Сызрань-1",
+   "name_en": "Syzran-1",
+   "note": null,
+   "status": 9,
+   "name_long": null
+  },
+  {
+   "fid": 9,
+   "lat": 56.29277497220073,
+   "lng": 37.78137006955672,
+   "name_ru": "Костино",
+   "name_en": "Kostino",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 10,
+   "lat": 56.359411,
+   "lng": 38.176836,
+   "name_ru": "Наугольный",
+   "name_en": "Naugolny",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 11,
+   "lat": 56.297899,
+   "lng": 37.942076,
+   "name_ru": "Желтиково",
+   "name_en": "Zeltikovo",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 12,
+   "lat": 56.30236336029013,
+   "lng": 38.13760188312993,
+   "name_ru": "Сергиев Посад",
+   "name_en": "Sergiev Posad",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 14,
+   "lat": 56.859055,
+   "lng": 60.609196,
+   "name_ru": "Екатеринбург",
+   "name_en": "Ekaterinburg",
+   "note": null,
+   "status": 10,
+   "name_long": null
+  },
+  {
+   "fid": 16,
+   "lat": 53.438497,
+   "lng": 58.978185,
+   "name_ru": "Магнитогорск",
+   "name_en": "Magnitogorsk",
+   "note": null,
+   "status": 9,
+   "name_long": null
+  },
+  {
+   "fid": 17,
+   "lat": 54.223653,
+   "lng": 57.584849,
+   "name_ru": "Инзер",
+   "name_en": "Inzer",
+   "note": null,
+   "status": 7,
+   "name_long": null
+  },
+  {
+   "fid": 18,
+   "lat": 53.926725,
+   "lng": 58.321704,
+   "name_ru": "Белорецк",
+   "name_en": "Beloretsk",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 19,
+   "lat": 56.788945,
+   "lng": 59.518926,
+   "name_ru": "Дружинино",
+   "name_en": "Druzinino",
+   "note": null,
+   "status": 7,
+   "name_long": null
+  },
+  {
+   "fid": 20,
+   "lat": 55.140944,
+   "lng": 61.416608,
+   "name_ru": "Челябинск",
+   "name_en": "Chelyabinsk",
+   "note": null,
+   "status": 9,
+   "name_long": null
+  },
+  {
+   "fid": 22,
+   "lat": 58.291368,
+   "lng": 57.837002,
+   "name_ru": "Чусовская",
+   "name_en": "Chusovskaya",
+   "note": null,
+   "status": 7,
+   "name_long": null
+  },
+  {
+   "fid": 23,
+   "lat": 58.265577681445954,
+   "lng": 59.70940514771342,
+   "name_ru": "Гороблагодатская",
+   "name_en": "Goroblagodatskaya",
+   "note": null,
+   "status": 7,
+   "name_long": null
+  },
+  {
+   "fid": 24,
+   "lat": 57.910053,
+   "lng": 59.994478,
+   "name_ru": "Нижний Тагил",
+   "name_en": "Nizniy Tagil",
+   "note": null,
+   "status": 9,
+   "name_long": null
+  },
+  {
+   "fid": 25,
+   "lat": 56.339276,
+   "lng": 30.563495,
+   "name_ru": "Великие Луки",
+   "name_en": "Velikie Luki",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 26,
+   "lat": 57.133748,
+   "lng": 33.122175,
+   "name_ru": "Осташков",
+   "name_en": "Ostashkov",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 27,
+   "lat": 57.887087,
+   "lng": 34.058393,
+   "name_ru": "Бологое",
+   "name_en": "Bologoye",
+   "note": null,
+   "status": 8,
+   "name_long": null
+  },
+  {
+   "fid": 28,
+   "lat": 57.824501,
+   "lng": 29.964874,
+   "name_ru": "Дно",
+   "name_en": "Dno",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 29,
+   "lat": 57.804269,
+   "lng": 28.362106,
+   "name_ru": "Псков",
+   "name_en": "Pskov",
+   "note": null,
+   "status": 9,
+   "name_long": null
+  },
+  {
+   "fid": 30,
+   "lat": 58.741041,
+   "lng": 29.845343,
+   "name_ru": "Луга",
+   "name_en": "Luga",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 31,
+   "lat": 58.647932,
+   "lng": 30.314912,
+   "name_ru": "Батецкая",
+   "name_en": "Batetskaya",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 32,
+   "lat": 58.526759,
+   "lng": 31.25017,
+   "name_ru": "Новгород",
+   "name_en": "Novgorod",
+   "note": null,
+   "status": 8,
+   "name_long": null
+  },
+  {
+   "fid": 33,
+   "lat": 59.124386,
+   "lng": 31.676008,
+   "name_ru": "Чудово",
+   "name_en": "Chudovo",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 35,
+   "lat": 57.042282,
+   "lng": 34.980381,
+   "name_ru": "Торжок",
+   "name_en": "Torzok",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 36,
+   "lat": 56.888226,
+   "lng": 32.654053,
+   "name_ru": "Соблаго",
+   "name_en": "Soblago",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 37,
+   "lat": 57.026374,
+   "lng": 34.185329,
+   "name_ru": "Кувшиново",
+   "name_en": "Kuvshinovo",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 38,
+   "lat": 55.086261425485276,
+   "lng": 38.804981826887975,
+   "name_ru": "Голутвин",
+   "name_en": "Golutvin",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 39,
+   "lat": 54.861259,
+   "lng": 38.566605,
+   "name_ru": "Озёры",
+   "name_en": "Ozory",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 40,
+   "lat": 56.34396004440926,
+   "lng": 30.1471064446619,
+   "name_ru": "Новосокольники",
+   "name_en": "Novosokolniki",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 41,
+   "lat": 56.646098,
+   "lng": 32.263277,
+   "name_ru": "Андреаполь",
+   "name_en": "Andreapol",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 42,
+   "lat": 56.038929,
+   "lng": 29.947978,
+   "name_ru": "Невель 1",
+   "name_en": "Nevel 1",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 43,
+   "lat": 56.019593,
+   "lng": 29.934617,
+   "name_ru": "Невель 2",
+   "name_en": "Nevel 2",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 44,
+   "lat": 59.45744,
+   "lng": 32.027501,
+   "name_ru": "Кириши",
+   "name_en": "Kirishi",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 45,
+   "lat": 59.283368,
+   "lng": 32.444834,
+   "name_ru": "Бугодошь",
+   "name_en": "Bugodosh",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 46,
+   "lat": 59.636501,
+   "lng": 33.504773,
+   "name_ru": "Тихвин",
+   "name_en": "Tikhvin",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 47,
+   "lat": 59.12195,
+   "lng": 33.342585,
+   "name_ru": "Неболчи",
+   "name_en": "Nebolchi",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 48,
+   "lat": 58.373175,
+   "lng": 33.29735,
+   "name_ru": "Окуловка",
+   "name_en": "Okulovka",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 49,
+   "lat": 56.398222,
+   "lng": 38.703752,
+   "name_ru": "Александров",
+   "name_en": "Aleksandrov",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 50,
+   "lat": 56.484437,
+   "lng": 39.669191,
+   "name_ru": "Юрьев-Польский",
+   "name_en": null,
+   "note": "Yuriev-Polsky",
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 51,
+   "lat": 57.01807,
+   "lng": 40.980242,
+   "name_ru": "Иваново",
+   "name_en": "Ivanovo",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 52,
+   "lat": 57.245115,
+   "lng": 41.115024,
+   "name_ru": "Фурманов",
+   "name_en": "Furmanov",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 53,
+   "lat": 57.461914072376814,
+   "lng": 40.548731213611696,
+   "name_ru": "Нерехта",
+   "name_en": "Nerekhta",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 54,
+   "lat": 57.759572,
+   "lng": 40.980265,
+   "name_ru": "Кострома",
+   "name_en": "Kostroma",
+   "note": null,
+   "status": 8,
+   "name_long": null
+  },
+  {
+   "fid": 56,
+   "lat": 46.957686,
+   "lng": 142.725736,
+   "name_ru": "Южно-Сахалинск",
+   "name_en": "Yuzno-Sakhalinsk",
+   "note": null,
+   "status": 9,
+   "name_long": null
+  },
+  {
+   "fid": 57,
+   "lat": 46.63383,
+   "lng": 142.762018,
+   "name_ru": "Корсаков",
+   "name_en": "Korsakov",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 58,
+   "lat": 47.042177,
+   "lng": 142.040662,
+   "name_ru": "Холмск-Южный",
+   "name_en": "Holmsk-Yuznyi",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 59,
+   "lat": 46.98685246509185,
+   "lng": 142.11662248419884,
+   "name_ru": "Чёртов Мост",
+   "name_en": "Chertov Most",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 60,
+   "lat": 47.440264,
+   "lng": 141.975905,
+   "name_ru": "Чехов",
+   "name_en": "Chekhov",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 61,
+   "lat": 47.763973,
+   "lng": 142.070193,
+   "name_ru": "Томари",
+   "name_en": "Tomari",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 62,
+   "lat": 55.559428,
+   "lng": 39.686147,
+   "name_ru": "Кривандино",
+   "name_en": "Krivandino",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 63,
+   "lat": 55.474031,
+   "lng": 39.659339,
+   "name_ru": "Осаново",
+   "name_en": "Osanovo",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 64,
+   "lat": 55.146157,
+   "lng": 39.55711,
+   "name_ru": "Рязановка",
+   "name_en": "Ryazanovka",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 65,
+   "lat": 55.26338,
+   "lng": 39.649628,
+   "name_ru": "Бармино",
+   "name_en": "Barmino",
+   "note": "1",
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 66,
+   "lat": 55.400561,
+   "lng": 39.673369,
+   "name_ru": "Пожога",
+   "name_en": "Pozoga",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 67,
+   "lat": 55.777382,
+   "lng": 37.654558,
+   "name_ru": "Москва",
+   "name_en": "Moskva",
+   "note": null,
+   "status": 10,
+   "name_long": null
+  },
+  {
+   "fid": 68,
+   "lat": 56.322643,
+   "lng": 43.946243,
+   "name_ru": "Нижний Новгород",
+   "name_en": "Nizniy Novgorod",
+   "note": null,
+   "status": 10,
+   "name_long": null
+  },
+  {
+   "fid": 69,
+   "lat": 56.368757,
+   "lng": 41.304552,
+   "name_ru": "Ковров",
+   "name_en": "Kovrov",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 70,
+   "lat": 56.362593,
+   "lng": 41.075393,
+   "name_ru": "Новки 1",
+   "name_en": "Novki 1",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 72,
+   "lat": 55.144975,
+   "lng": 40.546587,
+   "name_ru": "Тумская",
+   "name_en": "Tumskaya",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 73,
+   "lat": 55.618911,
+   "lng": 40.650141,
+   "name_ru": "Гусь-Хрустальный",
+   "name_en": "Gus-Khrustalnyi",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 74,
+   "lat": 55.563545,
+   "lng": 42.01704,
+   "name_ru": "Муром",
+   "name_en": "Murom",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 75,
+   "lat": 55.971336,
+   "lng": 43.096668,
+   "name_ru": "Металлист",
+   "name_en": "Metallist",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 76,
+   "lat": 56.411564,
+   "lng": 42.635013,
+   "name_ru": "Фролищи",
+   "name_en": "Frolishi",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 77,
+   "lat": 56.645011,
+   "lng": 43.392361,
+   "name_ru": "Заволжье",
+   "name_en": "Zavolzie",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 78,
+   "lat": 56.25496,
+   "lng": 43.971659,
+   "name_ru": "Проспект Гагарина",
+   "name_en": "Prospekt Gagarina",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 79,
+   "lat": 55.41735999152218,
+   "lng": 43.851447272620916,
+   "name_ru": "Арзамас-2",
+   "name_en": "Arzamas-2",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 80,
+   "lat": 55.409161,
+   "lng": 43.789786,
+   "name_ru": "Арзамас-1",
+   "name_en": "Arzamas-1",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 81,
+   "lat": 54.876178,
+   "lng": 43.802492,
+   "name_ru": "Первомайск",
+   "name_en": "Pervomaisk",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 82,
+   "lat": 55.190543,
+   "lng": 44.109525,
+   "name_ru": "Шатки",
+   "name_en": "Shatki",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 83,
+   "lat": 55.390959,
+   "lng": 39.008761,
+   "name_ru": "Егорьевск",
+   "name_en": "Yegorievsk",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 84,
+   "lat": 55.313566,
+   "lng": 38.70208,
+   "name_ru": "Воскресенск",
+   "name_en": "Voskresensk",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 85,
+   "lat": 55.481025,
+   "lng": 38.914551,
+   "name_ru": "Ильинский Погост",
+   "name_en": "Ilinsky Pogst",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 86,
+   "lat": 55.572821,
+   "lng": 38.917492,
+   "name_ru": "Куровская",
+   "name_en": "Kurovskaya",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 87,
+   "lat": 55.795608,
+   "lng": 38.976696,
+   "name_ru": "Орехово",
+   "name_en": "Orekhovo",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 88,
+   "lat": 54.915894,
+   "lng": 39.258652,
+   "name_ru": "Фруктовая",
+   "name_en": "Fruktovaya",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 89,
+   "lat": 54.982901,
+   "lng": 39.041035,
+   "name_ru": "Луховицы",
+   "name_en": "Lukhovitsy",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 90,
+   "lat": 54.766575,
+   "lng": 38.881681,
+   "name_ru": "Зарайск",
+   "name_en": "Zaraisk",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 91,
+   "lat": 64.550943,
+   "lng": 40.574678,
+   "name_ru": "Архангельск",
+   "name_en": "Arkhangelsk",
+   "note": null,
+   "status": 8,
+   "name_long": null
+  },
+  {
+   "fid": 93,
+   "lat": 64.540085,
+   "lng": 34.774742,
+   "name_ru": "Беломорск",
+   "name_en": "Belomorsk",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 94,
+   "lat": 63.451209,
+   "lng": 40.311175,
+   "name_ru": "Обозёрская",
+   "name_en": "Obozerskaya",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 95,
+   "lat": 60.973915,
+   "lng": 40.246784,
+   "name_ru": "Коноша",
+   "name_en": "Konosha",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 97,
+   "lat": 63.925455,
+   "lng": 38.096189,
+   "name_ru": "Онега",
+   "name_en": "Onega",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 98,
+   "lat": 63.802867,
+   "lng": 38.35478,
+   "name_ru": "Грибаниха",
+   "name_en": "Gribaniha",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 99,
+   "lat": 64.57357231672121,
+   "lng": 39.85149908859549,
+   "name_ru": "Северодвинск",
+   "name_en": "Severodvinsk",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 100,
+   "lat": 64.635614,
+   "lng": 39.229044,
+   "name_ru": "Ненокса",
+   "name_en": "Nenoksa",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 101,
+   "lat": 67.159919,
+   "lng": 32.420037,
+   "name_ru": "Кандалакша",
+   "name_en": "Kandalaksha",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 102,
+   "lat": 59.921212,
+   "lng": 32.300678,
+   "name_ru": "Волховстрой",
+   "name_en": "Volhovstroi",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 103,
+   "lat": 59.931409,
+   "lng": 30.441313,
+   "name_ru": "СПБ-Ладожский",
+   "name_en": "SPB-Ladozskiy",
+   "note": null,
+   "status": 7,
+   "name_long": null
+  },
+  {
+   "fid": 104,
+   "lat": 59.928661,
+   "lng": 30.362538,
+   "name_ru": "СПб",
+   "name_en": "SPb",
+   "note": null,
+   "status": 10,
+   "name_long": null
+  },
+  {
+   "fid": 106,
+   "lat": 67.564296,
+   "lng": 33.369816,
+   "name_ru": "Апатиты",
+   "name_en": "Apatity",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 107,
+   "lat": 67.37309518122032,
+   "lng": 32.48681358934344,
+   "name_ru": "Полярные Зори",
+   "name_en": "Polyarnye Zori",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 108,
+   "lat": 68.136114,
+   "lng": 33.312866,
+   "name_ru": "Олерегорск",
+   "name_en": "Olenegorsk",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 109,
+   "lat": 67.95165787055082,
+   "lng": 32.874323820096194,
+   "name_ru": "Мончегорск",
+   "name_en": "Monchegorsk",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 110,
+   "lat": 67.54913896421733,
+   "lng": 30.481452351778923,
+   "name_ru": "Ковдор",
+   "name_en": "Kovdor",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 111,
+   "lat": 67.31711420793997,
+   "lng": 32.4984658183837,
+   "name_ru": "Пинозеро",
+   "name_en": "Pinozero",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 112,
+   "lat": 69.50942019299104,
+   "lng": 31.163170849345033,
+   "name_ru": "Печенга",
+   "name_en": "Pechenga",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 113,
+   "lat": 68.81987764777526,
+   "lng": 32.81879695246773,
+   "name_ru": "Мурмаши",
+   "name_en": "Murmashi",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 114,
+   "lat": 68.888955,
+   "lng": 33.051095,
+   "name_ru": "Кола",
+   "name_en": "Kola",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 115,
+   "lat": 69.4201614860868,
+   "lng": 30.256442340457127,
+   "name_ru": "Никель-Мурманский",
+   "name_en": "Nikel-Murmansky",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 116,
+   "lat": 64.041462,
+   "lng": 44.403914,
+   "name_ru": "Карпогоры",
+   "name_en": "Karpogory",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 117,
+   "lat": 63.44455,
+   "lng": 48.667008,
+   "name_ru": "Кослан",
+   "name_en": "Koslan",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 118,
+   "lat": 61.657878,
+   "lng": 50.790993,
+   "name_ru": "Сыктывкар",
+   "name_en": "Syktyvkar",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 119,
+   "lat": 64.608428,
+   "lng": 30.602934,
+   "name_ru": "Костомукша",
+   "name_en": "Koskomuksha",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 120,
+   "lat": 64.033361,
+   "lng": 34.245435,
+   "name_ru": "Кочкома",
+   "name_en": "Kochkoma",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 121,
+   "lat": 64.61514315548071,
+   "lng": 40.56031803032229,
+   "name_ru": "Соломбалка",
+   "name_en": "Solombalka",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 122,
+   "lat": 64.603901,
+   "lng": 40.597669,
+   "name_ru": "Партизанская",
+   "name_en": "Partizanskaya",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 123,
+   "lat": 64.593923,
+   "lng": 40.614758,
+   "name_ru": "Чёрная Курья",
+   "name_en": "Chernaya Kurja",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 124,
+   "lat": 64.579261,
+   "lng": 40.589698,
+   "name_ru": "ЖБИ",
+   "name_en": "ZBI",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 125,
+   "lat": 64.574991,
+   "lng": 40.578696,
+   "name_ru": "TЭЦ",
+   "name_en": "TEC",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 126,
+   "lat": 58.041397,
+   "lng": 38.831137,
+   "name_ru": "Рыбинск",
+   "name_en": "Rybinsk",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 127,
+   "lat": 57.778715,
+   "lng": 39.290945,
+   "name_ru": "Варегово",
+   "name_en": "Varegovo",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 128,
+   "lat": 57.837114,
+   "lng": 39.549348,
+   "name_ru": "Тутаево",
+   "name_en": "Tutaevo",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 129,
+   "lat": 57.804763,
+   "lng": 39.342639,
+   "name_ru": "Ваулово",
+   "name_en": "Vaulovo",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 130,
+   "lat": 57.75510176960263,
+   "lng": 39.536597527506345,
+   "name_ru": "Чебаково",
+   "name_en": "Chebakovo",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 131,
+   "lat": 57.673451,
+   "lng": 39.760408,
+   "name_ru": "Молот",
+   "name_en": "Molot",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 132,
+   "lat": 57.656095,
+   "lng": 39.933388,
+   "name_ru": "Филино",
+   "name_en": "Filino",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 133,
+   "lat": 57.601146,
+   "lng": 39.872698,
+   "name_ru": "Ярославль-Московский",
+   "name_en": "Yaroslsvl-Moskovsky",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 134,
+   "lat": 57.559082,
+   "lng": 39.918309,
+   "name_ru": "Дунайка",
+   "name_en": "Dunaika",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 135,
+   "lat": 57.709004,
+   "lng": 39.687719,
+   "name_ru": "Тенино",
+   "name_en": "Tenino",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 136,
+   "lat": 57.871325,
+   "lng": 39.148927,
+   "name_ru": "Лом",
+   "name_en": "Lom",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 137,
+   "lat": 57.306968,
+   "lng": 39.536751,
+   "name_ru": "Семибратово",
+   "name_en": "Semibratovo",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 138,
+   "lat": 57.301716,
+   "lng": 39.842139,
+   "name_ru": "Гаврилов Ям",
+   "name_en": "Gavrilov Yam",
+   "note": null,
+   "status": null,
+   "name_long": null
+  },
+  {
+   "fid": 139,
+   "lat": 57.52812,
+   "lng": 39.959009,
+   "name_ru": "Телищево",
+   "name_en": "Telishevo",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 140,
+   "lat": 58.186652,
+   "lng": 40.185908,
+   "name_ru": "Данилов",
+   "name_en": "Danilov",
+   "note": null,
+   "status": 8,
+   "name_long": null
+  },
+  {
+   "fid": 141,
+   "lat": 57.906173,
+   "lng": 38.066098,
+   "name_ru": "Некоуз",
+   "name_en": "Nekouz",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 142,
+   "lat": 57.507427,
+   "lng": 38.325536,
+   "name_ru": "Углич",
+   "name_en": "Uglich",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 143,
+   "lat": 57.234317,
+   "lng": 37.829329,
+   "name_ru": "Калязин",
+   "name_en": "Kalyazin",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 144,
+   "lat": 58.040601444760675,
+   "lng": 38.87744287396783,
+   "name_ru": "Рыбинск-Товарный",
+   "name_en": "Rybinsk-Tovarnyi",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 145,
+   "lat": 57.768171,
+   "lng": 40.034408,
+   "name_ru": "Левцево",
+   "name_en": "Levcevo",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 146,
+   "lat": 57.643390548903405,
+   "lng": 39.862210549351154,
+   "name_ru": "Приволжье",
+   "name_en": "Privolzie",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 147,
+   "lat": 57.654108,
+   "lng": 39.776815,
+   "name_ru": "285 км",
+   "name_en": null,
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 148,
+   "lat": 57.492482,
+   "lng": 40.119732,
+   "name_ru": "Лютово",
+   "name_en": "Lutovo",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 149,
+   "lat": 57.48767,
+   "lng": 39.688451,
+   "name_ru": "Козьмодемьянск",
+   "name_en": "Kozmodemiansk",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 150,
+   "lat": 57.9606818,
+   "lng": 38.9815151,
+   "name_ru": "Торопово",
+   "name_en": "Toropovo",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 151,
+   "lat": 57.9125384,
+   "lng": 39.0589532,
+   "name_ru": "Пиняги",
+   "name_en": "Pinyagi",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 152,
+   "lat": 57.8244895,
+   "lng": 39.2550185,
+   "name_ru": "Чижово",
+   "name_en": "Chizovo",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 153,
+   "lat": 57.815395,
+   "lng": 39.272847,
+   "name_ru": "323 км",
+   "name_en": null,
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 154,
+   "lat": 57.795519,
+   "lng": 39.309525,
+   "name_ru": "2 км",
+   "name_en": null,
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 155,
+   "lat": 57.778929,
+   "lng": 39.439926,
+   "name_ru": "Клинцево",
+   "name_en": "Klincevo",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 156,
+   "lat": 57.7321114,
+   "lng": 39.6206852,
+   "name_ru": "300 км",
+   "name_en": null,
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 157,
+   "lat": 57.6339262,
+   "lng": 39.8139921,
+   "name_ru": "Депо",
+   "name_en": "Depo",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 158,
+   "lat": 57.6061284,
+   "lng": 39.8478849,
+   "name_ru": "Которосль",
+   "name_en": "Kotorosl",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 159,
+   "lat": 58.0369165,
+   "lng": 38.7867012,
+   "name_ru": "Веретье",
+   "name_en": "Veretye",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 160,
+   "lat": 57.931338,
+   "lng": 38.238333,
+   "name_ru": "Шестихино",
+   "name_en": "Shestikhino",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 161,
+   "lat": 57.8197366,
+   "lng": 37.366527,
+   "name_ru": "Пищалкино",
+   "name_en": "Pishalkino",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 162,
+   "lat": 57.780326,
+   "lng": 37.162864,
+   "name_ru": "Сонково",
+   "name_en": "Sonkovo",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 163,
+   "lat": 57.5839881,
+   "lng": 37.3060888,
+   "name_ru": "Кесова Гора",
+   "name_en": "Kesova Gora",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 164,
+   "lat": 57.729231,
+   "lng": 40.00323,
+   "name_ru": "Коченятино",
+   "name_en": "Kochenyatino",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 165,
+   "lat": 57.693763,
+   "lng": 39.971369,
+   "name_ru": "Сосновцы",
+   "name_en": "Sosnovtsy",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 166,
+   "lat": 57.81136593896419,
+   "lng": 40.084285146036905,
+   "name_ru": "Уткино",
+   "name_en": "Utkino",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 167,
+   "lat": 58.807905,
+   "lng": 41.054548,
+   "name_ru": "Вохтога",
+   "name_en": "Vohtoga",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 168,
+   "lat": 59.157498,
+   "lng": 35.310445,
+   "name_ru": "Чагода",
+   "name_en": "Chagoda",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 169,
+   "lat": 59.14055086724988,
+   "lng": 37.92642541163676,
+   "name_ru": "Череповец-1",
+   "name_en": "Cherepovets-1",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 170,
+   "lat": 63.706126,
+   "lng": 37.464326,
+   "name_ru": "Малошуйка",
+   "name_en": "Maloshuika",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 171,
+   "lat": 63.854288,
+   "lng": 36.461001,
+   "name_ru": "Маленьга",
+   "name_en": "Malenga",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 172,
+   "lat": 64.247304,
+   "lng": 35.391164,
+   "name_ru": "Сумский посад",
+   "name_en": "Sumsky Posad",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 173,
+   "lat": 69.019534,
+   "lng": 33.097416,
+   "name_ru": "Комсомольск-Мурманский",
+   "name_en": "Komsomolsk-Murmanskyi",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 174,
+   "lat": 60.727799,
+   "lng": 33.554041,
+   "name_ru": "Лодейное поле",
+   "name_en": "Lodeinoe Pole",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 175,
+   "lat": 61.573957,
+   "lng": 31.462245,
+   "name_ru": "Питкяранта",
+   "name_en": "Pitkaranta",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 176,
+   "lat": 61.95168368502788,
+   "lng": 30.574626573665697,
+   "name_ru": "Горный парк Рускеала",
+   "name_en": "Gornyi park Ruskeala",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 177,
+   "lat": 61.9672,
+   "lng": 30.536423,
+   "name_ru": "Маткаселькя",
+   "name_en": "Matkaselkya",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 178,
+   "lat": 62.082554,
+   "lng": 32.341371,
+   "name_ru": "Суоярви 1",
+   "name_en": "Suojarvi 1",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 179,
+   "lat": 61.842512,
+   "lng": 34.245806,
+   "name_ru": "Томицы",
+   "name_en": "Tomitsy",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 180,
+   "lat": 61.235901,
+   "lng": 29.689074,
+   "name_ru": "Хийтола",
+   "name_en": "Hitoila",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 181,
+   "lat": 60.962075,
+   "lng": 29.109598,
+   "name_ru": "Каменногорск",
+   "name_en": "Kamennogorsk",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 182,
+   "lat": 61.117694,
+   "lng": 28.845923,
+   "name_ru": "Светлогорск",
+   "name_en": "Svetlogorsk",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 183,
+   "lat": 58.46682238003073,
+   "lng": 41.54503962406367,
+   "name_ru": "Буй",
+   "name_en": "Bui",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 184,
+   "lat": 58.3678,
+   "lng": 42.344404,
+   "name_ru": "Галич",
+   "name_en": "Galich",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 185,
+   "lat": 65.76236,
+   "lng": 31.121698,
+   "name_ru": "Пяозеро Товарная",
+   "name_en": "Paozero Tovarnaya",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 186,
+   "lat": 66.07537561923272,
+   "lng": 33.05925583576007,
+   "name_ru": "Лоухи",
+   "name_en": "Loukhi",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 187,
+   "lat": 64.955131,
+   "lng": 34.568623,
+   "name_ru": "Кемь",
+   "name_en": "Kem",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 188,
+   "lat": 64.770433,
+   "lng": 32.231263,
+   "name_ru": "Юшкозеро",
+   "name_en": "Yushkozero",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 189,
+   "lat": 64.2579658901232,
+   "lng": 32.04049800495755,
+   "name_ru": "Ледмозеро",
+   "name_en": "Ledmozero",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 190,
+   "lat": 69.40045203194326,
+   "lng": 31.106797255602096,
+   "name_ru": "Луостари",
+   "name_en": "Luostari",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 191,
+   "lat": 66.963615,
+   "lng": 30.343912,
+   "name_ru": "Алакуртти",
+   "name_en": "Alakurtti",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 192,
+   "lat": 67.005259,
+   "lng": 32.191812,
+   "name_ru": "Ручьи-Карельские",
+   "name_en": "Ruchi Karelskie",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 193,
+   "lat": 63.722531,
+   "lng": 39.66572,
+   "name_ru": "Кодино",
+   "name_en": "Kodino",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 194,
+   "lat": 63.776626,
+   "lng": 39.253521,
+   "name_ru": "Мудьюга",
+   "name_en": "Mudjuga",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 195,
+   "lat": 63.839714,
+   "lng": 38.470711,
+   "name_ru": "243 км",
+   "name_en": "243 km",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 196,
+   "lat": 64.508487,
+   "lng": 34.72225,
+   "name_ru": "Выг",
+   "name_en": "Wig",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 197,
+   "lat": 62.708782,
+   "lng": 40.295074,
+   "name_ru": "Плесецкая",
+   "name_en": "Plesetskaya",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 198,
+   "lat": 62.605453827020014,
+   "lng": 40.3122178779016,
+   "name_ru": "Пукса",
+   "name_en": "Puksa",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 199,
+   "lat": 61.662073,
+   "lng": 40.206523,
+   "name_ru": "Няндома",
+   "name_en": "Nyandoma",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 200,
+   "lat": 59.812746,
+   "lng": 40.165514,
+   "name_ru": "Семигородняя",
+   "name_en": "Semigorodnaya",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 201,
+   "lat": 61.062938,
+   "lng": 42.085792,
+   "name_ru": "Вельск",
+   "name_en": "Velsk",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 202,
+   "lat": 60.778867,
+   "lng": 46.267784,
+   "name_ru": "Великий Устюг",
+   "name_en": "Velikiy Ustug",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 203,
+   "lat": 61.197337,
+   "lng": 46.511433,
+   "name_ru": "Ядриха",
+   "name_en": "Yadrikha",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 204,
+   "lat": 61.211468,
+   "lng": 46.653159,
+   "name_ru": "Котлас-Узловой",
+   "name_en": "Kotlas-Uzlovoi",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 205,
+   "lat": 61.257527,
+   "lng": 46.629674,
+   "name_ru": "Котлас-Южный",
+   "name_en": "Kotlas-Yuznyi",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 206,
+   "lat": 58.578411,
+   "lng": 49.651955,
+   "name_ru": "Киров-Пассажирский",
+   "name_en": "Kirov-Passazirsky",
+   "note": null,
+   "status": 7,
+   "name_long": null
+  },
+  {
+   "fid": 207,
+   "lat": 66.65249577181717,
+   "lng": 66.40437357079291,
+   "name_ru": "Лабытнанги",
+   "name_en": "Labytnangi",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 208,
+   "lat": 67.470056,
+   "lng": 64.027551,
+   "name_ru": "Воркута",
+   "name_en": "Workuta",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 209,
+   "lat": 66.02442,
+   "lng": 57.547512,
+   "name_ru": "Усинск",
+   "name_en": "Usinsk",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 210,
+   "lat": 65.372508,
+   "lng": 58.034729,
+   "name_ru": "Сыня",
+   "name_en": "Synya",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 211,
+   "lat": 65.158284,
+   "lng": 57.234553,
+   "name_ru": "Печора",
+   "name_en": "Pechora",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 212,
+   "lat": 62.749028,
+   "lng": 56.045942,
+   "name_ru": "Троицко-Печорск",
+   "name_en": "Troitsko-Pechorsk",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 213,
+   "lat": 62.359861,
+   "lng": 50.074402,
+   "name_ru": "Микунь",
+   "name_en": "Mikun",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 214,
+   "lat": 68.878711,
+   "lng": 33.034831,
+   "name_ru": "1437 км",
+   "name_en": "1437 km",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 215,
+   "lat": 51.680285,
+   "lng": 39.205925,
+   "name_ru": "Воронеж-1",
+   "name_en": "Voronez-1",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 216,
+   "lat": 51.780767,
+   "lng": 38.123564,
+   "name_ru": "Касторная-Новая",
+   "name_en": "Kastornaya-Novaya",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 217,
+   "lat": 51.821144,
+   "lng": 38.093317,
+   "name_ru": "Касторная-Курская",
+   "name_en": "Kastornaya-Kurskaya",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 218,
+   "lat": 51.828569,
+   "lng": 38.120023,
+   "name_ru": "Касторная-Восточная",
+   "name_en": "Kastornaya-Wostochnaya",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 221,
+   "lat": 51.322056,
+   "lng": 36.778247,
+   "name_ru": "Сараевка",
+   "name_en": "Saraevka",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 222,
+   "lat": 51.313132,
+   "lng": 37.855086,
+   "name_ru": "Старый Оскол",
+   "name_en": "Staryi Oskol",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 223,
+   "lat": 50.19901380684865,
+   "lng": 38.12087990395026,
+   "name_ru": "Валуйки",
+   "name_en": "valuiki",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 224,
+   "lat": 51.877614,
+   "lng": 36.914712,
+   "name_ru": "Щигры",
+   "name_en": "Shigry",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 225,
+   "lat": 51.202076,
+   "lng": 36.280542,
+   "name_ru": "Обоянь",
+   "name_en": "Oboyan",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 226,
+   "lat": 51.233397,
+   "lng": 36.697894,
+   "name_ru": "Ржава",
+   "name_en": "Rjava",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 227,
+   "lat": 50.97935915167554,
+   "lng": 39.50865127417003,
+   "name_ru": "Лиски",
+   "name_en": "Liski",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 228,
+   "lat": 51.482304,
+   "lng": 40.420002,
+   "name_ru": "Анна",
+   "name_en": "Anna",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 229,
+   "lat": 51.881092,
+   "lng": 39.590817,
+   "name_ru": "Графская",
+   "name_en": "Grafskaya",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 230,
+   "lat": 51.907247,
+   "lng": 39.373071,
+   "name_ru": "Рамонь",
+   "name_en": "Ramon",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 231,
+   "lat": 52.49427699999998,
+   "lng": 39.94597,
+   "name_ru": "Грязи-Воронежские",
+   "name_en": "Gryazi-Voronezskie",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 232,
+   "lat": 52.48537952569514,
+   "lng": 39.95148483810576,
+   "name_ru": "Грязи-Волгоградские",
+   "name_en": "Gryazi-Volgogradskie",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 233,
+   "lat": 52.624205,
+   "lng": 39.568948,
+   "name_ru": "Липецк",
+   "name_en": "Lipetsk",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 234,
+   "lat": 52.60633614051032,
+   "lng": 38.525662413124635,
+   "name_ru": "Елец",
+   "name_en": "Elets",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 236,
+   "lat": 48.682125,
+   "lng": 44.336853,
+   "name_ru": "Имени Максима Горького",
+   "name_en": "Imeni Maksima Gorkogo",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 237,
+   "lat": 48.157206,
+   "lng": 40.190158,
+   "name_ru": "Лихая",
+   "name_en": "Likhaya",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 238,
+   "lat": 50.79817,
+   "lng": 42.00641,
+   "name_ru": "Урюпино",
+   "name_en": "Urupino",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 239,
+   "lat": 51.199168873171175,
+   "lng": 42.24593662202638,
+   "name_ru": "Поворино",
+   "name_en": "Povorino",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 240,
+   "lat": 51.27524099518268,
+   "lng": 37.544956199315955,
+   "name_ru": "Губкин-Пассажирский",
+   "name_en": "Gubkin-Passazirsky",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 241,
+   "lat": 53.97587,
+   "lng": 38.173148,
+   "name_ru": "Узловая-1",
+   "name_en": "Uzlovaya-1",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 242,
+   "lat": 54.01080298795937,
+   "lng": 38.27056871063452,
+   "name_ru": "Новомосковская-1",
+   "name_en": "Novomoskovskaya-1",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 243,
+   "lat": 54.19964,
+   "lng": 37.577857,
+   "name_ru": "Тула-1",
+   "name_en": "Tula-1",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 244,
+   "lat": 54.209160967285705,
+   "lng": 37.6290296776858,
+   "name_ru": "Тула-3",
+   "name_en": "Tula-3",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 245,
+   "lat": 53.825121,
+   "lng": 39.576088,
+   "name_ru": "Скопин",
+   "name_en": "Skopin",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 246,
+   "lat": 53.710138,
+   "lng": 40.104954,
+   "name_ru": "Ряжск-1",
+   "name_en": "Ryazsk-1",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 247,
+   "lat": 52.718091,
+   "lng": 41.427035,
+   "name_ru": "Тамбов",
+   "name_en": "Tambov",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 248,
+   "lat": 52.96583,
+   "lng": 40.482096,
+   "name_ru": "Кочетовка",
+   "name_en": "Kochetovka",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 249,
+   "lat": 52.89851,
+   "lng": 40.496567,
+   "name_ru": "Мичуринск-Уральский",
+   "name_en": "Michurinsk-Uralsky",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 250,
+   "lat": 52.902837,
+   "lng": 40.453735,
+   "name_ru": "Мичуринск-Воронежский",
+   "name_en": "Michurinsk-Voronezskiy",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 251,
+   "lat": 53.250814,
+   "lng": 40.291549,
+   "name_ru": "Богоявленск",
+   "name_en": "Bogoyavlensk",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 252,
+   "lat": 53.231429,
+   "lng": 41.362131,
+   "name_ru": "Челновая",
+   "name_en": "Chelnovaya",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 253,
+   "lat": 52.370311,
+   "lng": 32.190257,
+   "name_ru": "Климов",
+   "name_en": "Klimov",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 254,
+   "lat": 52.523294,
+   "lng": 31.947809,
+   "name_ru": "Новозыбков",
+   "name_en": "Novozibkov",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 255,
+   "lat": 52.841957613377,
+   "lng": 32.678670871216866,
+   "name_ru": "Унеча",
+   "name_en": "Unecha",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 256,
+   "lat": 53.021077,
+   "lng": 32.378786,
+   "name_ru": "Сураж",
+   "name_en": "Suraz",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 257,
+   "lat": 52.821815,
+   "lng": 34.495206,
+   "name_ru": "Навля",
+   "name_en": "Navlya",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 258,
+   "lat": 53.262764,
+   "lng": 34.406149,
+   "name_ru": "Брянск-Московский",
+   "name_en": "Bryansk-Moskovsky",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 259,
+   "lat": 52.595252,
+   "lng": 32.758962,
+   "name_ru": "Стародуб",
+   "name_en": "Starodub",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 260,
+   "lat": 52.91346881763624,
+   "lng": 33.46232117062945,
+   "name_ru": "Почеp",
+   "name_en": "Pochep",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 261,
+   "lat": 54.06570877235863,
+   "lng": 34.375982924999406,
+   "name_ru": "Фаянсовая",
+   "name_en": "Fayansovaya",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 263,
+   "lat": 55.197547913379424,
+   "lng": 34.317518264392675,
+   "name_ru": "Вязьма",
+   "name_en": "Vyazma",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 264,
+   "lat": 52.124088,
+   "lng": 35.062365,
+   "name_ru": "Дмитриев-Льговский",
+   "name_en": "Dmitriev-Lgovskiy",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 265,
+   "lat": 52.01967092922797,
+   "lng": 35.116744247315836,
+   "name_ru": "Арбузово",
+   "name_en": "Arbuzovo",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 266,
+   "lat": 52.354257,
+   "lng": 35.389832,
+   "name_ru": "Михайловский рудник",
+   "name_en": "Mikhailovsky Rudnik",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 267,
+   "lat": 52.219227,
+   "lng": 37.03182,
+   "name_ru": "Колпны",
+   "name_en": "Kolpny",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 268,
+   "lat": 51.886283,
+   "lng": 36.73363,
+   "name_ru": "Охочевка",
+   "name_en": "Okhochevka",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 269,
+   "lat": 51.866737,
+   "lng": 37.551527,
+   "name_ru": "Мармыжи",
+   "name_en": "Marmizi",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 270,
+   "lat": 52.978874,
+   "lng": 36.113061,
+   "name_ru": "Орёл",
+   "name_en": "Oryol",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 271,
+   "lat": 53.818,
+   "lng": 36.123327,
+   "name_ru": "Белёв",
+   "name_en": "Belyov",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 272,
+   "lat": 54.036753,
+   "lng": 35.759347,
+   "name_ru": "Козельск",
+   "name_en": "Kozelsk",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 273,
+   "lat": 53.600013,
+   "lng": 37.131028,
+   "name_ru": "Горбачёво",
+   "name_en": "Gorbachevo",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 274,
+   "lat": 53.607313,
+   "lng": 37.593641,
+   "name_ru": "Тёплое",
+   "name_en": "Tyoploye",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 275,
+   "lat": 54.009946,
+   "lng": 37.501069,
+   "name_ru": "Щёкино",
+   "name_en": "Shokino",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 276,
+   "lat": 53.293745,
+   "lng": 36.56606,
+   "name_ru": "Мценск",
+   "name_en": "Mtsensk",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 277,
+   "lat": 52.42758043483383,
+   "lng": 37.598797360769076,
+   "name_ru": "Ливны-1",
+   "name_en": "Livny-1",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 278,
+   "lat": 52.813652,
+   "lng": 37.237289,
+   "name_ru": "Верховье",
+   "name_en": "Verkhovie",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 279,
+   "lat": 52.63052516258894,
+   "lng": 39.67114207134999,
+   "name_ru": "Чугун-1",
+   "name_en": "Chugun-1",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 280,
+   "lat": 52.549534,
+   "lng": 39.737188,
+   "name_ru": "Казинка",
+   "name_en": "Kazinka",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 281,
+   "lat": 52.63165647424061,
+   "lng": 40.25345669655239,
+   "name_ru": "Избердей",
+   "name_en": "Izberdei",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 282,
+   "lat": 53.20829818654562,
+   "lng": 39.44781165620871,
+   "name_ru": "Лев Толстой",
+   "name_en": "Lev Tolstoi",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 283,
+   "lat": 53.42071,
+   "lng": 38.661496,
+   "name_ru": "Куликово Поле",
+   "name_en": "Kulikovo Pole",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 284,
+   "lat": 53.252162,
+   "lng": 39.95824,
+   "name_ru": "Раненбург",
+   "name_en": "Ranenburg",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 285,
+   "lat": 53.013429,
+   "lng": 39.163763,
+   "name_ru": "Лебедянь",
+   "name_en": "Lebedyan",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 286,
+   "lat": 51.691405,
+   "lng": 35.246957,
+   "name_ru": "Шерекино",
+   "name_en": "Sherekino",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 287,
+   "lat": 51.65759,
+   "lng": 35.240312,
+   "name_ru": "Льгов-2",
+   "name_en": "Lgov-2",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 288,
+   "lat": 51.636495,
+   "lng": 35.268746,
+   "name_ru": "Льгов-Киевский",
+   "name_en": "Lgov-Kievskiy",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 289,
+   "lat": 51.56842,
+   "lng": 34.713039,
+   "name_ru": "Рыльск",
+   "name_en": "Rilsk",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 290,
+   "lat": 51.206042,
+   "lng": 35.310274,
+   "name_ru": "Суджа",
+   "name_en": "Sudja",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 291,
+   "lat": 50.794717,
+   "lng": 35.773861,
+   "name_ru": "Готня",
+   "name_en": "Gotnya",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 292,
+   "lat": 50.513237,
+   "lng": 35.829126,
+   "name_ru": "Хотмыжск",
+   "name_en": "Hotmuzsk",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 293,
+   "lat": 56.356648,
+   "lng": 44.073793,
+   "name_ru": "Моховые Горы",
+   "name_en": "Mokhovie Gory",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 294,
+   "lat": 56.405684,
+   "lng": 43.981962,
+   "name_ru": "Толоконцево",
+   "name_en": "Tolokontsevo",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 295,
+   "lat": 56.338125,
+   "lng": 43.884492,
+   "name_ru": "Варя",
+   "name_en": "Varya",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 296,
+   "lat": 56.367502,
+   "lng": 43.827968,
+   "name_ru": "Починки",
+   "name_en": "Pochinki",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 297,
+   "lat": 56.352155,
+   "lng": 43.873799,
+   "name_ru": "Сормово",
+   "name_en": "Sormovo",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 298,
+   "lat": 56.48353,
+   "lng": 43.57727,
+   "name_ru": "Балахна",
+   "name_en": "Balakhna",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 299,
+   "lat": 56.520553,
+   "lng": 43.542572,
+   "name_ru": "Правдинск",
+   "name_en": "Pravdinsk",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 300,
+   "lat": 56.114606,
+   "lng": 43.522799,
+   "name_ru": "Кожевенное",
+   "name_en": "Kozevennoye",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 301,
+   "lat": 54.412954,
+   "lng": 45.348094,
+   "name_ru": "Красный узел",
+   "name_en": "Krasnyi Uzel",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 302,
+   "lat": 54.055083,
+   "lng": 44.948971,
+   "name_ru": "Рузаевка",
+   "name_en": "Ruzaevka",
+   "note": null,
+   "status": 8,
+   "name_long": null
+  },
+  {
+   "fid": 303,
+   "lat": 55.511182,
+   "lng": 47.480348,
+   "name_ru": "Канаш",
+   "name_en": "Kanash",
+   "note": null,
+   "status": 7,
+   "name_long": null
+  },
+  {
+   "fid": 304,
+   "lat": 54.41497,
+   "lng": 52.59462,
+   "name_ru": "Акбаш",
+   "name_en": "Akbash",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 305,
+   "lat": 56.525252,
+   "lng": 53.012609,
+   "name_ru": "Агрыз",
+   "name_en": "Agriz",
+   "note": null,
+   "status": 7,
+   "name_long": null
+  },
+  {
+   "fid": 307,
+   "lat": 55.841823,
+   "lng": 48.561609,
+   "name_ru": "Зелёный Дол",
+   "name_en": "Zelenyi Dol",
+   "note": null,
+   "status": 8,
+   "name_long": null
+  },
+  {
+   "fid": 308,
+   "lat": 55.862816,
+   "lng": 48.361047,
+   "name_ru": "Волжск",
+   "name_en": "Volzsk",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 309,
+   "lat": 55.79885320738366,
+   "lng": 48.527354840461676,
+   "name_ru": "Свияжск",
+   "name_en": "Sviyazsk",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 310,
+   "lat": 52.53559066862187,
+   "lng": 85.17988792641793,
+   "name_ru": "Бийск",
+   "name_en": "Biisk",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 311,
+   "lat": 55.010405,
+   "lng": 57.985451,
+   "name_ru": "Кропачёво",
+   "name_en": "Kropachevo",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 312,
+   "lat": 55.19808546136148,
+   "lng": 59.717858283175346,
+   "name_ru": "Златоуст",
+   "name_en": "Zlatoust",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 313,
+   "lat": 55.157501,
+   "lng": 59.143908,
+   "name_ru": "Бердяуш",
+   "name_en": "Berdyaush",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 314,
+   "lat": 54.860252,
+   "lng": 58.428424,
+   "name_ru": "Юрюзань",
+   "name_en": "Uruzan",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 315,
+   "lat": 54.75819616193085,
+   "lng": 58.19787629745579,
+   "name_ru": "Катав-Ивановск",
+   "name_en": "Katav-Ivanovsk",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 316,
+   "lat": 56.801906,
+   "lng": 53.189904,
+   "name_ru": "Ижевск",
+   "name_en": "Izevsk",
+   "note": null,
+   "status": 7,
+   "name_long": null
+  },
+  {
+   "fid": 317,
+   "lat": 57.041878,
+   "lng": 54.016503,
+   "name_ru": "Воткинск",
+   "name_en": "Woktinsk",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 318,
+   "lat": 56.942944,
+   "lng": 51.438847,
+   "name_ru": "Сюрек",
+   "name_en": "Surek",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 319,
+   "lat": 56.98906,
+   "lng": 52.180119,
+   "name_ru": "Ува-1",
+   "name_en": "Uva-1",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 320,
+   "lat": 56.962864,
+   "lng": 53.013981,
+   "name_ru": "Люкшудья",
+   "name_en": "Lukshudia",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 321,
+   "lat": 57.974483,
+   "lng": 53.005061,
+   "name_ru": "Балезино",
+   "name_en": "Balezino",
+   "note": null,
+   "status": 8,
+   "name_long": null
+  },
+  {
+   "fid": 322,
+   "lat": 55.617458,
+   "lng": 51.810587,
+   "name_ru": "Нижнекамск",
+   "name_en": "Niznekamsk",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 323,
+   "lat": 55.602257,
+   "lng": 51.861723,
+   "name_ru": "Соболеково",
+   "name_en": "Sobolekovo",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 324,
+   "lat": 55.59135920539629,
+   "lng": 51.97068751987473,
+   "name_ru": "Биклянь",
+   "name_en": "Biklyan",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 325,
+   "lat": 55.563714,
+   "lng": 52.072004,
+   "name_ru": "Никшановка",
+   "name_en": "Nikshanovka",
+   "note": null,
+   "status": null,
+   "name_long": null
+  },
+  {
+   "fid": 326,
+   "lat": 55.619270895110056,
+   "lng": 52.17297763311287,
+   "name_ru": "Круглое Поле",
+   "name_en": "Krugloe Pole",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 327,
+   "lat": 55.67242486316003,
+   "lng": 52.27552800267125,
+   "name_ru": "Набережные Челны",
+   "name_en": "Nabereznie Chelny",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 328,
+   "lat": 55.805557,
+   "lng": 52.239959,
+   "name_ru": null,
+   "name_en": "198km",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 329,
+   "lat": 55.885739,
+   "lng": 52.312982,
+   "name_ru": "Менделеевск",
+   "name_en": "Mendeleevsk",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 330,
+   "lat": 56.118275,
+   "lng": 52.564006,
+   "name_ru": "Алнаши",
+   "name_en": "Alnashi",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 331,
+   "lat": 56.332615247146,
+   "lng": 52.87765775340375,
+   "name_ru": "Терси",
+   "name_en": "Tersi",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 332,
+   "lat": 55.312783,
+   "lng": 52.008892,
+   "name_ru": "Заинск",
+   "name_en": "Zainsk",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 333,
+   "lat": 55.830008,
+   "lng": 52.251395,
+   "name_ru": "Тихоново",
+   "name_en": "Tihonovo",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 334,
+   "lat": 56.074707,
+   "lng": 52.559492,
+   "name_ru": "236 км",
+   "name_en": null,
+   "note": null,
+   "status": null,
+   "name_long": null
+  },
+  {
+   "fid": 335,
+   "lat": 56.023938,
+   "lng": 52.520613,
+   "name_ru": "230 км",
+   "name_en": null,
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 336,
+   "lat": 55.984698,
+   "lng": 52.409303,
+   "name_ru": "Тойма",
+   "name_en": "Toima",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 337,
+   "lat": 55.915535,
+   "lng": 52.342125,
+   "name_ru": "212 км",
+   "name_en": null,
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 338,
+   "lat": 54.861601,
+   "lng": 52.157795,
+   "name_ru": "Кульшарипово",
+   "name_en": "Kulsharipovo",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 339,
+   "lat": 56.235894,
+   "lng": 52.69046,
+   "name_ru": "Мукшур",
+   "name_en": "Mukshur",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 340,
+   "lat": 55.938705,
+   "lng": 98.000777,
+   "name_ru": "Тайшет",
+   "name_en": "Taishet",
+   "note": null,
+   "status": 9,
+   "name_long": null
+  },
+  {
+   "fid": 343,
+   "lat": 51.13155268013658,
+   "lng": 132.94536515054762,
+   "name_ru": "Чегдомын",
+   "name_en": "Chegdomin",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 344,
+   "lat": 51.07798,
+   "lng": 132.608998,
+   "name_ru": "Новый Ургал",
+   "name_en": "Novyi Urgal",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 345,
+   "lat": 49.788789,
+   "lng": 129.414361,
+   "name_ru": "Райчихинск",
+   "name_en": "Raichikhinsk",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 347,
+   "lat": 52.336892,
+   "lng": 104.213932,
+   "name_ru": "Иркутск-Сортировочный",
+   "name_en": "Irkutsk-Sortirovochnyi",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 348,
+   "lat": 52.251017,
+   "lng": 117.695172,
+   "name_ru": "Сретенск",
+   "name_en": "Sretensk",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 349,
+   "lat": 53.95443,
+   "lng": 121.949223,
+   "name_ru": "Ерофей Павлович",
+   "name_en": "Erofei Pavlovich",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 350,
+   "lat": 51.346612,
+   "lng": 128.153076,
+   "name_ru": "Михайло-Чесноковская",
+   "name_en": "Mihailo-Chesnokovskaya",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 351,
+   "lat": 51.392543,
+   "lng": 128.138186,
+   "name_ru": "Свободный",
+   "name_en": "Svobodnyi",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 352,
+   "lat": 53.98743118870904,
+   "lng": 123.93722304845716,
+   "name_ru": "Сковородино",
+   "name_en": "Skovorodino",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 353,
+   "lat": 55.138885,
+   "lng": 124.734898,
+   "name_ru": "Тында",
+   "name_en": "Tinda",
+   "note": null,
+   "status": 7,
+   "name_long": null
+  },
+  {
+   "fid": 355,
+   "lat": 50.287683,
+   "lng": 127.542224,
+   "name_ru": "Благовещенск",
+   "name_en": "Blagoveshensk",
+   "note": null,
+   "status": 9,
+   "name_long": null
+  },
+  {
+   "fid": 356,
+   "lat": 50.920621,
+   "lng": 128.461315,
+   "name_ru": "Белогорск",
+   "name_en": "Belogorsk",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 357,
+   "lat": 49.011224,
+   "lng": 131.059063,
+   "name_ru": "Облучье",
+   "name_en": "Obluchye",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 358,
+   "lat": 48.561291,
+   "lng": 134.481466,
+   "name_ru": "Волочаевка",
+   "name_en": "Volochaevka",
+   "note": null,
+   "status": null,
+   "name_long": "Волочаевка-1"
+  },
+  {
+   "fid": 361,
+   "lat": 49.088906,
+   "lng": 140.268081,
+   "name_ru": "Ванино",
+   "name_en": "Vanino",
+   "note": null,
+   "status": 8,
+   "name_long": null
+  },
+  {
+   "fid": 362,
+   "lat": 52.455882,
+   "lng": 130.846573,
+   "name_ru": "Февральск",
+   "name_en": "Fevralsk",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 363,
+   "lat": 56.649974,
+   "lng": 124.757851,
+   "name_ru": "Нерюнгри",
+   "name_en": "Nerungri",
+   "note": null,
+   "status": 8,
+   "name_long": "Нерюнгри-Пассажирская"
+  },
+  {
+   "fid": 364,
+   "lat": 56.801868,
+   "lng": 118.270323,
+   "name_ru": "Новая Чара",
+   "name_en": "Novaya Chara",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 365,
+   "lat": 54.893353,
+   "lng": 99.027738,
+   "name_ru": "Нижнеудинск",
+   "name_en": "Nizneudinsk",
+   "note": null,
+   "status": 8,
+   "name_long": null
+  },
+  {
+   "fid": 366,
+   "lat": 54.59476,
+   "lng": 100.536244,
+   "name_ru": "Тулун",
+   "name_en": "Tulun",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 367,
+   "lat": 53.925222,
+   "lng": 102.051461,
+   "name_ru": "Зима",
+   "name_en": "Zima",
+   "note": null,
+   "status": 8,
+   "name_long": null
+  },
+  {
+   "fid": 368,
+   "lat": 53.14881741171426,
+   "lng": 103.08457665381486,
+   "name_ru": "Черемхово",
+   "name_en": "Cheremhovo",
+   "note": null,
+   "status": 8,
+   "name_long": null
+  },
+  {
+   "fid": 369,
+   "lat": 52.5508337679277,
+   "lng": 103.91425073737419,
+   "name_ru": "Ангарск",
+   "name_en": "Angarsk",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 370,
+   "lat": 52.728475,
+   "lng": 103.651054,
+   "name_ru": "Усолье-Сибирское",
+   "name_en": "Usolie-Sibirskoe",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 371,
+   "lat": 52.227698,
+   "lng": 104.115896,
+   "name_ru": "Шелехов",
+   "name_en": "Shelekhov",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 372,
+   "lat": 51.658569367601714,
+   "lng": 103.72399646098484,
+   "name_ru": "Слюдянка",
+   "name_en": "Sludyanka",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 373,
+   "lat": 51.729227,
+   "lng": 103.722281,
+   "name_ru": "Култук",
+   "name_en": "Kultuk",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 374,
+   "lat": 51.698157,
+   "lng": 103.68981,
+   "name_ru": "Слюдянка-2",
+   "name_en": "Sludyanka-2",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 375,
+   "lat": 51.748158,
+   "lng": 103.756594,
+   "name_ru": "Ангасолка",
+   "name_en": "Angasolka",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 376,
+   "lat": 51.51584858882801,
+   "lng": 104.14190365956586,
+   "name_ru": "Байкальск-пасс",
+   "name_en": "Baikalsk-pass",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 377,
+   "lat": 51.718538101952745,
+   "lng": 105.86259133251706,
+   "name_ru": "Мысовая",
+   "name_en": "Mysovaya",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 378,
+   "lat": 51.55516128186434,
+   "lng": 105.11350488810395,
+   "name_ru": "Танхой",
+   "name_en": "Tankhoy",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 379,
+   "lat": 52.032681,
+   "lng": 106.871264,
+   "name_ru": "Селенга",
+   "name_en": "Selenga",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 382,
+   "lat": 51.11486,
+   "lng": 106.270043,
+   "name_ru": "Гусиное Озеро",
+   "name_en": "Gusinoe Ozero",
+   "note": null,
+   "status": 1,
+   "name_long": null
+  },
+  {
+   "fid": 383,
+   "lat": 51.96866084866215,
+   "lng": 106.35153368755618,
+   "name_ru": "Посольская",
+   "name_en": "Posolskaya",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 384,
+   "lat": 51.76078205780931,
+   "lng": 108.3892906110884,
+   "name_ru": "Челутай",
+   "name_en": "Chelutai",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 385,
+   "lat": 51.250394,
+   "lng": 108.831623,
+   "name_ru": "Декабирсты",
+   "name_en": "Dekabristy",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 386,
+   "lat": 48.793278,
+   "lng": 132.934826,
+   "name_ru": "Биробиджан",
+   "name_en": "Biroidzan",
+   "note": null,
+   "status": 8,
+   "name_long": "Биробиджан-1"
+  },
+  {
+   "fid": 387,
+   "lat": 47.98737532204411,
+   "lng": 132.6158502072038,
+   "name_ru": "Ленинск",
+   "name_en": "Leninsk",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 388,
+   "lat": 50.11800244264337,
+   "lng": 129.45104278149725,
+   "name_ru": "Завитая",
+   "name_en": "Zavitaya",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 389,
+   "lat": 50.372479,
+   "lng": 129.104831,
+   "name_ru": "Екатеринославка",
+   "name_en": "Ekaterinoslavka",
+   "note": null,
+   "status": null,
+   "name_long": null
+  },
+  {
+   "fid": 390,
+   "lat": 49.419412,
+   "lng": 130.074634,
+   "name_ru": "Архара",
+   "name_en": "Arhara",
+   "note": null,
+   "status": 2,
+   "name_long": null
+  },
+  {
+   "fid": 391,
+   "lat": 49.22206420885172,
+   "lng": 143.081902488711,
+   "name_ru": "Поронайск",
+   "name_en": "Poronaisk",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 392,
+   "lat": 51.797129,
+   "lng": 143.129867,
+   "name_ru": "Ноглики",
+   "name_en": "Nogliki",
+   "note": null,
+   "status": 6,
+   "name_long": null
+  },
+  {
+   "fid": 393,
+   "lat": 46.6749881509824,
+   "lng": 141.8572659960951,
+   "name_ru": "Невельк",
+   "name_en": "Nevelsk",
+   "note": null,
+   "status": null,
+   "name_long": null
+  },
+  {
+   "fid": 394,
+   "lat": 47.98817902811855,
+   "lng": 142.20519329505345,
+   "name_ru": "Ильинское",
+   "name_en": "Ilinskoe",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 395,
+   "lat": 46.992651253828626,
+   "lng": 142.68083336138207,
+   "name_ru": "Дальнее",
+   "name_en": "Dalnee",
+   "note": null,
+   "status": null,
+   "name_long": null
+  },
+  {
+   "fid": 396,
+   "lat": 56.506074,
+   "lng": 84.998793,
+   "name_ru": "Томск-2",
+   "name_en": "Tomsk-2",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 398,
+   "lat": 42.808687,
+   "lng": 132.880228,
+   "name_ru": "Тихоокеанская",
+   "name_en": "Tikhookeanskaya",
+   "note": null,
+   "status": 8,
+   "name_long": null
+  },
+  {
+   "fid": 399,
+   "lat": 42.797968,
+   "lng": 132.897456,
+   "name_ru": "Мыс Астафьева",
+   "name_en": "Mys Astafieva",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 400,
+   "lat": 43.104614,
+   "lng": 131.903183,
+   "name_ru": "Мыс Чуркин",
+   "name_en": "Mys Churkin",
+   "note": null,
+   "status": 3,
+   "name_long": null
+  },
+  {
+   "fid": 401,
+   "lat": 52.57041,
+   "lng": 78.933279,
+   "name_ru": "Кулунда",
+   "name_en": "Kulunda",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 402,
+   "lat": 54.856032,
+   "lng": 69.170904,
+   "name_ru": "Петропавловск",
+   "name_en": "Petropavlovsk",
+   "note": null,
+   "status": null,
+   "name_long": null
+  },
+  {
+   "fid": 403,
+   "lat": 54.909751,
+   "lng": 71.261582,
+   "name_ru": "Исикуль",
+   "name_en": "Isikul",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  },
+  {
+   "fid": 405,
+   "lat": 55.442192,
+   "lng": 65.319724,
+   "name_ru": "Курган",
+   "name_en": "Kurgan",
+   "note": null,
+   "status": 7,
+   "name_long": null
+  },
+  {
+   "fid": 406,
+   "lat": 56.42578,
+   "lng": 61.935258,
+   "name_ru": "Каменск-Уральский",
+   "name_en": "Kamensk-Uralsky",
+   "note": null,
+   "status": 5,
+   "name_long": null
+  },
+  {
+   "fid": 407,
+   "lat": 43.801558,
+   "lng": 131.981216,
+   "name_ru": "Уссурийск",
+   "name_en": "Ussurisk",
+   "note": null,
+   "status": 8,
+   "name_long": null
+  },
+  {
+   "fid": 408,
+   "lat": 44.223018,
+   "lng": 133.832685,
+   "name_ru": "Новочугуевка",
+   "name_en": "Novochuguevka",
+   "note": null,
+   "status": 4,
+   "name_long": null
+  }
+ ],
+ "routes": [
+  {
+   "fid": 1,
+   "to": "sochi",
+   "km": 2.9,
+   "h": 0.04,
+   "name": "Adler"
+  },
+  {
+   "fid": 2,
+   "to": "sochi",
+   "km": 37.3,
+   "h": 0.53,
+   "name": "Esto-Sadok"
+  },
+  {
+   "fid": 3,
+   "to": "sochi",
+   "km": 39.3,
+   "h": 0.56,
+   "name": "Roza Khutor"
+  },
+  {
+   "fid": 4,
+   "to": "krasnoyarsk",
+   "km": 270.7,
+   "h": 3.87,
+   "name": "Abakan"
+  },
+  {
+   "fid": 5,
+   "to": "krasnoyarsk",
+   "km": 276.0,
+   "h": 3.94,
+   "name": "Minusinsk"
+  },
+  {
+   "fid": 6,
+   "to": "krasnoyarsk",
+   "km": 356.2,
+   "h": 5.09,
+   "name": "Askiz"
+  },
+  {
+   "fid": 7,
+   "to": "krasnoyarsk",
+   "km": 148.0,
+   "h": 2.11,
+   "name": "Achinsk"
+  },
+  {
+   "fid": 8,
+   "to": "samara",
+   "km": 111.2,
+   "h": 1.59,
+   "name": "Syzran-1"
+  },
+  {
+   "fid": 9,
+   "to": "moscow",
+   "km": 61.2,
+   "h": 0.87,
+   "name": "Kostino"
+  },
+  {
+   "fid": 10,
+   "to": "moscow",
+   "km": 76.1,
+   "h": 1.09,
+   "name": "Naugolny"
+  },
+  {
+   "fid": 11,
+   "to": "moscow",
+   "km": 64.1,
+   "h": 0.92,
+   "name": "Zeltikovo"
+  },
+  {
+   "fid": 12,
+   "to": "moscow",
+   "km": 69.3,
+   "h": 0.99,
+   "name": "Sergiev Posad"
+  },
+  {
+   "fid": 14,
+   "to": "yekaterinburg",
+   "km": 2.1,
+   "h": 0.03,
+   "name": "Ekaterinburg"
+  },
+  {
+   "fid": 16,
+   "to": "ufa",
+   "km": 243.8,
+   "h": 3.48,
+   "name": "Magnitogorsk"
+  },
+  {
+   "fid": 17,
+   "to": "ufa",
+   "km": 119.1,
+   "h": 1.7,
+   "name": "Inzer"
+  },
+  {
+   "fid": 18,
+   "to": "ufa",
+   "km": 177.3,
+   "h": 2.53,
+   "name": "Beloretsk"
+  },
+  {
+   "fid": 19,
+   "to": "yekaterinburg",
+   "km": 66.6,
+   "h": 0.95,
+   "name": "Druzinino"
+  },
+  {
+   "fid": 20,
+   "to": "yekaterinburg",
+   "km": 195.5,
+   "h": 2.79,
+   "name": "Chelyabinsk"
+  },
+  {
+   "fid": 22,
+   "to": "perm",
+   "km": 98.2,
+   "h": 1.4,
+   "name": "Chusovskaya"
+  },
+  {
+   "fid": 23,
+   "to": "yekaterinburg",
+   "km": 167.4,
+   "h": 2.39,
+   "name": "Goroblagodatskaya"
+  },
+  {
+   "fid": 24,
+   "to": "yekaterinburg",
+   "km": 124.6,
+   "h": 1.78,
+   "name": "Nizniy Tagil"
+  },
+  {
+   "fid": 25,
+   "to": "smolensk",
+   "km": 197.0,
+   "h": 2.81,
+   "name": "Velikie Luki"
+  },
+  {
+   "fid": 26,
+   "to": "tver",
+   "km": 172.2,
+   "h": 2.46,
+   "name": "Ostashkov"
+  },
+  {
+   "fid": 27,
+   "to": "tver",
+   "km": 159.7,
+   "h": 2.28,
+   "name": "Bologoye"
+  },
+  {
+   "fid": 28,
+   "to": "stpetersburg",
+   "km": 235.1,
+   "h": 3.36,
+   "name": "Dno"
+  },
+  {
+   "fid": 29,
+   "to": "stpetersburg",
+   "km": 262.3,
+   "h": 3.75,
+   "name": "Pskov"
+  },
+  {
+   "fid": 30,
+   "to": "stpetersburg",
+   "km": 135.1,
+   "h": 1.93,
+   "name": "Luga"
+  },
+  {
+   "fid": 31,
+   "to": "stpetersburg",
+   "km": 142.6,
+   "h": 2.04,
+   "name": "Batetskaya"
+  },
+  {
+   "fid": 32,
+   "to": "stpetersburg",
+   "km": 164.4,
+   "h": 2.35,
+   "name": "Novgorod"
+  },
+  {
+   "fid": 33,
+   "to": "stpetersburg",
+   "km": 117.0,
+   "h": 1.67,
+   "name": "Chudovo"
+  },
+  {
+   "fid": 35,
+   "to": "tver",
+   "km": 60.5,
+   "h": 0.86,
+   "name": "Torzok"
+  },
+  {
+   "fid": 36,
+   "to": "tver",
+   "km": 198.5,
+   "h": 2.84,
+   "name": "Soblago"
+  },
+  {
+   "fid": 37,
+   "to": "tver",
+   "km": 106.8,
+   "h": 1.53,
+   "name": "Kuvshinovo"
+  },
+  {
+   "fid": 38,
+   "to": "moscow",
+   "km": 105.1,
+   "h": 1.5,
+   "name": "Golutvin"
+  },
+  {
+   "fid": 39,
+   "to": "tula",
+   "km": 95.6,
+   "h": 1.37,
+   "name": "Ozory"
+  },
+  {
+   "fid": 40,
+   "to": "smolensk",
+   "km": 211.1,
+   "h": 3.02,
+   "name": "Novosokolniki"
+  },
+  {
+   "fid": 41,
+   "to": "smolensk",
+   "km": 207.9,
+   "h": 2.97,
+   "name": "Andreapol"
+  },
+  {
+   "fid": 42,
+   "to": "smolensk",
+   "km": 192.9,
+   "h": 2.76,
+   "name": "Nevel 1"
+  },
+  {
+   "fid": 43,
+   "to": "smolensk",
+   "km": 191.9,
+   "h": 2.74,
+   "name": "Nevel 2"
+  },
+  {
+   "fid": 44,
+   "to": "stpetersburg",
+   "km": 108.3,
+   "h": 1.55,
+   "name": "Kirishi"
+  },
+  {
+   "fid": 45,
+   "to": "stpetersburg",
+   "km": 138.5,
+   "h": 1.98,
+   "name": "Bugodosh"
+  },
+  {
+   "fid": 46,
+   "to": "stpetersburg",
+   "km": 180.1,
+   "h": 2.57,
+   "name": "Tikhvin"
+  },
+  {
+   "fid": 47,
+   "to": "stpetersburg",
+   "km": 191.7,
+   "h": 2.74,
+   "name": "Nebolchi"
+  },
+  {
+   "fid": 48,
+   "to": "tver",
+   "km": 229.5,
+   "h": 3.28,
+   "name": "Okulovka"
+  },
+  {
+   "fid": 49,
+   "to": "moscow",
+   "km": 98.6,
+   "h": 1.41,
+   "name": "Aleksandrov"
+  },
+  {
+   "fid": 50,
+   "to": "vladimir_ru",
+   "km": 59.9,
+   "h": 0.86,
+   "name": "Юрьев-Польский"
+  },
+  {
+   "fid": 51,
+   "to": "yaroslavl",
+   "km": 93.6,
+   "h": 1.34,
+   "name": "Ivanovo"
+  },
+  {
+   "fid": 52,
+   "to": "yaroslavl",
+   "km": 84.3,
+   "h": 1.2,
+   "name": "Furmanov"
+  },
+  {
+   "fid": 53,
+   "to": "yaroslavl",
+   "km": 43.1,
+   "h": 0.62,
+   "name": "Nerekhta"
+  },
+  {
+   "fid": 54,
+   "to": "yaroslavl",
+   "km": 66.6,
+   "h": 0.95,
+   "name": "Kostroma"
+  },
+  {
+   "fid": 56,
+   "to": "sov_gavan",
+   "km": 291.5,
+   "h": 4.16,
+   "name": "Yuzno-Sakhalinsk"
+  },
+  {
+   "fid": 57,
+   "to": "sov_gavan",
+   "km": 322.2,
+   "h": 4.6,
+   "name": "Korsakov"
+  },
+  {
+   "fid": 58,
+   "to": "sov_gavan",
+   "km": 254.4,
+   "h": 3.63,
+   "name": "Holmsk-Yuznyi"
+  },
+  {
+   "fid": 59,
+   "to": "sov_gavan",
+   "km": 262.6,
+   "h": 3.75,
+   "name": "Chertov Most"
+  },
+  {
+   "fid": 60,
+   "to": "sov_gavan",
+   "km": 214.6,
+   "h": 3.07,
+   "name": "Chekhov"
+  },
+  {
+   "fid": 61,
+   "to": "sov_gavan",
+   "km": 191.2,
+   "h": 2.73,
+   "name": "Tomari"
+  },
+  {
+   "fid": 62,
+   "to": "vladimir_ru",
+   "km": 77.5,
+   "h": 1.11,
+   "name": "Krivandino"
+  },
+  {
+   "fid": 63,
+   "to": "vladimir_ru",
+   "km": 86.4,
+   "h": 1.23,
+   "name": "Osanovo"
+  },
+  {
+   "fid": 64,
+   "to": "vladimir_ru",
+   "km": 121.5,
+   "h": 1.74,
+   "name": "Ryazanovka"
+  },
+  {
+   "fid": 65,
+   "to": "vladimir_ru",
+   "km": 107.2,
+   "h": 1.53,
+   "name": "Barmino"
+  },
+  {
+   "fid": 66,
+   "to": "vladimir_ru",
+   "km": 93.0,
+   "h": 1.33,
+   "name": "Pozoga"
+  },
+  {
+   "fid": 67,
+   "to": "moscow",
+   "km": 3.7,
+   "h": 0.05,
+   "name": "Moskva"
+  },
+  {
+   "fid": 68,
+   "to": "nnovgorod",
+   "km": 3.3,
+   "h": 0.05,
+   "name": "Nizniy Novgorod"
+  },
+  {
+   "fid": 69,
+   "to": "vladimir_ru",
+   "km": 61.9,
+   "h": 0.88,
+   "name": "Kovrov"
+  },
+  {
+   "fid": 70,
+   "to": "vladimir_ru",
+   "km": 49.1,
+   "h": 0.7,
+   "name": "Novki 1"
+  },
+  {
+   "fid": 72,
+   "to": "vladimir_ru",
+   "km": 109.9,
+   "h": 1.57,
+   "name": "Tumskaya"
+  },
+  {
+   "fid": 73,
+   "to": "vladimir_ru",
+   "km": 58.9,
+   "h": 0.84,
+   "name": "Gus-Khrustalnyi"
+  },
+  {
+   "fid": 74,
+   "to": "vladimir_ru",
+   "km": 119.0,
+   "h": 1.7,
+   "name": "Murom"
+  },
+  {
+   "fid": 75,
+   "to": "nnovgorod",
+   "km": 68.1,
+   "h": 0.97,
+   "name": "Metallist"
+  },
+  {
+   "fid": 76,
+   "to": "nnovgorod",
+   "km": 84.7,
+   "h": 1.21,
+   "name": "Frolishi"
+  },
+  {
+   "fid": 77,
+   "to": "nnovgorod",
+   "km": 51.9,
+   "h": 0.74,
+   "name": "Zavolzie"
+  },
+  {
+   "fid": 78,
+   "to": "nnovgorod",
+   "km": 7.4,
+   "h": 0.11,
+   "name": "Prospekt Gagarina"
+  },
+  {
+   "fid": 79,
+   "to": "nnovgorod",
+   "km": 100.8,
+   "h": 1.44,
+   "name": "Arzamas-2"
+  },
+  {
+   "fid": 80,
+   "to": "nnovgorod",
+   "km": 102.1,
+   "h": 1.46,
+   "name": "Arzamas-1"
+  },
+  {
+   "fid": 81,
+   "to": "nnovgorod",
+   "km": 161.0,
+   "h": 2.3,
+   "name": "Pervomaisk"
+  },
+  {
+   "fid": 82,
+   "to": "nnovgorod",
+   "km": 125.8,
+   "h": 1.8,
+   "name": "Shatki"
+  },
+  {
+   "fid": 83,
+   "to": "moscow",
+   "km": 96.0,
+   "h": 1.37,
+   "name": "Yegorievsk"
+  },
+  {
+   "fid": 84,
+   "to": "moscow",
+   "km": 83.6,
+   "h": 1.19,
+   "name": "Voskresensk"
+  },
+  {
+   "fid": 85,
+   "to": "moscow",
+   "km": 86.6,
+   "h": 1.24,
+   "name": "Ilinsky Pogst"
+  },
+  {
+   "fid": 86,
+   "to": "moscow",
+   "km": 83.7,
+   "h": 1.2,
+   "name": "Kurovskaya"
+  },
+  {
+   "fid": 87,
+   "to": "moscow",
+   "km": 85.0,
+   "h": 1.21,
+   "name": "Orekhovo"
+  },
+  {
+   "fid": 88,
+   "to": "tula",
+   "km": 132.3,
+   "h": 1.89,
+   "name": "Fruktovaya"
+  },
+  {
+   "fid": 89,
+   "to": "moscow",
+   "km": 123.9,
+   "h": 1.77,
+   "name": "Lukhovitsy"
+  },
+  {
+   "fid": 90,
+   "to": "tula",
+   "km": 103.0,
+   "h": 1.47,
+   "name": "Zaraisk"
+  },
+  {
+   "fid": 91,
+   "to": "petrozavodsk",
+   "km": 436.9,
+   "h": 6.24,
+   "name": "Arkhangelsk"
+  },
+  {
+   "fid": 93,
+   "to": "petrozavodsk",
+   "km": 306.5,
+   "h": 4.38,
+   "name": "Belomorsk"
+  },
+  {
+   "fid": 94,
+   "to": "petrozavodsk",
+   "km": 355.4,
+   "h": 5.08,
+   "name": "Obozerskaya"
+  },
+  {
+   "fid": 95,
+   "to": "vologda",
+   "km": 196.0,
+   "h": 2.8,
+   "name": "Konosha"
+  },
+  {
+   "fid": 97,
+   "to": "petrozavodsk",
+   "km": 303.4,
+   "h": 4.33,
+   "name": "Onega"
+  },
+  {
+   "fid": 98,
+   "to": "petrozavodsk",
+   "km": 301.8,
+   "h": 4.31,
+   "name": "Gribaniha"
+  },
+  {
+   "fid": 99,
+   "to": "petrozavodsk",
+   "km": 413.7,
+   "h": 5.91,
+   "name": "Severodvinsk"
+  },
+  {
+   "fid": 100,
+   "to": "petrozavodsk",
+   "km": 399.0,
+   "h": 5.7,
+   "name": "Nenoksa"
+  },
+  {
+   "fid": 101,
+   "to": "murmansk",
+   "km": 203.1,
+   "h": 2.9,
+   "name": "Kandalaksha"
+  },
+  {
+   "fid": 102,
+   "to": "stpetersburg",
+   "km": 109.3,
+   "h": 1.56,
+   "name": "Volhovstroi"
+  },
+  {
+   "fid": 103,
+   "to": "stpetersburg",
+   "km": 5.6,
+   "h": 0.08,
+   "name": "SPB-Ladozskiy"
+  },
+  {
+   "fid": 104,
+   "to": "stpetersburg",
+   "km": 1.3,
+   "h": 0.02,
+   "name": "SPb"
+  },
+  {
+   "fid": 106,
+   "to": "murmansk",
+   "km": 156.8,
+   "h": 2.24,
+   "name": "Apatity"
+  },
+  {
+   "fid": 107,
+   "to": "murmansk",
+   "km": 179.3,
+   "h": 2.56,
+   "name": "Polyarnye Zori"
+  },
+  {
+   "fid": 108,
+   "to": "murmansk",
+   "km": 93.2,
+   "h": 1.33,
+   "name": "Olenegorsk"
+  },
+  {
+   "fid": 109,
+   "to": "murmansk",
+   "km": 113.5,
+   "h": 1.62,
+   "name": "Monchegorsk"
+  },
+  {
+   "fid": 110,
+   "to": "murmansk",
+   "km": 190.8,
+   "h": 2.73,
+   "name": "Kovdor"
+  },
+  {
+   "fid": 111,
+   "to": "murmansk",
+   "km": 185.4,
+   "h": 2.65,
+   "name": "Pinozero"
+  },
+  {
+   "fid": 112,
+   "to": "murmansk",
+   "km": 96.5,
+   "h": 1.38,
+   "name": "Pechenga"
+  },
+  {
+   "fid": 113,
+   "to": "murmansk",
+   "km": 19.7,
+   "h": 0.28,
+   "name": "Murmashi"
+  },
+  {
+   "fid": 114,
+   "to": "murmansk",
+   "km": 9.1,
+   "h": 0.13,
+   "name": "Kola"
+  },
+  {
+   "fid": 115,
+   "to": "murmansk",
+   "km": 122.2,
+   "h": 1.75,
+   "name": "Nikel-Murmansky"
+  },
+  {
+   "fid": 116,
+   "to": "petrozavodsk",
+   "km": 565.5,
+   "h": 8.08,
+   "name": "Karpogory"
+  },
+  {
+   "fid": 117,
+   "to": "kirov",
+   "km": 541.3,
+   "h": 7.73,
+   "name": "Koslan"
+  },
+  {
+   "fid": 118,
+   "to": "kirov",
+   "km": 345.8,
+   "h": 4.94,
+   "name": "Syktyvkar"
+  },
+  {
+   "fid": 119,
+   "to": "petrozavodsk",
+   "km": 365.8,
+   "h": 5.23,
+   "name": "Koskomuksha"
+  },
+  {
+   "fid": 120,
+   "to": "petrozavodsk",
+   "km": 249.5,
+   "h": 3.56,
+   "name": "Kochkoma"
+  },
+  {
+   "fid": 121,
+   "to": "petrozavodsk",
+   "km": 441.2,
+   "h": 6.3,
+   "name": "Solombalka"
+  },
+  {
+   "fid": 122,
+   "to": "petrozavodsk",
+   "km": 441.7,
+   "h": 6.31,
+   "name": "Partizanskaya"
+  },
+  {
+   "fid": 123,
+   "to": "petrozavodsk",
+   "km": 441.5,
+   "h": 6.31,
+   "name": "Chernaya Kurja"
+  },
+  {
+   "fid": 124,
+   "to": "petrozavodsk",
+   "km": 439.6,
+   "h": 6.28,
+   "name": "ZBI"
+  },
+  {
+   "fid": 125,
+   "to": "petrozavodsk",
+   "km": 438.9,
+   "h": 6.27,
+   "name": "TEC"
+  },
+  {
+   "fid": 126,
+   "to": "yaroslavl",
+   "km": 78.3,
+   "h": 1.12,
+   "name": "Rybinsk"
+  },
+  {
+   "fid": 127,
+   "to": "yaroslavl",
+   "km": 39.7,
+   "h": 0.57,
+   "name": "Varegovo"
+  },
+  {
+   "fid": 128,
+   "to": "yaroslavl",
+   "km": 31.5,
+   "h": 0.45,
+   "name": "Tutaevo"
+  },
+  {
+   "fid": 129,
+   "to": "yaroslavl",
+   "km": 38.5,
+   "h": 0.55,
+   "name": "Vaulovo"
+  },
+  {
+   "fid": 130,
+   "to": "yaroslavl",
+   "km": 25.8,
+   "h": 0.37,
+   "name": "Chebakovo"
+  },
+  {
+   "fid": 131,
+   "to": "yaroslavl",
+   "km": 9.7,
+   "h": 0.14,
+   "name": "Molot"
+  },
+  {
+   "fid": 132,
+   "to": "yaroslavl",
+   "km": 4.8,
+   "h": 0.07,
+   "name": "Filino"
+  },
+  {
+   "fid": 133,
+   "to": "yaroslavl",
+   "km": 2.3,
+   "h": 0.03,
+   "name": "Yaroslsvl-Moskovsky"
+  },
+  {
+   "fid": 134,
+   "to": "yaroslavl",
+   "km": 7.0,
+   "h": 0.1,
+   "name": "Dunaika"
+  },
+  {
+   "fid": 135,
+   "to": "yaroslavl",
+   "km": 15.6,
+   "h": 0.22,
+   "name": "Tenino"
+  },
+  {
+   "fid": 136,
+   "to": "yaroslavl",
+   "km": 52.1,
+   "h": 0.74,
+   "name": "Lom"
+  },
+  {
+   "fid": 137,
+   "to": "yaroslavl",
+   "km": 40.7,
+   "h": 0.58,
+   "name": "Semibratovo"
+  },
+  {
+   "fid": 138,
+   "to": "yaroslavl",
+   "km": 35.5,
+   "h": 0.51,
+   "name": "Gavrilov Yam"
+  },
+  {
+   "fid": 139,
+   "to": "yaroslavl",
+   "km": 11.0,
+   "h": 0.16,
+   "name": "Telishevo"
+  },
+  {
+   "fid": 140,
+   "to": "yaroslavl",
+   "km": 65.4,
+   "h": 0.93,
+   "name": "Danilov"
+  },
+  {
+   "fid": 141,
+   "to": "yaroslavl",
+   "km": 112.8,
+   "h": 1.61,
+   "name": "Nekouz"
+  },
+  {
+   "fid": 142,
+   "to": "yaroslavl",
+   "km": 94.1,
+   "h": 1.34,
+   "name": "Uglich"
+  },
+  {
+   "fid": 143,
+   "to": "tver",
+   "km": 122.8,
+   "h": 1.75,
+   "name": "Kalyazin"
+  },
+  {
+   "fid": 144,
+   "to": "yaroslavl",
+   "km": 76.0,
+   "h": 1.09,
+   "name": "Rybinsk-Tovarnyi"
+  },
+  {
+   "fid": 145,
+   "to": "yaroslavl",
+   "km": 18.6,
+   "h": 0.27,
+   "name": "Levcevo"
+  },
+  {
+   "fid": 146,
+   "to": "yaroslavl",
+   "km": 3.1,
+   "h": 0.04,
+   "name": "Privolzie"
+  },
+  {
+   "fid": 147,
+   "to": "yaroslavl",
+   "km": 7.7,
+   "h": 0.11,
+   "name": "285 км"
+  },
+  {
+   "fid": 148,
+   "to": "yaroslavl",
+   "km": 19.7,
+   "h": 0.28,
+   "name": "Lutovo"
+  },
+  {
+   "fid": 149,
+   "to": "yaroslavl",
+   "km": 19.0,
+   "h": 0.27,
+   "name": "Kozmodemiansk"
+  },
+  {
+   "fid": 150,
+   "to": "yaroslavl",
+   "km": 65.8,
+   "h": 0.94,
+   "name": "Toropovo"
+  },
+  {
+   "fid": 151,
+   "to": "yaroslavl",
+   "km": 59.1,
+   "h": 0.84,
+   "name": "Pinyagi"
+  },
+  {
+   "fid": 152,
+   "to": "yaroslavl",
+   "km": 44.0,
+   "h": 0.63,
+   "name": "Chizovo"
+  },
+  {
+   "fid": 153,
+   "to": "yaroslavl",
+   "km": 42.6,
+   "h": 0.61,
+   "name": "323 км"
+  },
+  {
+   "fid": 154,
+   "to": "yaroslavl",
+   "km": 39.6,
+   "h": 0.57,
+   "name": "2 км"
+  },
+  {
+   "fid": 155,
+   "to": "yaroslavl",
+   "km": 32.1,
+   "h": 0.46,
+   "name": "Klincevo"
+  },
+  {
+   "fid": 156,
+   "to": "yaroslavl",
+   "km": 20.3,
+   "h": 0.29,
+   "name": "300 км"
+  },
+  {
+   "fid": 157,
+   "to": "yaroslavl",
+   "km": 4.8,
+   "h": 0.07,
+   "name": "Depo"
+  },
+  {
+   "fid": 158,
+   "to": "yaroslavl",
+   "km": 2.9,
+   "h": 0.04,
+   "name": "Kotorosl"
+  },
+  {
+   "fid": 159,
+   "to": "yaroslavl",
+   "km": 80.1,
+   "h": 1.14,
+   "name": "Veretye"
+  },
+  {
+   "fid": 160,
+   "to": "yaroslavl",
+   "km": 103.9,
+   "h": 1.48,
+   "name": "Shestikhino"
+  },
+  {
+   "fid": 161,
+   "to": "tver",
+   "km": 137.6,
+   "h": 1.97,
+   "name": "Pishalkino"
+  },
+  {
+   "fid": 162,
+   "to": "tver",
+   "km": 126.6,
+   "h": 1.81,
+   "name": "Sonkovo"
+  },
+  {
+   "fid": 163,
+   "to": "tver",
+   "km": 115.9,
+   "h": 1.66,
+   "name": "Kesova Gora"
+  },
+  {
+   "fid": 164,
+   "to": "yaroslavl",
+   "km": 13.9,
+   "h": 0.2,
+   "name": "Kochenyatino"
+  },
+  {
+   "fid": 165,
+   "to": "yaroslavl",
+   "km": 9.5,
+   "h": 0.14,
+   "name": "Sosnovtsy"
+  },
+  {
+   "fid": 166,
+   "to": "yaroslavl",
+   "km": 24.2,
+   "h": 0.35,
+   "name": "Utkino"
+  },
+  {
+   "fid": 167,
+   "to": "vologda",
+   "km": 80.9,
+   "h": 1.16,
+   "name": "Vohtoga"
+  },
+  {
+   "fid": 168,
+   "to": "tver",
+   "km": 258.0,
+   "h": 3.69,
+   "name": "Chagoda"
+  },
+  {
+   "fid": 169,
+   "to": "vologda",
+   "km": 112.2,
+   "h": 1.6,
+   "name": "Cherepovets-1"
+  },
+  {
+   "fid": 170,
+   "to": "petrozavodsk",
+   "km": 264.9,
+   "h": 3.78,
+   "name": "Maloshuika"
+  },
+  {
+   "fid": 171,
+   "to": "petrozavodsk",
+   "km": 252.9,
+   "h": 3.61,
+   "name": "Malenga"
+  },
+  {
+   "fid": 172,
+   "to": "petrozavodsk",
+   "km": 278.0,
+   "h": 3.97,
+   "name": "Sumsky Posad"
+  },
+  {
+   "fid": 173,
+   "to": "murmansk",
+   "km": 5.6,
+   "h": 0.08,
+   "name": "Komsomolsk-Murmanskyi"
+  },
+  {
+   "fid": 174,
+   "to": "petrozavodsk",
+   "km": 125.9,
+   "h": 1.8,
+   "name": "Lodeinoe Pole"
+  },
+  {
+   "fid": 175,
+   "to": "petrozavodsk",
+   "km": 155.2,
+   "h": 2.22,
+   "name": "Pitkaranta"
+  },
+  {
+   "fid": 176,
+   "to": "vyborg",
+   "km": 168.9,
+   "h": 2.41,
+   "name": "Gornyi park Ruskeala"
+  },
+  {
+   "fid": 177,
+   "to": "vyborg",
+   "km": 169.2,
+   "h": 2.42,
+   "name": "Matkaselkya"
+  },
+  {
+   "fid": 178,
+   "to": "petrozavodsk",
+   "km": 111.0,
+   "h": 1.59,
+   "name": "Suojarvi 1"
+  },
+  {
+   "fid": 179,
+   "to": "petrozavodsk",
+   "km": 8.8,
+   "h": 0.13,
+   "name": "Tomitsy"
+  },
+  {
+   "fid": 180,
+   "to": "vyborg",
+   "km": 77.4,
+   "h": 1.11,
+   "name": "Hitoila"
+  },
+  {
+   "fid": 181,
+   "to": "vyborg",
+   "km": 34.1,
+   "h": 0.49,
+   "name": "Kamennogorsk"
+  },
+  {
+   "fid": 182,
+   "to": "vyborg",
+   "km": 45.6,
+   "h": 0.65,
+   "name": "Svetlogorsk"
+  },
+  {
+   "fid": 183,
+   "to": "vologda",
+   "km": 126.8,
+   "h": 1.81,
+   "name": "Bui"
+  },
+  {
+   "fid": 184,
+   "to": "yaroslavl",
+   "km": 166.8,
+   "h": 2.38,
+   "name": "Galich"
+  },
+  {
+   "fid": 185,
+   "to": "murmansk",
+   "km": 366.3,
+   "h": 5.23,
+   "name": "Paozero Tovarnaya"
+  },
+  {
+   "fid": 186,
+   "to": "murmansk",
+   "km": 321.9,
+   "h": 4.6,
+   "name": "Loukhi"
+  },
+  {
+   "fid": 187,
+   "to": "petrozavodsk",
+   "km": 352.1,
+   "h": 5.03,
+   "name": "Kem"
+  },
+  {
+   "fid": 188,
+   "to": "petrozavodsk",
+   "km": 348.2,
+   "h": 4.97,
+   "name": "Yushkozero"
+  },
+  {
+   "fid": 189,
+   "to": "petrozavodsk",
+   "km": 298.5,
+   "h": 4.26,
+   "name": "Ledmozero"
+  },
+  {
+   "fid": 190,
+   "to": "murmansk",
+   "km": 91.5,
+   "h": 1.31,
+   "name": "Luostari"
+  },
+  {
+   "fid": 191,
+   "to": "murmansk",
+   "km": 250.5,
+   "h": 3.58,
+   "name": "Alakurtti"
+  },
+  {
+   "fid": 192,
+   "to": "murmansk",
+   "km": 221.6,
+   "h": 3.17,
+   "name": "Ruchi Karelskie"
+  },
+  {
+   "fid": 193,
+   "to": "petrozavodsk",
+   "km": 344.6,
+   "h": 4.92,
+   "name": "Kodino"
+  },
+  {
+   "fid": 194,
+   "to": "petrozavodsk",
+   "km": 332.2,
+   "h": 4.75,
+   "name": "Mudjuga"
+  },
+  {
+   "fid": 195,
+   "to": "petrozavodsk",
+   "km": 308.7,
+   "h": 4.41,
+   "name": "243 km"
+  },
+  {
+   "fid": 196,
+   "to": "petrozavodsk",
+   "km": 302.8,
+   "h": 4.33,
+   "name": "Wig"
+  },
+  {
+   "fid": 197,
+   "to": "petrozavodsk",
+   "km": 323.2,
+   "h": 4.62,
+   "name": "Plesetskaya"
+  },
+  {
+   "fid": 198,
+   "to": "petrozavodsk",
+   "km": 321.1,
+   "h": 4.59,
+   "name": "Puksa"
+  },
+  {
+   "fid": 199,
+   "to": "vologda",
+   "km": 272.1,
+   "h": 3.89,
+   "name": "Nyandoma"
+  },
+  {
+   "fid": 200,
+   "to": "vologda",
+   "km": 67.7,
+   "h": 0.97,
+   "name": "Semigorodnaya"
+  },
+  {
+   "fid": 201,
+   "to": "vologda",
+   "km": 238.2,
+   "h": 3.4,
+   "name": "Velsk"
+  },
+  {
+   "fid": 202,
+   "to": "kirov",
+   "km": 307.7,
+   "h": 4.4,
+   "name": "Velikiy Ustug"
+  },
+  {
+   "fid": 203,
+   "to": "kirov",
+   "km": 337.6,
+   "h": 4.82,
+   "name": "Yadrikha"
+  },
+  {
+   "fid": 204,
+   "to": "kirov",
+   "km": 334.9,
+   "h": 4.78,
+   "name": "Kotlas-Uzlovoi"
+  },
+  {
+   "fid": 205,
+   "to": "kirov",
+   "km": 340.0,
+   "h": 4.86,
+   "name": "Kotlas-Yuznyi"
+  },
+  {
+   "fid": 206,
+   "to": "kirov",
+   "km": 2.4,
+   "h": 0.03,
+   "name": "Kirov-Passazirsky"
+  },
+  {
+   "fid": 207,
+   "to": "tyumen",
+   "km": 1057.6,
+   "h": 15.11,
+   "name": "Labytnangi"
+  },
+  {
+   "fid": 208,
+   "to": "perm",
+   "km": 1122.0,
+   "h": 16.03,
+   "name": "Workuta"
+  },
+  {
+   "fid": 209,
+   "to": "perm",
+   "km": 893.7,
+   "h": 12.77,
+   "name": "Usinsk"
+  },
+  {
+   "fid": 210,
+   "to": "perm",
+   "km": 824.0,
+   "h": 11.77,
+   "name": "Synya"
+  },
+  {
+   "fid": 211,
+   "to": "perm",
+   "km": 796.5,
+   "h": 11.38,
+   "name": "Pechora"
+  },
+  {
+   "fid": 212,
+   "to": "perm",
+   "km": 527.1,
+   "h": 7.53,
+   "name": "Troitsko-Pechorsk"
+  },
+  {
+   "fid": 213,
+   "to": "kirov",
+   "km": 418.7,
+   "h": 5.98,
+   "name": "Mikun"
+  },
+  {
+   "fid": 214,
+   "to": "murmansk",
+   "km": 10.3,
+   "h": 0.15,
+   "name": "1437 km"
+  },
+  {
+   "fid": 215,
+   "to": "voronezh",
+   "km": 2.3,
+   "h": 0.03,
+   "name": "Voronez-1"
+  },
+  {
+   "fid": 216,
+   "to": "voronezh",
+   "km": 75.4,
+   "h": 1.08,
+   "name": "Kastornaya-Novaya"
+  },
+  {
+   "fid": 217,
+   "to": "voronezh",
+   "km": 78.3,
+   "h": 1.12,
+   "name": "Kastornaya-Kurskaya"
+  },
+  {
+   "fid": 218,
+   "to": "voronezh",
+   "km": 76.7,
+   "h": 1.1,
+   "name": "Kastornaya-Wostochnaya"
+  },
+  {
+   "fid": 221,
+   "to": "kursk",
+   "km": 62.2,
+   "h": 0.89,
+   "name": "Saraevka"
+  },
+  {
+   "fid": 222,
+   "to": "voronezh",
+   "km": 100.8,
+   "h": 1.44,
+   "name": "Staryi Oskol"
+  },
+  {
+   "fid": 223,
+   "to": "belgorod",
+   "km": 117.3,
+   "h": 1.68,
+   "name": "valuiki"
+  },
+  {
+   "fid": 224,
+   "to": "kursk",
+   "km": 52.8,
+   "h": 0.75,
+   "name": "Shigry"
+  },
+  {
+   "fid": 225,
+   "to": "kursk",
+   "km": 60.2,
+   "h": 0.86,
+   "name": "Oboyan"
+  },
+  {
+   "fid": 226,
+   "to": "kursk",
+   "km": 66.8,
+   "h": 0.95,
+   "name": "Rjava"
+  },
+  {
+   "fid": 227,
+   "to": "voronezh",
+   "km": 78.7,
+   "h": 1.12,
+   "name": "Liski"
+  },
+  {
+   "fid": 228,
+   "to": "voronezh",
+   "km": 86.6,
+   "h": 1.24,
+   "name": "Anna"
+  },
+  {
+   "fid": 229,
+   "to": "voronezh",
+   "km": 36.4,
+   "h": 0.52,
+   "name": "Grafskaya"
+  },
+  {
+   "fid": 230,
+   "to": "voronezh",
+   "km": 30.0,
+   "h": 0.43,
+   "name": "Ramon"
+  },
+  {
+   "fid": 231,
+   "to": "voronezh",
+   "km": 105.9,
+   "h": 1.51,
+   "name": "Gryazi-Voronezskie"
+  },
+  {
+   "fid": 232,
+   "to": "voronezh",
+   "km": 105.2,
+   "h": 1.5,
+   "name": "Gryazi-Volgogradskie"
+  },
+  {
+   "fid": 233,
+   "to": "voronezh",
+   "km": 110.1,
+   "h": 1.57,
+   "name": "Lipetsk"
+  },
+  {
+   "fid": 234,
+   "to": "voronezh",
+   "km": 114.9,
+   "h": 1.64,
+   "name": "Elets"
+  },
+  {
+   "fid": 236,
+   "to": "volgograd",
+   "km": 13.1,
+   "h": 0.19,
+   "name": "Imeni Maksima Gorkogo"
+  },
+  {
+   "fid": 237,
+   "to": "rostov_don",
+   "km": 110.2,
+   "h": 1.57,
+   "name": "Likhaya"
+  },
+  {
+   "fid": 238,
+   "to": "voronezh",
+   "km": 217.6,
+   "h": 3.11,
+   "name": "Urupino"
+  },
+  {
+   "fid": 239,
+   "to": "voronezh",
+   "km": 217.3,
+   "h": 3.1,
+   "name": "Povorino"
+  },
+  {
+   "fid": 240,
+   "to": "belgorod",
+   "km": 100.6,
+   "h": 1.44,
+   "name": "Gubkin-Passazirsky"
+  },
+  {
+   "fid": 241,
+   "to": "tula",
+   "km": 43.8,
+   "h": 0.63,
+   "name": "Uzlovaya-1"
+  },
+  {
+   "fid": 242,
+   "to": "tula",
+   "km": 47.3,
+   "h": 0.68,
+   "name": "Novomoskovskaya-1"
+  },
+  {
+   "fid": 243,
+   "to": "tula",
+   "km": 2.7,
+   "h": 0.04,
+   "name": "Tula-1"
+  },
+  {
+   "fid": 244,
+   "to": "tula",
+   "km": 1.2,
+   "h": 0.02,
+   "name": "Tula-3"
+  },
+  {
+   "fid": 245,
+   "to": "tula",
+   "km": 134.4,
+   "h": 1.92,
+   "name": "Skopin"
+  },
+  {
+   "fid": 246,
+   "to": "tula",
+   "km": 171.5,
+   "h": 2.45,
+   "name": "Ryazsk-1"
+  },
+  {
+   "fid": 247,
+   "to": "voronezh",
+   "km": 192.1,
+   "h": 2.74,
+   "name": "Tambov"
+  },
+  {
+   "fid": 248,
+   "to": "voronezh",
+   "km": 169.3,
+   "h": 2.42,
+   "name": "Kochetovka"
+  },
+  {
+   "fid": 249,
+   "to": "voronezh",
+   "km": 163.5,
+   "h": 2.34,
+   "name": "Michurinsk-Uralsky"
+  },
+  {
+   "fid": 250,
+   "to": "voronezh",
+   "km": 162.4,
+   "h": 2.32,
+   "name": "Michurinsk-Voronezskiy"
+  },
+  {
+   "fid": 251,
+   "to": "voronezh",
+   "km": 191.7,
+   "h": 2.74,
+   "name": "Bogoyavlensk"
+  },
+  {
+   "fid": 252,
+   "to": "voronezh",
+   "km": 228.0,
+   "h": 3.26,
+   "name": "Chelnovaya"
+  },
+  {
+   "fid": 253,
+   "to": "bryansk",
+   "km": 175.0,
+   "h": 2.5,
+   "name": "Klimov"
+  },
+  {
+   "fid": 254,
+   "to": "bryansk",
+   "km": 180.4,
+   "h": 2.58,
+   "name": "Novozibkov"
+  },
+  {
+   "fid": 255,
+   "to": "bryansk",
+   "km": 120.8,
+   "h": 1.73,
+   "name": "Unecha"
+  },
+  {
+   "fid": 256,
+   "to": "bryansk",
+   "km": 134.4,
+   "h": 1.92,
+   "name": "Suraz"
+  },
+  {
+   "fid": 257,
+   "to": "bryansk",
+   "km": 47.4,
+   "h": 0.68,
+   "name": "Navlya"
+  },
+  {
+   "fid": 258,
+   "to": "bryansk",
+   "km": 4.0,
+   "h": 0.06,
+   "name": "Bryansk-Moskovsky"
+  },
+  {
+   "fid": 259,
+   "to": "bryansk",
+   "km": 129.1,
+   "h": 1.84,
+   "name": "Starodub"
+  },
+  {
+   "fid": 260,
+   "to": "bryansk",
+   "km": 70.1,
+   "h": 1.0,
+   "name": "Pochep"
+  },
+  {
+   "fid": 261,
+   "to": "bryansk",
+   "km": 91.8,
+   "h": 1.31,
+   "name": "Fayansovaya"
+  },
+  {
+   "fid": 263,
+   "to": "smolensk",
+   "km": 151.9,
+   "h": 2.17,
+   "name": "Vyazma"
+  },
+  {
+   "fid": 264,
+   "to": "kursk",
+   "km": 87.7,
+   "h": 1.25,
+   "name": "Dmitriev-Lgovskiy"
+  },
+  {
+   "fid": 265,
+   "to": "kursk",
+   "km": 79.3,
+   "h": 1.13,
+   "name": "Arbuzovo"
+  },
+  {
+   "fid": 266,
+   "to": "orel",
+   "km": 82.4,
+   "h": 1.18,
+   "name": "Mikhailovsky Rudnik"
+  },
+  {
+   "fid": 267,
+   "to": "kursk",
+   "km": 79.0,
+   "h": 1.13,
+   "name": "Kolpny"
+  },
+  {
+   "fid": 268,
+   "to": "kursk",
+   "km": 41.4,
+   "h": 0.59,
+   "name": "Okhochevka"
+  },
+  {
+   "fid": 269,
+   "to": "kursk",
+   "km": 95.4,
+   "h": 1.36,
+   "name": "Marmizi"
+  },
+  {
+   "fid": 270,
+   "to": "orel",
+   "km": 3.0,
+   "h": 0.04,
+   "name": "Oryol"
+  },
+  {
+   "fid": 271,
+   "to": "orel",
+   "km": 94.4,
+   "h": 1.35,
+   "name": "Belyov"
+  },
+  {
+   "fid": 272,
+   "to": "orel",
+   "km": 120.4,
+   "h": 1.72,
+   "name": "Kozelsk"
+  },
+  {
+   "fid": 273,
+   "to": "tula",
+   "km": 74.0,
+   "h": 1.06,
+   "name": "Gorbachevo"
+  },
+  {
+   "fid": 274,
+   "to": "tula",
+   "km": 65.9,
+   "h": 0.94,
+   "name": "Tyoploye"
+  },
+  {
+   "fid": 275,
+   "to": "tula",
+   "km": 22.5,
+   "h": 0.32,
+   "name": "Shokino"
+  },
+  {
+   "fid": 276,
+   "to": "orel",
+   "km": 48.9,
+   "h": 0.7,
+   "name": "Mtsensk"
+  },
+  {
+   "fid": 277,
+   "to": "orel",
+   "km": 119.4,
+   "h": 1.71,
+   "name": "Livny-1"
+  },
+  {
+   "fid": 278,
+   "to": "orel",
+   "km": 80.2,
+   "h": 1.15,
+   "name": "Verkhovie"
+  },
+  {
+   "fid": 279,
+   "to": "voronezh",
+   "km": 112.6,
+   "h": 1.61,
+   "name": "Chugun-1"
+  },
+  {
+   "fid": 280,
+   "to": "voronezh",
+   "km": 105.5,
+   "h": 1.51,
+   "name": "Kazinka"
+  },
+  {
+   "fid": 281,
+   "to": "voronezh",
+   "km": 129.8,
+   "h": 1.85,
+   "name": "Izberdei"
+  },
+  {
+   "fid": 282,
+   "to": "tula",
+   "km": 163.2,
+   "h": 2.33,
+   "name": "Lev Tolstoi"
+  },
+  {
+   "fid": 283,
+   "to": "tula",
+   "km": 110.4,
+   "h": 1.58,
+   "name": "Kulikovo Pole"
+  },
+  {
+   "fid": 284,
+   "to": "voronezh",
+   "km": 184.3,
+   "h": 2.63,
+   "name": "Ranenburg"
+  },
+  {
+   "fid": 285,
+   "to": "voronezh",
+   "km": 150.5,
+   "h": 2.15,
+   "name": "Lebedyan"
+  },
+  {
+   "fid": 286,
+   "to": "kursk",
+   "km": 64.5,
+   "h": 0.92,
+   "name": "Sherekino"
+  },
+  {
+   "fid": 287,
+   "to": "kursk",
+   "km": 65.4,
+   "h": 0.93,
+   "name": "Lgov-2"
+  },
+  {
+   "fid": 288,
+   "to": "kursk",
+   "km": 63.9,
+   "h": 0.91,
+   "name": "Lgov-Kievskiy"
+  },
+  {
+   "fid": 289,
+   "to": "kursk",
+   "km": 103.0,
+   "h": 1.47,
+   "name": "Rilsk"
+  },
+  {
+   "fid": 290,
+   "to": "kursk",
+   "km": 84.6,
+   "h": 1.21,
+   "name": "Sudja"
+  },
+  {
+   "fid": 291,
+   "to": "belgorod",
+   "km": 61.4,
+   "h": 0.88,
+   "name": "Gotnya"
+  },
+  {
+   "fid": 292,
+   "to": "belgorod",
+   "km": 54.6,
+   "h": 0.78,
+   "name": "Hotmuzsk"
+  },
+  {
+   "fid": 293,
+   "to": "nnovgorod",
+   "km": 6.1,
+   "h": 0.09,
+   "name": "Mokhovie Gory"
+  },
+  {
+   "fid": 294,
+   "to": "nnovgorod",
+   "km": 9.6,
+   "h": 0.14,
+   "name": "Tolokontsevo"
+  },
+  {
+   "fid": 295,
+   "to": "nnovgorod",
+   "km": 7.4,
+   "h": 0.11,
+   "name": "Varya"
+  },
+  {
+   "fid": 296,
+   "to": "nnovgorod",
+   "km": 11.8,
+   "h": 0.17,
+   "name": "Pochinki"
+  },
+  {
+   "fid": 297,
+   "to": "nnovgorod",
+   "km": 8.6,
+   "h": 0.12,
+   "name": "Sormovo"
+  },
+  {
+   "fid": 298,
+   "to": "nnovgorod",
+   "km": 31.7,
+   "h": 0.45,
+   "name": "Balakhna"
+  },
+  {
+   "fid": 299,
+   "to": "nnovgorod",
+   "km": 35.9,
+   "h": 0.51,
+   "name": "Pravdinsk"
+  },
+  {
+   "fid": 300,
+   "to": "nnovgorod",
+   "km": 37.3,
+   "h": 0.53,
+   "name": "Kozevennoye"
+  },
+  {
+   "fid": 301,
+   "to": "penza",
+   "km": 136.8,
+   "h": 1.95,
+   "name": "Krasnyi Uzel"
+  },
+  {
+   "fid": 302,
+   "to": "penza",
+   "km": 95.1,
+   "h": 1.36,
+   "name": "Ruzaevka"
+  },
+  {
+   "fid": 303,
+   "to": "kazan",
+   "km": 107.4,
+   "h": 1.53,
+   "name": "Kanash"
+  },
+  {
+   "fid": 304,
+   "to": "samara",
+   "km": 209.8,
+   "h": 3.0,
+   "name": "Akbash"
+  },
+  {
+   "fid": 305,
+   "to": "izhevsk",
+   "km": 38.1,
+   "h": 0.54,
+   "name": "Agriz"
+  },
+  {
+   "fid": 307,
+   "to": "kazan",
+   "km": 35.4,
+   "h": 0.51,
+   "name": "Zelenyi Dol"
+  },
+  {
+   "fid": 308,
+   "to": "kazan",
+   "km": 48.1,
+   "h": 0.69,
+   "name": "Volzsk"
+  },
+  {
+   "fid": 309,
+   "to": "kazan",
+   "km": 37.1,
+   "h": 0.53,
+   "name": "Sviyazsk"
+  },
+  {
+   "fid": 310,
+   "to": "barnaul",
+   "km": 130.4,
+   "h": 1.86,
+   "name": "Biisk"
+  },
+  {
+   "fid": 311,
+   "to": "ufa",
+   "km": 132.4,
+   "h": 1.89,
+   "name": "Kropachevo"
+  },
+  {
+   "fid": 312,
+   "to": "yekaterinburg",
+   "km": 190.8,
+   "h": 2.73,
+   "name": "Zlatoust"
+  },
+  {
+   "fid": 313,
+   "to": "ufa",
+   "km": 207.9,
+   "h": 2.97,
+   "name": "Berdyaush"
+  },
+  {
+   "fid": 314,
+   "to": "ufa",
+   "km": 158.1,
+   "h": 2.26,
+   "name": "Uruzan"
+  },
+  {
+   "fid": 315,
+   "to": "ufa",
+   "km": 143.0,
+   "h": 2.04,
+   "name": "Katav-Ivanovsk"
+  },
+  {
+   "fid": 316,
+   "to": "izhevsk",
+   "km": 5.5,
+   "h": 0.08,
+   "name": "Izevsk"
+  },
+  {
+   "fid": 317,
+   "to": "izhevsk",
+   "km": 53.4,
+   "h": 0.76,
+   "name": "Woktinsk"
+  },
+  {
+   "fid": 318,
+   "to": "izhevsk",
+   "km": 108.1,
+   "h": 1.54,
+   "name": "Surek"
+  },
+  {
+   "fid": 319,
+   "to": "izhevsk",
+   "km": 64.4,
+   "h": 0.92,
+   "name": "Uva-1"
+  },
+  {
+   "fid": 320,
+   "to": "izhevsk",
+   "km": 17.3,
+   "h": 0.25,
+   "name": "Lukshudia"
+  },
+  {
+   "fid": 321,
+   "to": "izhevsk",
+   "km": 125.6,
+   "h": 1.79,
+   "name": "Balezino"
+  },
+  {
+   "fid": 322,
+   "to": "izhevsk",
+   "km": 162.1,
+   "h": 2.32,
+   "name": "Niznekamsk"
+  },
+  {
+   "fid": 323,
+   "to": "izhevsk",
+   "km": 161.8,
+   "h": 2.31,
+   "name": "Sobolekovo"
+  },
+  {
+   "fid": 324,
+   "to": "izhevsk",
+   "km": 159.5,
+   "h": 2.28,
+   "name": "Biklyan"
+  },
+  {
+   "fid": 325,
+   "to": "izhevsk",
+   "km": 159.4,
+   "h": 2.28,
+   "name": "Nikshanovka"
+  },
+  {
+   "fid": 326,
+   "to": "izhevsk",
+   "km": 151.1,
+   "h": 2.16,
+   "name": "Krugloe Pole"
+  },
+  {
+   "fid": 327,
+   "to": "izhevsk",
+   "km": 143.1,
+   "h": 2.04,
+   "name": "Nabereznie Chelny"
+  },
+  {
+   "fid": 328,
+   "to": "izhevsk",
+   "km": 130.6,
+   "h": 1.87,
+   "name": "198km"
+  },
+  {
+   "fid": 329,
+   "to": "izhevsk",
+   "km": 120.6,
+   "h": 1.72,
+   "name": "Mendeleevsk"
+  },
+  {
+   "fid": 330,
+   "to": "izhevsk",
+   "km": 90.5,
+   "h": 1.29,
+   "name": "Alnashi"
+  },
+  {
+   "fid": 331,
+   "to": "izhevsk",
+   "km": 61.0,
+   "h": 0.87,
+   "name": "Tersi"
+  },
+  {
+   "fid": 332,
+   "to": "izhevsk",
+   "km": 186.5,
+   "h": 2.66,
+   "name": "Zainsk"
+  },
+  {
+   "fid": 333,
+   "to": "izhevsk",
+   "km": 127.9,
+   "h": 1.83,
+   "name": "Tihonovo"
+  },
+  {
+   "fid": 334,
+   "to": "izhevsk",
+   "km": 95.0,
+   "h": 1.36,
+   "name": "236 км"
+  },
+  {
+   "fid": 335,
+   "to": "izhevsk",
+   "km": 101.2,
+   "h": 1.45,
+   "name": "230 км"
+  },
+  {
+   "fid": 336,
+   "to": "izhevsk",
+   "km": 108.1,
+   "h": 1.54,
+   "name": "Toima"
+  },
+  {
+   "fid": 337,
+   "to": "izhevsk",
+   "km": 116.8,
+   "h": 1.67,
+   "name": "212 км"
+  },
+  {
+   "fid": 338,
+   "to": "kazan",
+   "km": 218.1,
+   "h": 3.12,
+   "name": "Kulsharipovo"
+  },
+  {
+   "fid": 339,
+   "to": "izhevsk",
+   "km": 75.3,
+   "h": 1.08,
+   "name": "Mukshur"
+  },
+  {
+   "fid": 340,
+   "to": "tayshet",
+   "km": 0.2,
+   "h": 0.0,
+   "name": "Taishet"
+  },
+  {
+   "fid": 343,
+   "to": "komsomolsk",
+   "km": 292.6,
+   "h": 4.18,
+   "name": "Chegdomin"
+  },
+  {
+   "fid": 344,
+   "to": "komsomolsk",
+   "km": 314.7,
+   "h": 4.5,
+   "name": "Novyi Urgal"
+  },
+  {
+   "fid": 345,
+   "to": "khabarovsk",
+   "km": 437.0,
+   "h": 6.24,
+   "name": "Raichikhinsk"
+  },
+  {
+   "fid": 347,
+   "to": "irkutsk",
+   "km": 7.8,
+   "h": 0.11,
+   "name": "Irkutsk-Sortirovochnyi"
+  },
+  {
+   "fid": 348,
+   "to": "chita",
+   "km": 285.9,
+   "h": 4.08,
+   "name": "Sretensk"
+  },
+  {
+   "fid": 349,
+   "to": "tynda",
+   "km": 223.3,
+   "h": 3.19,
+   "name": "Erofei Pavlovich"
+  },
+  {
+   "fid": 350,
+   "to": "tynda",
+   "km": 481.5,
+   "h": 6.88,
+   "name": "Mihailo-Chesnokovskaya"
+  },
+  {
+   "fid": 351,
+   "to": "tynda",
+   "km": 476.5,
+   "h": 6.81,
+   "name": "Svobodnyi"
+  },
+  {
+   "fid": 352,
+   "to": "tynda",
+   "km": 139.8,
+   "h": 2.0,
+   "name": "Skovorodino"
+  },
+  {
+   "fid": 353,
+   "to": "tynda",
+   "km": 2.5,
+   "h": 0.04,
+   "name": "Tinda"
+  },
+  {
+   "fid": 355,
+   "to": "tynda",
+   "km": 574.0,
+   "h": 8.2,
+   "name": "Blagoveshensk"
+  },
+  {
+   "fid": 356,
+   "to": "tynda",
+   "km": 533.5,
+   "h": 7.62,
+   "name": "Belogorsk"
+  },
+  {
+   "fid": 357,
+   "to": "khabarovsk",
+   "km": 300.6,
+   "h": 4.29,
+   "name": "Obluchye"
+  },
+  {
+   "fid": 358,
+   "to": "khabarovsk",
+   "km": 45.0,
+   "h": 0.64,
+   "name": "Volochaevka"
+  },
+  {
+   "fid": 361,
+   "to": "sov_gavan",
+   "km": 9.9,
+   "h": 0.14,
+   "name": "Vanino"
+  },
+  {
+   "fid": 362,
+   "to": "komsomolsk",
+   "km": 476.1,
+   "h": 6.8,
+   "name": "Fevralsk"
+  },
+  {
+   "fid": 363,
+   "to": "tynda",
+   "km": 165.7,
+   "h": 2.37,
+   "name": "Nerungri"
+  },
+  {
+   "fid": 364,
+   "to": "tynda",
+   "km": 440.6,
+   "h": 6.29,
+   "name": "Novaya Chara"
+  },
+  {
+   "fid": 365,
+   "to": "tayshet",
+   "km": 133.2,
+   "h": 1.9,
+   "name": "Nizneudinsk"
+  },
+  {
+   "fid": 366,
+   "to": "bratsk",
+   "km": 183.7,
+   "h": 2.62,
+   "name": "Tulun"
+  },
+  {
+   "fid": 367,
+   "to": "irkutsk",
+   "km": 235.8,
+   "h": 3.37,
+   "name": "Zima"
+  },
+  {
+   "fid": 368,
+   "to": "irkutsk",
+   "km": 125.8,
+   "h": 1.8,
+   "name": "Cheremhovo"
+  },
+  {
+   "fid": 369,
+   "to": "irkutsk",
+   "km": 39.1,
+   "h": 0.56,
+   "name": "Angarsk"
+  },
+  {
+   "fid": 370,
+   "to": "irkutsk",
+   "km": 65.6,
+   "h": 0.94,
+   "name": "Usolie-Sibirskoe"
+  },
+  {
+   "fid": 371,
+   "to": "irkutsk",
+   "km": 14.3,
+   "h": 0.2,
+   "name": "Shelekhov"
+  },
+  {
+   "fid": 372,
+   "to": "irkutsk",
+   "km": 80.5,
+   "h": 1.15,
+   "name": "Sludyanka"
+  },
+  {
+   "fid": 373,
+   "to": "irkutsk",
+   "km": 73.8,
+   "h": 1.05,
+   "name": "Kultuk"
+  },
+  {
+   "fid": 374,
+   "to": "irkutsk",
+   "km": 78.0,
+   "h": 1.11,
+   "name": "Sludyanka-2"
+  },
+  {
+   "fid": 375,
+   "to": "irkutsk",
+   "km": 70.8,
+   "h": 1.01,
+   "name": "Angasolka"
+  },
+  {
+   "fid": 376,
+   "to": "irkutsk",
+   "km": 86.8,
+   "h": 1.24,
+   "name": "Baikalsk-pass"
+  },
+  {
+   "fid": 377,
+   "to": "ulan_ude",
+   "km": 118.8,
+   "h": 1.7,
+   "name": "Mysovaya"
+  },
+  {
+   "fid": 378,
+   "to": "irkutsk",
+   "km": 98.9,
+   "h": 1.41,
+   "name": "Tankhoy"
+  },
+  {
+   "fid": 379,
+   "to": "ulan_ude",
+   "km": 53.6,
+   "h": 0.77,
+   "name": "Selenga"
+  },
+  {
+   "fid": 382,
+   "to": "naushki",
+   "km": 81.5,
+   "h": 1.16,
+   "name": "Gusinoe Ozero"
+  },
+  {
+   "fid": 383,
+   "to": "ulan_ude",
+   "km": 85.7,
+   "h": 1.22,
+   "name": "Posolskaya"
+  },
+  {
+   "fid": 384,
+   "to": "ulan_ude",
+   "km": 56.2,
+   "h": 0.8,
+   "name": "Chelutai"
+  },
+  {
+   "fid": 385,
+   "to": "ulan_ude",
+   "km": 107.9,
+   "h": 1.54,
+   "name": "Dekabristy"
+  },
+  {
+   "fid": 386,
+   "to": "khabarovsk",
+   "km": 161.4,
+   "h": 2.31,
+   "name": "Biroidzan"
+  },
+  {
+   "fid": 387,
+   "to": "khabarovsk",
+   "km": 190.5,
+   "h": 2.72,
+   "name": "Leninsk"
+  },
+  {
+   "fid": 388,
+   "to": "khabarovsk",
+   "km": 446.8,
+   "h": 6.38,
+   "name": "Zavitaya"
+  },
+  {
+   "fid": 389,
+   "to": "khabarovsk",
+   "km": 480.5,
+   "h": 6.86,
+   "name": "Ekaterinoslavka"
+  },
+  {
+   "fid": 390,
+   "to": "khabarovsk",
+   "km": 380.1,
+   "h": 5.43,
+   "name": "Arhara"
+  },
+  {
+   "fid": 391,
+   "to": "sov_gavan",
+   "km": 206.1,
+   "h": 2.94,
+   "name": "Poronaisk"
+  },
+  {
+   "fid": 392,
+   "to": "sov_gavan",
+   "km": 371.2,
+   "h": 5.3,
+   "name": "Nogliki"
+  },
+  {
+   "fid": 393,
+   "to": "sov_gavan",
+   "km": 284.4,
+   "h": 4.06,
+   "name": "Nevelsk"
+  },
+  {
+   "fid": 394,
+   "to": "sov_gavan",
+   "km": 181.6,
+   "h": 2.59,
+   "name": "Ilinskoe"
+  },
+  {
+   "fid": 395,
+   "to": "sov_gavan",
+   "km": 286.3,
+   "h": 4.09,
+   "name": "Dalnee"
+  },
+  {
+   "fid": 396,
+   "to": "tomsk",
+   "km": 1.9,
+   "h": 0.03,
+   "name": "Tomsk-2"
+  },
+  {
+   "fid": 398,
+   "to": "nakhodka",
+   "km": 0.8,
+   "h": 0.01,
+   "name": "Tikhookeanskaya"
+  },
+  {
+   "fid": 399,
+   "to": "nakhodka",
+   "km": 2.6,
+   "h": 0.04,
+   "name": "Mys Astafieva"
+  },
+  {
+   "fid": 400,
+   "to": "vladivostok",
+   "km": 2.0,
+   "h": 0.03,
+   "name": "Mys Churkin"
+  },
+  {
+   "fid": 401,
+   "to": "barnaul",
+   "km": 335.9,
+   "h": 4.8,
+   "name": "Kulunda"
+  },
+  {
+   "fid": 402,
+   "to": "omsk",
+   "km": 268.7,
+   "h": 3.84,
+   "name": "Petropavlovsk"
+  },
+  {
+   "fid": 403,
+   "to": "omsk",
+   "km": 134.9,
+   "h": 1.93,
+   "name": "Isikul"
+  },
+  {
+   "fid": 405,
+   "to": "tyumen",
+   "km": 190.3,
+   "h": 2.72,
+   "name": "Kurgan"
+  },
+  {
+   "fid": 406,
+   "to": "yekaterinburg",
+   "km": 93.2,
+   "h": 1.33,
+   "name": "Kamensk-Uralsky"
+  },
+  {
+   "fid": 407,
+   "to": "vladivostok",
+   "km": 76.1,
+   "h": 1.09,
+   "name": "Ussurisk"
+  },
+  {
+   "fid": 408,
+   "to": "nakhodka",
+   "km": 175.2,
+   "h": 2.5,
+   "name": "Novochuguevka"
+  }
+ ],
+ "dropped_curated": [
+  {
+   "fid": 13,
+   "name": "Samara"
+  },
+  {
+   "fid": 15,
+   "name": "Ufa"
+  },
+  {
+   "fid": 21,
+   "name": "Perm"
+  },
+  {
+   "fid": 34,
+   "name": "Tver"
+  },
+  {
+   "fid": 55,
+   "name": "Yaroslavl"
+  },
+  {
+   "fid": 71,
+   "name": "Vladimir"
+  },
+  {
+   "fid": 92,
+   "name": "Murmansk"
+  },
+  {
+   "fid": 96,
+   "name": "Petrozavodsk"
+  },
+  {
+   "fid": 105,
+   "name": "Vologda"
+  },
+  {
+   "fid": 219,
+   "name": "Kursk"
+  },
+  {
+   "fid": 220,
+   "name": "Belgorod"
+  },
+  {
+   "fid": 235,
+   "name": "Volgograd"
+  },
+  {
+   "fid": 262,
+   "name": "Smolensk"
+  },
+  {
+   "fid": 306,
+   "name": "Kazan"
+  },
+  {
+   "fid": 341,
+   "name": "Krasnoyarsk"
+  },
+  {
+   "fid": 342,
+   "name": "Khabarovsk"
+  },
+  {
+   "fid": 346,
+   "name": "Irkutsk"
+  },
+  {
+   "fid": 354,
+   "name": "Chita"
+  },
+  {
+   "fid": 359,
+   "name": "Vladivostok"
+  },
+  {
+   "fid": 360,
+   "name": "Sovetskaya gavan"
+  },
+  {
+   "fid": 380,
+   "name": "Ulan-Ude"
+  },
+  {
+   "fid": 381,
+   "name": "Naushki"
+  },
+  {
+   "fid": 397,
+   "name": "Tomsk"
+  },
+  {
+   "fid": 404,
+   "name": "Omsk"
+  }
+ ],
+ "dropped_internal_dup": []
+}

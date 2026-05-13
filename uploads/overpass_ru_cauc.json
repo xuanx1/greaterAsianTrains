@@ -1,0 +1,6106 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-13T16:27:45Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 269972276,
+  "lat": 44.1202168,
+  "lon": 43.0768099,
+  "tags": {
+    "esr:user": "531910",
+    "name": "Бештау",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Beschtau",
+    "uic_ref": "2064151"
+  }
+},
+{
+  "type": "node",
+  "id": 269972551,
+  "lat": 44.6307591,
+  "lon": 41.9636541,
+  "tags": {
+    "esr:user": "531304",
+    "name": "Невинномысская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Newinnomisskaja",
+    "uic_ref": "2064220"
+  }
+},
+{
+  "type": "node",
+  "id": 279731812,
+  "lat": 44.1428508,
+  "lon": 39.1766560,
+  "tags": {
+    "description": "Направление на Туапсе:\nГорячий Ключ - Туапсе: 12:39, 19:13\nБелореченская - Туапсе: 07:12, 21:27",
+    "esr:user": "533704",
+    "name": "Греческий",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064198"
+  }
+},
+{
+  "type": "node",
+  "id": 279732099,
+  "lat": 44.2849177,
+  "lon": 39.2243470,
+  "tags": {
+    "description": "Направление на Туапсе:\nГорячий Ключ - Туапсе: 12:05, 18:39",
+    "esr:user": "524252",
+    "name": "Чилипси",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064624"
+  }
+},
+{
+  "type": "node",
+  "id": 280077862,
+  "lat": 42.0209202,
+  "lon": 43.9034915,
+  "tags": {
+    "esr:user": "578809",
+    "name": "ქარელი",
+    "name:en": "Kareli",
+    "name:ka": "ქარელი",
+    "name:ru": "Карели",
+    "railway": "station",
+    "uic_ref": "2800444"
+  }
+},
+{
+  "type": "node",
+  "id": 287661723,
+  "lat": 42.5464899,
+  "lon": 47.8855380,
+  "tags": {
+    "esr:user": "543903",
+    "name": "Избербаш",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Isberbasch",
+    "uic_ref": "2064216"
+  }
+},
+{
+  "type": "node",
+  "id": 288626049,
+  "lat": 42.1079720,
+  "lon": 43.0390879,
+  "tags": {
+    "esr:user": "576004",
+    "name": "ზესტაფონი",
+    "name:en": "Zestafoni",
+    "name:ru": "Зестафони",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800370"
+  }
+},
+{
+  "type": "node",
+  "id": 288626829,
+  "lat": 42.0411131,
+  "lon": 41.8136054,
+  "tags": {
+    "esr:user": "570602",
+    "name": "სუფსა",
+    "name:en": "Supsa",
+    "name:ka": "სუფსა",
+    "name:ru": "Супса",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800420"
+  }
+},
+{
+  "type": "node",
+  "id": 290718886,
+  "lat": 43.9147708,
+  "lon": 39.3207231,
+  "tags": {
+    "esr:user": "533206",
+    "name": "Лазаревская",
+    "name:en": "Lazarevskaya",
+    "name:ru": "Лазаревская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Lasarewskaja",
+    "uic_ref": "2064030",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 295153931,
+  "lat": 44.9891423,
+  "lon": 38.9544168,
+  "tags": {
+    "esr:user": "524156",
+    "name": "Кубань",
+    "official_status": "ru:разъезд",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1915",
+    "train": "yes",
+    "uic_ref": "2064812"
+  }
+},
+{
+  "type": "node",
+  "id": 296379529,
+  "lat": 44.8277452,
+  "lon": 39.2061235,
+  "tags": {
+    "esr:user": "521904",
+    "name": "Псекупс",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Psekups",
+    "uic_ref": "2064662"
+  }
+},
+{
+  "type": "node",
+  "id": 296379570,
+  "lat": 44.5987278,
+  "lon": 39.0910834,
+  "tags": {
+    "description": "Направление на Туапсе:\nГорячий Ключ - Туапсе: 11:01, 17:33",
+    "esr:user": "524211",
+    "name": "Долина Очарования",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065569"
+  }
+},
+{
+  "type": "node",
+  "id": 296379599,
+  "lat": 44.5327796,
+  "lon": 39.1364491,
+  "tags": {
+    "description": "Направление на Туапсе:\nГорячий Ключ - Туапсе: 11:13, 17:45",
+    "esr:user": "524226",
+    "name": "Фанагорийская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064634"
+  }
+},
+{
+  "type": "node",
+  "id": 296915149,
+  "lat": 44.5783298,
+  "lon": 39.7026145,
+  "tags": {
+    "esr:user": "534425",
+    "name": "Ерик",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065154"
+  }
+},
+{
+  "type": "node",
+  "id": 296929280,
+  "lat": 44.8692693,
+  "lon": 37.8629421,
+  "tags": {
+    "esr:user": "521503",
+    "name": "Баканская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064179"
+  }
+},
+{
+  "type": "node",
+  "id": 296932646,
+  "lat": 45.0254697,
+  "lon": 37.9079062,
+  "tags": {
+    "esr:user": "522536",
+    "name": "Киевский",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064627"
+  }
+},
+{
+  "type": "node",
+  "id": 296985588,
+  "lat": 45.1968421,
+  "lon": 37.1486735,
+  "tags": {
+    "esr:user": "522502",
+    "name": "Старотитаровка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064172"
+  }
+},
+{
+  "type": "node",
+  "id": 296992993,
+  "lat": 45.1887858,
+  "lon": 37.2872793,
+  "tags": {
+    "esr:user": "522930",
+    "name": "Красная Стрела",
+    "name:de": "Krasnaja Strela",
+    "name:en": "Krasnaya Strelya",
+    "name:ru": "Красная Стрела",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064169"
+  }
+},
+{
+  "type": "node",
+  "id": 296995504,
+  "lat": 45.2879969,
+  "lon": 37.3563349,
+  "tags": {
+    "esr:user": "523007",
+    "name": "Темрюк",
+    "name:de": "Temrjuk",
+    "name:en": "Temryuk",
+    "name:ru": "Темрюк",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064177"
+  }
+},
+{
+  "type": "node",
+  "id": 297075388,
+  "lat": 45.3689196,
+  "lon": 40.1801764,
+  "tags": {
+    "esr:user": "526005",
+    "name": "Гречишкино",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Greitschistschkino",
+    "uic_ref": "2064207"
+  }
+},
+{
+  "type": "node",
+  "id": 340057757,
+  "lat": 44.2543638,
+  "lon": 39.2498938,
+  "tags": {
+    "esr:user": "533812",
+    "name": "Индюк",
+    "name:de": "Indjuk",
+    "name:ru": "Индюк",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065152"
+  }
+},
+{
+  "type": "node",
+  "id": 340057760,
+  "lat": 44.2812845,
+  "lon": 39.2773486,
+  "tags": {
+    "esr:user": "533827",
+    "name": "Гойтх",
+    "name:en": "Goytkh",
+    "name:ru": "Гойтх",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064091"
+  }
+},
+{
+  "type": "node",
+  "id": 340057771,
+  "lat": 44.3200091,
+  "lon": 39.3363242,
+  "tags": {
+    "esr:user": "533901",
+    "name": "Пшиш",
+    "name:ru": "Пшиш",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064089"
+  }
+},
+{
+  "type": "node",
+  "id": 340057774,
+  "lat": 44.3673900,
+  "lon": 39.3416407,
+  "tags": {
+    "esr:user": "533916",
+    "name": "Навагинская",
+    "name:ru": "Навагинская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064088"
+  }
+},
+{
+  "type": "node",
+  "id": 343446779,
+  "lat": 44.7353935,
+  "lon": 37.7748777,
+  "tags": {
+    "esr:user": "520901",
+    "name": "Новороссийск",
+    "name:ru": "Новороссийск",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Noworossijsk",
+    "uic_ref": "2064110",
+    "wikidata": "Q3728238"
+  }
+},
+{
+  "type": "node",
+  "id": 346134733,
+  "lat": 45.0546452,
+  "lon": 38.9869556,
+  "tags": {
+    "esr:user": "520808",
+    "name": "Краснодар II",
+    "name:en": "Krasnodar-2",
+    "name:ru": "Краснодар II",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065700",
+    "wikidata": "Q4238509",
+    "wikipedia": "ru:Краснодар II"
+  }
+},
+{
+  "type": "node",
+  "id": 349925482,
+  "lat": 45.2883335,
+  "lon": 39.3049000,
+  "tags": {
+    "esr:user": "524705",
+    "name": "Пластуновская",
+    "name:ru": "Пластуновская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064194"
+  }
+},
+{
+  "type": "node",
+  "id": 349925852,
+  "lat": 45.1363005,
+  "lon": 39.1827382,
+  "tags": {
+    "esr:user": "524508",
+    "name": "Агроном",
+    "name:ru": "Агроном",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064192",
+    "wikidata": "Q110883480"
+  }
+},
+{
+  "type": "node",
+  "id": 349926106,
+  "lat": 45.0884339,
+  "lon": 39.1137896,
+  "tags": {
+    "esr:user": "524419",
+    "name": "Лорис",
+    "name:ru": "Лорис",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064331",
+    "wikidata": "Q110883482"
+  }
+},
+{
+  "type": "node",
+  "id": 353089102,
+  "lat": 42.4697750,
+  "lon": 47.9415819,
+  "tags": {
+    "esr:user": "544003",
+    "name": "Инчхе",
+    "name:ru": "Инчхе",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064217"
+  }
+},
+{
+  "type": "node",
+  "id": 359004966,
+  "lat": 44.6906390,
+  "lon": 39.9813165,
+  "tags": {
+    "esr:user": "534707",
+    "name": "Ханская",
+    "name:ru": "Ханская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064134"
+  }
+},
+{
+  "type": "node",
+  "id": 359005322,
+  "lat": 44.6228450,
+  "lon": 40.1080447,
+  "tags": {
+    "esr:user": "534800",
+    "name": "Майкоп",
+    "name:ar": "محطة قطار مايكوب",
+    "name:ru": "Майкоп",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064015"
+  }
+},
+{
+  "type": "node",
+  "id": 388171766,
+  "lat": 44.0490104,
+  "lon": 42.8555877,
+  "tags": {
+    "esr:user": "532307",
+    "name": "Ессентуки",
+    "name:en": "Essentuki",
+    "name:ru": "Ессентуки",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Essentuki",
+    "uic_ref": "2064080"
+  }
+},
+{
+  "type": "node",
+  "id": 409473257,
+  "lat": 45.1041544,
+  "lon": 42.2176318,
+  "tags": {
+    "esr:user": "527101",
+    "name": "Старомарьевская",
+    "name:ru": "Старомарьевская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065568"
+  }
+},
+{
+  "type": "node",
+  "id": 409473309,
+  "lat": 45.2092760,
+  "lon": 42.4167266,
+  "tags": {
+    "esr:user": "527205",
+    "name": "Спицевка",
+    "name:ru": "Спицевка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064236",
+    "wikidata": "Q4437921",
+    "wikipedia": "ru:Спицевка (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 409473326,
+  "lat": 45.2228852,
+  "lon": 42.6642561,
+  "tags": {
+    "esr:user": "527309",
+    "name": "Кугуты",
+    "name:ru": "Кугуты",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064237"
+  }
+},
+{
+  "type": "node",
+  "id": 410575292,
+  "lat": 45.8975700,
+  "lon": 43.3393734,
+  "tags": {
+    "esr:user": "528509",
+    "name": "Дивное",
+    "name:ru": "Дивное",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064242"
+  }
+},
+{
+  "type": "node",
+  "id": 459022384,
+  "lat": 44.0378072,
+  "lon": 43.0550034,
+  "tags": {
+    "esr:user": "532100",
+    "name": "Пятигорск",
+    "name:ru": "Пятигорск",
+    "name:zh": "皮亚季戈尔斯克",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Piatigorsk",
+    "uic_ref": "2064060",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 483413878,
+  "lat": 43.8409334,
+  "lon": 39.4132974,
+  "tags": {
+    "esr:user": "533140",
+    "name": "Чемитоквадже",
+    "name:en": "Chemitokvadzhe",
+    "name:ru": "Чемитоквадже",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065153"
+  }
+},
+{
+  "type": "node",
+  "id": 483413885,
+  "lat": 43.7610369,
+  "lon": 39.5050688,
+  "tags": {
+    "esr:user": "533117",
+    "name": "Якорная Щель",
+    "name:en": "Yakornaya Schel",
+    "name:ru": "Якорная Щель",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064093"
+  }
+},
+{
+  "type": "node",
+  "id": 504895671,
+  "lat": 43.0065983,
+  "lon": 40.9960192,
+  "tags": {
+    "alt_name:en": "Sukhum",
+    "esr:user": "573909",
+    "int_name": "Sukhum",
+    "name": "Аҟəа",
+    "name:ab": "Аҟəа",
+    "name:de": "Suchumi",
+    "name:en": "Sukhum",
+    "name:ka": "სოხუმი",
+    "name:kbd": "Согъум",
+    "name:ru": "Сухум",
+    "network": "Аҧсны Аиҳаамҩа",
+    "old_name:ru": "Сухуми",
+    "operator": "Аҧсны Аиҳаамҩа",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2800300",
+    "wheelchair": "yes",
+    "wikidata": "Q4447452",
+    "wikipedia": "ru:Сухум (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 506487924,
+  "lat": 43.2255951,
+  "lon": 40.3524963,
+  "tags": {
+    "alt_name": "Бзыбь",
+    "esr:user": "574206",
+    "int_name": "Bzypta",
+    "name": "Бзыԥҭа",
+    "name:ab": "Бзыԥҭа",
+    "name:en": "Bzypta",
+    "name:ka": "არასაძიხი",
+    "name:ru": "Бзыпта",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "4200381",
+    "wikidata": "Q4086170"
+  }
+},
+{
+  "type": "node",
+  "id": 506660194,
+  "lat": 43.0811594,
+  "lon": 40.8384045,
+  "tags": {
+    "esr:user": "574032",
+    "int_name": "Novyy Afon",
+    "name": "Афон Ҿыц",
+    "name:ab": "Афон Ҿыц",
+    "name:de": "Nowy Afon",
+    "name:en": "Novyy Afon",
+    "name:fr": "Nouvel Athos",
+    "name:ka": "ახალი ათონი",
+    "name:ru": "Новый Афон",
+    "network": "Аҧсны Аиҳаамҩа",
+    "operator": "Аҧсны Аиҳаамҩа",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2800550",
+    "wikidata": "Q4326567",
+    "wikipedia": "ru:Новый Афон (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 506825034,
+  "lat": 43.1077729,
+  "lon": 40.6160485,
+  "tags": {
+    "esr:user": "574102",
+    "int_name": "Gudauta",
+    "name": "Гəдоуҭа",
+    "name:ab": "Гəдоуҭа",
+    "name:de": "Gudauta",
+    "name:en": "Gudauta",
+    "name:fr": "Goudaouta",
+    "name:ka": "გუდაუთა",
+    "name:ru": "Гудаута",
+    "name:xmf": "გუდაუთა",
+    "network": "Аҧсны Аиҳаамҩа",
+    "operator": "Аҧсны Аиҳаамҩа",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2800360",
+    "wheelchair": "no",
+    "wikidata": "Q4151512",
+    "wikipedia": "ru:Гудаута (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 513640033,
+  "lat": 44.8705558,
+  "lon": 38.3393588,
+  "tags": {
+    "esr:user": "523609",
+    "name": "Ахтырская",
+    "name:ru": "Ахтырская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Achtirskaja",
+    "uic_ref": "2064182"
+  }
+},
+{
+  "type": "node",
+  "id": 559262756,
+  "lat": 44.7118627,
+  "lon": 39.2062221,
+  "tags": {
+    "esr:user": "524141",
+    "name": "Саратовская",
+    "name:ru": "Саратовская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064711"
+  }
+},
+{
+  "type": "node",
+  "id": 561196834,
+  "lat": 45.3719208,
+  "lon": 36.1698421,
+  "tags": {
+    "esr:user": "867370",
+    "name": "Чистополье",
+    "name:ru": "Чистополье",
+    "name:uk": "Чистопілля",
+    "operator": "ФГУП «КЖД»",
+    "operator:branch": "Крымская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2210736",
+    "wikidata": "Q55973994"
+  }
+},
+{
+  "type": "node",
+  "id": 596116433,
+  "lat": 44.8672810,
+  "lon": 38.2544448,
+  "tags": {
+    "esr:user": "523524",
+    "name": "Эриванский",
+    "name:ru": "Эриванский",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064322"
+  }
+},
+{
+  "type": "node",
+  "id": 603355650,
+  "lat": 45.4474799,
+  "lon": 41.0374455,
+  "tags": {
+    "esr:user": "526400",
+    "name": "Григорополисская",
+    "name:ru": "Григорополисская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Grigoropolisskaja",
+    "uic_ref": "2001851"
+  }
+},
+{
+  "type": "node",
+  "id": 616108952,
+  "lat": 45.5809976,
+  "lon": 39.6473390,
+  "tags": {
+    "esr:user": "525002",
+    "name": "Выселки",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Wiselki",
+    "uic_ref": "2064197"
+  }
+},
+{
+  "type": "node",
+  "id": 676546265,
+  "lat": 45.2457410,
+  "lon": 40.8359660,
+  "tags": {
+    "esr:user": "529709",
+    "name": "Отрадо-Кубанская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Otrado-kubanskaya",
+    "uic_ref": "2064017"
+  }
+},
+{
+  "type": "node",
+  "id": 772657599,
+  "lat": 43.9665500,
+  "lon": 39.2548724,
+  "tags": {
+    "esr:user": "533239",
+    "name": "Водопадный",
+    "name:en": "Vodopadny",
+    "name:ru": "Водопадный",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064062"
+  }
+},
+{
+  "type": "node",
+  "id": 894165564,
+  "lat": 45.3383389,
+  "lon": 39.0388818,
+  "tags": {
+    "esr:user": "520600",
+    "name": "Мышастовка",
+    "name:ru": "Мышастовка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064158"
+  }
+},
+{
+  "type": "node",
+  "id": 902313855,
+  "lat": 42.1985430,
+  "lon": 42.7091464,
+  "tags": {
+    "esr:user": "575105",
+    "int_name": "Rioni",
+    "name": "რიონი",
+    "name:en": "Rioni",
+    "name:ka": "რიონი",
+    "name:ru": "Риони",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800411"
+  }
+},
+{
+  "type": "node",
+  "id": 902313860,
+  "lat": 42.1039300,
+  "lon": 42.2918835,
+  "tags": {
+    "esr:user": "570205",
+    "int_name": "Sajavakho",
+    "name": "საჯავახო",
+    "name:en": "Sajavakho",
+    "name:ka": "საჯავახო",
+    "name:ru": "Саджавахо",
+    "railway": "station",
+    "uic_ref": "2800376"
+  }
+},
+{
+  "type": "node",
+  "id": 902313866,
+  "lat": 42.0747815,
+  "lon": 41.9074474,
+  "tags": {
+    "esr:user": "570506",
+    "int_name": "Jumati",
+    "name": "ჯუმათი",
+    "name:en": "Jumati",
+    "name:ka": "ჯუმათი",
+    "name:ru": "Джумати",
+    "railway": "station",
+    "uic_ref": "2800372"
+  }
+},
+{
+  "type": "node",
+  "id": 920578848,
+  "lat": 43.0983744,
+  "lon": 40.8131586,
+  "tags": {
+    "layer": "-2",
+    "name": "Анаҟәапиа",
+    "name:ab": "Анаҟәапиа",
+    "name:en": "Anacopia Hall",
+    "name:ru": "Зал Анакопия",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 920579637,
+  "lat": 43.1015077,
+  "lon": 40.8142923,
+  "tags": {
+    "name": "Аԥсны",
+    "name:ab": "Аԥсны",
+    "name:en": "Hall Abkhazia",
+    "name:ru": "Зал Абхазия",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 933801896,
+  "lat": 45.4885548,
+  "lon": 41.2072834,
+  "tags": {
+    "esr:user": "526503",
+    "name": "Расшеватка",
+    "name:ru": "Расшеватка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Rasschewatka",
+    "uic_ref": "2064125",
+    "wikidata": "Q4390681",
+    "wikipedia": "ru:Расшеватка (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 941843160,
+  "lat": 43.2623555,
+  "lon": 40.2838388,
+  "tags": {
+    "addr:street": "Демерджипа ул.",
+    "esr:user": "574304",
+    "int_name": "Gagra",
+    "name": "Гагра",
+    "name:ab": "Гагра",
+    "name:de": "Gagra",
+    "name:en": "Gagra",
+    "name:ka": "კილხიდა",
+    "name:ru": "Гагра",
+    "network": "Аҧсны Аиҳаамҩа",
+    "operator": "Аҧсны Аиҳаамҩа",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2800379",
+    "wheelchair": "no",
+    "wikidata": "Q4131450"
+  }
+},
+{
+  "type": "node",
+  "id": 947055569,
+  "lat": 44.1089035,
+  "lon": 39.0958585,
+  "tags": {
+    "esr:user": "533403",
+    "name": "Туапсе-Сортировочная",
+    "name:en": "Tuapse-Sortirovochnaya",
+    "name:ru": "Туапсе-Сортировочная",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064385",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 961530963,
+  "lat": 44.2375384,
+  "lon": 42.0689336,
+  "tags": {
+    "esr:user": "531003",
+    "name": "Черкесск",
+    "name:de": "Tscherkessk",
+    "name:ru": "Черкесск",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064085"
+  }
+},
+{
+  "type": "node",
+  "id": 976731190,
+  "lat": 44.3755559,
+  "lon": 41.9596832,
+  "tags": {
+    "esr:user": "530903",
+    "name": "Эркен-Шахар",
+    "name:ru": "Эркен-Шахар",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064127"
+  }
+},
+{
+  "type": "node",
+  "id": 989817152,
+  "lat": 45.7073912,
+  "lon": 42.9172569,
+  "tags": {
+    "esr:user": "528301",
+    "name": "Ипатово",
+    "name:ru": "Ипатово",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064239"
+  }
+},
+{
+  "type": "node",
+  "id": 991256222,
+  "lat": 44.4552072,
+  "lon": 42.4990188,
+  "tags": {
+    "esr:user": "531408",
+    "name": "Курсавка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064029"
+  }
+},
+{
+  "type": "node",
+  "id": 992340094,
+  "lat": 42.7254742,
+  "lon": 47.6824634,
+  "tags": {
+    "esr:user": "543706",
+    "name": "Манас",
+    "name:de": "Manas",
+    "name:en": "Manas",
+    "name:ru": "Манас",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Manas",
+    "uic_ref": "2064213",
+    "wikidata": "Q4280158",
+    "wikipedia": "ru:Манас (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1027689775,
+  "lat": 44.0629854,
+  "lon": 43.0650179,
+  "tags": {
+    "esr:user": "532006",
+    "name": "Лермонтовский",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064373",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 1029787841,
+  "lat": 44.0312744,
+  "lon": 39.1439977,
+  "tags": {
+    "esr:user": "533305",
+    "name": "Шепси",
+    "name:en": "Shepsi",
+    "name:ru": "Шепси",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064092",
+    "wikidata": "Q4522989",
+    "wikipedia": "ru:Шепси (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1108805911,
+  "lat": 44.0502014,
+  "lon": 42.9953775,
+  "tags": {
+    "esr:user": "532203",
+    "name": "Скачки",
+    "name:en": "Skachki",
+    "name:ru": "Скачки",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064371"
+  }
+},
+{
+  "type": "node",
+  "id": 1121355864,
+  "lat": 45.5043996,
+  "lon": 39.5475816,
+  "tags": {
+    "esr:user": "524917",
+    "name": "Козырьки",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064358"
+  }
+},
+{
+  "type": "node",
+  "id": 1125012430,
+  "lat": 44.7702800,
+  "lon": 40.6751708,
+  "tags": {
+    "esr:user": "535630",
+    "name": "Родниковская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064131"
+  }
+},
+{
+  "type": "node",
+  "id": 1127196032,
+  "lat": 42.0563520,
+  "lon": 48.3070212,
+  "tags": {
+    "esr:user": "544501",
+    "name": "Дербент",
+    "name:ar": "دربند",
+    "name:av": "Дербенд",
+    "name:az": "Dərbənd",
+    "name:az-cyr": "Дәрбәнд",
+    "name:dar": "Чулли",
+    "name:de": "Derbent",
+    "name:en": "Derbent",
+    "name:fa": "دربند",
+    "name:he": "דרבנט",
+    "name:hy": "Դերբենդ",
+    "name:ira": "Дарубанди",
+    "name:ka": "დარუბანდი",
+    "name:kbd": "Темыркъалэ",
+    "name:lbe": "Дарбант",
+    "name:lez": "Кьвевар",
+    "name:ru": "Дербент",
+    "name:tab": "Шагьур",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Derbent",
+    "uic_ref": "2064045",
+    "wikidata": "Q4158657",
+    "wikipedia": "ru:Дербент (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1138833737,
+  "lat": 44.2920679,
+  "lon": 40.1843357,
+  "tags": {
+    "esr:user": "535108",
+    "name": "Хаджох",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064138"
+  }
+},
+{
+  "type": "node",
+  "id": 1211384488,
+  "lat": 43.3227541,
+  "lon": 44.9096863,
+  "tags": {
+    "esr:user": "540500",
+    "name": "Карабулакский",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064051"
+  }
+},
+{
+  "type": "node",
+  "id": 1211384626,
+  "lat": 43.2294349,
+  "lon": 44.7693183,
+  "tags": {
+    "esr:user": "540337",
+    "name": "Назрань",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Nazran",
+    "uic_ref": "2000017"
+  }
+},
+{
+  "type": "node",
+  "id": 1216375600,
+  "lat": 45.3831033,
+  "lon": 36.4800644,
+  "tags": {
+    "esr:user": "867205",
+    "name": "Керченский Завод",
+    "name:uk": "Керченський завод",
+    "operator": "ФГУП «КЖД»",
+    "operator:branch": "Крымская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2210315",
+    "wikidata": "Q21640197",
+    "wikipedia": "ru:Керченский завод (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1216509637,
+  "lat": 45.3598388,
+  "lon": 40.6996905,
+  "tags": {
+    "esr:user": "529605",
+    "name": "Гулькевичи",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Gulkewitschi",
+    "uic_ref": "2064225"
+  }
+},
+{
+  "type": "node",
+  "id": 1249039806,
+  "lat": 45.2807477,
+  "lon": 36.9929052,
+  "tags": {
+    "esr:user": "523308",
+    "name": "Тамань",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064174"
+  }
+},
+{
+  "type": "node",
+  "id": 1263213599,
+  "lat": 44.6757016,
+  "lon": 39.6793297,
+  "tags": {
+    "esr:user": "534336",
+    "name": "Комсомольская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064083"
+  }
+},
+{
+  "type": "node",
+  "id": 1279070789,
+  "lat": 45.3636035,
+  "lon": 36.6114637,
+  "tags": {
+    "esr:user": "867008",
+    "name": "Крым",
+    "name:en": "Krym",
+    "name:ru": "Крым",
+    "name:uk": "Крим",
+    "operator": "ФГУП «КЖД»",
+    "operator:branch": "Крымская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Krym",
+    "uic_ref": "2078738",
+    "wikidata": "Q17587849",
+    "wikipedia": "en:Port Krym railway station"
+  }
+},
+{
+  "type": "node",
+  "id": 1325717891,
+  "lat": 43.3081494,
+  "lon": 45.6856994,
+  "tags": {
+    "esr:user": "540002",
+    "name": "Грозный",
+    "name:ar": "غروزني",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Grosnij",
+    "uic_ref": "2064180"
+  }
+},
+{
+  "type": "node",
+  "id": 1334652462,
+  "lat": 44.6107286,
+  "lon": 39.6221266,
+  "tags": {
+    "esr:user": "534209",
+    "name": "Тверская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064084"
+  }
+},
+{
+  "type": "node",
+  "id": 1363282182,
+  "lat": 42.0337921,
+  "lon": 43.8315319,
+  "tags": {
+    "esr:user": "578705",
+    "name": "აგარა",
+    "name:en": "Agara",
+    "name:ka": "აგარა",
+    "name:ru": "Агара",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800512"
+  }
+},
+{
+  "type": "node",
+  "id": 1365140470,
+  "lat": 42.0200554,
+  "lon": 43.7267473,
+  "tags": {
+    "esr:user": "578601",
+    "name": "გომი",
+    "name:en": "Gomi",
+    "name:ka": "გომი",
+    "name:ru": "Гоми",
+    "railway": "station",
+    "uic_ref": "2800443"
+  }
+},
+{
+  "type": "node",
+  "id": 1375612770,
+  "lat": 45.8284640,
+  "lon": 41.4916632,
+  "tags": {
+    "esr:user": "518600",
+    "name": "Красная Гвардия",
+    "name:en": "Krasnaya Gvardiya",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064957"
+  }
+},
+{
+  "type": "node",
+  "id": 1381384138,
+  "lat": 42.1222310,
+  "lon": 48.2048438,
+  "tags": {
+    "esr:user": "544408",
+    "name": "Дагестанские Огни",
+    "name:ar": "داغيستانسكي أوغني",
+    "name:av": "Дагъистаналъул цӀаял",
+    "name:az": "Dağıstan İşıqları",
+    "name:az-cyr": "Дағыстан Ишыглары",
+    "name:de": "Dagestanskije Ogni",
+    "name:en": "Dagestanskiye Ogni",
+    "name:fa": "داگستانسکیه اوگنی",
+    "name:lez": "Дагъустандин ЦIаяр",
+    "name:ru": "Дагестанские Огни",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064222",
+    "wikidata": "Q4153927",
+    "wikipedia": "ru:Дагестанские Огни (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1397174927,
+  "lat": 42.1640548,
+  "lon": 48.1148355,
+  "tags": {
+    "esr:user": "544304",
+    "name": "Мамед-Кала",
+    "name:az": "Məmmədqala",
+    "name:az-cyr": "Мәммәдгала",
+    "name:dar": "Мамед-къеле",
+    "name:lez": "Мамедкъала",
+    "name:ru": "Мамед-Кала",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064221",
+    "wikidata": "Q4279815",
+    "wikipedia": "ru:Мамед-Кала (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1397176754,
+  "lat": 42.2233529,
+  "lon": 48.0701020,
+  "tags": {
+    "esr:user": "544215",
+    "name": "Берикей",
+    "name:az": "Bərəkəy",
+    "name:az-cyr": "Бәрәкәј",
+    "name:de": "Berikei",
+    "name:en": "Berikey",
+    "name:lez": "Берикей",
+    "name:ru": "Берикей",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064219",
+    "wikidata": "Q4084874",
+    "wikipedia": "ru:Берикей (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1397187002,
+  "lat": 42.3879671,
+  "lon": 47.9873775,
+  "tags": {
+    "esr:user": "544145",
+    "name": "Каягент",
+    "name:az": "Qayakənd",
+    "name:de": "Kajagent",
+    "name:en": "Kayakent",
+    "name:kum": "Къаягент",
+    "name:ru": "Каягент",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064218",
+    "wikidata": "Q4218375",
+    "wikipedia": "ru:Каягент"
+  }
+},
+{
+  "type": "node",
+  "id": 1397204673,
+  "lat": 42.6588726,
+  "lon": 47.7221091,
+  "tags": {
+    "esr:user": "543833",
+    "name": "Ачи",
+    "name:de": "Atschi",
+    "name:en": "Achi",
+    "name:ru": "Ачи",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064214",
+    "wikidata": "Q4073352",
+    "wikipedia": "ru:Ачи (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1399428744,
+  "lat": 44.9028408,
+  "lon": 40.3593575,
+  "tags": {
+    "esr:user": "535305",
+    "name": "Дондуковская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064077"
+  }
+},
+{
+  "type": "node",
+  "id": 1399430952,
+  "lat": 44.8433269,
+  "lon": 40.0938925,
+  "tags": {
+    "esr:user": "535201",
+    "name": "Гиагинская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064079"
+  }
+},
+{
+  "type": "node",
+  "id": 1403346675,
+  "lat": 45.4415062,
+  "lon": 46.8526845,
+  "tags": {
+    "esr:user": "541804",
+    "name": "Улан-Холл",
+    "name:ru": "Улан-Холл",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Ulan-Choll",
+    "uic_ref": "2001597"
+  }
+},
+{
+  "type": "node",
+  "id": 1403357278,
+  "lat": 44.9524721,
+  "lon": 46.6642397,
+  "tags": {
+    "esr:user": "541908",
+    "name": "Артезиан",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Artesian",
+    "uic_ref": "2000325"
+  }
+},
+{
+  "type": "node",
+  "id": 1403553078,
+  "lat": 44.1501891,
+  "lon": 42.0264051,
+  "tags": {
+    "esr:user": "531107",
+    "name": "Абазинка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064729"
+  }
+},
+{
+  "type": "node",
+  "id": 1431401889,
+  "lat": 43.3483937,
+  "lon": 46.1085137,
+  "tags": {
+    "esr:user": "542600",
+    "name": "Гудермес",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Gudermes",
+    "uic_ref": "2064035"
+  }
+},
+{
+  "type": "node",
+  "id": 1450879696,
+  "lat": 45.4558055,
+  "lon": 40.6801906,
+  "tags": {
+    "esr:user": "526202",
+    "name": "Гетмановская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064209"
+  }
+},
+{
+  "type": "node",
+  "id": 1456161083,
+  "lat": 44.8813988,
+  "lon": 38.1458165,
+  "tags": {
+    "esr:user": "523505",
+    "name": "Абинская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Abinskaya",
+    "uic_ref": "2064181"
+  }
+},
+{
+  "type": "node",
+  "id": 1457631093,
+  "lat": 44.9098935,
+  "lon": 40.5916666,
+  "tags": {
+    "esr:user": "535502",
+    "name": "Курганная",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Kurgannaja",
+    "uic_ref": "2064075"
+  }
+},
+{
+  "type": "node",
+  "id": 1489441133,
+  "lat": 42.5104634,
+  "lon": 41.8601766,
+  "tags": {
+    "esr:user": "572906",
+    "name": "ზუგდიდი",
+    "name:de": "Sugdidi",
+    "name:en": "Zugdidi",
+    "name:ka": "ზუგდიდი",
+    "name:ru": "Зугдиди",
+    "railway": "station",
+    "uic_ref": "2800540",
+    "wheelchair": "limited",
+    "wikidata": "Q4194540"
+  }
+},
+{
+  "type": "node",
+  "id": 1524944532,
+  "lat": 44.4133048,
+  "lon": 43.8520425,
+  "tags": {
+    "esr:user": "536702",
+    "name": "Зеленокумск",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064312"
+  }
+},
+{
+  "type": "node",
+  "id": 1561652321,
+  "lat": 45.2643717,
+  "lon": 39.7971679,
+  "tags": {
+    "esr:user": "525816",
+    "name": "Двубратский",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064656"
+  }
+},
+{
+  "type": "node",
+  "id": 1590846228,
+  "lat": 44.9983132,
+  "lon": 41.1244889,
+  "tags": {
+    "esr:user": "530208",
+    "name": "Армавир-Ростовский",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Armawir Rostowskij",
+    "uic_ref": "2064240"
+  }
+},
+{
+  "type": "node",
+  "id": 1590887385,
+  "lat": 45.0018920,
+  "lon": 41.0831493,
+  "tags": {
+    "esr:user": "530301",
+    "name": "Армавир-Туапсинский",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Armawir Tuapsinskij",
+    "uic_ref": "2000320"
+  }
+},
+{
+  "type": "node",
+  "id": 1595821420,
+  "lat": 44.4364629,
+  "lon": 39.4767602,
+  "tags": {
+    "esr:user": "534016",
+    "name": "Хадыженская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Chadishenskaja",
+    "uic_ref": "2064285"
+  }
+},
+{
+  "type": "node",
+  "id": 1643068975,
+  "lat": 42.2005479,
+  "lon": 42.6597619,
+  "tags": {
+    "esr:user": "575209",
+    "int_name": "Brotseula",
+    "name": "ბროწეულა",
+    "name:en": "Brotseula",
+    "name:ka": "ბროწეულა",
+    "name:ru": "Броцеула",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800408"
+  }
+},
+{
+  "type": "node",
+  "id": 1643929779,
+  "lat": 42.3349012,
+  "lon": 43.3996573,
+  "tags": {
+    "esr:user": "576502",
+    "int_name": "Sachkhere",
+    "name": "საჩხერე",
+    "name:en": "Sachkhere",
+    "name:ka": "საჩხერე",
+    "name:ru": "Сачхере",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800419"
+  }
+},
+{
+  "type": "node",
+  "id": 1697807793,
+  "lat": 45.3749425,
+  "lon": 36.2994212,
+  "tags": {
+    "esr:user": "867224",
+    "name": "Багерово",
+    "name:uk": "Багерове",
+    "operator": "ФГУП «КЖД»",
+    "operator:branch": "Крымская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2210737",
+    "wikidata": "Q12080147",
+    "wikipedia": "ru:Багерово (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1705595692,
+  "lat": 45.2233455,
+  "lon": 39.6922183,
+  "tags": {
+    "esr:user": "525801",
+    "name": "Усть-Лабинская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Ust-labinskaya",
+    "uic_ref": "2064204"
+  }
+},
+{
+  "type": "node",
+  "id": 1805766562,
+  "lat": 42.9963378,
+  "lon": 44.6760429,
+  "tags": {
+    "contact:email": "dzd015@yandex.ru",
+    "contact:phone": "+7 (8672) 25-93-24",
+    "contact:telegram": "https://t.me/dzdvld",
+    "contact:vk": "https://vk.com/dzdvld",
+    "name": "Вечный огонь",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://skzd.rzd.ru/ru/10922/page/103290?id=19432"
+  }
+},
+{
+  "type": "node",
+  "id": 1808485052,
+  "lat": 45.3545721,
+  "lon": 36.0378435,
+  "tags": {
+    "esr:user": "868246",
+    "name": "Пресноводная",
+    "name:ru": "Пресноводная",
+    "name:uk": "Прісноводна",
+    "operator": "ФГУП «КЖД»",
+    "operator:branch": "Крымская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2210734",
+    "wikidata": "Q30958667"
+  }
+},
+{
+  "type": "node",
+  "id": 1813489004,
+  "lat": 43.2852746,
+  "lon": 44.8481822,
+  "tags": {
+    "esr:user": "540426",
+    "name": "Плиево",
+    "name:ce": "Пхьилинкъоьнгийн-Юрт",
+    "name:de": "Plijewo",
+    "name:en": "Pliyevo",
+    "name:inh": "Пхьилекъонгий-Юрт",
+    "name:ru": "Плиево",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065156"
+  }
+},
+{
+  "type": "node",
+  "id": 1813489005,
+  "lat": 43.3324770,
+  "lon": 45.0390950,
+  "tags": {
+    "esr:user": "540604",
+    "name": "Слепцовская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064052"
+  }
+},
+{
+  "type": "node",
+  "id": 1813994835,
+  "lat": 43.1288086,
+  "lon": 47.1418071,
+  "tags": {
+    "esr:user": "542934",
+    "name": "Темиргое",
+    "name:de": "Temirgoje",
+    "name:en": "Temirgoye",
+    "name:ru": "Темиргое",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Temirgoe",
+    "uic_ref": "2065157",
+    "wikidata": "Q4454441",
+    "wikipedia": "ru:Темиргое (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1820818802,
+  "lat": 45.2125727,
+  "lon": 46.7640504,
+  "tags": {
+    "esr:user": "541823",
+    "name": "Белое Озеро",
+    "name:ru": "Белое Озеро",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Beloe Osero",
+    "uic_ref": "2065334"
+  }
+},
+{
+  "type": "node",
+  "id": 1823974377,
+  "lat": 45.7548952,
+  "lon": 38.7670519,
+  "tags": {
+    "esr:user": "516709",
+    "name": "Роговская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064156"
+  }
+},
+{
+  "type": "node",
+  "id": 1823990857,
+  "lat": 45.3691405,
+  "lon": 36.9637845,
+  "tags": {
+    "esr:user": "523420",
+    "name": "Фонталовская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064176"
+  }
+},
+{
+  "type": "node",
+  "id": 1823997034,
+  "lat": 45.1205989,
+  "lon": 37.4353431,
+  "tags": {
+    "esr:user": "522709",
+    "name": "Юровский",
+    "name:de": "Jurowski",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064168"
+  }
+},
+{
+  "type": "node",
+  "id": 1824007061,
+  "lat": 45.0446973,
+  "lon": 39.1230762,
+  "tags": {
+    "esr:user": "525500",
+    "name": "Пашковская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065147",
+    "wikidata": "Q110955006"
+  }
+},
+{
+  "type": "node",
+  "id": 1825594530,
+  "lat": 44.2405907,
+  "lon": 46.6303504,
+  "tags": {
+    "esr:user": "542027",
+    "name": "Разъезд № 15",
+    "name:ru": "Разъезд № 15",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Razezd n15",
+    "uic_ref": "2065339"
+  }
+},
+{
+  "type": "node",
+  "id": 1825594535,
+  "lat": 44.6740615,
+  "lon": 46.6054094,
+  "tags": {
+    "esr:user": "541927",
+    "name": "Кутан",
+    "name:ru": "Кутан",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Kutan",
+    "uic_ref": "2065337"
+  }
+},
+{
+  "type": "node",
+  "id": 1826428885,
+  "lat": 44.5305598,
+  "lon": 46.5876649,
+  "tags": {
+    "esr:user": "541931",
+    "name": "Разъезд № 14",
+    "name:ru": "Разъезд № 14",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Razezd n14",
+    "uic_ref": "2065338"
+  }
+},
+{
+  "type": "node",
+  "id": 1827922771,
+  "lat": 44.5753485,
+  "lon": 42.2112999,
+  "tags": {
+    "esr:user": "531376",
+    "name": "Киан",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064027"
+  }
+},
+{
+  "type": "node",
+  "id": 1828266151,
+  "lat": 43.0531923,
+  "lon": 47.3329912,
+  "tags": {
+    "esr:user": "543000",
+    "name": "Шамхал",
+    "name:de": "Schamchal",
+    "name:en": "Shamkhal",
+    "name:ru": "Шамхал",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Schamchal",
+    "uic_ref": "2064067",
+    "wikidata": "Q4519964",
+    "wikipedia": "ru:Шамхал (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1828392221,
+  "lat": 45.9988044,
+  "lon": 39.9482249,
+  "tags": {
+    "esr:user": "515034",
+    "name": "Леушковская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064011"
+  }
+},
+{
+  "type": "node",
+  "id": 1828417927,
+  "lat": 45.9138948,
+  "lon": 40.0291985,
+  "tags": {
+    "esr:user": "515104",
+    "name": "Тихонький",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064666"
+  }
+},
+{
+  "type": "node",
+  "id": 1828420879,
+  "lat": 45.7791653,
+  "lon": 40.2001908,
+  "tags": {
+    "esr:user": "520348",
+    "name": "Шохры",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065144"
+  }
+},
+{
+  "type": "node",
+  "id": 1828424322,
+  "lat": 45.6898250,
+  "lon": 40.2868294,
+  "tags": {
+    "esr:user": "520308",
+    "name": "Малороссийская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064013"
+  }
+},
+{
+  "type": "node",
+  "id": 1828426981,
+  "lat": 45.5373689,
+  "lon": 40.4042199,
+  "tags": {
+    "esr:user": "520403",
+    "name": "Мирская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064014"
+  }
+},
+{
+  "type": "node",
+  "id": 1829629691,
+  "lat": 45.9350854,
+  "lon": 47.0490131,
+  "tags": {
+    "int_name": "Zenzeli",
+    "name": "Зензели",
+    "name:af": "Zenzeli",
+    "name:ar": "زينزيلي",
+    "name:ce": "Зензели",
+    "name:de": "Senseli",
+    "name:en": "Zenzeli",
+    "name:fa": "زنزلی",
+    "name:fr": "Zenzeli",
+    "name:pl": "Zienzieli",
+    "name:ru": "Зензели",
+    "name:tg": "Зензели",
+    "name:tt": "Зензел",
+    "name:uk": "Зензели",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Приволжская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_name": "Senseli",
+    "uic_ref": "2020119"
+  }
+},
+{
+  "type": "node",
+  "id": 1829641113,
+  "lat": 45.7621556,
+  "lon": 47.5543597,
+  "tags": {
+    "esr:user": "614403",
+    "name": "Порт Оля",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Приволжская железная дорога",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1829641156,
+  "lat": 45.8243964,
+  "lon": 47.0024795,
+  "tags": {
+    "esr:user": "541503",
+    "name": "Яндыки",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Приволжская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Jandiki",
+    "uic_ref": "2020330"
+  }
+},
+{
+  "type": "node",
+  "id": 1835022626,
+  "lat": 43.3014601,
+  "lon": 45.8835613,
+  "tags": {
+    "esr:user": "541405",
+    "name": "Аргун",
+    "name:de": "Argun",
+    "name:en": "Argun",
+    "name:ru": "Аргун",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Argun",
+    "uic_ref": "2064120"
+  }
+},
+{
+  "type": "node",
+  "id": 1835028075,
+  "lat": 43.6739137,
+  "lon": 45.3585588,
+  "tags": {
+    "esr:user": "539700",
+    "name": "Наурская",
+    "name:ce": "Новр-гIала",
+    "name:de": "Naurskaja",
+    "name:en": "Naurskaya",
+    "name:ru": "Наурская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Naurskaja",
+    "uic_ref": "2064101"
+  }
+},
+{
+  "type": "node",
+  "id": 1835028076,
+  "lat": 43.6957792,
+  "lon": 45.2453123,
+  "tags": {
+    "esr:user": "539607",
+    "name": "Алпатово",
+    "name:ce": "Алпатово",
+    "name:de": "Alpatowo",
+    "name:en": "Alpatovo",
+    "name:ru": "Алпатово",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Alpatowo",
+    "uic_ref": "2064099"
+  }
+},
+{
+  "type": "node",
+  "id": 1835028081,
+  "lat": 43.7243514,
+  "lon": 45.1223243,
+  "tags": {
+    "esr:user": "539503",
+    "name": "Ищерская",
+    "name:ce": "Ищерски",
+    "name:ru": "Ищёрская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Ischerskaja",
+    "uic_ref": "2064098"
+  }
+},
+{
+  "type": "node",
+  "id": 1835028082,
+  "lat": 43.7520032,
+  "lon": 44.6447508,
+  "tags": {
+    "esr:user": "539306",
+    "name": "Моздок",
+    "name:ar": "موزدوك",
+    "name:az": "Mozdok",
+    "name:be": "Маздок",
+    "name:ca": "Mozdok",
+    "name:ce": "Мазалк",
+    "name:cs": "Mozdok",
+    "name:da": "Mozdok",
+    "name:de": "Mosdok",
+    "name:en": "Mozdok",
+    "name:eo": "Mozdoko",
+    "name:es": "Mozdok",
+    "name:et": "Mozdok",
+    "name:eu": "Mozdok",
+    "name:fa": "موزدوک",
+    "name:fi": "Mozdok",
+    "name:fr": "Mozdok",
+    "name:he": "מוזדוק",
+    "name:hr": "Mozdok",
+    "name:hsb": "Mozdok",
+    "name:hu": "Mozdok",
+    "name:hy": "Մոզդոկ",
+    "name:id": "Mozdok",
+    "name:io": "Mozdok",
+    "name:it": "Mozdok",
+    "name:ja": "モズドク",
+    "name:ka": "მოზდოკი",
+    "name:kbd": "Мэздэгу",
+    "name:ko": "모즈도크",
+    "name:la": "Mosdoc",
+    "name:lt": "Mozdokas",
+    "name:lv": "Mozdoka",
+    "name:ms": "Mozdok",
+    "name:nb": "Mozdok",
+    "name:nl": "Mozdok",
+    "name:nn": "Mozdok",
+    "name:os": "Мæздæг",
+    "name:os-Latn": "Mæzdæg",
+    "name:pl": "Mozdok",
+    "name:pt": "Mozdok",
+    "name:ru": "Моздок",
+    "name:sr": "Моздок",
+    "name:sv": "Mozdok",
+    "name:tl": "Mozdok",
+    "name:tr": "Mozdok",
+    "name:zh": "莫兹多克",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Mosdok",
+    "uic_ref": "2064095",
+    "wikidata": "Q4299623",
+    "wikimedia_commons": "Category:Mozdok railway station",
+    "wikipedia": "ru:Моздок (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1835029064,
+  "lat": 43.4455778,
+  "lon": 45.9763965,
+  "tags": {
+    "esr:user": "542510",
+    "name": "Червленная-Узловая",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Tscherwlennaja-Uslow",
+    "uic_ref": "2064106"
+  }
+},
+{
+  "type": "node",
+  "id": 1835029065,
+  "lat": 43.4935958,
+  "lon": 45.8793422,
+  "tags": {
+    "esr:user": "542506",
+    "name": "Червлённая",
+    "name:ce": "Оьрза-ГӀала",
+    "name:de": "Tscherwljonnaja",
+    "name:en": "Chervlyonnaya",
+    "name:ru": "Червлённая",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Tscherwlennaja",
+    "uic_ref": "2064104"
+  }
+},
+{
+  "type": "node",
+  "id": 1835029066,
+  "lat": 43.6014431,
+  "lon": 45.5766921,
+  "tags": {
+    "esr:user": "539804",
+    "name": "Терек",
+    "name:de": "Terek",
+    "name:en": "Terek",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Terek",
+    "uic_ref": "2064102"
+  }
+},
+{
+  "type": "node",
+  "id": 1835726481,
+  "lat": 44.8426565,
+  "lon": 41.3304340,
+  "tags": {
+    "esr:user": "530405",
+    "name": "Коноково",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064019"
+  }
+},
+{
+  "type": "node",
+  "id": 1835733646,
+  "lat": 44.9518412,
+  "lon": 40.8464217,
+  "tags": {
+    "esr:user": "536007",
+    "name": "Андреедмитриевка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064073"
+  }
+},
+{
+  "type": "node",
+  "id": 1835741608,
+  "lat": 44.9724311,
+  "lon": 40.9565673,
+  "tags": {
+    "esr:user": "536011",
+    "name": "Кара-Джалка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064072"
+  }
+},
+{
+  "type": "node",
+  "id": 1835750091,
+  "lat": 44.7181955,
+  "lon": 39.7810027,
+  "tags": {
+    "esr:user": "534321",
+    "name": "Пшехская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064082"
+  }
+},
+{
+  "type": "node",
+  "id": 1839655549,
+  "lat": 43.1898687,
+  "lon": 44.7207200,
+  "tags": {
+    "esr:user": "540322",
+    "name": "Консервный",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064048"
+  }
+},
+{
+  "type": "node",
+  "id": 1839660111,
+  "lat": 43.3229806,
+  "lon": 45.9842489,
+  "tags": {
+    "esr:user": "541429",
+    "name": "Джалка",
+    "name:ce": "Бaсс-Гlала",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Dshalka",
+    "uic_ref": "2064058"
+  }
+},
+{
+  "type": "node",
+  "id": 1839663968,
+  "lat": 43.3073227,
+  "lon": 45.7691077,
+  "tags": {
+    "esr:user": "541306",
+    "name": "Ханкала",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Khankala",
+    "uic_ref": "2064200",
+    "wikidata": "Q4495486",
+    "wikipedia": "ru:Ханкала (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1863673324,
+  "lat": 42.0794319,
+  "lon": 43.1583095,
+  "tags": {
+    "esr:user": "576705",
+    "name": "ძირულა",
+    "name:en": "Dzirula",
+    "name:ka": "ძირულა",
+    "name:ru": "Дзирула",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800425"
+  }
+},
+{
+  "type": "node",
+  "id": 1869086113,
+  "lat": 44.2469131,
+  "lon": 39.7654348,
+  "tags": {
+    "name": "Черниговское",
+    "name:en": "Chernigovskoye",
+    "operator": "ЗАО «ПДК Апшеронск»",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1869102705,
+  "lat": 44.2155720,
+  "lon": 39.6682982,
+  "tags": {
+    "name": "Кушинка",
+    "operator": "ЗАО «ПДК Апшеронск»",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1869114027,
+  "lat": 44.1175706,
+  "lon": 39.6811325,
+  "tags": {
+    "name": "Средние Тубы",
+    "network": "Апшеронская УЖД",
+    "operator": "ЗАО «ПДК Апшеронск»",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1870366491,
+  "lat": 44.0695549,
+  "lon": 39.7017942,
+  "tags": {
+    "name": "Шпалорез",
+    "network": "Апшеронская УЖД",
+    "operator": "ЗАО «ПДК Апшеронск»",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1876795247,
+  "lat": 44.4868226,
+  "lon": 39.4863153,
+  "tags": {
+    "esr:user": "534105",
+    "name": "Кабардинская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064086",
+    "wikidata": "Q4206601",
+    "wikipedia": "ru:Кабардинская (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 1876795261,
+  "lat": 44.5489108,
+  "lon": 39.5384641,
+  "tags": {
+    "esr:user": "534115",
+    "name": "Николенково",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064286"
+  }
+},
+{
+  "type": "node",
+  "id": 1879018021,
+  "lat": 44.5041028,
+  "lon": 40.1522858,
+  "tags": {
+    "esr:user": "534904",
+    "name": "Тульская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064136"
+  }
+},
+{
+  "type": "node",
+  "id": 1901750257,
+  "lat": 45.7909349,
+  "lon": 38.6847797,
+  "tags": {
+    "esr:user": "516605",
+    "name": "Джерелиевка",
+    "name:de": "Nowodscherelijewskaja",
+    "name:en": "Novodzherliyevskaya",
+    "name:ru": "Джерелиевка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064154"
+  }
+},
+{
+  "type": "node",
+  "id": 1901750258,
+  "lat": 45.9313449,
+  "lon": 38.5198164,
+  "tags": {
+    "esr:user": "516408",
+    "name": "Ольгинская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064152"
+  }
+},
+{
+  "type": "node",
+  "id": 1901750259,
+  "lat": 45.8480012,
+  "lon": 38.6187431,
+  "tags": {
+    "esr:user": "516501",
+    "name": "Приазовская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064153"
+  }
+},
+{
+  "type": "node",
+  "id": 1947569885,
+  "lat": 45.7013703,
+  "lon": 39.8596694,
+  "tags": {
+    "esr:user": "525106",
+    "name": "Бурсак",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Bursak(RUS)",
+    "uic_ref": "2064115"
+  }
+},
+{
+  "type": "node",
+  "id": 1952413277,
+  "lat": 45.1148248,
+  "lon": 43.4242733,
+  "tags": {
+    "esr:user": "527703",
+    "name": "Благодарное",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065249"
+  }
+},
+{
+  "type": "node",
+  "id": 1983583273,
+  "lat": 45.3984486,
+  "lon": 40.6514354,
+  "tags": {
+    "esr:user": "529501",
+    "name": "Гирей",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064016"
+  }
+},
+{
+  "type": "node",
+  "id": 2009117886,
+  "lat": 44.8948532,
+  "lon": 40.4921935,
+  "tags": {
+    "esr:user": "535409",
+    "name": "Кошехабль",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064076"
+  }
+},
+{
+  "type": "node",
+  "id": 2013008123,
+  "lat": 43.8498349,
+  "lon": 46.7002822,
+  "tags": {
+    "esr:user": "542205",
+    "name": "Кизляр",
+    "name:de": "Kisljar",
+    "name:en": "Kizlyar",
+    "name:ru": "Кизляр",
+    "name:tt": "Кизләр",
+    "name:uk": "Кізляр",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Kisljar",
+    "uic_ref": "2064175"
+  }
+},
+{
+  "type": "node",
+  "id": 2014319263,
+  "lat": 44.7860677,
+  "lon": 44.1461786,
+  "tags": {
+    "esr:user": "537007",
+    "name": "Будённовск",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064283"
+  }
+},
+{
+  "type": "node",
+  "id": 2014642250,
+  "lat": 44.8714099,
+  "lon": 38.6910013,
+  "tags": {
+    "esr:user": "523904",
+    "name": "Северская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Sewerskaja",
+    "uic_ref": "2064186"
+  }
+},
+{
+  "type": "node",
+  "id": 2017017973,
+  "lat": 44.4741595,
+  "lon": 39.7253512,
+  "tags": {
+    "esr:user": "534500",
+    "name": "Апшеронская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064139"
+  }
+},
+{
+  "type": "node",
+  "id": 2129608739,
+  "lat": 44.6462136,
+  "lon": 40.7388001,
+  "tags": {
+    "esr:user": "535706",
+    "name": "Лабинская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064325"
+  }
+},
+{
+  "type": "node",
+  "id": 2137392482,
+  "lat": 43.0908720,
+  "lon": 40.8100178,
+  "tags": {
+    "name": "Входные ворота",
+    "name:ab": "Входные ворота",
+    "name:en": "Entrance gate",
+    "name:ru": "Входные ворота",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2153499310,
+  "lat": 42.1338624,
+  "lon": 42.9662679,
+  "tags": {
+    "esr:user": "575904",
+    "name": "არგვეთი",
+    "name:en": "Argveti",
+    "name:ka": "არგვეთი",
+    "name:ru": "Аргвети",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2195004394,
+  "lat": 43.4020420,
+  "lon": 39.9929163,
+  "tags": {
+    "esr:user": "532701",
+    "name": "Весёлое",
+    "name:en": "Vesyoloye",
+    "name:ru": "Весёлое",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Veseloe",
+    "uic_ref": "2064094"
+  }
+},
+{
+  "type": "node",
+  "id": 2195050637,
+  "lat": 43.4120049,
+  "lon": 39.9733868,
+  "tags": {
+    "alt_name": "Олимпийский парк",
+    "esr:user": "532773",
+    "internet_access": "wlan",
+    "name": "Сириус (Имеретинский курорт)",
+    "name:de": "Sirius",
+    "name:en": "Sirius",
+    "name:ru": "Сириус (Имеретинский курорт)",
+    "old_name": "Имеретинский курорт",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2222328275,
+  "lat": 44.4139255,
+  "lon": 40.7799909,
+  "tags": {
+    "esr:user": "535803",
+    "name": "Мостовская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064132"
+  }
+},
+{
+  "type": "node",
+  "id": 2231295991,
+  "lat": 42.2490344,
+  "lon": 41.9497369,
+  "tags": {
+    "esr:user": "571941",
+    "int_name": "Kvalioni",
+    "name": "ქვალონი",
+    "name:en": "Kvaloni",
+    "name:ka": "ქვალონი",
+    "name:ru": "Квалони",
+    "railway": "station",
+    "uic_ref": "2800364"
+  }
+},
+{
+  "type": "node",
+  "id": 2250203955,
+  "lat": 42.0890171,
+  "lon": 42.1222526,
+  "tags": {
+    "esr:user": "570309",
+    "name": "ნიგოითი",
+    "name:en": "Nigoiti",
+    "name:ka": "ნიგოითი",
+    "name:ru": "Нигоити",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800373"
+  }
+},
+{
+  "type": "node",
+  "id": 2277191167,
+  "lat": 44.8883684,
+  "lon": 40.2265987,
+  "tags": {
+    "esr:user": "535216",
+    "name": "Назаровский",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064078"
+  }
+},
+{
+  "type": "node",
+  "id": 2371045299,
+  "lat": 44.3850419,
+  "lon": 39.1906796,
+  "tags": {
+    "description": "Направление на Туапсе:\nГорячий Ключ - Туапсе: 11:47, 18:16",
+    "esr:user": "524245",
+    "name": "Чинары",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064651"
+  }
+},
+{
+  "type": "node",
+  "id": 2448166402,
+  "lat": 45.1264360,
+  "lon": 38.0976402,
+  "tags": {
+    "esr:user": "522023",
+    "name": "Себедахово",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064164"
+  }
+},
+{
+  "type": "node",
+  "id": 2449483860,
+  "lat": 45.6906846,
+  "lon": 46.9499835,
+  "tags": {
+    "esr:user": "541724",
+    "name": "Олейниково",
+    "name:ru": "Олейниково",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Приволжская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Olejnikowo",
+    "uic_ref": "2020331"
+  }
+},
+{
+  "type": "node",
+  "id": 2449532789,
+  "lat": 45.0800066,
+  "lon": 46.7131003,
+  "tags": {
+    "esr:user": "541838",
+    "name": "Разъезд №11",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065335"
+  }
+},
+{
+  "type": "node",
+  "id": 2449585752,
+  "lat": 45.5529125,
+  "lon": 46.8960588,
+  "tags": {
+    "esr:user": "541734",
+    "name": "Разъезд № 8",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Razezd n8",
+    "uic_ref": "2064332"
+  }
+},
+{
+  "type": "node",
+  "id": 2449881844,
+  "lat": 44.8463674,
+  "lon": 37.9179714,
+  "tags": {
+    "esr:user": "521637",
+    "name": "11 км",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2449882721,
+  "lat": 44.7640751,
+  "lon": 37.8627075,
+  "tags": {
+    "esr:user": "521707",
+    "name": "Грушевая",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2468692167,
+  "lat": 45.3319596,
+  "lon": 36.4181066,
+  "tags": {
+    "esr:user": "867402",
+    "name": "Керчь-Южная",
+    "name:ru": "Керчь-Южная",
+    "name:uk": "Керч-Південна",
+    "operator": "ФГУП «КЖД»",
+    "operator:branch": "Крымская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2468757282,
+  "lat": 45.3028169,
+  "lon": 36.4233906,
+  "tags": {
+    "alt_name": "Керчь-Южная",
+    "esr:user": "867703",
+    "name": "Аршинцево",
+    "name:ru": "Аршинцево",
+    "name:uk": "Аршинцеве",
+    "operator": "ФГУП «КЖД»",
+    "operator:branch": "Крымская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q76312731"
+  }
+},
+{
+  "type": "node",
+  "id": 2468842711,
+  "lat": 45.3461976,
+  "lon": 36.6867532,
+  "tags": {
+    "esr:user": "527900",
+    "name": "Кавказ",
+    "name:de": "Kawkas",
+    "name:en": "Kavkaz - Krym (railroad)",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Kavkaz Granica",
+    "uic_ref": "2064739"
+  }
+},
+{
+  "type": "node",
+  "id": 2469903575,
+  "lat": 45.3633846,
+  "lon": 36.4797974,
+  "tags": {
+    "esr:user": "867807",
+    "name": "Керчь-Порт",
+    "name:ru": "Керчь-Порт",
+    "name:uk": "Керч-Порт",
+    "operator": "ФГУП «КЖД»",
+    "operator:branch": "Крымская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2210141"
+  }
+},
+{
+  "type": "node",
+  "id": 2473272094,
+  "lat": 42.0108791,
+  "lon": 43.2099681,
+  "tags": {
+    "esr:user": "576803",
+    "name": "ხარაგაული",
+    "name:en": "Kharagouli",
+    "name:ka": "ხარაგაული",
+    "name:ru": "Харагоули",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800426"
+  }
+},
+{
+  "type": "node",
+  "id": 2508873175,
+  "lat": 45.0367407,
+  "lon": 39.0417272,
+  "tags": {
+    "esr:user": "525407",
+    "name": "Краснодар-Сортировочный",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064789",
+    "wikidata": "Q22709418"
+  }
+},
+{
+  "type": "node",
+  "id": 2592382626,
+  "lat": 45.2124423,
+  "lon": 39.5583661,
+  "tags": {
+    "esr:user": "525727",
+    "internet_access": "no",
+    "name": "Варилка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064203",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 2734176146,
+  "lat": 44.1310039,
+  "lon": 43.0260516,
+  "tags": {
+    "esr:user": "531821",
+    "name": "Железноводск",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064155"
+  }
+},
+{
+  "type": "node",
+  "id": 2861995027,
+  "lat": 43.1861192,
+  "lon": 44.2711641,
+  "tags": {
+    "esr:user": "538303",
+    "name": "Ардон",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2943222738,
+  "lat": 43.0489690,
+  "lon": 44.2123929,
+  "tags": {
+    "esr:user": "538407",
+    "name": "Алагир",
+    "name:de": "Alagir",
+    "name:en": "Alagir",
+    "name:os": "Алагир",
+    "name:ru": "Алагир",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3046427944,
+  "lat": 43.2622671,
+  "lon": 46.5864016,
+  "tags": {
+    "esr:user": "542703",
+    "name": "Хасав-Юрт",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Chasaw-Jurt",
+    "uic_ref": "2064165",
+    "wikidata": "Q4496390",
+    "wikipedia": "ru:Хасав-Юрт (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 3065946736,
+  "lat": 42.1507702,
+  "lon": 41.6791554,
+  "tags": {
+    "esr:user": "572107",
+    "name": "ფოთი",
+    "name:en": "Poti",
+    "name:ka": "ფოთი",
+    "name:ru": "Поти",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2800610",
+    "wikidata": "Q111605452"
+  }
+},
+{
+  "type": "node",
+  "id": 3067079233,
+  "lat": 42.2223569,
+  "lon": 41.7938694,
+  "tags": {
+    "esr:user": "577308",
+    "name": "ჭალადიდი",
+    "name:en": "Chaladidi",
+    "name:ka": "ჭალადიდი",
+    "name:ru": "Чаладиди",
+    "railway": "station",
+    "uic_ref": "2800363"
+  }
+},
+{
+  "type": "node",
+  "id": 3077355143,
+  "lat": 42.1913067,
+  "lon": 43.1615838,
+  "tags": {
+    "esr:user": "576076",
+    "name": "ბეღლევი",
+    "name:en": "Beghlevi",
+    "name:ka": "ბეღლევი",
+    "name:ru": "Беглеви",
+    "railway": "station",
+    "uic_ref": "2800423"
+  }
+},
+{
+  "type": "node",
+  "id": 3128059054,
+  "lat": 45.1145610,
+  "lon": 39.3798026,
+  "tags": {
+    "esr:user": "525708",
+    "name": "Васюринская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064202"
+  }
+},
+{
+  "type": "node",
+  "id": 3154361832,
+  "lat": 45.3458640,
+  "lon": 42.8253468,
+  "tags": {
+    "esr:user": "527402",
+    "name": "Светлоград",
+    "name:ru": "Светлоград",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064244",
+    "wikidata": "Q4410395",
+    "wikipedia": "ru:Светлоград (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 3163296822,
+  "lat": 43.2432134,
+  "lon": 46.7302016,
+  "tags": {
+    "esr:user": "542722",
+    "name": "Карлан-Юрт",
+    "name:ce": "ГӀан-Юрт",
+    "name:de": "Karlan-Jurt",
+    "name:en": "Karlan-Yurt",
+    "name:kum": "Къарлан-юрт",
+    "name:ru": "Карлан-Юрт",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Karlan-Jurt",
+    "uic_ref": "2000707",
+    "wikidata": "Q16661998",
+    "wikipedia": "ru:Карлан-Юрт (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 3327857743,
+  "lat": 43.3137457,
+  "lon": 46.3047352,
+  "tags": {
+    "esr:user": "542629",
+    "name": "Кади-Юрт",
+    "name:ce": "Къеди-Юрт",
+    "name:de": "Kadi-Jurt",
+    "name:en": "Kadi-Yurt",
+    "name:ru": "Кади-Юрт",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Kadi-Jurt",
+    "uic_ref": "2064059"
+  }
+},
+{
+  "type": "node",
+  "id": 3335265674,
+  "lat": 44.0977916,
+  "lon": 46.6648286,
+  "tags": {
+    "alt_name": "Карабаглы",
+    "alt_name:ru": "Карабаглы",
+    "esr:user": "542046",
+    "name": "Кара-Баглы",
+    "name:de": "Kara-Bagly",
+    "name:en": "Kara-Bagly",
+    "name:ru": "Кара-Баглы",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Kara-Bagli",
+    "uic_ref": "2064648"
+  }
+},
+{
+  "type": "node",
+  "id": 3374667933,
+  "lat": 43.9614421,
+  "lon": 42.7712014,
+  "tags": {
+    "esr:user": "532400",
+    "name": "Подкумок",
+    "name:en": "Podkumok",
+    "name:ru": "Подкумок",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064368"
+  }
+},
+{
+  "type": "node",
+  "id": 3420120200,
+  "lat": 44.6257451,
+  "lon": 41.9137842,
+  "tags": {
+    "esr:user": "530706",
+    "name": "Зеленчук",
+    "name:ru": "Зеленчук",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064026"
+  }
+},
+{
+  "type": "node",
+  "id": 3427269328,
+  "lat": 43.3462780,
+  "lon": 44.2060044,
+  "tags": {
+    "esr:user": "538106",
+    "name": "Эльхотово",
+    "name:de": "Elchotowo",
+    "name:en": "Elkhotovo",
+    "name:os": "Елхот",
+    "name:ru": "Эльхотово",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064046"
+  }
+},
+{
+  "type": "node",
+  "id": 3427459958,
+  "lat": 43.3689986,
+  "lon": 46.7667133,
+  "tags": {
+    "esr:user": "542243",
+    "name": "Куруш",
+    "name:ru": "Куруш",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Kurush",
+    "uic_ref": "2064113"
+  }
+},
+{
+  "type": "node",
+  "id": 3427461904,
+  "lat": 43.5574725,
+  "lon": 46.7380925,
+  "tags": {
+    "esr:user": "543208",
+    "name": "Герменчик",
+    "name:ru": "Герменчик",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Germenchik",
+    "uic_ref": "2064100"
+  }
+},
+{
+  "type": "node",
+  "id": 3427470341,
+  "lat": 43.5139336,
+  "lon": 46.3189579,
+  "tags": {
+    "esr:user": "542402",
+    "name": "Шелковская",
+    "name:ce": "Шелковски",
+    "name:de": "Schelkowskaja",
+    "name:en": "Shelkovskaya",
+    "name:ru": "Шелковская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Shelkovskaya",
+    "uic_ref": "2064108",
+    "wikidata": "Q4522665",
+    "wikipedia": "ru:Шелковская (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 3427472538,
+  "lat": 43.9672838,
+  "lon": 46.6961924,
+  "tags": {
+    "esr:user": "542101",
+    "name": "Разъезд № 17",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Razezd n17",
+    "uic_ref": "2002171"
+  }
+},
+{
+  "type": "node",
+  "id": 3427473256,
+  "lat": 44.8175188,
+  "lon": 46.6231999,
+  "tags": {
+    "name": "Разъезд № 12",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Razezd n12",
+    "uic_ref": "2002132"
+  }
+},
+{
+  "type": "node",
+  "id": 3621335923,
+  "lat": 44.2057393,
+  "lon": 43.3611730,
+  "tags": {
+    "esr:user": "536204",
+    "name": "Виноградная",
+    "name:ru": "Виноградная",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064036"
+  }
+},
+{
+  "type": "node",
+  "id": 3660367761,
+  "lat": 45.8490650,
+  "lon": 40.1178246,
+  "tags": {
+    "esr:user": "520102",
+    "internet_access": "yes",
+    "name": "Тихорецкая",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Tichorezkaja",
+    "uic_ref": "2064260"
+  }
+},
+{
+  "type": "node",
+  "id": 3713954204,
+  "lat": 42.8974799,
+  "lon": 47.5520550,
+  "tags": {
+    "esr:user": "543509",
+    "name": "Тарки",
+    "name:de": "Tarki",
+    "name:en": "Tarki",
+    "name:ru": "Тарки",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064211",
+    "wikidata": "Q4452014",
+    "wikipedia": "ru:Тарки (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 3713965456,
+  "lat": 43.0024404,
+  "lon": 47.4654970,
+  "tags": {
+    "esr:user": "543320",
+    "name": "Махачкала-Сортировочная",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q4285677",
+    "wikipedia": "ru:Махачкала I — Сортировочная"
+  }
+},
+{
+  "type": "node",
+  "id": 3713979649,
+  "lat": 43.2090230,
+  "lon": 46.8232960,
+  "tags": {
+    "esr:user": "542741",
+    "name": "Сулак",
+    "name:av": "Сулахъ",
+    "name:de": "Sulak",
+    "name:en": "Sulak",
+    "name:ru": "Сулак",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064540",
+    "wikidata": "Q16703021",
+    "wikipedia": "ru:Сулак (платформа)"
+  }
+},
+{
+  "type": "node",
+  "id": 3715595014,
+  "lat": 44.6240628,
+  "lon": 44.0234339,
+  "tags": {
+    "esr:user": "536901",
+    "name": "Плаксейка",
+    "name:ru": "Плаксейка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064314"
+  }
+},
+{
+  "type": "node",
+  "id": 3715613668,
+  "lat": 44.2326292,
+  "lon": 43.6617925,
+  "tags": {
+    "esr:user": "536505",
+    "name": "Михайловская",
+    "name:ru": "Михайловская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064510"
+  }
+},
+{
+  "type": "node",
+  "id": 3715615344,
+  "lat": 44.2819031,
+  "lon": 43.7278596,
+  "tags": {
+    "esr:user": "536609",
+    "name": "Кума",
+    "name:ru": "Кума",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064311"
+  }
+},
+{
+  "type": "node",
+  "id": 3717325131,
+  "lat": 44.7500211,
+  "lon": 41.6037379,
+  "tags": {
+    "esr:user": "530509",
+    "name": "Овечка",
+    "name:ru": "Овечка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064021"
+  }
+},
+{
+  "type": "node",
+  "id": 3717406610,
+  "lat": 45.4592099,
+  "lon": 40.8407903,
+  "tags": {
+    "esr:user": "526306",
+    "name": "Темижбекская",
+    "name:ru": "Темижбекская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Temishbekskaja",
+    "uic_ref": "2064227"
+  }
+},
+{
+  "type": "node",
+  "id": 3717431889,
+  "lat": 45.4421377,
+  "lon": 41.5287379,
+  "tags": {
+    "esr:user": "526607",
+    "name": "Передовая",
+    "name:ru": "Передовая",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Peredowaja",
+    "uic_ref": "2064232"
+  }
+},
+{
+  "type": "node",
+  "id": 3717432691,
+  "lat": 45.2675979,
+  "lon": 41.8453341,
+  "tags": {
+    "esr:user": "526804",
+    "name": "Рыздвяная",
+    "name:ru": "Рыздвяная",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064233"
+  }
+},
+{
+  "type": "node",
+  "id": 3717480840,
+  "lat": 44.4053011,
+  "lon": 39.4100339,
+  "tags": {
+    "esr:user": "534001",
+    "name": "Куринский",
+    "name:ru": "Куринский",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064012"
+  }
+},
+{
+  "type": "node",
+  "id": 3718702256,
+  "lat": 43.7809023,
+  "lon": 44.1412402,
+  "tags": {
+    "esr:user": "537616",
+    "name": "Приближний",
+    "name:ru": "Приближний",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064041"
+  }
+},
+{
+  "type": "node",
+  "id": 3718702273,
+  "lat": 43.7638143,
+  "lon": 44.3428520,
+  "tags": {
+    "esr:user": "539132",
+    "name": "Черноярская",
+    "name:de": "Tschernojarskaja",
+    "name:en": "Chernoyarskaya",
+    "name:os": "Черноярскæй",
+    "name:ru": "Черноярская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064042"
+  }
+},
+{
+  "type": "node",
+  "id": 3719807027,
+  "lat": 45.4250295,
+  "lon": 40.4346068,
+  "tags": {
+    "esr:user": "526109",
+    "name": "Милованово",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064208"
+  }
+},
+{
+  "type": "node",
+  "id": 3744012100,
+  "lat": 43.7520488,
+  "lon": 44.7577055,
+  "tags": {
+    "esr:user": "539408",
+    "name": "Осетиновский",
+    "name:de": "Ossetinowski",
+    "name:en": "Osetinovskiy",
+    "name:ru": "Осетиновский",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064096"
+  }
+},
+{
+  "type": "node",
+  "id": 3744012102,
+  "lat": 43.7415389,
+  "lon": 44.8592760,
+  "tags": {
+    "esr:user": "539414",
+    "name": "Стодеревская",
+    "name:de": "Stoderewskaja",
+    "name:en": "Stoderevskaya",
+    "name:ru": "Стодеревская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Stoderewskaja",
+    "uic_ref": "2064097",
+    "wikidata": "Q4442724",
+    "wikipedia": "ru:Стодеревская (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 3778360589,
+  "lat": 44.1112929,
+  "lon": 43.4240477,
+  "tags": {
+    "esr:user": "536331",
+    "name": "Незлобная",
+    "name:ru": "Незлобная",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3828632988,
+  "lat": 44.2188866,
+  "lon": 40.8514526,
+  "tags": {
+    "esr:user": "535907",
+    "name": "Шедок",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064133"
+  }
+},
+{
+  "type": "node",
+  "id": 3979231197,
+  "lat": 44.1174821,
+  "lon": 42.9547276,
+  "tags": {
+    "name": "Промышленная",
+    "name:ru": "Промышленная",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3991184643,
+  "lat": 45.9601474,
+  "lon": 40.6850030,
+  "tags": {
+    "esr:user": "518009",
+    "name": "Ея",
+    "name:de": "Eja",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Eja",
+    "uic_ref": "2064266"
+  }
+},
+{
+  "type": "node",
+  "id": 3999413605,
+  "lat": 43.7526592,
+  "lon": 44.5542705,
+  "tags": {
+    "esr:user": "539202",
+    "name": "Луковский",
+    "name:de": "Lukowski",
+    "name:en": "Lukovskiy",
+    "name:os": "Луковскæй",
+    "name:ru": "Луковский",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065140"
+  }
+},
+{
+  "type": "node",
+  "id": 4008724787,
+  "lat": 45.9358222,
+  "lon": 40.5763277,
+  "tags": {
+    "esr:user": "517909",
+    "name": "Ровное",
+    "name:ru": "Ровное",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Rownoe",
+    "uic_ref": "2064264"
+  }
+},
+{
+  "type": "node",
+  "id": 4010473642,
+  "lat": 45.3622728,
+  "lon": 41.7071851,
+  "tags": {
+    "esr:user": "526700",
+    "name": "Изобильная",
+    "name:ru": "Изобильная",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Isobilnaja",
+    "uic_ref": "2064275"
+  }
+},
+{
+  "type": "node",
+  "id": 4051916734,
+  "lat": 45.1274299,
+  "lon": 43.2603407,
+  "tags": {
+    "esr:user": "527606",
+    "name": "Мокрая Буйвола",
+    "name:ru": "Мокрая Буйвола",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064248"
+  }
+},
+{
+  "type": "node",
+  "id": 4074554098,
+  "lat": 43.2053346,
+  "lon": 46.8672212,
+  "tags": {
+    "esr:user": "542807",
+    "name": "Кизилюрт",
+    "name:av": "Гъизилюрт",
+    "name:az": "Qızılyurd",
+    "name:az-cyr": "Гызылјурд",
+    "name:de": "Kisiljurt",
+    "name:en": "Kizilyurt",
+    "name:hy": "Կիզիլյուրտ",
+    "name:kum": "Къызылюрт",
+    "name:ru": "Кизилюрт",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Kisiljurt",
+    "uic_ref": "2000739",
+    "wikidata": "Q4220322",
+    "wikipedia": "ru:Кизил-Юрт (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 4074554102,
+  "lat": 42.9874517,
+  "lon": 47.5041782,
+  "tags": {
+    "alt_name": "Махачкала-II-Порт",
+    "esr:user": "543301",
+    "name": "Махачкала",
+    "name:en": "Makhachkala",
+    "name:ru": "Махачкала",
+    "name:zh": "马哈奇卡拉",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Mahachkala",
+    "uic_ref": "2000922"
+  }
+},
+{
+  "type": "node",
+  "id": 4076574245,
+  "lat": 44.8048880,
+  "lon": 39.9579994,
+  "tags": {
+    "esr:user": "534618",
+    "name": "Гончарка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064081"
+  }
+},
+{
+  "type": "node",
+  "id": 4344371111,
+  "lat": 44.9522751,
+  "lon": 43.8876618,
+  "tags": {
+    "esr:user": "527737",
+    "name": "Большевистская искра",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064191"
+  }
+},
+{
+  "type": "node",
+  "id": 4526636022,
+  "lat": 43.6769009,
+  "lon": 40.2793825,
+  "tags": {
+    "esr:user": "532896",
+    "name": "Роза Хутор",
+    "name:en": "Roza Khutor",
+    "name:ru": "Роза Хутор",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q4063544",
+    "wikipedia": "ru:Роза Хутор (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 4526636023,
+  "lat": 43.6837407,
+  "lon": 40.2320638,
+  "tags": {
+    "esr:user": "532881",
+    "name": "Эсто-Садок",
+    "name:ru": "Эсто-Садок",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4530062227,
+  "lat": 43.9021276,
+  "lon": 42.7204487,
+  "tags": {
+    "esr:user": "532504",
+    "name": "Кисловодск",
+    "name:en": "Kislovodsk",
+    "name:ru": "Кисловодск",
+    "name:zh": "基斯洛沃茨克",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Kislovodsk",
+    "uic_ref": "2000737",
+    "wikidata": "Q4222207",
+    "wikipedia": "ru:Кисловодск (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 4857939998,
+  "lat": 43.3728498,
+  "lon": 40.0937031,
+  "tags": {
+    "esr:user": "574403",
+    "int_name": "Tsandrypsh",
+    "name": "Цандрыԥшь",
+    "name:ab": "Цандрыԥшь",
+    "name:de": "Zandrypsch",
+    "name:en": "Tsandrypsh",
+    "name:ka": "განთიადი",
+    "name:ru": "Цандрыпш",
+    "old_name": "Гантиади",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2800377",
+    "wikidata": "Q4503078"
+  }
+},
+{
+  "type": "node",
+  "id": 5174480801,
+  "lat": 43.7508303,
+  "lon": 46.4770765,
+  "tags": {
+    "esr:user": "542328",
+    "name": "Каргинская",
+    "name:ru": "Каргинская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064109",
+    "wikidata": "Q4214713",
+    "wikipedia": "ru:Каргинская (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 5400440681,
+  "lat": 44.7894475,
+  "lon": 37.6940473,
+  "tags": {
+    "esr:user": "521302",
+    "name": "Гайдук",
+    "name:ru": "Гайдук",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064178"
+  }
+},
+{
+  "type": "node",
+  "id": 5410554964,
+  "lat": 43.3024382,
+  "lon": 42.7588829,
+  "tags": {
+    "aerialway:access": "both",
+    "aerialway:summer:access": "both",
+    "name": "Нижняя станция подъёмника в ущелье Адыр-Суу",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "funicular"
+  }
+},
+{
+  "type": "node",
+  "id": 5531582056,
+  "lat": 45.1722060,
+  "lon": 36.6954380,
+  "tags": {
+    "esr:user": "523312",
+    "name": "Тамань-Пассажирская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064743"
+  }
+},
+{
+  "type": "node",
+  "id": 5531582058,
+  "lat": 45.1564471,
+  "lon": 36.7104602,
+  "tags": {
+    "name": "Тольяттиазот",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5575309836,
+  "lat": 45.2234713,
+  "lon": 36.7910634,
+  "tags": {
+    "name": "22 км",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064742"
+  }
+},
+{
+  "type": "node",
+  "id": 5795480205,
+  "lat": 44.3101616,
+  "lon": 42.9202024,
+  "tags": {
+    "esr:user": "531605",
+    "name": "Суворовская",
+    "name:ru": "Суворовская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065032"
+  }
+},
+{
+  "type": "node",
+  "id": 5795561041,
+  "lat": 44.4076160,
+  "lon": 42.7289409,
+  "tags": {
+    "esr:user": "531501",
+    "name": "Нагутская",
+    "name:ru": "Нагутская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064031"
+  }
+},
+{
+  "type": "node",
+  "id": 5798216072,
+  "lat": 44.0927504,
+  "lon": 41.9823865,
+  "tags": {
+    "esr:user": "531200",
+    "name": "Джегута",
+    "name:de": "Ust-Dscheguta",
+    "name:ru": "Джегута",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064128"
+  }
+},
+{
+  "type": "node",
+  "id": 6418277518,
+  "lat": 43.5117518,
+  "lon": 39.8641880,
+  "tags": {
+    "esr:user": "532839",
+    "name": "Хоста",
+    "name:en": "Khosta",
+    "name:ru": "Хоста",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Chosta",
+    "uic_ref": "2000454",
+    "wheelchair": "yes",
+    "wikidata": "Q4500280",
+    "wikipedia": "ru:Хоста (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 6418280615,
+  "lat": 43.5912863,
+  "lon": 39.7284830,
+  "tags": {
+    "esr:user": "532909",
+    "int_name": "Sochi",
+    "name": "Сочи",
+    "name:ab": "Шәача",
+    "name:cs": "Soči",
+    "name:da": "Sotji",
+    "name:de": "Sotschi",
+    "name:en": "Sochi",
+    "name:eo": "Soĉi",
+    "name:es": "Sochi",
+    "name:et": "Sotši",
+    "name:fi": "Sotši",
+    "name:fr": "Sotchi",
+    "name:hr": "Soči",
+    "name:hu": "Szocsi",
+    "name:ka": "სოჭი",
+    "name:ku": "Soçî",
+    "name:la": "Sotzium",
+    "name:lt": "Sočis",
+    "name:lv": "Soči",
+    "name:nl": "Sotsji",
+    "name:pl": "Soczi",
+    "name:pt": "Sóchi",
+    "name:ro": "Soci",
+    "name:ru": "Сочи",
+    "name:sk": "Soči",
+    "name:sl": "Soči",
+    "name:sr": "Сочи",
+    "name:sv": "Sotji",
+    "name:tr": "Soçi",
+    "name:uk": "Сочі",
+    "name:zh": "索契",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Sochi",
+    "uic_ref": "2000152",
+    "wikidata": "Q3180156",
+    "wikipedia": "ru:Сочи (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 6439674052,
+  "lat": 45.0182390,
+  "lon": 38.9890972,
+  "tags": {
+    "esr:user": "524404",
+    "name": "Краснодар-1",
+    "name:en": "Krasnodar 1",
+    "name:zh": "克拉斯诺达尔 1",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Krasnodar 1",
+    "uic_ref": "2000812",
+    "wikidata": "Q4238511",
+    "wikipedia": "ru:Краснодар I"
+  }
+},
+{
+  "type": "node",
+  "id": 6439674053,
+  "lat": 44.9319971,
+  "lon": 38.9098604,
+  "tags": {
+    "esr:user": "524103",
+    "name": "Энем-1",
+    "name:ady": "Инэм-1",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Enem 1",
+    "uic_ref": "2064189"
+  }
+},
+{
+  "type": "node",
+  "id": 6439674054,
+  "lat": 44.6474428,
+  "lon": 39.1274334,
+  "tags": {
+    "esr:user": "524207",
+    "name": "Горячий Ключ",
+    "name:ar": "غورياتشي كليوتش",
+    "name:az": "Qoryaçiy Klyuç",
+    "name:be": "Гарачы Ключ",
+    "name:bg": "Горячий ключ",
+    "name:ca": "Goriatxi Kliutx",
+    "name:cs": "Gorjačij Ključ",
+    "name:de": "Gorjatschi Kljutsch",
+    "name:en": "Goryachiy Klyuch",
+    "name:eo": "Gorjaĉij Kljuĉ",
+    "name:es": "Goriachi Kliuch",
+    "name:et": "Gorjatši Kljutš",
+    "name:fa": "گوریاچیی کلیوچ",
+    "name:fi": "Gorjatši Kljutš",
+    "name:fr": "Goriatchi Klioutch",
+    "name:hr": "Gorjači Ključ",
+    "name:hy": "Գորյաչի Կլյուչ",
+    "name:it": "Gorjačij Ključ",
+    "name:ko": "고랴치 클류치",
+    "name:lt": "Goriačij Kliučas",
+    "name:lv": "Gorjačijkļuča",
+    "name:nb": "Gorjatsjij Kljutsj",
+    "name:nn": "Gorjatsjij Kljutsj",
+    "name:pl": "Goriaczij Klucz",
+    "name:ru": "Горячий Ключ",
+    "name:sr": "Горјачи Кључ",
+    "name:tl": "Goryachy Klyuch",
+    "name:tr": "Goryaçi Klyuç",
+    "name:uk": "Гарячий Ключ",
+    "name:zh": "戈里亞奇克柳奇",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064057"
+  }
+},
+{
+  "type": "node",
+  "id": 6439674063,
+  "lat": 43.4476738,
+  "lon": 39.9042429,
+  "tags": {
+    "esr:user": "532805",
+    "name": "Адлер",
+    "name:de": "Adler",
+    "name:en": "Adler",
+    "name:fr": "Adler",
+    "name:ru": "Адлер",
+    "name:zh": "阿德列尔",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Adler",
+    "uic_ref": "2000265",
+    "wikidata": "Q4057610",
+    "wikipedia": "ru:Адлер (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 6464232789,
+  "lat": 44.3865853,
+  "lon": 46.5948852,
+  "tags": {
+    "esr:user": "542008",
+    "name": "Кочубей",
+    "name:de": "Kotschubei",
+    "name:en": "Kochubey",
+    "name:ru": "Кочубей",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Kotschubej",
+    "uic_ref": "2064114"
+  }
+},
+{
+  "type": "node",
+  "id": 6761740694,
+  "lat": 43.5630620,
+  "lon": 43.8584779,
+  "tags": {
+    "esr:user": "537809",
+    "name": "Докшукино",
+    "name:ru": "Докшукино",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Dokschukino",
+    "uic_ref": "2064317",
+    "wikipedia": "ru:Докшукино (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 6946377671,
+  "lat": 43.3019794,
+  "lon": 42.7588368,
+  "tags": {
+    "name": "Верхняя станция подъёмника в ущелье Адыр-Суу",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "funicular"
+  }
+},
+{
+  "type": "node",
+  "id": 7053674694,
+  "lat": 45.3176786,
+  "lon": 36.4295109,
+  "tags": {
+    "esr:user": "869713",
+    "name": "Керчь-Южная (новый парк)",
+    "name:uk": "Керч-Південна (новий парк)",
+    "operator": "ФГУП «КЖД»",
+    "operator:branch": "Крымская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7320343262,
+  "lat": 44.1857154,
+  "lon": 39.2422327,
+  "tags": {
+    "description": "Направление на Туапсе:\nГорячий Ключ - Туапсе:12:35, 18:59\nБелореченская - Туапсе: 06:58, 21:13",
+    "esr:user": "533808",
+    "name": "Кривенковская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064284"
+  }
+},
+{
+  "type": "node",
+  "id": 7320343266,
+  "lat": 44.8692149,
+  "lon": 39.0420869,
+  "tags": {
+    "esr:user": "524122",
+    "name": "Шенджий",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1978",
+    "train": "yes",
+    "uic_ref": "2064708"
+  }
+},
+{
+  "type": "node",
+  "id": 7320343267,
+  "lat": 44.4379093,
+  "lon": 39.1454457,
+  "tags": {
+    "description": "Направление на Туапсе:\nГорячий Ключ - Туапсе: 11:31, 18:03",
+    "esr:user": "524230",
+    "name": "Афапостик",
+    "name:ru": "Афапостик",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065570"
+  }
+},
+{
+  "type": "node",
+  "id": 8108071598,
+  "lat": 44.0974661,
+  "lon": 39.0833827,
+  "tags": {
+    "esr:user": "533367",
+    "internet_access": "yes",
+    "name": "Туапсе-Пассажирская",
+    "name:en": "Tuapse",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064140"
+  }
+},
+{
+  "type": "node",
+  "id": 8193374056,
+  "lat": 42.0923464,
+  "lon": 42.0429602,
+  "tags": {
+    "esr:user": "570402",
+    "int_name": "Lanchkhuti",
+    "name": "ლანჩხუთი",
+    "name:de": "Lantschchuti",
+    "name:en": "Lanchkhuti",
+    "name:ka": "ლანჩხუთი",
+    "name:ru": "Ланчхути",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800490"
+  }
+},
+{
+  "type": "node",
+  "id": 8335529488,
+  "lat": 44.8912199,
+  "lon": 44.0111517,
+  "tags": {
+    "esr:user": "537103",
+    "name": "Новая Жизнь",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8434321640,
+  "lat": 45.5063450,
+  "lon": 38.7603530,
+  "tags": {
+    "esr:user": "522396",
+    "name": "Гречаная",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8662682991,
+  "lat": 45.4836008,
+  "lon": 39.0932232,
+  "tags": {
+    "esr:user": "524885",
+    "name": "Кирпили",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8957004284,
+  "lat": 45.6295887,
+  "lon": 38.9403453,
+  "tags": {
+    "esr:user": "516200",
+    "internet_access": "no",
+    "name": "Тимашевская-1",
+    "name:de": "Timaschewskaja-1",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Timaschewskaja 1",
+    "uic_ref": "2001488"
+  }
+},
+{
+  "type": "node",
+  "id": 8957004303,
+  "lat": 45.3640953,
+  "lon": 38.4628169,
+  "tags": {
+    "esr:user": "522305",
+    "name": "Ангелинская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064162"
+  }
+},
+{
+  "type": "node",
+  "id": 8957004304,
+  "lat": 45.4613504,
+  "lon": 38.7037283,
+  "tags": {
+    "esr:user": "522409",
+    "fixme": "точное расположение платформ",
+    "name": "Величковка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064161"
+  }
+},
+{
+  "type": "node",
+  "id": 8957004521,
+  "lat": 45.2334868,
+  "lon": 38.1453562,
+  "tags": {
+    "esr:user": "522108",
+    "name": "Протока",
+    "name:de": "Protoka",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Protoka",
+    "uic_ref": "2064305"
+  }
+},
+{
+  "type": "node",
+  "id": 8957004590,
+  "lat": 45.3449512,
+  "lon": 38.2194498,
+  "tags": {
+    "esr:user": "522201",
+    "name": "Полтавская",
+    "name:de": "Poltawskaja",
+    "name:ru": "Полтавская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Poltawskaja",
+    "uic_ref": "2064163"
+  }
+},
+{
+  "type": "node",
+  "id": 9369474744,
+  "lat": 45.1242362,
+  "lon": 40.9768484,
+  "tags": {
+    "esr:user": "529802",
+    "name": "Кубанская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064018"
+  }
+},
+{
+  "type": "node",
+  "id": 9372271465,
+  "lat": 45.0740610,
+  "lon": 39.2562886,
+  "tags": {
+    "esr:user": "525604",
+    "name": "Стопятый",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q110954999"
+  }
+},
+{
+  "type": "node",
+  "id": 9372734833,
+  "lat": 45.3115649,
+  "lon": 39.9191038,
+  "tags": {
+    "esr:user": "525905",
+    "name": "Ладожская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064206"
+  }
+},
+{
+  "type": "node",
+  "id": 9744904797,
+  "lat": 44.6781846,
+  "lon": 41.8235748,
+  "tags": {
+    "esr:user": "530602",
+    "name": "Богословская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064022"
+  }
+},
+{
+  "type": "node",
+  "id": 10056291745,
+  "lat": 42.2613876,
+  "lon": 42.7131017,
+  "tags": {
+    "esr:user": "575302",
+    "int_name": "Kutaisi-1",
+    "name": "ქუთაისი-1",
+    "name:en": "Kutaisi-1",
+    "name:ka": "ქუთაისი-1",
+    "name:ru": "Кутаиси-1",
+    "operator": "სს \"საქართველოს რკინიგზა\"",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800470"
+  }
+},
+{
+  "type": "node",
+  "id": 10056291746,
+  "lat": 42.1609102,
+  "lon": 42.3434839,
+  "tags": {
+    "esr:user": "570008",
+    "name": "სამტრედია-1",
+    "name:en": "Samtredia-1",
+    "name:ka": "სამტრედია-1",
+    "name:ru": "Самтредиа-1",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_ref": "2800410"
+  }
+},
+{
+  "type": "node",
+  "id": 10250241908,
+  "lat": 42.1898046,
+  "lon": 42.4885398,
+  "tags": {
+    "esr:user": "574507",
+    "name": "ქუთაისის საერთაშორისო აეროპორტი",
+    "name:en": "Kutaisi International Airport",
+    "name:ka": "ქუთაისის საერთაშორისო აეროპორტი",
+    "name:ru": "Международный аэропорт Кутаиси",
+    "old_name:en": "Kopitnari",
+    "old_name:ka": "კოპიტნარი",
+    "old_name:ru": "Копитнари",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2800406"
+  }
+},
+{
+  "type": "node",
+  "id": 10614793114,
+  "lat": 43.0380256,
+  "lon": 44.6887055,
+  "tags": {
+    "esr:user": "538708",
+    "name": "Владикавказ",
+    "name:de": "Wladikawkas",
+    "name:en": "Vladikavkaz",
+    "name:os": "Дзæуджыхъæу",
+    "name:ru": "Владикавказ",
+    "name:zh": "弗拉季高加索",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Vladikavkaz",
+    "uic_ref": "2064070",
+    "wikidata": "Q4112975",
+    "wikipedia": "ru:Владикавказ (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 10614895810,
+  "lat": 43.1015788,
+  "lon": 44.6349934,
+  "tags": {
+    "esr:user": "538604",
+    "name": "Колонка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065610"
+  }
+},
+{
+  "type": "node",
+  "id": 10614906194,
+  "lat": 43.1949855,
+  "lon": 44.5424885,
+  "tags": {
+    "esr:user": "538500",
+    "name": "Беслан",
+    "name:de": "Beslan",
+    "name:en": "Beslan",
+    "name:os": "Беслæн",
+    "name:ru": "Беслан",
+    "name:zh": "别斯兰火车站",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Beslan",
+    "uic_ref": "2064025"
+  }
+},
+{
+  "type": "node",
+  "id": 10614971969,
+  "lat": 43.2673102,
+  "lon": 44.2927814,
+  "tags": {
+    "esr:user": "538202",
+    "name": "Дарг-Кох",
+    "name:de": "Darg-Koch",
+    "name:en": "Darg-Kokh",
+    "name:os": "Хъахъхъæдур",
+    "name:ru": "Дарг-Кох",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064047"
+  }
+},
+{
+  "type": "node",
+  "id": 10614992874,
+  "lat": 43.4814208,
+  "lon": 44.1315202,
+  "tags": {
+    "esr:user": "538002",
+    "name": "Муртазово",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Murtazovo",
+    "uic_ref": "2064043",
+    "wikipedia": "ru:Муртазово (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 10615171856,
+  "lat": 43.6218887,
+  "lon": 44.0665250,
+  "tags": {
+    "esr:user": "537705",
+    "name": "Котляревская",
+    "name:ru": "Котляревская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Kotliarevskaia",
+    "uic_ref": "2064316",
+    "wikipedia": "ru:Котляревская (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 10615199886,
+  "lat": 43.6868213,
+  "lon": 44.0820301,
+  "tags": {
+    "esr:user": "537711",
+    "name": "Баксан",
+    "name:ru": "Баксан",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065325"
+  }
+},
+{
+  "type": "node",
+  "id": 10615204808,
+  "lat": 43.7494824,
+  "lon": 44.0534860,
+  "tags": {
+    "esr:user": "537601",
+    "name": "Прохладная",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Prohladnaia",
+    "uic_ref": "2064315",
+    "wikidata": "Q4382058",
+    "wikipedia": "ru:Прохладная (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 10616501164,
+  "lat": 43.9570717,
+  "lon": 43.6455804,
+  "tags": {
+    "esr:user": "537300",
+    "name": "Аполлонская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Apollonskaja",
+    "uic_ref": "2064038"
+  }
+},
+{
+  "type": "node",
+  "id": 10616618684,
+  "lat": 44.0240716,
+  "lon": 43.5782342,
+  "tags": {
+    "esr:user": "537207",
+    "name": "Зольский",
+    "name:ru": "Зольский",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064037"
+  }
+},
+{
+  "type": "node",
+  "id": 10616915325,
+  "lat": 44.1675172,
+  "lon": 43.4789919,
+  "tags": {
+    "esr:user": "536308",
+    "name": "Георгиевск",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Georgiewsk",
+    "uic_ref": "2064310"
+  }
+},
+{
+  "type": "node",
+  "id": 10617273687,
+  "lat": 44.9506559,
+  "lon": 37.3184833,
+  "tags": {
+    "esr:user": "522803",
+    "name": "Анапа",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Anapa",
+    "uic_ref": "2064188"
+  }
+},
+{
+  "type": "node",
+  "id": 10617273688,
+  "lat": 45.7978376,
+  "lon": 38.9877213,
+  "tags": {
+    "esr:user": "516107",
+    "name": "Брюховецкая",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Brjuchowezkaja",
+    "uic_ref": "2064066"
+  }
+},
+{
+  "type": "node",
+  "id": 10671217761,
+  "lat": 44.2138673,
+  "lon": 43.1398622,
+  "tags": {
+    "esr:user": "530000",
+    "int_name": "Mineralnye Vody",
+    "name": "Минеральные Воды",
+    "name:ar": "منرالني فودي",
+    "name:az": "Mineralnıye Vodı",
+    "name:be": "Мінеральныя Воды",
+    "name:bg": "Минералние води",
+    "name:ca": "Mineràlnie Vodi",
+    "name:ce": "Минвод",
+    "name:cs": "Miněralnyje Vody",
+    "name:de": "Mineralnyje Wody",
+    "name:en": "Mineralnye Vody",
+    "name:eo": "Mineralnije Vodi",
+    "name:es": "Mineralnye Vody",
+    "name:et": "Mineralnõje Vodõ",
+    "name:fa": "مینرالنیه وودی",
+    "name:fi": "Mineralnyje Vody",
+    "name:fr": "Mineralnye Vody",
+    "name:gl": "Mineralnie Vody",
+    "name:he": "מינרלנייה וודי",
+    "name:hr": "Mineralnije Vodi",
+    "name:hy": "Միներալնիե Վոդի",
+    "name:id": "Mineralnye Vody",
+    "name:it": "Mineral'nye Vody",
+    "name:ja": "ミネラーリヌィエ・ヴォードィ",
+    "name:ka": "მინერალნიე-ვოდი",
+    "name:ko": "미네랄니예보디",
+    "name:lt": "Mineraliniai Vandenys",
+    "name:lv": "Miņeraļnije Vodi",
+    "name:ml": "മിനറൽനി വോഡി",
+    "name:nb": "Mineralnyje Vody",
+    "name:nl": "Mineralnye Vody",
+    "name:nn": "Mineralnyje Vody",
+    "name:pl": "Mineralne Wody",
+    "name:pt": "Mineralnie Vodi",
+    "name:ro": "Mineralnîe Vodî",
+    "name:ru": "Минеральные Воды",
+    "name:sr": "Минералније Води",
+    "name:sv": "Mineralnyje Vody",
+    "name:tl": "Mineralnyye Vody",
+    "name:tr": "Mineralnıye Vodı",
+    "name:uk": "Мінеральні Води",
+    "name:ur": "مینیرالنئے ووڈی",
+    "name:uz": "Mineralnye vodi",
+    "name:vi": "Mineralnye Vody",
+    "name:zh": "矿水城",
+    "name:zh-Hans": "矿水城",
+    "name:zh-Hant": "礦水城",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Mineralnie Wodi",
+    "uic_ref": "2064170"
+  }
+},
+{
+  "type": "node",
+  "id": 10671626134,
+  "lat": 44.9124240,
+  "lon": 38.0039097,
+  "tags": {
+    "esr:user": "521603",
+    "name": "Крымская",
+    "name:ru": "Крымская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Krimskaja",
+    "uic_ref": "2064320",
+    "wikimedia_commons": "Category:Krymskaya railway station",
+    "wikipedia": "ru:Крымская (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 10671626478,
+  "lat": 44.8374073,
+  "lon": 37.6546373,
+  "tags": {
+    "esr:user": "521406",
+    "name": "Тоннельная",
+    "name:ru": "Тоннельная",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Tonnelnaja",
+    "uic_ref": "2064195",
+    "wikidata": "Q4460570"
+  }
+},
+{
+  "type": "node",
+  "id": 10671695293,
+  "lat": 44.8618678,
+  "lon": 38.5532375,
+  "tags": {
+    "esr:user": "523806",
+    "name": "Ильская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Ilskaja",
+    "uic_ref": "2064184"
+  }
+},
+{
+  "type": "node",
+  "id": 10671713286,
+  "lat": 45.4355726,
+  "lon": 40.5711834,
+  "tags": {
+    "esr:user": "520009",
+    "name": "Кавказская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Kavkazskaia",
+    "uic_ref": "2064160"
+  }
+},
+{
+  "type": "node",
+  "id": 10673246385,
+  "lat": 44.8686304,
+  "lon": 38.4716736,
+  "tags": {
+    "esr:user": "523702",
+    "name": "Хабль",
+    "name:ru": "Хабль",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064183"
+  }
+},
+{
+  "type": "node",
+  "id": 10673283651,
+  "lat": 44.8909893,
+  "lon": 38.8337914,
+  "tags": {
+    "esr:user": "524000",
+    "internet_access": "no",
+    "name": "Афипская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064187"
+  }
+},
+{
+  "type": "node",
+  "id": 10673409971,
+  "lat": 43.6992427,
+  "lon": 39.5872630,
+  "tags": {
+    "esr:user": "533047",
+    "name": "Лоо",
+    "name:en": "Loo",
+    "name:ru": "Лоо",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Loo",
+    "uic_ref": "2064020"
+  }
+},
+{
+  "type": "node",
+  "id": 10673905956,
+  "lat": 45.2486755,
+  "lon": 39.0105911,
+  "tags": {
+    "esr:user": "520704",
+    "name": "Титаровка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064159"
+  }
+},
+{
+  "type": "node",
+  "id": 10674115767,
+  "lat": 45.4489776,
+  "lon": 38.9933773,
+  "tags": {
+    "esr:user": "520507",
+    "name": "Ведмидивка",
+    "name:ru": "Ведмидивка",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064157"
+  }
+},
+{
+  "type": "node",
+  "id": 10674887561,
+  "lat": 45.4589393,
+  "lon": 39.4714227,
+  "tags": {
+    "atm": "yes",
+    "esr:user": "524902",
+    "name": "Кореновск",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Korenowsk",
+    "uic_ref": "2064265"
+  }
+},
+{
+  "type": "node",
+  "id": 10674887562,
+  "lat": 45.1992474,
+  "lon": 39.2320999,
+  "tags": {
+    "esr:user": "524601",
+    "name": "Динская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Dinskaja",
+    "uic_ref": "2064193"
+  }
+},
+{
+  "type": "node",
+  "id": 10676060261,
+  "lat": 42.2871370,
+  "lon": 43.2833686,
+  "tags": {
+    "esr:user": "576305",
+    "int_name": "Chiatura",
+    "name": "ჭიათურა",
+    "name:en": "Chiatura",
+    "name:ka": "ჭიათურა",
+    "name:ru": "Чиатура",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2800385"
+  }
+},
+{
+  "type": "node",
+  "id": 10676724089,
+  "lat": 45.0347968,
+  "lon": 37.3282204,
+  "tags": {
+    "esr:user": "522818",
+    "name": "Гостагаевская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2066348"
+  }
+},
+{
+  "type": "node",
+  "id": 10676815057,
+  "lat": 45.1061148,
+  "lon": 37.6737392,
+  "tags": {
+    "esr:user": "522606",
+    "name": "Варениковская",
+    "name:ru": "Варениковская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064167"
+  }
+},
+{
+  "type": "node",
+  "id": 10676994267,
+  "lat": 44.9750007,
+  "lon": 38.0406642,
+  "tags": {
+    "esr:user": "521800",
+    "name": "Разъезд 9 км",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2065146"
+  }
+},
+{
+  "type": "node",
+  "id": 10677197418,
+  "lat": 45.3617529,
+  "lon": 36.4324804,
+  "tags": {
+    "esr:user": "867309",
+    "name": "Керчь",
+    "name:crh": "Keriç",
+    "name:crh-cyr": "Керич",
+    "name:en": "Kerch",
+    "name:ru": "Керчь",
+    "name:uk": "Керч",
+    "operator": "ФГУП «КЖД»",
+    "operator:branch": "Крымская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2210740",
+    "wikidata": "Q12109671",
+    "wikipedia": "en:Kerch railway station"
+  }
+},
+{
+  "type": "node",
+  "id": 10677209414,
+  "lat": 44.9105843,
+  "lon": 38.9069451,
+  "tags": {
+    "esr:user": "524300",
+    "name": "Энем 2",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "uic_name": "Enem 2",
+    "uic_ref": "2064714"
+  }
+},
+{
+  "type": "node",
+  "id": 10677214618,
+  "lat": 45.2059466,
+  "lon": 37.0273583,
+  "tags": {
+    "esr:user": "523204",
+    "name": "Вышестеблиевская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064173"
+  }
+},
+{
+  "type": "node",
+  "id": 10784968456,
+  "lat": 42.4972988,
+  "lon": 41.8097632,
+  "tags": {
+    "esr:user": "572802",
+    "int_name": "Ingiri",
+    "name": "ინგირი",
+    "name:en": "Ingiri",
+    "name:ka": "ინგირი",
+    "name:ru": "Ингири",
+    "railway": "station",
+    "uic_ref": "2800580",
+    "wikidata": "Q96114168"
+  }
+},
+{
+  "type": "node",
+  "id": 10784968457,
+  "lat": 42.3636067,
+  "lon": 41.8358946,
+  "tags": {
+    "esr:user": "572520",
+    "name": "ხეთა",
+    "name:en": "Kheta",
+    "name:ka": "ხეთა",
+    "name:ru": "Хета",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2800399"
+  }
+},
+{
+  "type": "node",
+  "id": 10784968458,
+  "lat": 42.3224696,
+  "lon": 41.9217508,
+  "tags": {
+    "esr:user": "572501",
+    "name": "ხობი",
+    "name:en": "Khobi",
+    "name:ka": "ხობი",
+    "name:ru": "Хоби",
+    "railway": "station",
+    "uic_ref": "2800401"
+  }
+},
+{
+  "type": "node",
+  "id": 10784968459,
+  "lat": 42.2672423,
+  "lon": 42.0649552,
+  "tags": {
+    "esr:user": "571903",
+    "name": "სენაკი",
+    "name:en": "Senaki",
+    "name:ka": "სენაკი",
+    "name:ru": "Сенаки",
+    "railway": "station",
+    "uic_ref": "2800440"
+  }
+},
+{
+  "type": "node",
+  "id": 10784968460,
+  "lat": 42.2042565,
+  "lon": 42.2021368,
+  "tags": {
+    "esr:user": "571706",
+    "int_name": "Abasha",
+    "name": "აბაშა",
+    "name:en": "Abasha",
+    "name:ka": "აბაშა",
+    "name:ru": "Абаша",
+    "railway": "station",
+    "uic_ref": "2800403"
+  }
+},
+{
+  "type": "node",
+  "id": 11048009799,
+  "lat": 44.2063086,
+  "lon": 39.6837316,
+  "tags": {
+    "name": "10-й километр",
+    "operator": "ЗАО «ПДК Апшеронск»",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11144199483,
+  "lat": 43.6532672,
+  "lon": 39.6479380,
+  "tags": {
+    "esr:user": "532932",
+    "name": "Дагомыс",
+    "name:en": "Dagomys",
+    "name:ru": "Дагомыс",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064033"
+  }
+},
+{
+  "type": "node",
+  "id": 11438525965,
+  "lat": 44.7526844,
+  "lon": 39.8941092,
+  "tags": {
+    "esr:user": "534603",
+    "name": "Белореченская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Beloretschenskaja",
+    "uic_ref": "2064250"
+  }
+},
+{
+  "type": "node",
+  "id": 11486760837,
+  "lat": 43.5444735,
+  "lon": 39.7890107,
+  "tags": {
+    "esr:user": "532858",
+    "name": "Мацеста",
+    "name:en": "Matsesta",
+    "name:ru": "Мацеста",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064064"
+  }
+},
+{
+  "type": "node",
+  "id": 11506982636,
+  "lat": 45.3776095,
+  "lon": 39.4074634,
+  "tags": {
+    "esr:user": "524813",
+    "name": "Платнировская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064196"
+  }
+},
+{
+  "type": "node",
+  "id": 11509606948,
+  "lat": 45.7490778,
+  "lon": 39.9421368,
+  "tags": {
+    "esr:user": "525214",
+    "name": "Газырь",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064550"
+  }
+},
+{
+  "type": "node",
+  "id": 11513872420,
+  "lat": 43.4912352,
+  "lon": 43.6160498,
+  "tags": {
+    "ele": "480",
+    "esr:user": "537902",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Нальчик",
+    "name:en": "Nalchik",
+    "name:ru": "Нальчик",
+    "name:zh": "纳利奇克",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Nalchik",
+    "uic_ref": "2064055",
+    "wikidata": "Q4312707",
+    "wikipedia": "ru:Нальчик (станция)"
+  }
+},
+{
+  "type": "node",
+  "id": 11513872459,
+  "lat": 44.5708354,
+  "lon": 44.0109451,
+  "tags": {
+    "esr:user": "536806",
+    "name": "Маслов Кут",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064313"
+  }
+},
+{
+  "type": "node",
+  "id": 11513910999,
+  "lat": 43.8427396,
+  "lon": 43.8389151,
+  "tags": {
+    "esr:user": "537423",
+    "name": "Солдатская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064039"
+  }
+},
+{
+  "type": "node",
+  "id": 11513911000,
+  "lat": 43.7920496,
+  "lon": 43.9586573,
+  "tags": {
+    "esr:user": "537508",
+    "name": "Шарданово",
+    "name:ru": "Шарданово",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Shardanovo",
+    "uic_ref": "2065155"
+  }
+},
+{
+  "type": "node",
+  "id": 11529345857,
+  "lat": 45.1339229,
+  "lon": 41.9731699,
+  "tags": {
+    "esr:user": "526908",
+    "name": "Палагиада",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Palagiada",
+    "uic_ref": "2001854"
+  }
+},
+{
+  "type": "node",
+  "id": 11529348289,
+  "lat": 45.0554891,
+  "lon": 42.0000896,
+  "tags": {
+    "esr:user": "527008",
+    "name": "Ставрополь",
+    "name:en": "Stavropol",
+    "name:ru": "Ставрополь",
+    "name:zh": "斯塔夫罗波尔",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "1897-01-01",
+    "train": "yes",
+    "uic_name": "Stavropol",
+    "uic_ref": "2064700",
+    "wheelchair": "limited",
+    "wikimedia_commons": "https://commons.wikimedia.org/w/index.php?search=%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB+%D0%A1%D1%82%D0%B0%D0%B2%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D1%8C&title=Special%3AMediaSearch&wprov=acrw1_-1&type=image"
+  }
+},
+{
+  "type": "node",
+  "id": 11530591121,
+  "lat": 45.9918971,
+  "lon": 38.9777017,
+  "tags": {
+    "esr:user": "516018",
+    "name": "Придорожная",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064147"
+  }
+},
+{
+  "type": "node",
+  "id": 11530927554,
+  "lat": 44.4398546,
+  "lon": 41.9140927,
+  "tags": {
+    "esr:user": "530809",
+    "name": "Ураковская",
+    "name:ru": "Ураковская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064703"
+  }
+},
+{
+  "type": "node",
+  "id": 11532580952,
+  "lat": 45.8734536,
+  "lon": 40.3706937,
+  "tags": {
+    "esr:user": "517805",
+    "name": "Порошинская",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes",
+    "uic_ref": "2064260"
+  }
+},
+{
+  "type": "node",
+  "id": 11906903849,
+  "lat": 43.7229950,
+  "lon": 46.7067049,
+  "tags": {
+    "esr:user": "542224",
+    "name": "Качалай",
+    "name:en": "Kachalay",
+    "name:ru": "Качалай",
+    "operator": "ОАО «РЖД»",
+    "operator:branch": "Северо-Кавказская железная дорога",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "uic_name": "Kisljar",
+    "uic_ref": "2064107"
+  }
+},
+{
+  "type": "node",
+  "id": 13078313780,
+  "lat": 42.1726484,
+  "lon": 42.3943781,
+  "tags": {
+    "esr:user": "570012",
+    "name": "სამტრედია-2",
+    "name:en": "Samtredia-2",
+    "name:ka": "სამტრედია-2",
+    "name:ru": "Самтредиа-2",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 13648593290,
+  "lat": 45.3663008,
+  "lon": 36.6246660,
+  "tags": {
+    "esr:user": "867101",
+    "name": "Крым-Паром",
+    "operator": "ФГУП «КЖД»",
+    "operator:branch": "Крымская железная дорога",
+    "public_transport": "no",
+    "railway": "station",
+    "train": "yes"
+  }
+}
+
+  ]
+}

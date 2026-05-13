@@ -1,0 +1,8112 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-13T16:29:44Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 387792745,
+  "lat": 32.3139060,
+  "lon": 51.4131792,
+  "tags": {
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 461613375,
+  "lat": 31.9928956,
+  "lon": 34.8533234,
+  "tags": {
+    "name": "כפר חב\"ד",
+    "name:en": "Kfar Chabad",
+    "name:he": "כפר חב\"ד",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q339967",
+    "wikipedia": "he:תחנת הרכבת כפר חב\"ד",
+    "wikipedia:he": "תחנת הרכבת כפר חב\"ד"
+  }
+},
+{
+  "type": "node",
+  "id": 492520789,
+  "lat": 24.6504685,
+  "lon": 46.7406568,
+  "tags": {
+    "name": "محطة سكة حديد الرياض",
+    "name:en": "Riyadh Railway Station",
+    "name:fa": "ایستگاه راه آهن ریاض",
+    "name:ml": "റിയാദ് തീവണ്ടി നിലയം",
+    "operator": "Saudi Arabia Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q30594324"
+  }
+},
+{
+  "type": "node",
+  "id": 492547630,
+  "lat": 26.4097444,
+  "lon": 50.1263080,
+  "tags": {
+    "name": "محطة قطار الدمام",
+    "name:ar": "محطة قطار الدمام",
+    "name:en": "Dammam Railway Station",
+    "public_transport": "station",
+    "railway": "station",
+    "wikipedia": "ar:محطة قطار الدمام"
+  }
+},
+{
+  "type": "node",
+  "id": 540766733,
+  "lat": 28.2692597,
+  "lon": 55.7838208,
+  "tags": {
+    "name": "ایستگاه راه آهن تذرج",
+    "name:en": "Tezerj",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 604304348,
+  "lat": 25.2014367,
+  "lon": 55.2695451,
+  "tags": {
+    "name": "دبي مول / برج خليفة",
+    "name:ar": "دبي مول / برج خليفة",
+    "name:en": "Burj Khalifa / Dubai Mall",
+    "name:fa": "دبی مال / برج خلیفه",
+    "name:he": "בורג 'חליפה / קניון דובאי",
+    "name:ml": "ബുർജ് ഖലീഫ / ദുബായ് മാൾ",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "25",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q4998884",
+    "wikipedia": "en:Burj Khalifa/Dubai Mall (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 605500214,
+  "lat": 25.2172310,
+  "lon": 55.2798810,
+  "tags": {
+    "name": "أبراج الإمارات",
+    "name:ar": "أبراج الإمارات",
+    "name:en": "Emirates Towers",
+    "name:fa": "برج‌های امارات",
+    "name:he": "מגדלי האמירויות",
+    "name:ml": "എമിറേറ്റ്സ് ടവേഴ്സ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "23",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q16335309",
+    "wikipedia": "en:Emirates Towers (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 609582810,
+  "lat": 31.9488540,
+  "lon": 34.8030803,
+  "tags": {
+    "name": "ראשון לציון הראשונים",
+    "name:en": "Rishon LeTsiyyon HaRishonim",
+    "name:he": "ראשון לציון הראשונים",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/rishon-letsiyon-harishonim",
+    "wheelchair": "yes",
+    "wikidata": "Q1821546",
+    "wikipedia": "he:תחנת הרכבת ראשון לציון - הראשונים",
+    "wikipedia:he": "תחנת הרכבת ראשון לציון - הראשונים"
+  }
+},
+{
+  "type": "node",
+  "id": 621348196,
+  "lat": 31.2618954,
+  "lon": 34.8093958,
+  "tags": {
+    "alt_name:en": "Be'er Sheva North University",
+    "name": "באר שבע צפון-אוניברסיטה",
+    "name:en": "Beer Sheva North - University",
+    "name:he": "באר שבע צפון-אוניברסיטה",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q2490620",
+    "wikipedia": "he:תחנת הרכבת באר שבע צפון",
+    "wikipedia:he": "תחנת הרכבת באר שבע צפון"
+  }
+},
+{
+  "type": "node",
+  "id": 679962027,
+  "lat": 31.1702134,
+  "lon": 52.5807032,
+  "tags": {
+    "addr:street": "بلوار راه آهن اباده",
+    "name": "ایستگاه راه آهن آباده",
+    "name:en": "Abadeh Railway Station",
+    "public_transport": "station",
+    "rail": "yes",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 695272034,
+  "lat": 32.3370298,
+  "lon": 48.2806675,
+  "tags": {
+    "name": "سبزآب",
+    "name:en": "Sabzab",
+    "railway": "station",
+    "railway:ref": "188",
+    "wikidata": "Q85167714"
+  }
+},
+{
+  "type": "node",
+  "id": 695272314,
+  "lat": 31.4717572,
+  "lon": 48.6905593,
+  "tags": {
+    "name": "نظامیه",
+    "name:en": "Nezamiyeh",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "railway:ref": "195",
+    "train": "yes",
+    "wikidata": "Q85168710"
+  }
+},
+{
+  "type": "node",
+  "id": 695272412,
+  "lat": 32.0739548,
+  "lon": 48.3377009,
+  "tags": {
+    "name": "هفت تپه",
+    "name:en": "Haft Tappeh",
+    "public_transport": "stop_position",
+    "rail": "yes",
+    "railway": "station",
+    "railway:ref": "190"
+  }
+},
+{
+  "type": "node",
+  "id": 703745805,
+  "lat": 30.4318944,
+  "lon": 49.0780890,
+  "tags": {
+    "name": "ایستگاه بندر امام خمینی",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 703746101,
+  "lat": 30.7530894,
+  "lon": 48.9689242,
+  "tags": {
+    "name": "گرگر",
+    "public_transport": "stop_position",
+    "rail": "yes",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 703746531,
+  "lat": 31.2311250,
+  "lon": 48.7414000,
+  "tags": {
+    "name": "میاندشت",
+    "name:ar": "میاندشت",
+    "name:en": "Miandasht",
+    "name:fa": "میاندشت",
+    "public_transport": "stop_position",
+    "rail": "yes",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 703746658,
+  "lat": 31.0642049,
+  "lon": 48.8218743,
+  "tags": {
+    "name": "خسروی",
+    "public_transport": "stop_position",
+    "rail": "yes",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 703746688,
+  "lat": 30.9241322,
+  "lon": 48.8899726,
+  "tags": {
+    "name": "منصوری",
+    "public_transport": "stop_position",
+    "rail": "yes",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 798843395,
+  "lat": 29.9961500,
+  "lon": 35.9310845,
+  "tags": {
+    "int_name": "Abū Ţarafah;Abu Tarafah;Mahattat Abu Tarafah",
+    "is_in": "Jordan, الأردن",
+    "name": "محطة أبو طرفة",
+    "name:ar": "محطة أبو طرفة",
+    "name:de": "Abu Tarafah",
+    "name:en": "Abu Tarafah",
+    "name:fr": "Abu Tarafah",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 798872515,
+  "lat": 31.4721593,
+  "lon": 36.1060405,
+  "tags": {
+    "int_name": "Maḩaţţat Khan as Zabīb; Mahattat Khan al Zabib",
+    "is_in": "Jordan, الأردن",
+    "name": "محطة خان الزبيب",
+    "name:ar": "محطة خان الزبيب",
+    "name:de": "Mahattat Khan al Zabib",
+    "name:en": "Mahattat Khan al Zabib",
+    "name:fr": "Mahattat Khan al Zabib",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 798875721,
+  "lat": 31.2423269,
+  "lon": 36.0452368,
+  "tags": {
+    "int_name": "Maḩaţţat al Qaţrānah; Mahattat al Qatranah",
+    "is_in": "Jordan, الأردن",
+    "name": "محطة القطرانة",
+    "name:ar": "محطة القطرانة",
+    "name:de": "Mahattat al Qatranah",
+    "name:en": "Mahattat al Qatranah",
+    "name:fr": "Mahattat al Qatranah",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 798893671,
+  "lat": 30.0025997,
+  "lon": 35.4895273,
+  "tags": {
+    "int_name": "Rās en Naqb; Ras al Naqb",
+    "is_in": "Jordan, الأردن",
+    "name": "رأس النقب",
+    "name:ar": "رأس النقب",
+    "name:de": "Ras al Naqb",
+    "name:en": "Ras al Naqb",
+    "name:fr": "Ras al Naqb",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 798905112,
+  "lat": 31.9070843,
+  "lon": 35.9367374,
+  "tags": {
+    "int_name": "Qasr Station",
+    "name": "محطة القصر",
+    "name:ar": "محطة القصر",
+    "name:de": "Qasr Station",
+    "name:en": "Qasr Station",
+    "name:fr": "Qasr Station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 802530932,
+  "lat": 29.6396610,
+  "lon": 35.5524372,
+  "tags": {
+    "is_in": "Jordan, الأردن",
+    "name": "محطة الديسة",
+    "name:ar": "محطة الديسة",
+    "name:de": "محطة الديسة",
+    "name:fr": "محطة الديسة",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 802584877,
+  "lat": 30.4870340,
+  "lon": 35.7979900,
+  "tags": {
+    "int_name": "Qal‘at ‘Aneiza; Qalat Aneiza; Uneiza Station",
+    "is_in": "Jordan, الأردن",
+    "name": "محطة عنيزة",
+    "name:ar": "محطة عنيزة",
+    "name:de": "Qalat Aneiza",
+    "name:en": "Qalat Aneiza",
+    "name:fr": "Qalat Aneiza",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 802594000,
+  "lat": 30.1697660,
+  "lon": 35.6534590,
+  "tags": {
+    "int_name": "Maḥaṭṭat Samna; Mahattat Samna; Samna Station",
+    "is_in": "Jordan, الأردن",
+    "name": "محطة سمنة",
+    "name:ar": "محطة سمنة",
+    "name:de": "Mahattat Samna",
+    "name:en": "Mahattat Samna",
+    "name:fr": "Mahattat Samna",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 802659553,
+  "lat": 29.7617970,
+  "lon": 35.8974842,
+  "tags": {
+    "int_name": "Hitiya Station;Mahattat Hattiyah;Mahattat Hitiyah",
+    "is_in": "Jordan, الأردن",
+    "name": "محطة الحطية",
+    "name:ar": "محطة الحطية",
+    "name:de": "Hitiya Station",
+    "name:en": "Hitiya Station",
+    "name:fr": "Hitiya Station",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 802880626,
+  "lat": 31.5951549,
+  "lon": 36.0595390,
+  "tags": {
+    "int_name": "Mahattat Daba; Maḥaṭṭat Dab‘a; Qaşr Ḑab‘ah; Qasr Dabah",
+    "is_in": "Jordan, الأردن",
+    "name": "قصر ضبعة",
+    "name:ar": "قصر ضبعة",
+    "name:de": "Qasr Dabah",
+    "name:en": "Qasr Dabah",
+    "name:fr": "Qasr Dabah",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 802940219,
+  "lat": 30.9017890,
+  "lon": 35.9833910,
+  "tags": {
+    "disused": "yes",
+    "int_name": "Maḥaṭṭat el Fureifira; Mahattat al Fureifira",
+    "is_in": "Jordan, الأردن",
+    "name": "محطة الفريفرة",
+    "name:ar": "محطة الفريفرة",
+    "name:de": "Mahattat al Fureifira",
+    "name:en": "Mahattat al Fureifira",
+    "name:fr": "Mahattat al Fureifira",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 802942158,
+  "lat": 30.8186933,
+  "lon": 35.9773563,
+  "tags": {
+    "int_name": "Hasa; Mahattat al Hasa; Qalat al Hasa Station; Al Hassa",
+    "is_in": "Jordan, الأردن",
+    "name": "محطة قلعة الحسا",
+    "name:ar": "محطة قلعة الحسا",
+    "name:de": "Al Hasa",
+    "name:en": "Al Hasa",
+    "name:fr": "Al Hasa",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 828648487,
+  "lat": 29.7641449,
+  "lon": 52.4313620,
+  "tags": {
+    "name": "ایستگاه راه آهن شیراز",
+    "name:en": "Shiraz Railway Station",
+    "phone": "+98 71 3620 1815; +98 71 3620 1270",
+    "public_transport": "station",
+    "rail": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q5951511",
+    "wikipedia": "fa:ایستگاه راه‌آهن شیراز"
+  }
+},
+{
+  "type": "node",
+  "id": 891725424,
+  "lat": 31.9760428,
+  "lon": 51.8321870,
+  "tags": {
+    "name": "ایستگاه راه آهن شهرضا",
+    "name:en": "Shahreza",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q28169516"
+  }
+},
+{
+  "type": "node",
+  "id": 1177130861,
+  "lat": 32.3444716,
+  "lon": 36.2048577,
+  "tags": {
+    "int_name": "Al Mafraq",
+    "name": "المفرق",
+    "name:ar": "المفرق",
+    "name:en": "Al Mafraq",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1177250670,
+  "lat": 30.1821099,
+  "lon": 35.7664254,
+  "tags": {
+    "name": "معان",
+    "name:ar": "معان",
+    "name:de": "Ma Aan",
+    "name:en": "Ma Aan",
+    "name:fr": "Ma Aan",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1177250738,
+  "lat": 30.3283063,
+  "lon": 35.7687613,
+  "tags": {
+    "is_in": "Jordan, الأردن",
+    "name": "محطة الجردانة",
+    "name:ar": "محطة الجرذانة",
+    "name:en": "Al Jirdana Station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236320336,
+  "lat": 27.8887153,
+  "lon": 37.3687988,
+  "tags": {
+    "alt_name": "الأسعد",
+    "disused": "yes",
+    "int_name": "Al As ad,Disa d,Dizad,Dīsa d,Makass al-As ad,Makaṣṣ al-As ad, Al Asad",
+    "name": "الأسعد",
+    "name:ar": "الأسعد",
+    "name:de": "Al Asad",
+    "name:en": "Al Asad",
+    "name:fr": "Al Asad",
+    "name:nl": "Al Asad",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236321309,
+  "lat": 28.4917609,
+  "lon": 36.4722982,
+  "tags": {
+    "GNS:dsg_code": "RSTNQ",
+    "GNS:dsg_name": "abandoned railroad station",
+    "GNS:id": "-3092335",
+    "disused": "yes",
+    "int_name": "Al Muḩtaţab",
+    "name": "المحتطب",
+    "name:ar": "المحتطب",
+    "name:de": "Al Muhtatab",
+    "name:en": "Al Muhtatab",
+    "name:fr": "Al Muhtatab",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236330118,
+  "lat": 26.1747736,
+  "lon": 38.4196078,
+  "tags": {
+    "alt_name": "قلعة زمرد",
+    "disused": "yes",
+    "int_name": "Qal at Zumurrud,Maqra,Zummurrud, Qalat Zumurrud",
+    "name": "قلعة زمرد",
+    "name:ar": "قلعة زمرد",
+    "name:de": "Qalat Zumurrud",
+    "name:en": "Qalat Zumurrud",
+    "name:fr": "Qalat Zumurrud",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236330149,
+  "lat": 26.2647990,
+  "lon": 38.3164340,
+  "tags": {
+    "GNS:dsg_code": "RSTNQ",
+    "GNS:dsg_name": "abandoned railroad station",
+    "GNS:id": "-3098914",
+    "disused": "yes",
+    "int_name": "Sahl al Maţrān",
+    "name": "سهل المطران",
+    "name:ar": "سهل المطران",
+    "name:de": "Sahl al Matran",
+    "name:en": "Sahl al Matran",
+    "name:fr": "Sahl al Matran",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236330306,
+  "lat": 25.6878594,
+  "lon": 38.6957603,
+  "tags": {
+    "GNS:dsg_code": "RSTNQ",
+    "GNS:dsg_name": "abandoned railroad station",
+    "GNS:id": "-3092310",
+    "disused": "yes",
+    "int_name": "Al Mudarraj",
+    "name": "المدرج",
+    "name:ar": "المدرج",
+    "name:de": "Al Mudarraj",
+    "name:en": "Al Mudarraj",
+    "name:fr": "Al Mudarraj",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236330381,
+  "lat": 25.7942100,
+  "lon": 38.6786878,
+  "tags": {
+    "GNS:dsg_code": "RSTNQ",
+    "GNS:dsg_name": "abandoned railroad station",
+    "GNS:id": "-3100987",
+    "disused": "yes",
+    "int_name": "Waybān",
+    "name": "ويبان",
+    "name:ar": "ويبان",
+    "name:de": "Wayban",
+    "name:en": "Wayban",
+    "name:fr": "Wayban",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236330474,
+  "lat": 25.8857560,
+  "lon": 38.6107420,
+  "tags": {
+    "GNS:dsg_code": "RSTNQ",
+    "GNS:dsg_name": "abandoned railroad station",
+    "GNS:id": "-3100206",
+    "disused": "yes",
+    "int_name": "Ţuwayrah",
+    "name": "طويرة",
+    "name:ar": "طويرة",
+    "name:de": "Tuwayrah",
+    "name:en": "Tuwayrah",
+    "name:fr": "Tuwayrah",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236330521,
+  "lat": 26.0261704,
+  "lon": 38.5581092,
+  "tags": {
+    "alt_name": "البئر الجديد",
+    "disused": "yes",
+    "int_name": "Al Bir al Jadīd,As Sawrah,Aş Şawrah, Al Bir al Jadid",
+    "name": "البئر الجديد",
+    "name:ar": "البئر الجديد",
+    "name:de": "Al Bir al Jadid",
+    "name:en": "Al Bir al Jadid",
+    "name:fr": "Al Bir al Jadid",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236392443,
+  "lat": 26.9922725,
+  "lon": 37.8431763,
+  "tags": {
+    "GNS:dsg_code": "RSTNQ",
+    "GNS:dsg_name": "abandoned railroad station",
+    "GNS:id": "-3091006",
+    "disused": "yes",
+    "int_name": "Abū Ţāqah",
+    "name": "أبو طاقة",
+    "name:ar": "أبو طاقة",
+    "name:de": "Abu Taqah",
+    "name:en": "Abu Taqah",
+    "name:fr": "Abu Taqah",
+    "name:nl": "Abu Taqah",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236392629,
+  "lat": 27.1581135,
+  "lon": 37.8699606,
+  "tags": {
+    "alt_name": "المطلع",
+    "disused": "yes",
+    "int_name": "Al Muţalla ,Matla ,Mutalla , Al Mutalla",
+    "name": "المطلع",
+    "name:ar": "المطلع",
+    "name:de": "Al Mutalla",
+    "name:en": "Al Mutalla",
+    "name:fr": "Al Mutalla",
+    "name:nl": "Al Mutalla",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236392693,
+  "lat": 27.3455919,
+  "lon": 37.7990573,
+  "tags": {
+    "alt_name": "الدار الحمراء",
+    "disused": "yes",
+    "int_name": "Ad Dār al Ḩamrā,Dar al Hamra,Dār al Hamrā,Kalat Dar el Hamra,Qalat Dar-al-Hamrah,Qalat Dār-al-Hamrah, Ad Dar al Hamra",
+    "name": "الدار الحمراء",
+    "name:ar": "الدار الحمراء",
+    "name:de": "Ad Dar al Hamra",
+    "name:en": "Ad Dar al Hamra",
+    "name:fr": "Ad Dar al Hamra",
+    "name:nl": "Ad Dar al Hamra",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236392957,
+  "lat": 26.8979991,
+  "lon": 37.8602867,
+  "tags": {
+    "GNS:dsg_code": "RSTNQ",
+    "GNS:dsg_name": "abandoned railroad station",
+    "GNS:id": "-3092277",
+    "disused": "yes",
+    "int_name": "Al Mazḩam",
+    "name": "المزحم",
+    "name:ar": "المزحم",
+    "name:de": "Al Mazham",
+    "name:en": "Al Mazham",
+    "name:fr": "Al Mazham",
+    "name:nl": "Al Mazham",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236451809,
+  "lat": 25.5411760,
+  "lon": 38.7387912,
+  "tags": {
+    "GNS:dsg_code": "RSTNQ",
+    "GNS:dsg_name": "abandoned railroad station",
+    "GNS:id": "-3095129",
+    "disused:railway": "station",
+    "int_name": "Hadīyah",
+    "name": "هدية",
+    "name:ar": "هدية",
+    "name:de": "Hadiyah",
+    "name:en": "Hadiyah",
+    "name:fr": "Hadiyah",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "GPS",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1236451837,
+  "lat": 25.2297409,
+  "lon": 38.8243373,
+  "tags": {
+    "alt_name": "أبو النعم",
+    "disused": "yes",
+    "int_name": "Abū an Na am,Abal Na m,Abu an Na m, Abu an Naam",
+    "name": "أبو النعم",
+    "name:ar": "أبو النعم",
+    "name:de": "Abu an Naam",
+    "name:en": "Abu an Naam",
+    "name:fr": "Abu an Naam",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236451922,
+  "lat": 25.3784644,
+  "lon": 38.8148074,
+  "tags": {
+    "alt_name": "جداعة",
+    "disused": "yes",
+    "int_name": "Jadā ah,Jidha,Juda ah,Judā ah, Jadaah",
+    "name": "محطة جذَّاعة",
+    "name:ar": "محطة جذَّاعة",
+    "name:de": "Jadaah",
+    "name:en": "Jadaah",
+    "name:fr": "Jadaah",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236691779,
+  "lat": 24.4975713,
+  "lon": 39.4695307,
+  "tags": {
+    "GNS:dsg_code": "RSTNQ",
+    "GNS:dsg_name": "abandoned railroad station",
+    "GNS:id": "-3097490",
+    "disused": "yes",
+    "int_name": "Maḩaţţat Muḩīţ",
+    "name": "محطة محيط",
+    "name:ar": "محطة محيط",
+    "name:de": "Haltestelle Muhit",
+    "name:en": "Muhit Station",
+    "name:fr": "Mahattat Muhit",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236691876,
+  "lat": 24.5909685,
+  "lon": 39.3591804,
+  "tags": {
+    "GNS:dsg_code": "RSTNQ",
+    "GNS:dsg_name": "abandoned railroad station",
+    "GNS:id": "-3095147",
+    "disused": "yes",
+    "int_name": "Maḩaţţat Ḩafīrah",
+    "name": "محطة حفيرة",
+    "name:ar": "محطة حفيرة",
+    "name:de": "Mahattat Hafirah",
+    "name:en": "Mahattat Hafirah",
+    "name:fr": "Mahattat Hafirah",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236693196,
+  "lat": 24.7010109,
+  "lon": 39.2185777,
+  "tags": {
+    "GNS:dsg_code": "RSTNQ",
+    "GNS:dsg_name": "abandoned railroad station",
+    "GNS:id": "-3094180",
+    "disused": "yes",
+    "int_name": "Maḩaţţat Buwāţah",
+    "name": "محطة بواطة",
+    "name:ar": "محطة بواطة",
+    "name:de": "Buwatah Haltestelle",
+    "name:en": "Buwatah Station",
+    "name:fr": "Mahattat Buwatah",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236694020,
+  "lat": 24.9471431,
+  "lon": 38.9889328,
+  "tags": {
+    "GNS:dsg_code": "RSTNQ",
+    "GNS:dsg_name": "abandoned railroad station",
+    "GNS:id": "-3091551",
+    "disused": "yes",
+    "int_name": "Al Buwayr",
+    "name": "محطة البوير",
+    "name:ar": "محطة البوير",
+    "name:de": "Haltestelle Al Buwayr",
+    "name:en": "Al Buwayr Station",
+    "name:fr": "Al Buwayr",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236694383,
+  "lat": 24.8524128,
+  "lon": 39.1275527,
+  "tags": {
+    "alt_name": "محطة العنقاء",
+    "disused": "yes",
+    "int_name": "Maḩaţţat al Anqā, Mahattat al Anqa",
+    "name": "محطة العنقاء",
+    "name:ar": "محطة العنقاء",
+    "name:de": "Mahattat al Anqa",
+    "name:en": "Al Anqa Station",
+    "name:fr": "Haltestelle Al Anqa",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236695030,
+  "lat": 25.0986865,
+  "lon": 38.8850331,
+  "tags": {
+    "GNS:dsg_code": "AIRF",
+    "GNS:dsg_name": "airfield",
+    "GNS:id": "14527017",
+    "aeroway": "airfield",
+    "disused": "yes",
+    "int_name": "Istabl Antar",
+    "military": "airfield",
+    "name": "إصطبل عنتر",
+    "name:ar": "إصطبل عنتر",
+    "name:de": "Istabl Antar",
+    "name:en": "Istabl Antar Station",
+    "name:fr": "Istabl Antar",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236705235,
+  "lat": 24.2456210,
+  "lon": 47.3594308,
+  "tags": {
+    "GNS:dsg_code": "RSTN",
+    "GNS:dsg_name": "railroad station",
+    "GNS:id": "-3092057",
+    "int_name": "Maḩaţţat al Kharj",
+    "name": "محطة الخرج",
+    "name:ar": "محطة الخرج",
+    "name:de": "Mahattat al Kharj",
+    "name:en": "Mahattat al Kharj",
+    "name:fr": "Mahattat al Kharj",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1236725492,
+  "lat": 24.1469106,
+  "lon": 49.0609509,
+  "tags": {
+    "GNS:dsg_code": "RSTN",
+    "GNS:dsg_name": "railroad station",
+    "GNS:id": "-3095351",
+    "int_name": "Maḩaţţat Ḩaraḑ",
+    "name": "محطة حرض",
+    "name:ar": "محطة حرض",
+    "name:de": "Mahattat Harad",
+    "name:en": "Mahattat Harad",
+    "name:eo": "Mahattat Harad",
+    "name:fr": "Mahattat Harad",
+    "name:he": "מהראטה הראד",
+    "name:ru": "Махаттат Харад",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1237943733,
+  "lat": 27.7377846,
+  "lon": 37.5141897,
+  "tags": {
+    "alt_name": "قلعة المعظم",
+    "disused": "yes",
+    "int_name": "Qal at al Mu az̧z̧am,Al-Mu azzam,Kalat el Muadhdham,Qal at al Mu adhdham, Qalat al Muazzam",
+    "name": "قلعة المعظم",
+    "name:ar": "قلعة المعظم",
+    "name:de": "Qalat al Muazzam",
+    "name:en": "Qalat al Muazzam",
+    "name:fr": "Qalat al Muazzam",
+    "name:nl": "Qalat al Muazzam",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1237944216,
+  "lat": 27.5362639,
+  "lon": 37.6296436,
+  "tags": {
+    "alt_name": "خشم صنع",
+    "disused": "yes",
+    "int_name": "Khashm Şana ,Hasm Sana ,H̱asm Ṣana ,Khashm as Sani, Khashm Sana",
+    "name": "خشم صنع",
+    "name:ar": "خشم صنع",
+    "name:de": "Khashm Sana",
+    "name:en": "Khashm Sana",
+    "name:fr": "Khashm Sana",
+    "name:nl": "Khashm Sana",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1237958624,
+  "lat": 28.6500000,
+  "lon": 36.3666670,
+  "tags": {
+    "GNS:dsg_code": "RSTNQ",
+    "GNS:dsg_name": "abandoned railroad station",
+    "GNS:id": "-3091802",
+    "disused": "yes",
+    "int_name": "Al Ḩazm",
+    "name": "الحزم",
+    "name:ar": "الحزم",
+    "name:de": "Al Hazm",
+    "name:en": "Al Hazm",
+    "name:fr": "Al Hazm",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1237958878,
+  "lat": 29.0463691,
+  "lon": 36.1667989,
+  "tags": {
+    "GNS:dsg_code": "RSTNQ",
+    "GNS:dsg_name": "abandoned railroad station",
+    "GNS:id": "-3094442",
+    "disused": "yes",
+    "int_name": "Dhāt al Ḩājj",
+    "name": "ذات الحاج",
+    "name:ar": "ذات الحاج",
+    "name:de": "Dhat al Hajj",
+    "name:en": "Dhat al Hajj",
+    "name:fr": "Dhat al Hajj",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1398630801,
+  "lat": 19.6249347,
+  "lon": 37.2139463,
+  "tags": {
+    "addr:city": "بورتسودان",
+    "name": "بورتسودان",
+    "name:ar": "بورتسودان",
+    "name:azb": "بور سودان",
+    "name:fa": "بور سودان",
+    "name:ur": "پورٹ سوڈان",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 1463887002,
+  "lat": 31.5877722,
+  "lon": 55.3991457,
+  "tags": {
+    "addr:city": "بافق",
+    "addr:street": "بلوار آیت الله میرغنی زاده",
+    "name": "ایستگاه راه آهن بافق",
+    "name:en": "Bafq",
+    "operator": "شرکت راه آهن جمهوری اسلامی ایران",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q62107358",
+    "wikipedia": "fa:ایستگاه راه‌آهن بافق"
+  }
+},
+{
+  "type": "node",
+  "id": 1493750081,
+  "lat": 31.3646086,
+  "lon": 36.1117707,
+  "tags": {
+    "railway": "station",
+    "source": "Bing"
+  }
+},
+{
+  "type": "node",
+  "id": 1493752011,
+  "lat": 31.7117102,
+  "lon": 35.9623440,
+  "tags": {
+    "railway": "station",
+    "source": "Bing"
+  }
+},
+{
+  "type": "node",
+  "id": 1655837528,
+  "lat": 31.9688433,
+  "lon": 35.9687857,
+  "tags": {
+    "name": "محطة عمان",
+    "name:de": "Bahnhof Amman",
+    "name:en": "Amman Station",
+    "operator": "Jordan Hejaz Railway",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.jhr.gov.jo/"
+  }
+},
+{
+  "type": "node",
+  "id": 1848311111,
+  "lat": 31.9782080,
+  "lon": 34.7438430,
+  "tags": {
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1992216515,
+  "lat": 30.5850395,
+  "lon": 53.1948231,
+  "tags": {
+    "name": "ایستگاه راه آهن صفاشهر",
+    "name:en": "Safashahr Train Station",
+    "public_transport": "station",
+    "rail": "yes",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2011671784,
+  "lat": 25.9319342,
+  "lon": 49.6647336,
+  "tags": {
+    "name": "Abqaiq",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2017967833,
+  "lat": 25.2450270,
+  "lon": 55.3594972,
+  "tags": {
+    "name": "المطار - مبنى رقم 3",
+    "name:ar": "المطار - مبنى رقم 3",
+    "name:de": "Flughafen-Terminal 3",
+    "name:en": "Airport Terminal 3",
+    "name:es": "Terminal 3 del Aeropuerto",
+    "name:fa": "فرودگاه - ترمینال ۳",
+    "name:ml": "എയർപോർട്ട് ടെർമിനൽ 3",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "13",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q106848604",
+    "wikipedia": "en:Airport Terminal 3 (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 2147398509,
+  "lat": 22.4218244,
+  "lon": 39.1917461,
+  "tags": {
+    "name": "King Abdullah Economic City",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2418678459,
+  "lat": 25.1912836,
+  "lon": 55.2604063,
+  "tags": {
+    "name": "الخليج التجاري",
+    "name:ar": "الخليج التجاري",
+    "name:en": "Business Bay",
+    "name:fa": "خلیج تجاری",
+    "name:he": "מפרץ עסקים",
+    "name:ml": "ബിസിനസ്സ് ബേ",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "26",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q5001679",
+    "wikipedia": "en:Business Bay (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 2482345535,
+  "lat": 31.8474056,
+  "lon": 44.9309891,
+  "tags": {
+    "alt_name": "محطة قطار مدين",
+    "fixme": "Does this Station actually exist? If so, then it must be placed adequately.\nهل هذه المحطة موجودة فعلا؟ إذا كان الأمر كذلك، فيجب وضعه بشكل مناسب.",
+    "int_name": "Madīn, Maḩaţţat Nabī Madyūn, Maḩaţţat Qiţār Madīn, Nabi Madijam, Nabi Madiyam, Nabi Madyum Station, Nabī Madyūn",
+    "is_in": "Iraq , جمهورية العراق",
+    "name": "محطة قطار مدين",
+    "name:ar": "محطة قطار مدين",
+    "name:ar1": "محطة قطار مدين",
+    "name:de": "Bahnhof Madin",
+    "name:en": "Madin Railway Station",
+    "name:fr": "Gare de Madin",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2482458774,
+  "lat": 31.1125599,
+  "lon": 45.8807937,
+  "tags": {
+    "addr:city": "البطحة",
+    "addr:city:ar": "البطحة",
+    "int_name": "Al Baţḩah, Bat ha Railroad Station, Bat ha Station, Maḩaţţat al Baţḩā, Maḩaţţat al Baţḩah, Mahaţţat Baţḩā, Maḩaţţat Qiţār al Baţḩah",
+    "name": "محطة قطار البطحاء",
+    "name:de": "Bahnhof Batehka",
+    "name:en": "Batha train station",
+    "name:fr": "Gare du Batekha",
+    "operator": "الشركة العامة لسكك الحديد العراقية",
+    "operator:ar": "الشركة العامة لسكك الحديد العراقية",
+    "operator:wikidata": "Q907655",
+    "operator:wikipedia": "ar:الشركة العامة لسكك الحديد العراقية",
+    "public_transport": "station",
+    "railway": "station",
+    "sorting_name": "البطحة",
+    "sorting_name:ar": "البطحة"
+  }
+},
+{
+  "type": "node",
+  "id": 2846344497,
+  "lat": 24.7343704,
+  "lon": 46.8636820,
+  "tags": {
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2852838136,
+  "lat": 29.2164867,
+  "lon": 48.1004702,
+  "tags": {
+    "name": "Fahaheel",
+    "name:en": "Fahaheel",
+    "railway": "station",
+    "ref": "Fahaheel"
+  }
+},
+{
+  "type": "node",
+  "id": 2852960214,
+  "lat": 29.3089508,
+  "lon": 47.9435596,
+  "tags": {
+    "alt_name": "Rai",
+    "name": "الري",
+    "name:ar": "الري",
+    "name:en": "Rai",
+    "name:fa": "ری",
+    "name:ml": "റയി",
+    "official_name": "Rai",
+    "place": "suburb",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2906198781,
+  "lat": 32.4383796,
+  "lon": 34.8993350,
+  "tags": {
+    "name": "חדרה מערב",
+    "name:en": "Hadera West",
+    "name:he": "חדרה מערב",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q2916321",
+    "wikipedia": "he:תחנת הרכבת חדרה מערב",
+    "wikipedia:he": "תחנת הרכבת חדרה מערב"
+  }
+},
+{
+  "type": "node",
+  "id": 2914229359,
+  "lat": 32.1639806,
+  "lon": 34.8175864,
+  "tags": {
+    "name": "הרצליה",
+    "name:en": "Herzelia",
+    "name:he": "הרצליה",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q2915718"
+  }
+},
+{
+  "type": "node",
+  "id": 2930618401,
+  "lat": 32.1037064,
+  "lon": 34.8046101,
+  "tags": {
+    "name": "תל אביב אוניברסיטה",
+    "name:en": "Tel Aviv University",
+    "name:he": "תל אביב אוניברסיטה",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/HE/Stations/Pages/3600.aspx",
+    "wheelchair": "yes",
+    "wikidata": "Q2915693",
+    "wikipedia": "he:תחנת הרכבת תל אביב אוניברסיטה",
+    "wikipedia:he": "תחנת הרכבת תל אביב אוניברסיטה"
+  }
+},
+{
+  "type": "node",
+  "id": 2930618402,
+  "lat": 32.0842437,
+  "lon": 34.7983117,
+  "tags": {
+    "name": "תל אביב סבידור מרכז",
+    "name:ar": "محطة قطار تل أبيب – سفيدور مركز",
+    "name:en": "Tel Aviv Savidor Center",
+    "name:he": "תל אביב סבידור מרכז",
+    "name:ru": "Тель Авив Савидор Центр",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/HE/Stations/Pages/3700.aspx",
+    "wheelchair": "yes",
+    "wikidata": "Q2915697",
+    "wikipedia": "he:תחנת הרכבת תל אביב – סבידור מרכז",
+    "wikipedia:he": "תחנת הרכבת תל אביב – סבידור מרכז"
+  }
+},
+{
+  "type": "node",
+  "id": 2930618403,
+  "lat": 32.0735594,
+  "lon": 34.7931642,
+  "tags": {
+    "name": "תל אביב השלום",
+    "name:ar": "محطة قطار تل أبيب – هشلوم",
+    "name:en": "Tel Aviv Hashalom",
+    "name:he": "תל אביב השלום",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/HE/Stations/Pages/4600.aspx",
+    "wheelchair": "yes",
+    "wikidata": "Q2474209",
+    "wikipedia": "he:תחנת הרכבת תל אביב – השלום",
+    "wikipedia:he": "תחנת הרכבת תל אביב – השלום"
+  }
+},
+{
+  "type": "node",
+  "id": 2930618406,
+  "lat": 32.2626037,
+  "lon": 34.8602330,
+  "tags": {
+    "name": "בית יהושע",
+    "name:en": "Beit Yehoshua",
+    "name:he": "בית יהושע",
+    "name:ru": "Бейт Иеошуа",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/bet-yehoshua",
+    "wheelchair": "yes",
+    "wikidata": "Q671778",
+    "wikipedia": "he:תחנת הרכבת בית יהושע",
+    "wikipedia:en": "Beit Yehoshua railway station",
+    "wikipedia:he": "תחנת הרכבת בית יהושע"
+  }
+},
+{
+  "type": "node",
+  "id": 2930618418,
+  "lat": 32.0146109,
+  "lon": 34.7619817,
+  "tags": {
+    "name": "בת ים - יוספטל",
+    "name:en": "Bat Yam - Yoseftal",
+    "name:he": "בת ים - יוספטל",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/bat-yam-yoseftal",
+    "wheelchair": "yes",
+    "wikidata": "Q2919760",
+    "wikipedia": "he:תחנת הרכבת בת ים – יוספטל",
+    "wikipedia:he": "תחנת הרכבת בת ים – יוספטל"
+  }
+},
+{
+  "type": "node",
+  "id": 2930618419,
+  "lat": 32.0008316,
+  "lon": 34.7593469,
+  "tags": {
+    "name": "בת ים - קוממיות",
+    "name:en": "Bat Yam - Komemiyyut",
+    "name:he": "בת ים - קוממיות",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/bat-yam-komemiyut",
+    "wheelchair": "yes",
+    "wikidata": "Q2919557",
+    "wikipedia": "he:תחנת הרכבת בת ים - קוממיות",
+    "wikipedia:he": "תחנת הרכבת בת ים - קוממיות"
+  }
+},
+{
+  "type": "node",
+  "id": 2930618420,
+  "lat": 31.9876999,
+  "lon": 34.7572847,
+  "tags": {
+    "name": "ראשון לציון - משה דיין",
+    "name:en": "Rishon LeTsiyyon - Moshe Dayan",
+    "name:he": "ראשון לציון - משה דיין",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/rishon-letsiyon-moshe-dayan",
+    "wikidata": "Q2919859",
+    "wikipedia": "he:תחנת הרכבת ראשון לציון משה דיין",
+    "wikipedia:he": "תחנת הרכבת ראשון לציון משה דיין"
+  }
+},
+{
+  "type": "node",
+  "id": 2930618421,
+  "lat": 31.8911797,
+  "lon": 34.7312217,
+  "tags": {
+    "name": "יבנה - מערב",
+    "name:en": "Yavne - West",
+    "name:he": "יבנה - מערב",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q2919528",
+    "wikipedia": "he:תחנת הרכבת יבנה מערב",
+    "wikipedia:he": "תחנת הרכבת יבנה – מערב"
+  }
+},
+{
+  "type": "node",
+  "id": 2930618422,
+  "lat": 31.7739421,
+  "lon": 34.6662380,
+  "tags": {
+    "name": "תחנת הרכבת אשדוד – עד הלום – מטרופול",
+    "name:en": "Ashdod–Ad Halom–Metropol",
+    "name:he": "תחנת הרכבת אשדוד – עד הלום – מטרופול",
+    "old_name": "אשדוד עד הלום (ע\"ש בר כוכבא)",
+    "old_name:en": "Ashdod Ad Halom",
+    "old_name:he": "אשדוד עד הלום (ע\"ש בר כוכבא)",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q2638309",
+    "wikipedia": "he:תחנת הרכבת אשדוד עד הלום",
+    "wikipedia:he": "תחנת הרכבת אשדוד עד הלום"
+  }
+},
+{
+  "type": "node",
+  "id": 2930618423,
+  "lat": 31.6759340,
+  "lon": 34.6044924,
+  "tags": {
+    "name": "אשקלון",
+    "name:ar": "عسقلان",
+    "name:arc": "ܐܫܩܠܘܢ",
+    "name:en": "Ashkelon",
+    "name:he": "אשקלון",
+    "name:syc": "ܐܫܩܠܘܢ",
+    "name:ur": "عسقلان",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q2620226",
+    "wikipedia": "he:תחנת הרכבת אשקלון",
+    "wikipedia:he": "תחנת הרכבת אשקלון"
+  }
+},
+{
+  "type": "node",
+  "id": 2930618425,
+  "lat": 31.2430764,
+  "lon": 34.7983837,
+  "tags": {
+    "alt_name:en": "Be'er Sheva Center",
+    "name": "באר שבע מרכז",
+    "name:en": "Be'er Sheva Merkaz",
+    "name:he": "באר שבע מרכז",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q1889672",
+    "wikipedia": "he:תחנת הרכבת באר שבע מרכז",
+    "wikipedia:he": "תחנת הרכבת באר שבע מרכז"
+  }
+},
+{
+  "type": "node",
+  "id": 2930618427,
+  "lat": 31.6031494,
+  "lon": 34.7779274,
+  "tags": {
+    "alt_name:ar": "كريات غات",
+    "alt_name:en": "Kiryat Gat",
+    "description": "קִרְיַת גַּת היא עיר במחוז הדרום בישראל אשר הוכרזה כעיר בשנת 1972 ומשמשת כבירת חבל לכיש.",
+    "description:he": "קִרְיַת גַּת היא עיר במחוז הדרום בישראל אשר הוכרזה כעיר בשנת 1972 ומשמשת כבירת חבל לכיש.",
+    "name": "קריית גת",
+    "name:ar": "كريات جات",
+    "name:en": "Kiryat Gat",
+    "name:fa": "کریات گت",
+    "name:he": "קריית גת",
+    "name:ur": "کریات جات",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q528623",
+    "wikipedia": "he:קריית גת",
+    "wikipedia:he": "קריית גת"
+  }
+},
+{
+  "type": "node",
+  "id": 2930682106,
+  "lat": 31.7477545,
+  "lon": 35.1882146,
+  "tags": {
+    "name": "ירושלים מלחה",
+    "name:en": "Jerusalem Malcha",
+    "name:he": "ירושלים מלחה",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q2776726",
+    "wikipedia": "he:תחנת הרכבת ירושלים מלחה",
+    "wikipedia:he": "תחנת הרכבת ירושלים מלחה",
+    "working": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2930682108,
+  "lat": 31.7448338,
+  "lon": 35.1781123,
+  "tags": {
+    "description:en": "Jerusalem Biblical Zoo railway station is an Israel Railways station on the Jaffa-Jerusalem railway, located in the southwestern part of the city next to the Jerusalem Biblical Zoo.",
+    "description:he": "תחנת הרכבת ירושלים – גן החיות התנ\"כי הייתה תחנת רכבת בדרום-מערב העיר ירושלים בשכונת מלחה הסמוכה לגן החיות התנ\"כי.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/IHM_תחנת_הרכבת_ירושלים_–_גן_החיות_התנ\"כי.jpeg",
+    "local_ref": "1",
+    "name": "גן החיות התנ\"כי",
+    "name:en": "Biblical Zoo",
+    "name:he": "גן החיות התנ\"כי",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/jerusalem-biblical-zoo",
+    "wikidata": "Q604295",
+    "wikipedia": "he:תחנת הרכבת ירושלים – גן החיות התנ\"כי",
+    "wikipedia:en": "Biblical Zoo railway station",
+    "wikipedia:he": "תחנת הרכבת ירושלים – גן החיות התנ\"כי",
+    "working": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2930682112,
+  "lat": 32.1062501,
+  "lon": 34.8628355,
+  "tags": {
+    "alt_name": "תחנת רכבת קריית ארייה;תחנת הרכבת פתח תקווה קריית אריה",
+    "image": "https://www.flickr.com/photos/ran_model-railroad/53129752651/in/album-72157617834787518/",
+    "name": "פתח תקווה - קריית אריה",
+    "name:en": "Petah Tikva–Kiryat Aryeh",
+    "name:he": "פתח תקווה - קריית אריה",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/petah-tikva-kiryat-arye",
+    "wikidata": "Q2114107",
+    "wikipedia": "he:תחנת הרכבת פתח תקווה – קריית אריה",
+    "wikipedia:he": "תחנת הרכבת פתח תקווה – קריית אריה"
+  }
+},
+{
+  "type": "node",
+  "id": 2930682113,
+  "lat": 32.1118889,
+  "lon": 34.9010315,
+  "tags": {
+    "name": "פתח תקווה – סגולה",
+    "name:en": "Petah Tikva Segula",
+    "name:he": "פתח תקווה – סגולה",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/petah-tikva-segula",
+    "wikidata": "Q2915706",
+    "wikipedia:en": "Petah Tikva Segula railway station"
+  }
+},
+{
+  "type": "node",
+  "id": 2930682115,
+  "lat": 32.1206360,
+  "lon": 34.9344635,
+  "tags": {
+    "name": "ראש העין - צפון",
+    "name:en": "Rosh Ha'Ayin-North",
+    "name:he": "ראש העין - צפון",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/rosh-haayin-north",
+    "wikidata": "Q2915720",
+    "wikipedia": "he:תחנת הרכבת ראש העין צפון",
+    "wikipedia:he": "תחנת הרכבת ראש העין – צפון"
+  }
+},
+{
+  "type": "node",
+  "id": 2931455067,
+  "lat": 31.9010673,
+  "lon": 35.0057522,
+  "tags": {
+    "description": "תחנת רכבת, תת קרקעית, ארבע מסילות",
+    "description:he": "תחנת רכבת, תת קרקעית, ארבע מסילות",
+    "name": "מודיעין מרכז",
+    "name:en": "Modi'in Center",
+    "name:he": "מודיעין מרכז",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q2349293",
+    "wikipedia": "he:תחנת הרכבת מודיעין מרכז",
+    "wikipedia:he": "תחנת הרכבת מודיעין מרכז"
+  }
+},
+{
+  "type": "node",
+  "id": 2931455068,
+  "lat": 31.8931196,
+  "lon": 34.9606982,
+  "tags": {
+    "name": "פאתי מודיעין",
+    "name:en": "Pa'atai Modi'in",
+    "name:he": "פאתי מודיעין",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q2690388",
+    "wikipedia": "he:תחנת הרכבת פאתי מודיעין",
+    "wikipedia:he": "תחנת הרכבת פאתי מודיעין"
+  }
+},
+{
+  "type": "node",
+  "id": 2952429592,
+  "lat": 27.8310493,
+  "lon": 44.0067206,
+  "tags": {
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3086081414,
+  "lat": 31.8613359,
+  "lon": 34.7438915,
+  "tags": {
+    "name": "יבנה - מזרח",
+    "name:en": "Yavne - East",
+    "name:he": "יבנה - מזרח",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q2010488",
+    "wikipedia": "he:תחנת הרכבת יבנה מזרח",
+    "wikipedia:he": "תחנת הרכבת יבנה מזרח"
+  }
+},
+{
+  "type": "node",
+  "id": 3090784765,
+  "lat": 31.7578195,
+  "lon": 34.9893645,
+  "tags": {
+    "name": "בית שמש",
+    "name:en": "Bet Shemesh",
+    "name:he": "בית שמש",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q2915696",
+    "wikipedia": "he:תחנת הרכבת בית שמש",
+    "wikipedia:he": "תחנת הרכבת בית שמש"
+  }
+},
+{
+  "type": "node",
+  "id": 3130051677,
+  "lat": 31.0689229,
+  "lon": 35.0118331,
+  "tags": {
+    "name": "דימונה",
+    "name:en": "Dimona",
+    "name:he": "דימונה",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q2919277"
+  }
+},
+{
+  "type": "node",
+  "id": 3429663866,
+  "lat": 31.6182802,
+  "lon": 55.4382695,
+  "tags": {
+    "name": "ایستگاه راه‌آهن مبارکه",
+    "name:en": "Mobaraka",
+    "public_transport": "station",
+    "railway": "station",
+    "source": "bing",
+    "wikidata": "Q85168537"
+  }
+},
+{
+  "type": "node",
+  "id": 3566973254,
+  "lat": 31.9091027,
+  "lon": 34.8069084,
+  "tags": {
+    "name": "רחובות (ע\"ש אהוד הדר)",
+    "name:en": "Rechovot",
+    "name:he": "רחובות (ע\"ש אהוד הדר)",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/HE/Stations/Pages/5200.aspx",
+    "wheelchair": "yes",
+    "wikidata": "Q2916598",
+    "wikipedia": "he:תחנת הרכבת רחובות",
+    "wikipedia:he": "תחנת הרכבת רחובות"
+  }
+},
+{
+  "type": "node",
+  "id": 3703588164,
+  "lat": 32.4852609,
+  "lon": 34.9541700,
+  "tags": {
+    "name": "קיסריה-פרדס חנה",
+    "name:en": "Caesarea-Pardes Hana",
+    "name:he": "קיסריה-פרדס חנה",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/HE/Stations/Pages/2820.aspx",
+    "wikidata": "Q1953238",
+    "wikipedia": "he:תחנת הרכבת קיסריה - פרדס חנה",
+    "wikipedia:he": "תחנת הרכבת קיסריה - פרדס חנה"
+  }
+},
+{
+  "type": "node",
+  "id": 3703591031,
+  "lat": 32.3199544,
+  "lon": 34.8693256,
+  "tags": {
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "נתניה",
+    "name:en": "Netanya",
+    "name:he": "נתניה",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q2915701",
+    "wikipedia": "he:תחנת הרכבת נתניה",
+    "wikipedia:he": "תחנת הרכבת נתניה"
+  }
+},
+{
+  "type": "node",
+  "id": 3712563183,
+  "lat": 32.1028916,
+  "lon": 34.8305499,
+  "tags": {
+    "addr:city": "בני ברק",
+    "name": "בני ברק – רמת החייל",
+    "name:en": "Bnei Brak–Ramat HaHayal",
+    "name:he": "בני ברק – רמת החייל",
+    "name:ru": "Бней-Брак",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/bne-brak",
+    "wheelchair": "yes",
+    "wikidata": "Q920545",
+    "wikipedia": "he:תחנת הרכבת בני ברק – רמת החייל",
+    "wikipedia:en": "Bnei Brak–Ramat HaHayal railway station",
+    "wikipedia:he": "תחנת הרכבת בני ברק – רמת החייל"
+  }
+},
+{
+  "type": "node",
+  "id": 3751301481,
+  "lat": 31.7129188,
+  "lon": 55.0813531,
+  "tags": {
+    "name": "ایستگاه راه آهن مهرداد",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3827981658,
+  "lat": 24.4334357,
+  "lon": 54.6174086,
+  "tags": {
+    "level": "-2",
+    "monorail": "yes",
+    "name": "PRT Line",
+    "name:en": "PRT Line",
+    "public_transport": "stop_position",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3828047757,
+  "lat": 24.4354997,
+  "lon": 54.6193557,
+  "tags": {
+    "monorail": "yes",
+    "name": "Masdar PRT Station Car Park",
+    "name:en": "Masdar PRT Station Car Park",
+    "public_transport": "stop_position",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 3853815286,
+  "lat": 29.1401114,
+  "lon": 55.4241531,
+  "tags": {
+    "name": "ایستگاه گل گهر",
+    "railway": "station",
+    "wikidata": "Q85168162"
+  }
+},
+{
+  "type": "node",
+  "id": 3978658306,
+  "lat": 32.0353136,
+  "lon": 34.7596909,
+  "tags": {
+    "name": "חולון - וולפסון",
+    "name:en": "Holon - Wolfson",
+    "name:he": "חולון - וולפסון",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/HE/Stations/Pages/4660.aspx",
+    "wikidata": "Q2919565",
+    "wikipedia": "he:תחנת הרכבת חולון – וולפסון",
+    "wikipedia:he": "תחנת הרכבת חולון – וולפסון"
+  }
+},
+{
+  "type": "node",
+  "id": 3978658307,
+  "lat": 32.0370402,
+  "lon": 34.7764147,
+  "tags": {
+    "name": "צומת חולון",
+    "name:en": "Holon Junction",
+    "name:he": "צומת חולון",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/HE/Stations/Pages/4640.aspx",
+    "wheelchair": "yes",
+    "wikidata": "Q2919536",
+    "wikipedia": "he:תחנת הרכבת צומת חולון",
+    "wikipedia:he": "תחנת הרכבת צומת חולון"
+  }
+},
+{
+  "type": "node",
+  "id": 3978658308,
+  "lat": 32.0541496,
+  "lon": 34.7848015,
+  "tags": {
+    "name": "תל אביב - ההגנה",
+    "name:en": "Tel Aviv - HaHagana",
+    "name:he": "תל אביב - ההגנה",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/tel-aviv-hahagana",
+    "wheelchair": "yes",
+    "wikidata": "Q1840615",
+    "wikipedia": "he:תחנת הרכבת תל אביב ההגנה",
+    "wikipedia:he": "תחנת הרכבת תל אביב ההגנה"
+  }
+},
+{
+  "type": "node",
+  "id": 3979198994,
+  "lat": 32.2050878,
+  "lon": 48.2898691,
+  "tags": {
+    "name": "شوش",
+    "name:de": "Susa",
+    "name:en": "Shush",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "189",
+    "station": "light_rail",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3982698630,
+  "lat": 31.9670281,
+  "lon": 34.8786797,
+  "tags": {
+    "name": "לוד - גני אביב",
+    "name:en": "Lod - Gane Aviv",
+    "name:he": "לוד - גני אביב",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/HE/Stations/Pages/5150.aspx",
+    "wheelchair": "yes",
+    "wikidata": "Q656218",
+    "wikipedia": "he:תחנת הרכבת לוד גני אביב",
+    "wikipedia:he": "תחנת הרכבת לוד גני אביב"
+  }
+},
+{
+  "type": "node",
+  "id": 3982712778,
+  "lat": 32.0004041,
+  "lon": 34.8704796,
+  "tags": {
+    "name": "נמל תעופה בן גוריון",
+    "name:en": "Ben Gurion Airport",
+    "name:he": "נמל תעופה בן גוריון",
+    "name:pl": "Lotnisko im. Ben Guriona",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q2385988",
+    "wikipedia": "he:תחנת הרכבת נמל התעופה בן-גוריון",
+    "wikipedia:he": "תחנת הרכבת נמל התעופה בן-גוריון",
+    "wikipedia:pl": "Ben Gurion Airport (stacja kolejowa)"
+  }
+},
+{
+  "type": "node",
+  "id": 3982765958,
+  "lat": 32.1700045,
+  "lon": 34.9020123,
+  "tags": {
+    "name": "הוד השרון - סוקולוב",
+    "name:en": "Hod HaSharon - Sokolov",
+    "name:he": "הוד השרון - סוקולוב",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/hod-hasharon-sokolov",
+    "wheelchair": "yes",
+    "wikidata": "Q2452539",
+    "wikipedia": "he:תחנת הרכבת הוד השרון - סוקולוב",
+    "wikipedia:he": "תחנת הרכבת הוד השרון - סוקולוב"
+  }
+},
+{
+  "type": "node",
+  "id": 3982780858,
+  "lat": 32.1674727,
+  "lon": 34.9167978,
+  "tags": {
+    "name": "כפר סבא-נורדאו",
+    "name:en": "Kfar Sava-Nordau (A.Kostyuk)",
+    "name:he": "כפר סבא-נורדאו",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/kfar-sava-nordau-(a-kostyuk)",
+    "wikidata": "Q2289258",
+    "wikipedia": "he:תחנת הרכבת כפר סבא - נורדאו",
+    "wikipedia:he": "תחנת הרכבת כפר סבא - נורדאו"
+  }
+},
+{
+  "type": "node",
+  "id": 3982823163,
+  "lat": 31.4107487,
+  "lon": 34.5717114,
+  "tags": {
+    "name": "נתיבות",
+    "name:en": "Netivot",
+    "name:he": "נתיבות",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q6586557"
+  }
+},
+{
+  "type": "node",
+  "id": 3988591607,
+  "lat": 31.3215098,
+  "lon": 34.6342302,
+  "tags": {
+    "name": "אופקים",
+    "name:ar": "أوفاكيم",
+    "name:en": "Ofakim",
+    "name:he": "אופקים",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/ofakim",
+    "wikidata": "Q6666297",
+    "wikipedia": "he:תחנת הרכבת אופקים",
+    "wikipedia:he": "תחנת הרכבת אופקים"
+  }
+},
+{
+  "type": "node",
+  "id": 4020043514,
+  "lat": 31.6878091,
+  "lon": 48.6687088,
+  "tags": {
+    "name": "بامدژ",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4020043516,
+  "lat": 31.6124515,
+  "lon": 48.6931910,
+  "tags": {
+    "name": "خاور",
+    "name:en": "Khavar",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "194",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4036831341,
+  "lat": 31.8738255,
+  "lon": 48.5607557,
+  "tags": {
+    "name": "آهودشت",
+    "name:en": "Ahu Dasht",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "192",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4051446252,
+  "lat": 31.9697273,
+  "lon": 48.4473277,
+  "tags": {
+    "name": "میان آباد",
+    "name:en": "Miyanab",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "191",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4060304995,
+  "lat": 31.9292206,
+  "lon": 34.8767285,
+  "tags": {
+    "name": "רמלה",
+    "name:en": "Ramla",
+    "name:he": "רמלה",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/ramla",
+    "wikidata": "Q2357570",
+    "wikipedia": "he:תחנת הרכבת רמלה",
+    "wikipedia:he": "תחנת הרכבת רמלה"
+  }
+},
+{
+  "type": "node",
+  "id": 4127965809,
+  "lat": 31.7469145,
+  "lon": 34.8225068,
+  "tags": {
+    "name": "קריית מלאכי - יואב",
+    "name:ar": "كِريات ملأخي - يوآف",
+    "name:en": "Kiryat Mal'akhi - Yoav",
+    "name:he": "קריית מלאכי - יואב",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q6693359",
+    "wikipedia": "he:תחנת הרכבת קריית מלאכי – יואב",
+    "wikipedia:he": "תחנת הרכבת קריית מלאכי – יואב"
+  }
+},
+{
+  "type": "node",
+  "id": 4127965810,
+  "lat": 31.8421422,
+  "lon": 34.8563066,
+  "tags": {
+    "internet_access": "wlan",
+    "internet_access:ssid": "S-ISRAEL-RAILWAYS",
+    "name": "מזכרת בתיה",
+    "name:en": "Mazkeret Batya",
+    "name:he": "מזכרת בתיה",
+    "network": "Israel Railways",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "5/30/2019",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/mazkeret-batya",
+    "wheelchair": "yes",
+    "wikidata": "Q25493172",
+    "wikipedia": "he:תחנת הרכבת מזכרת בתיה",
+    "wikipedia:he": "תחנת הרכבת מזכרת בתיה"
+  }
+},
+{
+  "type": "node",
+  "id": 4402343196,
+  "lat": 32.3338135,
+  "lon": 55.5364570,
+  "tags": {
+    "name": "چادر ملو",
+    "name:en": "Chador Maloo",
+    "railway": "station",
+    "wikidata": "Q85168345"
+  }
+},
+{
+  "type": "node",
+  "id": 4402371493,
+  "lat": 32.3204204,
+  "lon": 53.8163407,
+  "tags": {
+    "name": "ایستگاه راه آهن ارژنگ",
+    "name:en": "Arjang",
+    "railway": "station",
+    "wikidata": "Q85168378"
+  }
+},
+{
+  "type": "node",
+  "id": 4413853645,
+  "lat": 31.0326625,
+  "lon": 55.9447168,
+  "tags": {
+    "name": "ایستگاه سیریز",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 4482054540,
+  "lat": 32.2796735,
+  "lon": 34.8655080,
+  "tags": {
+    "name": "נתניה – ספיר",
+    "name:en": "Netanya Sapir",
+    "name:he": "נתניה – ספיר",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/?page=stationinfo&stationname=3310",
+    "wikidata": "Q6587064",
+    "wikipedia": "he:תחנת הרכבת נתניה - ספיר",
+    "wikipedia:he": "תחנת הרכבת נתניה - ספיר"
+  }
+},
+{
+  "type": "node",
+  "id": 4482230311,
+  "lat": 31.5157740,
+  "lon": 34.5854269,
+  "tags": {
+    "name": "שדרות",
+    "name:en": "Sderot",
+    "name:he": "שדרות",
+    "name:ru": "Сдерот",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q6575849",
+    "wikipedia": "he:תחנת הרכבת שדרות",
+    "wikipedia:he": "תחנת הרכבת שדרות"
+  }
+},
+{
+  "type": "node",
+  "id": 4506949244,
+  "lat": 31.0067995,
+  "lon": 52.7501794,
+  "tags": {
+    "addr:city": "اقلید",
+    "addr:street": "بلوار راه آهن اقلید",
+    "image": "https://www.google.com/maps/uv?hl=fa&pb=!1s0x3fafe3cc3b216aab%3A0x29633aa7fe8d14c7!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPbfh8IvE09ViOqQwWk2tt5HbRu7_MOla_jYnuG%3Dw213-h160-k-no!5z2KfbjNiz2Krar9in2Ycg2LHYp9mHINii2YfZhiDYp9mC2YTbjN",
+    "internet_access": "yes",
+    "level": "0",
+    "name": "ایستگاه راه‌آهن اقلید",
+    "name:en": "Eqlid railway station",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q28169514",
+    "wikipedia": "en:Eqlid railway station"
+  }
+},
+{
+  "type": "node",
+  "id": 4534822205,
+  "lat": 21.4044709,
+  "lon": 39.8912638,
+  "tags": {
+    "level": "1",
+    "name": "محطة منى رقم 2",
+    "name:ar": "محطة منى رقم 2",
+    "name:en": "Mina Station 2",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4534822206,
+  "lat": 21.3991802,
+  "lon": 39.8978933,
+  "tags": {
+    "level": "1",
+    "name": "محطة منى رقم 1",
+    "name:ar": "محطة منى رقم 1",
+    "name:en": "Mina Station 1",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4534824625,
+  "lat": 21.3905913,
+  "lon": 39.9004901,
+  "tags": {
+    "level": "1",
+    "name": "محطة مزدلفة رقم 3",
+    "name:ar": "محطة مزدلفة رقم 3",
+    "name:en": "Muzdalifah Station 3",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4534834974,
+  "lat": 21.3830287,
+  "lon": 39.9067503,
+  "tags": {
+    "level": "1",
+    "name": "محطة مزدلفة رقم 2",
+    "name:ar": "محطة مزدلفة رقم 2",
+    "name:en": "Muzdalifah Station 2",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4534838647,
+  "lat": 21.3789163,
+  "lon": 39.9179715,
+  "tags": {
+    "level": "1",
+    "name": "محطة مزدلفة رقم 1",
+    "name:ar": "محطة مزدلفة رقم 1",
+    "name:en": "Muzdalifah Station 1",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4534861098,
+  "lat": 21.3458300,
+  "lon": 39.9612224,
+  "tags": {
+    "name": "محطة عرفات رقم 3",
+    "name:ar": "محطة عرفات رقم 3",
+    "name:en": "Arafat 3",
+    "railway": "station",
+    "station": "subway"
+  }
+},
+{
+  "type": "node",
+  "id": 4534861099,
+  "lat": 21.3414840,
+  "lon": 39.9690282,
+  "tags": {
+    "name": "محطة عرفات رقم 2",
+    "name:ar": "محطة عرفات رقم 2",
+    "name:en": "Arafat 2",
+    "railway": "station",
+    "station": "subway"
+  }
+},
+{
+  "type": "node",
+  "id": 4534861100,
+  "lat": 21.3369021,
+  "lon": 39.9754184,
+  "tags": {
+    "name": "محطة عرفات رقم 1",
+    "name:ar": "محطة عرفات رقم 1",
+    "name:en": "Arafat 1",
+    "railway": "station",
+    "station": "subway"
+  }
+},
+{
+  "type": "node",
+  "id": 4590837774,
+  "lat": 31.9476434,
+  "lon": 34.8782183,
+  "tags": {
+    "alt_name:de": "Lydda",
+    "alt_name:es": "Lida",
+    "alt_name:grc": "Λούδ",
+    "alt_name:ro": "Lydda;Lodd",
+    "name": "לוד",
+    "name:ar": "اللد",
+    "name:azb": "لد",
+    "name:de": "Lod",
+    "name:en": "Lod",
+    "name:es": "Lod",
+    "name:fa": "لد",
+    "name:grc": "Λύδδα",
+    "name:he": "לוד",
+    "name:lt": "Lodas",
+    "name:ml": "ലോദ്",
+    "name:ru": "Лод",
+    "name:uk": "Лод",
+    "name:ur": "لد",
+    "operator": "Israel Railways",
+    "operator:ar": "قطار إسرائيل",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/lod",
+    "wikidata": "Q2440741",
+    "wikipedia": "he:תחנת הרכבת לוד",
+    "wikipedia:he": "תחנת הרכבת לוד"
+  }
+},
+{
+  "type": "node",
+  "id": 4903319585,
+  "lat": 31.9324623,
+  "lon": 34.8305707,
+  "tags": {
+    "name": "באר יעקב",
+    "name:en": "Be'er Ya'akov",
+    "name:he": "באר יעקב",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "website": "https://rail.co.il/?page=stationinfo&stationname=5300",
+    "wikidata": "Q2916478",
+    "wikipedia": "he:תחנת הרכבת באר יעקב",
+    "wikipedia:en": "Be'er Ya'akov railway station",
+    "wikipedia:he": "תחנת הרכבת באר יעקב"
+  }
+},
+{
+  "type": "node",
+  "id": 5079684559,
+  "lat": 25.3823405,
+  "lon": 51.4930047,
+  "tags": {
+    "name": "جامعة قطر",
+    "name:ar": "جامعة قطر",
+    "name:en": "Qatar University",
+    "name:fa": "دانشگاه قطر",
+    "name:ml": "ഖത്തർ യൂണിവേഴ്സിറ്റി",
+    "operator": "RKH Qitarat",
+    "owner": "Qatar Rail",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019-12-10",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5161029881,
+  "lat": 29.6782824,
+  "lon": 52.4547140,
+  "tags": {
+    "name": "احسان",
+    "name:en": "Ehsan",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q18353025"
+  }
+},
+{
+  "type": "node",
+  "id": 5161029882,
+  "lat": 29.6827061,
+  "lon": 52.4650396,
+  "tags": {
+    "light_rail": "yes",
+    "name": "دکتر شریعتی",
+    "name:en": "Doctor Shari'ati",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail;subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5161029883,
+  "lat": 29.6865746,
+  "lon": 52.4736781,
+  "tags": {
+    "name": "مترو میرزای شیرازی",
+    "name:en": "Mirza-ye Shirazi Metro Station",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q18345561"
+  }
+},
+{
+  "type": "node",
+  "id": 5161029884,
+  "lat": 29.6374262,
+  "lon": 52.5027545,
+  "tags": {
+    "name": "مترو شهید مطهری",
+    "name:en": "Shahid Motahhari Metro Station",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail;subway",
+    "subway": "yes",
+    "wikidata": "Q22905762"
+  }
+},
+{
+  "type": "node",
+  "id": 5161029885,
+  "lat": 29.6315263,
+  "lon": 52.5117428,
+  "tags": {
+    "light_rail": "yes",
+    "name": "مترو شهید آوینی",
+    "name:en": "Shahid Avini Metro Station",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail;subway",
+    "subway": "yes",
+    "wikidata": "Q27048819"
+  }
+},
+{
+  "type": "node",
+  "id": 5161029887,
+  "lat": 29.6314651,
+  "lon": 52.5197410,
+  "tags": {
+    "light_rail": "yes",
+    "name": "مترو نمازی",
+    "name:en": "Namazi Metro Station",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q18379107"
+  }
+},
+{
+  "type": "node",
+  "id": 5161029888,
+  "lat": 29.6240701,
+  "lon": 52.5319584,
+  "tags": {
+    "light_rail": "yes",
+    "name": "امام حسین",
+    "name:en": "Emam Hossein",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q97217974",
+    "wikipedia": "fa:ایستگاه متروی امام حسین (شیراز)"
+  }
+},
+{
+  "type": "node",
+  "id": 5163318951,
+  "lat": 29.5517273,
+  "lon": 52.5991287,
+  "tags": {
+    "name": "شهید دستغیب",
+    "name:en": "Shahid Dastgheib",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q38252234"
+  }
+},
+{
+  "type": "node",
+  "id": 5188605493,
+  "lat": 31.3698184,
+  "lon": 34.7981649,
+  "tags": {
+    "name": "להבים רהט",
+    "name:en": "Lehavim Rahat",
+    "name:he": "להבים רהט",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/lehavim-rahat",
+    "wikidata": "Q2521591",
+    "wikipedia": "he:תחנת הרכבת להבים – רהט",
+    "wikipedia:he": "תחנת הרכבת להבים – רהט"
+  }
+},
+{
+  "type": "node",
+  "id": 5310548154,
+  "lat": 30.5598345,
+  "lon": 49.1713106,
+  "tags": {
+    "name": "ایستگاه راه آهن ماهشهر",
+    "name:ar": "محطة سكة حديد معشور",
+    "name:en": "Mahshahr Main Station",
+    "old_name": "ایستگاه باری ماهشهر",
+    "public_transport": "stop_position",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5312499190,
+  "lat": 25.0304736,
+  "lon": 55.1522307,
+  "tags": {
+    "addr:city": "دبي",
+    "name": "الفرجان",
+    "name:ar": "الفرجان",
+    "name:en": "Al Furjan",
+    "name:fa": "فرجان",
+    "name:ml": "അൽ ഫുർജാൻ",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "72",
+    "start_date": "2021-01-01",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q107060873",
+    "wikipedia": "en:Al Furjan (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 5312499192,
+  "lat": 25.0352571,
+  "lon": 55.1454134,
+  "tags": {
+    "addr:city": "دبي",
+    "name": "ديسكفدي جاردنز",
+    "name:ar": "ديسكفدي جاردنز",
+    "name:en": "Discovery Gardens",
+    "name:fa": "باغ‌های دیسکاوری",
+    "name:ml": "ഡിസ്കവറി ഗാർഡൻസ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "71",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q107061090",
+    "wikipedia": "en:Discovery Gardens (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 5685144962,
+  "lat": 31.8644678,
+  "lon": 54.3446319,
+  "tags": {
+    "internet_access": "yes",
+    "internet_access:fee": "yes",
+    "name": "ایستگاه راه آهن یزد",
+    "name:en": "Yazd",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q65110830"
+  }
+},
+{
+  "type": "node",
+  "id": 5705790741,
+  "lat": 32.1726542,
+  "lon": 34.8866033,
+  "tags": {
+    "name": "רעננה – דרום",
+    "name:en": "Ra'anana South",
+    "name:he": "רעננה – דרום",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q25492281",
+    "wikipedia": "he:תחנת הרכבת רעננה – דרום",
+    "wikipedia:he": "תחנת הרכבת רעננה – דרום"
+  }
+},
+{
+  "type": "node",
+  "id": 5888299389,
+  "lat": 30.4970278,
+  "lon": 48.0424994,
+  "tags": {
+    "name": "شلمچه",
+    "name:ar": "الشلامجة",
+    "name:en": "Shalamcheh",
+    "name:fa": "شلمچه",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "634",
+    "train": "yes",
+    "wikidata": "Q85168773"
+  }
+},
+{
+  "type": "node",
+  "id": 5888798463,
+  "lat": 31.3240443,
+  "lon": 48.6637087,
+  "tags": {
+    "name": "ایستگاه راه آهن اهواز",
+    "name:ar": "محطة الأهواز القطار",
+    "name:en": "Ahvaz",
+    "network": "RAI",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "196",
+    "wikidata": "Q28169533"
+  }
+},
+{
+  "type": "node",
+  "id": 5920530139,
+  "lat": 29.6485411,
+  "lon": 39.8376771,
+  "tags": {
+    "name": "الجوف",
+    "name:en": "Al-Jawf",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85874773"
+  }
+},
+{
+  "type": "node",
+  "id": 5928694732,
+  "lat": 32.4557063,
+  "lon": 48.3514068,
+  "tags": {
+    "name": "ایستگاه راه آهن اندیمشک",
+    "name:en": "Andimeshk",
+    "railway": "station",
+    "railway:ref": "187"
+  }
+},
+{
+  "type": "node",
+  "id": 5997671286,
+  "lat": 25.2115468,
+  "lon": 51.5864827,
+  "tags": {
+    "addr:city": "الدوحة",
+    "addr:place": "رأس بوفنطاس",
+    "name": "رأس بوفنطاس",
+    "name:ar": "رأس بوفنطاس",
+    "name:en": "Ras Bu Fontas",
+    "name:fa": "رأس بوفنطاس",
+    "name:ml": "റാസ് ബു ഫോണ്ടാസ്",
+    "operator": "RKH Qitarat",
+    "owner": "Qatar Rail",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019-05-08",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5997671384,
+  "lat": 25.2284683,
+  "lon": 51.5783011,
+  "tags": {
+    "addr:city": "الدوحة",
+    "name": "المنطقة الاقتصادية",
+    "name:ar": "المنطقة الاقتصادية",
+    "name:en": "Free Zone",
+    "name:fa": "منطقه اقتصادی",
+    "name:ml": "ഫ്രീ സോൺ",
+    "operator": "RKH Qitarat",
+    "owner": "Qatar Rail",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019-05-08",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6022689484,
+  "lat": 29.8965546,
+  "lon": 52.8016394,
+  "tags": {
+    "addr:city": "مرودشت",
+    "addr:street": "جاده ده بید",
+    "internet_access": "no",
+    "name": "ایستگاه قطار تخت جمشید",
+    "name:en": "Marvdasht Railway Station",
+    "operator": "راه آهن ایران",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85168212"
+  }
+},
+{
+  "type": "node",
+  "id": 6024783454,
+  "lat": 21.4183961,
+  "lon": 39.8706400,
+  "tags": {
+    "level": "1",
+    "name": "قطار المشاعر - محطة منى 3 - الجمرات",
+    "name:ar": "قطار المشاعر - محطة منى 3 - الجمرات",
+    "name:en": "Jamarat (Mina Station 3)",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6041737444,
+  "lat": 29.9157061,
+  "lon": 55.5414677,
+  "tags": {
+    "name": "خاتون آباد",
+    "name:en": "Khatunabad",
+    "railway": "station",
+    "wikidata": "Q85168065"
+  }
+},
+{
+  "type": "node",
+  "id": 6042620120,
+  "lat": 30.0788207,
+  "lon": 55.5531460,
+  "tags": {
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 6048628656,
+  "lat": 29.5085710,
+  "lon": 55.6491879,
+  "tags": {
+    "name": "سیرجان",
+    "name:en": "Sirjan",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85168122"
+  }
+},
+{
+  "type": "node",
+  "id": 6285863686,
+  "lat": 27.6835926,
+  "lon": 41.7554194,
+  "tags": {
+    "addr:housenumber": "1",
+    "addr:street": "طريق حائل الجوف السريع",
+    "name": "حائل",
+    "name:en": "Hail",
+    "public_transport": "station",
+    "railway": "station",
+    "website": "https://www.sar.com.sa/Home-aspx-lang-ar-sa.aspx",
+    "wikidata": "Q85874793"
+  }
+},
+{
+  "type": "node",
+  "id": 6324844500,
+  "lat": 27.6208593,
+  "lon": 55.8991575,
+  "tags": {
+    "name": "ایستگاه راه آهن فین",
+    "name:en": "Fin",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85168682"
+  }
+},
+{
+  "type": "node",
+  "id": 6326514087,
+  "lat": 31.7771428,
+  "lon": 54.6332267,
+  "tags": {
+    "name": "رخش",
+    "name:en": "Rakhsh",
+    "railway": "station",
+    "wikidata": "Q85168336"
+  }
+},
+{
+  "type": "node",
+  "id": 6326523485,
+  "lat": 31.8176941,
+  "lon": 54.5002345,
+  "tags": {
+    "name": "یزدگرد",
+    "name:en": "YazdGerd",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 6334097194,
+  "lat": 32.0519679,
+  "lon": 48.8297110,
+  "tags": {
+    "name": "شوشتر",
+    "name:de": "Schuschtar",
+    "name:en": "Shushtar",
+    "railway": "station",
+    "wikidata": "Q85168786"
+  }
+},
+{
+  "type": "node",
+  "id": 6336539886,
+  "lat": 31.7455616,
+  "lon": 54.7729279,
+  "tags": {
+    "name": "ایستگاه راه آهن چاه خاور",
+    "name:en": "Chakhavar",
+    "railway": "station",
+    "wikidata": "Q85168266"
+  }
+},
+{
+  "type": "node",
+  "id": 6367921786,
+  "lat": 31.7481702,
+  "lon": 54.9299775,
+  "tags": {
+    "name": "ایستگاه راه آهن تبرکوه",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6407286849,
+  "lat": 25.3928673,
+  "lon": 51.5243029,
+  "tags": {
+    "light_rail": "yes",
+    "location": "underground",
+    "name": "ونادي اليخوت",
+    "name:ar": "ونادي اليخوت",
+    "name:en": "Yacht Club",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail"
+  }
+},
+{
+  "type": "node",
+  "id": 6472748545,
+  "lat": 25.2547338,
+  "lon": 55.4012781,
+  "tags": {
+    "name": "اي اند",
+    "name:ar": "اي اند",
+    "name:en": "e&",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name": "اتصالات",
+    "old_name:ar": "اتصالات",
+    "old_name:en": "Etisalat",
+    "old_name:fa": "اتصالات",
+    "old_name:ml": "ഇത്തിസലാത്ത്",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "11",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q16335324",
+    "wikipedia": "en:Etisalat (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6474748997,
+  "lat": 25.1097349,
+  "lon": 55.1444396,
+  "tags": {
+    "monorail": "yes",
+    "name": "حديقة الاتحاد",
+    "name:ar": "حديقة الاتحاد",
+    "name:en": "Al-Ittihad Park",
+    "name:fa": "پارک الاتحاد",
+    "name:ur": "الاتحاد پارک",
+    "network": "Palm Monorail",
+    "operator": "Palm Monorail",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "monorail"
+  }
+},
+{
+  "type": "node",
+  "id": 6474748998,
+  "lat": 25.1014859,
+  "lon": 55.1546378,
+  "tags": {
+    "addr:city": "دبي",
+    "monorail": "yes",
+    "name": "بالم جيت وي",
+    "name:ar": "بالم جيت وي",
+    "name:en": "Palm Gateway",
+    "name:fa": "پام گیت وی",
+    "name:ur": "پام گیٹ وے",
+    "network": "Palm Monorail",
+    "operator": "Palm Monorail",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "monorail"
+  }
+},
+{
+  "type": "node",
+  "id": 6581397376,
+  "lat": 25.2732083,
+  "lon": 55.3694757,
+  "tags": {
+    "name": "النهدة",
+    "name:ar": "النهدة",
+    "name:de": "Al Nahda",
+    "name:en": "Al Nahda",
+    "name:fa": "نهده",
+    "name:ml": "അൽ-നഹ്ദ",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "14",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q30006463",
+    "wikipedia": "en:Al Nahda (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6581397379,
+  "lat": 25.2779100,
+  "lon": 55.3614660,
+  "tags": {
+    "name": "الاستاد",
+    "name:ar": "الاستاد",
+    "name:en": "Stadium",
+    "name:fa": "ورزشگاه",
+    "name:ml": "സ്റ്റേഡിയം",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "15",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q30006529",
+    "wikipedia": "en:Stadium (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6581397380,
+  "lat": 25.2754161,
+  "lon": 55.3464499,
+  "tags": {
+    "name": "أبو هيل",
+    "name:ar": "أبو هيل",
+    "name:en": "Abu Hail",
+    "name:fa": "ابو هیل",
+    "name:ml": "അബു ഹെയിൽ",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "17",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q30006672",
+    "wikipedia": "en:Abu Hail (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6581397381,
+  "lat": 25.2775853,
+  "lon": 55.3526309,
+  "tags": {
+    "name": "القيادة",
+    "name:ar": "القيادة",
+    "name:de": "Al Qiyadah",
+    "name:en": "Al Qiyadah",
+    "name:fa": "قیاده",
+    "name:ml": "അൽ ഖിയാദ",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "16",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q30006600",
+    "wikipedia": "en:Al Qiyadah (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6584833621,
+  "lat": 25.2708929,
+  "lon": 55.3327545,
+  "tags": {
+    "name": "أبو بكر الصديق",
+    "name:ar": "أبو بكر الصديق",
+    "name:en": "Abu Baker Al Siddique",
+    "name:fa": "ابوبکر صدیق",
+    "name:ml": "അബൂബക്കർ അൽ സിദ്ദിഖ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "18",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q30006682",
+    "wikipedia": "en:Abu Baker Al Siddique (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6584833623,
+  "lat": 25.2661816,
+  "lon": 55.3137508,
+  "tags": {
+    "name": "الاتحاد",
+    "name:ar": "الاتحاد",
+    "name:en": "Union",
+    "name:fa": "اتحادیه",
+    "name:ml": "യൂണിയൻ",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "18;20",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q7885322",
+    "wikipedia": "en:Union (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6584833624,
+  "lat": 25.2703152,
+  "lon": 55.3208284,
+  "tags": {
+    "name": "صلاح الدين",
+    "name:ar": "صلاح الدين",
+    "name:en": "Salah Al Din",
+    "name:fa": "صلاح الدین",
+    "name:ml": "സലാഹ് അൽ ദിൻ",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "19",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q16335322",
+    "wikipedia": "en:Salah Al Din (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6584833626,
+  "lat": 25.2691743,
+  "lon": 55.3076094,
+  "tags": {
+    "addr:city": "دبي",
+    "name": "بني ياس",
+    "name:ar": "بني ياس",
+    "name:en": "Baniyas Square",
+    "name:fa": "بنی یاس",
+    "name:ml": "ബനിയാസ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "21",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q16335307",
+    "wikipedia": "en:Baniyas Square (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6584833627,
+  "lat": 25.2761408,
+  "lon": 55.3016752,
+  "tags": {
+    "name": "سوق الذهب",
+    "name:ar": "سوق الذهب",
+    "name:en": "Gold Souq",
+    "name:fa": "بازار طلا",
+    "name:ml": "ഗോൾഡ് സൂക്ക്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name:2011-2020": "نخلة ديرة",
+    "old_name:ar:2011-2020": "نخلة ديرة",
+    "old_name:en:2011-2020": "Palm Deira",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "22",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q7128029",
+    "wikipedia": "en:Gold Souq (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6584833628,
+  "lat": 25.2687742,
+  "lon": 55.2936231,
+  "tags": {
+    "name": "الرأس",
+    "name:ar": "الرأس",
+    "name:en": "Al Ras",
+    "name:fa": "الراس",
+    "name:ml": "അൽ റാസ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "23",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q4704685",
+    "wikipedia": "en:Al Ras (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6584833629,
+  "lat": 25.2650351,
+  "lon": 55.2889404,
+  "tags": {
+    "image": "https://photos.app.goo.gl/uZC477JhwhVD6EmEA",
+    "name": "الغبيبة",
+    "name:ar": "الغبيبة",
+    "name:en": "Al Ghubaiba",
+    "name:fa": "غبیبه",
+    "name:ml": "അൽ ഗുബൈബ",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "24",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q21160974",
+    "wikipedia": "en:Al Ghubaiba (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6584833631,
+  "lat": 25.2582139,
+  "lon": 55.2974781,
+  "tags": {
+    "name": "شرف دي جي",
+    "name:ar": "شرف دي جي",
+    "name:en": "Sharaf DG",
+    "name:fa": "شرف دی جی",
+    "name:he": "שרף DG",
+    "name:ml": "ഷറഫ് ഡിജി",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name:2011-2020": "الفهيدي",
+    "old_name:ar:2011-2020": "الفهيدي",
+    "old_name:en:2011-2020": "Al Fahidi",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "25",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q4703794",
+    "wikipedia": "en:Sharaf DG (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6584833632,
+  "lat": 25.2549900,
+  "lon": 55.3039410,
+  "tags": {
+    "name": "برجمان",
+    "name:ar": "برجمان",
+    "name:en": "BurJuman",
+    "name:fa": "برجمان",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name:2009-2012": "خالد بن الوليد",
+    "old_name:ar:2009-2012": "خالد بن الوليد",
+    "old_name:en:2009-2012": "Khalid Bin Al Waleed",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "26",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q4998050",
+    "wikipedia": "en:BurJuman (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6584833633,
+  "lat": 25.2439301,
+  "lon": 55.3158939,
+  "tags": {
+    "name": "عود ميثاء",
+    "name:ar": "عود ميثاء",
+    "name:en": "Oud Metha",
+    "name:fa": "عود ميثا",
+    "name:ml": "ഊദ് മേസ",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "27",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q30006729",
+    "wikipedia": "en:Oud Metha (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6584833635,
+  "lat": 25.2309528,
+  "lon": 55.3226190,
+  "tags": {
+    "addr:city": "دبي",
+    "name": "مدينة دبي الطبية",
+    "name:ar": "مدينة دبي الطبية",
+    "name:en": "Dubai Healthcare City",
+    "name:fa": "شهر بهداشت و درمان دبی",
+    "name:ml": "ദുബായ് ഹെൽത്ത് കെയർ സിറ്റി",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "28",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q30006733",
+    "wikipedia": "en:Dubai Healthcare City (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6584833637,
+  "lat": 25.2249103,
+  "lon": 55.3337479,
+  "tags": {
+    "addr:city": "الجداف",
+    "name": "الجداف",
+    "name:ar": "الجداف",
+    "name:en": "Al Jadaf",
+    "name:fa": "جداف",
+    "name:ml": "അൽ ജദ്ദാഫ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "29",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q30006736",
+    "wikipedia": "en:Al Jadaf (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6584833640,
+  "lat": 25.2188806,
+  "lon": 55.3390384,
+  "tags": {
+    "name": "الخور",
+    "name:ar": "الخور",
+    "name:en": "Creek",
+    "name:fa": "نهر",
+    "name:ml": "ക്രീക്ക്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "30",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "limited",
+    "wikidata": "Q16335316",
+    "wikipedia": "en:Creek (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6584833641,
+  "lat": 25.2627427,
+  "lon": 55.3872735,
+  "tags": {
+    "name": "القصيص",
+    "name:ar": "القصيص",
+    "name:en": "Al Qusais",
+    "name:fa": "قصيص",
+    "name:ml": "അൽ-ഖുസൈസ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "12",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q30005124",
+    "wikipedia": "en:Al Qusais (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6584833643,
+  "lat": 25.2698284,
+  "lon": 55.3751502,
+  "tags": {
+    "name": "المنطقة الحرة بمطار دبي",
+    "name:ar": "المنطقة الحرة بمطار دبي",
+    "name:en": "Dubai Airport Free Zone",
+    "name:fa": "منطقه آزاد فرودگاه دبی",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "13",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q30005182",
+    "wikipedia": "en:Dubai Airport Free Zone (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588381691,
+  "lat": 25.0012905,
+  "lon": 55.0957087,
+  "tags": {
+    "name": "دانوب",
+    "name:ar": "دانوب",
+    "name:en": "Danube",
+    "name:ml": "ഡാന്യൂബ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name:en": "Jebel Ali Industrial",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "41",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q106847690",
+    "wikipedia": "en:Danube (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588381694,
+  "lat": 24.9775987,
+  "lon": 55.0910742,
+  "tags": {
+    "name": "صيدلية لايف",
+    "name:ar": "صيدلية لايف",
+    "name:en": "Life Pharmacy",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name:2011-2015": "جبل علي",
+    "old_name:2015-2025": "مركز الإمارات العربية المتحدة للصرافة",
+    "old_name:ar:2011-2015": "جبل علي",
+    "old_name:ar:2015-2025": "مركز الإمارات العربية المتحدة للصرافة",
+    "old_name:en:2011-2015": "Jebel Ali",
+    "old_name:en:2015-2025": "UAE Exchange",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "42",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q22948917",
+    "wikipedia": "en:UAE Exchange (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588516078,
+  "lat": 25.2303111,
+  "lon": 55.3911232,
+  "tags": {
+    "name": "سنتربوينت",
+    "name:ar": "سنتربوينت",
+    "name:en": "Centrepoint",
+    "name:fa": "سنتربوينت",
+    "name:ml": "സെൻ്റർപോയിൻ്റ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name:2009-2021": "الراشدية",
+    "old_name:ar:2009-2021": "الراشدية",
+    "old_name:en:2009-2021": "Rashidiya",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "R11",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q7294949",
+    "wikipedia": "en:Centrepoint (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588516079,
+  "lat": 25.0263116,
+  "lon": 55.1012953,
+  "tags": {
+    "name": "الطاقة",
+    "name:ar": "الطاقة",
+    "name:de": "Energy",
+    "name:en": "Energy",
+    "name:ml": "എനർജി",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name:en:2013-2015": "DUBAL",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "40",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q106858386",
+    "wikipedia": "en:Energy (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588516080,
+  "lat": 25.0466788,
+  "lon": 55.1174939,
+  "tags": {
+    "name": "ابن بطوطة",
+    "name:ar": "ابن بطوطة",
+    "name:de": "Ibn Battuta",
+    "name:en": "Ibn Battuta",
+    "name:fa": "ابن بطوطه",
+    "name:ml": "ഇബ്ൻ ബത്തൂത്ത",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "platforms": "1",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "39",
+    "station": "subway",
+    "subway": "yes",
+    "toilets:wheelchair": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q106858396",
+    "wikipedia": "en:Ibn Battuta (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588516083,
+  "lat": 25.0799529,
+  "lon": 55.1475937,
+  "tags": {
+    "name": "شوبا العقارية",
+    "name:ar": "شوبا العقارية",
+    "name:de": "Sobha Realty",
+    "name:en": "Sobha Realty",
+    "name:fa": "املاک شوبا",
+    "name:ml": "ദുബായ് മറീന",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name:2014-2020": "داماك العقارية",
+    "old_name:ar:2014-2020": "داماك العقارية",
+    "old_name:en:2014-2020": "DAMAC Properties",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "36",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q5310581",
+    "wikipedia": "en:Sobha Realty (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588516084,
+  "lat": 25.0889162,
+  "lon": 55.1581735,
+  "tags": {
+    "name": "الفردان للصرافة",
+    "name:ar": "الفردان للصرافة",
+    "name:de": "Al Fardan Exchange",
+    "name:en": "Al Fardan Exchange",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name:2010-2020": "نخيل",
+    "old_name:2020-2025": "الخيل",
+    "old_name:ar:2010-2020": "نخيل",
+    "old_name:ar:2020-2025": "الخيل",
+    "old_name:en:2010-2020": "Nakheel",
+    "old_name:en:2020-2025": "Al Khail",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q16335310",
+    "wikipedia": "en:Al Fardan Exchange (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588569785,
+  "lat": 25.1021654,
+  "lon": 55.1739012,
+  "tags": {
+    "name": "مدينة دبي للإنترنت",
+    "name:ar": "مدينة دبي للإنترنت",
+    "name:de": "Dubai Internet City",
+    "name:en": "Dubai Internet City",
+    "name:fa": "شهر اینترنتی دبی",
+    "name:ml": "ദുബായ് ഇന്റർനെറ്റ് സിറ്റി",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "34",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q106848102",
+    "wikipedia": "en:Dubai Internet City (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588569786,
+  "lat": 25.1147739,
+  "lon": 55.1908862,
+  "tags": {
+    "name": "سوق التأمين",
+    "name:ar": "سوق التأمين",
+    "name:de": "InsuranceMarket",
+    "name:en": "InsuranceMarket",
+    "name:fa": "بازار بیمه",
+    "name:ml": "ഇൻഷുറൻസ് മാർക്കറ്റ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name:2010-2020": "شرف دي جي",
+    "old_name:2020-2024": "بنك المشرق",
+    "old_name:ar:2010-2020": "شرف دي جي",
+    "old_name:ar:2020-2024": "بنك المشرق",
+    "old_name:en:2010-2020": "Sharaf DG",
+    "old_name:en:2020-2024": "Mashreq",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "33",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q21161121",
+    "wikipedia": "en:InsuranceMarket (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588569787,
+  "lat": 25.1212029,
+  "lon": 55.2004469,
+  "tags": {
+    "name": "مول الإمارات",
+    "name:ar": "مول الإمارات",
+    "name:de": "Mall of the Emirates",
+    "name:en": "Mall of the Emirates",
+    "name:fa": "مرکز خرید امارات",
+    "name:he": "קניון האמירויות",
+    "name:ml": "മാൾ ഓഫ് എമിറേറ്റ്സ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "32",
+    "station": "subway",
+    "subway": "yes",
+    "toilets:wheelchair": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q6744002",
+    "wikipedia": "en:Mall of the Emirates (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588569788,
+  "lat": 25.1266839,
+  "lon": 55.2079196,
+  "tags": {
+    "name": "إكويتي",
+    "name:ar": "إكويتي",
+    "name:de": "Equiti",
+    "name:en": "Equiti",
+    "name:fa": "اکویتی",
+    "name:ml": "ഇക്വിറ്റി",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name:2017-2020": "بنك أبوظبي الأول",
+    "old_name:2020-11-24--2022-04-18": "أم الشيف",
+    "old_name:ar:2017-2020": "بنك أبوظبي الأول",
+    "old_name:ar:2020-11-24-2022-04-18": "أم الشيف",
+    "old_name:de:2020-11-24--2022-04-18": "Umm Al Sheif",
+    "old_name:en:2010-2017": "First Gulf Bank",
+    "old_name:en:2017-2020": "First Abu Dhabi Bank",
+    "old_name:en:2020-11-24--2022-04-18": "Umm Al Sheif",
+    "old_name:ml:2020-11-24--2022-04-18": "ഉമ്മുൽ ഷെയ്ഫ്",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "31",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q107013839",
+    "wikipedia": "en:Equiti (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588569789,
+  "lat": 25.1556300,
+  "lon": 55.2285156,
+  "tags": {
+    "name": "أون باسيف",
+    "name:ar": "أون باسيف",
+    "name:en": "ONPASSIVE",
+    "name:fa": "اون باسيف",
+    "name:ml": "ഓൺപാസീവ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name:2010-2020": "نور بنك",
+    "old_name:2020-2023": "الصفا",
+    "old_name:ar:2010-2020": "نور بنك",
+    "old_name:ar:2020-2023": "الصفا",
+    "old_name:de:2010-2020": "Noor Bank",
+    "old_name:de:2020-2023": "Al Safa",
+    "old_name:en:2010-2020": "Noor Bank",
+    "old_name:en:2020-2023": "Al Safa",
+    "old_name:he:2020-2023": "אל סאפה",
+    "old_name:ml:2020-2023": "അൽ സഫ",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "29",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q106857611",
+    "wikipedia": "en:Onpassive (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588569790,
+  "lat": 25.2108215,
+  "lon": 55.2755321,
+  "tags": {
+    "name": "المركز المالي",
+    "name:ar": "المركز المالي",
+    "name:de": "Financial Centre",
+    "name:en": "Financial Centre",
+    "name:fa": "مرکز مالی",
+    "name:ml": "ഫിനാൻഷ്യൽ സെന്റർ",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "24",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q5449581",
+    "wikipedia": "en:Financial Centre (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588569791,
+  "lat": 25.2410612,
+  "lon": 55.3656800,
+  "tags": {
+    "name": "طيران الإمارات",
+    "name:ar": "طيران الإمارات",
+    "name:de": "Emirates",
+    "name:en": "Emirates",
+    "name:fa": "هواپیمایی امارات",
+    "name:ml": "എമിറേറ്റ്സ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "platforms": "2",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "12",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q16335290",
+    "wikipedia": "en:Emirates (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588569792,
+  "lat": 25.2484769,
+  "lon": 55.3523558,
+  "tags": {
+    "name": "المطار - مبنى رقم 1",
+    "name:ar": "المطار - مبنى رقم 1",
+    "name:de": "Flughafen-Terminal 1",
+    "name:en": "Airport Terminal 1",
+    "name:es": "Terminal 1 del Aeropuerto",
+    "name:fa": "فرودگاه - ترمینال ۱",
+    "name:ml": "എയർപോർട്ട് ടെർമിനൽ 1",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "platforms": "2",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "14",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q106848616",
+    "wikipedia": "en:Airport Terminal 1 (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588569793,
+  "lat": 25.2494824,
+  "lon": 55.3399801,
+  "tags": {
+    "name": "القرهود",
+    "name:ar": "القرهود",
+    "name:en": "Al Garhoud",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name": "جي جي كو",
+    "old_name:ar": "جي جي كو",
+    "old_name:en": "GGICO",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "platforms": "2",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "15",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q5513378",
+    "wikipedia": "en:GGICO (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588569794,
+  "lat": 25.2633466,
+  "lon": 55.3238862,
+  "tags": {
+    "name": "الرقة",
+    "name:ar": "الرقة",
+    "name:de": "Al Rigga",
+    "name:en": "Al Rigga",
+    "name:fa": "رقه",
+    "name:ml": "അൽ-റിഗ്ഗ",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "platforms": "2",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "17",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q107132419",
+    "wikipedia": "en:Al Rigga (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588569795,
+  "lat": 25.2543976,
+  "lon": 55.3041200,
+  "tags": {
+    "image": "https://photos.app.goo.gl/JjHQx88iyx6U75DQ8",
+    "name": "برجمان",
+    "name:ar": "برجمان",
+    "name:en": "Bur Juman",
+    "name:fa": "برجمان",
+    "name:he": "בור ג'ומאן",
+    "name:ml": "ബർ ജുമാൻ",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "19",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q4998050",
+    "wikipedia": "en:BurJuman (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588569796,
+  "lat": 25.2445099,
+  "lon": 55.2981834,
+  "tags": {
+    "name": "بنك أبو ظبي التجاري",
+    "name:ar": "بنك أبو ظبي التجاري",
+    "name:de": "ADCB",
+    "name:en": "ADCB",
+    "name:fa": "بانک تجاری ابوظبی",
+    "name:he": "הבנק המסחרי באבו דאבי",
+    "name:ml": "എ.ഡി.സി.ബി",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name:en:2010-2014": "Al Karama",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "20",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q107132470",
+    "wikipedia": "en:ADCB (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588569797,
+  "lat": 25.2335944,
+  "lon": 55.2921844,
+  "tags": {
+    "name": "ماكس",
+    "name:ar": "ماكس",
+    "name:en": "max",
+    "name:fa": "ماكس",
+    "name:ml": "മാക്സ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name": "الجافلية",
+    "old_name:ar": "الجافلية",
+    "old_name:en": "Al Jafiliya",
+    "old_name:he": "אל ג'פיליה",
+    "old_name:ml": "അൽ ജാഫിലിയ",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "21",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q22948399",
+    "wikipedia": "en:Max (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588569798,
+  "lat": 25.2248353,
+  "lon": 55.2851186,
+  "tags": {
+    "addr:city": "دبي",
+    "internet_access": "wlan",
+    "name": "المركز التجاري العالمي",
+    "name:ar": "المركز التجاري العالمي",
+    "name:de": "World Trade Centre",
+    "name:en": "World Trade Centre",
+    "name:fa": "مرکز تجارت جهانی",
+    "name:he": "מרכז הסחר העולמי",
+    "name:ml": "വേൾഡ് ട്രേഡ് സെന്റർ",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "22",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q107132454",
+    "wikipedia": "en:World Trade Centre (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6588569799,
+  "lat": 25.2546811,
+  "lon": 55.3302605,
+  "tags": {
+    "name": "ديرة سيتي سنتر",
+    "name:ar": "ديرة سيتي سنتر",
+    "name:de": "Deira City Centre",
+    "name:en": "Deira City Centre",
+    "name:es": "Deira City Centre",
+    "name:fa": "سیتی سنتر دیره",
+    "name:ko": "데이라 시티 센터",
+    "name:ml": "ദെയ്റ സിറ്റി സെന്റർ",
+    "name:ru": "Дейра Сити Центр",
+    "name:ur": "دیرہ سٹی سنٹر",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "platforms": "2",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "16",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q5252540",
+    "wikipedia": "en:Deira City Centre (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 6591495524,
+  "lat": 25.2507124,
+  "lon": 55.3514694,
+  "tags": {
+    "monorail": "yes",
+    "name": "مبنى 1",
+    "name:ar": "مبنى 1",
+    "name:de": "Terminal 1",
+    "name:en": "Terminal 1",
+    "name:es": "Terminal 1",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "monorail"
+  }
+},
+{
+  "type": "node",
+  "id": 6591495525,
+  "lat": 25.2576067,
+  "lon": 55.3435394,
+  "tags": {
+    "monorail": "yes",
+    "name": "كونكورس دي",
+    "name:ar": "كونكورس دي",
+    "name:en": "Concourse D",
+    "name:es": "Sala D",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "monorail"
+  }
+},
+{
+  "type": "node",
+  "id": 6678130962,
+  "lat": 29.5874592,
+  "lon": 52.5742169,
+  "tags": {
+    "name": "رازی",
+    "name:en": "Razi",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q48803908"
+  }
+},
+{
+  "type": "node",
+  "id": 6737610788,
+  "lat": 32.4661295,
+  "lon": 53.8540628,
+  "tags": {
+    "name": "بیسیم",
+    "name:en": "Bisim",
+    "railway": "station",
+    "wikidata": "Q85168497"
+  }
+},
+{
+  "type": "node",
+  "id": 6764719075,
+  "lat": 32.2292099,
+  "lon": 53.9295464,
+  "tags": {
+    "name": "ایستگاه راه آهن میبد",
+    "railway": "station",
+    "wikidata": "Q85168420"
+  }
+},
+{
+  "type": "node",
+  "id": 7052243283,
+  "lat": 25.4150412,
+  "lon": 51.4877389,
+  "tags": {
+    "name": "لوسيل QNB",
+    "name:ar": "لوسيل QNB",
+    "name:en": "Lusail QNB",
+    "name:fa": "لوسیل کیو ان بی",
+    "name:ml": "ലുസൈൽ",
+    "operator": "RKH Qitarat",
+    "owner": "Qatar Rail",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019-12-10",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7052290435,
+  "lat": 25.2570362,
+  "lon": 51.6148616,
+  "tags": {
+    "name": "مطار حمد الدولي مبنى 1",
+    "name:ar": "مطار حمد الدولي مبنى 1",
+    "name:en": "Hamad International Airport",
+    "name:fa": "فرودگاه بین‌المللی حمد - ترمینال ۱",
+    "name:ml": "ഹമദ് അന്താരാഷ്ട്ര വിമാനത്താവളം",
+    "name:pt": "Aeroporto Internacional de Hamad",
+    "operator": "RKH Qitarat",
+    "owner": "Qatar Rail",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019-12-10",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7052555289,
+  "lat": 25.2912622,
+  "lon": 51.5200800,
+  "tags": {
+    "name": "البدع",
+    "name:ar": "البدع",
+    "name:en": "Al Bidda",
+    "name:fa": "البدع",
+    "name:ml": "അൽ-ബിദ്ദ",
+    "operator": "RKH Qitarat",
+    "owner": "Qatar Rail",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019-05-08",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7052555290,
+  "lat": 25.2905448,
+  "lon": 51.5005254,
+  "tags": {
+    "name": "مستشفى حمد",
+    "name:ar": "مستشفى حمد",
+    "name:en": "Hamad Hospital",
+    "name:fa": "بیمارستان حمد",
+    "name:fr": "Hôpital Hamad",
+    "name:ml": "ഹമദ് ആശുപത്രി",
+    "network": "Doha Metro",
+    "operator": "RKH Qitarat",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019-12-10",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7052555306,
+  "lat": 25.3243141,
+  "lon": 51.3479911,
+  "tags": {
+    "name": "الرفاع",
+    "name:ar": "الرفاع",
+    "name:en": "Al Riffa",
+    "name:fa": "رفاع",
+    "name:ml": "അൽ-റിഫ",
+    "network": "Doha Metro",
+    "railway": "station",
+    "start_date": "2019-12-10",
+    "station": "subway"
+  }
+},
+{
+  "type": "node",
+  "id": 7052555307,
+  "lat": 25.3013965,
+  "lon": 51.4609060,
+  "tags": {
+    "name": "الريان القديم",
+    "name:ar": "الريان القديم",
+    "name:en": "Al Rayyan Al Qadeem",
+    "name:fa": "الریان قدیم",
+    "name:ml": "അൽ-റയ്യാൻ അൽ-ഖദീം",
+    "network": "Doha Metro",
+    "railway": "station",
+    "start_date": "2019-12-10",
+    "station": "subway"
+  }
+},
+{
+  "type": "node",
+  "id": 7052555309,
+  "lat": 25.3093541,
+  "lon": 51.4531676,
+  "tags": {
+    "name": "الشقب",
+    "name:ar": "الشقب",
+    "name:en": "Al Shaqab",
+    "name:fa": "شقب",
+    "name:ml": "അൽ-ഷഖബ്",
+    "network": "Doha Metro",
+    "railway": "station",
+    "start_date": "2019-12-10",
+    "station": "subway"
+  }
+},
+{
+  "type": "node",
+  "id": 7052555311,
+  "lat": 25.3193295,
+  "lon": 51.4418356,
+  "tags": {
+    "name": "مكتبة قطر الوطنية",
+    "name:ar": "مكتبة قطر الوطنية",
+    "name:en": "Qatar National Library",
+    "name:fa": "کتابخانه ملی قطر",
+    "name:ml": "ഖത്തർ നാഷണൽ ലൈബ്രറി",
+    "network": "Doha Metro",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019-12-10",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7052555312,
+  "lat": 25.3170829,
+  "lon": 51.4260979,
+  "tags": {
+    "name": "المدينة التعليمية",
+    "name:ar": "المدينة التعليمية",
+    "name:en": "Education City",
+    "name:fa": "شهر آموزشی",
+    "name:ml": "എജ്യുക്കേഷൻ സിറ്റി",
+    "network": "Doha Metro",
+    "railway": "station",
+    "start_date": "2019-12-10",
+    "station": "subway"
+  }
+},
+{
+  "type": "node",
+  "id": 7052555313,
+  "lat": 25.2704520,
+  "lon": 51.5349742,
+  "tags": {
+    "name": "المنصورة",
+    "name:ar": "المنصورة",
+    "name:en": "Al Mansoura",
+    "name:fa": "منصوره",
+    "name:ml": "അൽ-മൻസൂറ",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7052555315,
+  "lat": 25.2931645,
+  "lon": 51.4840070,
+  "tags": {
+    "name": "المسيلة",
+    "name:ar": "المسيلة",
+    "name:en": "Al Messila",
+    "name:fa": "مسیله",
+    "name:ml": "അൽ-മെസില",
+    "network": "Doha Metro",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019-12-10",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7053538427,
+  "lat": 25.2924307,
+  "lon": 51.5060185,
+  "tags": {
+    "name": "القصر الأبيض",
+    "name:ar": "القصر الأبيض",
+    "name:en": "The White Palace",
+    "name:fa": "کاخ سفید",
+    "name:ml": "അൽ-ഖസർ അൽ-അബൈദ്",
+    "network": "Doha Metro",
+    "operator": "RKH Qitarat",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019-12-10",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7062658394,
+  "lat": 25.2807129,
+  "lon": 51.4969266,
+  "tags": {
+    "name": "جوعان",
+    "name:ar": "جوعان",
+    "name:en": "Joaan",
+    "name:fa": "جوعان",
+    "name:ml": "ജുവാൻ",
+    "railway": "station",
+    "start_date": "2019-11-21",
+    "station": "subway"
+  }
+},
+{
+  "type": "node",
+  "id": 7144868421,
+  "lat": 31.7881125,
+  "lon": 35.2027658,
+  "tags": {
+    "name": "ירושלים - יצחק נבון",
+    "name:en": "Jerusalem - Yitzhak Navon",
+    "name:he": "ירושלים - יצחק נבון",
+    "operator": "רכבת ישראל",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7227897402,
+  "lat": 21.6605044,
+  "lon": 39.1738182,
+  "tags": {
+    "alt_name": "محطة قطار الحرمين السريع - مطار الملك عبدالعزيز الدولي",
+    "alt_name:ar": "محطة قطار الحرمين السريع - مطار الملك عبدالعزيز الدولي",
+    "alt_name:en": "Al Haramain Train Station - King Abdulaziz International Airport",
+    "name": "قطار الحرمين السريع - مطار الملك عبدالعزيز الدولي",
+    "name:ar": "قطار الحرمين السريع - مطار الملك عبدالعزيز الدولي",
+    "name:en": "Haramain High Speed Railway - King Abdulaziz International Airport",
+    "network": "Western Railway",
+    "opening_hours": "Mo-Su 06:30-00:00",
+    "operator": "Saudi Arabia Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "train",
+    "train": "yes",
+    "website": "https://sar.hhr.sa/-/king-abdulaziz-international-airport",
+    "wikipedia": "en:Haramain High Speed Railway"
+  }
+},
+{
+  "type": "node",
+  "id": 7304911485,
+  "lat": 31.1757888,
+  "lon": 55.4980535,
+  "tags": {
+    "name": "ایستگاهدقطار جنت آباد",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7304911486,
+  "lat": 30.8609424,
+  "lon": 55.4965306,
+  "tags": {
+    "name": "ایستگاه اضطراری ۲۲",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7304911585,
+  "lat": 30.7472201,
+  "lon": 55.5143322,
+  "tags": {
+    "name": "ایستگاه بیاض",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7319397466,
+  "lat": 32.3325633,
+  "lon": 55.0499093,
+  "tags": {
+    "name": "ایستگاه قطار درانجیر",
+    "name:en": "Dareanjir",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q85168511"
+  }
+},
+{
+  "type": "node",
+  "id": 7694192090,
+  "lat": 32.4894962,
+  "lon": 51.7474033,
+  "tags": {
+    "name": "بهارستان",
+    "name:en": "Baharestan",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7756716285,
+  "lat": 29.5586872,
+  "lon": 52.5945809,
+  "tags": {
+    "name": "شهید دوران",
+    "name:en": "Shahid Doran",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q38252233"
+  }
+},
+{
+  "type": "node",
+  "id": 7784585278,
+  "lat": 31.1592968,
+  "lon": 53.2147854,
+  "tags": {
+    "name": "ایستگاه راه آهن ابرکوه",
+    "name:en": "Abarkuh Railway Station",
+    "public_transport": "station",
+    "rail": "yes",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 7786409713,
+  "lat": 30.1053415,
+  "lon": 53.0942238,
+  "tags": {
+    "name": "ایستگاه راه آهن سعادت شهر",
+    "name:en": "Saadatshahr",
+    "network": "RAI",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7786409744,
+  "lat": 32.3503843,
+  "lon": 53.8983832,
+  "tags": {
+    "name": "ایستگاه راه آهن اردکان",
+    "name:en": "Ardakan Railway Station",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85168472"
+  }
+},
+{
+  "type": "node",
+  "id": 7787930028,
+  "lat": 32.1715391,
+  "lon": 51.2058027,
+  "tags": {
+    "name": "سفیددشت",
+    "name:en": "Sefiddasht",
+    "network": "RAI",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7926611002,
+  "lat": 26.8065407,
+  "lon": 37.9476487,
+  "tags": {
+    "name": "Mada'in Saleh",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7931432373,
+  "lat": 24.4606804,
+  "lon": 39.5991903,
+  "tags": {
+    "historic": "archaeological_site",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7954921875,
+  "lat": 31.1311634,
+  "lon": 48.3042119,
+  "tags": {
+    "name": "شهید حمید موسوی",
+    "name:ar": "حميد موسوي",
+    "name:en": "Hamid Moussavi",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85167703"
+  }
+},
+{
+  "type": "node",
+  "id": 7954933890,
+  "lat": 30.4473557,
+  "lon": 48.1627965,
+  "tags": {
+    "name": "ایستگاه راه آهن خرمشهر",
+    "name:ar": "محطة سكة حديد المحمرة",
+    "name:en": "Khorramshahr",
+    "name:fa": "ایستگاه راه آهن خرمشهر",
+    "railway": "station",
+    "wikidata": "Q85168742"
+  }
+},
+{
+  "type": "node",
+  "id": 7954940515,
+  "lat": 30.8076688,
+  "lon": 48.1855289,
+  "tags": {
+    "name": "حسينيه",
+    "name:ar": "حسينية",
+    "name:en": "Hoseyniyeh",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "212",
+    "wikidata": "Q85168729"
+  }
+},
+{
+  "type": "node",
+  "id": 7955005752,
+  "lat": 31.3200999,
+  "lon": 48.6980474,
+  "tags": {
+    "name": "کارون",
+    "name:ar": "کارون",
+    "name:en": "Karun",
+    "name:fa": "کارون",
+    "network": "RAI",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85168733"
+  }
+},
+{
+  "type": "node",
+  "id": 7985031031,
+  "lat": 25.9207722,
+  "lon": 45.4197342,
+  "tags": {
+    "name": "محطة المجمعة",
+    "name:en": "Majmmah",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85874788"
+  }
+},
+{
+  "type": "node",
+  "id": 7985031321,
+  "lat": 26.4922762,
+  "lon": 44.0915573,
+  "tags": {
+    "name": "القصيم",
+    "name:en": "Al Qassim",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85874780"
+  }
+},
+{
+  "type": "node",
+  "id": 7987566890,
+  "lat": 31.4203296,
+  "lon": 37.2890031,
+  "tags": {
+    "name": "القريات",
+    "name:en": "Al Qurayyat",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q100158808"
+  }
+},
+{
+  "type": "node",
+  "id": 8258493790,
+  "lat": 30.3634688,
+  "lon": 53.3498957,
+  "tags": {
+    "addr:city": "روستای خیرآباد",
+    "internet_access": "no",
+    "name": "ایستگاه راه آهن دیدگان",
+    "operator": "رجا",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8425504841,
+  "lat": 30.5418906,
+  "lon": 49.0686080,
+  "tags": {
+    "name": "بندر امام خمینی",
+    "name:ar": "سربندر",
+    "name:en": "Sarbandar",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q85168725"
+  }
+},
+{
+  "type": "node",
+  "id": 8508427695,
+  "lat": 32.0773520,
+  "lon": 55.7711184,
+  "tags": {
+    "name": "ایستگاه قطار بهاباد",
+    "name:en": "Behabad",
+    "railway": "station",
+    "wikidata": "Q85167759"
+  }
+},
+{
+  "type": "node",
+  "id": 8625117828,
+  "lat": 25.0578769,
+  "lon": 55.1273617,
+  "tags": {
+    "addr:city": "دبي",
+    "internet_access": "wlan",
+    "name": "دهانات ناشونال",
+    "name:ar": "دهانات ناشونال",
+    "name:en": "National Paints",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name:2009-2020": "نخيل هاربر آند تاور",
+    "old_name:2020-2025": "جبل علي",
+    "old_name:ar:2009-2020": "نخيل هاربر آند تاور",
+    "old_name:ar:2020-2025": "جبل علي",
+    "old_name:en:2009-2020": "Nakheel Harbour and Tower",
+    "old_name:en:2020-2025": "Jabal Ali",
+    "opening_hours": "24/7",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "38",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q6960570",
+    "wikipedia": "en:Jabal Ali (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 8641061625,
+  "lat": 25.0435023,
+  "lon": 55.1350461,
+  "tags": {
+    "name": "الحدائق",
+    "name:ar": "الحدائق",
+    "name:en": "The Gardens",
+    "name:fa": "باغ‌ها",
+    "name:ml": "ദി ഗാർഡൻസ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "70",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q107061151",
+    "wikipedia": "en:The Gardens (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 8641335749,
+  "lat": 25.0708766,
+  "lon": 55.1387113,
+  "tags": {
+    "name": "مركز دبي للسلع المتعددة",
+    "name:ar": "مركز دبي للسلع المتعددة",
+    "name:de": "DMCC",
+    "name:en": "DMCC",
+    "name:fa": "مرکز چند کالایی دبی",
+    "name:ml": "ഡി.എം.സി.സി",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "old_name:en": "Jumeirah Lakes Towers",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "37",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q6310952",
+    "wikipedia": "en:DMCC (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 8657568245,
+  "lat": 25.1268630,
+  "lon": 55.1217519,
+  "tags": {
+    "abandoned:railway": "station",
+    "addr:city": "دبي",
+    "alt_name": "ذي بونت",
+    "alt_name:ar": "ذي بونت",
+    "monorail": "yes",
+    "name": "ذي بوينت",
+    "name:ar": "ذي بوينت",
+    "name:en": "The Pointe",
+    "name:fa": "دی پوینت",
+    "name:ur": "دی پوائنٹ",
+    "network": "Palm Monorail",
+    "operator": "Palm Monorail",
+    "public_transport": "station",
+    "railway": "station",
+    "service": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 8660753516,
+  "lat": 25.0177925,
+  "lon": 55.1633352,
+  "tags": {
+    "addr:city": "دبي",
+    "name": "عقارات جميرا للجولف",
+    "name:ar": "عقارات جميرا للجولف",
+    "name:en": "Jumeirah Golf Estates",
+    "name:fa": "املاک گلف جمیرا",
+    "name:ml": "ജുമൈറ ഗോൾഫ് എസ്റ്റേറ്റ്സ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "73",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q107060716",
+    "wikipedia": "en:Jumeirah Golf Estates (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 8660767717,
+  "lat": 25.0052466,
+  "lon": 55.1556654,
+  "tags": {
+    "addr:city": "دبي",
+    "name": "مجمع دبي للاستثمار",
+    "name:ar": "مجمع دبي للاستثمار",
+    "name:en": "Dubai Investment Park",
+    "name:fa": "پارک سرمایه‌گذاری دبی",
+    "name:ml": "ദുബായ് ഇൻവെസ്റ്റ്മെന്റ് പാർക്ക്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "74",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q107060669",
+    "wikipedia": "en:Dubai Investment Park (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 8758881217,
+  "lat": 31.5435691,
+  "lon": 54.5736849,
+  "tags": {
+    "addr:city": "مهریز",
+    "name": "ایستگاه راه آهن مهریز",
+    "name:en": "Mehriz Railway Station",
+    "network": "راه آهن جمهوری اسلامی ایران",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8882647591,
+  "lat": 24.9634934,
+  "lon": 55.1460846,
+  "tags": {
+    "name": "مدينة اكسبو دبي",
+    "name:ar": "مدينة اكسبو دبي",
+    "name:de": "Expo City Dubai",
+    "name:en": "Expo City Dubai",
+    "name:es": "Expo City Dubai",
+    "name:fa": "شهر اکسپو دبی",
+    "name:ml": "എക്സ്പോ സിറ്റി ദുബായ്",
+    "network": "Dubai Metro",
+    "network:wikidata": "Q83787",
+    "network:wikipedia": "en:Dubai Metro",
+    "operator": "Roads & Transport Authority",
+    "operator:website": "https://www.rta.ae",
+    "operator:wikidata": "Q22101985",
+    "operator:wikipedia": "en:Roads and Transport Authority (Dubai)",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "76",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q106848201",
+    "wikipedia": "en:Expo 2020 (Dubai Metro)"
+  }
+},
+{
+  "type": "node",
+  "id": 8960554726,
+  "lat": 31.0382810,
+  "lon": 52.9676514,
+  "tags": {
+    "name": "ایستگاه راه آهن فراغه",
+    "name:en": "Faragheh Railway Station",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8960554727,
+  "lat": 31.3505952,
+  "lon": 53.6567607,
+  "tags": {
+    "name": "ایستگاه راه آهن ده شیر",
+    "name:en": "Deh Shir Railway Station",
+    "public_transport": "station",
+    "rail": "yes",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8960554728,
+  "lat": 31.2764845,
+  "lon": 53.8686898,
+  "tags": {
+    "name": "ایستگاه راه آهن چاه سرخ",
+    "name:en": "Chah-e Sorkh Railway Station",
+    "public_transport": "station",
+    "rail": "yes",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8960554731,
+  "lat": 31.2280922,
+  "lon": 53.4261776,
+  "tags": {
+    "name": "ایستگاه راه آهن شهرک صنعتی",
+    "name:en": "Shahrak-e San'ati Railway Station",
+    "public_transport": "station",
+    "rail": "yes",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8960554732,
+  "lat": 31.2556746,
+  "lon": 54.1305236,
+  "tags": {
+    "name": "ایستگاه راه آهن گازیرات",
+    "name:en": "Gazirat Railway Station",
+    "public_transport": "station",
+    "rail": "yes",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8960554733,
+  "lat": 31.2431089,
+  "lon": 54.3080087,
+  "tags": {
+    "name": "ایستگاه راه آهن تنگ چنار",
+    "name:en": "Tang-e Chenar Railway Station",
+    "public_transport": "station",
+    "rail": "yes",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 8960554742,
+  "lat": 31.2021760,
+  "lon": 54.5156449,
+  "tags": {
+    "name": "ایستگاه راه آهن چاه ترش",
+    "name:en": "Chah Torsh Railway Station",
+    "public_transport": "station",
+    "rail": "yes",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8960554744,
+  "lat": 31.3209575,
+  "lon": 54.5956255,
+  "tags": {
+    "name": "ایستگاه راه آهن کالمند",
+    "name:en": "Kalmand Railway Station",
+    "public_transport": "station",
+    "rail": "yes",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9960498797,
+  "lat": 25.2846925,
+  "lon": 51.5493374,
+  "tags": {
+    "addr:city": "الدوحة",
+    "name": "المتحف الوطني",
+    "name:ar": "المتحف الوطني",
+    "name:de": "Nationalmuseum",
+    "name:en": "National Museum",
+    "name:es": "Museo Nacional",
+    "name:fa": "موزه ملی",
+    "name:fr": "Musée National",
+    "name:ur": "قومی عجائب گھر",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019-11-21",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q108463897",
+    "wikipedia": "en:National Museum station"
+  }
+},
+{
+  "type": "node",
+  "id": 10716097829,
+  "lat": 29.5327987,
+  "lon": 35.0178139,
+  "tags": {
+    "alt_name:grc": "Ελά;Ἀηλά;Αἴλανα;Αἰλανίτης;Αἰλανή;Ἐλάνα;Αἴλανον;Αἰλάς;Αἰλών;Ἡλάθ;Αϊλά;Άιλα",
+    "name": "العقبة",
+    "name:ar": "العقبة",
+    "name:az-Arab": "عقبه",
+    "name:azb": "عقبه",
+    "name:cs": "Akaba",
+    "name:da": "Akaba",
+    "name:de": "Akaba",
+    "name:el": "Άκαμπα",
+    "name:en": "Aqaba",
+    "name:et": "Al-‘Aqabah",
+    "name:eu": "Aqaba",
+    "name:fa": "عقبه",
+    "name:fr": "Aqaba",
+    "name:grc": "Αἰλάθ",
+    "name:he": "עקבה",
+    "name:hi": "अक़बा",
+    "name:hr": "Akaba",
+    "name:kk-Arab": "اكابا",
+    "name:kn": "ಅಕಬ",
+    "name:ko": "아카바",
+    "name:ks": "عقبہ",
+    "name:ml": "അക്വബ",
+    "name:mzn": "عقبه",
+    "name:ota": "عقبه",
+    "name:pnb": "عقبہ",
+    "name:ru": "Акаба",
+    "name:sk": "Akaba",
+    "name:ur": "عقبہ",
+    "old_name:grc": "Βερενίκη",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10723656636,
+  "lat": 29.5608782,
+  "lon": 35.0473411,
+  "tags": {
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10723656664,
+  "lat": 29.6995225,
+  "lon": 35.3965375,
+  "tags": {
+    "name": "Wadi Rum",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10723656689,
+  "lat": 29.6289391,
+  "lon": 35.7146726,
+  "tags": {
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10723664106,
+  "lat": 29.7241842,
+  "lon": 35.8739036,
+  "tags": {
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10889237571,
+  "lat": 32.3769918,
+  "lon": 53.6735773,
+  "tags": {
+    "name": "عقدا",
+    "name:en": "Aqda",
+    "railway": "station",
+    "wikidata": "Q85168328"
+  }
+},
+{
+  "type": "node",
+  "id": 10899295170,
+  "lat": 32.4766866,
+  "lon": 54.0108725,
+  "tags": {
+    "name": "گلدانه",
+    "railway": "station",
+    "wikidata": "Q85168535"
+  }
+},
+{
+  "type": "node",
+  "id": 10956967098,
+  "lat": 21.4176557,
+  "lon": 39.7885323,
+  "tags": {
+    "alt_name": "محطة قطار الحرمين السريع - مكة",
+    "alt_name:ar": "محطة قطار الحرمين السريع - مكة",
+    "alt_name:en": "Al Haramain Train Station - Makkah",
+    "building": "train_station",
+    "name": "قطار الحرمين السريع - مكة",
+    "name:ar": "قطار الحرمين السريع - مكة",
+    "name:en": "Haramain High Speed Railway - Makkah",
+    "name:fa": "راه آهن سریع السیر حرمین - مکه",
+    "name:tk": "Mekge - Medine Ýüwrük Otlysy Wokzaly",
+    "name:tr": "Haremeyn Hızlı Tren İstasyonu",
+    "network": "Western Railway",
+    "opening_hours": "Mo-Su 06:30-00:30",
+    "operator": "Saudi Arabia Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://sar.hhr.sa/-/makkah",
+    "wheelchair": "no",
+    "wikipedia": "en:Haramain High Speed Railway"
+  }
+},
+{
+  "type": "node",
+  "id": 10957110707,
+  "lat": 24.4722969,
+  "lon": 39.6996036,
+  "tags": {
+    "alt_name": "محطة قطار الحرمين السريع - المدينة المنورة",
+    "alt_name:ar": "محطة قطار الحرمين السريع - المدينة المنورة",
+    "alt_name:en": "Al Haramain Train Station - Madinah",
+    "name": "قطار الحرمين السريع - المدينة المنورة",
+    "name:ar": "قطار الحرمين السريع - المدينة المنورة",
+    "name:en": "Haramain High Speed Railway - Madinah",
+    "opening_hours": "Mo-Su 06:30-00:30",
+    "operator": "Saudi Arabia Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "website": "https://sar.hhr.sa/-/madinah",
+    "wikipedia": "en:Haramain High Speed Railway"
+  }
+},
+{
+  "type": "node",
+  "id": 10973642593,
+  "lat": 31.7394615,
+  "lon": 55.4798359,
+  "tags": {
+    "name": "بیشه در",
+    "railway": "station",
+    "wikidata": "Q85168390"
+  }
+},
+{
+  "type": "node",
+  "id": 11075856460,
+  "lat": 25.2593658,
+  "lon": 51.4524642,
+  "tags": {
+    "name": "المدينة الرياضية",
+    "name:ar": "المدينة الرياضية",
+    "name:en": "Sport City",
+    "name:ml": "സ്പോർട് സിറ്റി",
+    "operator": "RKH Qitarat",
+    "owner": "Qatar Rail",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019-11-21",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11075856461,
+  "lat": 25.2694146,
+  "lon": 51.5494346,
+  "tags": {
+    "name": "أم غويلينة",
+    "name:ar": "أم غويلينة",
+    "name:en": "Umm Ghuwailina",
+    "name:fa": "ام غویلینه",
+    "operator": "RKH Qitarat",
+    "owner": "Qatar Rail",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019-05-08",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11075856462,
+  "lat": 25.3151524,
+  "lon": 51.5198233,
+  "tags": {
+    "name": "الخليج الغربي",
+    "name:ar": "الخليج الغربي",
+    "name:en": "West Bay",
+    "name:fa": "خلیج غربی",
+    "name:ml": "വെസ്റ്റ് ബേ",
+    "official_name": "الخليج الغربي- قطر للتأمين",
+    "official_name:ar": "الخليج الغربي- قطر للتأمين",
+    "official_name:en": "West Bay - QIC",
+    "operator": "RKH Qitarat",
+    "owner": "Qatar Rail",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019-05-08",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11124725529,
+  "lat": 32.0909542,
+  "lon": 34.8723840,
+  "tags": {
+    "light_rail": "yes",
+    "name": "דנקנר",
+    "name:ar": "دانكنر",
+    "name:en": "Dankner",
+    "name:he": "דנקנר",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q121300501"
+  }
+},
+{
+  "type": "node",
+  "id": 11124725530,
+  "lat": 32.0919406,
+  "lon": 34.8613980,
+  "tags": {
+    "light_rail": "yes",
+    "name": "שחם",
+    "name:ar": "شاحام",
+    "name:en": "Shaham",
+    "name:he": "שחם",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wheelchair": "yes",
+    "wikidata": "Q121092441"
+  }
+},
+{
+  "type": "node",
+  "id": 11124725534,
+  "lat": 32.0926625,
+  "lon": 34.8533047,
+  "tags": {
+    "light_rail": "yes",
+    "name": "שנקר",
+    "name:ar": "شنكار",
+    "name:en": "Shenkar",
+    "name:he": "שנקר",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q97208395"
+  }
+},
+{
+  "type": "node",
+  "id": 11124762405,
+  "lat": 32.0937354,
+  "lon": 34.8821238,
+  "tags": {
+    "light_rail": "yes",
+    "name": "פינסקר",
+    "name:ar": "پينسكِر",
+    "name:en": "Pinsker",
+    "name:he": "פינסקר",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q121323651"
+  }
+},
+{
+  "type": "node",
+  "id": 11124762408,
+  "lat": 32.0946492,
+  "lon": 34.8863929,
+  "tags": {
+    "light_rail": "yes",
+    "name": "תחנה מרכזית פתח תקווה",
+    "name:en": "Petah Tikva CBS",
+    "name:he": "תחנה מרכזית פתח תקווה",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail"
+  }
+},
+{
+  "type": "node",
+  "id": 11124762409,
+  "lat": 32.0919053,
+  "lon": 34.8775120,
+  "tags": {
+    "light_rail": "yes",
+    "name": "קרול",
+    "name:ar": "كارول",
+    "name:en": "Krol",
+    "name:he": "קרול",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q121318499"
+  }
+},
+{
+  "type": "node",
+  "id": 11124762412,
+  "lat": 32.0914569,
+  "lon": 34.8667497,
+  "tags": {
+    "light_rail": "yes",
+    "name": "בילינסון",
+    "name:ar": "بيلينسون",
+    "name:en": "Beilinson",
+    "name:he": "בילינסון",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q121092562"
+  }
+},
+{
+  "type": "node",
+  "id": 11124763767,
+  "lat": 32.0627053,
+  "lon": 34.7748797,
+  "tags": {
+    "light_rail": "yes",
+    "name": "אלנבי",
+    "name:ar": "اللنبي",
+    "name:en": "Allenby",
+    "name:he": "אלנבי",
+    "operator": "Tevel Metro",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q50275914"
+  }
+},
+{
+  "type": "node",
+  "id": 11124781758,
+  "lat": 32.0703643,
+  "lon": 34.7886062,
+  "tags": {
+    "light_rail": "yes",
+    "name": "יהודית",
+    "name:ar": "يهوديت",
+    "name:en": "Yehudit",
+    "name:he": "יהודית",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q55649392"
+  }
+},
+{
+  "type": "node",
+  "id": 11124786622,
+  "lat": 32.0815650,
+  "lon": 34.7965082,
+  "tags": {
+    "light_rail": "yes",
+    "name": "ארלוזורוב",
+    "name:ar": "أرلوزوروﭪ",
+    "name:en": "Arlozoroff",
+    "name:en1": "Arlozorov",
+    "name:he": "ארלוזורוב",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q41992304"
+  }
+},
+{
+  "type": "node",
+  "id": 11124793538,
+  "lat": 32.0769175,
+  "lon": 34.7921548,
+  "tags": {
+    "light_rail": "yes",
+    "name": "שאול המלך",
+    "name:ar": "شاول هميلخ",
+    "name:en": "Shaul HaMelech",
+    "name:en1": "King Saul",
+    "name:he": "שאול המלך",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q31197774"
+  }
+},
+{
+  "type": "node",
+  "id": 11124798243,
+  "lat": 32.0867743,
+  "lon": 34.8120485,
+  "tags": {
+    "light_rail": "yes",
+    "name": "ביאליק",
+    "name:ar": "بياليك",
+    "name:en": "Bialik",
+    "name:he": "ביאליק",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q41991555"
+  }
+},
+{
+  "type": "node",
+  "id": 11125350010,
+  "lat": 32.0022588,
+  "lon": 34.7467523,
+  "tags": {
+    "light_rail": "yes",
+    "name": "הקוממיות",
+    "name:ar": "هكومميوت",
+    "name:en": "HaKomemiyut",
+    "name:he": "הקוממיות",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q111683892"
+  }
+},
+{
+  "type": "node",
+  "id": 11125350011,
+  "lat": 32.0058745,
+  "lon": 34.7489869,
+  "tags": {
+    "light_rail": "yes",
+    "name": "העמל",
+    "name:en": "HeAmal",
+    "name:he": "העמל",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q106027929"
+  }
+},
+{
+  "type": "node",
+  "id": 11125350016,
+  "lat": 32.0108317,
+  "lon": 34.7514884,
+  "tags": {
+    "light_rail": "yes",
+    "name": "כ\"ט בנובמבר",
+    "name:ar": "29 نوفمبر",
+    "name:en": "Kaf Tet BeNovember",
+    "name:en1": "29 November",
+    "name:he": "כ\"ט בנובמבר",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail"
+  }
+},
+{
+  "type": "node",
+  "id": 11125350021,
+  "lat": 32.0153900,
+  "lon": 34.7521506,
+  "tags": {
+    "light_rail": "yes",
+    "name": "יוספטל",
+    "name:ar": "يوسفتال",
+    "name:en": "Yoseftal",
+    "name:he": "יוספטל",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail"
+  }
+},
+{
+  "type": "node",
+  "id": 11125350024,
+  "lat": 32.0164126,
+  "lon": 34.7483364,
+  "tags": {
+    "light_rail": "yes",
+    "name": "בנימין",
+    "name:ar": "بنيامين",
+    "name:en": "Binyamin",
+    "name:he": "בנימין",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail"
+  }
+},
+{
+  "type": "node",
+  "id": 11125350025,
+  "lat": 32.0174591,
+  "lon": 34.7447273,
+  "tags": {
+    "light_rail": "yes",
+    "name": "בלפור",
+    "name:ar": "بلفور",
+    "name:en": "Balfour",
+    "name:he": "בלפור",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11125454962,
+  "lat": 32.0281653,
+  "lon": 34.7489727,
+  "tags": {
+    "light_rail": "yes",
+    "name": "העצמאות",
+    "name:ar": "هعتسمَؤوت",
+    "name:en": "HaAtzma'ut",
+    "name:en1": "HaAtzmaut",
+    "name:en2": "Independence",
+    "name:he": "העצמאות",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q130244765"
+  }
+},
+{
+  "type": "node",
+  "id": 11125454967,
+  "lat": 32.0335751,
+  "lon": 34.7516530,
+  "tags": {
+    "light_rail": "yes",
+    "name": "מחרוזת",
+    "name:ar": "محروزيت",
+    "name:en": "Mahrozet",
+    "name:he": "מחרוזת",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q130466163"
+  }
+},
+{
+  "type": "node",
+  "id": 11125454970,
+  "lat": 32.0387216,
+  "lon": 34.7558374,
+  "tags": {
+    "light_rail": "yes",
+    "name": "הבעש\"ט",
+    "name:ar": "هبيشت",
+    "name:en": "HaBesht",
+    "name:en1": "HaBasht",
+    "name:he": "הבעש\"ט",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q130464831"
+  }
+},
+{
+  "type": "node",
+  "id": 11125454973,
+  "lat": 32.0421438,
+  "lon": 34.7570772,
+  "tags": {
+    "light_rail": "yes",
+    "name": "איסקוב",
+    "name:ar": "إسكوف",
+    "name:en": "Isakov",
+    "name:he": "איסקוב",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q130464828"
+  }
+},
+{
+  "type": "node",
+  "id": 11125454976,
+  "lat": 32.0460687,
+  "lon": 34.7583647,
+  "tags": {
+    "light_rail": "yes",
+    "name": "ארליך",
+    "name:ar": "إيرليخ",
+    "name:en": "Ehrlich",
+    "name:he": "ארליך",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q130397552"
+  }
+},
+{
+  "type": "node",
+  "id": 11125457547,
+  "lat": 32.0988788,
+  "lon": 34.8462680,
+  "tags": {
+    "light_rail": "yes",
+    "name": "גשר אם המושבות",
+    "name:ar": "جسر أم الموشافات",
+    "name:en": "Em HaMoshavot Bridge",
+    "name:he": "גשר אם המושבות",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail"
+  }
+},
+{
+  "type": "node",
+  "id": 11125457549,
+  "lat": 32.1064019,
+  "lon": 34.8626727,
+  "tags": {
+    "light_rail": "yes",
+    "name": "תחנה רכבת קלה - קריית אריה",
+    "name:en": "Kiryat Aryeh light rail station",
+    "name:he": "תחנה רכבת קלה - קריית אריה",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q7005322"
+  }
+},
+{
+  "type": "node",
+  "id": 11132682253,
+  "lat": 32.0502580,
+  "lon": 34.7589515,
+  "tags": {
+    "light_rail": "yes",
+    "name": "אצטדיון בלומפילד",
+    "name:ar": "ملعب بلومفيلد",
+    "name:en": "Bloomfield Stadium",
+    "name:he": "אצטדיון בלומפילד",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q106846496",
+    "wikipedia": "he:תחנת אצטדיון בלומפילד",
+    "wikipedia:he": "תחנת אצטדיון בלומפילד"
+  }
+},
+{
+  "type": "node",
+  "id": 11132682256,
+  "lat": 32.0544983,
+  "lon": 34.7595214,
+  "tags": {
+    "light_rail": "yes",
+    "name": "שלמה",
+    "name:ar": "شلومو",
+    "name:en": "Shalma",
+    "name:he": "שלמה",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail"
+  }
+},
+{
+  "type": "node",
+  "id": 11133645848,
+  "lat": 32.0583410,
+  "lon": 34.7627699,
+  "tags": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/af/IHM_אליפלט.jpeg",
+    "light_rail": "yes",
+    "name": "אליפלט",
+    "name:ar": "إليبيلت",
+    "name:en": "Elifelet",
+    "name:he": "אליפלט",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q97208382"
+  }
+},
+{
+  "type": "node",
+  "id": 11133645854,
+  "lat": 32.0267279,
+  "lon": 34.7444659,
+  "tags": {
+    "light_rail": "yes",
+    "name": "רוטשילד",
+    "name:ar": "روتشيلد",
+    "name:en": "Rothschild",
+    "name:he": "רוטשילד",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wheelchair": "yes",
+    "wikidata": "Q130466246"
+  }
+},
+{
+  "type": "node",
+  "id": 11133645857,
+  "lat": 32.0217060,
+  "lon": 34.7432200,
+  "tags": {
+    "light_rail": "yes",
+    "name": "ז'בוטינסקי",
+    "name:ar": "جابوتنسكي",
+    "name:en": "Jabotinsky",
+    "name:he": "ז'בוטינסקי",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11133775512,
+  "lat": 32.0927075,
+  "lon": 34.8381346,
+  "tags": {
+    "light_rail": "yes",
+    "name": "אהרונוביץ'",
+    "name:ar": "أهرونوفيتش",
+    "name:en": "Aharonovich",
+    "name:he": "אהרונוביץ'",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail"
+  }
+},
+{
+  "type": "node",
+  "id": 11133775515,
+  "lat": 32.0909203,
+  "lon": 34.8233946,
+  "tags": {
+    "light_rail": "yes",
+    "name": "בן גוריון",
+    "name:ar": "بن غوريون",
+    "name:en": "Ben Gurion",
+    "name:he": "בן גוריון",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wikidata": "Q55649381"
+  }
+},
+{
+  "type": "node",
+  "id": 11133775519,
+  "lat": 32.0828530,
+  "lon": 34.8023660,
+  "tags": {
+    "light_rail": "yes",
+    "name": "אבא הלל",
+    "name:ar": "آبا هيلل",
+    "name:en": "Abba Hillel",
+    "name:he": "אבא הלל",
+    "operator": "NTA",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail",
+    "wheelchair": "yes",
+    "wikidata": "Q25494925"
+  }
+},
+{
+  "type": "node",
+  "id": 11133775525,
+  "lat": 32.0655922,
+  "lon": 34.7832245,
+  "tags": {
+    "light_rail": "yes",
+    "name": "קרליבך",
+    "name:ar": "كارليباخ",
+    "name:en": "Carlebach",
+    "name:he": "קרליבך",
+    "operator": "NTA",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail"
+  }
+},
+{
+  "type": "node",
+  "id": 11264520000,
+  "lat": 32.1799825,
+  "lon": 34.8508381,
+  "tags": {
+    "description": "תחנת הרכבת רעננה מערב היא תחנת נוסעים של רכבת ישראל. התחנה נמצאת על כביש 531 בגבול רעננה והרצליה.",
+    "description:he": "תחנת הרכבת רעננה מערב היא תחנת נוסעים של רכבת ישראל. התחנה נמצאת על כביש 531 בגבול רעננה והרצליה.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/94/IHM_רעננה_מערב_2.jpeg",
+    "image1": "https://upload.wikimedia.org/wikipedia/commons/a/a8/IHM_רעננה_מערב_3.jpeg",
+    "name": "רעננה מערב",
+    "name:en": "Ra'anana West",
+    "name:he": "רעננה מערב",
+    "name:ur": "مغربی رعنانہ",
+    "operator": "Israel Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "https://www.rail.co.il/stations/raanana-west",
+    "wikidata": "Q20502866",
+    "wikipedia": "he:תחנת הרכבת רעננה – מערב",
+    "wikipedia:he": "תחנת הרכבת רעננה – מערב"
+  }
+},
+{
+  "type": "node",
+  "id": 11362701838,
+  "lat": 29.5803673,
+  "lon": 52.5063302,
+  "tags": {
+    "name": "شهدای عادل آباد",
+    "name:en": "Shohada-ye Adel Abad",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2023-09-01",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q109549441",
+    "wikipedia": "fa:ایستگاه متروی شهدای عادل آباد"
+  }
+},
+{
+  "type": "node",
+  "id": 11362701839,
+  "lat": 29.6039128,
+  "lon": 52.5158273,
+  "tags": {
+    "alt_name": "امیر کبیر",
+    "alt_name:en": "Amir Kabir",
+    "name": "بسیج",
+    "name:en": "Basij",
+    "name:fa": "بسیج",
+    "opening_hours": "08:00-18:00",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2023-02-08",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q109994837",
+    "wikipedia": "fa:ایستگاه متروی بسیج (شیراز)"
+  }
+},
+{
+  "type": "node",
+  "id": 11362701858,
+  "lat": 29.5701791,
+  "lon": 52.4965036,
+  "tags": {
+    "name": "قهرمانان",
+    "name:en": "Ghahramanan",
+    "opening_hours": "08:00-18:00",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q109549439",
+    "wikipedia": "fa:ایستگاه متروی قهرمانان"
+  }
+},
+{
+  "type": "node",
+  "id": 11672415726,
+  "lat": 29.5882256,
+  "lon": 52.5081335,
+  "tags": {
+    "name": "دولت",
+    "name:en": "Dowlat",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2024-02",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q109994811",
+    "wikipedia": "fa:ایستگاه متروی دولت"
+  }
+},
+{
+  "type": "node",
+  "id": 11672415727,
+  "lat": 29.5974761,
+  "lon": 52.5107135,
+  "tags": {
+    "name": "رحمت",
+    "name:en": "Rahmat",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2024-02",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q109549443",
+    "wikipedia": "fa:ایستگاه متروی رحمت"
+  }
+},
+{
+  "type": "node",
+  "id": 11961288239,
+  "lat": 30.9563779,
+  "lon": 46.1853100,
+  "tags": {
+    "name": "Ur Railway Station",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12060712967,
+  "lat": 19.6245604,
+  "lon": 37.2140775,
+  "tags": {
+    "name": "هيئة سكك حديد السودان",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 12218368950,
+  "lat": 24.3336070,
+  "lon": 54.5293364,
+  "tags": {
+    "name": "Abu Dhabi Passenger Station (Under Construction)",
+    "network": "Etihad Rail",
+    "operator": "Etihad Rail",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12338812518,
+  "lat": 24.7542572,
+  "lon": 46.6545042,
+  "tags": {
+    "name": "المروج",
+    "name:ar": "المروج",
+    "name:en": "Al Murooj",
+    "name:fa": "مروج",
+    "name:ml": "അൽ മുറൂജ്",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12339129098,
+  "lat": 24.8416088,
+  "lon": 46.7173988,
+  "tags": {
+    "name": "محطة جامعة الاميره نوره 1",
+    "name:en": "PNU 1",
+    "name:fa": "دانشگاه شاهدخت نورا ۱",
+    "name:ml": "പി.എൻ.യു. 1",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12339155043,
+  "lat": 24.9405127,
+  "lon": 46.7104703,
+  "tags": {
+    "name": "5 الصالة",
+    "name:en": "Airport T5",
+    "name:fa": "فرودگاه ترمینال ۵",
+    "name:ml": "ടെർമിനൽ 5",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "4G1",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120434190"
+  }
+},
+{
+  "type": "node",
+  "id": 12339155044,
+  "lat": 24.9557923,
+  "lon": 46.7023559,
+  "tags": {
+    "name": "3-4 الصالة",
+    "name:en": "Airport T3-4",
+    "name:fa": "فرودگاه ترمینال ۳-۴",
+    "name:ml": "ടെർമിനൽ 3-4",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "4G2",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402077"
+  }
+},
+{
+  "type": "node",
+  "id": 12339155045,
+  "lat": 24.9610557,
+  "lon": 46.6989901,
+  "tags": {
+    "name": "1-2 الصالة",
+    "name:en": "Airport T1-2",
+    "name:fa": "فرودگاه ترمینال ۱-۲",
+    "name:ml": "ടെർമിനൽ 1-2",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402079"
+  }
+},
+{
+  "type": "node",
+  "id": 12339160752,
+  "lat": 24.8596754,
+  "lon": 46.7044164,
+  "tags": {
+    "alt_name": "Governmental Complex",
+    "name": "محطة جامعة الاميره نوره 2",
+    "name:ar": "محطة جامعة الاميره نوره 2",
+    "name:en": "PNU 2",
+    "name:fa": "دانشگاه شاهدخت نورا ۲",
+    "name:ml": "പി.എൻ.യു. 2",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q131367858"
+  }
+},
+{
+  "type": "node",
+  "id": 12353818506,
+  "lat": 24.7404701,
+  "lon": 46.6950205,
+  "tags": {
+    "name": "وزارة التعليم",
+    "name:ar": "وزارة التعليم",
+    "name:en": "Ministry of Education",
+    "name:fa": "وزارت آموزش",
+    "name:ml": "വിദ്യാഭ്യാസ മന്ത്രാലയം",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12354057233,
+  "lat": 24.5915764,
+  "lon": 46.5436021,
+  "tags": {
+    "name": "محطة طريق جدة",
+    "name:en": "Jeddah Road",
+    "name:fa": "جاده جده",
+    "name:ml": "ജിദ്ദ റോഡ്",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402062"
+  }
+},
+{
+  "type": "node",
+  "id": 12388804114,
+  "lat": 24.5600927,
+  "lon": 46.7763070,
+  "tags": {
+    "name": "الدار البيضاء",
+    "name:en": "Ad Dar Al Baida",
+    "name:fa": "دار البیضاء",
+    "name:ml": "അദ്ദാർ അൽ ബൈദ",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402044"
+  }
+},
+{
+  "type": "node",
+  "id": 12388804115,
+  "lat": 24.5872949,
+  "lon": 46.7608649,
+  "tags": {
+    "level": "1",
+    "name": "العزيزية",
+    "name:ar": "العزيزية",
+    "name:en": "Al Aziziah",
+    "name:fa": "عزیزیه",
+    "name:ml": "അൽ അസീസിയ",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "1J1",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402043"
+  }
+},
+{
+  "type": "node",
+  "id": 12388804116,
+  "lat": 24.8115708,
+  "lon": 46.6256916,
+  "tags": {
+    "name": "د. سليمان الحبيب",
+    "name:ar": "د. سليمان الحبيب",
+    "name:en": "Dr. Sulaiman Al Habib Group",
+    "name:fa": "گروه دکتر سلیمان آل حبیب",
+    "name:ml": "ഡോ. സുലൈമാൻ അൽ ഹബീബ്",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12389831232,
+  "lat": 24.6526021,
+  "lon": 46.7164314,
+  "tags": {
+    "name": "وزارة المالية",
+    "name:ar": "وزارة المالية",
+    "name:en": "Ministry of Finance",
+    "name:fa": "وزارت دارایی",
+    "name:ml": "ധനകാര്യ മന്ത്രാലയം",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402057"
+  }
+},
+{
+  "type": "node",
+  "id": 12389831233,
+  "lat": 24.6598274,
+  "lon": 46.7177242,
+  "tags": {
+    "name": "وزاره البيئة والمياه والزراعة",
+    "name:ar": "وزاره البيئة والمياه والزراعة",
+    "name:en": "MEW&A",
+    "name:fa": "وزارت محیط زیست، آب و کشاورزی",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12389831234,
+  "lat": 24.6678297,
+  "lon": 46.7182767,
+  "tags": {
+    "name": "وزارة الدفاع",
+    "name:ar": "وزارة الدفاع",
+    "name:en": "Ministry of Defence",
+    "name:fa": "وزارت دفاع",
+    "name:ml": "പ്രതിരോധ മന്ത്രാലയം",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12389831235,
+  "lat": 24.6982830,
+  "lon": 46.7179307,
+  "tags": {
+    "name": "نادي الضباط",
+    "name:ar": "نادي الضباط",
+    "name:en": "Officers Club",
+    "name:fa": "باشگاه افسران",
+    "name:ml": "ഓഫീസേഴ്സ് ക്ലബ്",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12389831236,
+  "lat": 24.7096979,
+  "lon": 46.7078389,
+  "tags": {
+    "name": "الضباب",
+    "name:ar": "الضباب",
+    "name:en": "Ad Dhabab",
+    "name:fa": "ضباب",
+    "name:ml": "അദ്ദബാബ്",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12389831237,
+  "lat": 24.7128984,
+  "lon": 46.7002912,
+  "tags": {
+    "name": "السليمانية",
+    "name:ar": "السليمانية",
+    "name:en": "As Sulimaniyah",
+    "name:fa": "سلیمانیه",
+    "name:ml": "അസ്സുലൈമാനിയ",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12389831239,
+  "lat": 24.7284511,
+  "lon": 46.7006144,
+  "tags": {
+    "name": "صلاح الدين",
+    "name:ar": "صلاح الدين",
+    "name:en": "Salahaddin",
+    "name:fa": "صلاح الدين",
+    "name:ml": "സലാഹുദ്ദീൻ",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12389972534,
+  "lat": 24.7863356,
+  "lon": 46.6602637,
+  "tags": {
+    "name": "الربيع",
+    "name:ar": "الربيع",
+    "name:en": "Ar Rabi",
+    "name:fa": "ربيع",
+    "name:ml": "അർ-റബി",
+    "network": "Riyadh Metro",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q131367833"
+  }
+},
+{
+  "type": "node",
+  "id": 12389972535,
+  "lat": 24.7676165,
+  "lon": 46.6430612,
+  "tags": {
+    "name": "مركز الملك عبدالله المالي",
+    "name:ar": "مركز الملك عبدالله المالي",
+    "name:en": "King Abdullah Financial District",
+    "name:fa": "منطقه مالی ملک عبدالله",
+    "name:ml": "കിംഗ് അബ്ദുല്ല സാമ്പത്തിക ജില്ല",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q28714997"
+  }
+},
+{
+  "type": "node",
+  "id": 12389972555,
+  "lat": 24.8014369,
+  "lon": 46.6960406,
+  "tags": {
+    "name": "طريق عثمان بن عفان",
+    "name:ar": "طريق عثمان بن عفان",
+    "name:en": "Uthman Bin Affan Road",
+    "name:fa": "جاده عثمان بن عفان",
+    "name:ml": "ഉസ്മാൻ ബിൻ അഫാൻ റോഡ്",
+    "network": "Riyadh Metro",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12389972557,
+  "lat": 24.8071233,
+  "lon": 46.7093543,
+  "tags": {
+    "name": "سابك",
+    "name:ar": "سابك",
+    "name:en": "SABIC",
+    "name:fa": "سابک",
+    "network": "Riyadh Metro",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120434215"
+  }
+},
+{
+  "type": "node",
+  "id": 12389972673,
+  "lat": 24.6744167,
+  "lon": 46.6948879,
+  "tags": {
+    "name": "وزارة الداخلية",
+    "name:ar": "وزارة الداخلية",
+    "name:en": "Ministry of Interior",
+    "name:fa": "وزارت کشور",
+    "name:ml": "ആഭ്യന്തര മന്ത്രാലയം",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "1D2",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12389972675,
+  "lat": 24.6382996,
+  "lon": 46.7148479,
+  "tags": {
+    "name": "البطحاء",
+    "name:ar": "البطحاء",
+    "name:en": "Al Bat'ha",
+    "name:ml": "അൽ-ബത്ഹ",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402047"
+  }
+},
+{
+  "type": "node",
+  "id": 12389972676,
+  "lat": 24.6453613,
+  "lon": 46.7131247,
+  "tags": {
+    "name": "المتحف الوطني",
+    "name:ar": "المتحف الوطني",
+    "name:en": "National Museum",
+    "name:fa": "موزه ملی",
+    "name:ml": "ദേശീയ മ്യൂസിയം",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12389972677,
+  "lat": 24.7363202,
+  "lon": 46.6636298,
+  "tags": {
+    "name": "حي الملك فهد 2",
+    "name:en": "King Fahad District 2",
+    "name:fa": "منطقه ۲ ملک فهد",
+    "name:ml": "കിംഗ് ഫഹദ് ജില്ല 2",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402035"
+  }
+},
+{
+  "type": "node",
+  "id": 12390612145,
+  "lat": 24.7913131,
+  "lon": 46.7663205,
+  "tags": {
+    "name": "اليرموك",
+    "name:ar": "اليرموك",
+    "name:en": "Al Yarmuk",
+    "name:fa": "یرموک",
+    "name:ml": "അൽ യർമൂക്ക്",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q131367966"
+  }
+},
+{
+  "type": "node",
+  "id": 12390617207,
+  "lat": 24.7227500,
+  "lon": 46.8112162,
+  "tags": {
+    "name": "السلام",
+    "name:ar": "السلام",
+    "name:en": "As Salam",
+    "name:fa": "سلام",
+    "name:ml": "അസ്സലാം",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12390617208,
+  "lat": 24.7004771,
+  "lon": 46.8275395,
+  "tags": {
+    "level": "-1",
+    "name": "النسيم",
+    "name:ar": "النسيم",
+    "name:en": "An Naseem",
+    "name:fa": "نسيم",
+    "name:ml": "അന്നസീം",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "3J1/6H2",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12390617221,
+  "lat": 24.7864667,
+  "lon": 46.7291665,
+  "tags": {
+    "name": "غرناطية",
+    "name:ar": "غرناطية",
+    "name:en": "Granadia",
+    "name:fa": "غرناطيه",
+    "name:ml": "ഗിർനാത്ത",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q131367956"
+  }
+},
+{
+  "type": "node",
+  "id": 12392081301,
+  "lat": 24.7763466,
+  "lon": 46.7764828,
+  "tags": {
+    "name": "الحمراء",
+    "name:ar": "الحمراء",
+    "name:en": "Al Hamra",
+    "name:fa": "حمرا",
+    "name:ml": "അൽ-ഹംറ",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120416194"
+  }
+},
+{
+  "type": "node",
+  "id": 12393282810,
+  "lat": 24.7449429,
+  "lon": 46.6592966,
+  "tags": {
+    "name": "حي الملك فهد",
+    "name:ar": "حي الملك فهد",
+    "name:en": "King Fahad District",
+    "name:fa": "منطقه ملک فهد",
+    "name:ml": "കിംഗ് ഫഹദ് ജില്ല",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12393282811,
+  "lat": 24.7272016,
+  "lon": 46.6682581,
+  "tags": {
+    "name": "شركة الاتصالات السعودية",
+    "name:ar": "شركة الاتصالات السعودية",
+    "name:en": "STC",
+    "name:fa": "شرکت مخابرات عربستان سعودی",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12393282812,
+  "lat": 24.7034375,
+  "lon": 46.6801989,
+  "tags": {
+    "name": "مصرف الانماء",
+    "name:ar": "مصرف الانماء",
+    "name:en": "Al Inma Bank",
+    "name:fa": "بانک الانما",
+    "name:ml": "അൽ ഇൻമ ബാങ്ക്",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120401996"
+  }
+},
+{
+  "type": "node",
+  "id": 12393282813,
+  "lat": 24.6901954,
+  "lon": 46.6869747,
+  "tags": {
+    "name": "مكتبة الملك فهد",
+    "name:ar": "مكتبة الملك فهد",
+    "name:en": "King Fahad Library",
+    "name:fa": "کتابخانه ملک فهد",
+    "name:ml": "കിംഗ് ഫഹദ് ഗ്രന്ഥശാല",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12393747083,
+  "lat": 24.7407976,
+  "lon": 46.7986049,
+  "tags": {
+    "name": "طريق خريص",
+    "name:ar": "طريق خريص",
+    "name:en": "Khurais Road",
+    "name:fa": "جاده خریص",
+    "name:ml": "ഖുറൈസ് റോഡ്",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q131367987"
+  }
+},
+{
+  "type": "node",
+  "id": 12393813802,
+  "lat": 24.7567313,
+  "lon": 46.7902609,
+  "tags": {
+    "name": "الأندلس",
+    "name:ar": "الأندلس",
+    "name:en": "Al Andalus",
+    "name:fa": "اندلس",
+    "name:ml": "അൽ-അന്തലൂസ്",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q131367976"
+  }
+},
+{
+  "type": "node",
+  "id": 12395509809,
+  "lat": 24.6267497,
+  "lon": 46.7122827,
+  "tags": {
+    "name": "مجمع المحاكم",
+    "name:ar": "مجمع المحاكم",
+    "name:en": "Courts Complex",
+    "name:fa": "مجتمع دادگاه‌ها",
+    "name:ml": "മജ്മ അൽ മഹാക്കിം",
+    "network": "Riyadh Metro",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402068"
+  }
+},
+{
+  "type": "node",
+  "id": 12395509810,
+  "lat": 24.6287832,
+  "lon": 46.7161766,
+  "tags": {
+    "name": "محطة قصر الحكم",
+    "name:en": "Qasr Al Hokm",
+    "name:fa": "کاخ حکومتی",
+    "name:ml": "ഖസർ അൽ ഹുക്കും",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402032"
+  }
+},
+{
+  "type": "node",
+  "id": 12395631460,
+  "lat": 25.2477503,
+  "lon": 55.3611593,
+  "tags": {
+    "monorail": "yes",
+    "name": "Concourse B",
+    "name:en": "Concourse B",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 12395631461,
+  "lat": 25.2434605,
+  "lon": 55.3721514,
+  "tags": {
+    "monorail": "yes",
+    "name": "Concourse A",
+    "name:en": "Concourse A",
+    "public_transport": "station",
+    "railway": "station",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12396311895,
+  "lat": 25.2828170,
+  "lon": 51.5255767,
+  "tags": {
+    "name": "مشيرب",
+    "name:ar": "مشيرب",
+    "name:en": "Msheireb",
+    "name:fa": "مشيرب",
+    "name:ml": "മഷീറബ്",
+    "operator": "RKH Qitarat",
+    "owner": "Qatar Rail",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2019-05-08",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q25343654",
+    "wikipedia": "ar:محطة مشيرب"
+  }
+},
+{
+  "type": "node",
+  "id": 12396325411,
+  "lat": 24.6965059,
+  "lon": 46.6837000,
+  "tags": {
+    "name": "بنك البلاد",
+    "name:ar": "بنك البلاد",
+    "name:en": "Bank Al Bilad",
+    "name:fa": "بانک آلبیلاد",
+    "name:ml": "ബാങ്ക് അൽ ബിലാദ്",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402042"
+  }
+},
+{
+  "type": "node",
+  "id": 12396325414,
+  "lat": 24.7237166,
+  "lon": 46.6543732,
+  "tags": {
+    "name": "التخصصي",
+    "name:ar": "التخصصي",
+    "name:en": "At Takhassussi",
+    "name:fa": "تخصصی",
+    "name:ml": "അത്തഖസ്സുസ്സി",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12396335673,
+  "lat": 24.6447092,
+  "lon": 46.7393930,
+  "tags": {
+    "name": "المدينة الصناعية الأولى",
+    "name:ar": "المدينة الصناعية الأولى",
+    "name:en": "First Industrial City",
+    "name:fa": "اولین شهر صنعتی",
+    "name:ml": "ആദ്യ വ്യവസായ നഗരം",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402014"
+  }
+},
+{
+  "type": "node",
+  "id": 12396335674,
+  "lat": 24.6495094,
+  "lon": 46.7406966,
+  "tags": {
+    "name": "سكة الحديد",
+    "name:ar": "سكة الحديد",
+    "name:en": "Railway",
+    "name:fa": "راه آهن",
+    "network": "Riyadh Metro",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402015"
+  }
+},
+{
+  "type": "node",
+  "id": 12397404698,
+  "lat": 24.6183674,
+  "lon": 46.6977927,
+  "tags": {
+    "name": "الجرادية",
+    "name:ar": "الجرادية",
+    "name:en": "Al Jarradiyah",
+    "name:fa": "جرادیه",
+    "name:ml": "അൽ ജറാദിയ",
+    "network": "Riyadh Metro",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "train": "yes",
+    "wikidata": "Q120402074"
+  }
+},
+{
+  "type": "node",
+  "id": 12397423135,
+  "lat": 24.6730573,
+  "lon": 46.7604062,
+  "tags": {
+    "name": "حي جرير",
+    "name:ar": "حي جرير",
+    "name:en": "Jarir District",
+    "name:fa": "منطقه جرير",
+    "name:ml": "ജറീർ ജില്ല",
+    "network": "Riyadh Metro",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12397423140,
+  "lat": 24.5854995,
+  "lon": 46.5598366,
+  "tags": {
+    "name": "طويق",
+    "name:ar": "طويق",
+    "name:en": "Tuwaiq",
+    "name:fa": "طويق",
+    "name:ml": "തുവൈഖ്",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12398529070,
+  "lat": 24.7102297,
+  "lon": 46.6283403,
+  "tags": {
+    "name": "جامعة الملك سعود",
+    "name:ar": "جامعة الملك سعود",
+    "name:en": "King Saud University",
+    "name:fa": "دانشگاه ملک سعود",
+    "name:ml": "കിംഗ് സൗദ് യൂണിവേഴ്സിറ്റി",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12400406049,
+  "lat": 24.6066876,
+  "lon": 46.6538476,
+  "tags": {
+    "name": "ظهرة البديعة",
+    "name:ar": "ظهرة البديعة",
+    "name:en": "Dhahrat Al Badiah",
+    "name:fa": "ظهرت البدیعه",
+    "name:ml": "ദഹ്‌റത്ത് അൽ ബദീയ",
+    "network": "Riyadh Metro",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402069"
+  }
+},
+{
+  "type": "node",
+  "id": 12400406050,
+  "lat": 24.6148699,
+  "lon": 46.6863091,
+  "tags": {
+    "internet_access": "yes",
+    "name": "سلطانة",
+    "name:ar": "سلطانة",
+    "name:en": "Sultanah",
+    "name:fa": "سلطانه",
+    "name:ml": "സുൽത്താന",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402019"
+  }
+},
+{
+  "type": "node",
+  "id": 12400413937,
+  "lat": 24.7367717,
+  "lon": 46.6853144,
+  "tags": {
+    "name": "طريق الملك عبدالعزيز",
+    "name:ar": "طريق الملك عبدالعزيز",
+    "name:en": "King Abdulaziz Road",
+    "name:fa": "جاده ملک عبدالعزیز",
+    "name:ml": "കിംഗ് അബ്ദുൽ അസീസ് റോഡ്",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120414221"
+  }
+},
+{
+  "type": "node",
+  "id": 12400413941,
+  "lat": 24.7333588,
+  "lon": 46.6772315,
+  "tags": {
+    "name": "الورود",
+    "name:ar": "الورود",
+    "name:en": "Al Wurud",
+    "name:fa": "ورود",
+    "name:ml": "അൽ വുറൂദ്",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402039"
+  }
+},
+{
+  "type": "node",
+  "id": 12400426401,
+  "lat": 24.6377654,
+  "lon": 46.7328443,
+  "tags": {
+    "name": "الصالحية",
+    "name:ar": "الصالحية",
+    "name:en": "As Salhiyah",
+    "name:fa": "صالحیه",
+    "name:ml": "അസ്സാൽഹിയ",
+    "network": "Riyadh Metro",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402013"
+  }
+},
+{
+  "type": "node",
+  "id": 12400426402,
+  "lat": 24.6345031,
+  "lon": 46.7262887,
+  "tags": {
+    "name": "المرقب",
+    "name:ar": "المرقب",
+    "name:en": "Al Margab",
+    "name:fa": "مرقب",
+    "name:ml": "അൽ മർഖബ്",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402081"
+  }
+},
+{
+  "type": "node",
+  "id": 12400426403,
+  "lat": 24.6322496,
+  "lon": 46.7217927,
+  "tags": {
+    "name": "الحلة",
+    "name:ar": "الحلة",
+    "name:en": "Al Hilla",
+    "name:fa": "حله",
+    "name:ml": "അൽ ഹില്ല",
+    "network": "Riyadh Metro",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402012"
+  }
+},
+{
+  "type": "node",
+  "id": 12406935607,
+  "lat": 24.7170021,
+  "lon": 46.6385977,
+  "tags": {
+    "name": "واحة الملك سلمان",
+    "name:ar": "واحة الملك سلمان",
+    "name:en": "King Salman Oasis",
+    "name:fa": "واحه ملک سلمان",
+    "name:ml": "കിംഗ് സൽമാൻ ഒയാസിസ്",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402024"
+  }
+},
+{
+  "type": "node",
+  "id": 12423290044,
+  "lat": 24.6753842,
+  "lon": 46.7183503,
+  "tags": {
+    "name": "الوزارات",
+    "name:ar": "الوزارات",
+    "name:en": "Al Wizarat",
+    "name:fa": "وزارات",
+    "name:ml": "അൽ വിസാറാത്ത്",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "5A3",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402056"
+  }
+},
+{
+  "type": "node",
+  "id": 12430128568,
+  "lat": 24.6867535,
+  "lon": 46.7181477,
+  "tags": {
+    "name": "المؤسسة العامة للتأمينات الاجتماعية",
+    "name:ar": "المؤسسة العامة للتأمينات الاجتماعية",
+    "name:en": "GOSI",
+    "name:fa": "سازمان عمومی بیمه اجتماعی",
+    "name:ml": "ജി.ഒ.എസ്.ഐ.",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "5B1",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12430128572,
+  "lat": 24.7482112,
+  "lon": 46.7124201,
+  "tags": {
+    "name": "النزهة",
+    "name:ar": "النزهة",
+    "name:en": "An Nuzhah",
+    "name:fa": "نزهه",
+    "name:ml": "അന്നുസ്ഹ",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12430195368,
+  "lat": 24.7545516,
+  "lon": 46.7271079,
+  "tags": {
+    "name": "مركز الرياض للمعارض",
+    "name:ar": "مركز الرياض للمعارض",
+    "name:en": "Riyadh Exhibition Center",
+    "name:fa": "مرکز نمایشگاهی ریاض",
+    "name:ml": "റിയാദ് എക്സിബിഷൻ സെൻ്റർ",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120416175"
+  }
+},
+{
+  "type": "node",
+  "id": 12430721513,
+  "lat": 24.7821749,
+  "lon": 46.7944103,
+  "tags": {
+    "name": "الخليج",
+    "name:ar": "الخليج",
+    "name:en": "Al Khaleej",
+    "name:fa": "خليج",
+    "name:ml": "അൽ-ഖലീജ്",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402038"
+  }
+},
+{
+  "type": "node",
+  "id": 12430732327,
+  "lat": 24.7204678,
+  "lon": 46.6466631,
+  "tags": {
+    "name": "مدينة الملك عبد العزيز للعلوم والتقنية",
+    "name:ar": "مدينة الملك عبد العزيز للعلوم والتقنية",
+    "name:en": "King Abdulaziz City for Science and Technology",
+    "name:fa": "شهرک علوم و فناوری ملک عبدالعزیز",
+    "name:ml": "കിംഗ് അബ്ദുൽ അസീസ് സിറ്റി ഫോർ സയൻസ് ആൻഡ് ടെക്നോളജി",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402082"
+  }
+},
+{
+  "type": "node",
+  "id": 12430736336,
+  "lat": 24.7930828,
+  "lon": 46.8364288,
+  "tags": {
+    "name": "استاد الملك فهد",
+    "name:ar": "استاد الملك فهد",
+    "name:en": "King Fahad Stadium",
+    "name:fa": "ورزشگاه ملک فهد",
+    "name:ml": "കിംഗ് ഫഹദ് സ്റ്റേഡിയം",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12430768946,
+  "lat": 24.7922749,
+  "lon": 46.8108103,
+  "tags": {
+    "name": "سيتي سينتر اشبيلية",
+    "name:ar": "سيتي سينتر اشبيلية",
+    "name:en": "City Centre Ishbiliyah",
+    "name:fa": "سیتی سنتر اشبیلیه",
+    "name:ml": "സിറ്റി സെൻ്റർ ഇഷ്ബിലിയ",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402025"
+  }
+},
+{
+  "type": "node",
+  "id": 12430775794,
+  "lat": 24.7678437,
+  "lon": 46.7593672,
+  "tags": {
+    "name": "طريق خالد بن الوليد",
+    "name:ar": "طريق خالد بن الوليد",
+    "name:en": "Khalid Bin Al Waleed Road",
+    "name:fa": "جاده خالد بن ولید",
+    "name:ml": "ഖാലിദ് ബിൻ അൽ വലീദ് റോഡ്",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120416185"
+  }
+},
+{
+  "type": "node",
+  "id": 12470790686,
+  "lat": 25.2134155,
+  "lon": 55.4097080,
+  "tags": {
+    "name": "سيتي سنتر مردف",
+    "name:en": "City Centre Mirdif",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12470790687,
+  "lat": 25.1890575,
+  "lon": 55.4094189,
+  "tags": {
+    "name": "الورقاء",
+    "name:en": "Al Warqa'a",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12470790688,
+  "lat": 25.1756849,
+  "lon": 55.4108238,
+  "tags": {
+    "name": "سوق التنبن",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12470790689,
+  "lat": 25.1619409,
+  "lon": 55.4108605,
+  "tags": {
+    "name": "مدينة العالمية 1",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12470790690,
+  "lat": 25.1384426,
+  "lon": 55.4003150,
+  "tags": {
+    "name": "مدينة العالمية 2",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12470790691,
+  "lat": 25.1202857,
+  "lon": 55.3887768,
+  "tags": {
+    "name": "واحة دبي السيليكون",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 12470790692,
+  "lat": 25.1089588,
+  "lon": 55.4007515,
+  "tags": {
+    "name": "مدينة الأكاديمية",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12470790693,
+  "lat": 25.1759435,
+  "lon": 55.3697044,
+  "tags": {
+    "name": "سوق السيارات",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12470790695,
+  "lat": 25.1909908,
+  "lon": 55.3593284,
+  "tags": {
+    "name": "إعمار العقارية",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12470790697,
+  "lat": 25.2090063,
+  "lon": 55.3534339,
+  "tags": {
+    "name": "دبي فيستيفال سيتي",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12475567743,
+  "lat": 24.6005871,
+  "lon": 46.6438099,
+  "tags": {
+    "name": "شارع عائشة بنت أبي بكر",
+    "name:ar": "شارع عائشة بنت أبي بكر",
+    "name:en": "Aishah bint Abi Bakr Street",
+    "name:fa": "خیابان عایشه بنت ابی بکر",
+    "name:ml": "ആയിഷ ബിന്ത് അബി ബക്കർ സ്ട്രീറ്റ്",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q120402018"
+  }
+},
+{
+  "type": "node",
+  "id": 12475590068,
+  "lat": 24.6604063,
+  "lon": 46.7445490,
+  "tags": {
+    "name": "الملز",
+    "name:ar": "الملز",
+    "name:en": "Al Malaz",
+    "name:fa": "ملز",
+    "name:ml": "അൽ മലസ്",
+    "network": "Riyadh Metro",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402063"
+  }
+},
+{
+  "type": "node",
+  "id": 12475590726,
+  "lat": 24.5825159,
+  "lon": 46.5884900,
+  "tags": {
+    "internet_access": "yes",
+    "name": "الدوح",
+    "name:ar": "الدوح",
+    "name:en": "Ad Douh",
+    "name:fa": "دوح",
+    "name:ml": "അദ്ദൂഹ്",
+    "network": "Riyadh Metro",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402016"
+  }
+},
+{
+  "type": "node",
+  "id": 12475590727,
+  "lat": 24.6802217,
+  "lon": 46.7794841,
+  "tags": {
+    "internet_access": "yes",
+    "name": "جامع الراجحي",
+    "name:ar": "جامع الراجحي",
+    "name:en": "Al Rajhi Grand Mosque",
+    "name:fa": "مسجد الراجحی",
+    "name:ml": "ജാമ അൽ-രാജ്ഹി",
+    "network": "Riyadh Metro",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402049"
+  }
+},
+{
+  "type": "node",
+  "id": 12475959588,
+  "lat": 24.6860921,
+  "lon": 46.7959616,
+  "tags": {
+    "name": "طريق هارون الرشيد",
+    "name:ar": "طريق هارون الرشيد",
+    "name:en": "Harun Ar Rasheed Road",
+    "name:fa": "جاده هارون الرشید",
+    "name:ml": "ഹാറൂൺ അർ-റഷീദ് റോഡ്",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402045"
+  }
+},
+{
+  "type": "node",
+  "id": 12475968014,
+  "lat": 24.5818122,
+  "lon": 46.6145785,
+  "tags": {
+    "internet_access": "yes",
+    "name": "المحطة الغربية",
+    "name:ar": "المحطة الغربية",
+    "name:en": "Western Station",
+    "name:fa": "ایستگاه غربی",
+    "name:ml": "അൽ-മഹത്ത അൽ-ഗർബിയ",
+    "network": "Riyadh Metro",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "3B2",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12476007298,
+  "lat": 24.7216651,
+  "lon": 46.8606990,
+  "tags": {
+    "name": "خشم العان",
+    "name:ar": "خشم العان",
+    "name:en": "Khashm Al An",
+    "name:fa": "خشم العان",
+    "name:ml": "ഖഷ്ം അൽ ആൻ",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12476534086,
+  "lat": 24.7128001,
+  "lon": 46.8475725,
+  "tags": {
+    "name": "شارع حسان بن ثابت",
+    "name:ar": "شارع حسان بن ثابت",
+    "name:en": "Hassan ibn Thabit Street",
+    "name:fa": "خیابان حسن بن ثابت",
+    "name:ml": "ഹസ്സൻ ബിൻ താബത്ത് തെരുവ്",
+    "network": "Riyadh Metro",
+    "operator": "Riyadh Transit Network",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q120402051"
+  }
+},
+{
+  "type": "node",
+  "id": 12484260351,
+  "lat": 25.3708332,
+  "lon": 51.5249105,
+  "tags": {
+    "light_rail": "yes",
+    "name": "لقطيفية",
+    "name:ar": "لقطيفية",
+    "name:en": "Legtaifiya",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail"
+  }
+},
+{
+  "type": "node",
+  "id": 12484260353,
+  "lat": 25.3855923,
+  "lon": 51.5269517,
+  "tags": {
+    "light_rail": "yes",
+    "name": "المارينا - جنوب",
+    "name:ar": "المارينا - جنوب",
+    "name:en": "Marina - South",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail"
+  }
+},
+{
+  "type": "node",
+  "id": 12484260354,
+  "lat": 25.3889280,
+  "lon": 51.5257471,
+  "tags": {
+    "layer": "-1",
+    "light_rail": "yes",
+    "name": "المارينا - سنترال",
+    "name:ar": "المارينا - سنترال",
+    "name:en": "Marina - Central",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail"
+  }
+},
+{
+  "type": "node",
+  "id": 12484373033,
+  "lat": 25.4020263,
+  "lon": 51.5188224,
+  "tags": {
+    "light_rail": "yes",
+    "location": "underground",
+    "name": "طرفة - جنوب",
+    "name:ar": "طرفة - جنوب",
+    "name:en": "Tarfat - South",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "light_rail"
+  }
+},
+{
+  "type": "node",
+  "id": 12526496465,
+  "lat": 27.9380087,
+  "lon": 55.7133503,
+  "tags": {
+    "name": "ایستکاه راه آهن زاهد محمود",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12871956367,
+  "lat": 31.2417213,
+  "lon": 45.0224368,
+  "tags": {
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13158470705,
+  "lat": 25.0174161,
+  "lon": 55.1682399,
+  "tags": {
+    "name": "Dubai Passenger Station (Under Construction)",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13196689027,
+  "lat": 29.6552369,
+  "lon": 52.4854204,
+  "tags": {
+    "name": "قصردشت",
+    "name:en": "Qasr Dasht",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q68115723"
+  }
+},
+{
+  "type": "node",
+  "id": 13196689029,
+  "lat": 29.6662456,
+  "lon": 52.4865241,
+  "tags": {
+    "name": "شاهد",
+    "name:en": "Shahed",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q18378234"
+  }
+},
+{
+  "type": "node",
+  "id": 13196689030,
+  "lat": 29.5806826,
+  "lon": 52.5791945,
+  "tags": {
+    "name": "غدیر",
+    "name:en": "Ghadir",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13196689031,
+  "lat": 29.5723303,
+  "lon": 52.5853246,
+  "tags": {
+    "name": "جانبازان",
+    "name:en": "Janbazan",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q97218025"
+  }
+},
+{
+  "type": "node",
+  "id": 13196689032,
+  "lat": 29.5649631,
+  "lon": 52.5904477,
+  "tags": {
+    "name": "فرصت شیرازی",
+    "name:en": "Forsat Shirazi",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q60785841"
+  }
+},
+{
+  "type": "node",
+  "id": 13200207828,
+  "lat": 29.6189133,
+  "lon": 52.5406720,
+  "tags": {
+    "name": "زندیه",
+    "name:en": "Zandiyeh",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q30606556"
+  }
+},
+{
+  "type": "node",
+  "id": 13200210530,
+  "lat": 29.6029027,
+  "lon": 52.5628918,
+  "tags": {
+    "name": "شهید کاوه",
+    "name:en": "Shahid Kaveh",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q97218095"
+  }
+},
+{
+  "type": "node",
+  "id": 13200211527,
+  "lat": 29.6082344,
+  "lon": 52.5585197,
+  "tags": {
+    "name": "ولیعصر",
+    "name:en": "Valiasr",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q38252231"
+  }
+},
+{
+  "type": "node",
+  "id": 13200231566,
+  "lat": 29.6124141,
+  "lon": 52.5517783,
+  "tags": {
+    "name": "وکیل الرعایا",
+    "name:en": "Vakil-Al-Roaya",
+    "network": "متروی شیراز",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q88722357",
+    "wikipedia": "fa:ایستگاه متروی وکیل‌الرعایا"
+  }
+},
+{
+  "type": "node",
+  "id": 13200463967,
+  "lat": 29.5961373,
+  "lon": 52.5678755,
+  "tags": {
+    "name": "فضیلت",
+    "name:en": "Fazilat",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q38252232"
+  }
+},
+{
+  "type": "node",
+  "id": 13341910479,
+  "lat": 30.9382949,
+  "lon": 34.6618390,
+  "tags": {
+    "name": "שרידים של תחנת רכבת טורקית",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13529975540,
+  "lat": 32.4162499,
+  "lon": 51.4175989,
+  "tags": {
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13534829431,
+  "lat": 31.9573295,
+  "lon": 54.1508120,
+  "tags": {
+    "name": "ایستگاه راه آهن نظرآباد - اشکذر",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13626956323,
+  "lat": 32.2763367,
+  "lon": 34.9966016,
+  "tags": {
+    "name": "טייבה - השומרון",
+    "name:he": "טייבה - השומרון",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13735049175,
+  "lat": 29.6139309,
+  "lon": 52.5237246,
+  "tags": {
+    "name": "استقلال",
+    "name:en": "Esteqlal",
+    "public_transport": "station",
+    "railway": "station",
+    "start_date": "2026-04-09",
+    "station": "subway",
+    "subway": "yes"
+  }
+}
+
+  ]
+}

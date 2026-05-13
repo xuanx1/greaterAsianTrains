@@ -1,0 +1,1082 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-13T16:31:43Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 305328667,
+  "lat": 10.8742779,
+  "lon": 107.7519491,
+  "tags": {
+    "name": "Sông Phan",
+    "name:en": "Song Phan Station",
+    "name:vi": "Sông Phan",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q60364783"
+  }
+},
+{
+  "type": "node",
+  "id": 305329053,
+  "lat": 10.9208283,
+  "lon": 107.8679457,
+  "tags": {
+    "name": "Suối Vận",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 357992316,
+  "lat": 14.9561351,
+  "lon": 102.0237132,
+  "tags": {
+    "name": "ภูเขาลาด",
+    "name:en": "Phukhao Lat",
+    "name:th": "ภูเขาลาด",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:station_category": "3",
+    "ref": "ขล.",
+    "ref:station": "2113",
+    "source": "GPS",
+    "train": "yes",
+    "wikidata": "Q16307561"
+  }
+},
+{
+  "type": "node",
+  "id": 1061432118,
+  "lat": 10.6436701,
+  "lon": 103.5154199,
+  "tags": {
+    "name": "ស្ថានីយ៍ព្រះសីហនុ",
+    "name:en": "Sihanoukville",
+    "name:km": "ស្ថានីយ៍ព្រះសីហនុ",
+    "name:ru": "Сиануквиль",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wheelchair": "limited",
+    "wikidata": "Q131918766",
+    "wikimedia_commons": "File:Sihanoukville train station.jpg"
+  }
+},
+{
+  "type": "node",
+  "id": 1384419468,
+  "lat": 14.9722695,
+  "lon": 102.0788985,
+  "tags": {
+    "name": "นครราชสีมา",
+    "name:en": "Nakhon Ratchasima",
+    "name:th": "นครราชสีมา",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "รส",
+    "railway:station_category": "1",
+    "ref": "รส.",
+    "ref:station": "2114",
+    "toilets:wheelchair": "yes",
+    "train": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q801230",
+    "wikipedia": "th:สถานีรถไฟนครราชสีมา"
+  }
+},
+{
+  "type": "node",
+  "id": 1831765444,
+  "lat": 14.9727432,
+  "lon": 103.1900031,
+  "tags": {
+    "name": "ห้วยราช",
+    "name:en": "Huai Rat",
+    "name:fr": "Huai Rat",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "หร",
+    "railway:station_category": "2",
+    "ref": "หร.",
+    "ref:station": "2239",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2160903074,
+  "lat": 13.6927071,
+  "lon": 102.5052012,
+  "tags": {
+    "name": "อรัญประเทศ",
+    "name:en": "Aranyaprathet",
+    "name:th": "อรัญประเทศ",
+    "network": "การรถไฟแห่งประเทศไทย",
+    "network:en": "State Railway of Thailand",
+    "network:th": "การรถไฟแห่งประเทศไทย",
+    "network:wikidata": "Q2165702",
+    "operator": "การรถไฟแห่งประเทศไทย",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "อร",
+    "railway:station_category": "1",
+    "ref": "อร.",
+    "ref:station": "3100",
+    "train": "yes",
+    "wikidata": "Q6633420"
+  }
+},
+{
+  "type": "node",
+  "id": 2891038201,
+  "lat": 10.8273477,
+  "lon": 106.7159069,
+  "tags": {
+    "name": "Bình Triệu",
+    "name:zh": "平趙",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 2893771497,
+  "lat": 10.8158694,
+  "lon": 106.6846752,
+  "tags": {
+    "name": "Gò Vấp",
+    "name:ko": "고법역",
+    "name:th": "ก่อเวิ้ป",
+    "name:zh": "舊邑",
+    "operator": "Vietnam Railways",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q17990937",
+    "wikipedia": "vi:Ga Gò Vấp"
+  }
+},
+{
+  "type": "node",
+  "id": 3107819171,
+  "lat": 14.9452046,
+  "lon": 103.7863978,
+  "tags": {
+    "name": "ศีขรภูมิ",
+    "name:en": "Sikhoraphum",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "รภ",
+    "railway:station_category": "1",
+    "ref": "รภ.",
+    "ref:station": "2256",
+    "train": "yes",
+    "wikidata": "Q6633380"
+  }
+},
+{
+  "type": "node",
+  "id": 3107829713,
+  "lat": 14.8915918,
+  "lon": 103.4939967,
+  "tags": {
+    "name": "สุรินทร์",
+    "name:en": "Surin",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "สร",
+    "railway:station_category": "1",
+    "ref": "สร.",
+    "ref:station": "2250",
+    "train": "yes",
+    "wikidata": "Q6633430"
+  }
+},
+{
+  "type": "node",
+  "id": 3435041090,
+  "lat": 13.8272286,
+  "lon": 102.0751732,
+  "tags": {
+    "name": "สระแก้ว",
+    "name:en": "Sa Kaeo",
+    "name:km": "ស្រះកែវ",
+    "name:th": "สระแก้ว",
+    "name:zh": "沙繳",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "ะก",
+    "railway:station_category": "2",
+    "ref": "ะก.",
+    "ref:station": "3087",
+    "train": "yes",
+    "wikidata": "Q11304564"
+  }
+},
+{
+  "type": "node",
+  "id": 4080996334,
+  "lat": 10.9991487,
+  "lon": 104.7507250,
+  "tags": {
+    "name": "ស្ថានីយ៍តាកែវ",
+    "name:en": "Takeo",
+    "name:km": "ស្ថានីយ៍តាកែវ",
+    "name:ru": "Такео",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 4195729192,
+  "lat": 10.9686706,
+  "lon": 107.6303833,
+  "tags": {
+    "name": "Suối Kiết",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4739057021,
+  "lat": 14.9269209,
+  "lon": 103.3026903,
+  "tags": {
+    "name": "กระสัง",
+    "name:en": "Krasang",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "ะส",
+    "railway:station_category": "2",
+    "ref": "ะส.",
+    "ref:station": "2243",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5157438014,
+  "lat": 13.7412648,
+  "lon": 102.3231926,
+  "tags": {
+    "name": "วัฒนานคร",
+    "name:en": "Watthana Nakhon",
+    "name:km": "វឌ្ឍនានគរ",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "วค",
+    "railway:station_category": "2",
+    "ref": "วค.",
+    "ref:station": "3094",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5243250020,
+  "lat": 14.9088171,
+  "lon": 103.3630781,
+  "tags": {
+    "name": "หนองเต็ง",
+    "name:en": "Nong Teng",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "เต",
+    "railway:station_category": "3",
+    "ref": "เต.",
+    "ref:station": "2244",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6118892153,
+  "lat": 12.5377931,
+  "lon": 103.9056971,
+  "tags": {
+    "name": "ស្ថានីយ៍ពោធិសាត់",
+    "name:en": "Pursat",
+    "name:km": "ស្ថានីយ៍ពោធិសាត់",
+    "name:ru": "Поусат",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 6203477737,
+  "lat": 10.6983845,
+  "lon": 103.8233059,
+  "tags": {
+    "image": "https://drive.google.com/file/d/1zHotDCQ6oNLIEV1qewuO7xIdnzMDvXoE/view?usp=drivesdk",
+    "name": "ស្ថានីយ៍ព្រៃនប់",
+    "name:en": "Prey Nob",
+    "name:km": "ស្ថានីយ៍ព្រៃនប់",
+    "name:ru": "Прейноп",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 6328479385,
+  "lat": 14.9993907,
+  "lon": 102.6467614,
+  "tags": {
+    "name": "ห้วยแถลง",
+    "name:en": "Huai Thalaeng",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "ถล",
+    "railway:station_category": "2",
+    "ref": "ถล.",
+    "ref:station": "2224",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7472379054,
+  "lat": 13.6628730,
+  "lon": 102.5484453,
+  "tags": {
+    "name": "ด่านพรมแดนบ้านคลองลึก",
+    "name:en": "Ban Klong Luk Border",
+    "name:th": "ด่านพรมแดนบ้านคลองลึก",
+    "network": "การรถไฟแห่งประเทศไทย",
+    "network:en": "State Railway of Thailand",
+    "network:th": "การรถไฟแห่งประเทศไทย",
+    "network:wikidata": "Q2165702",
+    "operator": "การรถไฟแห่งประเทศไทย",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "ลง",
+    "railway:ref:en": "BLK",
+    "railway:station_category": "3",
+    "ref:station": "3130",
+    "train": "yes",
+    "wikidata": "Q64981642",
+    "wikipedia": "th:สถานีรถไฟด่านพรมแดนบ้านคลองลึก"
+  }
+},
+{
+  "type": "node",
+  "id": 8795209023,
+  "lat": 13.5800209,
+  "lon": 102.9732218,
+  "tags": {
+    "alt_name:ru": "Серейсаопхоан",
+    "name": "ស្ថានីយ៍សិរីសោភ័ណ",
+    "name:en": "Sisophon",
+    "name:km": "ស្ថានីយ៍សិរីសោភ័ណ",
+    "name:ru": "Сисопхон",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "wikidata": "Q56232058"
+  }
+},
+{
+  "type": "node",
+  "id": 8795209166,
+  "lat": 13.6570533,
+  "lon": 102.5559809,
+  "tags": {
+    "name": "ស្ថានីយ៍ប៉ោយប៉ែត",
+    "name:en": "Poipet",
+    "name:km": "ស្ថានីយ៍ប៉ោយប៉ែត",
+    "name:ru": "Пойпет",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8859210768,
+  "lat": 14.9858888,
+  "lon": 102.1929714,
+  "tags": {
+    "name": "บ้านพะเนา",
+    "name:en": "Ban Phanao",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "พเ",
+    "railway:station_category": "3",
+    "ref": "พเ.",
+    "ref:station": "2211",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8862585256,
+  "lat": 14.9219156,
+  "lon": 103.7269244,
+  "tags": {
+    "name": "กะโดนค้อ",
+    "name:en": "Kadon Kho",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "ดค",
+    "railway:station_category": "3",
+    "ref": "ดค.",
+    "ref:station": "2254",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8862648561,
+  "lat": 14.8899487,
+  "lon": 103.5763229,
+  "tags": {
+    "name": "บุฤๅษี",
+    "name:en": "Bu Ruesi",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "บุ",
+    "railway:station_category": "3",
+    "ref": "บุ.",
+    "ref:station": "2252",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8862699589,
+  "lat": 14.8998501,
+  "lon": 103.4228262,
+  "tags": {
+    "name": "ลำชี",
+    "name:en": "Lam Chi",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "ลช",
+    "railway:station_category": "2",
+    "ref": "ลช.",
+    "ref:station": "2246",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8866451699,
+  "lat": 14.8937362,
+  "lon": 103.6550328,
+  "tags": {
+    "name": "เมืองที",
+    "name:en": "Mueang Thi",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "อท",
+    "railway:station_category": "3",
+    "ref": "อท.",
+    "ref:station": "2252",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8926918785,
+  "lat": 14.9737514,
+  "lon": 103.8533067,
+  "tags": {
+    "name": "บ้านกะลัน",
+    "name:en": "Ban Kalan",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "ลน",
+    "railway:station_category": "3",
+    "ref": "ลน.",
+    "ref:station": "2258",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10175396717,
+  "lat": 12.7692937,
+  "lon": 103.4403884,
+  "tags": {
+    "name:en": "Maung Russey",
+    "public_transport": "station",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 10591979654,
+  "lat": 10.9507929,
+  "lon": 106.8263284,
+  "tags": {
+    "name": "Biên Hòa",
+    "name:en": "Bien Hoa",
+    "network": "VN:railway",
+    "operator": "Vietnam Railway (VNR)",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "BH",
+    "train": "yes",
+    "wikidata": "Q2012224",
+    "wikipedia": "vi:Ga Biên Hòa"
+  }
+},
+{
+  "type": "node",
+  "id": 10591979655,
+  "lat": 10.7823050,
+  "lon": 106.6771626,
+  "tags": {
+    "name": "Sài Gòn",
+    "name:en": "Sai Gon",
+    "name:ja": "サイゴン駅",
+    "name:th": "ไซ่ง่อน",
+    "name:zh": "西贡",
+    "network": "VN:railway",
+    "operator": "Vietnam Railway (VNR)",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "Sài Gòn",
+    "train": "yes",
+    "wikidata": "Q2673539",
+    "wikipedia": "vi:Ga Sài Gòn"
+  }
+},
+{
+  "type": "node",
+  "id": 11136225851,
+  "lat": 10.8781962,
+  "lon": 106.7517797,
+  "tags": {
+    "name": "Sóng Thần",
+    "name:en": "Song Than",
+    "network": "VN:railway",
+    "operator": "VNR",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "ST",
+    "train": "yes",
+    "wikidata": "Q7561050",
+    "wikipedia": "vi:Ga Sóng Thần"
+  }
+},
+{
+  "type": "node",
+  "id": 11197416169,
+  "lat": 10.9307927,
+  "lon": 107.9434531,
+  "tags": {
+    "fixme": "Track positions unknown",
+    "name": "Hàm Cường Tây",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11197416221,
+  "lat": 10.9212890,
+  "lon": 107.6727371,
+  "tags": {
+    "name": "Sông Dinh",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11519736545,
+  "lat": 11.5724555,
+  "lon": 104.9160379,
+  "tags": {
+    "name": "ស្ថានីយ៍ភ្នំពេញ",
+    "name:en": "Phnom Penh",
+    "name:km": "ស្ថានីយ៍ភ្នំពេញ",
+    "name:ru": "Пномпень",
+    "name:th": "พนมเปญ",
+    "public_transport": "station",
+    "railway": "station",
+    "wikidata": "Q7374763"
+  }
+},
+{
+  "type": "node",
+  "id": 11519772902,
+  "lat": 10.6611611,
+  "lon": 104.5509865,
+  "tags": {
+    "name": "ស្ថានីយ៍ទូកមាស",
+    "name:en": "Touk Meas",
+    "name:km": "ស្ថានីយ៍ទូកមាស",
+    "name:ru": "Тоукмеах",
+    "railway": "station"
+  }
+},
+{
+  "type": "node",
+  "id": 11521364541,
+  "lat": 10.5503048,
+  "lon": 104.3225633,
+  "tags": {
+    "name": "ស្ថានីយ៍កែប",
+    "name:en": "Kep",
+    "name:km": "ស្ថានីយ៍កែប",
+    "name:ru": "Каеп",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11521391133,
+  "lat": 10.6270116,
+  "lon": 104.1891122,
+  "tags": {
+    "name": "ស្ថានីយ៍កំពត",
+    "name:en": "Kampot",
+    "name:km": "ស្ថានីយ៍កំពត",
+    "name:ru": "Кампот",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes",
+    "website": "http://royalrailway.easybook.com",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11534222074,
+  "lat": 13.5362942,
+  "lon": 103.0193216,
+  "tags": {
+    "name": "ស្ថានីយ៍មង្គលបូរី",
+    "name:en": "Mongkol Borey",
+    "name:km": "ស្ថានីយ៍មង្គលបូរី",
+    "name:ru": "Монгкольборей",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:position": "330.2",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11586280298,
+  "lat": 10.7960548,
+  "lon": 106.7155056,
+  "tags": {
+    "level": "1",
+    "name": "Công viên Văn Thánh",
+    "name:de": "Park Văn Thánh",
+    "name:en": "Van Thanh Park",
+    "name:fr": "Parc Văn Thánh",
+    "name:nl": "Văn Thánhpark",
+    "name:th": "สวนสาธารณะวันทั้ญ",
+    "network": "Ho Chi Minh City Metro",
+    "operator": "Ban Quản lý Đường sắt đô thị Thành phố Hồ Chí Minh",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q60314194",
+    "wikipedia": "vi:Ga Công viên Văn Thánh"
+  }
+},
+{
+  "type": "node",
+  "id": 11586280299,
+  "lat": 10.7985879,
+  "lon": 106.7232392,
+  "tags": {
+    "departures_board": "realtime",
+    "level": "1",
+    "name": "Tân Cảng",
+    "name:en": "Tan Cang",
+    "network": "Ho Chi Minh City Metro",
+    "operator": "Ban Quản lý Đường sắt đô thị Thành phố Hồ Chí Minh",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q60314173",
+    "wikipedia": "vi:Ga Tân Cảng"
+  }
+},
+{
+  "type": "node",
+  "id": 11586280300,
+  "lat": 10.8004871,
+  "lon": 106.7336512,
+  "tags": {
+    "internet_access": "wlan",
+    "name": "Thảo Điền",
+    "name:en": "Thao Dien",
+    "name:th": "ถาวเดี่ยน",
+    "network": "Ho Chi Minh City Metro",
+    "operator": "Ban Quản lý Đường sắt đô thị Thành phố Hồ Chí Minh",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q60313686",
+    "wikipedia": "vi:Ga Thảo Điền"
+  }
+},
+{
+  "type": "node",
+  "id": 11586280301,
+  "lat": 10.8021337,
+  "lon": 106.7422498,
+  "tags": {
+    "name": "An Phú",
+    "name:en": "An Phu",
+    "name:th": "อานฟู้",
+    "network": "Ho Chi Minh City Metro",
+    "operator": "Ban Quản lý Đường sắt đô thị Thành phố Hồ Chí Minh",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q60314166",
+    "wikipedia": "vi:Ga An Phú"
+  }
+},
+{
+  "type": "node",
+  "id": 11586280302,
+  "lat": 10.8085535,
+  "lon": 106.7552770,
+  "tags": {
+    "name": "Rạch Chiếc",
+    "name:en": "Rach Chiec",
+    "name:th": "สักเจี๊ยก",
+    "network": "Ho Chi Minh City Metro",
+    "operator": "Ban Quản lý Đường sắt đô thị Thành phố Hồ Chí Minh",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q60314161",
+    "wikipedia": "vi:Ga Rạch Chiếc"
+  }
+},
+{
+  "type": "node",
+  "id": 11586280303,
+  "lat": 10.8214350,
+  "lon": 106.7581850,
+  "tags": {
+    "name": "Phước Long",
+    "name:en": "Phuoc Long",
+    "name:th": "เฟื้อกล็อง",
+    "network": "Ho Chi Minh City Metro",
+    "operator": "Ban Quản lý Đường sắt đô thị Thành phố Hồ Chí Minh",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q60314158",
+    "wikipedia": "vi:Ga Phước Long"
+  }
+},
+{
+  "type": "node",
+  "id": 11586280304,
+  "lat": 10.8326520,
+  "lon": 106.7638944,
+  "tags": {
+    "name": "Bình Thái",
+    "name:en": "Binh Thai",
+    "name:th": "บิ่ญท้าย",
+    "network": "Ho Chi Minh City Metro",
+    "operator": "Ban Quản lý Đường sắt đô thị Thành phố Hồ Chí Minh",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q60314150",
+    "wikipedia": "vi:Ga Bình Thái"
+  }
+},
+{
+  "type": "node",
+  "id": 11586280305,
+  "lat": 10.8589894,
+  "lon": 106.7888364,
+  "tags": {
+    "name": "Khu Công Nghệ Cao",
+    "name:en": "High Tech Park",
+    "name:th": "ไฮเทคพาร์ก",
+    "network": "Ho Chi Minh City Metro",
+    "operator": "Ban Quản lý Đường sắt đô thị Thành phố Hồ Chí Minh",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q60314137",
+    "wikipedia": "vi:Ga Khu Công nghệ cao"
+  }
+},
+{
+  "type": "node",
+  "id": 11586280306,
+  "lat": 10.8662985,
+  "lon": 106.8012008,
+  "tags": {
+    "name": "Đại học Quốc gia",
+    "name:en": "National University",
+    "name:th": "มหาวิทยาลัยแห่งชาติ",
+    "network": "Ho Chi Minh City Metro",
+    "operator": "Ban Quản lý Đường sắt đô thị Thành phố Hồ Chí Minh",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q60314143",
+    "wikipedia": "vi:Ga Đại học Quốc gia, Thành phố Hồ Chí Minh"
+  }
+},
+{
+  "type": "node",
+  "id": 11586280307,
+  "lat": 10.8795447,
+  "lon": 106.8140929,
+  "tags": {
+    "name": "Bến xe Suối Tiên",
+    "name:en": "Suoi Tien Terminal",
+    "name:th": "ขนส่งซ้วยเตียน",
+    "network": "Ho Chi Minh City Metro",
+    "operator": "Ban Quản lý Đường sắt đô thị Thành phố Hồ Chí Minh",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q61132106",
+    "wikipedia": "vi:Ga Bến xe Suối Tiên"
+  }
+},
+{
+  "type": "node",
+  "id": 11586280327,
+  "lat": 10.8464061,
+  "lon": 106.7716521,
+  "tags": {
+    "name": "Thủ Đức",
+    "name:en": "Thu Duc",
+    "name:th": "ถูดึ๊ก",
+    "network": "Ho Chi Minh City Metro",
+    "operator": "Ban Quản lý Đường sắt đô thị Thành phố Hồ Chí Minh",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wikidata": "Q60314119",
+    "wikipedia": "vi:Ga Thủ Đức"
+  }
+},
+{
+  "type": "node",
+  "id": 11809204381,
+  "lat": 14.9678193,
+  "lon": 102.1018736,
+  "tags": {
+    "name": "ชุมทางถนนจิระ",
+    "name:en": "Thanon Chira Junction",
+    "name:th": "ชุมทางถนนจิระ",
+    "operator": "การรถไฟแห่งประเทศไทย",
+    "public_transport": "station",
+    "railway": "station",
+    "railway:ref": "จร",
+    "railway:ref:en": "TNJ",
+    "railway:station_category": "1",
+    "ref:station": "2115",
+    "train": "yes",
+    "wikidata": "Q4923132",
+    "wikipedia": "th:สถานีรถไฟชุมทางถนนจิระ"
+  }
+},
+{
+  "type": "node",
+  "id": 12471143015,
+  "lat": 12.8692659,
+  "lon": 103.2785499,
+  "tags": {
+    "name": "Phnom Thipdey",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12471165135,
+  "lat": 11.8095408,
+  "lon": 104.6401941,
+  "tags": {
+    "name": "Tbeng Khpos",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12475524688,
+  "lat": 12.1619979,
+  "lon": 104.4183648,
+  "tags": {
+    "name": "Kraing Skea",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12475544388,
+  "lat": 11.6836561,
+  "lon": 104.7024723,
+  "tags": {
+    "name": "Bat Doeng",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12925813733,
+  "lat": 13.0979276,
+  "lon": 103.1943977,
+  "tags": {
+    "name": "បាត់ដំបង",
+    "name:en": "Battambang",
+    "name:th": "พระตะบอง",
+    "public_transport": "station",
+    "railway": "station",
+    "wheelchair": "limited",
+    "wikidata": "Q43581258"
+  }
+},
+{
+  "type": "node",
+  "id": 13316138905,
+  "lat": 10.6461789,
+  "lon": 106.7856370,
+  "tags": {
+    "level": "1",
+    "name": "Bình Khánh",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13316655061,
+  "lat": 10.3933680,
+  "lon": 106.9315647,
+  "tags": {
+    "name": "Cần Giờ",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13318786430,
+  "lat": 10.7242642,
+  "lon": 106.7246214,
+  "tags": {
+    "name": "Tân Thuận",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13319533422,
+  "lat": 10.6899510,
+  "lon": 106.7327077,
+  "tags": {
+    "name": "Nhà Bè",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13447234588,
+  "lat": 12.0179215,
+  "lon": 102.2902081,
+  "tags": {
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13447234589,
+  "lat": 12.0170061,
+  "lon": 102.2918158,
+  "tags": {
+    "name": "Funicular Station 4",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13447234591,
+  "lat": 12.0176634,
+  "lon": 102.2906613,
+  "tags": {
+    "name": "Funicular Station 2",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13447234592,
+  "lat": 12.0173466,
+  "lon": 102.2912178,
+  "tags": {
+    "name": "Funicular Station 3",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13811202171,
+  "lat": 10.7708492,
+  "lon": 107.0421053,
+  "tags": {
+    "name": "Long Thanh Airport",
+    "public_transport": "station",
+    "railway": "station",
+    "train": "yes"
+  }
+}
+
+  ]
+}
