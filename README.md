@@ -3,6 +3,8 @@
 An interactive [visualisation](https://xuanx1.github.io/greaterAsianTrains/) of rail reach across the continent —
 **4,382 stations, 5,031 services, 35 countries with passenger rail**.
 
+<img width="1920" height="915" alt="Screenshot 2026-05-14 211258" src="https://github.com/user-attachments/assets/b98c5f69-fef4-4f5b-bd39-0c2be5246cf7" />
+
 Pick a starting station, drag the time slider, and watch the green web grow
 to show every station you can reach by passenger train within the chosen
 budget — dark green for close, paler green further out. Click any reachable
