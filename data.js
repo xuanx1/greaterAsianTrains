@@ -849,8 +849,8 @@ window.ROUTES = [
   { from: "johorbahru",   to: "singapore",    h: 0.25, type: "conv", line: "JB–Woodlands shuttle",     op: "KTM / SMRT" },
 
   // ==========  MYANMAR (no current rail connection to neighbors)  ==========
-  { from: "yangon",       to: "naypyidaw",    h: 9.0,  type: "conv", line: "Yangon–Mandalay mainline", op: "Myanma Railways" },
-  { from: "naypyidaw",    to: "mandalay",     h: 6.0,  type: "conv", line: "Yangon–Mandalay mainline", op: "Myanma Railways" },
+  { from: "yangon",       to: "naypyidaw",    h: 9.0,  type: "conv", line: "Yangon–Mandalay mainline", op: "Myanmar Railways" },
+  { from: "naypyidaw",    to: "mandalay",     h: 6.0,  type: "conv", line: "Yangon–Mandalay mainline", op: "Myanmar Railways" },
 
   // ==========  INDONESIA (Java only)  ==========
   { from: "jakarta",      to: "bandung",      h: 0.75, type: "hsr",  line: "Whoosh (KCIC)",            op: "KCIC" },
@@ -1406,8 +1406,8 @@ window.ROUTES = [
   { from: "battambang",   to: "pursat",       h: 3.0,  type: "conv", line: "Royal Railway Northern",     op: "Royal Railway Cambodia" },
   { from: "pursat",       to: "phnompenh",    h: 5.0,  type: "conv", line: "Royal Railway Northern",     op: "Royal Railway Cambodia" },
   // MYANMAR — Pyay + Bagan
-  { from: "yangon",       to: "pyay",         h: 8.0,  type: "conv", line: "Pyay Line",                  op: "Myanma Railways" },
-  { from: "mandalay",     to: "bagan",        h: 7.0,  type: "conv", line: "Mandalay–Bagan",             op: "Myanma Railways" },
+  { from: "yangon",       to: "pyay",         h: 8.0,  type: "conv", line: "Pyay Line",                  op: "Myanmar Railways" },
+  { from: "mandalay",     to: "bagan",        h: 7.0,  type: "conv", line: "Mandalay–Bagan",             op: "Myanmar Railways" },
   // JAPAN — Tokyo metro + Tokaido extras
   { from: "tokyo",        to: "shinagawa",    h: 0.1,  type: "conv", line: "JR Yamanote",                op: "JR East" },
   { from: "shinagawa",    to: "yokohama",     h: 0.3,  type: "conv", line: "JR Keihin-Tōhoku",           op: "JR East" },
@@ -1559,7 +1559,8 @@ window.COUNTRY_NAMES = {
 
 // Region grouping (for dropdown optgroups). Order matters.
 window.REGIONS = [
-  { name: "East Asia",      codes: ["CN", "HK", "TW", "MN", "RU", "KP", "KR", "JP"] },
+  { name: "North Asia",     codes: ["RU"] },
+  { name: "East Asia",      codes: ["CN", "HK", "TW", "MN", "KP", "KR", "JP"] },
   { name: "Southeast Asia", codes: ["VN", "LA", "KH", "TH", "MM", "MY", "SG", "ID"] },
   { name: "South Asia",     codes: ["IN", "BD", "PK", "LK"] },
   { name: "Central Asia",   codes: ["KZ", "UZ", "TM", "TJ", "KG"] },

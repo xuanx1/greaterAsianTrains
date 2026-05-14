@@ -45,6 +45,20 @@
   --land:         #F4F2EE;
   --land-outside: #DEDCD7;
   --land-edge:    #B9B7B1;
+  /* Sub-region tints — six distinct hues spread around the wheel,
+     and varied in lightness so adjacent warm tones don't blur into
+     each other. SE Asia avoids green (the contours own that ramp);
+     North Asia avoids blue (would read as ocean). */
+  --region-north:     #E8E3D6; /* warm taiga cream */
+  --region-east:      #FAE0CB; /* light warm peach */
+  --region-southeast: #D7CFC0; /* muted taupe (no green, no yellow) */
+  --region-south:     #F4D5D8; /* dusty rose */
+  --region-central:   #EDDDA8; /* saturated golden sand */
+  --region-west:      #D9D4E5; /* soft lavender */
+  /* Continental divide stroke — red in either theme, distinct from
+     country borders and the orange accent (used for journeys + the
+     bridge gap). */
+  --continent-line:   rgba(196,30,30,0.75);
   --border-line:  rgba(27,27,27,0.36);
   --grid:         rgba(27,27,27,0.05);
   --accent:       #B14F2C;
@@ -66,6 +80,16 @@ body.theme-night {
   --land:         #221C13;
   --land-outside: #15110B;
   --land-edge:    #3A2E1F;
+  /* Dark-mode region tints — same six hues, mapped to deep ink with
+     comparable hue separation. North avoids navy (sea is darker still
+     but a navy-tinted Russia would still read as cold water). */
+  --region-north:     #211D12; /* warm taiga dark */
+  --region-east:      #2C1B0B; /* deep peach */
+  --region-southeast: #1E1A12; /* muted brown */
+  --region-south:     #2A1714; /* deep rose */
+  --region-central:   #251F05; /* deep gold */
+  --region-west:      #15131F; /* deep purple */
+  --continent-line:   rgba(255,90,90,0.92);
   --border-line:  rgba(240,229,200,0.32);
   --grid:         rgba(240,229,200,0.04);
   --accent:       #E68A60;
@@ -450,18 +474,30 @@ body {
   gap: 8px;
 }
 .toggle {
-  flex: 1;
+  /* `flex: 1 1 0` + min-width:0 makes every toggle in a row exactly
+     half the row width regardless of its label length, so flipping
+     state never changes the button's box. Fixed height + nowrap keep
+     the height stable even when one label is longer than another. */
+  flex: 1 1 0;
+  min-width: 0;
+  height: 34px;
   font-family: 'DM Sans', sans-serif;
   font-weight: 500;
   font-size: 12.5px;
   letter-spacing: 0.05em;
-  padding: 8px 10px;
+  padding: 0 10px;
   background: transparent;
   border: 1px solid var(--panel-edge);
   color: var(--ink-2);
   cursor: pointer;
   transition: background 0.18s, color 0.18s, border-color 0.18s;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .toggle:hover { color: var(--ink); border-color: var(--ink-3); }
 .toggle.on {
@@ -473,6 +509,22 @@ body.theme-night .toggle.on {
   background: var(--accent);
   color: var(--paper);
   border-color: var(--accent);
+}
+/* Single-state toggle button — shows the *current* state of a binary
+   setting; clicking flips. A subtle right-edge chevron hints at the
+   swap-on-click behaviour. */
+.toggle-swap {
+  position: relative;
+  padding-right: 22px;
+}
+.toggle-swap::after {
+  content: "⇆";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  opacity: 0.55;
 }
 
 /* ----- line-type legend (lives inside the Time-budget section) ----- */
@@ -486,6 +538,37 @@ body.theme-night .toggle.on {
   font-size: 11px;
   font-family: 'DM Sans', sans-serif;
   color: var(--ink-2);
+}
+/* ----- sub-region tint key (lives below the Network section) -----
+   Always mounted; max-height transitions between 0 (collapsed) and
+   200 px (shown). The Sources container is `flex: 1 1 auto`, so it
+   shrinks to accommodate the legend's animated height. */
+.legend-regions-wrap {
+  overflow: hidden;
+  max-height: 0;
+  margin-top: 0;
+  opacity: 0;
+  transition: max-height 0.32s ease, margin-top 0.32s ease, opacity 0.22s ease;
+}
+.legend-regions-wrap.show {
+  max-height: 200px;
+  margin-top: 14px;
+  opacity: 1;
+}
+.legend-regions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  font-size: 11px;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ink-2);
+}
+.legend-regions > div { display: flex; align-items: center; gap: 6px; flex: 0 0 auto; }
+.legend-regions .swatch {
+  display: inline-block;
+  width: 14px;
+  height: 10px;
+  border: 1px solid var(--panel-edge);
 }
 .legend-dashes > div { display: flex; align-items: center; gap: 6px; flex: 0 0 auto; }
 .dash {
@@ -1356,6 +1439,7 @@ body.theme-night .toggle.on {
 <script src="data_extra.js"></script>
 <script src="data_ru.js"></script>
 <script src="data_disputed.js"></script>
+<script src="data_continents.js"></script>
 <script type="text/babel" src="app.jsx"></script>
 </body>
 </html>

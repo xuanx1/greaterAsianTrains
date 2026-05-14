@@ -15,13 +15,15 @@ fill to get there.
 
 | | |
 |---|---|
-| **Pick origin** | Use the grouped dropdown, or click any station on the map. |
+| **Pick origin** | Custom searchable dropdown, or click any station / station label on the map. |
 | **Time budget** | Slider 1h → 48h. Color ramp from forest green (≤1h) to pale celadon (max). |
 | **Click reachable** | Draws the fastest route with leg-by-leg detail + service frequency. |
 | **Click disconnected** | Shows the great-circle gap + proposed bridge to close it. |
 | **Hover any station** | Top-center info card with travel time + arriving service + frequency. |
-| **HSR vs all trains** | Toggle to compare high-speed-only coverage. |
-| **Day / Night** | Two themes; cream paper or deep ink. |
+| **All Trains ↔ HSR Only** | Single toggle pill switching between the full conventional network and high-speed only. |
+| **Continental ↔ Regional** | Layer toggle: plain country fills, or six sub-region tints (North / East / SE / South / Central / West Asia). |
+| **Day ↔ Night** | Two themes; cream paper or deep ink. |
+| **Contours ↔ Lines** | Reachability isochrones, or pure rail-line view colored by travel time. |
 
 ## Coverage
 
@@ -134,12 +136,36 @@ Typical bridges surfaced by the model:
   Samdu/Bara Hotii Valleys). A wider land-coloured stroke under each
   dotted outline erases the de-jure country border wherever it
   coincides with the disputed boundary — otherwise the user would see
-  a solid line and a dotted overlay stacked on the same path.
+  a solid line and a dotted overlay stacked on the same path. In
+  Regional view the eraser switches per disputed area to the host
+  country's regional tint so the stripe blends into the surrounding
+  fill instead of cutting a cream ribbon through it.
+- **Europe ↔ Asia continental divide.** Drawn from the published
+  `asia_europe_border` geojson — 464 source fragments are
+  endpoint-merged into 3 long chains (Urals, Ural River, Caspian shore,
+  Caucasus, Bosphorus, Aegean) and Douglas-Peucker-simplified at 0.04°
+  tolerance into `data_continents.js`. Rendered as a red dashed
+  polyline; `EUROPE` / `ASIA` callouts are sampled along the chains at
+  a fixed pixel interval, rotated parallel to the local tangent, and
+  offset perpendicular so they sit on the correct side. Labels fade in
+  past zoom ≈ 1.4 and are drawn as the topmost SVG layer with a paper-
+  coloured stroke so they stay legible over any tint.
+- **Sub-region tinting (Regional view).** Six geographic sub-regions
+  (North / East / SE / South / Central / West Asia) get distinct light
+  tints when the **Regional** toggle is on. SE Asia deliberately
+  avoids green (the reachability contours own that ramp); North Asia
+  avoids blue (would read as ocean). North Asia is **Russia only**
+  (Mongolia stays grouped with East Asia). The six-swatch key slides
+  in below the Network panel using a `max-height` transition so the
+  rest of the left stack resizes smoothly rather than snapping.
 - **Performance.** Per-station projection (`stationPts` / `ptById`) is
   memoised on the projection so panning doesn't reproject ~4,400
   stations every frame. d3-zoom events and time-slider `onChange` are
   both coalesced through `requestAnimationFrame` so React reconciles
-  at most once per frame regardless of input rate.
+  at most once per frame regardless of input rate. Reachability
+  contours (`buildContourGrid` + marching squares + Catmull-Rom
+  smoothing) are precomputed once per origin/HSR change — scrubbing
+  the time slider just slices the precomputed `dStrings` array.
 
 ## Trip details
 
@@ -176,10 +202,17 @@ greaterAsianTrains/
 ├── data_disputed.js    ← 33 Asia-relevant disputed-area outlines, generated
 │                          from Natural Earth ne_10m_admin_0_disputed_areas
 │                          by uploads/build_disputed.py
+├── data_continents.js  ← Europe / Asia continental divide line — 3 merged
+│                          chains from asia_europe_border.geojson, generated
+│                          by uploads/build_continents.py
 ├── uploads/            ← raw source datasets (HOTOSM geojson, gpkg) + build scripts
 ├── assets/
 │   └── countries-50m.json   ← Natural Earth via world-atlas (public domain)
-├── vendor/             ← React, ReactDOM, Babel-standalone, d3, topojson-client
+├── vendor/
+│   ├── react.development.js, react-dom.development.js
+│   ├── babel.min.js, d3.min.js, topojson-client.min.js
+│   └── fonts/          ← self-hosted Latin-subset woff2 (Space Grotesk +
+│                          DM Sans + DM Mono), ~292 KB total, OFL
 └── README.md
 ```
 
@@ -194,6 +227,9 @@ All third-party dependencies are local — no network calls at runtime.
 - **world-atlas 2.0.2** `countries-50m.json` (Natural Earth, public domain).
 - **Natural Earth 10m** disputed-area polygons (public domain), filtered
   to Asia and simplified at ~0.012° tolerance.
+- **`asia_europe_border` geojson** for the Europe / Asia divide line —
+  464 source LineString fragments merged into 3 chains and Douglas-
+  Peucker-simplified at 0.04° (`data_continents.js`).
 - **Space Grotesk + DM Sans + DM Mono** — self-hosted Latin-subset
   woff2 files under `vendor/fonts/` (~292 KB total, SIL Open Font
   License). No network calls at runtime at all.
@@ -218,6 +254,9 @@ window.COUNTRY_NAMES      // ISO-2 → display name
 
 // data_disputed.js — Natural Earth 10m disputed-area outlines
 window.DISPUTED_LINES  // [{ name, rings: [[[lng,lat], …], …] }, …]
+
+// data_continents.js — Europe / Asia continental divide chains
+window.CONTINENT_DIVIDE_LINES  // [[[lng,lat], [lng,lat], …], …]
 ```
 
 Each supplement appends to `window.STATIONS` / `window.ROUTES`
@@ -269,8 +308,10 @@ through because it differs from the English name.
 | `railways.geojson` | HOTOSM India global — 8,947 points (145 imported) |
 | `hotosm_*_railways_lines_geojson.geojson` | line geometry dumps — unused at runtime |
 | `ne_disputed_polys.geojson` | Natural Earth `ne_10m_admin_0_disputed_areas` (filtered & simplified into `data_disputed.js` by `build_disputed.py`) |
+| `ne_geo_regions.geojson` | Natural Earth `ne_10m_geography_regions_polys` (kept as the published source of Ural / Caucasus polygon geometry) |
+| `asia_europe_border.geojson` | Europe / Asia continental boundary as 464 LineString fragments; `build_continents.py` merges them by shared endpoints, simplifies, and emits `data_continents.js` |
 | `overpass_{cc}.json` | live Overpass fetches for BD/LK/MY/MM/SA/IL/KH/NP/GE/AM/AZ/UZ/TM/KP + RU FE/Sib/Caucasus — cached as JSON so re-runs don't hit the API |
-| `*.py` | build & validation scripts that regenerate `data_ru.js`, `data_disputed.js`, and validate cross-file integrity |
+| `*.py` | build & validation scripts that regenerate `data_ru.js`, `data_disputed.js`, `data_continents.js`, and validate cross-file integrity |
 
 ## Data ingest — sources, filters, connectivity
 
