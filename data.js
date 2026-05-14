@@ -132,6 +132,7 @@ window.STATIONS = [
 
   // ==========  VIETNAM / LAOS / CAMBODIA  ==========
   { id: "hanoi",         name: "Hanoi", native: "Hà Nội",           country: "VN", lat: 21.03, lng: 105.85 },
+  { id: "haiphong",      name: "Hải Phòng", native: "Hải Phòng",       country: "VN", lat: 20.86, lng: 106.68 },
   { id: "dongdang",      name: "Đồng Đăng", native: "Đồng Đăng",       country: "VN", lat: 21.85, lng: 106.70 },
   { id: "laocai",        name: "Lào Cai", native: "Lào Cai",         country: "VN", lat: 22.49, lng: 103.96 },
   { id: "vinh",          name: "Vinh", native: "Vinh",            country: "VN", lat: 18.68, lng: 105.69 },
@@ -144,7 +145,9 @@ window.STATIONS = [
   { id: "vangvieng",     name: "Vang Vieng", native: "ວັງວຽງ",      country: "LA", lat: 18.92, lng: 102.45 },
   { id: "vientiane",     name: "Vientiane", native: "ວຽງຈັນ",       country: "LA", lat: 17.96, lng: 102.61 },
   { id: "poipet",        name: "Poipet", native: "ប៉ោយប៉ែត",          country: "KH", lat: 13.66, lng: 102.57 },
+  { id: "sisophon",      name: "Sisophon", native: "សិរីសោភ័ណ",        country: "KH", lat: 13.59, lng: 102.97 },
   { id: "phnompenh",     name: "Phnom Penh", native: "ភ្នំពេញ",      country: "KH", lat: 11.56, lng: 104.92 },
+  { id: "kampot",        name: "Kampot", native: "កំពត",              country: "KH", lat: 10.62, lng: 104.18 },
   { id: "sihanoukville", name: "Sihanoukville", native: "ក្រុងព្រះសីហនុ",   country: "KH", lat: 10.61, lng: 103.53 },
 
   // ==========  THAILAND  ==========
@@ -255,16 +258,26 @@ window.STATIONS = [
   { id: "sivas",         name: "Sivas", native: "Sivas",           country: "TR", lat: 39.75, lng: 37.02 },
   { id: "izmir",         name: "İzmir", native: "İzmir",           country: "TR", lat: 38.42, lng: 27.14 },
   { id: "gaziantep",     name: "Gaziantep", native: "Gaziantep",       country: "TR", lat: 37.07, lng: 37.38 },
+  { id: "malatya",       name: "Malatya", native: "Malatya",          country: "TR", lat: 38.36, lng: 38.31 },
+  { id: "diyarbakir",    name: "Diyarbakır", native: "Diyarbakır",     country: "TR", lat: 37.92, lng: 40.22 },
   { id: "van",           name: "Van", native: "Van",             country: "TR", lat: 38.49, lng: 43.40 },
   { id: "kars",          name: "Kars", native: "Kars",            country: "TR", lat: 40.61, lng: 43.10 },
 
   // ==========  CAUCASUS  ==========
   { id: "tbilisi",       name: "Tbilisi", native: "თბილისი",         country: "GE", lat: 41.72, lng: 44.78 },
-  { id: "batumi",        name: "Batumi", native: "ბათუმი",          country: "GE", lat: 41.65, lng: 41.64 },
+  { id: "gori",          name: "Gori", native: "გორი",                country: "GE", lat: 41.98, lng: 44.11 },
+  { id: "khashuri",      name: "Khashuri", native: "ხაშური",          country: "GE", lat: 41.99, lng: 43.60 },
   { id: "kutaisi",       name: "Kutaisi", native: "ქუთაისი",         country: "GE", lat: 42.27, lng: 42.71 },
+  { id: "poti",          name: "Poti", native: "ფოთი",                country: "GE", lat: 42.15, lng: 41.67 },
+  { id: "zugdidi",       name: "Zugdidi", native: "ზუგდიდი",          country: "GE", lat: 42.51, lng: 41.87 },
+  { id: "batumi",        name: "Batumi", native: "ბათუმი",          country: "GE", lat: 41.65, lng: 41.64 },
   { id: "yerevan",       name: "Yerevan", native: "Երևան",         country: "AM", lat: 40.18, lng: 44.51 },
+  { id: "vanadzor",      name: "Vanadzor", native: "Վանաձոր",       country: "AM", lat: 40.81, lng: 44.49 },
   { id: "baku",          name: "Baku", native: "Bakı",            country: "AZ", lat: 40.41, lng: 49.87 },
+  { id: "sumgait",       name: "Sumqayıt", native: "Sumqayıt",       country: "AZ", lat: 40.59, lng: 49.67 },
+  { id: "yevlakh",       name: "Yevlakh", native: "Yevlax",         country: "AZ", lat: 40.62, lng: 47.15 },
   { id: "ganja",         name: "Ganja", native: "Gəncə",           country: "AZ", lat: 40.68, lng: 46.36 },
+  { id: "agstafa",       name: "Ağstafa", native: "Ağstafa",         country: "AZ", lat: 41.12, lng: 45.46 },
 
   // ==========  CENTRAL ASIA  ==========
   { id: "almaty",        name: "Almaty", native: "Алматы",          country: "KZ", lat: 43.22, lng: 76.85 },
@@ -278,10 +291,29 @@ window.STATIONS = [
   { id: "samarkand",     name: "Samarkand", native: "Samarqand",       country: "UZ", lat: 39.65, lng: 66.97 },
   { id: "bukhara",       name: "Bukhara", native: "Buxoro",         country: "UZ", lat: 39.77, lng: 64.42 },
   { id: "khiva",         name: "Khiva (Urgench)", native: "Xiva", country: "UZ", lat: 41.55, lng: 60.63 },
+  { id: "andijan",       name: "Andijan", native: "Andijon",         country: "UZ", lat: 40.78, lng: 72.34 },
+  { id: "termez",        name: "Termez", native: "Termiz",           country: "UZ", lat: 37.22, lng: 67.28 },
+  { id: "nukus",         name: "Nukus", native: "Nukus",            country: "UZ", lat: 42.46, lng: 59.61 },
   { id: "ashgabat",      name: "Ashgabat", native: "Aşgabat",        country: "TM", lat: 37.95, lng: 58.38 },
   { id: "mary",          name: "Mary", native: "Mary",            country: "TM", lat: 37.60, lng: 61.84 },
+  { id: "turkmenabat",   name: "Türkmenabat", native: "Türkmenabat",  country: "TM", lat: 39.07, lng: 63.58 },
   { id: "turkmenbashi",  name: "Türkmenbaşı", native: "Türkmenbaşy",     country: "TM", lat: 40.02, lng: 52.97 },
   { id: "dushanbe",      name: "Dushanbe", native: "Душанбе",        country: "TJ", lat: 38.56, lng: 68.79 },
+  { id: "bishkek",       name: "Bishkek", native: "Бишкек",          country: "KG", lat: 42.87, lng: 74.59 },
+  { id: "balykchy",      name: "Balykchy", native: "Балыкчы",         country: "KG", lat: 42.46, lng: 76.18 },
+
+  // ==========  IRAQ  ==========
+  // IRR runs Baghdad–Basra overnight sleeper on alternate days; Mosul
+  // service was reactivated post-ISIS but remains intermittent.
+  { id: "baghdad",       name: "Baghdad", native: "بغداد",            country: "IQ", lat: 33.31, lng: 44.36 },
+  { id: "basra",         name: "Basra", native: "البصرة",             country: "IQ", lat: 30.51, lng: 47.78 },
+  { id: "mosul",         name: "Mosul", native: "الموصل",            country: "IQ", lat: 36.34, lng: 43.13 },
+
+  // ==========  UAE — Etihad Rail (Hafeet Express, launched 2024–25)  ==========
+  { id: "abudhabi",      name: "Abu Dhabi", native: "أبوظبي",          country: "AE", lat: 24.47, lng: 54.37 },
+  { id: "dubai",         name: "Dubai", native: "دبي",                country: "AE", lat: 25.20, lng: 55.27 },
+  { id: "sharjah",       name: "Sharjah", native: "الشارقة",           country: "AE", lat: 25.35, lng: 55.42 },
+  { id: "fujairah",      name: "Fujairah", native: "الفجيرة",          country: "AE", lat: 25.13, lng: 56.34 },
 
   // ==========  ISRAEL  ==========
   { id: "telaviv",       name: "Tel Aviv", native: "תל אביב",        country: "IL", lat: 32.08, lng: 34.78 },
@@ -772,6 +804,7 @@ window.ROUTES = [
 
   // ==========  VIETNAM  ==========
   { from: "hanoi",        to: "dongdang",     h: 4.0,  type: "conv", line: "Hanoi–Đồng Đăng Line",    op: "Vietnam Railways" },
+  { from: "hanoi",        to: "haiphong",     h: 2.5,  type: "conv", line: "Hanoi–Hải Phòng Line",    op: "Vietnam Railways" },
   { from: "hanoi",        to: "laocai",       h: 8.0,  type: "conv", line: "Hanoi–Lào Cai overnight", op: "Vietnam Railways" },
   { from: "hanoi",        to: "vinh",         h: 6.0,  type: "conv", line: "Reunification Express",   op: "Vietnam Railways" },
   { from: "vinh",         to: "hue",          h: 8.0,  type: "conv", line: "Reunification Express",   op: "Vietnam Railways" },
@@ -802,8 +835,12 @@ window.ROUTES = [
   { from: "hatyai",       to: "padangbesar",  h: 1.5,  type: "conv", line: "SRT Southern Line",       op: "SRT" },
   { from: "bangkok",      to: "aranya",       h: 5.0,  type: "conv", line: "SRT Eastern Line",        op: "SRT" },
   { from: "aranya",       to: "poipet",       h: 0.5,  type: "conv", line: "Border crossing",         op: "SRT / RR" },
-  { from: "poipet",       to: "phnompenh",    h: 12.0, type: "conv", line: "Royal Railway Northern",  op: "Royal Railway Cambodia" },
-  { from: "phnompenh",    to: "sihanoukville",h: 7.0,  type: "conv", line: "Royal Railway Southern",  op: "Royal Railway Cambodia" },
+  { from: "poipet",       to: "sisophon",     h: 1.0,  type: "conv", line: "Royal Railway Northern",  op: "Royal Railway Cambodia" },
+  { from: "sisophon",     to: "battambang",   h: 2.0,  type: "conv", line: "Royal Railway Northern",  op: "Royal Railway Cambodia" },
+  { from: "poipet",       to: "phnompenh",    h: 12.0, type: "conv", line: "Royal Railway Northern (through)", op: "Royal Railway Cambodia" },
+  { from: "phnompenh",    to: "kampot",       h: 5.0,  type: "conv", line: "Royal Railway Southern",  op: "Royal Railway Cambodia" },
+  { from: "kampot",       to: "sihanoukville",h: 2.0,  type: "conv", line: "Royal Railway Southern",  op: "Royal Railway Cambodia" },
+  { from: "phnompenh",    to: "sihanoukville",h: 7.0,  type: "conv", line: "Royal Railway Southern (through)", op: "Royal Railway Cambodia" },
   { from: "padangbesar",  to: "butterworth",  h: 2.0,  type: "conv", line: "KTM ETS",                  op: "KTM Berhad" },
   { from: "butterworth",  to: "ipoh",         h: 2.0,  type: "conv", line: "KTM ETS",                  op: "KTM Berhad" },
   { from: "ipoh",         to: "kualalumpur",  h: 2.5,  type: "conv", line: "KTM ETS",                  op: "KTM Berhad" },
@@ -918,6 +955,13 @@ window.ROUTES = [
   { from: "tashkent",     to: "samarkand",    h: 2.0,  type: "hsr",  line: "Afrosiyob",                 op: "Uzbekistan Railways" },
   { from: "samarkand",    to: "bukhara",      h: 1.5,  type: "hsr",  line: "Afrosiyob",                 op: "Uzbekistan Railways" },
   { from: "bukhara",      to: "khiva",        h: 6.0,  type: "conv", line: "Sharq",                      op: "Uzbekistan Railways" },
+  // Fergana Valley + southern + Karakalpakstan branches
+  { from: "tashkent",     to: "andijan",      h: 5.5,  type: "conv", line: "Tashkent–Andijon",          op: "Uzbekistan Railways" },
+  { from: "samarkand",    to: "termez",       h: 7.0,  type: "conv", line: "Sharq (Termez branch)",     op: "Uzbekistan Railways" },
+  { from: "khiva",        to: "nukus",        h: 3.0,  type: "conv", line: "Karakalpak branch",         op: "Uzbekistan Railways" },
+  // Turkmenistan trans-Caspian intermediates
+  { from: "mary",         to: "turkmenabat",  h: 3.0,  type: "conv", line: "Trans-Caspian",             op: "Türkmendemirýollary" },
+  { from: "turkmenabat",  to: "bukhara",      h: 2.5,  type: "conv", line: "Trans-Caspian (UZ link)",   op: "TR / UZ" },
   { from: "tashkent",     to: "dushanbe",     h: 22.0, type: "conv", line: "Sughd connector",           op: "TJ Railways / UTY" },
   { from: "almaty",       to: "dostyk",       h: 14.0, type: "conv", line: "Almaty–Dostyk",             op: "KTZ" },
   { from: "dostyk",       to: "alashankou",   h: 0.5,  type: "conv", line: "Border + gauge",            op: "KTZ / CR" },
@@ -929,12 +973,38 @@ window.ROUTES = [
   { from: "ankara",       to: "konya",        h: 1.75, type: "hsr",  line: "YHT Konya",                  op: "TCDD" },
   { from: "eskisehir",    to: "konya",        h: 2.0,  type: "hsr",  line: "YHT",                        op: "TCDD" },
   { from: "ankara",       to: "sivas",        h: 2.0,  type: "hsr",  line: "YHT Sivas",                  op: "TCDD" },
-  { from: "ankara",       to: "kars",         h: 24.0, type: "conv", line: "Doğu Express",               op: "TCDD" },
+  // Doğu Express — Ankara to Kars overnight; intermediates at Sivas, Erzincan, Erzurum,
+  // and the Adana–Malatya–Diyarbakır branch share trackage.
+  { from: "ankara",       to: "kars",         h: 24.0, type: "conv", line: "Doğu Express (through)",     op: "TCDD" },
+  { from: "sivas",        to: "malatya",      h: 4.0,  type: "conv", line: "Güney Express",              op: "TCDD" },
+  { from: "malatya",      to: "diyarbakir",   h: 4.5,  type: "conv", line: "Güney Express",              op: "TCDD" },
+  { from: "ankara",       to: "diyarbakir",   h: 17.0, type: "conv", line: "Güney Express (through)",    op: "TCDD" },
   { from: "kars",         to: "tbilisi",      h: 12.0, type: "conv", line: "Baku–Tbilisi–Kars",          op: "TCDD / GR / ADY" },
-  { from: "tbilisi",      to: "baku",         h: 12.0, type: "conv", line: "BTK / overnight",            op: "GR / ADY" },
-  { from: "tbilisi",      to: "yerevan",      h: 11.0, type: "conv", line: "Yerevan Express",            op: "South Caucasus Railway" },
-  { from: "tbilisi",      to: "batumi",       h: 5.0,  type: "conv", line: "Stadler express",            op: "Georgian Railway" },
-  { from: "tbilisi",      to: "kutaisi",      h: 4.0,  type: "conv", line: "Tbilisi–Kutaisi",            op: "Georgian Railway" },
+  // BTK + Az main line intermediates (Aghstafa, Ganja, Yevlakh, Sumgait)
+  { from: "tbilisi",      to: "agstafa",      h: 3.0,  type: "conv", line: "BTK / overnight",            op: "GR / ADY" },
+  { from: "agstafa",      to: "ganja",        h: 1.5,  type: "conv", line: "BTK / overnight",            op: "GR / ADY" },
+  { from: "ganja",        to: "yevlakh",      h: 1.5,  type: "conv", line: "ADY mainline",               op: "Azerbaijan Railways" },
+  { from: "yevlakh",      to: "sumgait",      h: 4.5,  type: "conv", line: "ADY mainline",               op: "Azerbaijan Railways" },
+  { from: "sumgait",      to: "baku",         h: 0.75, type: "conv", line: "ADY mainline",               op: "Azerbaijan Railways" },
+  { from: "tbilisi",      to: "baku",         h: 12.0, type: "conv", line: "BTK / overnight (through)",  op: "GR / ADY" },
+  { from: "tbilisi",      to: "vanadzor",     h: 5.0,  type: "conv", line: "Yerevan Express",            op: "South Caucasus Railway" },
+  { from: "vanadzor",     to: "yerevan",      h: 6.0,  type: "conv", line: "Yerevan Express",            op: "South Caucasus Railway" },
+  { from: "tbilisi",      to: "yerevan",      h: 11.0, type: "conv", line: "Yerevan Express (through)",  op: "South Caucasus Railway" },
+  // Tbilisi–Batumi main line via Gori / Khashuri / Kutaisi. The
+  // Stadler express stops at the intermediates listed below; the
+  // direct edge captures express through-running.
+  { from: "tbilisi",      to: "gori",         h: 1.25, type: "conv", line: "Stadler express",            op: "Georgian Railway" },
+  { from: "gori",         to: "khashuri",     h: 0.75, type: "conv", line: "Stadler express",            op: "Georgian Railway" },
+  { from: "khashuri",     to: "kutaisi",      h: 1.5,  type: "conv", line: "Stadler express",            op: "Georgian Railway" },
+  { from: "kutaisi",      to: "batumi",       h: 1.5,  type: "conv", line: "Stadler express",            op: "Georgian Railway" },
+  { from: "tbilisi",      to: "batumi",       h: 5.0,  type: "conv", line: "Stadler express (through)",  op: "Georgian Railway" },
+  { from: "tbilisi",      to: "kutaisi",      h: 4.0,  type: "conv", line: "Tbilisi–Kutaisi express",    op: "Georgian Railway" },
+  // West Georgia branches off Khashuri / Samtredia junction
+  { from: "khashuri",     to: "poti",         h: 3.5,  type: "conv", line: "Poti overnight",             op: "Georgian Railway" },
+  { from: "khashuri",     to: "zugdidi",      h: 4.5,  type: "conv", line: "Zugdidi overnight",          op: "Georgian Railway" },
+  { from: "poti",         to: "zugdidi",      h: 1.5,  type: "conv", line: "West Georgia coastal",       op: "Georgian Railway" },
+  { from: "tbilisi",      to: "zugdidi",      h: 8.0,  type: "conv", line: "Zugdidi overnight (through)", op: "Georgian Railway" },
+  { from: "tbilisi",      to: "poti",         h: 7.0,  type: "conv", line: "Poti overnight (through)",   op: "Georgian Railway" },
 
   // ==========  ISRAEL  ==========
   { from: "telaviv",      to: "jerusalem",    h: 0.5,  type: "hsr",  line: "Tel Aviv–Jerusalem fast",    op: "Israel Railways" },
@@ -947,6 +1017,19 @@ window.ROUTES = [
   { from: "riyadh",       to: "hofuf",        h: 2.0,  type: "conv", line: "SAR East line",              op: "SAR" },
   { from: "hofuf",        to: "dammam",       h: 1.5,  type: "conv", line: "SAR East line",              op: "SAR" },
   { from: "riyadh",       to: "dammam",       h: 4.0,  type: "conv", line: "SAR East line",              op: "SAR" },
+
+  // ==========  IRAQ — IRR Baghdad–Basra sleeper + Mosul branch  ==========
+  { from: "baghdad",      to: "basra",        h: 12.0, type: "conv", line: "IRR Night Express",          op: "Iraqi Republic Railways" },
+  { from: "baghdad",      to: "mosul",        h: 7.0,  type: "conv", line: "IRR Mosul service",          op: "Iraqi Republic Railways" },
+
+  // ==========  KYRGYZSTAN — Bishkek–Balykchy (Issyk-Kul, summer)  ==========
+  { from: "bishkek",      to: "balykchy",     h: 5.0,  type: "conv", line: "Issyk-Kul tourist",          op: "Kyrgyz Temir Joly" },
+
+  // ==========  UAE — Etihad Rail Hafeet Express (passenger)  ==========
+  { from: "abudhabi",     to: "dubai",        h: 0.85, type: "hsr",  line: "Hafeet Express",             op: "Etihad Rail" },
+  { from: "dubai",        to: "sharjah",      h: 0.2,  type: "hsr",  line: "Hafeet Express",             op: "Etihad Rail" },
+  { from: "sharjah",      to: "fujairah",     h: 0.75, type: "hsr",  line: "Hafeet Express",             op: "Etihad Rail" },
+  { from: "abudhabi",     to: "fujairah",     h: 1.75, type: "hsr",  line: "Hafeet Express (through)",   op: "Etihad Rail" },
 
   // ==========  TAIWAN — THSR (high-speed) + TRA (conv)  ==========
   { from: "taipei",       to: "banqiao",      h: 0.1,  type: "hsr",  line: "THSR",                       op: "Taiwan HSR" },
@@ -1479,8 +1562,8 @@ window.REGIONS = [
   { name: "East Asia",      codes: ["CN", "HK", "TW", "MN", "RU", "KP", "KR", "JP"] },
   { name: "Southeast Asia", codes: ["VN", "LA", "KH", "TH", "MM", "MY", "SG", "ID"] },
   { name: "South Asia",     codes: ["IN", "BD", "PK", "LK"] },
-  { name: "Central Asia",   codes: ["KZ", "UZ", "TM", "TJ"] },
-  { name: "West Asia",      codes: ["IR", "TR", "GE", "AM", "AZ", "IL", "SA"] },
+  { name: "Central Asia",   codes: ["KZ", "UZ", "TM", "TJ", "KG"] },
+  { name: "West Asia",      codes: ["IR", "IQ", "TR", "GE", "AM", "AZ", "IL", "SA", "AE"] },
 ];
 
 // ISO numeric IDs (as used by world-atlas) of countries with no
@@ -1492,10 +1575,8 @@ window.HATCH_COUNTRY_IDS = new Set([
   "096", // Brunei
   "196", // Cyprus
   "275", // Palestine
-  "368", // Iraq (very limited & disrupted)
   "400", // Jordan (Hejaz heritage only)
   "414", // Kuwait
-  "417", // Kyrgyzstan
   "422", // Lebanon (suspended)
   "446", // Macao
   "462", // Maldives
@@ -1506,8 +1587,10 @@ window.HATCH_COUNTRY_IDS = new Set([
   "626", // Timor-Leste
   "634", // Qatar
   "760", // Syria (war-disrupted)
-  "784", // UAE (Etihad Rail passenger service just launching)
   "887", // Yemen
+  // Removed: Iraq (IRR Baghdad–Basra sleeper still runs), Kyrgyzstan
+  // (Bishkek–Balykchy summer service to Issyk-Kul), UAE (Etihad Rail
+  // Hafeet Express passenger service running Abu Dhabi–Fujairah).
 ]);
 
 window.STATIONS_BY_ID = Object.fromEntries(window.STATIONS.map(s => [s.id, s]));

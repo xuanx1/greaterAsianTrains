@@ -171,11 +171,12 @@ body {
 .mh-title {
   font-family: 'Space Grotesk', 'DM Sans', sans-serif;
   font-weight: 600;
-  font-size: 56px;
+  font-size: 46px;
   line-height: 0.95;
   letter-spacing: -0.02em;
   margin: 0 0 6px;
   color: var(--ink);
+  white-space: nowrap;
 }
 .mh-sub {
   font-family: 'Space Grotesk', 'DM Sans', sans-serif;
@@ -1056,6 +1057,28 @@ body.theme-night .toggle.on {
   text-transform: uppercase;
   color: var(--ink-3);
   margin-top: 2px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.rc-leg-freq {
+  font-family: 'DM Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding: 1px 5px;
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.hc-leg-freq {
+  color: var(--accent);
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  margin-left: 4px;
 }
 
 /* ----- hover card ----- */
@@ -1151,54 +1174,10 @@ body.theme-night .toggle.on {
   margin-top: 2px;
 }
 
-/* ----- tweaks ----- */
-.tweaks-panel {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 50;
-  background: var(--panel);
-  border: 1px solid var(--panel-edge);
-  padding: 14px 18px;
-  box-shadow: var(--shadow);
-  min-width: 280px;
-}
-.tp-head {
-  display: flex; align-items: center; justify-content: space-between;
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--ink);
-  margin-bottom: 10px;
-}
-.tp-close {
-  background: none; border: none; font-size: 22px;
-  cursor: pointer; color: var(--ink-2); line-height: 1;
-}
-.tp-row {
-  display: grid;
-  grid-template-columns: 1fr 90px 32px;
-  gap: 10px;
-  align-items: center;
-  margin-top: 6px;
-}
-.tp-row label {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 12px;
-  color: var(--ink-2);
-}
-.tp-val {
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  color: var(--ink);
-  text-align: right;
-}
-
 /* responsive: small screens */
 @media (max-width: 1100px) {
   .app { grid-template-columns: 320px 1fr 340px; }
-  .mh-title { font-size: 44px; }
+  .mh-title { font-size: 40px; }
 }
 @media (max-width: 900px) {
   .app {
@@ -1236,6 +1215,7 @@ body.theme-night .toggle.on {
 <script src="data.js"></script>
 <script src="data_extra.js"></script>
 <script src="data_ru.js"></script>
+<script src="data_disputed.js"></script>
 <script type="text/babel" src="app.jsx"></script>
 </body>
 </html>

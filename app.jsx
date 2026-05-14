@@ -13,6 +13,51 @@ function fmtH(h) {
   return mm === 0 ? `${hh}h` : `${hh}h ${mm.toString().padStart(2,"0")}`;
 }
 
+// Best-effort frequency label for a route. Honours an explicit
+// `r.freq` override when present, otherwise infers from the line name
+// and train type. Reflects published timetables c. 2024–26:
+//   • HSR services run roughly hourly or better on most corridors.
+//   • Named conventional intercity (Reunification, Stadler, ETS, etc.)
+//     runs multiple times a day.
+//   • Sleepers / overnight services are usually one departure per day.
+//   • Trans-Mongolian K3/K23 + Trans-Manchurian K19 are weekly.
+//   • The Issyk-Kul / Caucasus heritage / Hejaz lines are seasonal.
+function freqLabel(r) {
+  if (r && r.freq) return r.freq;
+  const line = ((r && r.line) || "").toLowerCase();
+  const op = ((r && r.op) || "").toLowerCase();
+  if (/trans[- ]?mongolian|trans[- ]?manchurian|\bk3\b|\bk4\b|\bk19\b|\bk20\b|\bk23\b|\bk24\b/.test(line)) {
+    return "1–2×/week";
+  }
+  if (/seasonal|tourist|issyk-kul|hejaz/.test(line)) {
+    return "Seasonal";
+  }
+  if (/heritage/.test(line)) {
+    return "Heritage / limited";
+  }
+  if (/btk|baku.*tbilisi.*kars|kars.*tbilisi/.test(line)) {
+    return "1–2×/week";
+  }
+  if (/yerevan express|tbilisi.*yerevan/.test(line)) {
+    return "Every other day";
+  }
+  if (/overnight|sleeper|night express|do[ğg]u express|güney express|toros express/.test(line)) {
+    return "Daily (overnight)";
+  }
+  if (/border|crossing|frontier/.test(line)) {
+    return "Limited";
+  }
+  if (r && r.type === "hsr") {
+    // Chinese / Korean / Japanese HSR corridors are extremely frequent;
+    // Etihad / Haramain / Afrosiyob are scheduled multiple times daily.
+    if (/etihad|haramain|afrosiyob|hafeet/.test(line) || /etihad rail/.test(op)) {
+      return "Several daily";
+    }
+    return "Frequent (hourly+)";
+  }
+  return "Multiple daily";
+}
+
 // Returns the native string if it adds information beyond `name`, else null.
 // Strips case, diacritics, punctuation, and whitespace before comparing — so
 // "Bandung"/"Bandung", "Hue"/"Huế", "Tai'an"/"泰安" handle correctly. Multi-
@@ -174,6 +219,132 @@ function findBridge(target, reachableIds, stations) {
     }
   }
   return best ? { from: best, to: tgt, km: bestD } : null;
+}
+
+// Identify routes that are visually redundant: a direct A→B edge where
+// a chain A→…→B already exists through intermediate stations along the
+// same geographic corridor. The dataset deliberately carries both
+// (express through-services like Beijing→Shanghai 4.25h plus the chain
+// of intermediates) so Dijkstra can pick the faster express; on the
+// map this produces a straight chord on top of the wiggly chain. We
+// keep all edges in the routing graph and only suppress the chord at
+// render time. Returns a Set of indices into `routes`.
+function computeRedundantRouteIndices(routes, stations) {
+  const stById = Object.fromEntries(stations.map(s => [s.id, s]));
+  const adj = {};
+  for (let i = 0; i < routes.length; i++) {
+    const r = routes[i];
+    (adj[r.from] = adj[r.from] || []).push({ to: r.to, idx: i });
+    (adj[r.to]   = adj[r.to]   || []).push({ to: r.from, idx: i });
+  }
+  const redundant = new Set();
+  const MAX_HOPS = 14;
+  for (let i = 0; i < routes.length; i++) {
+    const r = routes[i];
+    const a = stById[r.from], b = stById[r.to];
+    if (!a || !b) continue;
+    // Equirectangular projection around the segment's mid-latitude so
+    // perpendicular-distance comparisons are roughly metric.
+    const midLat = (a.lat + b.lat) / 2;
+    const cos = Math.cos(midLat * Math.PI / 180);
+    const ax = a.lng * cos, ay = a.lat;
+    const bx = b.lng * cos, by = b.lat;
+    const dx = bx - ax, dy = by - ay;
+    const len2 = dx*dx + dy*dy;
+    const len = Math.sqrt(len2);
+    if (len < 0.4) continue; // too short for an intermediate to fit
+    const tol = Math.min(len * 0.15, 1.4); // ~155 km cap
+
+    // BFS from r.from to r.to inside the corridor, skipping the direct
+    // edge `i` and requiring at least one intermediate hop.
+    const visited = new Set([r.from]);
+    const hops = { [r.from]: 0 };
+    const queue = [r.from];
+    let qi = 0;
+    let found = false;
+    while (qi < queue.length && !found) {
+      const cur = queue[qi++];
+      const h = hops[cur];
+      if (h >= MAX_HOPS) continue;
+      for (const n of (adj[cur] || [])) {
+        if (n.idx === i) continue;
+        if (n.to === r.to) {
+          if (cur !== r.from) { found = true; break; }
+          continue; // a parallel direct edge isn't a chain — ignore
+        }
+        if (visited.has(n.to)) continue;
+        const pt = stById[n.to];
+        if (!pt) continue;
+        const xx = pt.lng * cos, xy = pt.lat;
+        const t = ((xx - ax) * dx + (xy - ay) * dy) / len2;
+        if (t < -0.05 || t > 1.05) continue;
+        const px = ax + t * dx, py = ay + t * dy;
+        const pdx = xx - px, pdy = xy - py;
+        if (pdx*pdx + pdy*pdy > tol*tol) continue;
+        visited.add(n.to);
+        hops[n.to] = h + 1;
+        queue.push(n.to);
+      }
+    }
+    if (found) redundant.add(i);
+  }
+  return redundant;
+}
+
+// Chain consecutive route segments of the same named rail line into
+// continuous polylines so the map renders one smooth path per service
+// instead of N individual line segments butted end-to-end (which look
+// like dots-connecting-lines once a round stroke cap blooms at every
+// station endpoint). Routes are grouped by `line` (the named service);
+// inside each group we BFS-walk the adjacency, starting from degree-1
+// nodes so endpoints come out as honest path termini, then mop up any
+// remaining loop interior. Returns [{ stations: [id, ...], type }, …].
+function chainRoutesIntoPolylines(routes) {
+  const groups = new Map();
+  for (const r of routes) {
+    const k = r.line || r.op || "_";
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(r);
+  }
+  const polylines = [];
+  for (const [, es] of groups) {
+    if (es.length === 0) continue;
+    const adj = {};
+    for (const r of es) {
+      (adj[r.from] = adj[r.from] || []).push(r.to);
+      (adj[r.to]   = adj[r.to]   || []).push(r.from);
+    }
+    const used = new Set(); // canonical edge keys
+    const ek = (a, b) => a < b ? `${a}|${b}` : `${b}|${a}`;
+    const nodes = Object.keys(adj);
+    // Prefer starting from degree-1 endpoints — those produce a clean
+    // walk to the far end of the chain. Fall back to any remaining
+    // node so closed loops still get traversed.
+    const starts = nodes.filter(n => adj[n].length === 1).concat(nodes);
+    const type = es[0].type;
+    for (const start of starts) {
+      let cur = start;
+      let walked = false;
+      const stations = [start];
+      while (true) {
+        let next = null;
+        for (const n of adj[cur]) {
+          if (used.has(ek(cur, n))) continue;
+          next = n;
+          break;
+        }
+        if (next == null) break;
+        used.add(ek(cur, next));
+        stations.push(next);
+        cur = next;
+        walked = true;
+      }
+      if (walked && stations.length >= 2) {
+        polylines.push({ stations, type });
+      }
+    }
+  }
+  return polylines;
 }
 
 // =============================================================
@@ -509,61 +680,15 @@ const ASIA_NAMES = new Set(["N. Cyprus"]);
 const HATCH_NAMES = new Set(["N. Cyprus"]); // also no rail
 
 // =============================================================
-// DISPUTED BOUNDARY LINES — hand-curated polylines for areas where the
-// de-facto borders in world-atlas don't match every country's claim.
-// Drawn as dotted lines on top of the basemap (Google-style).
-// =============================================================
-const DISPUTED_LINES = [
-  {
-    name: "Kashmir LoC (India–Pakistan)",
-    coords: [
-      [74.34, 32.50],[74.10, 33.05],[73.95, 33.50],[74.10, 34.10],
-      [74.65, 34.55],[75.30, 34.75],[76.10, 34.85],[76.85, 35.15],
-      [77.70, 35.50],[78.00, 35.55]
-    ]
-  },
-  {
-    name: "India–China Line of Actual Control (Aksai Chin)",
-    coords: [
-      [78.00, 35.55],[78.50, 35.00],[79.20, 34.20],[79.90, 33.40],
-      [80.30, 32.60],[80.80, 31.95],[81.50, 31.20]
-    ]
-  },
-  {
-    name: "Sino-Indian eastern sector (Arunachal Pradesh)",
-    coords: [
-      [91.65, 27.30],[92.30, 27.55],[93.10, 27.80],[94.00, 28.10],
-      [95.10, 28.35],[96.20, 28.50],[97.10, 28.30],[97.40, 28.05]
-    ]
-  },
-  {
-    name: "Crimea (Russia–Ukraine)",
-    coords: [
-      [33.55, 46.18],[34.05, 46.10],[34.65, 46.20],[35.20, 46.10],
-      [35.85, 45.90],[36.45, 45.50]
-    ]
-  },
-  {
-    name: "Northern Cyprus (TRNC)",
-    coords: [
-      [32.35, 35.10],[32.85, 35.18],[33.30, 35.20],[33.75, 35.10],
-      [34.20, 35.20],[34.55, 35.30]
-    ]
-  },
-  {
-    name: "Gaza & West Bank (Palestinian Territories)",
-    coords: [
-      [34.45, 31.55],[34.30, 31.32],[34.55, 31.20]
-    ]
-  },
-  {
-    name: "Israel–West Bank",
-    coords: [
-      [35.00, 32.55],[35.10, 32.30],[35.20, 32.00],[35.10, 31.70],
-      [35.20, 31.50],[35.35, 31.35]
-    ]
-  },
-];
+// DISPUTED BOUNDARY OUTLINES — loaded from data_disputed.js, which is
+// generated from Natural Earth's ne_10m_admin_0_disputed_areas
+// polygons (see uploads/build_disputed.py). Each entry has one or
+// more rings; rings are drawn as closed dotted boundaries around the
+// disputed territory. The dataset covers Asia-relevant disputes —
+// Abkhazia, South Ossetia, Crimea, N. Cyprus, Kashmir/Aksai Chin/
+// Arunachal, Nagorno-Karabakh, Korean DMZ, Donbas, Bhutan claims,
+// etc. — at ~10m resolution rather than the prior ~6-vertex sketches.
+const DISPUTED_LINES = (typeof window !== "undefined" && window.DISPUTED_LINES) || [];
 
 const ASIAN_COUNTRY_IDS = new Set([
   "004","031","048","050","051","064","086","096","104","116","144",
@@ -860,30 +985,6 @@ const SEA_LABELS = [
 ];
 
 // =============================================================
-// COMPASS ROSE (SVG)
-// =============================================================
-function Compass({ x, y, r = 38 }) {
-  return (
-    <g transform={`translate(${x},${y})`} className="compass">
-      <circle r={r} fill="none" stroke="currentColor" strokeOpacity="0.45" strokeWidth="0.8" />
-      <circle r={r - 5} fill="none" stroke="currentColor" strokeOpacity="0.25" strokeWidth="0.5" />
-      {/* 4 cardinal spikes */}
-      <path d={`M0,${-r+3} L4,0 L0,${r-3} L-4,0 Z`} fill="currentColor" fillOpacity="0.85" />
-      <path d={`M${-r+3},0 L0,4 L${r-3},0 L0,-4 Z`} fill="currentColor" fillOpacity="0.55" />
-      {/* Diagonals */}
-      <g transform="rotate(45)">
-        <path d={`M0,${-r+8} L2.5,0 L0,${r-8} L-2.5,0 Z`} fill="currentColor" fillOpacity="0.35" />
-        <path d={`M${-r+8},0 L0,2.5 L${r-8},0 L0,-2.5 Z`} fill="currentColor" fillOpacity="0.25" />
-      </g>
-      <text y={-r - 6} textAnchor="middle" fontSize="10" fontFamily="'Space Grotesk', 'DM Sans', sans-serif" letterSpacing="3" fill="currentColor">N</text>
-      <text y={r + 14} textAnchor="middle" fontSize="10" fontFamily="'Space Grotesk', 'DM Sans', sans-serif" letterSpacing="3" fill="currentColor">S</text>
-      <text x={r + 8} y={3.5} fontSize="10" fontFamily="'Space Grotesk', 'DM Sans', sans-serif" letterSpacing="3" fill="currentColor">E</text>
-      <text x={-r - 8} y={3.5} textAnchor="end" fontSize="10" fontFamily="'Space Grotesk', 'DM Sans', sans-serif" letterSpacing="3" fill="currentColor">W</text>
-    </g>
-  );
-}
-
-// =============================================================
 // MAP
 // =============================================================
 function MapView({
@@ -900,12 +1001,20 @@ function MapView({
   useEffect(() => {
     if (!svgRef.current || !window.d3) return;
     const svg = d3.select(svgRef.current);
+    // d3-zoom fires "zoom" once per pointer/wheel event — often many
+    // times per frame on a trackpad pan. Coalesce to one setState per
+    // animation frame so React only reconciles the SVG tree at most
+    // 60 times/sec.
+    let pending = null;
+    let raf = 0;
+    const flush = () => {
+      raf = 0;
+      if (pending) { setZoomT(pending); pending = null; }
+    };
     const zoom = d3.zoom()
       .scaleExtent([1, 14])
       .translateExtent([[0, 0], [W, H]])
       .filter((event) => {
-        // Allow wheel + drag on background, but ignore clicks on station dots
-        // so they don't accidentally trigger pan.
         if (event.type === "mousedown" || event.type === "touchstart") {
           const t = event.target;
           if (t && (t.closest(".station") || t.closest(".list-row"))) return false;
@@ -914,10 +1023,14 @@ function MapView({
       })
       .on("zoom", (event) => {
         const t = event.transform;
-        setZoomT({ k: t.k, x: t.x, y: t.y });
+        pending = { k: t.k, x: t.x, y: t.y };
+        if (!raf) raf = requestAnimationFrame(flush);
       });
     svg.call(zoom);
-    return () => { svg.on(".zoom", null); };
+    return () => {
+      svg.on(".zoom", null);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   const adj = useMemo(() => buildAdjacency(ROUTES, hsrOnly), [hsrOnly]);
@@ -956,17 +1069,135 @@ function MapView({
 
   if (!projection) return null;
   const pathGen = world ? d3.geoPath(projection) : null;
-  const proj = (s) => projection([s.lng, s.lat]);
-
-  // Project stations
-  const stationPts = STATIONS.map(s => {
-    const [x, y] = proj(s);
-    return { ...s, x, y };
-  });
-  const ptById = Object.fromEntries(stationPts.map(s => [s.id, s]));
+  // Project once per projection change. Previously stationPts was
+  // rebuilt on every render — that's ~4000 array allocations and
+  // projection calls per pan/zoom/scrub frame, which dominates the
+  // map's update cost.
+  const stationPts = useMemo(() => {
+    if (!projection) return [];
+    return STATIONS.map(s => {
+      const [x, y] = projection([s.lng, s.lat]);
+      return { ...s, x, y };
+    });
+  }, [projection]);
+  const ptById = useMemo(
+    () => Object.fromEntries(stationPts.map(s => [s.id, s])),
+    [stationPts]
+  );
 
   // Determine which routes to draw based on filter
-  const visibleRoutes = ROUTES.filter(r => !hsrOnly || r.type === "hsr");
+  const visibleRoutes = useMemo(
+    () => ROUTES.filter(r => !hsrOnly || r.type === "hsr"),
+    [hsrOnly]
+  );
+  // Indices into visibleRoutes whose direct line duplicates a chain
+  // through intermediate stations — hidden from the map but kept in
+  // the routing graph so Dijkstra still picks the faster express.
+  const redundantIdx = useMemo(
+    () => computeRedundantRouteIndices(visibleRoutes, STATIONS),
+    [visibleRoutes]
+  );
+  // Non-redundant routes chained into continuous polylines by rail line —
+  // drives the background underlay so each named service renders as one
+  // smooth path rather than a string of butt-jointed segments.
+  const chainedPolylines = useMemo(() => {
+    const keep = visibleRoutes.filter((_, i) => !redundantIdx.has(i));
+    return chainRoutesIntoPolylines(keep);
+  }, [visibleRoutes, redundantIdx]);
+  // Reachability isochrones — the slow part (grid build, marching
+  // squares, d3 smoothing) only depends on origin/dist/projection,
+  // not on maxHours. Precompute path data for every threshold once
+  // and let scrubbing the time budget just filter the array.
+  const contourAll = useMemo(() => {
+    if (!origin || !projection) return null;
+    const gridInfo = buildContourGrid(origin, dist, STATIONS);
+    if (!gridInfo) return null;
+    const allLevels = [0.5, 1, 2, 3, 5, 7, 10, 14, 18, 24, 32, 40, 48];
+    const smoothLine = window.d3
+      ? d3.line().x(p => p[0]).y(p => p[1]).curve(d3.curveCatmullRomClosed.alpha(0.5))
+      : null;
+    const fallbackPath = (poly) => {
+      if (poly.length === 0) return "";
+      return "M" + poly.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join("L") + "Z";
+    };
+    const dStrings = allLevels.map(th => {
+      const polys = marchingSquaresPolylines(gridInfo, th, projection);
+      if (!polys.length) return "";
+      return polys.map(p => (smoothLine ? smoothLine(p) : fallbackPath(p))).join(" ");
+    });
+    return { allLevels, dStrings };
+  }, [origin, dist, projection]);
+  // Per-frame slice keyed by maxHours.
+  const contourLayers = contourAll && {
+    levels: contourAll.allLevels.filter(t => t <= maxHours),
+    dStrings: contourAll.allLevels
+      .map((t, i) => t <= maxHours ? contourAll.dStrings[i] : null)
+      .filter(d => d !== null),
+  };
+  // Foreground colored route layer, chained per rail line and split
+  // into runs of consecutive segments that share the same on-route
+  // status and stay within the time budget. Each run is rendered as
+  // ONE <path> downstream, so a long service like the Trans-Sib reads
+  // as a single coloured polyline instead of fifty butt-jointed
+  // segments with visible notches at every station.
+  const foregroundRuns = useMemo(() => {
+    if (!origin) return [];
+    const out = [];
+    for (const chain of chainedPolylines) {
+      let cur = null;
+      const flush = () => {
+        if (cur && cur.stations.length >= 2 && cur.times.length) {
+          let maxT = 0;
+          for (const t of cur.times) if (t > maxT) maxT = t;
+          cur.maxT = maxT;
+          out.push(cur);
+        }
+        cur = null;
+      };
+      for (let i = 0; i < chain.stations.length - 1; i++) {
+        const a = chain.stations[i], b = chain.stations[i + 1];
+        const dA = dist[a], dB = dist[b];
+        if (dA === undefined || dB === undefined) { flush(); continue; }
+        const segT = Math.max(dA, dB);
+        if (segT > maxHours) { flush(); continue; }
+        const onRoute =
+          journeyRouteSet.has(a + "|" + b) ||
+          journeyRouteSet.has(b + "|" + a);
+        if (cur && cur.onRoute !== onRoute) flush();
+        if (!cur) cur = { stations: [a], times: [], onRoute, type: chain.type };
+        cur.stations.push(b);
+        cur.times.push(segT);
+      }
+      flush();
+    }
+    return out;
+  }, [chainedPolylines, dist, maxHours, journeyRouteSet, origin]);
+  // Journey halo chained the same way so the accent line on top of a
+  // multi-leg trip also reads as one continuous stroke.
+  const journeyHaloPaths = useMemo(() => {
+    if (!journey) return [];
+    const paths = [];
+    for (const sec of journey.sections) {
+      if (sec.kind !== "rail") continue;
+      // sec.nodes is already an ordered station list along the journey path.
+      paths.push(sec.nodes);
+    }
+    return paths;
+  }, [journey]);
+  // Disputed-area outline path data, projected once. The same string
+  // also drives a clipPath that suppresses the de-jure country border
+  // wherever it coincides with a disputed boundary (Abkhazia/SO,
+  // Donetsk/Luhansk, Crimea, etc.) — otherwise the user sees both the
+  // solid border and the dotted overlay stacked.
+  const disputedPathD = useMemo(() => {
+    if (!projection) return "";
+    return DISPUTED_LINES.map(area => area.rings.map(ring => {
+      if (!ring.length) return "";
+      return "M" + ring
+        .map((c, j) => (j === 0 ? "" : "L") + projection(c).join(","))
+        .join("") + "Z";
+    }).join(" ")).join(" ");
+  }, [projection]);
 
   return (
     <svg ref={svgRef} viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid meet" className="map-svg">
@@ -1035,55 +1266,55 @@ function MapView({
             strokeWidth="0.7"
             strokeLinejoin="round"
           />
-          {/* Disputed boundary lines — dotted overlay */}
-          {DISPUTED_LINES.map((line, i) => {
-            const d = line.coords
-              .map((c, j) => (j === 0 ? "M" : "L") + projection(c).join(","))
-              .join(" ");
-            return (
+          {/* Disputed-area outlines — Natural Earth 10m disputed
+              polygons (see data_disputed.js). We paint a wider
+              land-coloured "eraser" stroke along the same path first
+              to wipe out any de-jure country border that coincides
+              with the disputed boundary (Abkhazia/SO north edge,
+              Donetsk/Luhansk east edge, Crimea coast, etc.) — the
+              earlier clip-path attempt failed because numerically the
+              border line sits *on* the polygon edge and clipping
+              treats edge points ambiguously. The dotted overlay then
+              draws on the freshly cleared track. */}
+          {disputedPathD && (
+            <>
               <path
-                key={`disputed-${i}`}
-                d={d}
+                d={disputedPathD}
+                fill="none"
+                stroke="var(--land)"
+                strokeWidth="2.4"
+                strokeLinejoin="round"
+                strokeLinecap="round"
+                pointerEvents="none"
+              />
+              <path
+                d={disputedPathD}
                 fill="none"
                 stroke="var(--border-line)"
-                strokeWidth="1"
-                strokeDasharray="2 3"
+                strokeWidth="0.9"
+                strokeDasharray="2 2.5"
                 strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeOpacity="0.75"
-              >
-                <title>{line.name} — disputed</title>
-              </path>
-            );
-          })}
+              />
+            </>
+          )}
         </g>
       )}
 
       {/* sea labels & country labels moved to top-of-zoom-group layer further down */}
 
       {/* === reachability isochrone contours (filled gradient bands + smooth curve outlines) === */}
-      {origin && contoursOn && (() => {
-        const gridInfo = buildContourGrid(origin, dist, STATIONS);
-        if (!gridInfo) return null;
-        const allLevels = [0.5, 1, 2, 3, 5, 7, 10, 14, 18, 24, 32, 40, 48];
-        const levels = allLevels.filter(t => t <= maxHours);
-        const smoothLine = window.d3
-          ? d3.line().x(p => p[0]).y(p => p[1]).curve(d3.curveCatmullRomClosed.alpha(0.5))
-          : null;
-        const fallbackPath = (poly) => {
-          if (poly.length === 0) return "";
-          return "M" + poly.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join("L") + "Z";
-        };
-        // Build polylines per level (also used by stroke layer).
-        const polysByLevel = levels.map(th => marchingSquaresPolylines(gridInfo, th, projection));
+      {origin && contoursOn && contourLayers && (() => {
+        const { levels, dStrings } = contourLayers;
         return (
           <g className="reach-contours" style={{ pointerEvents: "none" }}>
             {/* Filled gradient bands — largest threshold first, smaller on top.
                 Each band is rendered at low fill-opacity so the stack of fills
                 composites into a smooth gradient. */}
             {[...levels].map((th, k) => {
-              const polylines = polysByLevel[k];
-              if (!polylines.length) return null;
-              const d = polylines.map(p => (smoothLine ? smoothLine(p) : fallbackPath(p))).join(" ");
+              const d = dStrings[k];
+              if (!d) return null;
               return (
                 <path
                   key={"fill-" + k}
@@ -1102,9 +1333,8 @@ function MapView({
                 gently to read as a live network. */}
             {levels.map((th, k) => {
               if (k === levels.length - 1) return null; // skip outermost
-              const polylines = polysByLevel[k];
-              if (!polylines.length) return null;
-              const d = polylines.map(p => (smoothLine ? smoothLine(p) : fallbackPath(p))).join(" ");
+              const d = dStrings[k];
+              if (!d) return null;
               return (
                 <path
                   key={"iso-" + k}
@@ -1127,62 +1357,91 @@ function MapView({
       })()}
 
       {/* === all routes (faint background) === */}
+      {/* Each named rail line is one continuous polyline so the
+          underlay reads as smooth track rather than dots-and-dashes
+          when zoomed in. */}
       <g className="routes-bg">
-        {visibleRoutes.map((r, i) => {
-          const a = ptById[r.from], b = ptById[r.to];
-          if (!a || !b) return null;
+        {chainedPolylines.map((p, i) => {
+          let d = "";
+          for (let k = 0; k < p.stations.length; k++) {
+            const pt = ptById[p.stations[k]];
+            if (!pt) { d = ""; break; }
+            d += (k === 0 ? "M" : "L") + pt.x + "," + pt.y;
+          }
+          if (!d) return null;
           return (
-            <line
+            <path
               key={i}
-              x1={a.x} y1={a.y} x2={b.x} y2={b.y}
+              d={d}
+              fill="none"
               stroke="var(--ink)"
               strokeOpacity="0.10"
-              strokeWidth={r.type === "hsr" ? 1.6 : 0.9}
+              strokeWidth={p.type === "hsr" ? 1.6 : 0.9}
+              strokeLinejoin="round"
+              strokeLinecap="round"
             />
           );
         })}
       </g>
 
       {/* === reachable colored routes === */}
+      {/* Drawn per-chain (rail-line group) and split into runs that
+          share on-route status, so a service renders as ONE smooth
+          polyline rather than a string of butt-jointed segments. The
+          run's representative arrival time (its far-end max) drives
+          both colour and stroke width. */}
       {origin && !contoursOn && (
         <g className="routes-fg">
-          {visibleRoutes.map((r, i) => {
-            const dA = dist[r.from], dB = dist[r.to];
-            if (dA === undefined || dB === undefined) return null;
-            const segArrivalTime = Math.max(dA, dB); // time at far end
-            if (segArrivalTime > maxHours) return null;
-            const a = ptById[r.from], b = ptById[r.to];
-            if (!a || !b) return null;
-            const onRoute = journeyRouteSet.has(`${r.from}|${r.to}`) || journeyRouteSet.has(`${r.to}|${r.from}`);
+          {foregroundRuns.map((run, i) => {
+            let d = "";
+            for (let k = 0; k < run.stations.length; k++) {
+              const pt = ptById[run.stations[k]];
+              if (!pt) { d = ""; break; }
+              d += (k === 0 ? "M" : "L") + pt.x + "," + pt.y;
+            }
+            if (!d) return null;
+            const w = run.onRoute
+              ? 4.2
+              : run.type === "hsr"
+              ? lineWidthForTime(run.maxT, maxHours)
+              : lineWidthForTime(run.maxT, maxHours) * 0.55;
             return (
-              <line
+              <path
                 key={i}
-                x1={a.x} y1={a.y} x2={b.x} y2={b.y}
-                stroke={timeColor(segArrivalTime, maxHours, theme)}
-                strokeWidth={onRoute ? 4.2 : (r.type === "hsr" ? lineWidthForTime(segArrivalTime, maxHours) : lineWidthForTime(segArrivalTime, maxHours) * 0.55)}
+                d={d}
+                fill="none"
+                stroke={timeColor(run.maxT, maxHours, theme)}
+                strokeWidth={w}
                 strokeLinecap="round"
-                opacity={onRoute ? 1 : 0.95}
+                strokeLinejoin="round"
+                opacity={run.onRoute ? 1 : 0.95}
               />
             );
           })}
 
-          {/* glow halo on the selected route(s) */}
-          {journey?.sections.filter(s => s.kind === "rail").flatMap((sec, secIdx) =>
-            sec.routes.map((r, i) => {
-              const a = ptById[r.from], b = ptById[r.to];
-              if (!a || !b) return null;
-              return (
-                <line
-                  key={`halo-${secIdx}-${i}`}
-                  x1={a.x} y1={a.y} x2={b.x} y2={b.y}
-                  stroke="var(--accent)"
-                  strokeWidth="1.2"
-                  strokeOpacity="0.85"
-                  strokeLinecap="round"
-                />
-              );
-            })
-          )}
+          {/* Selected-journey accent halo, also chained so a multi-
+              leg trip reads as one continuous line. */}
+          {journeyHaloPaths.map((nodes, i) => {
+            let d = "";
+            for (let k = 0; k < nodes.length; k++) {
+              const pt = ptById[nodes[k]];
+              if (!pt) { d = ""; break; }
+              d += (k === 0 ? "M" : "L") + pt.x + "," + pt.y;
+            }
+            if (!d) return null;
+            return (
+              <path
+                key={`halo-${i}`}
+                d={d}
+                fill="none"
+                stroke="var(--accent)"
+                strokeWidth="1.2"
+                strokeOpacity="0.85"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            );
+          })}
         </g>
       )}
 
@@ -1412,16 +1671,6 @@ function MapView({
         })()}
       </g>
 
-      {/* Compass + scale + decorative */}
-      <Compass x={W - 88} y={H - 96} r={36} />
-      <g transform={`translate(${W - 240}, ${H - 60})`}>
-        <line x1="0" y1="0" x2="140" y2="0" stroke="currentColor" strokeOpacity="0.55" strokeWidth="1.2" />
-        <line x1="0" y1="-4" x2="0" y2="4" stroke="currentColor" strokeOpacity="0.55" strokeWidth="1.2" />
-        <line x1="70" y1="-3" x2="70" y2="3" stroke="currentColor" strokeOpacity="0.45" strokeWidth="1" />
-        <line x1="140" y1="-4" x2="140" y2="4" stroke="currentColor" strokeOpacity="0.55" strokeWidth="1.2" />
-        <text x="0" y="-9" fontSize="9" fontFamily="'DM Mono', monospace" fill="currentColor" opacity="0.7">0</text>
-        <text x="140" y="-9" fontSize="9" fontFamily="'DM Mono', monospace" fill="currentColor" opacity="0.7" textAnchor="end">≈ 800 km</text>
-      </g>
       </g>
       <g className="labels-on-top" style={{ pointerEvents: "none" }}>
         {showSeaLabels && SEA_LABELS.map((l, i) => {
@@ -1893,7 +2142,10 @@ function RailSectionDetail({ section, expandable }) {
                 <span className="rc-leg-time">{fmtH(r.h)}</span>
               </div>
               <div className="rc-leg-line">{r.line}</div>
-              <div className="rc-leg-op">{r.op}</div>
+              <div className="rc-leg-op">
+                {r.op}
+                <span className="rc-leg-freq">{freqLabel(r)}</span>
+              </div>
             </div>
           </li>
         );
@@ -1944,7 +2196,10 @@ function HoverCard({ hoverDest, origin, hsrOnly, hours, theme }) {
           {lastRoute && (
             <div className="hc-leg">
               <div className="hc-leg-line">arr. via {lastRoute.line}</div>
-              <div className="hc-leg-op">{lastRoute.op}</div>
+              <div className="hc-leg-op">
+                {lastRoute.op}
+                <span className="hc-leg-freq">· {freqLabel(lastRoute)}</span>
+              </div>
             </div>
           )}
         </div>
@@ -2071,56 +2326,45 @@ function Sources() {
 // APP
 // =============================================================
 
-const TWEAKS = /*EDITMODE-BEGIN*/{
-  "maxHoursBound": 48,
-  "showCountryLabels": true,
-  "stationLabels": "smart",
-  "showSeaLabels": false,
-  "showDisconnected": true,
-  "darkenNonAsia": true
-}/*EDITMODE-END*/;
+// Fixed display settings, previously exposed via a tweaks panel.
+const MAX_HOURS_BOUND  = 48;
+const SHOW_COUNTRY_LABELS = true;
+const SHOW_SEA_LABELS     = false;
+
+// Throttle a state setter to at most one update per animation frame.
+// The slider for the time budget fires onChange continuously while
+// dragging; without throttling, React reconciles thousands of route
+// elements per pointer-move and the UI lags. Per-frame coalescing
+// keeps scrubbing smooth.
+function useRafThrottledSetter(setter) {
+  const pendingRef = useRef(null);
+  const rafRef = useRef(0);
+  useEffect(() => () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); }, []);
+  return useCallback((v) => {
+    pendingRef.current = v;
+    if (rafRef.current) return;
+    rafRef.current = requestAnimationFrame(() => {
+      rafRef.current = 0;
+      setter(pendingRef.current);
+    });
+  }, [setter]);
+}
 
 function App() {
   const [origin, setOrigin] = useState("kunming");
-  const [hours, setHours] = useState(24);
+  const [hoursRaw, setHoursRaw] = useState(24);
+  const setHours = useRafThrottledSetter(setHoursRaw);
+  const hours = hoursRaw;
   const [hsrOnly, setHsrOnly] = useState(false);
   const [theme, setTheme] = useState("day");
   const [selectedDest, setSelectedDest] = useState(null);
   const [hoverDest, setHoverDest] = useState(null);
   const [contoursOn, setContoursOn] = useState(true);
-  const [tweaks, setTweaks] = useState(TWEAKS);
 
   // Apply theme class on body
   useEffect(() => {
     document.body.classList.toggle("theme-night", theme === "night");
   }, [theme]);
-
-  // Tweak panel protocol
-  useEffect(() => {
-    function onMsg(e) {
-      if (!e.data) return;
-      if (e.data.type === "__activate_edit_mode") setTweaksOpen(true);
-      if (e.data.type === "__deactivate_edit_mode") setTweaksOpen(false);
-    }
-    window.addEventListener("message", onMsg);
-    window.parent.postMessage({type: "__edit_mode_available"}, "*");
-    return () => window.removeEventListener("message", onMsg);
-  }, []);
-  const [tweaksOpen, setTweaksOpen] = useState(false);
-
-  function setTweak(k, v) {
-    setTweaks(t => {
-      const next = { ...t, [k]: v };
-      window.parent.postMessage({type: "__edit_mode_set_keys", edits: { [k]: v }}, "*");
-      return next;
-    });
-  }
-
-  const maxHoursBound = tweaks.maxHoursBound || 24;
-  // Clamp hours if maxBound decreased
-  useEffect(() => {
-    if (hours > maxHoursBound) setHours(maxHoursBound);
-  }, [maxHoursBound]);
 
   return (
     <div className="app">
@@ -2136,8 +2380,8 @@ function App() {
           setSelectedDest={setSelectedDest}
           maxHours={hours}
           contoursOn={contoursOn}
-          showSeaLabels={tweaks.showSeaLabels}
-          showCountryLabels={tweaks.showCountryLabels}
+          showSeaLabels={SHOW_SEA_LABELS}
+          showCountryLabels={SHOW_COUNTRY_LABELS}
         />
         {/* Decorative corner ornament */}
         <svg className="corner-ornament tl" viewBox="0 0 60 60" aria-hidden="true">
@@ -2159,13 +2403,13 @@ function App() {
         <Masthead />
         <ControlPanel
           origin={origin} setOrigin={setOrigin}
-          hours={hours} setHours={setHours} maxHoursBound={maxHoursBound}
+          hours={hours} setHours={setHours} maxHoursBound={MAX_HOURS_BOUND}
           hsrOnly={hsrOnly} setHsrOnly={setHsrOnly}
           theme={theme} setTheme={setTheme}
           selectedDest={selectedDest} setSelectedDest={setSelectedDest}
           contoursOn={contoursOn} setContoursOn={setContoursOn}
         />
-        <Legend theme={theme} maxHoursBound={maxHoursBound} />
+        <Legend theme={theme} maxHoursBound={MAX_HOURS_BOUND} />
         <Sources />
       </div>
 
@@ -2191,29 +2435,6 @@ function App() {
       </div>
 
       <HoverCard hoverDest={hoverDest} origin={origin} hsrOnly={hsrOnly} hours={hours} theme={theme} />
-
-      {tweaksOpen && <TweaksPanel tweaks={tweaks} setTweak={setTweak} onClose={() => {
-        setTweaksOpen(false);
-        window.parent.postMessage({type: "__edit_mode_dismissed"}, "*");
-      }} />}
-    </div>
-  );
-}
-
-function TweaksPanel({ tweaks, setTweak, onClose }) {
-  return (
-    <div className="tweaks-panel">
-      <div className="tp-head">
-        <strong>Tweaks</strong>
-        <button onClick={onClose} className="tp-close">×</button>
-      </div>
-      <div className="tp-row">
-        <label>Max hours on slider</label>
-        <input type="range" min={6} max={48} step={2}
-          value={tweaks.maxHoursBound || 24}
-          onChange={e => setTweak("maxHoursBound", parseInt(e.target.value))} />
-        <span className="tp-val">{tweaks.maxHoursBound || 24}h</span>
-      </div>
     </div>
   );
 }
