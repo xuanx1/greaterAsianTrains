@@ -1657,7 +1657,11 @@ function MapView({
                     fontWeight={isOrigin || isSelDest ? 700 : isMajor ? 600 : 500}
                     fill="var(--ink)"
                     opacity={baseOp * labelVis}
-                    style={{ pointerEvents: "none", paintOrder: "stroke", transition: "opacity 0.25s ease" }}
+                    // pointerEvents enabled so the label is clickable —
+                    // bubbles up to the parent <g>'s onClick which sets
+                    // origin / destination. cursor: pointer inherits
+                    // from the parent group.
+                    style={{ pointerEvents: "auto", paintOrder: "stroke", transition: "opacity 0.25s ease" }}
                     stroke="var(--paper)"
                     strokeWidth="3"
                     strokeOpacity={0.9 * labelVis}
@@ -1730,48 +1734,133 @@ function Masthead() {
   );
 }
 
+// Minimalist origin picker — replaces the native <select> with a
+// button + popover. Native selects don't allow custom styling of the
+// dropdown panel (only the closed-state trigger), and with thousands
+// of stations grouped by region the native list reads as a wall of
+// text. This version gives us a search field, subtle country headers,
+// and a tight visual palette consistent with the rest of the UI.
+function StationSelect({ value, onChange }) {
+  const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const rootRef = useRef(null);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e) => {
+      if (rootRef.current && !rootRef.current.contains(e.target)) setOpen(false);
+    };
+    const onKey = (e) => { if (e.key === "Escape") setOpen(false); };
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("keydown", onKey);
+    // Defer focus a frame so the popover is mounted before we grab it.
+    const t = setTimeout(() => inputRef.current?.focus(), 0);
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("keydown", onKey);
+      clearTimeout(t);
+    };
+  }, [open]);
+
+  const groups = useMemo(() => {
+    const q = query.toLowerCase().trim();
+    return window.REGIONS.flatMap(region =>
+      region.codes.flatMap(code => {
+        const stns = STATIONS
+          .filter(s => s.country === code)
+          .filter(s => {
+            if (!q) return true;
+            return s.name.toLowerCase().includes(q) ||
+                   (s.native || "").toLowerCase().includes(q);
+          })
+          .sort((a, b) => a.name.localeCompare(b.name));
+        if (stns.length === 0) return [];
+        return [{ code, country: COUNTRY_NAMES[code], region: region.name, stns }];
+      })
+    );
+  }, [query]);
+
+  const selected = value ? STATIONS_BY_ID[value] : null;
+  const triggerLabel = selected
+    ? selected.name + (nativeOrNull(selected.name, selected.native) ? " · " + nativeOrNull(selected.name, selected.native) : "")
+    : "Select origin…";
+
+  return (
+    <div className={`mselect ${open ? "open" : ""}`} ref={rootRef}>
+      <button
+        type="button"
+        className="mselect-trigger"
+        onClick={() => setOpen(v => !v)}
+        aria-expanded={open}
+      >
+        <span className="mselect-value">{triggerLabel}</span>
+        <span className="mselect-caret" aria-hidden="true" />
+      </button>
+      {open && (
+        <div className="mselect-pop">
+          <input
+            ref={inputRef}
+            type="text"
+            className="mselect-search"
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+            placeholder="Search stations…"
+          />
+          <div className="mselect-list">
+            {groups.length === 0 && (
+              <div className="mselect-empty">No matches</div>
+            )}
+            {groups.map(g => (
+              <div key={g.code} className="mselect-group">
+                <div className="mselect-group-head">
+                  <span>{g.country}</span>
+                  <span className="mselect-group-region">{g.region}</span>
+                </div>
+                {g.stns.map(s => {
+                  const nat = nativeOrNull(s.name, s.native);
+                  const sel = s.id === value;
+                  return (
+                    <button
+                      type="button"
+                      key={s.id}
+                      className={`mselect-item ${sel ? "sel" : ""}`}
+                      onClick={() => {
+                        onChange(s.id);
+                        setOpen(false);
+                        setQuery("");
+                      }}
+                    >
+                      <span className="mselect-item-name">{s.name}</span>
+                      {nat && <span className="mselect-item-nat">{nat}</span>}
+                    </button>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function ControlPanel({
   origin, setOrigin, hours, setHours, maxHoursBound,
   hsrOnly, setHsrOnly, theme, setTheme,
   selectedDest, setSelectedDest,
   contoursOn, setContoursOn,
 }) {
-  const originStation = origin ? STATIONS_BY_ID[origin] : null;
   return (
     <div className="panel control-panel">
       <div className="panel-head">
         <span className="panel-num">I.</span>
         <span className="panel-title">Origin</span>
       </div>
-      <select
-        className="select"
-        value={origin || ""}
-        onChange={e => { setOrigin(e.target.value); setSelectedDest(null); }}
-      >
-        {window.REGIONS.flatMap(region =>
-          region.codes.flatMap(code => {
-            const stns = STATIONS
-              .filter(s => s.country === code)
-              .sort((a, b) => a.name.localeCompare(b.name));
-            if (stns.length === 0) return [];
-            return [
-              <optgroup
-                key={code}
-                label={`— ${COUNTRY_NAMES[code]} (${region.name})`}
-              >
-                {stns.map(s => {
-                  const nat = nativeOrNull(s.name, s.native);
-                  return (
-                    <option key={s.id} value={s.id}>
-                      {s.name}{nat ? ` · ${nat}` : ""}
-                    </option>
-                  );
-                })}
-              </optgroup>
-            ];
-          })
-        )}
-      </select>
+      <StationSelect
+        value={origin}
+        onChange={(id) => { setOrigin(id); setSelectedDest(null); }}
+      />
       <div className="hint">
         Click a station to set as origin · click a second to draw the
         route · click a third to start over.
@@ -1794,6 +1883,15 @@ function ControlPanel({
           {[1, 12, 24, 36, 48].filter(t => t <= maxHoursBound).map(t => (
             <span key={t}>{t}h</span>
           ))}
+        </div>
+        {/* Line-type legend folded into the Time-budget section. The
+            slider track already carries the time-colour ramp, so a
+            separate gradient bar would be redundant. */}
+        <div className="legend-dashes">
+          <div><span className="dash hsr"/> High-speed</div>
+          <div><span className="dash conv"/> Conventional</div>
+          <div><span className="dash hatched"/> No passenger rail</div>
+          <div><span className="dash bridge"/> Disconnected gap</div>
         </div>
       </div>
 
@@ -2211,109 +2309,120 @@ function HoverCard({ hoverDest, origin, hsrOnly, hours, theme }) {
 // =============================================================
 // LEGEND
 // =============================================================
-function Legend({ theme, maxHoursBound }) {
-  const ramp = makeRampGradient(maxHoursBound, theme);
-  return (
-    <div className="legend">
-      <div className="legend-title">Travel Time</div>
-      <div className="legend-bar" style={{background: ramp}} />
-      <div className="legend-scale">
-        <span>0h</span>
-        <span>{Math.round(maxHoursBound/2)}h</span>
-        <span>{maxHoursBound}h</span>
-      </div>
-      <div className="legend-dashes">
-        <div><span className="dash hsr"/> High-speed</div>
-        <div><span className="dash conv"/> Conventional</div>
-        <div><span className="dash hatched"/> No passenger rail</div>
-        <div><span className="dash bridge"/> Disconnected gap</div>
-      </div>
-    </div>
-  );
-}
-
 function Sources() {
+  const sections = [
+    {
+      key: "Schedules CN/HK",
+      items: [
+        "China Railway 12306 (G/D/Z/T/K series)",
+        "MTR through-trains (GZ–KL XRL, Z97/Z99 Beijing/Shanghai–Kowloon)",
+      ],
+    },
+    {
+      key: "Schedules JP/KR/TW",
+      items: [
+        "JR East/Central/West/Kyushu/Hokkaido (Tōkaidō, San'yō, Tōhoku, Hokuriku, Jōetsu, Kyūshū, Hokkaidō Shinkansen)",
+        "Korail KTX/SRT (Gyeongbu, Honam, Jeolla, Gangneung, Donghae)",
+        "Taiwan HSR (THSR) + TRA (Puyuma, South-Link)",
+      ],
+    },
+    {
+      key: "Schedules SE Asia",
+      items: [
+        "KCIC Whoosh (Jakarta–Bandung HSR)",
+        "PT KAI long-distance (Argo Wilis, Bima, Mutiara Timur)",
+        "KTM Berhad ETS + South-Line",
+        "SRT Northern/Northeastern/Southern/Eastern",
+        "Vietnam Railways (Reunification Express, Hanoi–Lào Cai, Hanoi–Đồng Đăng, Hanoi–Hải Phòng)",
+        "Royal Railway Cambodia",
+        "Lao–China Railway / China–Laos Railway D87",
+        "Myanma Railways",
+      ],
+    },
+    {
+      key: "Schedules S Asia",
+      items: [
+        "Indian Railways NTES (Rajdhani, Vande Bharat, Shatabdi, Coromandel, GT, Mumbai Mail)",
+        "Bangladesh Railway (Sonar Bangla, Sundarban, Maitree, Bandhan)",
+        "Pakistan Railways (Green Line, Karakoram, Allama Iqbal)",
+        "Sri Lanka Railways (Main Line, Coast, Hill, Trinco, Northern)",
+      ],
+    },
+    {
+      key: "Schedules W/C Asia",
+      items: [
+        "RAI Iran (Tehran–Mashhad / –Tabriz / –Isfahan / –Bandar Abbas)",
+        "IRR Iraq (Baghdad–Basra sleeper, Baghdad–Mosul)",
+        "TCDD YHT + Doğu / Güney / Toros Express",
+        "KTZ Talgo (Tulpar, Saryarka)",
+        "UTY Afrosiyob",
+        "TDY Türkmenabat",
+        "Kyrgyz Temir Joly (Issyk-Kul tourist)",
+        "SCR (Yerevan Express)",
+        "ADY + GR (Baku–Tbilisi–Kars, Stadler Tbilisi–Batumi)",
+        "Israel Railways",
+        "SAR (Haramain HSR, East Line, North Line / Saudi Land Bridge)",
+        "Etihad Rail (UAE Hafeet Express)",
+      ],
+    },
+    {
+      key: "Long-haul / cross-border",
+      items: [
+        "Trans-Mongolian K23 (Beijing ↔ Ulaanbaatar ↔ Moscow)",
+        "Trans-Manchurian K19 (via Manzhouli)",
+        "Trans-Siberian Rossiya (Moscow ↔ Vladivostok)",
+        "Baikal–Amur Mainline",
+        "Beijing ↔ Pyongyang K27/28",
+        "Khasan / Tumangang Friendship Bridge",
+        "Yunnan–Vietnam Railway (Kunming–Hekou)",
+      ],
+    },
+    {
+      key: "Base map",
+      items: [
+        <>Natural Earth (public domain) via <span className="mono">world-atlas</span> <span className="mono">countries-50m</span></>,
+        <>Disputed-area outlines from Natural Earth <span className="mono">ne_10m_admin_0_disputed_areas</span> (33 territories, Abkhazia ↔ Crimea ↔ Kashmir ↔ Korean DMZ ↔ Kuril / Paracel / Spratly Is.)</>,
+      ],
+    },
+    {
+      key: "Rail network",
+      items: [
+        "Wikipedia",
+        "OpenStreetMap",
+        "OpenRailwayMap",
+        "Seat 61 (M. Smith) — cross-checking corridors, operators, journey times",
+      ],
+    },
+    {
+      key: "Algorithm",
+      items: [
+        "Reachability: time-weighted Dijkstra over the rail graph",
+        "Disconnected destinations: second station-level Dijkstra over rail edges + top-K cross-component great-circle bridges (capped at 1,600 km, 3× bridge penalty) to minimise total journey distance",
+        "Per-section time re-optimisation for the actual rail legs after the bridge planner picks endpoints",
+      ],
+    },
+    {
+      key: "Caveats",
+      items: [
+        "Times rounded to half-hour",
+        "Cross-border friction (gauge change at Erenhot / Zabaikalsk / Sarakhs / Khasan, customs at Pingxiang, Đồng Đăng, Padang Besar, Mekong shuttle) folded into adjacent segments",
+        "Suspended services excluded: Samjhauta India–Pakistan, Trans-Asia Express Türkiye–Iran, Allegro SPb–Helsinki, Quetta–Zahedan (effectively freight)",
+        "DMZ Dorasan–Kaesong reconnected but never carried passenger traffic — treated as disconnected",
+      ],
+    },
+  ];
   return (
     <div className="sources">
       <div className="src-head">Sources &amp; notes</div>
       <ul className="src-list">
-        <li>
-          <span className="src-key">Schedules CN/HK</span>
-          China Railway 12306 (G/D/Z/T/K series), MTR through-trains
-          (GZ–KL XRL, Z97/Z99 Beijing/Shanghai–Kowloon).
-        </li>
-        <li>
-          <span className="src-key">Schedules JP/KR/TW</span>
-          JR East/Central/West/Kyushu/Hokkaido (Tōkaidō, San'yō, Tōhoku,
-          Hokuriku, Jōetsu, Kyūshū, Hokkaidō Shinkansen); Korail KTX/SRT
-          (Gyeongbu, Honam, Jeolla, Gangneung, Donghae); Taiwan HSR (THSR)
-          + TRA (Puyuma, South-Link).
-        </li>
-        <li>
-          <span className="src-key">Schedules SE Asia</span>
-          KCIC Whoosh (Jakarta–Bandung HSR), PT KAI long-distance (Argo
-          Wilis, Bima, Mutiara Timur); KTM Berhad ETS + South-Line; SRT
-          Northern/Northeastern/Southern/Eastern; Vietnam Railways
-          (Reunification Express, Hanoi–Lào Cai, Hanoi–Đồng Đăng); Royal
-          Railway Cambodia; Lao–China Railway / China–Laos Railway D87;
-          Myanma Railways.
-        </li>
-        <li>
-          <span className="src-key">Schedules S Asia</span>
-          Indian Railways NTES (Rajdhani, Vande Bharat, Shatabdi,
-          Coromandel, GT, Mumbai Mail); Bangladesh Railway (Sonar Bangla,
-          Sundarban, Maitree, Bandhan); Pakistan Railways (Green Line,
-          Karakoram, Allama Iqbal); Sri Lanka Railways (Main Line, Coast,
-          Hill, Trinco, Northern).
-        </li>
-        <li>
-          <span className="src-key">Schedules W/C Asia</span>
-          RAI Iran (Tehran–Mashhad / –Tabriz / –Isfahan / –Bandar Abbas);
-          TCDD YHT + Doğu Express; KTZ Talgo (Tulpar, Saryarka); UTY
-          Afrosiyob; TDY Türkmenabat; SCR (Yerevan Express); ADY
-          (Baku–Tbilisi–Kars); Israel Railways; SAR (Haramain HSR, East
-          Line, North Line / Saudi Land Bridge).
-        </li>
-        <li>
-          <span className="src-key">Long-haul / cross-border</span>
-          Trans-Mongolian K23 (Beijing ↔ Ulaanbaatar ↔ Moscow);
-          Trans-Manchurian K19 (via Manzhouli); Trans-Siberian Rossiya
-          (Moscow ↔ Vladivostok); Baikal–Amur Mainline; Beijing ↔
-          Pyongyang K27/28; Khasan / Tumangang Friendship Bridge;
-          Yunnan–Vietnam Railway (Kunming–Hekou).
-        </li>
-        <li>
-          <span className="src-key">Base map</span>
-          Natural Earth (public domain) via{" "}
-          <span className="mono">world-atlas</span>{" "}
-          <span className="mono">countries-50m</span>. Disputed-boundary
-          polylines hand-curated (Kashmir LoC, Aksai Chin, Arunachal
-          Pradesh, Crimea, Northern Cyprus, Gaza / West Bank).
-        </li>
-        <li>
-          <span className="src-key">Rail network</span>
-          Wikipedia, OpenStreetMap, OpenRailwayMap, and Seat 61 (M. Smith)
-          for cross-checking corridors, operators, and journey times.
-        </li>
-        <li>
-          <span className="src-key">Algorithm</span>
-          Reachability uses time-weighted Dijkstra over the rail graph.
-          Disconnected destinations trigger a second station-level
-          Dijkstra over a unified graph (rail edges + top-K cross-component
-          great-circle bridges, capped at 1,600 km, 3× bridge penalty) to
-          minimise total journey distance, then per-section time
-          re-optimisation for the actual rail legs.
-        </li>
-        <li>
-          <span className="src-key">Caveats</span>
-          Times rounded to half-hour; cross-border friction (gauge change
-          at Erenhot / Zabaikalsk / Sarakhs / Khasan, customs at
-          Pingxiang, Đồng Đăng, Padang Besar, Mekong shuttle) folded into
-          adjacent segments. Suspended services (Samjhauta India–Pakistan,
-          Trans-Asia Express Türkiye–Iran, Allegro SPb–Helsinki) and
-          freight-only crossings (Hekou ↔ Lào Cai cross-border, Quetta ↔
-          Zahedan) noted but only the latter is included.
-        </li>
+        {sections.map((sec, i) => (
+          <li key={i}>
+            <div className="src-key">{sec.key}</div>
+            <ul className="src-sublist">
+              {sec.items.map((item, j) => <li key={j}>{item}</li>)}
+            </ul>
+          </li>
+        ))}
       </ul>
       <div className="src-foot">
         <span>Greater Asia · v0.11 · {new Date().getFullYear()}</span>
@@ -2409,7 +2518,6 @@ function App() {
           selectedDest={selectedDest} setSelectedDest={setSelectedDest}
           contoursOn={contoursOn} setContoursOn={setContoursOn}
         />
-        <Legend theme={theme} maxHoursBound={MAX_HOURS_BOUND} />
         <Sources />
       </div>
 

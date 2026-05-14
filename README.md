@@ -194,8 +194,9 @@ All third-party dependencies are local — no network calls at runtime.
 - **world-atlas 2.0.2** `countries-50m.json` (Natural Earth, public domain).
 - **Natural Earth 10m** disputed-area polygons (public domain), filtered
   to Asia and simplified at ~0.012° tolerance.
-- **Space Grotesk + DM Sans + DM Mono** via Google Fonts (the only
-  external runtime fetch; degrades gracefully to system fonts).
+- **Space Grotesk + DM Sans + DM Mono** — self-hosted Latin-subset
+  woff2 files under `vendor/fonts/` (~292 KB total, SIL Open Font
+  License). No network calls at runtime at all.
 
 ### Data files
 
@@ -388,5 +389,6 @@ Russian origin.
 
 MIT, but the data files are a curated compilation — please credit
 Greater Asia Reachability if you reuse them whole. The Natural Earth
-basemap is public domain; Google Fonts are under the SIL Open Font
+basemap is public domain; the self-hosted webfonts (Space Grotesk,
+DM Sans, DM Mono in `vendor/fonts/`) are under the SIL Open Font
 License. HOTOSM/OSM data is © OpenStreetMap contributors under ODbL.

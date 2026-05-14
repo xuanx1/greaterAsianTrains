@@ -1357,7 +1357,7 @@ window.EXTRA_STATIONS_RU = [
   { id: "osm_ru_866862082", name: "Terekhov", native: "Терехов", country: "RU", lat: 50.9541, lng: 40.7634 },
   { id: "osm_ru_877233319", name: "Pospelkovo", native: "Поспелково", country: "RU", lat: 59.4991, lng: 60.9108 },
   { id: "osm_ru_885274313", name: "Sushchevo", native: "Сущево", country: "RU", lat: 57.0063, lng: 29.9173 },
-  { id: "osm_ru_890799067", name: "Stantsiya Lesnoe", native: "Станция Лесное", country: "RU", lat: 62.8799, lng: 40.8558 },
+  { id: "osm_ru_890799067", name: "Lesnoe", native: "Станция Лесное", country: "RU", lat: 62.8799, lng: 40.8558 },
   { id: "osm_ru_892543384", name: "Svetik", native: "Светик", country: "RU", lat: 61.5594, lng: 48.1998 },
   { id: "osm_ru_902316254", name: "Zasimovka", native: "Засимовка", country: "RU", lat: 50.7102, lng: 38.8984 },
   { id: "osm_ru_902316256", name: "Khlevishche", native: "Хлевище", country: "RU", lat: 50.5605, lng: 38.5352 },
