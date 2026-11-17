@@ -66,6 +66,14 @@ Countries with no intercity passenger rail in the network are **hatched**.
 node scripts/build_network.cjs "../metroman 31oct"   # → data_net.js (~1 min)
 ```
 
+**The site is standalone.** `data_net.js` is a committed snapshot; nothing is
+fetched from metroman at runtime, and the metroman folder is only needed to
+rebuild. The snapshot it came from is recorded in the file's header and in
+`NET.meta.snapshot` (folder name, plus the date and a sha256 fingerprint of
+each catalogue input). The current one is `metroman 31oct`, with catalogue
+files up to 2026-11-17. Changes made in metroman later appear here only after
+a rebuild and commit.
+
 The script only reads the metroman folder (default `../metroman 31oct`, or
 `$METROMAN`) and reuses its own English naming rules (`line_names.js`,
 `latin_names.js`, `station_names_en.js`). Where a machine transliteration
