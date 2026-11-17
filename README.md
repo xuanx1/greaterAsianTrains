@@ -1,7 +1,7 @@
 # Greater Asia [Reachability](https://xuanx1.github.io/greaterAsianTrains/)
 
 An interactive [visualisation](https://xuanx1.github.io/greaterAsianTrains/) of rail reach across the continent —
-**51,079 stations and piers, 3,216 passenger lines, 8,046 ferry routes, 39 countries**.
+**51,943 stations and piers, 4,321 passenger lines, 8,046 ferry routes, 39 countries**.
 
 <img width="1920" height="915" alt="Screenshot 2026-05-14 211258" src="https://github.com/user-attachments/assets/b98c5f69-fef4-4f5b-bd39-0c2be5246cf7" />
 
@@ -17,7 +17,7 @@ build to get there.
 
 | | |
 |---|---|
-| **Pick origin** | Searchable picker (all 51 k stations), or click any station / label on the map. |
+| **Pick origin** | Searchable picker (all 52 k stations), or click any station / label on the map. |
 | **Time budget** | Slider 1 h → 48 h. Colour ramp from forest green (close) to pale celadon (budget). |
 | **Click reachable** | Draws the fastest route, grouped into rides: line, operator, stops, frequency, time. |
 | **Click disconnected** | Shows the rail sections + great-circle bridges that would close the gap. |
@@ -39,19 +39,28 @@ The network is generated from the **Transits of the World** intercity + ferry
 catalogue (the `metroman` project), cut to Asia:
 
 - **Lines** — OpenStreetMap `route=train` relations (plus curated corridors
-  over OSM track where relations are missing). Every line keeps its stops in
-  order with their km. Freight-only and closed lines are left out.
+  over OSM track where relations are missing). Every line is read from its own
+  journey file (stops in order with their km), so a stale `route_graph.js`
+  in metroman can't drop lines; stations are merged with metroman's rule
+  (same place within 0.4 km, or same name within 2 km).
+- **Hidden lines — metroman's rule** — everything in metroman's
+  `hidden_lines.js` is left out (freight, industrial, closed to passengers,
+  heritage / tourist, merged records: 1,209 lines), exactly as metroman's own
+  site does; its heritage / tourist name rule is also applied to any line newer
+  than that list.
 - **Track** — each line is drawn along its full-resolution OpenStreetMap
   track, cut at every stop and Douglas–Peucker-simplified (~400 m); hops
   between closely spaced halts are drawn straight.
-- **Times** — 2,535 lines carry a published journey time (operators, Yandex
+- **Times** — 3,401 lines carry a published journey time (operators, Yandex
   Raspisaniya, 12306, NTES, Wikipedia…); the rest run at the median published
   speed of the same kind of train in the same country (shown as `≈ est.`).
 - **Ferries** — OpenStreetMap `route=ferry` courses; published crossing times
-  where known, else 30 km/h, plus 30 min boarding. A pier with no railway is
+  where known (947 crossings, matched to each ferry by its piers' positions),
+  else 30 km/h, plus 30 min boarding. A pier with no railway is
   joined to the nearest station within 30 km by a drive.
 - **Transfers** — stations a short walk apart are joined, and a city's
-  separate terminals (Moscow, Beijing…) get a cross-town transfer. Closed
+  separate stations sharing a name (Moscow's terminals, Beijing West / South,
+  Bishkek I / 2…) get a cross-town transfer within 15 km. Closed
   borders (Korean DMZ, Armenia–Türkiye/Azerbaijan, Israel–Lebanon/Syria) are
   never crossed by a transfer.
 - **Scope** — the Asian countries in the map's Asia set (Russia whole), inside
@@ -164,6 +173,10 @@ as a file.
 - Bridge suggestions use great-circle distance — they ignore terrain,
   bathymetry, geopolitics and gauge. Treat them as indications, not
   engineering proposals.
+- Gaps in the catalogue stay gaps: e.g. Lugovaya – Bishkek ends at
+  Pervomayskaya, ~28 km short of Kara-Balta, so Bishkek's lines show as a
+  network of their own (a bridge, not a rail link). Taiwan, Sri Lanka and the
+  Philippines have no ferry in the catalogue that reaches a mainland railway.
 - Station names come from OpenStreetMap via the catalogue; some halts are
   named only by their km post (`1802 km`) or have no name at all.
 

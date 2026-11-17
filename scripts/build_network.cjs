@@ -129,21 +129,99 @@ function shortFreq(t) {
   return s;
 }
 
-// ---------- lines in scope ----------
+// ---------- every line's stops, from its own journey file ----------
+// metroman's route_graph.js can lag behind the catalogue (it once missed
+// 1,115 lines in scope — all of Tajikistan's and Kyrgyzstan's own lines,
+// Taiwan's TRA…), so each line is read from maps/intercity/journey/<slug>.js
+// and its stops merged into the graph's places with metroman's own rule
+// (build_route_graph.py): the same place within 0.4 km, or the same name
+// within 2 km. Places the graph lacks are appended; the graph's ferries,
+// drives and transfers keep their indices.
+const SAME_KM = 0.4, NAME_KM = 2.0, PCELL = 0.02;
+const pnorm = (t) => (t || "").toLowerCase().replace(/\s*\((?:railway station|station|rail|railways?)\)/g, "")
+  .replace(/[^\p{L}\p{N}_]+/gu, "");
+const placeGrid = new Map(), placeNorm = [];
+const gkey = (x, y) => Math.floor(x / PCELL) + "," + Math.floor(y / PCELL);
+S.forEach((p, i) => {
+  placeNorm[i] = pnorm(p[0]);
+  const k = gkey(p[2] / 1e4, p[3] / 1e4);
+  (placeGrid.get(k) || placeGrid.set(k, []).get(k)).push(i);
+});
+const firstNew = S.length;
+function placeOf(st) {
+  const [x, y] = st.x, nk = pnorm(st.n);
+  const gx = Math.floor(x / PCELL), gy = Math.floor(y / PCELL);
+  let best = -1, bd = Infinity;
+  for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) {
+    for (const i of placeGrid.get((gx + dx) + "," + (gy + dy)) || []) {
+      const d = km([x, y], [S[i][2] / 1e4, S[i][3] / 1e4]);
+      if ((d <= SAME_KM || (nk && nk === placeNorm[i] && d <= NAME_KM)) && d < bd) { best = i; bd = d; }
+    }
+  }
+  if (best >= 0) return best;
+  S.push([st.n, st.nat || "", Math.round(x * 1e4), Math.round(y * 1e4), st.cc || ""]);
+  placeNorm.push(nk);
+  const k = gkey(x, y);
+  (placeGrid.get(k) || placeGrid.set(k, []).get(k)).push(S.length - 1);
+  return S.length - 1;
+}
+// Hidden lines, metroman's rule: everything in assets/hidden_lines.js (freight,
+// industrial, closed to passengers, heritage / tourist, merged records) is left
+// out, as metroman's own site does. The catalogue can be newer than that list,
+// so its heritage / tourist NAME rule (scripts/build_hidden_lines.py: HNAME,
+// with the same KEEP exceptions) is applied here too.
+const HNAME = /heritage|museum|scenic rail|scenic railroad|vintage|steamtown|turístic|turistic|туристическ|tourist|excursion|dampf|nostalg|historic railway|tren histórico|rail tour|preserved/i;
+const HKEEP = new Set(["adelaide-darwin-railway-line", "shosholoza-meyl-johannesburg-cape-town", "metra-heritage-corridor",
+  "inlandsbanan", "ilztalbahn", "staudenbahn", "turisticheskii-elektropoezd-926i-dioskuriia"]);
+const isHidden = (m) => !!HIDDEN[m.slug] ||
+  (!HKEEP.has(m.slug) && HNAME.test(m.name + " | " + (m.native || "") + " | " + (m.operator || "")));
+let hiddenByList = 0, hiddenByName = 0;
 const KIND_CODE = { hsr: "h", intercity: "i", night: "n", commuter: "c", branch: "b" };
 const lines = []; // {slug, kind, stops:[place], km:[km]}
-for (const [slug, seq] of Object.entries(RG.l)) {
-  if (HIDDEN[slug]) continue;
-  const m = META[slug];
-  if (!m) continue;
+let fromJourney = 0, fromGraphOnly = 0;
+for (const m of ILINES) {
+  const slug = m.slug;
+  if (isHidden(m)) { if (HIDDEN[slug]) hiddenByList++; else hiddenByName++; continue; }
   let st = [], kk = [];
-  for (let i = 0; i < seq.length; i += 2) { st.push(seq[i]); kk.push(seq[i + 1] / 10); }
+  const jf = A("maps", "intercity", "journey", slug + ".js");
+  let J = null;
+  if (fs.existsSync(jf)) { try { J = JSON.parse(readJs(jf).split("=").slice(1).join("=").trim().replace(/;$/, "")); } catch { J = null; } }
+  if (J && J.stops) {
+    // only lines that touch the scope at all
+    if (!J.stops.some((x) => ASIA.has(x.cc))) continue;
+    for (const x of J.stops) {
+      if (x.off || !x.x) continue;
+      const i = placeOf(x);
+      if (st.length && st[st.length - 1] === i) continue;
+      st.push(i); kk.push(x.km);
+    }
+    fromJourney++;
+  } else if (RG.l[slug]) {
+    const seq = RG.l[slug];
+    for (let i = 0; i < seq.length; i += 2) { st.push(seq[i]); kk.push(seq[i + 1] / 10); }
+    fromGraphOnly++;
+  } else continue;
   let a = 0, b = st.length - 1;
   while (a <= b && !scoped(st[a])) a++;
   while (b >= a && !scoped(st[b])) b--;
   if (b - a < 1) continue;
   st = st.slice(a, b + 1); kk = kk.slice(a, b + 1);
   lines.push({ slug, kind: m.kind || "intercity", m, stops: st, km: kk });
+}
+console.log("hidden (metroman list):", hiddenByList, "hidden (heritage / tourist name rule, newer than the list):", hiddenByName);
+console.log("lines read from journey files:", fromJourney, "from the route graph only:", fromGraphOnly,
+  "new places:", S.length - firstNew);
+// walking transfers for the new places (the graph's own cover only its places)
+const newWalks = [];
+for (let i = firstNew; i < S.length; i++) {
+  const gx = Math.floor(S[i][2] / 1e4 / PCELL), gy = Math.floor(S[i][3] / 1e4 / PCELL);
+  for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) {
+    for (const j of placeGrid.get((gx + dx) + "," + (gy + dy)) || []) {
+      if (j === i || (j >= firstNew && j < i)) continue;
+      const d = km([S[i][2] / 1e4, S[i][3] / 1e4], [S[j][2] / 1e4, S[j][3] / 1e4]);
+      if (d <= 0.8) newWalks.push([i, j, Math.round(d * 10)]);
+    }
+  }
 }
 console.log("lines in scope:", lines.length);
 
@@ -235,7 +313,7 @@ let ferryTimed = 0;
 console.log("ferries with a published crossing time:", ferryTimed);
 for (const F of ferries) { use(F.a); use(F.b); }
 const drives = (RG.d || []).filter(([a, b]) => used.has(a) && used.has(b));
-const xfers = (RG.x || []).filter(([a, b]) => used.has(a) && used.has(b));
+const xfers = (RG.x || []).concat(newWalks).filter(([a, b]) => used.has(a) && used.has(b));
 console.log("ferries:", ferries.length, "drives:", drives.length, "transfers:", xfers.length);
 
 // ---------- names, ranks ----------
@@ -267,18 +345,20 @@ const cityX = new Map();
 {
   const grid = new Map();
   const CELL = 0.15;
+  // rail stations only; at least one of the two served by 2+ lines (a city's
+  // terminal), so a one-line suburb halt never pairs with another
   for (let i = 0; i < N; i++) {
-    if (lineCount[i] < 2) continue;
+    if (lineCount[i] < 1) continue;
     const p = order[i], k = Math.floor(lonOf(p) / CELL) + "," + Math.floor(latOf(p) / CELL);
     (grid.get(k) || grid.set(k, []).get(k)).push(i);
   }
   const fw = names.map(firstWord), cj = order.map((p, i) => cjkBase(natives[i] || S[p][1] || S[p][0]));
   for (let i = 0; i < N; i++) {
-    if (lineCount[i] < 2 || (!fw[i] && !cj[i])) continue;
+    if (lineCount[i] < 1 || (!fw[i] && !cj[i])) continue;
     const p = order[i], gx = Math.floor(lonOf(p) / CELL), gy = Math.floor(latOf(p) / CELL);
     for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) {
       for (const j of grid.get(gx + dx + "," + (gy + dy)) || []) {
-        if (j <= i) continue;
+        if (j <= i || Math.max(lineCount[i], lineCount[j]) < 2) continue;
         const sameName = (fw[i] && fw[i] === fw[j]) || (cj[i] && cj[i] === cj[j]);
         if (!sameName || S[p][4] !== S[order[j]][4]) continue;
         const d = km(P(p), P(order[j]));
