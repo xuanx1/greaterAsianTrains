@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <title>Greater Asia — How far by rail across the continent</title>
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#FAF8F4" />
 <style>
 /* Self-hosted Latin-subset webfonts (woff2) — no runtime network calls.
    Originally sourced from Google Fonts; SIL Open Font License (OFL).
@@ -131,12 +132,20 @@ body {
   background:
     radial-gradient(ellipse at 50% 50%, var(--sea) 0%, var(--sea-2) 75%, var(--paper-2) 100%);
 }
-.map-svg {
+.map-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.map-canvas {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   display: block;
-  color: var(--ink);
 }
+.map-top { cursor: grab; touch-action: none; }
+.map-top:active { cursor: grabbing; }
 
 .corner-ornament {
   position: absolute;
@@ -196,7 +205,6 @@ body {
 /* ----- masthead ----- */
 .masthead {
   background: var(--panel);
-  backdrop-filter: blur(6px);
   border: 1px solid var(--panel-edge);
   padding: 18px 22px 16px;
   box-shadow: var(--shadow);
@@ -243,7 +251,6 @@ body {
 /* ----- panel base ----- */
 .panel {
   background: var(--panel);
-  backdrop-filter: blur(6px);
   border: 1px solid var(--panel-edge);
   padding: 16px 18px;
   box-shadow: var(--shadow);
@@ -580,6 +587,9 @@ body.theme-night .toggle.on {
 .dash.conv {
   border-top: 1px solid var(--ink);
 }
+.dash.ferry {
+  border-top: 1.5px dashed var(--ink);
+}
 .dash.hatched {
   border-top: 0;
   height: 10px;
@@ -601,17 +611,6 @@ body.theme-night .toggle.on {
   background-size: 4px 2px;
   background-repeat: repeat-x;
   background-position: 0 50%;
-}
-
-/* ---- contour ring pulse ---- */
-@keyframes contour-pulse {
-  0%   { stroke-opacity: 0.55; stroke-width: 0.9; }
-  50%  { stroke-opacity: 1.00; stroke-width: 1.8; }
-  100% { stroke-opacity: 0.55; stroke-width: 0.9; }
-}
-.contour-line {
-  animation: contour-pulse 2.6s ease-in-out infinite;
-  will-change: stroke-opacity, stroke-width;
 }
 
 /* ---- sources panel ---- */
@@ -1250,6 +1249,8 @@ body.theme-night .toggle.on {
   margin-top: 2px;
 }
 .rc-badge.hsr { background: var(--ink); color: var(--paper); }
+.rc-badge.ferry { border-style: dashed; }
+.rc-badge.link { border-color: var(--panel-edge); color: var(--ink-2); }
 .rc-leg-body { min-width: 0; }
 .rc-leg-route {
   font-family: 'DM Sans', sans-serif;
@@ -1319,7 +1320,6 @@ body.theme-night .toggle.on {
   min-width: 280px;
   max-width: 420px;
   pointer-events: none;
-  backdrop-filter: blur(6px);
 }
 .hc-name {
   font-family: 'Space Grotesk', 'DM Sans', sans-serif;
@@ -1402,44 +1402,165 @@ body.theme-night .toggle.on {
   .app { grid-template-columns: 320px 1fr 340px; }
   .mh-title { font-size: 40px; }
 }
-@media (max-width: 900px) {
-  .app {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-  }
-  .left-stack {
-    grid-column: 1; grid-row: 1;
-    flex-direction: row;
-    padding: 12px;
-    gap: 10px;
-    overflow-x: auto;
-  }
-  .left-stack > * { flex-shrink: 0; min-width: 280px; }
-  .right-stack {
-    grid-column: 1; grid-row: 3;
-    max-height: 38vh;
-  }
+/* ===== phones + tablets in portrait (app.jsx renders the mobile shell
+   below 1024 px): map full-screen, top bar, bottom sheet ===== */
+.corner-ornaments { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
+.app.mobile {
+  display: block;
+  height: 100vh;
+  height: 100dvh;
+}
+.app.mobile .hover-card { display: none; }
+.m-top {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 5;
+  background: var(--panel);
+  border-bottom: 1px solid var(--panel-edge);
+  box-shadow: var(--shadow);
+  padding: max(10px, env(safe-area-inset-top)) 14px 6px;
+  padding-left: max(14px, env(safe-area-inset-left));
+  padding-right: max(14px, env(safe-area-inset-right));
+}
+.m-brand {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+.m-title {
+  font-family: 'Space Grotesk', 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.m-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.m-top .mselect-trigger { padding: 10px 0; min-height: 44px; font-size: 15px; }
+.m-top .mselect-pop { max-height: min(60vh, 420px); }
+.m-top .mselect-search { font-size: 16px; }   /* 16px: no iOS zoom-on-focus */
+.m-top .mselect-item { min-height: 40px; }
+.m-budget {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+.m-budget-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.m-budget-value {
+  font-family: 'Space Grotesk', 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  min-width: 4.2em;
+  text-align: right;
+  color: var(--ink);
+}
+.m-slider { padding-top: 8px; }
+.m-slider .slider { margin: 0; }
+.m-slider .slider-ticks { margin-top: 2px; }
+.m-sheet {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border-top: 1px solid var(--panel-edge);
+  box-shadow: 0 -14px 32px -18px rgba(27, 27, 27, 0.35);
+  padding-bottom: env(safe-area-inset-bottom);
+  max-height: 100%;
+}
+.m-sheet.open { height: 58vh; height: 58dvh; }
+.m-tabs {
+  display: flex;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--panel-edge);
+}
+.m-tab, .m-handle {
+  flex: 1 1 0;
+  min-height: 50px;
+  background: transparent;
+  border: 0;
+  font-family: 'DM Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.m-tab.on { color: var(--ink); box-shadow: inset 0 3px 0 var(--accent); font-weight: 500; }
+.m-handle { flex: 0 0 48px; font-size: 16px; letter-spacing: 0; border-left: 1px solid var(--panel-edge); }
+.m-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding: 12px 16px 16px;
+  display: flex;
+  flex-direction: column;
+}
+.m-body-reach { overflow: hidden; padding-bottom: 0; }
+.m-body .panel { background: transparent; border: 0; box-shadow: none; padding: 0; }
+.m-body .list-panel { flex: 1 1 auto; min-height: 0; }
+.m-body .list-row { padding: 11px 6px; }
+.m-body .list-foot { display: none; }
+.m-body .route-card { border-top: 0; }
+.m-body .sources { background: transparent; border: 0; box-shadow: none; padding: 0; }
+.m-network { display: flex; flex-direction: column; gap: 14px; }
+.m-network .toggle { min-height: 44px; }
+.m-network .legend-dashes { margin-top: 0; }
+.m-about .mh-sub { margin-bottom: 12px; max-width: none; }
+.m-empty {
+  font-family: 'Space Grotesk', 'DM Sans', sans-serif;
+  font-style: italic;
+  color: var(--ink-2);
+  font-size: 15px;
+  line-height: 1.4;
+  padding: 8px 0;
+}
+@media (max-width: 1023px) and (orientation: landscape) and (max-height: 520px) {
+  /* phone on its side: a slimmer top bar, a shorter sheet */
+  .m-brand { display: none; }
+  .m-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 14px; align-items: end; }
+  .m-budget { margin-top: 0; }
+  .m-sheet.open { height: 62vh; height: 62dvh; }
+  .m-tab, .m-handle { min-height: 42px; }
 }
 </style>
 </head>
 <body>
 <div id="root"></div>
 
-<!-- React + Babel (local) -->
-<script src="vendor/react.development.js"></script>
-<script src="vendor/react-dom.development.js"></script>
-<script src="vendor/babel.min.js"></script>
+<!-- React (production builds, local) -->
+<script src="vendor/react.production.min.js"></script>
+<script src="vendor/react-dom.production.min.js"></script>
 
-<!-- d3 (geo) + topojson-client (local) -->
+<!-- d3 (geo + zoom) + topojson-client (local) -->
 <script src="vendor/d3.min.js"></script>
 <script src="vendor/topojson-client.min.js"></script>
 
-<!-- App data + code -->
-<script src="data.js"></script>
-<script src="data_extra.js"></script>
-<script src="data_ru.js"></script>
+<!-- Data: network (generated by scripts/build_network.cjs) + base map overlays -->
+<script src="data_meta.js"></script>
+<script src="data_net.js"></script>
 <script src="data_disputed.js"></script>
 <script src="data_continents.js"></script>
-<script type="text/babel" src="app.jsx"></script>
+<!-- App: compiled from app.jsx by scripts/build_app.cjs -->
+<script src="app.js"></script>
 </body>
 </html>

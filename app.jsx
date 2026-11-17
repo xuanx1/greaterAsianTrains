@@ -1,34 +1,44 @@
-/* global React, ReactDOM, d3, topojson, STATIONS, ROUTES, STATIONS_BY_ID, COUNTRY_NAMES */
-const { useState, useEffect, useMemo, useRef, useCallback, Fragment } = React;
+/* global React, ReactDOM, d3, topojson */
+// =============================================================
+// Greater Asia — rail reachability.
+//
+// Source of truth for the network: data_net.js (window.NET), generated
+// by scripts/build_network.cjs from the Transits of the World catalogue
+// (OpenStreetMap route relations + published timetables). This file is
+// transpiled to app.js by scripts/build_app.cjs — edit this, not app.js.
+//
+// Rendering: two stacked <canvas> layers (base map + contours / rails,
+// stations, labels). Pan + zoom only re-paint cached Path2D objects; no
+// React re-render happens per frame.
+// =============================================================
+const { useState, useEffect, useMemo, useRef, useCallback, useLayoutEffect, Fragment, memo } = React;
 
 // =============================================================
 // HELPERS
 // =============================================================
 
 function fmtH(h) {
-  if (h == null || isNaN(h)) return "—";
-  if (h < 1) return Math.round(h * 60) + "m";
+  if (h == null || isNaN(h) || !isFinite(h)) return "—";
+  if (h < 1) return Math.max(1, Math.round(h * 60)) + "m";
   const hh = Math.floor(h);
   const mm = Math.round((h - hh) * 60);
-  return mm === 0 ? `${hh}h` : `${hh}h ${mm.toString().padStart(2,"0")}`;
+  if (mm === 60) return `${hh + 1}h`;
+  return mm === 0 ? `${hh}h` : `${hh}h ${mm.toString().padStart(2, "0")}`;
 }
 
-// Inline monochrome train icons for the Network toggle. They inherit
-// `currentColor` from the surrounding button text so they flip between
-// paper-on-ink (active) and ink-on-paper (hover) without any per-icon
-// styling. Side profiles so the silhouette reads at a glance.
+function fmtKm(km) {
+  if (km == null || !isFinite(km)) return "—";
+  if (km < 10) return km.toFixed(1) + " km";
+  return Math.round(km).toLocaleString("en-US") + " km";
+}
+
 function ConvTrainIcon() {
   return (
     <svg viewBox="0 0 24 14" width="20" height="12" aria-hidden="true"
-         style={{ verticalAlign: "-2px", marginRight: 6 }}
-         fill="currentColor">
-      {/* boxy locomotive body */}
+         style={{ verticalAlign: "-2px", marginRight: 6 }} fill="currentColor">
       <rect x="3" y="3.2" width="14" height="6.6" rx="0.6" />
-      {/* cab roof */}
       <rect x="12.5" y="1.3" width="4.5" height="2.2" rx="0.4" />
-      {/* coupler stub */}
       <rect x="17" y="5.7" width="3.5" height="2" rx="0.3" />
-      {/* wheels */}
       <circle cx="6" cy="11" r="1.5" />
       <circle cx="13" cy="11" r="1.5" />
     </svg>
@@ -38,90 +48,41 @@ function ConvTrainIcon() {
 function HsrTrainIcon() {
   return (
     <svg viewBox="0 0 24 14" width="20" height="12" aria-hidden="true"
-         style={{ verticalAlign: "-2px", marginRight: 6 }}
-         fill="currentColor">
-      {/* streamlined bullet nose pointing right */}
+         style={{ verticalAlign: "-2px", marginRight: 6 }} fill="currentColor">
       <path d="M2 4.2 H17 L21 7.2 Q22 7.6 21 8 L17 9.8 H2 Z" />
-      {/* tiny wheels at base */}
       <circle cx="6" cy="11" r="1.2" />
       <circle cx="13.5" cy="11" r="1.2" />
     </svg>
   );
 }
 
-// Best-effort frequency label for a route. Honours an explicit
-// `r.freq` override when present, otherwise infers from the line name
-// and train type. Reflects published timetables c. 2024–26:
-//   • HSR services run roughly hourly or better on most corridors.
-//   • Named conventional intercity (Reunification, Stadler, ETS, etc.)
-//     runs multiple times a day.
-//   • Sleepers / overnight services are usually one departure per day.
-//   • Trans-Mongolian K3/K23 + Trans-Manchurian K19 are weekly.
-//   • The Issyk-Kul / Caucasus heritage / Hejaz lines are seasonal.
-function freqLabel(r) {
-  if (r && r.freq) return r.freq;
-  const line = ((r && r.line) || "").toLowerCase();
-  const op = ((r && r.op) || "").toLowerCase();
-  if (/trans[- ]?mongolian|trans[- ]?manchurian|\bk3\b|\bk4\b|\bk19\b|\bk20\b|\bk23\b|\bk24\b/.test(line)) {
-    return "1–2×/week";
-  }
-  if (/seasonal|tourist|issyk-kul|hejaz/.test(line)) {
-    return "Seasonal";
-  }
-  if (/heritage/.test(line)) {
-    return "Heritage / limited";
-  }
-  if (/btk|baku.*tbilisi.*kars|kars.*tbilisi/.test(line)) {
-    return "1–2×/week";
-  }
-  if (/yerevan express|tbilisi.*yerevan/.test(line)) {
-    return "Every other day";
-  }
-  if (/overnight|sleeper|night express|do[ğg]u express|güney express|toros express/.test(line)) {
-    return "Daily (overnight)";
-  }
-  if (/border|crossing|frontier/.test(line)) {
-    return "Limited";
-  }
-  if (r && r.type === "hsr") {
-    // Chinese / Korean / Japanese HSR corridors are extremely frequent;
-    // Etihad / Haramain / Afrosiyob are scheduled multiple times daily.
-    if (/etihad|haramain|afrosiyob|hafeet/.test(line) || /etihad rail/.test(op)) {
-      return "Several daily";
-    }
-    return "Frequent (hourly+)";
-  }
-  return "Multiple daily";
+function FerryIcon() {
+  return (
+    <svg viewBox="0 0 24 14" width="20" height="12" aria-hidden="true"
+         style={{ verticalAlign: "-2px", marginRight: 6 }} fill="currentColor">
+      <path d="M3 7.5 H21 L18.5 11 H5.5 Z" />
+      <rect x="7" y="4.2" width="8" height="2.6" rx="0.4" />
+      <rect x="9.5" y="2" width="2.2" height="2.4" />
+    </svg>
+  );
 }
 
-// Returns the native string if it adds information beyond `name`, else null.
-// Strips case, diacritics, punctuation, and whitespace before comparing — so
-// "Bandung"/"Bandung", "Hue"/"Huế", "Tai'an"/"泰安" handle correctly. Multi-
-// language natives (Singapore: "新加坡 · Singapura · சிங்கப்பூர்") survive
-// because the joined string differs from the English name.
+// Returns the native string if it adds information beyond `name`.
 function nativeOrNull(name, native) {
   if (!native) return null;
   const norm = s => s.toLowerCase()
-    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .normalize("NFD").replace(/[̀-ͯ]/g, "")
     .replace(/[\s'\-·.()\/]/g, "");
   return norm(name) === norm(native) ? null : native;
 }
 
-// Travel-time color ramp. Deep forest green → pale celadon as t→1.
+// Travel-time colour ramp. Deep forest green → pale celadon as t→1.
 function timeColor(hours, maxH, theme) {
   const t = Math.max(0, Math.min(1, hours / maxH));
   if (theme === "night") {
-    // luminous on dark
-    const lit = 38 + 38 * t;
-    const sat = 78 - 25 * t;
-    const hue = 148 - 14 * t;
-    return `hsl(${hue}, ${sat}%, ${lit}%)`;
+    return `hsl(${148 - 14 * t}, ${78 - 25 * t}%, ${38 + 38 * t}%)`;
   }
-  // warm-paper day
-  const lit = 22 + 56 * t;
-  const sat = 58 - 22 * t;
-  const hue = 142 - 8 * t;
-  return `hsl(${hue}, ${sat}%, ${lit}%)`;
+  return `hsl(${142 - 8 * t}, ${58 - 22 * t}%, ${22 + 56 * t}%)`;
 }
 
 function lineWidthForTime(hours, maxH) {
@@ -129,774 +90,751 @@ function lineWidthForTime(hours, maxH) {
   return 3.2 - 1.6 * t; // closer = thicker
 }
 
-// =============================================================
-// GRAPH + DIJKSTRA
-// =============================================================
-
-function buildAdjacency(routes, hsrOnly) {
-  const adj = {};
-  const seen = new Set();
-  for (const r of routes) {
-    if (hsrOnly && r.type !== "hsr") continue;
-    // Dedupe: same station pair (either direction) ignored on second occurrence.
-    const k1 = `${r.from}|${r.to}`;
-    const k2 = `${r.to}|${r.from}`;
-    if (seen.has(k1) || seen.has(k2)) continue;
-    seen.add(k1);
-    (adj[r.from] = adj[r.from] || []).push({ to: r.to, h: r.h, r });
-    (adj[r.to]   = adj[r.to]   || []).push({ to: r.from, h: r.h, r });
-  }
-  return adj;
-}
-
-function dijkstra(adj, origin) {
-  const dist = { [origin]: 0 };
-  const prev = {};
-  const prevRoute = {};
-  // Binary min-heap. Replaces the old `pq.sort()` surrogate, which was
-  // O(N log N) per pop and made Dijkstra O(V²·log V) — ~230 M ops on a
-  // 4 k-station graph and very noticeable when toggling HSR-only.
-  const heap = [];
-  const swap = (i, j) => { const t = heap[i]; heap[i] = heap[j]; heap[j] = t; };
-  const push = (id, d) => {
-    heap.push({ id, d });
-    let i = heap.length - 1;
-    while (i > 0) {
-      const p = (i - 1) >> 1;
-      if (heap[p].d <= heap[i].d) break;
-      swap(p, i); i = p;
-    }
-  };
-  const pop = () => {
-    const top = heap[0];
-    const last = heap.pop();
-    if (heap.length) {
-      heap[0] = last;
-      let i = 0; const n = heap.length;
-      while (true) {
-        const l = 2*i + 1, r = 2*i + 2;
-        let s = i;
-        if (l < n && heap[l].d < heap[s].d) s = l;
-        if (r < n && heap[r].d < heap[s].d) s = r;
-        if (s === i) break;
-        swap(s, i); i = s;
-      }
-    }
-    return top;
-  };
-  push(origin, 0);
-  const visited = new Set();
-  while (heap.length) {
-    const cur = pop();
-    if (visited.has(cur.id)) continue;
-    visited.add(cur.id);
-    for (const n of (adj[cur.id] || [])) {
-      const nd = cur.d + n.h;
-      if (dist[n.to] === undefined || nd < dist[n.to]) {
-        dist[n.to] = nd;
-        prev[n.to] = cur.id;
-        prevRoute[n.to] = n.r;
-        push(n.to, nd);
-      }
-    }
-  }
-  return { dist, prev, prevRoute };
-}
-
-function pathTo(target, prev, prevRoute) {
-  if (target == null) return { nodes: [], routes: [] };
-  const nodes = [target];
-  const routes = [];
-  let cur = target;
-  while (prev[cur] !== undefined) {
-    routes.unshift(prevRoute[cur]);
-    cur = prev[cur];
-    nodes.unshift(cur);
-  }
-  return { nodes, routes };
-}
-
-// =============================================================
-// GEOGRAPHY HELPERS
-// =============================================================
-
-// Great-circle distance in km between two stations.
 function gcDist(a, b) {
   const toRad = (d) => (d * Math.PI) / 180;
-  const R = 6371;
   const dLat = toRad(b.lat - a.lat);
   const dLng = toRad(b.lng - a.lng);
-  const s =
-    Math.sin(dLat / 2) ** 2 +
+  const s = Math.sin(dLat / 2) ** 2 +
     Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLng / 2) ** 2;
-  return 2 * R * Math.asin(Math.sqrt(s));
+  return 2 * 6371 * Math.asin(Math.sqrt(s));
 }
 
-function fmtKm(km) {
-  if (km == null) return "—";
-  if (km < 10) return km.toFixed(1) + " km";
-  return Math.round(km).toLocaleString("en-US") + " km";
-}
-
-// For an unreachable target, find its nearest reachable counterpart
-// (= the single obvious bridge to build, by great-circle proximity).
-function findBridge(target, reachableIds, stations) {
-  const tgt = stations.find((s) => s.id === target);
-  if (!tgt) return null;
-  let best = null;
-  let bestD = Infinity;
-  for (const s of stations) {
-    if (!reachableIds.has(s.id)) continue;
-    if (s.id === target) continue;
-    const d = gcDist(s, tgt);
-    if (d < bestD) {
-      bestD = d;
-      best = s;
-    }
-  }
-  return best ? { from: best, to: tgt, km: bestD } : null;
-}
-
-// Identify routes that are visually redundant: a direct A→B edge where
-// a chain A→…→B already exists through intermediate stations along the
-// same geographic corridor. The dataset deliberately carries both
-// (express through-services like Beijing→Shanghai 4.25h plus the chain
-// of intermediates) so Dijkstra can pick the faster express; on the
-// map this produces a straight chord on top of the wiggly chain. We
-// keep all edges in the routing graph and only suppress the chord at
-// render time. Returns a Set of indices into `routes`.
-function computeRedundantRouteIndices(routes, stations) {
-  const stById = Object.fromEntries(stations.map(s => [s.id, s]));
-  const adj = {};
-  for (let i = 0; i < routes.length; i++) {
-    const r = routes[i];
-    (adj[r.from] = adj[r.from] || []).push({ to: r.to, idx: i });
-    (adj[r.to]   = adj[r.to]   || []).push({ to: r.from, idx: i });
-  }
-  const redundant = new Set();
-  const MAX_HOPS = 14;
-  for (let i = 0; i < routes.length; i++) {
-    const r = routes[i];
-    const a = stById[r.from], b = stById[r.to];
-    if (!a || !b) continue;
-    // Equirectangular projection around the segment's mid-latitude so
-    // perpendicular-distance comparisons are roughly metric.
-    const midLat = (a.lat + b.lat) / 2;
-    const cos = Math.cos(midLat * Math.PI / 180);
-    const ax = a.lng * cos, ay = a.lat;
-    const bx = b.lng * cos, by = b.lat;
-    const dx = bx - ax, dy = by - ay;
-    const len2 = dx*dx + dy*dy;
-    const len = Math.sqrt(len2);
-    if (len < 0.4) continue; // too short for an intermediate to fit
-    const tol = Math.min(len * 0.15, 1.4); // ~155 km cap
-
-    // BFS from r.from to r.to inside the corridor, skipping the direct
-    // edge `i` and requiring at least one intermediate hop.
-    const visited = new Set([r.from]);
-    const hops = { [r.from]: 0 };
-    const queue = [r.from];
-    let qi = 0;
-    let found = false;
-    while (qi < queue.length && !found) {
-      const cur = queue[qi++];
-      const h = hops[cur];
-      if (h >= MAX_HOPS) continue;
-      for (const n of (adj[cur] || [])) {
-        if (n.idx === i) continue;
-        if (n.to === r.to) {
-          if (cur !== r.from) { found = true; break; }
-          continue; // a parallel direct edge isn't a chain — ignore
-        }
-        if (visited.has(n.to)) continue;
-        const pt = stById[n.to];
-        if (!pt) continue;
-        const xx = pt.lng * cos, xy = pt.lat;
-        const t = ((xx - ax) * dx + (xy - ay) * dy) / len2;
-        if (t < -0.05 || t > 1.05) continue;
-        const px = ax + t * dx, py = ay + t * dy;
-        const pdx = xx - px, pdy = xy - py;
-        if (pdx*pdx + pdy*pdy > tol*tol) continue;
-        visited.add(n.to);
-        hops[n.to] = h + 1;
-        queue.push(n.to);
-      }
-    }
-    if (found) redundant.add(i);
-  }
-  return redundant;
-}
-
-// Chain consecutive route segments of the same named rail line into
-// continuous polylines so the map renders one smooth path per service
-// instead of N individual line segments butted end-to-end (which look
-// like dots-connecting-lines once a round stroke cap blooms at every
-// station endpoint). Routes are grouped by `line` (the named service);
-// inside each group we BFS-walk the adjacency, starting from degree-1
-// nodes so endpoints come out as honest path termini, then mop up any
-// remaining loop interior. Returns [{ stations: [id, ...], type }, …].
-function chainRoutesIntoPolylines(routes) {
-  const groups = new Map();
-  for (const r of routes) {
-    const k = r.line || r.op || "_";
-    if (!groups.has(k)) groups.set(k, []);
-    groups.get(k).push(r);
-  }
-  const polylines = [];
-  for (const [, es] of groups) {
-    if (es.length === 0) continue;
-    const adj = {};
-    for (const r of es) {
-      (adj[r.from] = adj[r.from] || []).push(r.to);
-      (adj[r.to]   = adj[r.to]   || []).push(r.from);
-    }
-    const used = new Set(); // canonical edge keys
-    const ek = (a, b) => a < b ? `${a}|${b}` : `${b}|${a}`;
-    const nodes = Object.keys(adj);
-    // Prefer starting from degree-1 endpoints — those produce a clean
-    // walk to the far end of the chain. Fall back to any remaining
-    // node so closed loops still get traversed.
-    const starts = nodes.filter(n => adj[n].length === 1).concat(nodes);
-    const type = es[0].type;
-    for (const start of starts) {
-      let cur = start;
-      let walked = false;
-      const stations = [start];
-      while (true) {
-        let next = null;
-        for (const n of adj[cur]) {
-          if (used.has(ek(cur, n))) continue;
-          next = n;
-          break;
-        }
-        if (next == null) break;
-        used.add(ek(cur, next));
-        stations.push(next);
-        cur = next;
-        walked = true;
-      }
-      if (walked && stations.length >= 2) {
-        polylines.push({ stations, type });
-      }
-    }
-  }
-  return polylines;
+const DISPLAY_NAMES = (() => {
+  try { return new Intl.DisplayNames(["en"], { type: "region" }); } catch (e) { return null; }
+})();
+function countryName(cc) {
+  if (!cc) return "";
+  if (window.COUNTRY_NAMES[cc]) return window.COUNTRY_NAMES[cc];
+  try { return (DISPLAY_NAMES && DISPLAY_NAMES.of(cc)) || cc; } catch (e) { return cc; }
 }
 
 // =============================================================
-// Min-heap (for the bridge planner Dijkstra)
+// NETWORK (data_net.js)
 // =============================================================
-class MinHeap {
-  constructor() { this.a = []; }
-  push(item) {
-    this.a.push(item);
-    let i = this.a.length - 1;
+const NET = window.NET;
+const NS = NET.s.n.length;
+const ASIA_A2 = new Set(("AF AM AZ BH BD BT BN KH CN CY GE HK IN ID IR IQ IL JP JO KZ KW KG LA LB MO MY MV " +
+  "MN MM NP KP OM PK PS PH QA RU SA SG KR LK SY TW TJ TH TL TR TM AE UZ VN YE").split(" "));
+
+const STATIONS = new Array(NS);
+for (let i = 0; i < NS; i++) {
+  const cc = NET.meta.cc[NET.s.c[i]];
+  STATIONS[i] = {
+    id: i,
+    name: NET.s.n[i],
+    native: NET.s.nn[i] || "",
+    country: cc,
+    lng: NET.s.x[i] / 1e4,
+    lat: NET.s.y[i] / 1e4,
+    rank: NET.s.r[i],           // number of lines calling here
+    pier: NET.s.r[i] === 0,     // a ferry pier with no railway
+    asia: ASIA_A2.has(cc),
+  };
+}
+
+const KIND_NAME = { h: "High-speed", i: "Intercity", n: "Night", c: "Commuter", b: "Branch" };
+const LINES = NET.l.map(([title, native, kind, op, freq, v10, est, stops, km10]) => ({
+  title, native, kind, op: op >= 0 ? NET.meta.ops[op] : "", freq: freq || "",
+  kmh: v10 / 10, est: !!est, stops, km: km10,
+}));
+const FERRIES = NET.f.map(([a, b, km10, dur, est, int, name, geo]) => ({
+  a, b, km: km10 / 10, dur, est: !!est, headway: int, name, geo,
+}));
+
+// station → lines through it (CSR): for leg grouping
+const ST_LINE_OFF = new Int32Array(NS + 1);
+const ST_LINE = (() => {
+  for (const L of LINES) for (const p of L.stops) ST_LINE_OFF[p + 1]++;
+  for (let i = 0; i < NS; i++) ST_LINE_OFF[i + 1] += ST_LINE_OFF[i];
+  const fill = ST_LINE_OFF.slice(0, NS);
+  const li = new Int32Array(ST_LINE_OFF[NS]), pos = new Int32Array(ST_LINE_OFF[NS]);
+  LINES.forEach((L, k) => L.stops.forEach((p, j) => { const at = fill[p]++; li[at] = k; pos[at] = j; }));
+  return { li, pos };
+})();
+
+// countries the rail network (not just ferries / commuter lines) serves
+const RAIL_COUNTRIES = new Set();
+for (const L of LINES) if (L.kind !== "c") for (const p of L.stops) RAIL_COUNTRIES.add(STATIONS[p].country);
+
+// decoded edge courses: key (lo * NS + hi) → Float64Array [lon,lat,...] (lo→hi)
+const decode = (arr) => {
+  const out = new Float64Array(arr.length);
+  let x = 0, y = 0;
+  for (let i = 0; i < arr.length; i += 2) { x += arr[i]; y += arr[i + 1]; out[i] = x / 1000; out[i + 1] = y / 1000; }
+  return out;
+};
+const EDGE_COURSE = new Map();
+for (const [a, b, g] of NET.e) EDGE_COURSE.set(a * NS + b, decode(g));
+const FERRY_COURSE = FERRIES.map(f => decode(f.geo));
+
+// =============================================================
+// GRAPH — one per (HSR-only, ferries) mode, built on first use.
+// Edge types: 0 HSR rail · 1 conventional rail · 2 ferry · 3 drive
+// (pier ↔ station) · 4 walk · 5 cross-town transfer.
+// =============================================================
+const T_HSR = 0, T_CONV = 1, T_FERRY = 2, T_DRIVE = 3, T_WALK = 4, T_CITY = 5;
+const FERRY_BOARD_H = 0.5;       // check-in + waiting at the pier
+const GRAPHS = new Map();
+
+function getGraph(hsrOnly, ferriesOn) {
+  const key = (hsrOnly ? "h" : "a") + (ferriesOn ? "f" : "");
+  if (GRAPHS.has(key)) return GRAPHS.get(key);
+  const eA = [], eB = [], eH = [], eT = [], eRef = [], eKm = [];
+  const railIdx = new Map();
+  const add = (a, b, h, t, ref, km) => {
+    eA.push(a); eB.push(b); eH.push(h); eT.push(t); eRef.push(ref); eKm.push(km);
+  };
+  LINES.forEach((L, li) => {
+    if (hsrOnly && L.kind !== "h") return;
+    const t = L.kind === "h" ? T_HSR : T_CONV;
+    for (let j = 0; j + 1 < L.stops.length; j++) {
+      let a = L.stops[j], b = L.stops[j + 1];
+      if (a === b) continue;
+      const km = Math.max(0.1, Math.abs(L.km[j + 1] - L.km[j]) / 10);
+      const h = Math.max(1 / 60, km / L.kmh);
+      if (a > b) { const tmp = a; a = b; b = tmp; }
+      const k = a * NS + b;
+      const at = railIdx.get(k);
+      if (at === undefined) { railIdx.set(k, eA.length); add(a, b, h, t, li, km); }
+      else if (h < eH[at]) { eH[at] = h; eT[at] = t; eRef[at] = li; eKm[at] = km; }
+    }
+  });
+  for (const [a, b, d10, kind] of NET.x) {
+    const km = d10 / 10;
+    if (kind === 1) add(a, b, 0.5 + km / 25, T_CITY, -1, km);
+    else add(a, b, km <= 1.5 ? 1 / 12 + km / 4.5 : 0.25 + km / 25, T_WALK, -1, km);
+  }
+  if (ferriesOn) {
+    FERRIES.forEach((f, fi) => add(f.a, f.b, f.dur / 60 + FERRY_BOARD_H, T_FERRY, fi, f.km));
+    for (const [a, b, d10] of NET.d) add(a, b, 0.25 + d10 / 10 / 40, T_DRIVE, -1, d10 / 10);
+  }
+  const m = eA.length;
+  const off = new Int32Array(NS + 1);
+  for (let e = 0; e < m; e++) { off[eA[e] + 1]++; off[eB[e] + 1]++; }
+  for (let i = 0; i < NS; i++) off[i + 1] += off[i];
+  const fill = off.slice(0, NS);
+  const to = new Int32Array(2 * m), ed = new Int32Array(2 * m);
+  for (let e = 0; e < m; e++) {
+    let at = fill[eA[e]]++; to[at] = eB[e]; ed[at] = e;
+    at = fill[eB[e]]++; to[at] = eA[e]; ed[at] = e;
+  }
+  const G = {
+    key, hsrOnly, ferriesOn, m,
+    eA: Int32Array.from(eA), eB: Int32Array.from(eB), eH: Float64Array.from(eH),
+    eT: Uint8Array.from(eT), eRef: Int32Array.from(eRef), eKm: Float64Array.from(eKm),
+    off, to, ed,
+  };
+  GRAPHS.set(key, G);
+  return G;
+}
+
+// Binary-heap Dijkstra on typed arrays. `w` is the per-edge weight.
+function dijkstra(G, src, w, target = -1, extra = null) {
+  const dist = new Float64Array(NS).fill(Infinity);
+  const pe = new Int32Array(NS).fill(-1);   // edge used to arrive (or -2 - extraIdx)
+  let cap = 1024, hn = new Int32Array(cap), hd = new Float64Array(cap), size = 0;
+  const push = (n, d) => {
+    if (size === cap) {
+      cap *= 2;
+      const a = new Int32Array(cap); a.set(hn); hn = a;
+      const b = new Float64Array(cap); b.set(hd); hd = b;
+    }
+    let i = size++;
     while (i > 0) {
       const p = (i - 1) >> 1;
-      if (this.a[p].d <= this.a[i].d) break;
-      [this.a[p], this.a[i]] = [this.a[i], this.a[p]];
-      i = p;
+      if (hd[p] <= d) break;
+      hn[i] = hn[p]; hd[i] = hd[p]; i = p;
     }
-  }
-  pop() {
-    if (!this.a.length) return null;
-    const top = this.a[0];
-    const last = this.a.pop();
-    if (this.a.length) {
-      this.a[0] = last;
-      let i = 0;
-      const n = this.a.length;
-      while (true) {
-        const l = 2 * i + 1, r = 2 * i + 2;
-        let m = i;
-        if (l < n && this.a[l].d < this.a[m].d) m = l;
-        if (r < n && this.a[r].d < this.a[m].d) m = r;
-        if (m === i) break;
-        [this.a[m], this.a[i]] = [this.a[i], this.a[m]];
-        i = m;
+    hn[i] = n; hd[i] = d;
+  };
+  const pop = () => {
+    const n = hn[0];
+    const ln = hn[--size], ld = hd[size];
+    let i = 0;
+    for (;;) {
+      let c = 2 * i + 1;
+      if (c >= size) break;
+      if (c + 1 < size && hd[c + 1] < hd[c]) c++;
+      if (hd[c] >= ld) break;
+      hn[i] = hn[c]; hd[i] = hd[c]; i = c;
+    }
+    hn[i] = ln; hd[i] = ld;
+    return n;
+  };
+  dist[src] = 0; push(src, 0);
+  const { off, to, ed } = G;
+  while (size) {
+    const d0 = hd[0], u = pop();
+    if (d0 > dist[u]) continue;
+    if (u === target) break;
+    for (let k = off[u]; k < off[u + 1]; k++) {
+      const e = ed[k], v = to[k], nd = d0 + w[e];
+      if (nd < dist[v]) { dist[v] = nd; pe[v] = e; push(v, nd); }
+    }
+    if (extra) {
+      const xs = extra.get(u);
+      if (xs) for (let j = 0; j < xs.length; j += 3) {
+        const v = xs[j], nd = d0 + xs[j + 1];
+        if (nd < dist[v]) { dist[v] = nd; pe[v] = -2 - xs[j + 2]; push(v, nd); }
       }
     }
-    return top;
   }
-  get length() { return this.a.length; }
+  return { dist, pe };
 }
 
-// =============================================================
-// Bridge planner — minimises TOTAL journey distance (great-circle of
-// rail-leg-sums + bridge gc). Uses a station-level Dijkstra over a
-// graph that contains every rail edge plus top-K nearest cross-
-// component pairs as candidate "bridges". The path is then split at
-// each bridge edge into alternating rail / bridge sections.
-// =============================================================
-function planJourney(originId, destId, routes, hsrOnly, stations) {
-  // 1. Build adjacency from routes
-  const railAdj = {};
-  const railEdges = [];
-  for (const r of routes) {
-    if (hsrOnly && r.type !== "hsr") continue;
-    railEdges.push(r);
-    (railAdj[r.from] = railAdj[r.from] || []).push({ to: r.to, r });
-    (railAdj[r.to]   = railAdj[r.to]   || []).push({ to: r.from, r });
+function pathTo(G, target, pe, src) {
+  const nodes = [target], edges = [];
+  let cur = target, guard = 0;
+  while (cur !== src && pe[cur] >= 0 && guard++ < NS) {
+    const e = pe[cur];
+    edges.unshift(e);
+    cur = G.eA[e] === cur ? G.eB[e] : G.eA[e];
+    nodes.unshift(cur);
   }
+  return { nodes, edges };
+}
 
-  // 2. Components (undirected BFS on rail graph)
-  const comp = {};
-  let nextId = 0;
-  for (const s of stations) {
-    if (comp[s.id] !== undefined) continue;
-    const stack = [s.id];
-    while (stack.length) {
-      const v = stack.pop();
-      if (comp[v] !== undefined) continue;
-      comp[v] = nextId;
-      for (const n of (railAdj[v] || [])) {
-        if (comp[n.to] === undefined) stack.push(n.to);
+// Group a station-by-station path into rides. The fastest path hops between
+// trains freely (changes are not timed), so a ride is the line from the
+// current station that reaches FURTHEST along the path — by its own stops,
+// not necessarily calling at every station of the path — without being much
+// slower than the path itself. Ferries, drives and walks are their own legs.
+function legsFromPath(G, nodes, edges) {
+  const idxOf = new Map();
+  nodes.forEach((n, j) => idxOf.set(n, j));
+  const cumH = new Float64Array(nodes.length), cumK = new Float64Array(nodes.length);
+  for (let j = 0; j < edges.length; j++) { cumH[j + 1] = cumH[j] + G.eH[edges[j]]; cumK[j + 1] = cumK[j] + G.eKm[edges[j]]; }
+  const legs = [];
+  let i = 0;
+  while (i < edges.length) {
+    const e = edges[i], t = G.eT[e];
+    if (t >= T_FERRY) {
+      legs.push({ kind: t === T_FERRY ? "ferry" : t === T_DRIVE ? "drive" : t === T_CITY ? "city" : "walk",
+        from: nodes[i], to: nodes[i + 1], h: G.eH[e], km: G.eKm[e], ref: G.eRef[e], stops: 1 });
+      i++; continue;
+    }
+    let limit = i;
+    while (limit < edges.length && G.eT[edges[limit]] < T_FERRY) limit++;
+    const u = nodes[i];
+    let best = null;
+    for (let k = ST_LINE_OFF[u]; k < ST_LINE_OFF[u + 1]; k++) {
+      const li = ST_LINE.li[k], L = LINES[li];
+      if (G.hsrOnly && L.kind !== "h") continue;
+      const p0 = ST_LINE.pos[k];
+      for (const dir of [1, -1]) {
+        for (let q = p0 + dir; q >= 0 && q < L.stops.length; q += dir) {
+          const j = idxOf.get(L.stops[q]);
+          if (j === undefined || j <= i || j > limit) continue;
+          const lkm = Math.abs(L.km[q] - L.km[p0]) / 10, lh = lkm / L.kmh;
+          if (lh > (cumH[j] - cumH[i]) * 1.25 + 1 / 6 || lkm > (cumK[j] - cumK[i]) * 1.3 + 5) continue;
+          if (!best || j > best.j || (j === best.j && lh < best.h)) best = { li, j, h: lh, km: lkm, stops: Math.abs(q - p0) };
+        }
       }
     }
-    nextId++;
+    if (!best) best = { li: G.eRef[e], j: i + 1, h: G.eH[e], km: G.eKm[e], stops: 1 };
+    legs.push({ kind: "rail", line: best.li, from: u, to: nodes[best.j], h: best.h, km: best.km, stops: best.stops });
+    i = best.j;
   }
+  return legs;
+}
+const legsTime = (legs) => legs.reduce((s, l) => s + l.h, 0);
 
-  // 3. Build a station-level weighted graph for the journey planner.
-  //    - Rail edges: weight = gc(from, to), type "rail"
-  //    - Inter-component edges: weight = gc(from, to) * BRIDGE_PENALTY,
-  //      so the planner prefers many short bridges + existing rail over
-  //      a single long bridge that skips countries.
-  //      We also discard any pair > MAX_BRIDGE_KM (no transcontinental
-  //      single hops).
-  const BRIDGE_PENALTY = 3.0;
-  const MAX_BRIDGE_KM = 1600;
-  const stationById = Object.fromEntries(stations.map(s => [s.id, s]));
-  const edges = {};
-  for (const r of railEdges) {
-    const a = stationById[r.from], b = stationById[r.to];
-    if (!a || !b) continue;
-    const km = gcDist(a, b);
-    (edges[r.from] = edges[r.from] || []).push({ to: r.to, km, weight: km, type: "rail", route: r });
-    (edges[r.to]   = edges[r.to]   || []).push({ to: r.from, km, weight: km, type: "rail", route: r });
+// ---------- components + bridge candidates (disconnected journeys) ----------
+function componentsOf(G) {
+  if (G._comp) return G._comp;
+  const comp = new Int32Array(NS).fill(-1);
+  let c = 0;
+  const stack = new Int32Array(NS);
+  for (let s = 0; s < NS; s++) {
+    if (comp[s] >= 0) continue;
+    let sp = 0; stack[sp++] = s; comp[s] = c;
+    while (sp) {
+      const u = stack[--sp];
+      for (let k = G.off[u]; k < G.off[u + 1]; k++) {
+        const v = G.to[k];
+        if (comp[v] < 0) { comp[v] = c; stack[sp++] = v; }
+      }
+    }
+    c++;
   }
+  G._comp = comp;
+  return comp;
+}
 
-  // Group stations by component
-  const byComp = {};
-  for (const s of stations) {
-    const c = comp[s.id];
-    (byComp[c] = byComp[c] || []).push(s);
+const BRIDGE_PENALTY = 3.0;
+const MAX_BRIDGE_KM = 1600;
+// For every pair of networks, their few closest station pairs (great-circle)
+// within MAX_BRIDGE_KM — candidates for a "missing link". Reps are thinned
+// to one station per network per 1° cell to keep this fast.
+function bridgeCandidates(G, alsoNode) {
+  const comp = componentsOf(G);
+  if (!G._reps) {
+    const repSt = [], seen = new Set();
+    for (let i = 0; i < NS; i++) {
+      if (G.off[i + 1] === G.off[i]) continue;          // isolated in this mode
+      const s = STATIONS[i];
+      const k = comp[i] + ":" + Math.floor(s.lat) + ":" + Math.floor(s.lng);
+      if (seen.has(k)) continue;
+      seen.add(k); repSt.push(i);
+    }
+    G._reps = repSt;
   }
-  const compIds = Object.keys(byComp);
-  const K_NEAREST = 14; // candidate bridge endpoints per component pair
-
-  for (let i = 0; i < compIds.length; i++) {
-    for (let j = i + 1; j < compIds.length; j++) {
-      const a = compIds[i], b = compIds[j];
-      const pairs = [];
-      for (const sa of byComp[a]) {
-        for (const sb of byComp[b]) {
-          const km = gcDist(sa, sb);
+  const reps = alsoNode >= 0 && G.off[alsoNode + 1] === G.off[alsoNode] ? G._reps.concat([alsoNode]) : G._reps;
+  // a 3-D grid on the sphere (100 km cells): each rep's K nearest reps of
+  // OTHER networks by an expanding shell search
+  const CELL = 100, K = 6, R_EARTH = 6371;
+  const key3 = (x, y, z) => ((x + 128) * 256 + (y + 128)) * 256 + (z + 128);
+  const XYZ = new Float64Array(reps.length * 3);
+  const grid = new Map();
+  reps.forEach((st, r) => {
+    const s = STATIONS[st], la = s.lat * Math.PI / 180, lo = s.lng * Math.PI / 180;
+    const x = R_EARTH * Math.cos(la) * Math.cos(lo), y = R_EARTH * Math.cos(la) * Math.sin(lo), z = R_EARTH * Math.sin(la);
+    XYZ[r * 3] = x; XYZ[r * 3 + 1] = y; XYZ[r * 3 + 2] = z;
+    const k = key3(Math.floor(x / CELL), Math.floor(y / CELL), Math.floor(z / CELL));
+    (grid.get(k) || grid.set(k, []).get(k)).push(r);
+  });
+  const RMAX = Math.ceil(MAX_BRIDGE_KM / CELL);
+  const seen = new Set(), list = [];
+  for (let r = 0; r < reps.length; r++) {
+    const a = reps[r], ca = comp[a];
+    const cx = Math.floor(XYZ[r * 3] / CELL), cy = Math.floor(XYZ[r * 3 + 1] / CELL), cz = Math.floor(XYZ[r * 3 + 2] / CELL);
+    const top = [];   // [km, q]
+    for (let ring = 0; ring <= RMAX; ring++) {
+      if (top.length >= K && (ring - 1) * CELL > top[top.length - 1][0]) break;
+      for (let dx = -ring; dx <= ring; dx++) for (let dy = -ring; dy <= ring; dy++) for (let dz = -ring; dz <= ring; dz++) {
+        if (Math.max(Math.abs(dx), Math.abs(dy), Math.abs(dz)) !== ring) continue;   // shell only
+        const cell = grid.get(key3(cx + dx, cy + dy, cz + dz));
+        if (!cell) continue;
+        for (const q of cell) {
+          if (comp[reps[q]] === ca) continue;
+          const km = Math.hypot(XYZ[q * 3] - XYZ[r * 3], XYZ[q * 3 + 1] - XYZ[r * 3 + 1], XYZ[q * 3 + 2] - XYZ[r * 3 + 2]);
           if (km > MAX_BRIDGE_KM) continue;
-          pairs.push({ from: sa, to: sb, km });
+          if (top.length < K) { top.push([km, q]); top.sort((u, v) => u[0] - v[0]); }
+          else if (km < top[K - 1][0]) { top[K - 1] = [km, q]; top.sort((u, v) => u[0] - v[0]); }
         }
       }
-      pairs.sort((x, y) => x.km - y.km);
-      const top = pairs.slice(0, K_NEAREST);
-      for (const p of top) {
-        const w = p.km * BRIDGE_PENALTY;
-        (edges[p.from.id] = edges[p.from.id] || []).push({ to: p.to.id, km: p.km, weight: w, type: "bridge" });
-        (edges[p.to.id]   = edges[p.to.id]   || []).push({ to: p.from.id, km: p.km, weight: w, type: "bridge" });
-      }
+    }
+    for (const [, q] of top) {
+      const b = reps[q], pk = a < b ? a * NS + b : b * NS + a;
+      if (seen.has(pk)) continue;
+      seen.add(pk);
+      list.push([gcDist(STATIONS[a], STATIONS[b]), a, b]);
     }
   }
-
-  // 3b. Fallback: for any component pair with no edges <= MAX_BRIDGE_KM,
-  // include the SHORTEST pair anyway so very-isolated networks (e.g.
-  // Bandung→Tokyo direct) can still be patched if needed.
-  for (let i = 0; i < compIds.length; i++) {
-    for (let j = i + 1; j < compIds.length; j++) {
-      const a = compIds[i], b = compIds[j];
-      // Check if any inter-component edge already exists for any station of a -> any station of b.
-      let any = false;
-      outer:
-      for (const sa of byComp[a]) {
-        for (const e of (edges[sa.id] || [])) {
-          if (e.type === "bridge" && comp[e.to] === Number(b)) { any = true; break outer; }
-        }
-      }
-      if (any) continue;
-      // Find the absolute shortest pair (without distance cap)
-      let best = null;
-      for (const sa of byComp[a]) {
-        for (const sb of byComp[b]) {
-          const km = gcDist(sa, sb);
-          if (!best || km < best.km) best = { from: sa, to: sb, km };
-        }
-      }
-      if (best) {
-        const w = best.km * BRIDGE_PENALTY;
-        (edges[best.from.id] = edges[best.from.id] || []).push({ to: best.to.id, km: best.km, weight: w, type: "bridge" });
-        (edges[best.to.id]   = edges[best.to.id]   || []).push({ to: best.from.id, km: best.km, weight: w, type: "bridge" });
-      }
-    }
-  }
-
-  // 4. Dijkstra on the unified graph (using `weight`, not `km`)
-  const dist = { [originId]: 0 };
-  const prev = {};
-  const prevEdge = {};
-  const visited = new Set();
-  const pq = new MinHeap();
-  pq.push({ id: originId, d: 0 });
-  while (pq.length) {
-    const cur = pq.pop();
-    if (visited.has(cur.id)) continue;
-    visited.add(cur.id);
-    if (cur.id === destId) break;
-    for (const e of (edges[cur.id] || [])) {
-      const nd = cur.d + e.weight;
-      if (dist[e.to] === undefined || nd < dist[e.to]) {
-        dist[e.to] = nd;
-        prev[e.to] = cur.id;
-        prevEdge[e.to] = e;
-        pq.push({ id: e.to, d: nd });
-      }
-    }
-  }
-  if (dist[destId] === undefined) return null;
-
-  // 5. Walk back the path and split into alternating rail / bridge sections
-  const path = [];
-  let cur = destId;
-  while (prev[cur] !== undefined) {
-    path.unshift({ ...prevEdge[cur], from: prev[cur], to: cur });
-    cur = prev[cur];
-  }
-  return { path, comp };
+  return list;
 }
 
-// Given a path of {from, to, type, route?, km}, group consecutive rails
-// into a rail-section and emit bridges as their own section. For each
-// rail section, we re-run a time-weighted Dijkstra inside its
-// component to pick the fastest service for the leg.
-function sectionsFromPath(path, origin, routes, hsrOnly, stations) {
-  const stationById = Object.fromEntries(stations.map(s => [s.id, s]));
-  const adj = (function () {
-    const a = {};
-    for (const r of routes) {
-      if (hsrOnly && r.type !== "hsr") continue;
-      (a[r.from] = a[r.from] || []).push({ to: r.to, h: r.h, r });
-      (a[r.to]   = a[r.to]   || []).push({ to: r.from, h: r.h, r });
+// Journey to an unreachable station: minimise rail km + 3 × bridge km over
+// the network plus candidate bridges, then re-time each rail section.
+function planJourney(G, origin, dest) {
+  const cands = bridgeCandidates(G, dest);
+  const extra = new Map();
+  cands.forEach(([km, a, b], i) => {
+    const w = km * BRIDGE_PENALTY;
+    (extra.get(a) || extra.set(a, []).get(a)).push(b, w, i);
+    (extra.get(b) || extra.set(b, []).get(b)).push(a, w, i);
+  });
+  const { dist, pe } = dijkstra(G, origin, G.eKm, dest, extra);
+  if (!isFinite(dist[dest])) return null;
+  // walk back: rail edges (≥0) and bridges (≤ -2)
+  const steps = [];
+  let cur = dest, guard = 0;
+  while (cur !== origin && guard++ < NS) {
+    const e = pe[cur];
+    if (e >= 0) {
+      const prev = G.eA[e] === cur ? G.eB[e] : G.eA[e];
+      steps.unshift({ rail: true, from: prev, to: cur });
+      cur = prev;
+    } else if (e <= -2) {
+      const [km, a, b] = cands[-2 - e];
+      const prev = a === cur ? b : a;
+      steps.unshift({ rail: false, from: prev, to: cur, km });
+      cur = prev;
+    } else return null;
+  }
+  // the candidates are thinned reps: move each bridge's ends to the
+  // closest pair of stations of the two networks
+  const comp = componentsOf(G);
+  const nearestIn = (c, to) => {
+    let best = -1, bd = Infinity;
+    for (let i = 0; i < NS; i++) {
+      if (comp[i] !== c) continue;
+      const d = gcDist(STATIONS[i], STATIONS[to]);
+      if (d < bd) { bd = d; best = i; }
     }
-    return a;
-  })();
-
+    return [best, bd];
+  };
   const sections = [];
   let railStart = origin;
-  let railEnd = null;
-  let bridgeKmSum = 0;
-
-  function flushRail(start, end) {
-    if (!start || !end || start === end) return;
-    const { dist, prev, prevRoute } = dijkstra(adj, start);
-    if (dist[end] === undefined) return;
-    const railPath = pathTo(end, prev, prevRoute);
-    sections.push({
-      kind: "rail",
-      from: start, to: end,
-      time: dist[end],
-      routes: railPath.routes,
-      nodes: railPath.nodes,
-    });
+  const flush = (railEnd) => {
+    if (railEnd < 0 || railStart === railEnd) return;
+    const sp = dijkstra(G, railStart, G.eH, railEnd);
+    if (!isFinite(sp.dist[railEnd])) return;
+    const p = pathTo(G, railEnd, sp.pe, railStart);
+    const legs = legsFromPath(G, p.nodes, p.edges);
+    sections.push({ kind: "rail", from: railStart, to: railEnd, time: legsTime(legs),
+      nodes: p.nodes, edges: p.edges, legs });
+  };
+  for (const s of steps) {
+    if (s.rail) continue;
+    const [a] = nearestIn(comp[s.from], s.to);
+    const [b, km] = nearestIn(comp[s.to], a);
+    flush(a);
+    sections.push({ kind: "bridge", from: a, to: b, km });
+    railStart = b;
   }
-
-  for (const e of path) {
-    if (e.type === "rail") {
-      // Just track the end of the rail run
-      railEnd = e.to;
-    } else {
-      // Bridge — flush any rail run first
-      if (railEnd && railStart !== railEnd) {
-        flushRail(railStart, railEnd);
-      }
-      sections.push({
-        kind: "bridge",
-        from: stationById[e.from],
-        to: stationById[e.to],
-        km: e.km,
-      });
-      bridgeKmSum += e.km;
-      railStart = e.to;
-      railEnd = null;
-    }
-  }
-  // Trailing rail run
-  if (railEnd && railStart !== railEnd) {
-    flushRail(railStart, railEnd);
-  }
-  return { sections, totalBridgeKm: bridgeKmSum };
+  flush(dest);
+  return sections;
 }
 
-// =============================================================
-// Build a full journey description: alternating rail sections (intra-
-// component) and bridge segments (inter-component missing links). For
-// a reachable destination, returns a single rail section. For a
-// disconnected one, the chain origin → bridge_from → bridge_to →
-// next_bridge_from → ... → destination.
-// =============================================================
-function buildJourney(origin, dest, adj, dist, prev, prevRoute, stations, hsrOnly) {
-  if (!origin || !dest) return null;
-  // Reachable — one rail section.
-  if (dist[dest] !== undefined) {
-    const railPath = pathTo(dest, prev, prevRoute);
+function buildJourney(G, sp, origin, dest) {
+  if (origin == null || dest == null || !sp) return null;
+  if (isFinite(sp.dist[dest])) {
+    const p = pathTo(G, dest, sp.pe, origin);
+    const legs = legsFromPath(G, p.nodes, p.edges);
     return {
       type: "reachable",
-      sections: [{
-        kind: "rail",
-        from: origin, to: dest,
-        time: dist[dest],
-        routes: railPath.routes,
-        nodes: railPath.nodes,
-      }],
-      totalRailTime: dist[dest],
-      totalBridgeKm: 0,
-      componentsTraversed: 1,
+      sections: [{ kind: "rail", from: origin, to: dest, time: legsTime(legs), nodes: p.nodes, edges: p.edges, legs }],
+      totalRailTime: legsTime(legs), totalBridgeKm: 0, componentsTraversed: 1,
     };
   }
-  // Disconnected — total-distance-optimised journey.
-  const plan = planJourney(origin, dest, ROUTES, hsrOnly, stations);
-  if (!plan) {
-    return { type: "orphan", sections: [], totalRailTime: 0, totalBridgeKm: 0, componentsTraversed: 0 };
+  let sections = planJourney(G, origin, dest);
+  if (!sections) {
+    // last resort: the nearest station this origin reaches, then one bridge
+    let best = -1, bd = Infinity;
+    const t = STATIONS[dest];
+    for (let i = 0; i < NS; i++) {
+      if (!isFinite(sp.dist[i])) continue;
+      const d = gcDist(STATIONS[i], t);
+      if (d < bd) { bd = d; best = i; }
+    }
+    if (best < 0) return { type: "orphan", sections: [], totalRailTime: 0, totalBridgeKm: 0, componentsTraversed: 0 };
+    sections = [];
+    if (best !== origin) {
+      const p = pathTo(G, best, sp.pe, origin);
+      const legs = legsFromPath(G, p.nodes, p.edges);
+      sections.push({ kind: "rail", from: origin, to: best, time: legsTime(legs), nodes: p.nodes, edges: p.edges, legs });
+    }
+    sections.push({ kind: "bridge", from: best, to: dest, km: bd });
   }
-  const { sections, totalBridgeKm } = sectionsFromPath(plan.path, origin, ROUTES, hsrOnly, stations);
-  const totalRailTime = sections.filter(s => s.kind === "rail").reduce((s, sec) => s + sec.time, 0);
-  const bridgeCount = sections.filter(s => s.kind === "bridge").length;
+  const rails = sections.filter(s => s.kind === "rail");
+  const bridges = sections.filter(s => s.kind === "bridge");
   return {
-    type: "disconnected",
-    sections,
-    totalRailTime,
-    totalBridgeKm,
-    componentsTraversed: bridgeCount + 1,
+    type: "disconnected", sections,
+    totalRailTime: rails.reduce((s, x) => s + x.time, 0),
+    totalBridgeKm: bridges.reduce((s, x) => s + x.km, 0),
+    componentsTraversed: bridges.length + 1,
   };
 }
 
 // =============================================================
-// Major hubs — get persistent labels by default. Everything else is
-// only labelled when on a drawn route, hovered, or is origin/destination.
+// MAP CONSTANTS
 // =============================================================
-const MAJOR_STATIONS = new Set([
-  // China
-  "beijing","shanghai","guangzhou","chengdu","xian","wuhan","kunming",
-  "lanzhou","urumqi","kashgar","shenyang","harbin","hongkong","shenzhen","chongqing",
-  "hangzhou","nanjing","qingdao","jinan","zhengzhou","nanning","guiyang",
-  "lhasa","fuzhou","xiamen",
-  // Japan
-  "tokyo","kyoto","shin_osaka","nagoya","hiroshima","hakata","sapporo","sendai",
-  // Korea
-  "seoul","busan",
-  // Taiwan
-  "taipei","kaohsiung","taichung",
-  // North Korea + Mongolia + Russia
-  "pyongyang","ulaanbaatar",
-  "moscow","stpetersburg","vladivostok","irkutsk","krasnoyarsk","novosibirsk",
-  "yekaterinburg","khabarovsk","volgograd","sochi","rostov_don","kazan","samara","nnovgorod",
-  // SE Asia
-  "hanoi","hcmc","danang","vientiane","luangprabang","phnompenh",
-  "bangkok","chiangmai","yangon","mandalay","naypyidaw",
-  "kualalumpur","singapore","jakarta","bandung","surabaya","yogyakarta",
-  // South Asia
-  "delhi","mumbai","chennai","howrah","bangalore","hyderabad_in","ahmedabad",
-  "pune","trivandrum","lucknow","varanasi","patna","guwahati",
-  "dhaka","chittagong","karachi","lahore","rawalpindi","peshawar","colombo",
-  // West + Central Asia
-  "tehran","mashhad","isfahan","tabriz","shiraz",
-  "istanbul","ankara","izmir","tbilisi","baku","yerevan",
-  "almaty","astana","tashkent","samarkand","ashgabat",
-  "telaviv","jerusalem","riyadh","jeddah","mecca","medina","dammam",
-]);
-
-// Features in world-atlas that have no ISO `id` — match by name so we
-// can still classify them. Northern Cyprus is the obvious one for Asia.
-const ASIA_NAMES = new Set(["N. Cyprus"]);
-const HATCH_NAMES = new Set(["N. Cyprus"]); // also no rail
-
-// =============================================================
-// DISPUTED BOUNDARY OUTLINES — loaded from data_disputed.js, which is
-// generated from Natural Earth's ne_10m_admin_0_disputed_areas
-// polygons (see uploads/build_disputed.py). Each entry has one or
-// more rings; rings are drawn as closed dotted boundaries around the
-// disputed territory. The dataset covers Asia-relevant disputes —
-// Abkhazia, South Ossetia, Crimea, N. Cyprus, Kashmir/Aksai Chin/
-// Arunachal, Nagorno-Karabakh, Korean DMZ, Donbas, Bhutan claims,
-// etc. — at ~10m resolution rather than the prior ~6-vertex sketches.
-const DISPUTED_LINES = (typeof window !== "undefined" && window.DISPUTED_LINES) || [];
-
 const ASIAN_COUNTRY_IDS = new Set([
-  "004","031","048","050","051","064","086","096","104","116","144",
+  "004","031","048","050","051","064","096","104","116","144",
   "156","158","196","268","275","344","356","360","364","368","376",
   "392","398","400","408","410","414","417","418","422","446","458",
   "462","496","512","524","586","608","626","634","643","682","702",
   "704","760","762","764","784","792","795","860","887",
 ]);
+const ASIA_NAMES = new Set(["N. Cyprus"]);
+const HATCH_NAMES = new Set(["N. Cyprus"]);
 
-// Per-sub-region tints. Each country in our Asia set gets a slight
-// fill bias matching its UN-style geographic sub-region — so the user
-// can see at a glance which group a country belongs to without us
-// having to draw a separate political-grouping overlay. ISO numeric
-// codes match `feature.id` from world-atlas's countries-50m topojson.
 const REGION_FILL = {};
 const REGION_ORDER = ["North Asia", "East Asia", "Southeast Asia", "South Asia", "Central Asia", "West Asia"];
 const REGION_COUNTRY_IDS = {
-  // Russia — its own band, the giant northern landmass that previously
-  // sat awkwardly inside "East Asia".
   "North Asia":     ["643"],
-  // CN, HK, MO, TW, MN, KP, KR, JP
   "East Asia":      ["156","344","446","158","496","408","410","392"],
-  // VN, LA, KH, TH, MM, MY, SG, ID, PH, BN, TL
   "Southeast Asia": ["704","418","116","764","104","458","702","360","608","096","626"],
-  // IN, BD, PK, LK, NP, BT, MV, AF
   "South Asia":     ["356","050","586","144","524","064","462","004"],
-  // KZ, UZ, TM, TJ, KG
   "Central Asia":   ["398","860","795","762","417"],
-  // IR, IQ, TR, GE, AM, AZ, IL, PS, SA, AE, OM, BH, QA, KW, YE, JO, LB, SY, CY
   "West Asia":      ["364","368","792","268","051","031","376","275","682","784",
                      "512","048","634","414","887","400","422","760","196"],
 };
-for (const region of REGION_ORDER) {
-  for (const id of REGION_COUNTRY_IDS[region]) REGION_FILL[id] = region;
-}
+for (const region of REGION_ORDER) for (const id of REGION_COUNTRY_IDS[region]) REGION_FILL[id] = region;
 const REGION_VAR = {
-  "North Asia":     "var(--region-north)",
-  "East Asia":      "var(--region-east)",
-  "Southeast Asia": "var(--region-southeast)",
-  "South Asia":     "var(--region-south)",
-  "Central Asia":   "var(--region-central)",
-  "West Asia":      "var(--region-west)",
+  "North Asia": "--region-north", "East Asia": "--region-east", "Southeast Asia": "--region-southeast",
+  "South Asia": "--region-south", "Central Asia": "--region-central", "West Asia": "--region-west",
 };
 
-// Europe ↔ Asia divide line. Loaded from data_continents.js, which
-// is generated by uploads/build_continents.py from the published
-// asia_europe_border geojson (Urals, Ural River, Caspian, Caucasus,
-// Bosphorus, Aegean) and Douglas-Peucker-simplified for runtime
-// size. Each entry is one LineString segment.
-const CONTINENT_DIVIDE_LINES =
-  (typeof window !== "undefined" && window.CONTINENT_DIVIDE_LINES) || [];
-
-// Each disputed-area outline gets its own "eraser" stroke under the
-// dotted overlay; the eraser must match the host country's regional
-// fill or it shows up as a wrong-coloured ribbon across the tinted
-// land. Map disputed-area names → the colour variable for the
-// country that administers (or claims) them. Areas outside our Asian
-// tint set (Ukraine, Moldova) fall back to the base --land cream.
+const DISPUTED_LINES = window.DISPUTED_LINES || [];
+const CONTINENT_DIVIDE_LINES = window.CONTINENT_DIVIDE_LINES || [];
 const DISPUTED_HOST_TINT = {
-  "Abkhazia (Self admin., claimed by Georgia)": "var(--region-west)",
-  "South Ossetia (Self admin., claimed by Georgia)": "var(--region-west)",
-  "Nagorno-Karabakh (Artsakh)":                 "var(--region-west)",
-  "Northern Cyprus (TRNC)":                     "var(--region-west)",
-  "Cyprus UN Buffer Zone":                      "var(--region-west)",
-  "Gaza Strip":                                 "var(--region-west)",
-  "West Bank":                                  "var(--region-west)",
-  "Golan Heights (Admin. Israel, claimed Syria)": "var(--region-west)",
-  "Golan UNDOF Zone":                           "var(--region-west)",
-  "Shebaa Farms (Admin. Israel, claimed Lebanon)": "var(--region-west)",
-  "Jammu & Kashmir (Admin. India, claimed Pakistan)": "var(--region-south)",
-  "Azad Kashmir":                               "var(--region-south)",
-  "Gilgit-Baltistan (Admin. Pakistan, claimed India)": "var(--region-south)",
-  "Siachen Glacier (India/Pakistan)":           "var(--region-south)",
-  "Arunachal Pradesh (Admin. India, claimed China)": "var(--region-south)",
-  "Om Parvat sector":                           "var(--region-south)",
-  "Demchok sector":                             "var(--region-south)",
-  "Samdu Valleys":                              "var(--region-south)",
-  "Tirpani Valleys":                            "var(--region-south)",
-  "Bara Hotii Valleys":                         "var(--region-south)",
-  "Bhutan NW valleys (claimed China)":          "var(--region-south)",
-  "Bhutan – Chumbi salient (claimed China)":    "var(--region-south)",
-  "Aksai Chin (Admin. China, claimed India)":   "var(--region-east)",
-  "Shaksgam Valley (Admin. China, claimed India)": "var(--region-east)",
-  "Korean DMZ (south side)":                    "var(--region-east)",
-  "Korean DMZ (north side)":                    "var(--region-east)",
-  "Kuril Is.":                                  "var(--region-north)",
-  "Paracel Is.":                                "var(--region-southeast)",
-  "Spratly Is.":                                "var(--region-southeast)",
-  // Ukraine / Moldova are not in our Asian tint set — fall back to --land
-  "Crimea (Russia–Ukraine)":                    "var(--land)",
-  "Donetsk PR (Self admin., claimed Ukraine)":  "var(--land)",
-  "Luhansk PR (Self admin., claimed Ukraine)":  "var(--land)",
-  "Transnistria (Self admin., claimed Moldova)": "var(--land)",
+  "Abkhazia (Self admin., claimed by Georgia)": "--region-west",
+  "South Ossetia (Self admin., claimed by Georgia)": "--region-west",
+  "Nagorno-Karabakh (Artsakh)": "--region-west",
+  "Northern Cyprus (TRNC)": "--region-west",
+  "Cyprus UN Buffer Zone": "--region-west",
+  "Gaza Strip": "--region-west",
+  "West Bank": "--region-west",
+  "Golan Heights (Admin. Israel, claimed Syria)": "--region-west",
+  "Golan UNDOF Zone": "--region-west",
+  "Shebaa Farms (Admin. Israel, claimed Lebanon)": "--region-west",
+  "Jammu & Kashmir (Admin. India, claimed Pakistan)": "--region-south",
+  "Azad Kashmir": "--region-south",
+  "Gilgit-Baltistan (Admin. Pakistan, claimed India)": "--region-south",
+  "Siachen Glacier (India/Pakistan)": "--region-south",
+  "Arunachal Pradesh (Admin. India, claimed China)": "--region-south",
+  "Om Parvat sector": "--region-south",
+  "Demchok sector": "--region-south",
+  "Samdu Valleys": "--region-south",
+  "Tirpani Valleys": "--region-south",
+  "Bara Hotii Valleys": "--region-south",
+  "Bhutan NW valleys (claimed China)": "--region-south",
+  "Bhutan – Chumbi salient (claimed China)": "--region-south",
+  "Aksai Chin (Admin. China, claimed India)": "--region-east",
+  "Shaksgam Valley (Admin. China, claimed India)": "--region-east",
+  "Korean DMZ (south side)": "--region-east",
+  "Korean DMZ (north side)": "--region-east",
+  "Kuril Is.": "--region-north",
+  "Paracel Is.": "--region-southeast",
+  "Spratly Is.": "--region-southeast",
 };
 
+const COUNTRY_LABELS = [
+  { text: "CHINA",       lat: 36.0,  lng: 100.0, size: 34, ls: 14 },
+  { text: "RUSSIA",      lat: 56.0,  lng: 95.0,  size: 30, ls: 14 },
+  { text: "MONGOLIA",    lat: 46.5,  lng: 102.0, size: 18, ls: 8 },
+  { text: "JAPAN",       lat: 36.5,  lng: 138.0, size: 18, ls: 8 },
+  { text: "KOREA",       lat: 36.8,  lng: 128.1, size: 12, ls: 5 },
+  { text: "TAIWAN",      lat: 23.7,  lng: 121.0, size: 11, ls: 4 },
+  { text: "VIETNAM",     lat: 15.5,  lng: 107.2, size: 14, ls: 5 },
+  { text: "LAOS",        lat: 19.5,  lng: 103.6, size: 10, ls: 3 },
+  { text: "THAILAND",    lat: 15.5,  lng: 100.3, size: 14, ls: 5 },
+  { text: "MYANMAR",     lat: 21.5,  lng: 95.5,  size: 14, ls: 5 },
+  { text: "CAMBODIA",    lat: 12.3,  lng: 104.8, size: 11, ls: 3 },
+  { text: "MALAYSIA",    lat: 3.8,   lng: 102.4, size: 12, ls: 4 },
+  { text: "INDONESIA",   lat: -3.0,  lng: 110.0, size: 16, ls: 6 },
+  { text: "PHILIPPINES", lat: 12.0,  lng: 122.0, size: 12, ls: 5 },
+  { text: "INDIA",       lat: 22.0,  lng: 79.0,  size: 30, ls: 14 },
+  { text: "BANGLADESH",  lat: 24.0,  lng: 90.3,  size: 10, ls: 3 },
+  { text: "PAKISTAN",    lat: 29.5,  lng: 69.5,  size: 16, ls: 6 },
+  { text: "SRI LANKA",   lat: 7.5,   lng: 80.9,  size: 10, ls: 3 },
+  { text: "NEPAL",       lat: 28.4,  lng: 84.1,  size: 9,  ls: 3 },
+  { text: "AFGHANISTAN", lat: 34.0,  lng: 66.0,  size: 13, ls: 4 },
+  { text: "IRAN",        lat: 33.0,  lng: 54.0,  size: 22, ls: 10 },
+  { text: "TÜRKIYE", lat: 39.0, lng: 35.0,  size: 18, ls: 8 },
+  { text: "KAZAKHSTAN",  lat: 49.0,  lng: 67.0,  size: 22, ls: 10 },
+  { text: "UZBEKISTAN",  lat: 42.0,  lng: 63.5,  size: 12, ls: 5 },
+  { text: "TURKMENISTAN",lat: 39.5,  lng: 59.0,  size: 11, ls: 4 },
+  { text: "KYRGYZSTAN",  lat: 41.6,  lng: 74.8,  size: 9,  ls: 3 },
+  { text: "TAJIKISTAN",  lat: 39.0,  lng: 71.5,  size: 9,  ls: 3 },
+  { text: "SAUDI ARABIA",lat: 24.0,  lng: 45.0,  size: 18, ls: 8 },
+  { text: "IRAQ",        lat: 33.0,  lng: 44.0,  size: 11, ls: 4 },
+  { text: "SYRIA",       lat: 35.0,  lng: 38.5,  size: 9,  ls: 3 },
+  { text: "OMAN",        lat: 21.0,  lng: 56.5,  size: 11, ls: 4 },
+  { text: "YEMEN",       lat: 15.5,  lng: 47.5,  size: 11, ls: 4 },
+  { text: "UAE",         lat: 23.8,  lng: 54.5,  size: 9,  ls: 3 },
+  { text: "JORDAN",      lat: 31.0,  lng: 36.5,  size: 9,  ls: 3 },
+  { text: "ISRAEL",      lat: 31.5,  lng: 35.0,  size: 8,  ls: 2 },
+  { text: "LEBANON",     lat: 33.9,  lng: 35.7,  size: 8,  ls: 2 },
+  { text: "GEORGIA",     lat: 42.0,  lng: 43.5,  size: 9,  ls: 3 },
+  { text: "ARMENIA",     lat: 40.2,  lng: 45.0,  size: 8,  ls: 2 },
+  { text: "AZERBAIJAN",  lat: 40.4,  lng: 48.0,  size: 9,  ls: 3 },
+  { text: "BHUTAN",      lat: 27.5,  lng: 90.4,  size: 8,  ls: 2 },
+];
+
 // =============================================================
-// Reachability isochrone grid + marching-squares contour extraction
+// PROJECTION + PRE-PROJECTED GEOMETRY (computed once)
 // =============================================================
-// Contour grid bounds — MUST enclose every station, else contours stop
-// rendering above the cap (the previous 62 °N ceiling left Murmansk,
-// Vorkuta, the whole Kola Peninsula, Komi and Yakutia uncontoured, which
-// looked like a permanent "plateau above Petrozavodsk" no matter how
-// many intermediaries got added). Actual station envelope is
-// (-8.4..69.5 lat, 19.0..145.6 lng) at time of writing; pad by ~2°.
-const GRID_LNG_MIN = 17, GRID_LNG_MAX = 148;
-const GRID_LAT_MIN = -10, GRID_LAT_MAX = 72;
+const W = 1280, H = 880;
+const MAX_HOURS_BOUND = 48;
+
+const PROJ = (() => {
+  const coords = [];
+  for (const s of STATIONS) if (s.asia) coords.push([s.lng, s.lat]);
+  const projection = d3.geoMercator().fitExtent([[24, 40], [W - 24, H - 40]],
+    { type: "Feature", geometry: { type: "MultiPoint", coordinates: coords } });
+  const PX = new Float32Array(NS), PY = new Float32Array(NS);
+  for (let i = 0; i < NS; i++) { const [x, y] = projection([STATIONS[i].lng, STATIONS[i].lat]); PX[i] = x; PY[i] = y; }
+  const projArr = (arr) => {
+    const out = new Float32Array(arr.length);
+    for (let i = 0; i < arr.length; i += 2) { const p = projection([arr[i], arr[i + 1]]); out[i] = p[0]; out[i + 1] = p[1]; }
+    return out;
+  };
+  const edgeCourse = new Map();
+  for (const [k, arr] of EDGE_COURSE) edgeCourse.set(k, projArr(arr));
+  const ferryCourse = FERRY_COURSE.map(projArr);
+  // Hubs: always-on dots + labels. The busiest stations, thinned so no two
+  // sit within 26 map units (a city keeps one).
+  const order = Array.from({ length: NS }, (_, i) => i).filter(i => STATIONS[i].asia && STATIONS[i].rank >= 4 && STATIONS[i].name !== "Unnamed stop")
+    .sort((a, b) => STATIONS[b].rank - STATIONS[a].rank);
+  const hub = new Uint8Array(NS);
+  const taken = [];
+  for (const i of order) {
+    if (taken.length >= 420) break;
+    let ok = true;
+    for (const j of taken) { const dx = PX[i] - PX[j], dy = PY[i] - PY[j]; if (dx * dx + dy * dy < 26 * 26) { ok = false; break; } }
+    if (ok) { taken.push(i); hub[i] = 1; }
+  }
+  return { projection, PX, PY, edgeCourse, ferryCourse, hub };
+})();
+
+// Each edge's projected course (map units), a→b: station, track vertices,
+// station. Built once per graph mode.
+function edgePts(G, e) {
+  if (!G._pts) G._pts = new Array(G.m);
+  let pts = G._pts[e];
+  if (pts) return pts;
+  const a = G.eA[e], b = G.eB[e], t = G.eT[e];
+  const { PX, PY } = PROJ;
+  let mid = null, rev = false;
+  if (t === T_FERRY) {
+    const c = PROJ.ferryCourse[G.eRef[e]];
+    if (c && c.length >= 4) {
+      mid = c;
+      const d0 = (c[0] - PX[a]) ** 2 + (c[1] - PY[a]) ** 2;
+      const d1 = (c[c.length - 2] - PX[a]) ** 2 + (c[c.length - 1] - PY[a]) ** 2;
+      rev = d1 < d0;
+    }
+  } else if (t <= T_CONV) {
+    const lo = Math.min(a, b);
+    mid = PROJ.edgeCourse.get(lo * NS + Math.max(a, b)) || null;
+    rev = lo !== a;
+  }
+  const n = mid ? mid.length : 0;
+  pts = new Float32Array(n + 4);
+  pts[0] = PX[a]; pts[1] = PY[a];
+  for (let i = 0; i < n; i += 2) {
+    const j = rev ? n - 2 - i : i;
+    pts[2 + i] = mid[j]; pts[3 + i] = mid[j + 1];
+  }
+  pts[n + 2] = PX[b]; pts[n + 3] = PY[b];
+  G._pts[e] = pts;
+  return pts;
+}
+
+// Level of detail: vertices snapped to a grid of `q` map units (about half a
+// screen pixel at the zoom the level serves); a hop that collapses to one
+// point is skipped. At full extent most hops between halts are sub-pixel.
+const LOD_Q = [0.5, 0.25, 0.12, 0.06];
+const lodFor = (k) => Math.max(0, Math.min(LOD_Q.length - 1, Math.floor(Math.log2(Math.max(1, k)))));
+function tracePts(path, pts, q) {
+  let lx = 1e9, ly = 1e9, n = 0, fx = 0, fy = 0;
+  for (let i = 0; i < pts.length; i += 2) {
+    const X = Math.round(pts[i] / q), Y = Math.round(pts[i + 1] / q);
+    if (X === lx && Y === ly) continue;
+    if (n === 0) { fx = X; fy = Y; }
+    else { if (n === 1) path.moveTo(fx * q, fy * q); path.lineTo(X * q, Y * q); }
+    lx = X; ly = Y; n++;
+  }
+}
+// exact course (journey highlight)
+function traceEdge(path, G, e) {
+  const pts = edgePts(G, e);
+  path.moveTo(pts[0], pts[1]);
+  for (let i = 2; i < pts.length; i += 2) path.lineTo(pts[i], pts[i + 1]);
+}
+
+// Background (faint) network per graph mode + level of detail, cached.
+const BG_CACHE = new Map();
+function backgroundPaths(G, lod) {
+  const key = G.key + ":" + lod;
+  if (BG_CACHE.has(key)) return BG_CACHE.get(key);
+  const q = LOD_Q[lod];
+  const hsr = new Path2D(), conv = new Path2D(), ferry = new Path2D();
+  for (let e = 0; e < G.m; e++) {
+    const t = G.eT[e];
+    if (t > T_FERRY) continue;
+    tracePts(t === T_HSR ? hsr : t === T_CONV ? conv : ferry, edgePts(G, e), q);
+  }
+  const r = { hsr, conv, ferry };
+  BG_CACHE.set(key, r);
+  return r;
+}
+
+// =============================================================
+// Reachability isochrone grid + marching squares
+// =============================================================
 const GRID_STEP = 0.18;
-const OFF_RAIL_FREE_KM = 0;
 const OFF_RAIL_SPEED = 10;
 const OFF_RAIL_CAP_KM = 280;
 const GRID_CEIL = 9999;
 const BLUR_PASSES = 5;
-
-function buildContourGrid(origin, dist, stations) {
-  if (!origin) return null;
-  const cols = Math.round((GRID_LNG_MAX - GRID_LNG_MIN) / GRID_STEP) + 1;
-  const rows = Math.round((GRID_LAT_MAX - GRID_LAT_MIN) / GRID_STEP) + 1;
-  const grid = new Float32Array(cols * rows);
-  grid.fill(GRID_CEIL);
-  const reachable = [];
-  for (const s of stations) {
-    if (dist[s.id] === undefined) continue;
-    reachable.push(s);
+const GRID = (() => {
+  let x0 = 180, x1 = -180, y0 = 90, y1 = -90;
+  for (const s of STATIONS) {
+    if (!s.asia) continue;
+    if (s.lng < x0) x0 = s.lng; if (s.lng > x1) x1 = s.lng;
+    if (s.lat < y0) y0 = s.lat; if (s.lat > y1) y1 = s.lat;
   }
-  if (!reachable.length) return { grid, cols, rows };
-  // Precompute a station bbox in grid cells for each station to prune
-  const range = OFF_RAIL_CAP_KM / 111; // deg
-  for (const s of reachable) {
-    const t0 = dist[s.id];
-    const cosL = Math.cos(s.lat * Math.PI / 180);
-    const lngRange = range / Math.max(cosL, 0.2);
-    const i0 = Math.max(0, Math.floor((s.lng - lngRange - GRID_LNG_MIN) / GRID_STEP));
-    const i1 = Math.min(cols - 1, Math.ceil((s.lng + lngRange - GRID_LNG_MIN) / GRID_STEP));
-    const j0 = Math.max(0, Math.floor((s.lat - range - GRID_LAT_MIN) / GRID_STEP));
-    const j1 = Math.min(rows - 1, Math.ceil((s.lat + range - GRID_LAT_MIN) / GRID_STEP));
+  const LNG_MIN = Math.floor(x0 - 3), LNG_MAX = Math.ceil(x1 + 3);
+  const LAT_MIN = Math.floor(y0 - 3), LAT_MAX = Math.min(84, Math.ceil(y1 + 3));
+  const cols = Math.round((LNG_MAX - LNG_MIN) / GRID_STEP) + 1;
+  const rows = Math.round((LAT_MAX - LAT_MIN) / GRID_STEP) + 1;
+  // Mercator is separable: x depends on lng only, y on lat only
+  const colX = new Float64Array(cols), rowY = new Float64Array(rows);
+  for (let i = 0; i < cols; i++) colX[i] = PROJ.projection([LNG_MIN + i * GRID_STEP, 0])[0];
+  for (let j = 0; j < rows; j++) rowY[j] = PROJ.projection([0, LAT_MIN + j * GRID_STEP])[1];
+  return { LNG_MIN, LAT_MIN, cols, rows, colX, rowY };
+})();
+
+function buildContourGrid(dist) {
+  const { LNG_MIN, LAT_MIN, cols, rows } = GRID;
+  const grid = new Float32Array(cols * rows).fill(GRID_CEIL);
+  // Thin: the earliest-reached station per grid cell seeds the field — the
+  // network has ~50 k stops, most of them halts a few km apart.
+  const seedT = new Float32Array(cols * rows).fill(Infinity);
+  const seedS = new Int32Array(cols * rows).fill(-1);
+  for (let i = 0; i < NS; i++) {
+    const t = dist[i];
+    if (!isFinite(t)) continue;
+    const s = STATIONS[i];
+    const ci = Math.round((s.lng - LNG_MIN) / GRID_STEP), cj = Math.round((s.lat - LAT_MIN) / GRID_STEP);
+    if (ci < 0 || cj < 0 || ci >= cols || cj >= rows) continue;
+    const idx = cj * cols + ci;
+    if (t < seedT[idx]) { seedT[idx] = t; seedS[idx] = i; }
+  }
+  const range = OFF_RAIL_CAP_KM / 111;
+  for (let idx = 0; idx < seedS.length; idx++) {
+    const si = seedS[idx];
+    if (si < 0) continue;
+    const s = STATIONS[si], t0 = seedT[idx];
+    const cosS = Math.cos(s.lat * Math.PI / 180);
+    const lngRange = range / Math.max(cosS, 0.2);
+    const i0 = Math.max(0, Math.floor((s.lng - lngRange - LNG_MIN) / GRID_STEP));
+    const i1 = Math.min(cols - 1, Math.ceil((s.lng + lngRange - LNG_MIN) / GRID_STEP));
+    const j0 = Math.max(0, Math.floor((s.lat - range - LAT_MIN) / GRID_STEP));
+    const j1 = Math.min(rows - 1, Math.ceil((s.lat + range - LAT_MIN) / GRID_STEP));
     for (let j = j0; j <= j1; j++) {
-      const lat = GRID_LAT_MIN + j * GRID_STEP;
+      const lat = LAT_MIN + j * GRID_STEP;
+      const dyKm = (lat - s.lat) * 110.57;
+      const kx = 111.32 * Math.cos(((lat + s.lat) / 2) * Math.PI / 180);
+      const row = j * cols;
       for (let i = i0; i <= i1; i++) {
-        const lng = GRID_LNG_MIN + i * GRID_STEP;
-        const km = gcDist({ lat, lng }, s);
+        const dxKm = (LNG_MIN + i * GRID_STEP - s.lng) * kx;
+        const km = Math.sqrt(dxKm * dxKm + dyKm * dyKm);
         if (km > OFF_RAIL_CAP_KM) continue;
-        const walk = km <= OFF_RAIL_FREE_KM ? 0 : (km - OFF_RAIL_FREE_KM) / OFF_RAIL_SPEED;
-        const t = t0 + walk;
-        const idx = j * cols + i;
-        if (t < grid[idx]) grid[idx] = t;
+        const tt = t0 + km / OFF_RAIL_SPEED;
+        if (tt < grid[row + i]) grid[row + i] = tt;
       }
     }
   }
   return { grid: blurGrid(grid, cols, rows, BLUR_PASSES), cols, rows };
 }
 
-// Lightweight in-place 3×3 box blur over finite cells. Smooths the
-// "union of circles" look so marching squares yields curved contours
-// rather than dotty boolean shapes. Ceiling-valued cells stay as cap.
+// Separable 3×3 box blur (edge cells average their in-bounds neighbours).
 function blurGrid(grid, cols, rows, passes) {
   let cur = grid;
+  const tmp = new Float32Array(cur.length);
   for (let p = 0; p < passes; p++) {
+    for (let j = 0; j < rows; j++) {
+      const r = j * cols;
+      for (let i = 0; i < cols; i++) {
+        let s = cur[r + i], n = 1;
+        if (i > 0) { s += cur[r + i - 1]; n++; }
+        if (i < cols - 1) { s += cur[r + i + 1]; n++; }
+        tmp[r + i] = s / n;
+      }
+    }
     const next = new Float32Array(cur.length);
     for (let j = 0; j < rows; j++) {
+      const r = j * cols;
       for (let i = 0; i < cols; i++) {
-        let sum = 0, n = 0;
-        for (let dj = -1; dj <= 1; dj++) {
-          const jj = j + dj;
-          if (jj < 0 || jj >= rows) continue;
-          for (let di = -1; di <= 1; di++) {
-            const ii = i + di;
-            if (ii < 0 || ii >= cols) continue;
-            sum += cur[jj * cols + ii];
-            n++;
-          }
-        }
-        next[j * cols + i] = sum / n;
+        let s = tmp[r + i], n = 1;
+        if (j > 0) { s += tmp[r - cols + i]; n++; }
+        if (j < rows - 1) { s += tmp[r + cols + i]; n++; }
+        next[r + i] = s / n;
       }
     }
     cur = next;
@@ -904,34 +842,24 @@ function blurGrid(grid, cols, rows, passes) {
   return cur;
 }
 
-// Marching squares — emit ARRAY of polylines (each an array of [x,y]
-// points). We then chain adjacent segments into continuous polylines and
-// render them with d3.line(curveCatmullRom) for smooth curves.
-function marchingSquaresPolylines(gridInfo, threshold, projection) {
-  if (!gridInfo) return [];
+function marchingSquaresPolylines(gridInfo, threshold) {
   const { grid, cols, rows } = gridInfo;
+  const { colX, rowY } = GRID;
   const segments = [];
-  const lerpEdge = (i0, j0, i1, j1, v0, v1) => {
-    const f = (v0 === v1) ? 0.5 : (threshold - v0) / (v1 - v0);
-    const ci = i0 + (i1 - i0) * f;
-    const cj = j0 + (j1 - j0) * f;
-    return projection([GRID_LNG_MIN + ci * GRID_STEP, GRID_LAT_MIN + cj * GRID_STEP]);
+  const lerp = (i0, j0, i1, j1, v0, v1) => {
+    const f = v0 === v1 ? 0.5 : (threshold - v0) / (v1 - v0);
+    return [colX[i0] + (colX[i1] - colX[i0]) * f, rowY[j0] + (rowY[j1] - rowY[j0]) * f];
   };
   for (let j = 0; j < rows - 1; j++) {
     for (let i = 0; i < cols - 1; i++) {
-      const v0 = grid[j * cols + i];
-      const v1 = grid[j * cols + (i + 1)];
-      const v2 = grid[(j + 1) * cols + (i + 1)];
-      const v3 = grid[(j + 1) * cols + i];
-      const c = (v0 < threshold ? 1 : 0) |
-                (v1 < threshold ? 2 : 0) |
-                (v2 < threshold ? 4 : 0) |
-                (v3 < threshold ? 8 : 0);
+      const v0 = grid[j * cols + i], v1 = grid[j * cols + i + 1];
+      const v2 = grid[(j + 1) * cols + i + 1], v3 = grid[(j + 1) * cols + i];
+      const c = (v0 < threshold ? 1 : 0) | (v1 < threshold ? 2 : 0) | (v2 < threshold ? 4 : 0) | (v3 < threshold ? 8 : 0);
       if (c === 0 || c === 15) continue;
-      const e0 = () => lerpEdge(i, j, i + 1, j, v0, v1);
-      const e1 = () => lerpEdge(i + 1, j, i + 1, j + 1, v1, v2);
-      const e2 = () => lerpEdge(i, j + 1, i + 1, j + 1, v3, v2);
-      const e3 = () => lerpEdge(i, j, i, j + 1, v0, v3);
+      const e0 = () => lerp(i, j, i + 1, j, v0, v1);
+      const e1 = () => lerp(i + 1, j, i + 1, j + 1, v1, v2);
+      const e2 = () => lerp(i, j + 1, i + 1, j + 1, v3, v2);
+      const e3 = () => lerp(i, j, i, j + 1, v0, v3);
       switch (c) {
         case 1:  segments.push([e3(), e0()]); break;
         case 2:  segments.push([e0(), e1()]); break;
@@ -951,89 +879,121 @@ function marchingSquaresPolylines(gridInfo, threshold, projection) {
     }
   }
   if (!segments.length) return [];
-
-  // Chain segments into continuous polylines by joining matching endpoints.
   const key = ([x, y]) => `${Math.round(x * 4)}|${Math.round(y * 4)}`;
   const ends = new Map();
   segments.forEach((seg, idx) => {
     const ka = key(seg[0]), kb = key(seg[1]);
-    if (!ends.has(ka)) ends.set(ka, []);
-    if (!ends.has(kb)) ends.set(kb, []);
-    ends.get(ka).push({ idx, end: 0 });
-    ends.get(kb).push({ idx, end: 1 });
+    (ends.get(ka) || ends.set(ka, []).get(ka)).push({ idx, end: 0 });
+    (ends.get(kb) || ends.set(kb, []).get(kb)).push({ idx, end: 1 });
   });
-  const used = new Array(segments.length).fill(false);
+  const used = new Uint8Array(segments.length);
   const polylines = [];
   for (let i = 0; i < segments.length; i++) {
     if (used[i]) continue;
-    used[i] = true;
+    used[i] = 1;
     const poly = [segments[i][0], segments[i][1]];
-    // forward
-    let curKey = key(segments[i][1]);
-    while (true) {
-      const cands = ends.get(curKey) || [];
-      const next = cands.find(c => !used[c.idx]);
-      if (!next) break;
-      used[next.idx] = true;
-      const seg = segments[next.idx];
-      const other = seg[1 - next.end];
-      poly.push(other);
-      curKey = key(other);
-    }
-    // backward
-    curKey = key(segments[i][0]);
-    while (true) {
-      const cands = ends.get(curKey) || [];
-      const next = cands.find(c => !used[c.idx]);
-      if (!next) break;
-      used[next.idx] = true;
-      const seg = segments[next.idx];
-      const other = seg[1 - next.end];
-      poly.unshift(other);
-      curKey = key(other);
+    for (const dir of [1, 0]) {
+      let curKey = key(dir ? segments[i][1] : segments[i][0]);
+      for (;;) {
+        const next = (ends.get(curKey) || []).find(c => !used[c.idx]);
+        if (!next) break;
+        used[next.idx] = 1;
+        const other = segments[next.idx][1 - next.end];
+        if (dir) poly.push(other); else poly.unshift(other);
+        curKey = key(other);
+      }
     }
     polylines.push(poly);
   }
   return polylines;
 }
 
-// =============================================================
-// MAP COMPONENT
-// =============================================================
-
-const W = 1280, H = 880;
-
-function useProjection(stations) {
-  return useMemo(() => {
-    if (!window.d3) return null;
-    const coords = stations.map(s => [s.lng, s.lat]);
-    const fc = {
-      type: "FeatureCollection",
-      features: [{ type: "Feature", geometry: { type: "MultiPoint", coordinates: coords } }],
-    };
-    // Mercator. The high-latitude visual stretch is fine — what was
-    // actually breaking the "plateau above Petrozavodsk" was the contour
-    // GRID having a 62 °N ceiling, not the projection (now lifted to
-    // 72 °N upstream).
-    return d3.geoMercator().fitExtent([[24, 40], [W - 24, H - 40]], fc);
-  }, [stations]);
+const CONTOUR_LEVELS = [0.5, 1, 2, 3, 5, 7, 10, 14, 18, 24, 32, 40, 48];
+function computeContours(dist) {
+  const gridInfo = buildContourGrid(dist);
+  const smooth = d3.line().x(p => p[0]).y(p => p[1]).curve(d3.curveCatmullRomClosed.alpha(0.5));
+  return CONTOUR_LEVELS.map(th => {
+    const polys = marchingSquaresPolylines(gridInfo, th);
+    if (!polys.length) return null;
+    return new Path2D(polys.map(p => smooth(p)).join(" "));
+  });
 }
 
-function useWorldGeo() {
+// =============================================================
+// CANVAS HELPERS
+// =============================================================
+const COLOR_PROBE = document.createElement("canvas").getContext("2d");
+function rgba(color, a) {
+  COLOR_PROBE.fillStyle = "#000";
+  COLOR_PROBE.fillStyle = color;
+  const c = COLOR_PROBE.fillStyle;
+  if (c[0] === "#") {
+    const n = parseInt(c.slice(1), 16);
+    return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`;
+  }
+  const m = c.match(/rgba?\(([^)]+)\)/);
+  if (!m) return color;
+  const p = m[1].split(",").map(s => parseFloat(s));
+  return `rgba(${p[0]},${p[1]},${p[2]},${(p.length > 3 ? p[3] : 1) * a})`;
+}
+function readColors() {
+  const cs = getComputedStyle(document.body);
+  const v = (n) => cs.getPropertyValue(n).trim();
+  const names = ["--sea", "--grid", "--land", "--land-outside", "--border-line", "--continent-line", "--accent",
+    "--ink", "--ink-2", "--paper", "--region-north", "--region-east", "--region-southeast", "--region-south",
+    "--region-central", "--region-west"];
+  const c = {};
+  for (const n of names) c[n] = v(n) || "#888";
+  return c;
+}
+
+// =============================================================
+// WORLD GEOGRAPHY → Path2D groups (once)
+// =============================================================
+function useWorldPaths() {
   const [world, setWorld] = useState(null);
   useEffect(() => {
     let dead = false;
     (async () => {
       try {
-        const url = "assets/countries-50m.json";
-        const res = await fetch(url);
+        const res = await fetch("assets/countries-50m.json");
         if (!res.ok) throw new Error("countries-50m fetch failed");
         const topo = await res.json();
         if (dead) return;
-        const collection = topojson.feature(topo, topo.objects.countries);
-        const borders = topojson.mesh(topo, topo.objects.countries, (a, b) => a !== b);
-        // Each feature has .id = ISO numeric (string, e.g. "156" for China)
-        setWorld({ features: collection.features, borders });
+        const features = topojson.feature(topo, topo.objects.countries).features;
+        const gen = d3.geoPath(PROJ.projection);
+        const groups = new Map();   // fill key → Path2D
+        const regionGroups = new Map();
+        const strokeAsia = new Path2D(), strokeOut = new Path2D(), hatch = new Path2D();
+        for (const f of features) {
+          const d = gen(f);
+          if (!d) continue;
+          const p = new Path2D(d);
+          const id = f.id != null ? String(f.id).padStart(3, "0") : "";
+          const name = (f.properties && f.properties.name) || "";
+          const isAsia = (id && ASIAN_COUNTRY_IDS.has(id)) || ASIA_NAMES.has(name);
+          const plain = isAsia ? "--land" : "--land-outside";
+          (groups.get(plain) || groups.set(plain, new Path2D()).get(plain)).addPath(p);
+          const reg = isAsia ? (REGION_FILL[id] ? REGION_VAR[REGION_FILL[id]] : "--land") : "--land-outside";
+          (regionGroups.get(reg) || regionGroups.set(reg, new Path2D()).get(reg)).addPath(p);
+          (isAsia ? strokeAsia : strokeOut).addPath(p);
+          const a2 = window.ISO_NUM_TO_A2[id];
+          const listed = id && window.HATCH_COUNTRY_IDS.has(id);
+          // hatched: no intercity rail in the network (the hand list only
+          // decides for countries outside it, e.g. Papua New Guinea)
+          const hatched = HATCH_NAMES.has(name) ||
+            (a2 ? (isAsia || listed) && !RAIL_COUNTRIES.has(a2) : listed);
+          if (hatched) hatch.addPath(p);
+        }
+        const toD = (seg) => "M" + seg.map(c => PROJ.projection(c).join(",")).join("L");
+        const divide = new Path2D(CONTINENT_DIVIDE_LINES.filter(s => s.length >= 2).map(toD).join(" "));
+        const disputed = DISPUTED_LINES.map(area => ({
+          tint: DISPUTED_HOST_TINT[area.name] || "--land",
+          path: new Path2D(area.rings.filter(r => r.length).map(r => toD(r) + "Z").join(" ")),
+        }));
+        const disputedAll = new Path2D();
+        for (const d of disputed) disputedAll.addPath(d.path);
+        setWorld({ groups, regionGroups, strokeAsia, strokeOut, hatch, divide, disputed, disputedAll });
       } catch (e) {
         console.warn("Could not load world geography:", e);
       }
@@ -1043,959 +1003,612 @@ function useWorldGeo() {
   return world;
 }
 
-// =============================================================
-// COUNTRY LABEL POSITIONS (centroid-ish, hand-tuned)
-// =============================================================
-const COUNTRY_LABELS = [
-  { code: "CN", text: "CHINA",       lat: 36.0,  lng: 100.0, size: 34, ls: 14 },
-  { code: "RU", text: "RUSSIA",      lat: 56.0,  lng: 95.0,  size: 30, ls: 14 },
-  { code: "MN", text: "MONGOLIA",    lat: 46.5,  lng: 102.0, size: 18, ls: 8 },
-  { code: "JP", text: "JAPAN",       lat: 36.5,  lng: 138.0, size: 18, ls: 8 },
-  { code: "KR", text: "KOREA",       lat: 36.8,  lng: 128.1, size: 12, ls: 5 },
-  { code: "TW", text: "TAIWAN",      lat: 23.7,  lng: 121.0, size: 11, ls: 4 },
-  { code: "VN", text: "VIETNAM",     lat: 15.5,  lng: 107.2, size: 14, ls: 5 },
-  { code: "LA", text: "LAOS",        lat: 19.5,  lng: 103.6, size: 10, ls: 3 },
-  { code: "TH", text: "THAILAND",    lat: 15.5,  lng: 100.3, size: 14, ls: 5 },
-  { code: "MM", text: "MYANMAR",     lat: 21.5,  lng: 95.5,  size: 14, ls: 5 },
-  { code: "KH", text: "CAMBODIA",    lat: 12.3,  lng: 104.8, size: 11, ls: 3 },
-  { code: "MY", text: "MALAYSIA",    lat: 3.8,   lng: 102.4, size: 12, ls: 4 },
-  { code: "ID", text: "INDONESIA",   lat: -3.0,  lng: 110.0, size: 16, ls: 6 },
-  { code: "PH", text: "PHILIPPINES", lat: 12.0,  lng: 122.0, size: 12, ls: 5 },
-  { code: "IN", text: "INDIA",       lat: 22.0,  lng: 79.0,  size: 30, ls: 14 },
-  { code: "BD", text: "BANGLADESH",  lat: 24.0,  lng: 90.3,  size: 10, ls: 3 },
-  { code: "PK", text: "PAKISTAN",    lat: 29.5,  lng: 69.5,  size: 16, ls: 6 },
-  { code: "LK", text: "SRI LANKA",   lat: 7.5,   lng: 80.9,  size: 10, ls: 3 },
-  { code: "NP", text: "NEPAL",       lat: 28.4,  lng: 84.1,  size: 9,  ls: 3 },
-  { code: "AF", text: "AFGHANISTAN", lat: 34.0,  lng: 66.0,  size: 13, ls: 4 },
-  { code: "IR", text: "IRAN",        lat: 33.0,  lng: 54.0,  size: 22, ls: 10 },
-  { code: "TR", text: "T\u00DCRKIYE",lat: 39.0,  lng: 35.0,  size: 18, ls: 8 },
-  { code: "KZ", text: "KAZAKHSTAN",  lat: 49.0,  lng: 67.0,  size: 22, ls: 10 },
-  { code: "UZ", text: "UZBEKISTAN",  lat: 42.0,  lng: 63.5,  size: 12, ls: 5 },
-  { code: "TM", text: "TURKMENISTAN",lat: 39.5,  lng: 59.0,  size: 11, ls: 4 },
-  { code: "KG", text: "KYRGYZSTAN",  lat: 41.6,  lng: 74.8,  size: 9,  ls: 3 },
-  { code: "TJ", text: "TAJIKISTAN",  lat: 39.0,  lng: 71.5,  size: 9,  ls: 3 },
-  { code: "SA", text: "SAUDI ARABIA",lat: 24.0,  lng: 45.0,  size: 18, ls: 8 },
-  { code: "IQ", text: "IRAQ",        lat: 33.0,  lng: 44.0,  size: 11, ls: 4 },
-  { code: "SY", text: "SYRIA",       lat: 35.0,  lng: 38.5,  size: 9,  ls: 3 },
-  { code: "OM", text: "OMAN",        lat: 21.0,  lng: 56.5,  size: 11, ls: 4 },
-  { code: "YE", text: "YEMEN",       lat: 15.5,  lng: 47.5,  size: 11, ls: 4 },
-  { code: "AE", text: "UAE",         lat: 23.8,  lng: 54.5,  size: 9,  ls: 3 },
-  { code: "JO", text: "JORDAN",      lat: 31.0,  lng: 36.5,  size: 9,  ls: 3 },
-  { code: "IL", text: "ISRAEL",      lat: 31.5,  lng: 35.0,  size: 8,  ls: 2 },
-  { code: "LB", text: "LEBANON",     lat: 33.9,  lng: 35.7,  size: 8,  ls: 2 },
-  { code: "GE", text: "GEORGIA",     lat: 42.0,  lng: 43.5,  size: 9,  ls: 3 },
-  { code: "AM", text: "ARMENIA",     lat: 40.2,  lng: 45.0,  size: 8,  ls: 2 },
-  { code: "AZ", text: "AZERBAIJAN",  lat: 40.4,  lng: 48.0,  size: 9,  ls: 3 },
-  { code: "BT", text: "BHUTAN",      lat: 27.5,  lng: 90.4,  size: 8,  ls: 2 },
-];
+// ASIA / EUROPE callouts along the divide (map units)
+const CONTINENT_ANCHORS = (() => {
+  const SAMPLE = 50, out = [];
+  for (const seg of CONTINENT_DIVIDE_LINES) {
+    if (seg.length < 2) continue;
+    const ps = seg.map(c => PROJ.projection(c));
+    let walked = SAMPLE * 0.5;
+    for (let i = 0; i < ps.length - 1; i++) {
+      const [x0, y0] = ps[i], [x1, y1] = ps[i + 1];
+      const dx = x1 - x0, dy = y1 - y0, L = Math.hypot(dx, dy);
+      if (L < 1) continue;
+      while (walked < L) {
+        const t = walked / L;
+        let ang = Math.atan2(dy, dx);
+        if (ang > Math.PI / 2) ang -= Math.PI;
+        if (ang < -Math.PI / 2) ang += Math.PI;
+        const pA = [-dy / L, dx / L], pB = [dy / L, -dx / L];
+        const eu = -pA[0] - pA[1] > -pB[0] - pB[1] ? pA : pB;
+        const as = eu === pA ? pB : pA;
+        out.push({ x: x0 + dx * t, y: y0 + dy * t, ang, eu, as });
+        walked += SAMPLE;
+      }
+      walked -= L;
+    }
+  }
+  return out;
+})();
+const COUNTRY_LABEL_PTS = COUNTRY_LABELS.map(l => ({ ...l, p: PROJ.projection([l.lng, l.lat]) }));
 
-const SEA_LABELS = [
-  { text: "SOUTH CHINA SEA",  lat: 14.0,  lng: 116.0, size: 14, italic: true },
-  { text: "GULF OF THAILAND", lat: 9.5,   lng: 101.6, size: 10, italic: true },
-  { text: "BAY OF BENGAL",    lat: 14.0,  lng: 89.0,  size: 13, italic: true },
-  { text: "ARABIAN SEA",      lat: 14.0,  lng: 67.0,  size: 14, italic: true },
-  { text: "EAST CHINA SEA",   lat: 30.0,  lng: 126.0, size: 12, italic: true },
-  { text: "SEA OF JAPAN",     lat: 39.5,  lng: 134.5, size: 12, italic: true },
-  { text: "PHILIPPINE SEA",   lat: 20.0,  lng: 132.5, size: 12, italic: true },
-  { text: "YELLOW SEA",       lat: 35.2,  lng: 122.5, size: 11, italic: true },
-  { text: "ARAL SEA",         lat: 45.0,  lng: 59.5,  size: 9,  italic: true },
-  { text: "CASPIAN SEA",      lat: 41.0,  lng: 51.0,  size: 14, italic: true },
-  { text: "BLACK SEA",        lat: 43.0,  lng: 35.0,  size: 12, italic: true },
-  { text: "PERSIAN GULF",     lat: 26.5,  lng: 52.0,  size: 10, italic: true },
-  { text: "RED SEA",          lat: 19.5,  lng: 38.5,  size: 11, italic: true },
-  { text: "ANDAMAN SEA",      lat: 11.0,  lng: 95.5,  size: 11, italic: true },
-];
+// dot visibility by zoom: the busier the station, the earlier it shows
+function dotMinZoom(i) {
+  const r = STATIONS[i].rank;
+  if (r === 0) return 3.2;       // pier
+  if (r >= 12) return 1;
+  if (r >= 6) return 1.7;
+  if (r >= 3) return 2.8;
+  if (r >= 2) return 4.2;
+  return 6.5;
+}
+const DOT_MIN_ZOOM = (() => { const a = new Float32Array(NS); for (let i = 0; i < NS; i++) a[i] = dotMinZoom(i); return a; })();
 
 // =============================================================
-// MAP
+// MAP (three stacked canvases)
+//   base — land, borders, hatching, faint network (a cached bitmap, redrawn
+//          only when the view settles) + isochrones
+//   mid  — the reachable network coloured by time, the selected journey
+//   top  — station dots, labels, bridges, country names (cheap; redrawn on hover)
+// While panning / zooming, base and mid are only shifted and scaled as
+// bitmaps; everything is re-rendered sharp once the gesture ends.
 // =============================================================
-function MapView({
-  theme, hsrOnly, origin, setOrigin, hoverDest, setHoverDest,
-  selectedDest, setSelectedDest, maxHours, contoursOn, regionsOn,
-  showSeaLabels, showCountryLabels
+const FG_STEP = 0.5;                       // hours per colour bucket (= the slider step)
+const FG_BUCKETS = 96;                     // up to MAX_HOURS_BOUND
+const newCanvas = () => document.createElement("canvas");
+
+const MapCanvas = memo(function MapCanvas({
+  G, sp, origin, journey, maxHours, theme, contoursOn, regionsOn,
+  hoverDest, selectedDest, setHoverDest, onStationClick, narrow,
 }) {
-  const projection = useProjection(STATIONS);
-  const world = useWorldGeo();
-  const svgRef = useRef(null);
-  const zoomGroupRef = useRef(null);
-  const [zoomT, setZoomT] = useState({ k: 1, x: 0, y: 0 });
+  const wrapRef = useRef(null), baseRef = useRef(null), midRef = useRef(null), topRef = useRef(null);
+  const world = useWorldPaths();
+  const view = useRef({ t: d3.zoomIdentity, cw: 1, ch: 1, dpr: 1, s: 1, ox: 0, oy: 0 });
+  const hit = useRef({ cells: new Map(), labels: [] });
+  const R = useRef(null);
+  if (!R.current) R.current = {
+    id: 0, base: false, mid: false, top: false, interacting: false,
+    stat: newCanvas(), statKey: "", snaps: [newCanvas(), newCanvas(), newCanvas()], snapT: null, settledT: null,
+    fg: null, topMs: 0, hatch: null,
+  };
+  const colors = useRef(null);
 
-  useEffect(() => {
-    if (!svgRef.current || !window.d3) return;
-    const svg = d3.select(svgRef.current);
-    // d3-zoom fires "zoom" once per pointer/wheel event — often many
-    // times per frame on a trackpad pan. Coalesce to one setState per
-    // animation frame so React only reconciles the SVG tree at most
-    // 60 times/sec.
-    let pending = null;
-    let raf = 0;
-    const flush = () => {
-      raf = 0;
-      if (pending) { setZoomT(pending); pending = null; }
+  // per-edge arrival time (the later of its two ends)
+  const edgeT = useMemo(() => {
+    const t = new Float32Array(G.m).fill(Infinity);
+    if (!sp) return t;
+    for (let e = 0; e < G.m; e++) {
+      const da = sp.dist[G.eA[e]], db = sp.dist[G.eB[e]];
+      if (isFinite(da) && isFinite(db)) t[e] = Math.max(da, db);
+    }
+    return t;
+  }, [G, sp]);
+
+  const journeyPath = useMemo(() => {
+    if (!journey) return null;
+    const p = new Path2D();
+    let any = false;
+    for (const sec of journey.sections) {
+      if (sec.kind !== "rail") continue;
+      for (const e of sec.edges) { traceEdge(p, G, e); any = true; }
+    }
+    return any ? p : null;
+  }, [journey, G]);
+
+  const journeyNodes = useMemo(() => {
+    const s = new Set();
+    if (!journey) return s;
+    for (const sec of journey.sections) {
+      if (sec.kind === "rail") for (const leg of sec.legs) { s.add(leg.from); s.add(leg.to); }
+      else { s.add(sec.from); s.add(sec.to); }
+    }
+    return s;
+  }, [journey]);
+
+  const contours = useMemo(() => (sp && origin != null ? computeContours(sp.dist) : null), [sp, origin]);
+
+  const P = useRef({});
+  P.current = { G, sp, origin, journey, maxHours, theme, contoursOn, regionsOn, hoverDest, selectedDest,
+    world, edgeT, journeyPath, journeyNodes, contours, narrow };
+
+  // ---- view helpers ----
+  const fit = () => {
+    const v = view.current;
+    v.s = Math.min(v.cw / W, v.ch / H);
+    v.ox = (v.cw - W * v.s) / 2;
+    v.oy = (v.ch - H * v.s) / 2;
+  };
+  const setMapTransform = (ctx) => {
+    const v = view.current, k = v.t.k, sc = v.dpr * k * v.s;
+    ctx.setTransform(sc, 0, 0, sc, v.dpr * (v.t.x + k * v.ox), v.dpr * (v.t.y + k * v.oy));
+  };
+  const toScreen = (x, y) => {
+    const v = view.current, k = v.t.k;
+    return [v.t.x + k * (v.ox + v.s * x), v.t.y + k * (v.oy + v.s * y)];
+  };
+  const clear = (cv) => { const c = cv.getContext("2d"); c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, cv.width, cv.height); return c; };
+
+  // ---- static layer: land + faint network, for one view ----
+  const paintStatic = () => {
+    const r = R.current, v = view.current, p = P.current, C = colors.current, k = v.t.k;
+    const cv = r.stat;
+    if (cv.width !== baseRef.current.width || cv.height !== baseRef.current.height) {
+      cv.width = baseRef.current.width; cv.height = baseRef.current.height;
+    }
+    const ctx = clear(cv);
+    setMapTransform(ctx);
+    const unit = 1 / (k * v.s);
+    ctx.fillStyle = C["--sea"]; ctx.fillRect(0, 0, W, H);
+    ctx.beginPath();
+    for (let x = 0; x <= W; x += 50) { ctx.moveTo(x, 0); ctx.lineTo(x, H); }
+    for (let y = 0; y <= H; y += 50) { ctx.moveTo(0, y); ctx.lineTo(W, y); }
+    ctx.strokeStyle = C["--grid"]; ctx.lineWidth = 0.5 * unit * Math.sqrt(k); ctx.stroke();
+    // vignette over the sea (under the land, as before)
+    ctx.save();
+    ctx.translate(W / 2, H / 2); ctx.scale(W, H);
+    const g = ctx.createRadialGradient(0, 0, 0, 0, 0, 0.75);
+    g.addColorStop(0.6, rgba(C["--ink"], 0)); g.addColorStop(1, rgba(C["--ink"], 0.12));
+    ctx.fillStyle = g; ctx.fillRect(-0.5, -0.5, 1, 1);
+    ctx.restore();
+    const w = p.world;
+    if (w) {
+      const groups = p.regionsOn ? w.regionGroups : w.groups;
+      for (const [key, path] of groups) { ctx.fillStyle = C[key] || C["--land"]; ctx.fill(path); }
+      ctx.lineJoin = "round"; ctx.lineCap = "round";
+      ctx.strokeStyle = C["--border-line"];
+      ctx.lineWidth = 0.7 / Math.pow(k, 0.7);
+      ctx.globalAlpha = 0.45; ctx.stroke(w.strokeOut);
+      ctx.globalAlpha = 0.8; ctx.stroke(w.strokeAsia);
+      ctx.globalAlpha = 1;
+      // hatch: screen-space stripes 6 px apart at any zoom
+      const hk = v.dpr + C["--border-line"];
+      if (!r.hatch || r.hatch.key !== hk) {
+        const pc = newCanvas(), ps = Math.max(1, Math.round(6 * v.dpr));
+        pc.width = ps; pc.height = ps;
+        const pctx = pc.getContext("2d");
+        pctx.strokeStyle = rgba(C["--border-line"], 0.55); pctx.lineWidth = 0.9 * v.dpr;
+        pctx.beginPath(); pctx.moveTo(0, 0); pctx.lineTo(0, ps); pctx.stroke();
+        r.hatch = { key: hk, canvas: pc };
+      }
+      const pat = ctx.createPattern(r.hatch.canvas, "repeat");
+      if (pat && pat.setTransform) pat.setTransform(new DOMMatrix().scale(1 / (v.dpr * k * v.s)).rotate(45));
+      ctx.fillStyle = pat; ctx.fill(w.hatch);
+      ctx.setLineDash([4 / Math.sqrt(k), 3.5 / Math.sqrt(k)]);
+      ctx.strokeStyle = C["--continent-line"]; ctx.lineWidth = 1.65 / Math.pow(k, 0.7);
+      ctx.stroke(w.divide);
+      ctx.setLineDash([]);
+      ctx.lineWidth = 2.4 / Math.pow(k, 0.7);
+      for (const d of w.disputed) { ctx.strokeStyle = C[p.regionsOn ? d.tint : "--land"] || C["--land"]; ctx.stroke(d.path); }
+      ctx.setLineDash([2 / Math.sqrt(k), 2.5 / Math.sqrt(k)]);
+      ctx.strokeStyle = C["--border-line"]; ctx.globalAlpha = 0.75; ctx.lineWidth = 0.9 / Math.pow(k, 0.7);
+      ctx.stroke(w.disputedAll);
+      ctx.setLineDash([]); ctx.globalAlpha = 1;
+    }
+    // the whole network, faint
+    const bg = backgroundPaths(p.G, lodFor(k));
+    const zw = 1 / Math.sqrt(k);
+    ctx.lineJoin = "round"; ctx.lineCap = "round";
+    ctx.strokeStyle = C["--ink"];
+    ctx.globalAlpha = 0.10;
+    ctx.lineWidth = 0.9 * zw; ctx.stroke(bg.conv);
+    ctx.lineWidth = 1.6 * zw; ctx.stroke(bg.hsr);
+    ctx.globalAlpha = 0.16;
+    ctx.setLineDash([3 * zw, 3 * zw]); ctx.lineWidth = 0.8 * zw; ctx.stroke(bg.ferry); ctx.setLineDash([]);
+    ctx.globalAlpha = 1;
+  };
+
+  const drawBase = () => {
+    const r = R.current, p = P.current, k = view.current.t.k;
+    const ctx = clear(baseRef.current);
+    ctx.drawImage(r.stat, 0, 0);
+    if (p.contoursOn && p.contours) {
+      setMapTransform(ctx);
+      const lv = [];
+      CONTOUR_LEVELS.forEach((th, i) => { if (th <= p.maxHours && p.contours[i]) lv.push([th, p.contours[i]]); });
+      ctx.globalCompositeOperation = p.theme === "day" ? "multiply" : "screen";
+      ctx.globalAlpha = 0.13;
+      for (let i = lv.length - 1; i >= 0; i--) { ctx.fillStyle = timeColor(lv[i][0], p.maxHours, p.theme); ctx.fill(lv[i][1]); }
+      ctx.globalCompositeOperation = "source-over";
+      ctx.globalAlpha = 0.92;
+      ctx.lineWidth = 1.2 / Math.sqrt(k); ctx.lineJoin = "round";
+      for (let i = 0; i < lv.length - 1; i++) { ctx.strokeStyle = timeColor(lv[i][0], p.maxHours, p.theme); ctx.stroke(lv[i][1]); }
+      ctx.globalAlpha = 1;
+    }
+  };
+
+  // reachable network in fixed half-hour buckets of arrival time (rebuilt only
+  // when the origin, network or level of detail changes; the slider then just
+  // strokes the buckets within budget, each in its colour)
+  const fgPaths = () => {
+    const r = R.current, p = P.current, lod = lodFor(view.current.t.k);
+    const f = r.fg;
+    if (f && f.G === p.G && f.edgeT === p.edgeT && f.lod === lod) return f.paths;
+    const q = LOD_Q[lod];
+    const paths = Array.from({ length: FG_BUCKETS }, () => ({ hsr: null, conv: null, ferry: null }));
+    const { G, edgeT } = p;
+    for (let e = 0; e < G.m; e++) {
+      const t = edgeT[e];
+      if (!(t <= MAX_HOURS_BOUND)) continue;
+      const ty = G.eT[e];
+      if (ty > T_FERRY) continue;
+      const b = Math.max(0, Math.ceil(t / FG_STEP) - 1);
+      const key = ty === T_HSR ? "hsr" : ty === T_CONV ? "conv" : "ferry";
+      tracePts(paths[b][key] || (paths[b][key] = new Path2D()), edgePts(G, e), q);
+    }
+    r.fg = { G, edgeT, lod, paths };
+    return paths;
+  };
+
+  const drawMid = () => {
+    const p = P.current, C = colors.current, k = view.current.t.k;
+    const ctx = clear(midRef.current);
+    setMapTransform(ctx);
+    const zw = 1 / Math.sqrt(k);
+    ctx.lineJoin = "round"; ctx.lineCap = "round";
+    if (p.sp && !p.contoursOn) {
+      const fg = fgPaths();
+      const nb = Math.min(FG_BUCKETS, Math.round(p.maxHours / FG_STEP));
+      for (let b = nb - 1; b >= 0; b--) {
+        const L = fg[b], th = (b + 1) * FG_STEP;
+        const lw = lineWidthForTime(th, p.maxHours) * zw;
+        ctx.strokeStyle = timeColor(th, p.maxHours, p.theme);
+        if (L.conv) { ctx.lineWidth = lw * 0.55; ctx.stroke(L.conv); }
+        if (L.hsr) { ctx.lineWidth = lw; ctx.stroke(L.hsr); }
+        if (L.ferry) { ctx.setLineDash([2.5 * zw, 2.5 * zw]); ctx.lineWidth = lw * 0.55; ctx.stroke(L.ferry); ctx.setLineDash([]); }
+      }
+    }
+    if (p.journeyPath) {
+      ctx.strokeStyle = rgba(C["--accent"], 0.25); ctx.lineWidth = 5 * zw; ctx.stroke(p.journeyPath);
+      ctx.strokeStyle = C["--accent"]; ctx.globalAlpha = 0.9; ctx.lineWidth = 1.6 * zw; ctx.stroke(p.journeyPath);
+      ctx.globalAlpha = 1;
+    }
+  };
+
+  const drawTop = () => {
+    const t0 = performance.now();
+    const v = view.current, p = P.current, C = colors.current, k = v.t.k;
+    const { PX, PY, hub } = PROJ;
+    const ctx = clear(topRef.current);
+    ctx.setTransform(v.dpr, 0, 0, v.dpr, 0, 0);
+    const cw = v.cw, ch = v.ch;
+    ctx.lineJoin = "round"; ctx.lineCap = "round";
+    // bridges
+    const bridges = p.journey ? p.journey.sections.filter(s => s.kind === "bridge") : [];
+    bridges.forEach((br, bi) => {
+      const [ax, ay] = toScreen(PX[br.from], PY[br.from]);
+      const [bx, by] = toScreen(PX[br.to], PY[br.to]);
+      ctx.strokeStyle = rgba(C["--accent"], 0.18); ctx.lineWidth = 9;
+      ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(bx, by); ctx.stroke();
+      ctx.strokeStyle = C["--accent"]; ctx.lineWidth = 1.6; ctx.setLineDash([2, 5]);
+      ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(bx, by); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.lineWidth = 1.2;
+      ctx.beginPath(); ctx.arc(ax, ay, 6, 0, Math.PI * 2); ctx.stroke();
+      ctx.setLineDash([2, 2]); ctx.beginPath(); ctx.arc(bx, by, 6, 0, Math.PI * 2); ctx.stroke(); ctx.setLineDash([]);
+      const len = Math.hypot(bx - ax, by - ay) || 1;
+      const lx = (ax + bx) / 2 - ((by - ay) / len) * 14, ly = (ay + by) / 2 + ((bx - ax) / len) * 14;
+      ctx.fillStyle = C["--paper"]; ctx.globalAlpha = 0.96; ctx.fillRect(lx - 38, ly - 9, 76, 18); ctx.globalAlpha = 1;
+      ctx.strokeStyle = C["--accent"]; ctx.lineWidth = 0.6; ctx.strokeRect(lx - 38, ly - 9, 76, 18);
+      ctx.fillStyle = C["--accent"]; ctx.font = "500 10.5px 'DM Mono', monospace";
+      ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.fillText((bi + 1) + "·" + fmtKm(br.km), lx, ly + 0.5);
+    });
+
+    // station dots
+    const dist = p.sp ? p.sp.dist : null;
+    const hasOrigin = p.origin != null;
+    const pad = 40, CELL = 16;
+    const cells = new Map(), drawn = [];
+    const jn = p.journeyNodes;
+    const special = (i) => i === p.origin || i === p.selectedDest || i === p.hoverDest || jn.has(i);
+    const a = v.t.k * v.s, bx0 = v.t.x + k * v.ox, by0 = v.t.y + k * v.oy;
+    for (let i = 0; i < NS; i++) {
+      const isHub = hub[i] === 1;
+      if (!isHub && k < DOT_MIN_ZOOM[i] && !special(i)) continue;
+      const sx = bx0 + a * PX[i], sy = by0 + a * PY[i];
+      if (sx < -pad || sy < -pad || sx > cw + pad || sy > ch + pad) continue;
+      const t = dist ? dist[i] : Infinity;
+      const reach = hasOrigin && t <= p.maxHours;
+      const st = STATIONS[i];
+      const r = i === p.origin ? 7 : isHub ? 3.6 : st.pier ? 1.8 : reach ? (st.rank >= 3 ? 2.8 : 1.8) : (st.rank >= 3 ? 2 : 1.2);
+      let fill = C["--ink-2"], alpha = hasOrigin ? 0.25 : 0.85;
+      if (hasOrigin) {
+        if (i === p.origin) { fill = C["--accent"]; alpha = 1; }
+        else if (reach) { fill = timeColor(t, p.maxHours, p.theme); alpha = 1; }
+        else alpha = 0.18;
+      }
+      if (!isHub && !special(i)) alpha *= Math.min(1, 0.35 + (k - DOT_MIN_ZOOM[i]) / 0.6);
+      ctx.globalAlpha = alpha;
+      ctx.beginPath(); ctx.arc(sx, sy, r, 0, Math.PI * 2);
+      ctx.fillStyle = fill; ctx.fill();
+      ctx.globalAlpha = Math.min(1, alpha + 0.2);
+      ctx.strokeStyle = C["--paper"]; ctx.lineWidth = i === p.origin ? 1.4 : 0.8; ctx.stroke();
+      if (st.pier) {   // a pier: a little waterline under the dot
+        ctx.globalAlpha = alpha; ctx.strokeStyle = fill; ctx.lineWidth = 0.9;
+        ctx.beginPath(); ctx.moveTo(sx - r - 1.5, sy + r + 1.2); ctx.lineTo(sx + r + 1.5, sy + r + 1.2); ctx.stroke();
+      }
+      drawn.push(i, sx, sy, r);
+      const ck = Math.floor(sx / CELL) + "," + Math.floor(sy / CELL);
+      (cells.get(ck) || cells.set(ck, []).get(ck)).push(i, sx, sy);
+    }
+    ctx.globalAlpha = 1;
+    for (let j = 0; j < drawn.length; j += 4) {
+      const i = drawn[j], sx = drawn[j + 1], sy = drawn[j + 2];
+      if (i === p.origin) {
+        ctx.strokeStyle = C["--accent"]; ctx.lineWidth = 1.2;
+        ctx.beginPath(); ctx.arc(sx, sy, 9, 0, Math.PI * 2); ctx.stroke();
+        ctx.globalAlpha = 0.4; ctx.lineWidth = 0.6;
+        ctx.beginPath(); ctx.arc(sx, sy, 14, 0, Math.PI * 2); ctx.stroke(); ctx.globalAlpha = 1;
+      } else if (jn.has(i)) {
+        ctx.strokeStyle = C["--accent"]; ctx.globalAlpha = 0.9; ctx.lineWidth = 1.2;
+        ctx.beginPath(); ctx.arc(sx, sy, 6, 0, Math.PI * 2); ctx.stroke(); ctx.globalAlpha = 1;
+      }
+    }
+
+    // labels: by priority, skipping any that would overlap one already placed
+    const cand = [];
+    for (let j = 0; j < drawn.length; j += 4) {
+      const i = drawn[j], st = STATIONS[i];
+      const t = dist ? dist[i] : Infinity, reach = hasOrigin && t <= p.maxHours;
+      let prio;
+      if (i === p.origin) prio = 1e7;
+      else if (i === p.selectedDest) prio = 9e6;
+      else if (jn.has(i)) prio = 8e6;
+      else if (i === p.hoverDest) prio = 7e6;
+      else if (hub[i]) prio = (reach ? 6e5 : 5e5) + st.rank;
+      else { if (k < 1.6) continue; prio = (reach ? 2e5 : 1e5) + st.rank * 10 - (reach ? t : 0); }
+      cand.push([prio, i, drawn[j + 1], drawn[j + 2], drawn[j + 3]]);
+    }
+    cand.sort((x, y) => y[0] - x[0]);
+    const grid = new Map(), GC = 64;
+    const overlaps = (x0, y0, x1, y1) => {
+      for (let gx = Math.floor(x0 / GC); gx <= Math.floor(x1 / GC); gx++)
+        for (let gy = Math.floor(y0 / GC); gy <= Math.floor(y1 / GC); gy++)
+          for (const b of grid.get(gx + "," + gy) || []) if (x0 < b[2] && x1 > b[0] && y0 < b[3] && y1 > b[1]) return true;
+      return false;
     };
-    const zoom = d3.zoom()
-      .scaleExtent([1, 14])
-      .translateExtent([[0, 0], [W, H]])
-      .filter((event) => {
-        if (event.type === "mousedown" || event.type === "touchstart") {
-          const t = event.target;
-          if (t && (t.closest(".station") || t.closest(".list-row"))) return false;
+    const place = (box) => {
+      for (let gx = Math.floor(box[0] / GC); gx <= Math.floor(box[2] / GC); gx++)
+        for (let gy = Math.floor(box[1] / GC); gy <= Math.floor(box[3] / GC); gy++) {
+          const kk = gx + "," + gy; (grid.get(kk) || grid.set(kk, []).get(kk)).push(box);
         }
-        return !event.button;
-      })
-      .on("zoom", (event) => {
-        const t = event.transform;
-        pending = { k: t.k, x: t.x, y: t.y };
-        if (!raf) raf = requestAnimationFrame(flush);
-      });
-    svg.call(zoom);
-    return () => {
-      svg.on(".zoom", null);
-      if (raf) cancelAnimationFrame(raf);
     };
+    const labels = [];
+    ctx.textAlign = "left"; ctx.textBaseline = "middle";
+    let budget = 260;
+    const fade = Math.max(0, Math.min(1, (k - 1.6) / 0.5));
+    for (const [prio, i, sx, sy, r] of cand) {
+      const big = i === p.origin || i === p.selectedDest;
+      const forced = prio >= 7e6;
+      if (!forced && budget <= 0) break;
+      const font = `${big ? 700 : hub[i] ? 600 : 500} ${big ? 13 : 10.5}px 'DM Sans', sans-serif`;
+      if (ctx.font !== font) ctx.font = font;
+      const name = STATIONS[i].name;
+      const tw = ctx.measureText(name).width;
+      const box = [sx + r + 2, sy - 7, sx + r + 6 + tw, sy + 7];
+      if (!forced && overlaps(box[0], box[1], box[2], box[3])) continue;
+      place(box);
+      labels.push([i, box[0], box[1], box[2], box[3]]);
+      budget--;
+      const vis = forced ? 1 : hub[i] ? 0.9 : fade * 0.85;
+      ctx.globalAlpha = vis * 0.9;
+      ctx.strokeStyle = C["--paper"]; ctx.lineWidth = 3; ctx.strokeText(name, sx + r + 4, sy + 0.5);
+      ctx.globalAlpha = vis;
+      ctx.fillStyle = C["--ink"]; ctx.fillText(name, sx + r + 4, sy + 0.5);
+    }
+    ctx.globalAlpha = 1;
+    hit.current = { cells, labels };
+
+    // country names
+    ctx.textAlign = "center"; ctx.textBaseline = "alphabetic";
+    ctx.fillStyle = C["--ink"];
+    for (const l of COUNTRY_LABEL_PTS) {
+      const [x, y] = toScreen(l.p[0], l.p[1]);
+      if (x < -200 || x > cw + 200 || y < -50 || y > ch + 50) continue;
+      ctx.font = `500 ${l.size}px 'Space Grotesk', 'DM Sans', sans-serif`;
+      ctx.globalAlpha = l.size > 22 ? 0.34 : 0.5;
+      drawSpaced(ctx, l.text, x, y, l.ls || (l.size > 24 ? 12 : 4));
+    }
+    ctx.globalAlpha = 1;
+    // EUROPE / ASIA along the divide
+    if (k > 1.4) {
+      const f2 = Math.max(0, Math.min(1, (k - 1.4) / 0.6));
+      ctx.font = "italic 700 10px 'Space Grotesk', 'DM Sans', sans-serif";
+      ctx.textBaseline = "middle";
+      for (const an of CONTINENT_ANCHORS) {
+        const [sx, sy] = toScreen(an.x, an.y);
+        if (sx < -60 || sx > cw + 60 || sy < -60 || sy > ch + 60) continue;
+        for (const [txt, d] of [["EUROPE", an.eu], ["ASIA", an.as]]) {
+          ctx.save();
+          ctx.translate(sx + d[0] * 22, sy + d[1] * 22); ctx.rotate(an.ang);
+          ctx.globalAlpha = f2;
+          ctx.strokeStyle = C["--paper"]; ctx.lineWidth = 3;
+          drawSpaced(ctx, txt, 0, 0, 4, true);
+          ctx.fillStyle = C["--ink"];
+          drawSpaced(ctx, txt, 0, 0, 4);
+          ctx.restore();
+        }
+      }
+      ctx.globalAlpha = 1;
+    }
+    R.current.topMs = performance.now() - t0;
+  };
+
+  // mid-gesture: shift + scale the last sharp frames
+  const blit = () => {
+    const r = R.current, v = view.current, s0 = r.snapT;
+    if (!s0) return;
+    const sc = v.t.k / s0.k, dx = v.dpr * (v.t.x - sc * s0.x), dy = v.dpr * (v.t.y - sc * s0.y);
+    const layers = [baseRef.current, midRef.current];
+    if (r.topMs > 12) layers.push(topRef.current);
+    layers.forEach((cv, i) => {
+      const ctx = clear(cv);
+      ctx.setTransform(sc, 0, 0, sc, dx, dy);
+      ctx.drawImage(r.snaps[i], 0, 0);
+    });
+    if (r.topMs <= 12) drawTop();
+  };
+
+  const frame = () => {
+    const r = R.current, p = P.current;
+    r.id = 0;
+    if (!colors.current || colors.current._theme !== p.theme) {
+      colors.current = readColors(); colors.current._theme = p.theme;
+      r.base = r.mid = r.top = true; r.statKey = "";
+    }
+    if (r.interacting) { blit(); return; }
+    const v = view.current, t = v.t;
+    const perf = {};
+    let t0 = performance.now();
+    const sk = [p.theme, p.regionsOn, !!p.world, p.G.key, t.k, t.x, t.y, v.cw, v.ch, v.dpr].join("|");
+    if (sk !== r.statKey) { paintStatic(); r.statKey = sk; r.base = true; perf.static = performance.now() - t0; }
+    t0 = performance.now();
+    if (r.base) { drawBase(); perf.base = performance.now() - t0; }
+    t0 = performance.now();
+    if (r.mid) { drawMid(); perf.mid = performance.now() - t0; }
+    if (r.top) { drawTop(); perf.top = r.topMs; }
+    r.base = r.mid = r.top = false;
+    r.settledT = { k: t.k, x: t.x, y: t.y };
+    window.__mapPerf = perf;
+  };
+
+  const schedule = useCallback((base, mid, top) => {
+    const r = R.current;
+    r.base = r.base || base; r.mid = r.mid || mid; r.top = r.top || top;
+    if (!r.id) r.id = requestAnimationFrame(frame);
   }, []);
 
-  const adj = useMemo(() => buildAdjacency(ROUTES, hsrOnly), [hsrOnly]);
-  const { dist, prev, prevRoute } = useMemo(
-    () => origin ? dijkstra(adj, origin) : { dist: {}, prev: {}, prevRoute: {} },
-    [adj, origin]
-  );
-  // Unified journey: single rail section for reachable, alternating
-  // rail/bridge sections for disconnected.
-  const journey = useMemo(
-    () => buildJourney(origin, selectedDest, adj, dist, prev, prevRoute, STATIONS, hsrOnly),
-    [origin, selectedDest, adj, dist, prev, prevRoute, hsrOnly]
-  );
-
-  // Routes that are part of any rail section of the journey, indexed by from|to.
-  const journeyRouteSet = useMemo(() => {
-    if (!journey) return new Set();
-    const s = new Set();
-    for (const sec of journey.sections) {
-      if (sec.kind !== "rail") continue;
-      for (const r of sec.routes) s.add(`${r.from}|${r.to}`);
-    }
-    return s;
-  }, [journey]);
-
-  // Set of station ids that appear in any rail-section node list.
-  const journeyNodeSet = useMemo(() => {
-    if (!journey) return new Set();
-    const s = new Set();
-    for (const sec of journey.sections) {
-      if (sec.kind !== "rail") continue;
-      for (const n of sec.nodes) s.add(n);
-    }
-    return s;
-  }, [journey]);
-
-  if (!projection) return null;
-  const pathGen = world ? d3.geoPath(projection) : null;
-  // Project once per projection change. Previously stationPts was
-  // rebuilt on every render — that's ~4000 array allocations and
-  // projection calls per pan/zoom/scrub frame, which dominates the
-  // map's update cost.
-  const stationPts = useMemo(() => {
-    if (!projection) return [];
-    return STATIONS.map(s => {
-      const [x, y] = projection([s.lng, s.lat]);
-      return { ...s, x, y };
-    });
-  }, [projection]);
-  const ptById = useMemo(
-    () => Object.fromEntries(stationPts.map(s => [s.id, s])),
-    [stationPts]
-  );
-
-  // Determine which routes to draw based on filter
-  const visibleRoutes = useMemo(
-    () => ROUTES.filter(r => !hsrOnly || r.type === "hsr"),
-    [hsrOnly]
-  );
-  // Indices into visibleRoutes whose direct line duplicates a chain
-  // through intermediate stations — hidden from the map but kept in
-  // the routing graph so Dijkstra still picks the faster express.
-  const redundantIdx = useMemo(
-    () => computeRedundantRouteIndices(visibleRoutes, STATIONS),
-    [visibleRoutes]
-  );
-  // Non-redundant routes chained into continuous polylines by rail line —
-  // drives the background underlay so each named service renders as one
-  // smooth path rather than a string of butt-jointed segments.
-  const chainedPolylines = useMemo(() => {
-    const keep = visibleRoutes.filter((_, i) => !redundantIdx.has(i));
-    return chainRoutesIntoPolylines(keep);
-  }, [visibleRoutes, redundantIdx]);
-  // Reachability isochrones — the slow part (grid build, marching
-  // squares, d3 smoothing) only depends on origin/dist/projection,
-  // not on maxHours. Precompute path data for every threshold once
-  // and let scrubbing the time budget just filter the array.
-  const contourAll = useMemo(() => {
-    if (!origin || !projection) return null;
-    const gridInfo = buildContourGrid(origin, dist, STATIONS);
-    if (!gridInfo) return null;
-    const allLevels = [0.5, 1, 2, 3, 5, 7, 10, 14, 18, 24, 32, 40, 48];
-    const smoothLine = window.d3
-      ? d3.line().x(p => p[0]).y(p => p[1]).curve(d3.curveCatmullRomClosed.alpha(0.5))
-      : null;
-    const fallbackPath = (poly) => {
-      if (poly.length === 0) return "";
-      return "M" + poly.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join("L") + "Z";
+  // ---- size + zoom ----
+  useLayoutEffect(() => {
+    const wrap = wrapRef.current, top = topRef.current, r = R.current;
+    const zoom = d3.zoom().scaleExtent([1, 14]);
+    const resize = () => {
+      const v = view.current;
+      v.cw = wrap.clientWidth || 1; v.ch = wrap.clientHeight || 1;
+      v.dpr = Math.min(2, window.devicePixelRatio || 1);
+      for (const cv of [baseRef.current, midRef.current, topRef.current]) {
+        cv.width = Math.round(v.cw * v.dpr); cv.height = Math.round(v.ch * v.dpr);
+      }
+      for (const cv of r.snaps) { cv.width = baseRef.current.width; cv.height = baseRef.current.height; }
+      fit();
+      // pan within the map itself (on a tall phone screen the map is a band)
+      zoom.extent([[0, 0], [v.cw, v.ch]])
+        .translateExtent([[Math.min(v.ox, 0), v.oy], [Math.max(v.ox + W * v.s, v.cw), v.oy + H * v.s]]);
+      r.interacting = false;
+      schedule(true, true, true);
+      // first layout on a narrow screen: zoom in so the map fills the space
+      // between the top bar and the bottom sheet, centred on the origin
+      if (!r.framed) {
+        r.framed = true;
+        const bar = document.querySelector(".m-top"), sh = document.querySelector(".m-sheet");
+        if (P.current.narrow && bar) {
+          const topH = bar.offsetHeight, botH = sh ? sh.offsetHeight : 0;
+          const availH = Math.max(100, v.ch - topH - botH);
+          const k0 = Math.max(1, Math.min(6, availH / (H * v.s)));
+          if (k0 > 1.05) {
+            const o = P.current.origin;
+            const px = o != null ? v.ox + v.s * PROJ.PX[o] : v.cw / 2;
+            const py = o != null ? v.oy + v.s * PROJ.PY[o] : v.ch / 2;
+            d3.select(top).call(zoom.transform,
+              d3.zoomIdentity.translate(v.cw / 2 - k0 * px, topH + availH / 2 - k0 * py).scale(k0));
+          }
+        }
+      }
     };
-    const dStrings = allLevels.map(th => {
-      const polys = marchingSquaresPolylines(gridInfo, th, projection);
-      if (!polys.length) return "";
-      return polys.map(p => (smoothLine ? smoothLine(p) : fallbackPath(p))).join(" ");
-    });
-    return { allLevels, dStrings };
-  }, [origin, dist, projection]);
-  // Per-frame slice keyed by maxHours.
-  const contourLayers = contourAll && {
-    levels: contourAll.allLevels.filter(t => t <= maxHours),
-    dStrings: contourAll.allLevels
-      .map((t, i) => t <= maxHours ? contourAll.dStrings[i] : null)
-      .filter(d => d !== null),
+    zoom
+      .on("start", () => {
+        // freeze the current sharp frames for the gesture
+        [baseRef.current, midRef.current, topRef.current].forEach((cv, i) => {
+          const c = clear(r.snaps[i]); c.drawImage(cv, 0, 0);
+        });
+        r.snapT = r.settledT || { k: view.current.t.k, x: view.current.t.x, y: view.current.t.y };
+        r.interacting = true;
+      })
+      .on("zoom", (ev) => { view.current.t = ev.transform; schedule(false, false, false); })
+      .on("end", () => {
+        r.interacting = false;
+        const t = view.current.t, s = r.settledT;
+        const moved = !s || s.k !== t.k || s.x !== t.x || s.y !== t.y;
+        if (moved) { schedule(true, true, true); return; }
+        // nothing moved (a click): put the sharp frames back, then any redraw
+        // that was held while the pointer was down
+        [baseRef.current, midRef.current, topRef.current].forEach((cv, i) => {
+          const c = clear(cv); c.drawImage(r.snaps[i], 0, 0);
+        });
+        if (r.base || r.mid || r.top) schedule(false, false, false);
+      });
+    d3.select(top).call(zoom).on("dblclick.zoom", null);
+    const ro = new ResizeObserver(resize);
+    ro.observe(wrap);
+    resize();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => schedule(false, false, true));
+    return () => { ro.disconnect(); d3.select(top).on(".zoom", null); };
+  }, [schedule]);
+
+  // redraw what each input affects
+  useEffect(() => { schedule(true, false, false); }, [world, contours, contoursOn, maxHours, regionsOn, theme, G, schedule]);
+  useEffect(() => { schedule(false, true, false); }, [edgeT, maxHours, contoursOn, journeyPath, theme, G, schedule]);
+  useEffect(() => { schedule(false, false, true); },
+    [hoverDest, selectedDest, origin, sp, maxHours, theme, journey, journeyNodes, schedule]);
+
+  // ---- hover + click ----
+  const touchRef = useRef(false);
+  const pick = (ev) => {
+    const rect = topRef.current.getBoundingClientRect();
+    const x = ev.clientX - rect.left, y = ev.clientY - rect.top;
+    const { cells, labels } = hit.current;
+    const rad = touchRef.current ? 22 : 10, span = Math.ceil(rad / 16);   // a finger is wider than a pointer
+    let best = -1, bd = rad * rad;
+    const cx = Math.floor(x / 16), cy = Math.floor(y / 16);
+    for (let dx = -span; dx <= span; dx++) for (let dy = -span; dy <= span; dy++) {
+      const c = cells.get((cx + dx) + "," + (cy + dy));
+      if (!c) continue;
+      for (let j = 0; j < c.length; j += 3) {
+        const d = (c[j + 1] - x) ** 2 + (c[j + 2] - y) ** 2;
+        if (d < bd) { bd = d; best = c[j]; }
+      }
+    }
+    if (best < 0) for (const [i, x0, y0, x1, y1] of labels) if (x >= x0 && x <= x1 && y >= y0 && y <= y1) { best = i; break; }
+    return best;
   };
-  // Pre-projected Europe/Asia divide segments. Concatenated into one
-  // multi-subpath `d` string — each segment is M…L…L…, no Z.
-  const continentDivideD = useMemo(() => {
-    if (!projection || !CONTINENT_DIVIDE_LINES.length) return "";
-    return CONTINENT_DIVIDE_LINES.map(seg => {
-      if (seg.length < 2) return "";
-      return "M" + seg
-        .map((c, j) => (j === 0 ? "" : "L") + projection(c).join(","))
-        .join("");
-    }).filter(s => s).join(" ");
-  }, [projection]);
-  // ASIA / EUROPE label anchors sampled along the divide line at a
-  // fixed pixel interval, so labels repeat along the boundary like
-  // country names on Google Maps. Each anchor carries the projected
-  // base position, the local tangent angle (so labels run parallel
-  // to the line), and pre-classified Europe / Asia perpendicular
-  // unit vectors — Europe is the side whose perpendicular points
-  // more "north-west" in screen coordinates (the heuristic works
-  // for the Urals, Ural River, Caucasus, and Bosphorus all at once).
-  const continentLabelAnchors = useMemo(() => {
-    if (!projection || !CONTINENT_DIVIDE_LINES.length) return [];
-    const SAMPLE_DIST = 50; // projection units between consecutive label pairs
-    const anchors = [];
-    for (const seg of CONTINENT_DIVIDE_LINES) {
-      if (seg.length < 2) continue;
-      const ps = seg.map(c => projection(c));
-      let walked = SAMPLE_DIST * 0.5; // initial offset
-      for (let i = 0; i < ps.length - 1; i++) {
-        const [x0, y0] = ps[i], [x1, y1] = ps[i+1];
-        const dx = x1 - x0, dy = y1 - y0;
-        const segLen = Math.hypot(dx, dy);
-        if (segLen < 1) continue;
-        while (walked < segLen) {
-          const t = walked / segLen;
-          const baseX = x0 + dx * t;
-          const baseY = y0 + dy * t;
-          // Tangent angle, flipped so text is never upside-down.
-          let angleDeg = Math.atan2(dy, dx) * 180 / Math.PI;
-          if (angleDeg > 90)  angleDeg -= 180;
-          if (angleDeg < -90) angleDeg += 180;
-          // Two perpendicular candidates.
-          const pAx = -dy / segLen, pAy = dx / segLen; // 90° CCW
-          const pBx =  dy / segLen, pBy = -dx / segLen; // 90° CW
-          // Europe direction in screen coords ≈ NW (negative X, negative Y).
-          const scoreA = -pAx - pAy;
-          const scoreB = -pBx - pBy;
-          const europe = scoreA > scoreB ? [pAx, pAy] : [pBx, pBy];
-          const asia   = scoreA > scoreB ? [pBx, pBy] : [pAx, pAy];
-          anchors.push({
-            baseX, baseY, angleDeg,
-            ePerpX: europe[0], ePerpY: europe[1],
-            aPerpX: asia[0],   aPerpY: asia[1],
-          });
-          walked += SAMPLE_DIST;
-        }
-        walked -= segLen;
-      }
-    }
-    return anchors;
-  }, [projection]);
-  // Foreground colored route layer, chained per rail line and split
-  // into runs of consecutive segments that share the same on-route
-  // status and stay within the time budget. Each run is rendered as
-  // ONE <path> downstream, so a long service like the Trans-Sib reads
-  // as a single coloured polyline instead of fifty butt-jointed
-  // segments with visible notches at every station.
-  const foregroundRuns = useMemo(() => {
-    if (!origin) return [];
-    const out = [];
-    for (const chain of chainedPolylines) {
-      let cur = null;
-      const flush = () => {
-        if (cur && cur.stations.length >= 2 && cur.times.length) {
-          let maxT = 0;
-          for (const t of cur.times) if (t > maxT) maxT = t;
-          cur.maxT = maxT;
-          out.push(cur);
-        }
-        cur = null;
-      };
-      for (let i = 0; i < chain.stations.length - 1; i++) {
-        const a = chain.stations[i], b = chain.stations[i + 1];
-        const dA = dist[a], dB = dist[b];
-        if (dA === undefined || dB === undefined) { flush(); continue; }
-        const segT = Math.max(dA, dB);
-        if (segT > maxHours) { flush(); continue; }
-        const onRoute =
-          journeyRouteSet.has(a + "|" + b) ||
-          journeyRouteSet.has(b + "|" + a);
-        if (cur && cur.onRoute !== onRoute) flush();
-        if (!cur) cur = { stations: [a], times: [], onRoute, type: chain.type };
-        cur.stations.push(b);
-        cur.times.push(segT);
-      }
-      flush();
-    }
-    return out;
-  }, [chainedPolylines, dist, maxHours, journeyRouteSet, origin]);
-  // Journey halo chained the same way so the accent line on top of a
-  // multi-leg trip also reads as one continuous stroke.
-  const journeyHaloPaths = useMemo(() => {
-    if (!journey) return [];
-    const paths = [];
-    for (const sec of journey.sections) {
-      if (sec.kind !== "rail") continue;
-      // sec.nodes is already an ordered station list along the journey path.
-      paths.push(sec.nodes);
-    }
-    return paths;
-  }, [journey]);
-  // Disputed-area outline path data, projected once. The same string
-  // also drives a clipPath that suppresses the de-jure country border
-  // wherever it coincides with a disputed boundary (Abkhazia/SO,
-  // Donetsk/Luhansk, Crimea, etc.) — otherwise the user sees both the
-  // solid border and the dotted overlay stacked.
-  const disputedPathD = useMemo(() => {
-    if (!projection) return "";
-    return DISPUTED_LINES.map(area => area.rings.map(ring => {
-      if (!ring.length) return "";
-      return "M" + ring
-        .map((c, j) => (j === 0 ? "" : "L") + projection(c).join(","))
-        .join("") + "Z";
-    }).join(" ")).join(" ");
-  }, [projection]);
+  const hoverRef = useRef(null);
+  const onMove = (ev) => {
+    if (ev.buttons || R.current.interacting) return;
+    const i = pick(ev);
+    const id = i >= 0 ? i : null;
+    topRef.current.style.cursor = id != null ? "pointer" : "";
+    if (id !== hoverRef.current) { hoverRef.current = id; setHoverDest(id); }
+  };
+  const onLeave = () => { if (hoverRef.current != null) { hoverRef.current = null; setHoverDest(null); } };
+  const onClick = (ev) => {
+    const i = pick(ev);
+    if (i >= 0) onStationClick(i, ev);
+  };
 
   return (
-    <svg ref={svgRef} viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid meet" className="map-svg">
-      <g ref={zoomGroupRef} transform={`translate(${zoomT.x},${zoomT.y}) scale(${zoomT.k})`}>
-      {/* === paper / sea === */}
-      <defs>
-        <filter id="paper-noise" x="0" y="0" width="100%" height="100%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="3" />
-          <feColorMatrix values="0 0 0 0 0.16  0 0 0 0 0.12  0 0 0 0 0.05  0 0 0 0.08 0" />
-          <feComposite in2="SourceGraphic" operator="in" />
-        </filter>
-        <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-          <path d="M50,0 H0 V50" fill="none" stroke="var(--grid)" strokeWidth="0.5" />
-        </pattern>
-        <filter id="contour-blur" x="-30%" y="-30%" width="160%" height="160%">
-          <feGaussianBlur stdDeviation="14" />
-        </filter>
-        <filter id="contour-smooth" x="-5%" y="-5%" width="110%" height="110%">
-          <feGaussianBlur stdDeviation="1.2" />
-        </filter>
-        {/* Diagonal hatch for countries without passenger trains —
-            transparent background so the per-country region tint
-            underneath shows through (otherwise hatched countries lose
-            their regional grouping). */}
-        <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-          <line x1="0" y1="0" x2="0" y2="6" stroke="var(--border-line)" strokeWidth="0.9" strokeOpacity="0.55" />
-        </pattern>
-        <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
-          <stop offset="60%" stopColor="var(--sea)" stopOpacity="0" />
-          <stop offset="100%" stopColor="var(--ink)" stopOpacity="0.12" />
-        </radialGradient>
-      </defs>
-
-      {/* sea */}
-      <rect x="0" y="0" width={W} height={H} fill="var(--sea)" />
-      <rect x="0" y="0" width={W} height={H} fill="url(#grid)" />
-      <rect x="0" y="0" width={W} height={H} fill="url(#vignette)" pointerEvents="none" />
-
-      {/* === land (per-country so we can hatch rail-less ones) === */}
-      {world && pathGen && (
-        <g>
-          {/* Pass 1 — country fills (region tint or outside-Asia grey).
-              Stroke is applied here so every country gets an outline
-              including coastlines (world.borders is mesh-between-
-              countries only, which excludes coasts). */}
-          {world.features.map((feature, i) => {
-            const id = feature.id != null ? String(feature.id).padStart(3, "0") : "";
-            const name = feature.properties?.name || "";
-            const isAsia =
-              (id && ASIAN_COUNTRY_IDS.has(id)) || ASIA_NAMES.has(name);
-            const region = id && REGION_FILL[id];
-            const fill = isAsia
-              ? (regionsOn && region ? REGION_VAR[region] : "var(--land)")
-              : "var(--land-outside)";
-            return (
-              <path
-                key={"land-" + i}
-                d={pathGen(feature)}
-                fill={fill}
-                stroke="var(--border-line)"
-                strokeWidth="0.7"
-                strokeLinejoin="round"
-                strokeOpacity={isAsia ? 0.8 : 0.45}
-              />
-            );
-          })}
-          {/* Pass 2 — diagonal hatch on rail-less countries, drawn on
-              top of pass 1's regional tint so hatched countries keep
-              their grouping colour. */}
-          {world.features.map((feature, i) => {
-            const id = feature.id != null ? String(feature.id).padStart(3, "0") : "";
-            const name = feature.properties?.name || "";
-            const hatched =
-              (id && window.HATCH_COUNTRY_IDS && window.HATCH_COUNTRY_IDS.has(id)) ||
-              HATCH_NAMES.has(name);
-            if (!hatched) return null;
-            return (
-              <path
-                key={"hatch-" + i}
-                d={pathGen(feature)}
-                fill="url(#hatch)"
-                stroke="none"
-              />
-            );
-          })}
-          {/* Europe ↔ Asia continental divide — drawn from real
-              geojson (data_continents.js, derived from Natural Earth
-              geographic-region polygons) rather than a hand-curated
-              polyline. Russia keeps its full North Asia tint; the
-              divide just sits on top as a dashed reference line. */}
-          {continentDivideD && (
-            <path
-              d={continentDivideD}
-              fill="none"
-              stroke="var(--continent-line)"
-              strokeWidth="1.65"
-              strokeDasharray="4 3.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <title>Europe ↔ Asia continental boundary</title>
-            </path>
-          )}
-          {/* Disputed-area outlines — Natural Earth 10m disputed
-              polygons (see data_disputed.js). We paint a wider
-              land-coloured "eraser" stroke along the same path first
-              to wipe out any de-jure country border that coincides
-              with the disputed boundary (Abkhazia/SO north edge,
-              Donetsk/Luhansk east edge, Crimea coast, etc.) — the
-              earlier clip-path attempt failed because numerically the
-              border line sits *on* the polygon edge and clipping
-              treats edge points ambiguously. The dotted overlay then
-              draws on the freshly cleared track. */}
-          {/* Per-area eraser strokes — each in its host country's
-              regional tint when Regions is on, otherwise plain --land
-              so the stripe always blends with whatever the country fill
-              currently is. */}
-          {projection && DISPUTED_LINES.map((area, i) => {
-            const eraserColor = regionsOn
-              ? (DISPUTED_HOST_TINT[area.name] || "var(--land)")
-              : "var(--land)";
-            const d = area.rings.map(ring => {
-              if (!ring.length) return "";
-              return "M" + ring.map((c, j) => (j === 0 ? "" : "L") + projection(c).join(",")).join("") + "Z";
-            }).join(" ");
-            if (!d) return null;
-            return (
-              <path
-                key={`erase-${i}`}
-                d={d}
-                fill="none"
-                stroke={eraserColor}
-                strokeWidth="2.4"
-                strokeLinejoin="round"
-                strokeLinecap="round"
-                pointerEvents="none"
-              />
-            );
-          })}
-          {disputedPathD && (
-            <path
-              d={disputedPathD}
-              fill="none"
-              stroke="var(--border-line)"
-              strokeWidth="0.9"
-              strokeDasharray="2 2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeOpacity="0.75"
-            />
-          )}
-        </g>
-      )}
-
-      {/* sea labels & country labels moved to top-of-zoom-group layer further down */}
-
-      {/* === reachability isochrone contours (filled gradient bands + smooth curve outlines) === */}
-      {origin && contoursOn && contourLayers && (() => {
-        const { levels, dStrings } = contourLayers;
-        return (
-          <g className="reach-contours" style={{ pointerEvents: "none" }}>
-            {/* Filled gradient bands — largest threshold first, smaller on top.
-                Each band is rendered at low fill-opacity so the stack of fills
-                composites into a smooth gradient. */}
-            {[...levels].map((th, k) => {
-              const d = dStrings[k];
-              if (!d) return null;
-              return (
-                <path
-                  key={"fill-" + k}
-                  d={d}
-                  fill={timeColor(th, maxHours, theme)}
-                  fillOpacity={0.13}
-                  fillRule="nonzero"
-                  stroke="none"
-                  style={{ mixBlendMode: theme === "day" ? "multiply" : "screen" }}
-                />
-              );
-            }).reverse()}
-            {/* Outline strokes on top — strong nested rings, but skip
-                the outermost one (its jagged edge is unsightly; the fill
-                band gives the outer boundary instead). All strokes pulse
-                gently to read as a live network. */}
-            {levels.map((th, k) => {
-              if (k === levels.length - 1) return null; // skip outermost
-              const d = dStrings[k];
-              if (!d) return null;
-              return (
-                <path
-                  key={"iso-" + k}
-                  d={d}
-                  fill="none"
-                  stroke={timeColor(th, maxHours, theme)}
-                  strokeWidth={1.2}
-                  strokeOpacity={0.92}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="contour-line"
-                  style={{ animationDelay: `${k * -0.6}s` }}
-                >
-                  <title>{`Reach within ${fmtH(th)}`}</title>
-                </path>
-              );
-            })}
-          </g>
-        );
-      })()}
-
-      {/* === all routes (faint background) === */}
-      {/* Each named rail line is one continuous polyline so the
-          underlay reads as smooth track rather than dots-and-dashes
-          when zoomed in. */}
-      <g className="routes-bg">
-        {chainedPolylines.map((p, i) => {
-          let d = "";
-          for (let k = 0; k < p.stations.length; k++) {
-            const pt = ptById[p.stations[k]];
-            if (!pt) { d = ""; break; }
-            d += (k === 0 ? "M" : "L") + pt.x + "," + pt.y;
-          }
-          if (!d) return null;
-          return (
-            <path
-              key={i}
-              d={d}
-              fill="none"
-              stroke="var(--ink)"
-              strokeOpacity="0.10"
-              strokeWidth={p.type === "hsr" ? 1.6 : 0.9}
-              strokeLinejoin="round"
-              strokeLinecap="round"
-            />
-          );
-        })}
-      </g>
-
-      {/* === reachable colored routes === */}
-      {/* Drawn per-chain (rail-line group) and split into runs that
-          share on-route status, so a service renders as ONE smooth
-          polyline rather than a string of butt-jointed segments. The
-          run's representative arrival time (its far-end max) drives
-          both colour and stroke width. */}
-      {origin && !contoursOn && (
-        <g className="routes-fg">
-          {foregroundRuns.map((run, i) => {
-            let d = "";
-            for (let k = 0; k < run.stations.length; k++) {
-              const pt = ptById[run.stations[k]];
-              if (!pt) { d = ""; break; }
-              d += (k === 0 ? "M" : "L") + pt.x + "," + pt.y;
-            }
-            if (!d) return null;
-            const w = run.onRoute
-              ? 4.2
-              : run.type === "hsr"
-              ? lineWidthForTime(run.maxT, maxHours)
-              : lineWidthForTime(run.maxT, maxHours) * 0.55;
-            return (
-              <path
-                key={i}
-                d={d}
-                fill="none"
-                stroke={timeColor(run.maxT, maxHours, theme)}
-                strokeWidth={w}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                opacity={run.onRoute ? 1 : 0.95}
-              />
-            );
-          })}
-
-          {/* Selected-journey accent halo, also chained so a multi-
-              leg trip reads as one continuous line. */}
-          {journeyHaloPaths.map((nodes, i) => {
-            let d = "";
-            for (let k = 0; k < nodes.length; k++) {
-              const pt = ptById[nodes[k]];
-              if (!pt) { d = ""; break; }
-              d += (k === 0 ? "M" : "L") + pt.x + "," + pt.y;
-            }
-            if (!d) return null;
-            return (
-              <path
-                key={`halo-${i}`}
-                d={d}
-                fill="none"
-                stroke="var(--accent)"
-                strokeWidth="1.2"
-                strokeOpacity="0.85"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            );
-          })}
-        </g>
-      )}
-
-      {/* === bridge line(s) for disconnected destination === */}
-      {journey?.sections.filter(s => s.kind === "bridge").map((bridge, bi) => {
-        const a = ptById[bridge.from.id];
-        const b = ptById[bridge.to.id];
-        if (!a || !b) return null;
-        const midX = (a.x + b.x) / 2;
-        const midY = (a.y + b.y) / 2;
-        const dx = b.x - a.x;
-        const dy = b.y - a.y;
-        const len = Math.sqrt(dx * dx + dy * dy) || 1;
-        const nx = -dy / len;
-        const ny = dx / len;
-        const lx = midX + nx * 14;
-        const ly = midY + ny * 14;
-        return (
-          <g key={`bridge-${bi}`} className="bridge-group">
-            <line
-              x1={a.x} y1={a.y} x2={b.x} y2={b.y}
-              stroke="var(--accent)"
-              strokeOpacity="0.18"
-              strokeWidth="9"
-              strokeLinecap="round"
-              vectorEffect="non-scaling-stroke"
-            />
-            <line
-              x1={a.x} y1={a.y} x2={b.x} y2={b.y}
-              stroke="var(--accent)"
-              strokeWidth="1.6"
-              strokeDasharray="2 5"
-              strokeLinecap="round"
-              vectorEffect="non-scaling-stroke"
-            />
-            {/* endpoint circles + badge counter-scaled so they stay constant
-                size at any zoom — same trick the station dots use */}
-            <g transform={`translate(${a.x},${a.y}) scale(${1/zoomT.k})`}>
-              <circle r="6" fill="none" stroke="var(--accent)" strokeWidth="1.2" />
-            </g>
-            <g transform={`translate(${b.x},${b.y}) scale(${1/zoomT.k})`}>
-              <circle r="6" fill="none" stroke="var(--accent)" strokeWidth="1.2" strokeDasharray="2 2" />
-            </g>
-            <g transform={`translate(${lx},${ly}) scale(${1/zoomT.k})`}>
-              <rect x="-38" y="-9" width="76" height="18" rx="2"
-                    fill="var(--paper)" stroke="var(--accent)" strokeWidth="0.6"
-                    opacity="0.96" />
-              <text
-                x="0" y="3"
-                textAnchor="middle"
-                fontSize="10.5"
-                fontFamily="'DM Mono', monospace"
-                fill="var(--accent)"
-                fontWeight="500"
-                letterSpacing="0.5"
-              >{(bi+1)+"·"+fmtKm(bridge.km)}</text>
-            </g>
-          </g>
-        );
-      })}
-
-      {/* === stations === */}
-      <g className="stations">
-        {(() => {
-          // Per-render label collision grid. Scaled to current zoom so we
-          // get fewer labels when zoomed out (bigger cells) and more when
-          // zoomed in (smaller cells).
-          const cellSize = Math.max(28, 90 / zoomT.k);
-          const grid = new Map();
-          const ranked = stationPts.map(s => {
-            const reach = origin ? dist[s.id] : undefined;
-            const reachable = reach !== undefined && reach <= maxHours;
-            const isMaj = MAJOR_STATIONS.has(s.id);
-            const isOsm = s.id.startsWith("osm_");
-            const onRoute = journeyNodeSet.has(s.id);
-            let prio = 0;
-            if (s.id === origin)         prio = 1e6;
-            else if (s.id === selectedDest) prio = 9e5;
-            else if (onRoute)            prio = 8e5;
-            else if (s.id === hoverDest) prio = 7e5;
-            else if (isMaj && reachable) prio = 600;
-            else if (isMaj)              prio = 500;
-            else if (!isOsm && reachable) prio = 200 + (reach != null ? -reach : 0);
-            else if (!isOsm)             prio = 100;
-            else if (reachable)          prio =  50;
-            else                         prio =   5;
-            return { s, prio };
-          });
-          ranked.sort((a, b) => b.prio - a.prio);
-          const labelOK = new Set();
-          for (const { s } of ranked) {
-            const gx = Math.floor(s.x / cellSize);
-            const gy = Math.floor(s.y / cellSize);
-            const k = `${gx},${gy}`;
-            if (grid.has(k)) continue;
-            grid.set(k, s.id);
-            labelOK.add(s.id);
-          }
-
-          return stationPts.map(s => {
-          const reach = origin ? dist[s.id] : undefined;
-          const reachable = reach !== undefined && reach <= maxHours;
-          const isOrigin = s.id === origin;
-          const isHover = s.id === hoverDest;
-          const onRoutePath = journeyNodeSet.has(s.id);
-          const isSelDest = s.id === selectedDest;
-          const isMajor = MAJOR_STATIONS.has(s.id);
-          const isOsm = s.id.startsWith("osm_");
-          const isBridgeEnd = journey?.sections?.some(
-            sec => sec.kind === "bridge" &&
-              (sec.from.id === s.id || sec.to.id === s.id)
-          );
-
-          // Tiered visibility based on zoom level (zoomT.k).
-          const alwaysOn = isOrigin || isSelDest || isHover || onRoutePath ||
-                           isBridgeEnd || isMajor;
-          let dotOpacityScale;
-          if (alwaysOn) {
-            dotOpacityScale = 1;
-          } else if (!isOsm) {
-            const t = (zoomT.k - 0.9) / 0.4;
-            dotOpacityScale = Math.max(0, Math.min(1, t));
-          } else {
-            // OSM dots visible from default zoom but tiny & faint, so the
-            // user can see the reach-network density without crowding.
-            const t = (zoomT.k - 0.8) / 0.5;
-            dotOpacityScale = Math.max(0.35, Math.min(1, t));
-          }
-          if (dotOpacityScale <= 0.01) return null;
-
-          let dotColor = "var(--ink-2)";
-          let dotOpacity = origin ? 0.25 : 0.85;
-          if (origin) {
-            if (isOrigin) dotColor = "var(--accent)";
-            else if (reachable) {
-              dotColor = timeColor(reach, maxHours, theme);
-              dotOpacity = 1;
-            } else dotOpacity = 0.12;
-          }
-          dotOpacity *= dotOpacityScale;
-
-          const r0 = isOrigin ? 7 : (isMajor ? 3.6 : reachable ? (isOsm ? 1.8 : 2.8) : (isOsm ? 1.2 : 2.0));
-
-          return (
-            <g
-              key={s.id}
-              transform={`translate(${s.x},${s.y}) scale(${1/zoomT.k})`}
-              className="station"
-              style={{ cursor: "pointer" }}
-              onMouseEnter={() => setHoverDest(s.id)}
-              onMouseLeave={() => setHoverDest(null)}
-              onClick={(e) => {
-                // Alt/shift always sets origin
-                if (e.altKey || e.shiftKey || !origin) {
-                  setOrigin(s.id);
-                  setSelectedDest(null);
-                  return;
-                }
-                if (s.id === origin) return; // clicking origin: no-op
-                if (selectedDest) {
-                  // Already have origin + destination pair. Third click → new origin.
-                  setOrigin(s.id);
-                  setSelectedDest(null);
-                } else {
-                  // Just have origin. Second click → set destination.
-                  setSelectedDest(s.id);
-                }
-              }}
-            >
-              {isOrigin && (
-                <g>
-                  <circle r="14" fill="none" stroke="var(--accent)" strokeOpacity="0.4" strokeWidth="0.6">
-                    <animate attributeName="r" values="10;22;10" dur="3.2s" repeatCount="indefinite" />
-                    <animate attributeName="stroke-opacity" values="0.45;0;0.45" dur="3.2s" repeatCount="indefinite" />
-                  </circle>
-                  <circle r="9" fill="none" stroke="var(--accent)" strokeWidth="1.2" />
-                </g>
-              )}
-              {onRoutePath && !isOrigin && (
-                <circle r="6" fill="none" stroke="var(--accent)" strokeOpacity="0.9" strokeWidth="1.2" />
-              )}
-              <circle
-                r={r0}
-                fill={dotColor}
-                fillOpacity={dotOpacity}
-                stroke={isOrigin ? "var(--paper)" : "var(--paper)"}
-                strokeWidth={isOrigin ? 1.4 : 0.8}
-              />
-              {(() => {
-                // Label gets shown only when (a) always-on, (b) reachable
-                // and major hub, OR (c) the collision grid above selected
-                // this station as the representative in its cell.
-                let labelVis;
-                if (isOrigin || isSelDest || isHover || onRoutePath || isBridgeEnd) {
-                  labelVis = 1;
-                } else if (isMajor && reachable) {
-                  labelVis = 1;
-                } else if (labelOK.has(s.id)) {
-                  // Fade based on zoom for non-major collision winners
-                  const tier = isOsm ? 2.0 : 1.3;
-                  labelVis = Math.max(0, Math.min(1, (zoomT.k - tier) / 0.5));
-                } else {
-                  labelVis = 0;
-                }
-                if (labelVis <= 0.02) return null;
-                const baseOp = isHover || isOrigin || isSelDest || onRoutePath ? 1 : 0.85;
-                return (
-                  <text
-                    x={r0 + 4}
-                    y={3}
-                    fontSize={isOrigin || isSelDest ? 13 : 10.5}
-                    fontFamily="'DM Sans', sans-serif"
-                    fontWeight={isOrigin || isSelDest ? 700 : isMajor ? 600 : 500}
-                    fill="var(--ink)"
-                    opacity={baseOp * labelVis}
-                    // pointerEvents enabled so the label is clickable —
-                    // bubbles up to the parent <g>'s onClick which sets
-                    // origin / destination. cursor: pointer inherits
-                    // from the parent group.
-                    style={{ pointerEvents: "auto", paintOrder: "stroke", transition: "opacity 0.25s ease" }}
-                    stroke="var(--paper)"
-                    strokeWidth="3"
-                    strokeOpacity={0.9 * labelVis}
-                    strokeLinejoin="round"
-                  >{s.name}</text>
-                );
-              })()}
-            </g>
-          );
-        });
-        })()}
-      </g>
-
-      </g>
-      <g className="labels-on-top" style={{ pointerEvents: "none" }}>
-        {showSeaLabels && SEA_LABELS.map((l, i) => {
-          const [zx, zy] = projection([l.lng, l.lat]);
-          return (
-            <text
-              key={"sea-" + i}
-              x={zx * zoomT.k + zoomT.x}
-              y={zy * zoomT.k + zoomT.y}
-              textAnchor="middle"
-              fontSize={l.size}
-              fontFamily="'Space Grotesk', 'DM Sans', sans-serif"
-              fontStyle={l.italic ? "italic" : "normal"}
-              fill="var(--ink-2)"
-              opacity="0.55"
-              letterSpacing="3"
-            >{l.text}</text>
-          );
-        })}
-        {showCountryLabels && COUNTRY_LABELS.map((l, i) => {
-          const [zx, zy] = projection([l.lng, l.lat]);
-          return (
-            <text
-              key={"ctry-" + i}
-              x={zx * zoomT.k + zoomT.x}
-              y={zy * zoomT.k + zoomT.y}
-              textAnchor="middle"
-              fontSize={l.size}
-              fontFamily="'Space Grotesk', 'DM Sans', sans-serif"
-              fontWeight="500"
-              fill="var(--ink)"
-              opacity={l.size > 22 ? 0.34 : 0.5}
-              letterSpacing={l.ls || (l.size > 24 ? 12 : 4)}
-            >{l.text}</text>
-          );
-        })}
-      </g>
-      {/* ASIA / EUROPE callouts tiled along the entire divide line —
-          drawn LAST so they sit on top of every other layer (routes,
-          stations, country labels). Bold with a paper-coloured stroke
-          to stay legible against any underlying tint. */}
-      {zoomT.k > 1.4 && continentLabelAnchors.length > 0 && (
-        <g className="continent-labels" style={{ pointerEvents: "none" }}>
-          {continentLabelAnchors.map((a, i) => {
-            const sx = a.baseX * zoomT.k + zoomT.x;
-            const sy = a.baseY * zoomT.k + zoomT.y;
-            const OFFSET = 22; // px from the divide line
-            const eX = sx + a.ePerpX * OFFSET;
-            const eY = sy + a.ePerpY * OFFSET;
-            const aX = sx + a.aPerpX * OFFSET;
-            const aY = sy + a.aPerpY * OFFSET;
-            const fade = Math.max(0, Math.min(1, (zoomT.k - 1.4) / 0.6));
-            const common = {
-              textAnchor: "middle",
-              dominantBaseline: "middle",
-              fontSize: 10,
-              fontFamily: "'Space Grotesk', 'DM Sans', sans-serif",
-              fontStyle: "italic",
-              fontWeight: 700,
-              fill: "var(--ink)",
-              stroke: "var(--paper)",
-              strokeWidth: 3,
-              strokeLinejoin: "round",
-              paintOrder: "stroke",
-              letterSpacing: 4,
-            };
-            return (
-              <Fragment key={"cont-" + i}>
-                <text
-                  {...common}
-                  x={eX}
-                  y={eY}
-                  opacity={fade}
-                  transform={`rotate(${a.angleDeg} ${eX} ${eY})`}
-                >EUROPE</text>
-                <text
-                  {...common}
-                  x={aX}
-                  y={aY}
-                  opacity={fade}
-                  transform={`rotate(${a.angleDeg} ${aX} ${aY})`}
-                >ASIA</text>
-              </Fragment>
-            );
-          })}
-        </g>
-      )}
-    </svg>
+    <div className="map-wrap" ref={wrapRef}>
+      <canvas className="map-canvas" ref={baseRef} aria-hidden="true" />
+      <canvas className="map-canvas" ref={midRef} aria-hidden="true" />
+      <canvas className="map-canvas map-top" ref={topRef} role="img"
+              aria-label="Map of the rail network across Asia, coloured by travel time from the origin"
+              onPointerDown={(ev) => { touchRef.current = ev.pointerType !== "mouse"; }}
+              onMouseMove={onMove} onMouseLeave={onLeave} onClick={onClick} />
+    </div>
   );
+});
+
+// letter-spaced text (canvas letterSpacing is not everywhere yet)
+function drawSpaced(ctx, text, x, y, spacing, stroke = false) {
+  const align = ctx.textAlign;
+  const widths = [...text].map(ch => ctx.measureText(ch).width);
+  const total = widths.reduce((a, b) => a + b, 0) + spacing * (text.length - 1);
+  let cx = align === "center" ? x - total / 2 : align === "right" ? x - total : x;
+  ctx.textAlign = "left";
+  [...text].forEach((ch, i) => {
+    if (stroke) ctx.strokeText(ch, cx, y); else ctx.fillText(ch, cx, y);
+    cx += widths[i] + spacing;
+  });
+  ctx.textAlign = align;
 }
 
 // =============================================================
@@ -2016,12 +1629,16 @@ function Masthead() {
   );
 }
 
-// Minimalist origin picker — replaces the native <select> with a
-// button + popover. Native selects don't allow custom styling of the
-// dropdown panel (only the closed-state trigger), and with thousands
-// of stations grouped by region the native list reads as a wall of
-// text. This version gives us a search field, subtle country headers,
-// and a tight visual palette consistent with the rest of the UI.
+const SEARCH_KEY = STATIONS.map(s => (s.name + " " + s.native).toLowerCase());
+const HUB_LIST = (() => {
+  const out = [];
+  for (let i = 0; i < NS; i++) if (PROJ.hub[i]) out.push(i);
+  return out;
+})();
+const REGION_OF = {};
+for (const r of window.REGIONS) for (const c of r.codes) REGION_OF[c] = r.name;
+
+// Origin picker: hubs when the search is empty, otherwise the best matches.
 function StationSelect({ value, onChange }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -2030,14 +1647,11 @@ function StationSelect({ value, onChange }) {
 
   useEffect(() => {
     if (!open) return;
-    const onDown = (e) => {
-      if (rootRef.current && !rootRef.current.contains(e.target)) setOpen(false);
-    };
+    const onDown = (e) => { if (rootRef.current && !rootRef.current.contains(e.target)) setOpen(false); };
     const onKey = (e) => { if (e.key === "Escape") setOpen(false); };
     document.addEventListener("mousedown", onDown);
     document.addEventListener("keydown", onKey);
-    // Defer focus a frame so the popover is mounted before we grab it.
-    const t = setTimeout(() => inputRef.current?.focus(), 0);
+    const t = setTimeout(() => inputRef.current && inputRef.current.focus(), 0);
     return () => {
       document.removeEventListener("mousedown", onDown);
       document.removeEventListener("keydown", onKey);
@@ -2046,53 +1660,57 @@ function StationSelect({ value, onChange }) {
   }, [open]);
 
   const groups = useMemo(() => {
+    if (!open) return [];
     const q = query.toLowerCase().trim();
-    return window.REGIONS.flatMap(region =>
-      region.codes.flatMap(code => {
-        const stns = STATIONS
-          .filter(s => s.country === code)
-          .filter(s => {
-            if (!q) return true;
-            return s.name.toLowerCase().includes(q) ||
-                   (s.native || "").toLowerCase().includes(q);
-          })
-          .sort((a, b) => a.name.localeCompare(b.name));
-        if (stns.length === 0) return [];
-        return [{ code, country: COUNTRY_NAMES[code], region: region.name, stns }];
-      })
-    );
-  }, [query]);
+    let ids;
+    if (!q) ids = HUB_LIST;
+    else {
+      const hits = [];
+      for (let i = 0; i < NS; i++) {
+        const at = SEARCH_KEY[i].indexOf(q);
+        if (at < 0) continue;
+        hits.push([(at === 0 ? 1000 : 0) + Math.min(STATIONS[i].rank, 99) + (STATIONS[i].asia ? 0 : -500), i]);
+      }
+      hits.sort((a, b) => b[0] - a[0]);
+      ids = hits.slice(0, 150).map(h => h[1]);
+    }
+    const byCc = new Map();
+    for (const i of ids) {
+      const cc = STATIONS[i].country;
+      (byCc.get(cc) || byCc.set(cc, []).get(cc)).push(i);
+    }
+    const out = [];
+    const order = window.REGIONS.flatMap(r => r.codes);
+    const ccs = [...byCc.keys()].sort((a, b) => {
+      const ia = order.indexOf(a), ib = order.indexOf(b);
+      return (ia < 0 ? 999 : ia) - (ib < 0 ? 999 : ib);
+    });
+    for (const cc of ccs) {
+      const stns = byCc.get(cc).map(i => STATIONS[i]);
+      if (!q) stns.sort((a, b) => a.name.localeCompare(b.name));
+      out.push({ code: cc, country: countryName(cc), region: REGION_OF[cc] || "", stns });
+    }
+    return out;
+  }, [query, open]);
 
-  const selected = value ? STATIONS_BY_ID[value] : null;
+  const selected = value != null ? STATIONS[value] : null;
   const triggerLabel = selected
     ? selected.name + (nativeOrNull(selected.name, selected.native) ? " · " + nativeOrNull(selected.name, selected.native) : "")
     : "Select origin…";
 
   return (
     <div className={`mselect ${open ? "open" : ""}`} ref={rootRef}>
-      <button
-        type="button"
-        className="mselect-trigger"
-        onClick={() => setOpen(v => !v)}
-        aria-expanded={open}
-      >
+      <button type="button" className="mselect-trigger" onClick={() => setOpen(v => !v)} aria-expanded={open}>
         <span className="mselect-value">{triggerLabel}</span>
         <span className="mselect-caret" aria-hidden="true" />
       </button>
       {open && (
         <div className="mselect-pop">
-          <input
-            ref={inputRef}
-            type="text"
-            className="mselect-search"
-            value={query}
-            onChange={e => setQuery(e.target.value)}
-            placeholder="Search stations…"
-          />
+          <input ref={inputRef} type="text" className="mselect-search" value={query}
+                 onChange={e => setQuery(e.target.value)}
+                 placeholder={`Search ${NS.toLocaleString("en-US")} stations…`} />
           <div className="mselect-list">
-            {groups.length === 0 && (
-              <div className="mselect-empty">No matches</div>
-            )}
+            {groups.length === 0 && <div className="mselect-empty">No matches</div>}
             {groups.map(g => (
               <div key={g.code} className="mselect-group">
                 <div className="mselect-group-head">
@@ -2101,18 +1719,9 @@ function StationSelect({ value, onChange }) {
                 </div>
                 {g.stns.map(s => {
                   const nat = nativeOrNull(s.name, s.native);
-                  const sel = s.id === value;
                   return (
-                    <button
-                      type="button"
-                      key={s.id}
-                      className={`mselect-item ${sel ? "sel" : ""}`}
-                      onClick={() => {
-                        onChange(s.id);
-                        setOpen(false);
-                        setQuery("");
-                      }}
-                    >
+                    <button type="button" key={s.id} className={`mselect-item ${s.id === value ? "sel" : ""}`}
+                            onClick={() => { onChange(s.id); setOpen(false); setQuery(""); }}>
                       <span className="mselect-item-name">{s.name}</span>
                       {nat && <span className="mselect-item-nat">{nat}</span>}
                     </button>
@@ -2127,105 +1736,104 @@ function StationSelect({ value, onChange }) {
   );
 }
 
-function ControlPanel({
-  origin, setOrigin, hours, setHours, maxHoursBound,
-  hsrOnly, setHsrOnly, theme, setTheme,
-  selectedDest, setSelectedDest,
-  contoursOn, setContoursOn,
-  regionsOn, setRegionsOn,
-}) {
+const LegendDashes = () => (
+  <div className="legend-dashes">
+    <div><span className="dash hsr" /> High-speed</div>
+    <div><span className="dash conv" /> Conventional</div>
+    <div><span className="dash ferry" /> Ferry</div>
+    <div><span className="dash hatched" /> No passenger rail</div>
+    <div><span className="dash bridge" /> Disconnected gap</div>
+  </div>
+);
+
+function BudgetSlider({ hours, setHours, maxHoursBound, theme }) {
+  return (
+    <>
+      <input type="range" min={1} max={maxHoursBound} step={0.5} value={hours}
+             onChange={e => setHours(parseFloat(e.target.value))} className="slider"
+             aria-label="Time budget in hours"
+             style={{ background: makeRampGradient(maxHoursBound, theme) }} />
+      <div className="slider-ticks">
+        {[1, 12, 24, 36, 48].filter(t => t <= maxHoursBound).map(t => <span key={t}>{t}h</span>)}
+      </div>
+    </>
+  );
+}
+
+// The four network switches + region key (desktop panel III; mobile "Network" tab)
+function NetworkToggles({ hsrOnly, setHsrOnly, ferriesOn, setFerriesOn, theme, setTheme,
+  contoursOn, setContoursOn, regionsOn, setRegionsOn }) {
+  return (
+    <>
+      <div className="toggle-row">
+        <button className="toggle on toggle-swap" onClick={() => setHsrOnly(v => !v)}>
+          {hsrOnly ? <HsrTrainIcon /> : <ConvTrainIcon />}
+          {hsrOnly ? "HSR Only" : "All Trains"}
+        </button>
+        <button className="toggle on toggle-swap" onClick={() => setFerriesOn(v => !v)}
+                aria-pressed={ferriesOn} title="Include scheduled ferries (and the drive from pier to station)">
+          <FerryIcon />{ferriesOn ? "+ Ferries" : "No Ferries"}
+        </button>
+      </div>
+      <div className="toggle-row" style={{ marginTop: 8 }}>
+        <button className="toggle on toggle-swap" onClick={() => setRegionsOn(v => !v)}>
+          {regionsOn ? "◑ Regional" : "○ Continental"}
+        </button>
+        <button className="toggle on toggle-swap" onClick={() => setTheme(t => t === "day" ? "night" : "day")}>
+          {theme === "day" ? "☀ Day" : "☾ Night"}
+        </button>
+      </div>
+      <div className="toggle-row" style={{ marginTop: 8 }}>
+        <button className="toggle on toggle-swap" onClick={() => setContoursOn(v => !v)}>
+          {contoursOn ? "◉ Contours" : "━ Lines"}
+        </button>
+      </div>
+      <div className={`legend-regions-wrap ${regionsOn ? "show" : ""}`}>
+        <div className="legend-regions">
+          <div><span className="swatch" style={{ background: "var(--region-north)" }} /> North Asia</div>
+          <div><span className="swatch" style={{ background: "var(--region-east)" }} /> East Asia</div>
+          <div><span className="swatch" style={{ background: "var(--region-southeast)" }} /> Southeast Asia</div>
+          <div><span className="swatch" style={{ background: "var(--region-south)" }} /> South Asia</div>
+          <div><span className="swatch" style={{ background: "var(--region-central)" }} /> Central Asia</div>
+          <div><span className="swatch" style={{ background: "var(--region-west)" }} /> West Asia</div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+const ControlPanel = memo(function ControlPanel(props) {
+  const { origin, setOrigin, hours, setHours, maxHoursBound, theme, setSelectedDest } = props;
   return (
     <div className="panel control-panel">
       <div className="panel-head">
         <span className="panel-num">I.</span>
         <span className="panel-title">Origin</span>
       </div>
-      <StationSelect
-        value={origin}
-        onChange={(id) => { setOrigin(id); setSelectedDest(null); }}
-      />
+      <StationSelect value={origin} onChange={(id) => { setOrigin(id); setSelectedDest(null); }} />
       <div className="hint">
         Click a station to set as origin · click a second to draw the
         route · click a third to start over.
       </div>
 
-      <div className="panel-head" style={{marginTop: 22}}>
+      <div className="panel-head" style={{ marginTop: 22 }}>
         <span className="panel-num">II.</span>
         <span className="panel-title">Time budget</span>
         <span className="panel-value">{fmtH(hours)}</span>
       </div>
       <div className="slider-wrap">
-        <input
-          type="range" min={1} max={maxHoursBound} step={0.5}
-          value={hours}
-          onChange={e => setHours(parseFloat(e.target.value))}
-          className="slider"
-          style={{ background: makeRampGradient(maxHoursBound, theme) }}
-        />
-        <div className="slider-ticks">
-          {[1, 12, 24, 36, 48].filter(t => t <= maxHoursBound).map(t => (
-            <span key={t}>{t}h</span>
-          ))}
-        </div>
-        {/* Line-type legend folded into the Time-budget section. The
-            slider track already carries the time-colour ramp, so a
-            separate gradient bar would be redundant. */}
-        <div className="legend-dashes">
-          <div><span className="dash hsr"/> High-speed</div>
-          <div><span className="dash conv"/> Conventional</div>
-          <div><span className="dash hatched"/> No passenger rail</div>
-          <div><span className="dash bridge"/> Disconnected gap</div>
-        </div>
+        <BudgetSlider hours={hours} setHours={setHours} maxHoursBound={maxHoursBound} theme={theme} />
+        <LegendDashes />
       </div>
 
-      <div className="panel-head" style={{marginTop: 22}}>
+      <div className="panel-head" style={{ marginTop: 22 }}>
         <span className="panel-num">III.</span>
         <span className="panel-title">Network</span>
       </div>
-      {/* Four binary controls, laid out 2×2. Each pill shows its
-          current state; clicking flips. Train glyphs distinguish
-          conventional (🚆) from HSR (🚄); the rest use simple geometric
-          state cues. */}
-      <div className="toggle-row">
-        <button
-          className="toggle on toggle-swap"
-          onClick={() => setHsrOnly(v => !v)}
-        >
-          {hsrOnly ? <HsrTrainIcon /> : <ConvTrainIcon />}
-          {hsrOnly ? "HSR Only" : "All Trains"}
-        </button>
-        <button
-          className="toggle on toggle-swap"
-          onClick={() => setRegionsOn(v => !v)}
-        >{regionsOn ? "◑ Regional" : "○ Continental"}</button>
-      </div>
-      <div className="toggle-row" style={{marginTop: 8}}>
-        <button
-          className="toggle on toggle-swap"
-          onClick={() => setTheme(t => t === "day" ? "night" : "day")}
-        >{theme === "day" ? "☀ Day" : "☾ Night"}</button>
-        <button
-          className="toggle on toggle-swap"
-          onClick={() => setContoursOn(v => !v)}
-        >{contoursOn ? "◉ Contours" : "━ Lines"}</button>
-      </div>
-      {/* Sub-region tint key — appears below the Network section
-          (not above) so the Network buttons stay anchored. Always
-          mounted; the .show class toggles a max-height + opacity
-          transition so it slides in/out instead of snapping. */}
-      <div className={`legend-regions-wrap ${regionsOn ? "show" : ""}`}>
-        <div className="legend-regions">
-          <div><span className="swatch" style={{background:"var(--region-north)"}} /> North Asia</div>
-          <div><span className="swatch" style={{background:"var(--region-east)"}} /> East Asia</div>
-          <div><span className="swatch" style={{background:"var(--region-southeast)"}} /> Southeast Asia</div>
-          <div><span className="swatch" style={{background:"var(--region-south)"}} /> South Asia</div>
-          <div><span className="swatch" style={{background:"var(--region-central)"}} /> Central Asia</div>
-          <div><span className="swatch" style={{background:"var(--region-west)"}} /> West Asia</div>
-        </div>
-      </div>
+      <NetworkToggles {...props} />
     </div>
   );
-}
+});
 
 function makeRampGradient(maxH, theme) {
   const stops = [];
@@ -2236,173 +1844,157 @@ function makeRampGradient(maxH, theme) {
   return `linear-gradient(90deg, ${stops.join(", ")})`;
 }
 
-function ReachableList({
-  origin, hours, hsrOnly, selectedDest, setSelectedDest, theme,
-  setHoverDest, hoverDest,
-}) {
-  const adj = useMemo(() => buildAdjacency(ROUTES, hsrOnly), [hsrOnly]);
-  const { dist, prev, prevRoute } = useMemo(
-    () => origin ? dijkstra(adj, origin) : { dist: {}, prev: {}, prevRoute: {} },
-    [adj, origin]
+const SHOW_ROWS = 200;
+
+function StationRow({ s, right, dotStyle, cls, isSel, isHov, setHoverDest, setSelectedDest }) {
+  const nat = nativeOrNull(s.name, s.native);
+  return (
+    <div className={`list-row ${cls} ${isSel ? "sel" : ""} ${isHov ? "hov" : ""}`}
+         onMouseEnter={() => setHoverDest(s.id)} onMouseLeave={() => setHoverDest(null)}
+         onClick={() => setSelectedDest(isSel ? null : s.id)}>
+      <span className={`list-dot ${dotStyle ? "" : cls === "broken" ? "list-dot-broken" : "list-dot-empty"}`} style={dotStyle} />
+      <div className="list-name">
+        <div className="lr-name">{s.pier ? "⛴ " : ""}{s.name}{nat ? <span className="lr-cn"> · {nat}</span> : null}</div>
+        <div className="lr-meta">{countryName(s.country)}</div>
+      </div>
+      <div className={`list-time ${cls === "broken" ? "list-km" : ""}`}>{right}</div>
+    </div>
   );
+}
 
-  const origStation = origin ? STATIONS_BY_ID[origin] : null;
-
-  // Memoise the three lists. Without this every hover/zoom/theme tick
-  // re-walks all 4,000+ stations and reruns gcDist for the disconnected
-  // set — and HSR-only mode disconnects ~99 % of the network.
-  const { items, overBudget, disconnected } = useMemo(() => {
-    if (!origStation) return { items: [], overBudget: [], disconnected: [] };
-    const items = [], over = [], disc = [];
-    for (const s of STATIONS) {
-      if (s.id === origin) continue;
-      const t = dist[s.id];
-      if (t === undefined) {
-        disc.push({ s, km: gcDist(origStation, s) });
-      } else if (t <= hours) {
-        items.push({ s, t });
-      } else {
-        over.push({ s, t });
-      }
+const ReachableList = memo(function ReachableList({
+  origin, hours, sp, selectedDest, setSelectedDest, theme, setHoverDest, hoverDest,
+}) {
+  const origStation = origin != null ? STATIONS[origin] : null;
+  // sorted once per origin / network; the slider only moves a cut-off
+  const sorted = useMemo(() => {
+    if (!sp || origin == null) return null;
+    const reach = [], disc = [];
+    for (let i = 0; i < NS; i++) {
+      if (i === origin || !STATIONS[i].asia) continue;
+      if (isFinite(sp.dist[i])) reach.push(i); else disc.push(i);
     }
-    items.sort((a, b) => a.t - b.t);
-    over.sort((a, b) => a.t - b.t);
-    disc.sort((a, b) => a.km - b.km);
-    return { items, overBudget: over, disconnected: disc };
-  }, [origStation, origin, dist, hours]);
+    reach.sort((a, b) => sp.dist[a] - sp.dist[b]);
+    const o = STATIONS[origin];
+    const dk = new Float64Array(NS);
+    for (const i of disc) dk[i] = gcDist(o, STATIONS[i]);
+    disc.sort((a, b) => dk[a] - dk[b]);
+    return { reach, disc, dk };
+  }, [sp, origin]);
 
-  if (!origin) return null;
+  const cut = useMemo(() => {
+    if (!sorted) return 0;
+    let lo = 0, hi = sorted.reach.length;
+    while (lo < hi) { const mid = (lo + hi) >> 1; if (sp.dist[sorted.reach[mid]] <= hours) lo = mid + 1; else hi = mid; }
+    return lo;
+  }, [sorted, hours, sp]);
+
+  if (!origStation || !sorted) return null;
+  const items = sorted.reach.slice(0, Math.min(cut, SHOW_ROWS));
+  const over = sorted.reach.slice(cut, cut + 8);
+  const overN = sorted.reach.length - cut;
+  const rowProps = { setHoverDest, setSelectedDest };
 
   return (
     <div className="panel list-panel">
       <div className="panel-head">
         <span className="panel-num">IV.</span>
         <span className="panel-title">Reachable</span>
-        <span className="panel-value">{items.length} stations</span>
+        <span className="panel-value">{cut.toLocaleString("en-US")} stations</span>
       </div>
       <div className="list-sub">
         from <strong>{origStation.name}</strong>{nativeOrNull(origStation.name, origStation.native) ? ` · ${nativeOrNull(origStation.name, origStation.native)}` : ""} within {fmtH(hours)}
       </div>
-
       <div className="list-scroll">
-        {items.length === 0 && <div className="empty">No stations within this time budget.</div>}
-        {items.map(({s, t}) => {
-          const isSel = s.id === selectedDest;
-          const isHov = s.id === hoverDest;
-          return (
-            <div
-              key={s.id}
-              className={`list-row ${isSel ? "sel" : ""} ${isHov ? "hov" : ""}`}
-              onMouseEnter={() => setHoverDest(s.id)}
-              onMouseLeave={() => setHoverDest(null)}
-              onClick={() => setSelectedDest(isSel ? null : s.id)}
-            >
-              <span className="list-dot" style={{ background: timeColor(t, hours, theme) }} />
-              <div className="list-name">
-                <div className="lr-name">{s.name}{nativeOrNull(s.name, s.native) ? <span className="lr-cn"> · {nativeOrNull(s.name, s.native)}</span> : null}</div>
-                <div className="lr-meta">{COUNTRY_NAMES[s.country]}</div>
-              </div>
-              <div className="list-time">{fmtH(t)}</div>
-            </div>
-          );
-        })}
+        {cut === 0 && <div className="empty">No stations within this time budget.</div>}
+        {items.map(i => (
+          <StationRow key={i} s={STATIONS[i]} cls="" right={fmtH(sp.dist[i])}
+                      dotStyle={{ background: timeColor(sp.dist[i], hours, theme) }}
+                      isSel={i === selectedDest} isHov={i === hoverDest} {...rowProps} />
+        ))}
+        {cut > SHOW_ROWS && <div className="ls-more">+ {(cut - SHOW_ROWS).toLocaleString("en-US")} more within {fmtH(hours)} — zoom the map to explore</div>}
 
-        {overBudget.length > 0 && (
+        {overN > 0 && (
           <div className="list-section">
             <div className="ls-head">
               <span className="ls-dot ls-dot-amber" />
-              <span>Over budget · {overBudget.length}</span>
+              <span>Over budget · {overN.toLocaleString("en-US")}</span>
               <span className="ls-hint">extend the slider to reach</span>
             </div>
-            {overBudget.slice(0, 8).map(({s, t}) => {
-              const isSel = s.id === selectedDest;
-              const isHov = s.id === hoverDest;
-              return (
-                <div
-                  key={s.id}
-                  className={`list-row dim ${isSel ? "sel" : ""} ${isHov ? "hov" : ""}`}
-                  onMouseEnter={() => setHoverDest(s.id)}
-                  onMouseLeave={() => setHoverDest(null)}
-                  onClick={() => setSelectedDest(isSel ? null : s.id)}
-                >
-                  <span className="list-dot list-dot-empty" />
-                  <div className="list-name">
-                    <div className="lr-name">{s.name}{nativeOrNull(s.name, s.native) ? <span className="lr-cn"> · {nativeOrNull(s.name, s.native)}</span> : null}</div>
-                    <div className="lr-meta">{COUNTRY_NAMES[s.country]}</div>
-                  </div>
-                  <div className="list-time">{fmtH(t)}</div>
-                </div>
-              );
-            })}
-            {overBudget.length > 8 && (
-              <div className="ls-more">+ {overBudget.length - 8} more beyond {fmtH(hours)}</div>
-            )}
+            {over.map(i => (
+              <StationRow key={i} s={STATIONS[i]} cls="dim" right={fmtH(sp.dist[i])}
+                          isSel={i === selectedDest} isHov={i === hoverDest} {...rowProps} />
+            ))}
+            {overN > 8 && <div className="ls-more">+ {(overN - 8).toLocaleString("en-US")} more beyond {fmtH(hours)}</div>}
           </div>
         )}
 
-        {disconnected.length > 0 && (
+        {sorted.disc.length > 0 && (
           <div className="list-section">
             <div className="ls-head">
               <span className="ls-dot ls-dot-broken" />
-              <span>Disconnected · {disconnected.length}</span>
+              <span>Disconnected · {sorted.disc.length.toLocaleString("en-US")}</span>
               <span className="ls-hint">no rail path — gap from origin</span>
             </div>
-            {disconnected.slice(0, 40).map(({s, km}) => {
-              const isSel = s.id === selectedDest;
-              const isHov = s.id === hoverDest;
-              return (
-                <div
-                  key={s.id}
-                  className={`list-row broken ${isSel ? "sel" : ""} ${isHov ? "hov" : ""}`}
-                  onMouseEnter={() => setHoverDest(s.id)}
-                  onMouseLeave={() => setHoverDest(null)}
-                  onClick={() => setSelectedDest(isSel ? null : s.id)}
-                >
-                  <span className="list-dot list-dot-broken" />
-                  <div className="list-name">
-                    <div className="lr-name">{s.name}{nativeOrNull(s.name, s.native) ? <span className="lr-cn"> · {nativeOrNull(s.name, s.native)}</span> : null}</div>
-                    <div className="lr-meta">{COUNTRY_NAMES[s.country]}</div>
-                  </div>
-                  <div className="list-time list-km">{fmtKm(km)}</div>
-                </div>
-              );
-            })}
-            {disconnected.length > 40 && (
-              <div className="ls-more">+ {disconnected.length - 40} more disconnected stations</div>
+            {sorted.disc.slice(0, 40).map(i => (
+              <StationRow key={i} s={STATIONS[i]} cls="broken" right={fmtKm(sorted.dk[i])}
+                          isSel={i === selectedDest} isHov={i === hoverDest} {...rowProps} />
+            ))}
+            {sorted.disc.length > 40 && (
+              <div className="ls-more">+ {(sorted.disc.length - 40).toLocaleString("en-US")} more disconnected stations</div>
             )}
           </div>
         )}
       </div>
-      <div className="list-foot">
-        Click any row to draw the route or bridge. Tap again to clear.
-      </div>
+      <div className="list-foot">Click any row to draw the route or bridge. Tap again to clear.</div>
     </div>
   );
+});
+
+function legBadge(leg) {
+  if (leg.kind === "ferry") return { cls: "ferry", text: "Ferry" };
+  if (leg.kind === "drive") return { cls: "link", text: "Drive" };
+  if (leg.kind === "walk") return { cls: "link", text: "Walk" };
+  if (leg.kind === "city") return { cls: "link", text: "Transfer" };
+  const L = LINES[leg.line];
+  return L && L.kind === "h" ? { cls: "hsr", text: "HSR" } : { cls: "conv", text: "Conv" };
+}
+function legInfo(leg) {
+  if (leg.kind === "rail") {
+    const L = LINES[leg.line];
+    if (!L) return { title: "Rail", op: "", freq: "" };
+    return {
+      title: L.title,
+      op: L.op,
+      freq: L.freq || (L.est ? `≈ ${Math.round(L.kmh)} km/h est.` : ""),
+      stops: leg.stops,
+    };
+  }
+  if (leg.kind === "ferry") {
+    const f = FERRIES[leg.ref];
+    return {
+      title: f ? f.name : "Ferry",
+      op: f && f.est ? "time estimated at 30 km/h" : "",
+      freq: f && f.headway ? `every ${fmtH(f.headway / 60)}` : "check sailings",
+    };
+  }
+  if (leg.kind === "drive") return { title: "Drive to the pier (taxi)", op: fmtKm(leg.km), freq: "" };
+  if (leg.kind === "city") return { title: "Cross-town transfer", op: fmtKm(leg.km), freq: "" };
+  return { title: "Walk between stations", op: fmtKm(leg.km), freq: "" };
 }
 
-// Route / Bridge / Journey card — handles both reachable destinations
-// and disconnected ones (where the journey alternates rail + bridge).
-function RouteCard({ origin, selectedDest, hsrOnly, theme }) {
-  const adj = useMemo(() => buildAdjacency(ROUTES, hsrOnly), [hsrOnly]);
-  const { dist, prev, prevRoute } = useMemo(
-    () => origin ? dijkstra(adj, origin) : { dist: {}, prev: {}, prevRoute: {} },
-    [adj, origin]
-  );
-  const journey = useMemo(
-    () => buildJourney(origin, selectedDest, adj, dist, prev, prevRoute, STATIONS, hsrOnly),
-    [origin, selectedDest, adj, dist, prev, prevRoute, hsrOnly]
-  );
-  if (!origin || !selectedDest || !journey) return null;
-
-  const orig = STATIONS_BY_ID[origin];
-  const tgt = STATIONS_BY_ID[selectedDest];
+function RouteCard({ origin, selectedDest, journey }) {
+  if (origin == null || selectedDest == null || !journey) return null;
+  const orig = STATIONS[origin];
+  const tgt = STATIONS[selectedDest];
   if (!tgt) return null;
 
-  // ====== REACHABLE — single rail section ======
   if (journey.type === "reachable") {
     const sec = journey.sections[0];
-    const transfers = sec.routes.length - 1;
-    const allHsr = sec.routes.every(r => r.type === "hsr");
+    const rides = sec.legs.filter(l => l.kind === "rail" || l.kind === "ferry");
+    const transfers = Math.max(0, rides.length - 1);
+    const allHsr = rides.length > 0 && rides.every(l => l.kind === "rail" && LINES[l.line].kind === "h");
+    const hasFerry = rides.some(l => l.kind === "ferry");
     return (
       <div className="panel route-card">
         <div className="rc-head">
@@ -2410,25 +2002,20 @@ function RouteCard({ origin, selectedDest, hsrOnly, theme }) {
           <span className="rc-total">{fmtH(sec.time)}</span>
         </div>
         <div className="rc-endpoints">
-          <span>{orig.name}</span>
-          <span className="rc-arrow">→</span>
-          <span>{tgt.name}</span>
+          <span>{orig.name}</span><span className="rc-arrow">→</span><span>{tgt.name}</span>
         </div>
         <div className="rc-meta">
-          {sec.routes.length} leg{sec.routes.length === 1 ? "" : "s"} ·{" "}
-          {transfers} transfer{transfers === 1 ? "" : "s"} ·{" "}
-          {allHsr ? "all HSR" : "mixed"}
+          {rides.length} ride{rides.length === 1 ? "" : "s"} · {transfers} change{transfers === 1 ? "" : "s"} ·{" "}
+          {allHsr ? "all HSR" : hasFerry ? "rail + ferry" : "mixed"}
         </div>
         <RailSectionDetail section={sec} expandable={false} />
       </div>
     );
   }
 
-  // ====== DISCONNECTED — chain ======
   const directKm = gcDist(orig, tgt);
   const sections = journey.sections;
   const bridgeCount = sections.filter(s => s.kind === "bridge").length;
-
   return (
     <div className="panel route-card bridge-card">
       <div className="rc-head">
@@ -2436,15 +2023,12 @@ function RouteCard({ origin, selectedDest, hsrOnly, theme }) {
         <span className="rc-total bc-total">{fmtKm(directKm)}</span>
       </div>
       <div className="rc-endpoints">
-        <span>{orig.name}</span>
-        <span className="rc-arrow bc-arrow">⤙⤚</span>
-        <span>{tgt.name}</span>
+        <span>{orig.name}</span><span className="rc-arrow bc-arrow">⤙⤚</span><span>{tgt.name}</span>
       </div>
       <div className="rc-meta">
         {fmtH(journey.totalRailTime)} on rail · {fmtKm(journey.totalBridgeKm)} missing across {bridgeCount}{" "}
         bridge{bridgeCount === 1 ? "" : "s"} · {journey.componentsTraversed} networks
       </div>
-
       <ol className="journey-list">
         {sections.map((s, i) => s.kind === "rail"
           ? <RailJourneyRow key={i} section={s} index={i} sections={sections} />
@@ -2455,45 +2039,36 @@ function RouteCard({ origin, selectedDest, hsrOnly, theme }) {
   );
 }
 
-// One rail section in a multi-hop journey — collapsible to show legs.
 function RailJourneyRow({ section, index, sections }) {
   const [open, setOpen] = useState(false);
-  const sFrom = STATIONS_BY_ID[section.from];
-  const sTo = STATIONS_BY_ID[section.to];
-  // Position label: which network is this?
+  const sFrom = STATIONS[section.from];
+  const sTo = STATIONS[section.to];
   const railIdx = sections.slice(0, index + 1).filter(x => x.kind === "rail").length;
+  const n = section.legs.length;
   return (
     <li className="jrow jrow-rail">
       <div className="jrow-marker jrow-marker-rail">▤</div>
       <div className="jrow-body">
-        <div className="jrow-head"
-             onClick={() => setOpen(o => !o)}
-             style={{ cursor: section.routes.length > 0 ? "pointer" : "default" }}>
+        <div className="jrow-head" onClick={() => setOpen(o => !o)} style={{ cursor: n > 0 ? "pointer" : "default" }}>
           <span className="jrow-label">Rail · network {railIdx}</span>
           <span className="jrow-time">{fmtH(section.time)}</span>
         </div>
         <div className="jrow-route">
-          <span>{sFrom.name}</span>
-          <span className="jrow-dash">→</span>
-          <span>{sTo.name}</span>
+          <span>{sFrom.name}</span><span className="jrow-dash">→</span><span>{sTo.name}</span>
           <span className="jrow-legs">
-            {section.routes.length} leg{section.routes.length === 1 ? "" : "s"}
-            {section.routes.length > 0 && (
-              <button className="jrow-toggle" onClick={() => setOpen(o => !o)}>
-                {open ? "▾ hide" : "▸ show"}
-              </button>
-            )}
+            {n} leg{n === 1 ? "" : "s"}
+            {n > 0 && <button className="jrow-toggle" onClick={() => setOpen(o => !o)}>{open ? "▾ hide" : "▸ show"}</button>}
           </span>
         </div>
-        {open && section.routes.length > 0 && <RailSectionDetail section={section} expandable={true} />}
+        {open && n > 0 && <RailSectionDetail section={section} expandable={true} />}
       </div>
     </li>
   );
 }
 
 function BridgeJourneyRow({ section, index, sections }) {
-  // Bridge number = its 1-indexed position among bridges
   const bIdx = sections.slice(0, index + 1).filter(x => x.kind === "bridge").length;
+  const a = STATIONS[section.from], b = STATIONS[section.to];
   return (
     <li className="jrow jrow-bridge">
       <div className="jrow-marker jrow-marker-bridge">{bIdx}</div>
@@ -2503,13 +2078,9 @@ function BridgeJourneyRow({ section, index, sections }) {
           <span className="jrow-time jrow-time-bridge">{fmtKm(section.km)}</span>
         </div>
         <div className="jrow-route">
-          <span>{section.from.name}</span>
-          <span className="jrow-dash jrow-dash-bridge">⤳</span>
-          <span>{section.to.name}</span>
+          <span>{a.name}</span><span className="jrow-dash jrow-dash-bridge">⤳</span><span>{b.name}</span>
         </div>
-        <div className="jrow-meta">
-          {COUNTRY_NAMES[section.from.country]} → {COUNTRY_NAMES[section.to.country]}
-        </div>
+        <div className="jrow-meta">{countryName(a.country)} → {countryName(b.country)}</div>
       </div>
     </li>
   );
@@ -2518,23 +2089,21 @@ function BridgeJourneyRow({ section, index, sections }) {
 function RailSectionDetail({ section, expandable }) {
   return (
     <ol className={`rc-legs ${expandable ? "rc-legs-nested" : ""}`}>
-      {section.routes.map((r, i) => {
-        const from = STATIONS_BY_ID[section.nodes[i]];
-        const to = STATIONS_BY_ID[section.nodes[i + 1]];
+      {section.legs.map((leg, i) => {
+        const from = STATIONS[leg.from], to = STATIONS[leg.to];
+        const badge = legBadge(leg), info = legInfo(leg);
         return (
           <li key={i} className="rc-leg">
-            <div className={`rc-badge ${r.type}`}>{r.type === "hsr" ? "HSR" : "Conv"}</div>
+            <div className={`rc-badge ${badge.cls}`}>{badge.text}</div>
             <div className="rc-leg-body">
               <div className="rc-leg-route">
-                <span>{from.name}</span>
-                <span className="rc-arrow">→</span>
-                <span>{to.name}</span>
-                <span className="rc-leg-time">{fmtH(r.h)}</span>
+                <span>{from.name}</span><span className="rc-arrow">→</span><span>{to.name}</span>
+                <span className="rc-leg-time">{fmtH(leg.h)}</span>
               </div>
-              <div className="rc-leg-line">{r.line}</div>
+              <div className="rc-leg-line">{info.title}</div>
               <div className="rc-leg-op">
-                {r.op}
-                <span className="rc-leg-freq">{freqLabel(r)}</span>
+                {info.op}{info.stops > 1 ? `${info.op ? " · " : ""}${info.stops} stops` : ""}
+                {info.freq && <span className="rc-leg-freq">{info.freq}</span>}
               </div>
             </div>
           </li>
@@ -2545,50 +2114,44 @@ function RailSectionDetail({ section, expandable }) {
 }
 
 // =============================================================
-// HOVER TOOLTIP (for stations not in the list)
+// HOVER CARD
 // =============================================================
-function HoverCard({ hoverDest, origin, hsrOnly, hours, theme }) {
-  const adj = useMemo(() => buildAdjacency(ROUTES, hsrOnly), [hsrOnly]);
-  const { dist, prev, prevRoute } = useMemo(
-    () => origin ? dijkstra(adj, origin) : { dist: {}, prev: {}, prevRoute: {} },
-    [adj, origin]
-  );
-  if (!hoverDest) return null;
-  const s = STATIONS_BY_ID[hoverDest];
+function HoverCard({ hoverDest, origin, G, sp, hours, theme, hsrOnly }) {
+  if (hoverDest == null) return null;
+  const s = STATIONS[hoverDest];
   if (!s) return null;
-  const t = origin ? dist[s.id] : undefined;
-  const reachable = t !== undefined && t <= hours;
+  const t = origin != null && sp ? sp.dist[s.id] : Infinity;
+  const reachable = t <= hours;
   const isOrigin = s.id === origin;
-
-  let lastRoute = null;
-  if (origin && prev[s.id] !== undefined) lastRoute = prevRoute[s.id];
-
+  let last = null;
+  if (origin != null && sp && sp.pe[s.id] >= 0) {
+    const e = sp.pe[s.id];
+    last = legInfo({ kind: G.eT[e] === T_FERRY ? "ferry" : G.eT[e] >= T_DRIVE ? (G.eT[e] === T_DRIVE ? "drive" : G.eT[e] === T_CITY ? "city" : "walk") : "rail",
+      line: G.eRef[e], ref: G.eRef[e], km: G.eKm[e] });
+  }
+  const nat = nativeOrNull(s.name, s.native);
   return (
     <div className="hover-card">
-      <div className="hc-name">{s.name}{nativeOrNull(s.name, s.native) ? <span className="hc-cn"> · {nativeOrNull(s.name, s.native)}</span> : ""}</div>
-      <div className="hc-country">{COUNTRY_NAMES[s.country]}</div>
+      <div className="hc-name">{s.name}{nat ? <span className="hc-cn"> · {nat}</span> : ""}</div>
+      <div className="hc-country">{countryName(s.country)}{s.pier ? " · ferry pier" : s.rank > 1 ? ` · ${s.rank} lines` : ""}</div>
       {isOrigin ? (
         <div className="hc-row hc-origin">⌑ Origin</div>
-      ) : !origin ? (
+      ) : origin == null ? (
         <div className="hc-row hc-dim">Click to set as origin</div>
-      ) : t === undefined ? (
+      ) : !isFinite(t) ? (
         <div className="hc-row hc-dim">Not connected by rail{hsrOnly ? " (HSR-only)" : ""}</div>
       ) : (
         <div className="hc-stack">
           <div className="hc-row">
-            <span
-              className="hc-dot"
-              style={{background: timeColor(t, hours, theme)}}
-            />
+            <span className="hc-dot" style={{ background: timeColor(t, hours, theme) }} />
             <span className="hc-time">{fmtH(t)}</span>
             <span className="hc-tag">{reachable ? "within reach" : `over budget by ${fmtH(t - hours)}`}</span>
           </div>
-          {lastRoute && (
+          {last && (
             <div className="hc-leg">
-              <div className="hc-leg-line">arr. via {lastRoute.line}</div>
+              <div className="hc-leg-line">arr. via {last.title}</div>
               <div className="hc-leg-op">
-                {lastRoute.op}
-                <span className="hc-leg-freq">· {freqLabel(lastRoute)}</span>
+                {last.op}{last.freq && <span className="hc-leg-freq"> · {last.freq}</span>}
               </div>
             </div>
           )}
@@ -2599,112 +2162,62 @@ function HoverCard({ hoverDest, origin, hsrOnly, hours, theme }) {
 }
 
 // =============================================================
-// LEGEND
+// SOURCES
 // =============================================================
+const NET_STATS = (() => {
+  const timed = LINES.filter(l => !l.est).length;
+  const ccs = new Set();
+  for (const L of LINES) for (const p of L.stops) if (STATIONS[p].asia) ccs.add(STATIONS[p].country);
+  return { timed, lines: LINES.length, countries: ccs.size };
+})();
+
 function Sources() {
   const sections = [
     {
-      key: "Schedules CN/HK",
+      key: "Rail network",
       items: [
-        "China Railway 12306 (G/D/Z/T/K series)",
-        "MTR through-trains (GZ–KL XRL, Z97/Z99 Beijing/Shanghai–Kowloon)",
+        <>Transits of the World intercity catalogue (built {NET.meta.built}): {NET_STATS.lines.toLocaleString("en-US")} passenger lines, {NS.toLocaleString("en-US")} stations and piers across {NET_STATS.countries} countries — OpenStreetMap <span className="mono">route=train</span> relations; freight-only and closed lines left out</>,
+        "Every line is drawn along its OpenStreetMap track, cut at each stop",
+        "Stations a short walk apart, and a city's terminals (Moscow, Beijing…), are joined by a transfer",
       ],
     },
     {
-      key: "Schedules JP/KR/TW",
+      key: "Times",
       items: [
-        "JR East/Central/West/Kyushu/Hokkaido (Tōkaidō, San'yō, Tōhoku, Hokuriku, Jōetsu, Kyūshū, Hokkaidō Shinkansen)",
-        "Korail KTX/SRT (Gyeongbu, Honam, Jeolla, Gangneung, Donghae)",
-        "Taiwan HSR (THSR) + TRA (Puyuma, South-Link)",
+        `${NET_STATS.timed.toLocaleString("en-US")} lines timed from a published journey time (operators, Yandex Raspisaniya, 12306, NTES, Wikipedia…)`,
+        "Other lines run at the median published speed of the same kind of train in the same country (marked ≈ est.)",
+        "Ferries: published crossing times where known, else 30 km/h; plus 30 min boarding",
       ],
     },
     {
-      key: "Schedules SE Asia",
+      key: "Ferries",
       items: [
-        "KCIC Whoosh (Jakarta–Bandung HSR)",
-        "PT KAI long-distance (Argo Wilis, Bima, Mutiara Timur)",
-        "KTM Berhad ETS + South-Line",
-        "SRT Northern/Northeastern/Southern/Eastern",
-        "Vietnam Railways (Reunification Express, Hanoi–Lào Cai, Hanoi–Đồng Đăng, Hanoi–Hải Phòng)",
-        "Royal Railway Cambodia",
-        "Lao–China Railway / China–Laos Railway D87",
-        "Myanmar Railways",
-      ],
-    },
-    {
-      key: "Schedules S Asia",
-      items: [
-        "Indian Railways NTES (Rajdhani, Vande Bharat, Shatabdi, Coromandel, GT, Mumbai Mail)",
-        "Bangladesh Railway (Sonar Bangla, Sundarban, Maitree, Bandhan)",
-        "Pakistan Railways (Green Line, Karakoram, Allama Iqbal)",
-        "Sri Lanka Railways (Main Line, Coast, Hill, Trinco, Northern)",
-      ],
-    },
-    {
-      key: "Schedules W/C Asia",
-      items: [
-        "RAI Iran (Tehran–Mashhad / –Tabriz / –Isfahan / –Bandar Abbas)",
-        "IRR Iraq (Baghdad–Basra sleeper, Baghdad–Mosul)",
-        "TCDD YHT + Doğu / Güney / Toros Express",
-        "KTZ Talgo (Tulpar, Saryarka)",
-        "UTY Afrosiyob",
-        "TDY Türkmenabat",
-        "Kyrgyz Temir Joly (Issyk-Kul tourist)",
-        "SCR (Yerevan Express)",
-        "ADY + GR (Baku–Tbilisi–Kars, Stadler Tbilisi–Batumi)",
-        "Israel Railways",
-        "SAR (Haramain HSR, East Line, North Line / Saudi Land Bridge)",
-        "Etihad Rail (UAE Hafeet Express)",
-      ],
-    },
-    {
-      key: "Long-haul / cross-border",
-      items: [
-        "Trans-Mongolian K23 (Beijing ↔ Ulaanbaatar ↔ Moscow)",
-        "Trans-Manchurian K19 (via Manzhouli)",
-        "Trans-Siberian Rossiya (Moscow ↔ Vladivostok)",
-        "Baikal–Amur Mainline",
-        "Beijing ↔ Pyongyang K27/28",
-        "Khasan / Tumangang Friendship Bridge",
-        "Yunnan–Vietnam Railway (Kunming–Hekou)",
+        <>OpenStreetMap <span className="mono">route=ferry</span> courses ({FERRIES.length.toLocaleString("en-US")} in scope); a pier with no railway is joined to the nearest station within 30 km by a drive</>,
+        "Toggle Ferries off for rail only",
       ],
     },
     {
       key: "Base map",
       items: [
         <>Natural Earth (public domain) via <span className="mono">world-atlas</span> <span className="mono">countries-50m</span></>,
-        <>Disputed-area outlines from Natural Earth <span className="mono">ne_10m_admin_0_disputed_areas</span> (33 territories, Abkhazia ↔ Crimea ↔ Kashmir ↔ Korean DMZ ↔ Kuril / Paracel / Spratly Is.)</>,
-        <>Europe ↔ Asia continental divide line from the published <span className="mono">asia_europe_border</span> geojson (464 source fragments merged into 3 chains along Urals + Ural River + Caspian + Caucasus + Bosphorus + Aegean, Douglas-Peucker-simplified)</>,
-        <>Sub-region tints (North / East / Southeast / South / Central / West Asia) layered onto the country fills when <strong>Regional</strong> is toggled in the Network panel</>,
-      ],
-    },
-    {
-      key: "Rail network",
-      items: [
-        "Wikipedia",
-        "OpenStreetMap",
-        "OpenRailwayMap",
-        "Seat 61 (M. Smith) — cross-checking corridors, operators, journey times",
+        <>Disputed-area outlines from Natural Earth <span className="mono">ne_10m_admin_0_disputed_areas</span></>,
+        <>Europe ↔ Asia divide from the published <span className="mono">asia_europe_border</span> geojson</>,
       ],
     },
     {
       key: "Algorithm",
       items: [
-        "Reachability: time-weighted Dijkstra over the rail graph",
-        "Disconnected destinations: second station-level Dijkstra over rail edges + top-K cross-component great-circle bridges (capped at 1,600 km, 3× bridge penalty) to minimise total journey distance",
-        "Per-section time re-optimisation for the actual rail legs after the bridge planner picks endpoints",
-        "Per-named-line polyline chaining + redundant-edge dedup so each rail service renders as one smooth path instead of N butt-jointed segments",
-        "Service frequency inferred from the line name + train type (Daily overnight, Frequent hourly+, 1–2×/week for K3/K23/K19, Seasonal for Issyk-Kul, etc.) with explicit `freq` override per route",
+        "Reachability: time-weighted Dijkstra over every station-to-station hop (fastest line on each hop)",
+        "Route card: the hops grouped into rides — the line covering the longest run of consecutive stops",
+        "Disconnected destinations: rail-km Dijkstra plus candidate great-circle bridges between networks (≤ 1,600 km, 3× penalty), each rail section then re-timed",
+        "Isochrones: earliest arrival per 0.18° cell, 10 km/h off-rail spread, marching squares + Catmull-Rom",
       ],
     },
     {
       key: "Caveats",
       items: [
-        "Times rounded to half-hour",
-        "Cross-border friction (gauge change at Erenhot / Zabaikalsk / Sarakhs / Khasan, customs at Pingxiang, Đồng Đăng, Padang Besar, Mekong shuttle) folded into adjacent segments",
-        "Suspended services excluded: Samjhauta India–Pakistan, Trans-Asia Express Türkiye–Iran, Allegro SPb–Helsinki, Quetta–Zahedan (effectively freight)",
-        "DMZ Dorasan–Kaesong reconnected but never carried passenger traffic — treated as disconnected",
-        "Saudi Arabia (Haramain HSR + SAR East Line) and UAE (Etihad Rail Hafeet Express) are not yet linked to any external network — each is its own connected component",
+        "Changes between trains are not timed; times are in-vehicle estimates, not a timetable",
+        "Suspended services are excluded where the catalogue marks them; borders closed to passengers (Korean DMZ, Armenia–Türkiye/Azerbaijan, Israel–Lebanon/Syria) are never crossed by a transfer",
       ],
     },
   ];
@@ -2721,9 +2234,7 @@ function Sources() {
           </li>
         ))}
       </ul>
-      <div className="src-foot">
-        <span>Greater Asia · v0.11 · {new Date().getFullYear()}</span>
-      </div>
+      <div className="src-foot"><span>Greater Asia · v0.20 · {new Date().getFullYear()}</span></div>
     </div>
   );
 }
@@ -2732,16 +2243,6 @@ function Sources() {
 // APP
 // =============================================================
 
-// Fixed display settings, previously exposed via a tweaks panel.
-const MAX_HOURS_BOUND  = 48;
-const SHOW_COUNTRY_LABELS = true;
-const SHOW_SEA_LABELS     = false;
-
-// Throttle a state setter to at most one update per animation frame.
-// The slider for the time budget fires onChange continuously while
-// dragging; without throttling, React reconciles thousands of route
-// elements per pointer-move and the UI lags. Per-frame coalescing
-// keeps scrubbing smooth.
 function useRafThrottledSetter(setter) {
   const pendingRef = useRef(null);
   const rafRef = useRef(0);
@@ -2756,42 +2257,144 @@ function useRafThrottledSetter(setter) {
   }, [setter]);
 }
 
+const DEFAULT_ORIGIN = (() => {
+  let best = -1;
+  for (let i = 0; i < NS; i++) {
+    const s = STATIONS[i];
+    if (s.country === "CN" && /^kunming/i.test(s.name) && (best < 0 || s.rank > STATIONS[best].rank)) best = i;
+  }
+  return best >= 0 ? best : HUB_LIST[0];
+})();
+
+function useMedia(query) {
+  const [m, setM] = useState(() => window.matchMedia(query).matches);
+  useEffect(() => {
+    const mq = window.matchMedia(query), f = () => setM(mq.matches);
+    f();
+    mq.addEventListener ? mq.addEventListener("change", f) : mq.addListener(f);
+    return () => { mq.removeEventListener ? mq.removeEventListener("change", f) : mq.removeListener(f); };
+  }, [query]);
+  return m;
+}
+
+// phones + tablets in portrait: map full-screen, a compact top bar, a bottom sheet
+const NARROW_QUERY = "(max-width: 1023px)";
+const SHEET_TABS = [["reach", "Reachable"], ["route", "Route"], ["network", "Network"], ["about", "About"]];
+
 function App() {
-  const [origin, setOrigin] = useState("kunming");
-  const [hoursRaw, setHoursRaw] = useState(24);
+  const narrow = useMedia(NARROW_QUERY);
+  const [sheet, setSheet] = useState({ tab: "reach", open: false });
+  const [origin, setOrigin] = useState(DEFAULT_ORIGIN);
+  const [hours, setHoursRaw] = useState(24);
   const setHours = useRafThrottledSetter(setHoursRaw);
-  const hours = hoursRaw;
   const [hsrOnly, setHsrOnly] = useState(false);
+  const [ferriesOn, setFerriesOn] = useState(true);
   const [theme, setTheme] = useState("day");
   const [selectedDest, setSelectedDest] = useState(null);
   const [hoverDest, setHoverDest] = useState(null);
   const [contoursOn, setContoursOn] = useState(true);
   const [regionsOn, setRegionsOn] = useState(false);
 
-  // Apply theme class on body
+  // theme class first, so the canvas reads the right CSS colours
+  useLayoutEffect(() => { document.body.classList.toggle("theme-night", theme === "night"); }, [theme]);
+
+  const G = useMemo(() => getGraph(hsrOnly, ferriesOn), [hsrOnly, ferriesOn]);
+  const sp = useMemo(() => (origin != null ? dijkstra(G, origin, G.eH) : null), [G, origin]);
+  const journey = useMemo(
+    () => (selectedDest != null ? buildJourney(G, sp, origin, selectedDest) : null),
+    [G, sp, origin, selectedDest]
+  );
+
+  const onStationClick = useCallback((id, e) => {
+    if (e.altKey || e.shiftKey || origin == null) { setOrigin(id); setSelectedDest(null); return; }
+    if (id === origin) return;
+    if (selectedDest != null) { setOrigin(id); setSelectedDest(null); }
+    else setSelectedDest(id);
+  }, [origin, selectedDest]);
+
+  // a picked destination opens the Route tab; clearing it goes back to the list
   useEffect(() => {
-    document.body.classList.toggle("theme-night", theme === "night");
-  }, [theme]);
+    if (selectedDest != null) setSheet({ tab: "route", open: true });
+    else setSheet(s => (s.tab === "route" ? { ...s, tab: "reach" } : s));
+  }, [selectedDest]);
+
+  const mapStage = (
+    <div className="map-stage">
+      <MapCanvas
+        G={G} sp={sp} origin={origin} journey={journey} maxHours={hours} theme={theme}
+        contoursOn={contoursOn} regionsOn={regionsOn} hoverDest={hoverDest} selectedDest={selectedDest}
+        setHoverDest={setHoverDest} onStationClick={onStationClick} narrow={narrow}
+      />
+    </div>
+  );
+  const toggles = { hsrOnly, setHsrOnly, ferriesOn, setFerriesOn, theme, setTheme,
+    contoursOn, setContoursOn, regionsOn, setRegionsOn };
+
+  if (narrow) {
+    const tabBody = {
+      reach: (
+        <ReachableList
+          origin={origin} hours={hours} sp={sp}
+          selectedDest={selectedDest} setSelectedDest={setSelectedDest}
+          theme={theme} setHoverDest={setHoverDest} hoverDest={null}
+        />
+      ),
+      route: selectedDest != null
+        ? <RouteCard origin={origin} selectedDest={selectedDest} journey={journey} />
+        : <div className="m-empty">Tap a station on the map — or a row under Reachable — to draw the route there.</div>,
+      network: (
+        <div className="m-network">
+          <NetworkToggles {...toggles} />
+          <LegendDashes />
+          <div className="hint">Tap a station to make it the destination · tap a third to make it the new origin. Pinch to zoom.</div>
+        </div>
+      ),
+      about: (
+        <div className="m-about">
+          <div className="mh-sub">How far you can travel by rail from any station across <em>Asia</em></div>
+          <Sources />
+        </div>
+      ),
+    };
+    return (
+      <div className="app mobile">
+        {mapStage}
+        <div className="m-top">
+          <div className="m-brand">
+            <span className="m-title">Greater Asia</span>
+            <span className="m-eyebrow">Rail reachability</span>
+          </div>
+          <StationSelect value={origin} onChange={(id) => { setOrigin(id); setSelectedDest(null); }} />
+          <div className="m-budget">
+            <span className="m-budget-label">Within</span>
+            <div className="m-slider">
+              <BudgetSlider hours={hours} setHours={setHours} maxHoursBound={MAX_HOURS_BOUND} theme={theme} />
+            </div>
+            <span className="m-budget-value">{fmtH(hours)}</span>
+          </div>
+        </div>
+        <div className={`m-sheet ${sheet.open ? "open" : ""}`}>
+          <div className="m-tabs" role="tablist">
+            {SHEET_TABS.map(([id, label]) => (
+              <button key={id} type="button" role="tab" aria-selected={sheet.open && sheet.tab === id}
+                      className={`m-tab ${sheet.open && sheet.tab === id ? "on" : ""}`}
+                      onClick={() => setSheet(s => ({ tab: id, open: !(s.open && s.tab === id) }))}>
+                {label}{id === "route" && selectedDest != null ? " •" : ""}
+              </button>
+            ))}
+            <button type="button" className="m-handle" aria-label={sheet.open ? "Collapse panel" : "Expand panel"}
+                    onClick={() => setSheet(s => ({ ...s, open: !s.open }))}>{sheet.open ? "▾" : "▴"}</button>
+          </div>
+          {sheet.open && <div className={`m-body m-body-${sheet.tab}`}>{tabBody[sheet.tab]}</div>}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="app">
-      <div className="map-stage">
-        <MapView
-          theme={theme}
-          hsrOnly={hsrOnly}
-          origin={origin}
-          setOrigin={setOrigin}
-          hoverDest={hoverDest}
-          setHoverDest={setHoverDest}
-          selectedDest={selectedDest}
-          setSelectedDest={setSelectedDest}
-          maxHours={hours}
-          contoursOn={contoursOn}
-          regionsOn={regionsOn}
-          showSeaLabels={SHOW_SEA_LABELS}
-          showCountryLabels={SHOW_COUNTRY_LABELS}
-        />
-        {/* Decorative corner ornament */}
+      {mapStage}
+      <div className="corner-ornaments" aria-hidden="true">
         <svg className="corner-ornament tl" viewBox="0 0 60 60" aria-hidden="true">
           <path d="M2,40 V2 H40" fill="none" stroke="currentColor" strokeWidth="1" />
           <path d="M2,55 V20 M2,20 H20" fill="none" stroke="currentColor" strokeWidth="0.5" />
@@ -2813,8 +2416,9 @@ function App() {
           origin={origin} setOrigin={setOrigin}
           hours={hours} setHours={setHours} maxHoursBound={MAX_HOURS_BOUND}
           hsrOnly={hsrOnly} setHsrOnly={setHsrOnly}
+          ferriesOn={ferriesOn} setFerriesOn={setFerriesOn}
           theme={theme} setTheme={setTheme}
-          selectedDest={selectedDest} setSelectedDest={setSelectedDest}
+          setSelectedDest={setSelectedDest}
           contoursOn={contoursOn} setContoursOn={setContoursOn}
           regionsOn={regionsOn} setRegionsOn={setRegionsOn}
         />
@@ -2823,26 +2427,14 @@ function App() {
 
       <div className="right-stack">
         <ReachableList
-          origin={origin}
-          hours={hours}
-          hsrOnly={hsrOnly}
-          selectedDest={selectedDest}
-          setSelectedDest={setSelectedDest}
-          theme={theme}
-          setHoverDest={setHoverDest}
-          hoverDest={hoverDest}
+          origin={origin} hours={hours} sp={sp}
+          selectedDest={selectedDest} setSelectedDest={setSelectedDest}
+          theme={theme} setHoverDest={setHoverDest} hoverDest={hoverDest}
         />
-        {selectedDest && (
-          <RouteCard
-            origin={origin}
-            selectedDest={selectedDest}
-            hsrOnly={hsrOnly}
-            theme={theme}
-          />
-        )}
+        {selectedDest != null && <RouteCard origin={origin} selectedDest={selectedDest} journey={journey} />}
       </div>
 
-      <HoverCard hoverDest={hoverDest} origin={origin} hsrOnly={hsrOnly} hours={hours} theme={theme} />
+      <HoverCard hoverDest={hoverDest} origin={origin} G={G} sp={sp} hours={hours} theme={theme} hsrOnly={hsrOnly} />
     </div>
   );
 }
