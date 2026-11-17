@@ -68,7 +68,6 @@ const ILINES = JSON.parse(citiesTxt.match(/const ILINES = (\[.*?\]);\s*\n/s)[1])
 const META = Object.fromEntries(ILINES.map((c) => [c.slug, c]));
 const HIDDEN = jsonAfter(readJs(A("assets", "hidden_lines.js")), "window.HIDDEN_LINES=");
 const FL = jsonAfter(readJs(A("assets", "ferry_lines.js")), "window.FERRY_LINES=");
-const FL_BY_FI = new Map(FL.map((f) => [f.fi, f]));
 console.timeEnd("load");
 
 const S = RG.s; // [name, native, lon*1e4, lat*1e4, cc]
@@ -189,16 +188,51 @@ for (const L of lines) for (const p of L.stops) use(p);
 
 // ---------- ferries / drives / transfers ----------
 const inScope = scoped;
+// A ferry's timetable entry (assets/ferry_lines.js) is the one whose two piers
+// sit at this crossing's two ends (either way round, within 6 km together),
+// preferring the same name and length. (Its list position is NOT the route
+// graph's ferry index: matching by position gave crossings other ferries'
+// times — Incheon – Weihai sailed in 60 min.)
+const FL_GRID = new Map();
+FL.forEach((f, k) => {
+  for (const pt of [f.ap, f.bp]) {
+    if (!pt) continue;
+    const g = Math.floor(pt[0] * 10) + "," + Math.floor(pt[1] * 10);
+    (FL_GRID.get(g) || FL_GRID.set(g, []).get(g)).push(k);
+  }
+});
+function ferryEntry(a, b, kmv, name) {
+  const pa = P(a), pb = P(b);
+  const gx = Math.floor(pa[0] * 10), gy = Math.floor(pa[1] * 10);
+  let best = null, bs = Infinity;
+  for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) {
+    for (const k of FL_GRID.get(gx + dx + "," + (gy + dy)) || []) {
+      const f = FL[k];
+      if (!f.ap || !f.bp) continue;
+      const off = Math.min(km(pa, f.ap) + km(pb, f.bp), km(pa, f.bp) + km(pb, f.ap));
+      if (off > 6) continue;
+      const sc = off + (f.n === name ? 0 : 3) + Math.abs((f.km || kmv) - kmv) * 0.2;
+      if (sc < bs) { bs = sc; best = f; }
+    }
+  }
+  return best;
+}
 const ferries = [];
+let ferryTimed = 0;
 (RG.f || []).forEach(([a, b, d10, n], fi) => {
   if (!inScope(a) || !inScope(b)) return;
-  const fl = FL_BY_FI.get(n);
   const kmv = d10 / 10;
   if (kmv < 0.3) return;
-  const dur = fl && fl.dur ? fl.dur : Math.round((kmv / 30) * 60); // metroman: a typical 30 km/h
-  ferries.push({ a, b, km: kmv, dur, est: fl && fl.dur ? 0 : 1, int: fl && fl.int || 0,
-    name: (fl && (fl.nn || fl.n)) || (RG.fn || [])[n] || "Ferry", g: (RG.fg || [])[fi] || [] });
+  const name = (RG.fn || [])[n] || "Ferry";
+  const fl = ferryEntry(a, b, kmv, name);
+  // a published duration, unless it implies more than 80 km/h (a wrong match)
+  const ok = fl && fl.dur > 0 && kmv / (fl.dur / 60) <= 80;
+  if (ok) ferryTimed++;
+  const dur = ok ? fl.dur : Math.round((kmv / 30) * 60);   // else metroman's typical 30 km/h
+  ferries.push({ a, b, km: kmv, dur, est: ok ? 0 : 1, int: (fl && fl.int) || 0,
+    name, g: (RG.fg || [])[fi] || [] });
 });
+console.log("ferries with a published crossing time:", ferryTimed);
 for (const F of ferries) { use(F.a); use(F.b); }
 const drives = (RG.d || []).filter(([a, b]) => used.has(a) && used.has(b));
 const xfers = (RG.x || []).filter(([a, b]) => used.has(a) && used.has(b));
